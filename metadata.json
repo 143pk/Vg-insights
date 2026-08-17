@@ -1,0 +1,6 @@
+{
+  "name": "VG NEET Library",
+  "description": "A modular digital library and educational app for NEET UG preparation featuring the AI Weakness Doctor precision diagnostics engine.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

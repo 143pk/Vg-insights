@@ -1,0 +1,182 @@
+@import "tailwindcss";
+@import "katex/dist/katex.min.css";
+
+/* ==================================================
+   GLOBAL MOBILE RESPONSIVENESS & OVERFLOW PREVENTION CSS
+   VG NEET Library - Zero Horizontal Scroll Architecture
+   ================================================== */
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root, main, article, section, header, nav, footer {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* Flex & Grid containers must allow children to shrink below content size */
+.flex, .inline-flex, .grid, [class*="grid-"], [class*="flex-"] {
+  min-width: 0;
+}
+
+/* Prevent accidental text and formula overflows */
+p, h1, h2, h3, h4, h5, h6, li, span, button, td, th {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Ensure whitespace-nowrap cells stay inside scrolling wrappers */
+.whitespace-nowrap {
+  white-space: nowrap !important;
+  word-break: normal !important;
+}
+
+/* Responsive SVG scaling */
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive Table rules */
+table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
+/* Table container horizontal scrolling */
+.overflow-x-auto, div:has(> table) {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  min-width: 0;
+}
+
+/* ==================================================
+   GLOBAL TEXTBOOK MATHEMATICAL FORMULA RENDERING CSS
+   VG NEET Library - KaTeX Textbook Precision Rendering
+   ================================================== */
+
+.math-formula-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  padding: 0.875rem 0.5rem;
+  border-radius: 1rem;
+  background-color: #f8fafc;
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
+  text-align: center;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
+  margin: 0.75rem 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+  min-width: 0;
+  height: auto;
+  min-height: 2.75rem;
+}
+
+@media (min-width: 640px) {
+  .math-formula-box {
+    padding: 1.35rem 1.25rem;
+  }
+}
+
+.dark .math-formula-box {
+  background-color: #0f172a;
+  border-color: #334155;
+  color: #f8fafc;
+}
+
+/* Fallback Plaintext/Unicode Math Term Styling */
+.math-formula-box .math-term {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: inherit;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+@media (min-width: 640px) {
+  .math-formula-box .math-term {
+    font-size: 1.2rem;
+  }
+}
+
+/* KaTeX Display Equation Layout */
+.math-formula-box .katex-display {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  text-align: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* KaTeX Font Scaling for Centered Formula Box */
+.math-formula-box .katex {
+  font-size: 1.05rem !important;
+  line-height: 1.4;
+  max-width: 100%;
+  color: inherit !important;
+}
+
+@media (min-width: 480px) {
+  .math-formula-box .katex {
+    font-size: 1.18rem !important;
+  }
+}
+
+@media (min-width: 640px) {
+  .math-formula-box .katex {
+    font-size: 1.32rem !important;
+  }
+}
+
+/* Inline KaTeX Math Styling */
+.katex {
+  font-size: 1em;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.katex-html {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* Subscripts and Superscripts position & font scaling */
+sub {
+  font-size: 0.75em;
+  vertical-align: sub;
+  line-height: 0;
+}
+
+sup {
+  font-size: 0.75em;
+  vertical-align: super;
+  line-height: 0;
+}
+

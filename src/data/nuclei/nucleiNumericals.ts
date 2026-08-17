@@ -1,0 +1,290 @@
+// 18 Original Worked Numericals for Class 12 Chapter 13: Nuclei with step-by-step solutions
+
+export interface WorkedNumerical {
+  id: string;
+  problemTitle: string;
+  topicCategory: string;
+  statement: string;
+  given: string[];
+  required: string;
+  concept: string;
+  formula: string;
+  unitConversion: string;
+  substitution: string;
+  calculation: string;
+  finalAnswer: string;
+  neetShortcut: string;
+}
+
+export const NUCLEI_NUMERICALS: WorkedNumerical[] = [
+  {
+    id: "num-1",
+    problemTitle: "Ratio of Nuclear Radii of Aluminium and Tellurium",
+    topicCategory: "Nuclear Radius",
+    statement: "If the mass number of aluminium is 27 and that of tellurium is 125, find the ratio of the nuclear radius of aluminium to that of tellurium.",
+    given: ["Mass number of Aluminium A₁ = 27", "Mass number of Tellurium A₂ = 125"],
+    required: "Ratio of nuclear radii R₁ / R₂",
+    concept: "Nuclear radius is empirically related to mass number by R = R₀ A^(1/3).",
+    formula: "R₁ / R₂ = (A₁ / A₂)^(1/3)",
+    unitConversion: "Not required since we are computing a dimensionless ratio.",
+    substitution: "R₁ / R₂ = (27 / 125)^(1/3)",
+    calculation: "27 = 3³, 125 = 5³ ⟹ (3³ / 5³)^(1/3) = 3 / 5 = 0.6",
+    finalAnswer: "R(Al) : R(Te) = 3 : 5 = 0.6",
+    neetShortcut: "Direct cube root ratio: R ∝ A^(1/3). 27^(1/3) = 3, 125^(1/3) = 5 ➔ 3:5 in 5 seconds."
+  },
+  {
+    id: "num-2",
+    problemTitle: "Nuclear Radius and Volume of Gold Nucleus",
+    topicCategory: "Nuclear Radius & Volume",
+    statement: "Calculate the nuclear radius and approximate volume of a gold nucleus (¹⁹⁷₇₉Au). Take R₀ = 1.2 × 10⁻¹⁵ m (1.2 fm).",
+    given: ["Mass number of Gold A = 197", "Constant R₀ = 1.2 × 10⁻¹⁵ m", "Cube root 197^(1/3) ≈ 5.818"],
+    required: "Nuclear radius R and Volume V of the nucleus",
+    concept: "Nuclear radius R = R₀ A^(1/3), Volume V = (4/3) π R³ = (4/3) π R₀³ A.",
+    formula: "R = R₀ A^(1/3); V = (4/3) π R³",
+    unitConversion: "1 fm = 10⁻¹⁵ m",
+    substitution: "R = (1.2 × 10⁻¹⁵) × (197)^(1/3) = 1.2 × 10⁻¹⁵ × 5.818 m; V = (4/3) × 3.1416 × (6.98 × 10⁻¹⁵)³",
+    calculation: "R = 6.98 × 10⁻¹⁵ m ≈ 6.98 fm. V = 1.333 × 3.1416 × 3.40 × 10⁻⁴² m³ = 1.42 × 10⁻⁴¹ m³.",
+    finalAnswer: "Radius R ≈ 6.98 fm; Volume V ≈ 1.42 × 10⁻⁴¹ m³.",
+    neetShortcut: "Use V ∝ A. Since V(A=1) = (4/3)π(1.2 fm)³ ≈ 7.24 × 10⁻⁴⁵ m³, V(197) = 197 × 7.24 × 10⁻⁴⁵ ≈ 1.43 × 10⁻⁴¹ m³."
+  },
+  {
+    id: "num-3",
+    problemTitle: "Nuclear Density Calculation for Any Nucleus",
+    topicCategory: "Nuclear Density",
+    statement: "Estimate the density of nuclear matter for an iron nucleus (⁵⁶₂₆Fe). Take mass of nucleon m_N = 1.66 × 10⁻²⁷ kg and R₀ = 1.2 fm.",
+    given: ["Mass number A = 56", "Nucleon mass m = 1.66 × 10⁻²⁷ kg", "R₀ = 1.2 × 10⁻¹⁵ m"],
+    required: "Nuclear density ρ",
+    concept: "Density ρ = Mass / Volume = (A · m) / [ (4/3) π R₀³ A ] = m / [ (4/3) π R₀³ ], which is independent of A.",
+    formula: "ρ = 3m / (4 π R₀³)",
+    unitConversion: "R₀ = 1.2 × 10⁻¹⁵ m",
+    substitution: "ρ = [3 × (1.66 × 10⁻²⁷)] / [4 × 3.1416 × (1.2 × 10⁻¹⁵)³]",
+    calculation: "Numerator = 4.98 × 10⁻²⁷. Denominator = 4 × 3.1416 × 1.728 × 10⁻⁴⁵ = 2.171 × 10⁻⁴⁴. ρ = 4.98 × 10⁻²⁷ / 2.171 × 10⁻⁴⁴ = 2.29 × 10¹⁷ kg/m³.",
+    finalAnswer: "ρ ≈ 2.3 × 10¹⁷ kg/m³ (constant for all nuclei).",
+    neetShortcut: "Remember the standard value ρ ≈ 2.3 × 10¹⁷ kg/m³ (or order of magnitude 10¹⁷ kg/m³). It is always identical regardless of whether the question asks for Carbon, Iron, or Uranium!"
+  },
+  {
+    id: "num-4",
+    problemTitle: "Mass Defect of Deuteron (²₁H)",
+    topicCategory: "Mass Defect",
+    statement: "Calculate the mass defect of a deuteron nucleus (²₁H) in atomic mass units (u). Given: mass of proton m_p = 1.007276 u, mass of neutron m_n = 1.008665 u, mass of deuteron M_d = 2.013553 u.",
+    given: ["Z = 1, N = 1, A = 2", "m_p = 1.007276 u", "m_n = 1.008665 u", "M_d = 2.013553 u"],
+    required: "Mass defect Δm in u",
+    concept: "Mass defect Δm = (Z·m_p + N·m_n) − M_nucleus.",
+    formula: "Δm = m_p + m_n − M_d",
+    unitConversion: "All masses are given in atomic mass units (u).",
+    substitution: "Δm = (1.007276 + 1.008665) − 2.013553",
+    calculation: "Sum of free nucleons = 2.015941 u. Δm = 2.015941 − 2.013553 = 0.002388 u.",
+    finalAnswer: "Δm = 0.002388 u (or 2.388 × 10⁻³ u).",
+    neetShortcut: "Sum the last 4 decimals: (7276 + 8665) − 13553 = 15941 − 13553 = 2388 ➔ 0.002388 u."
+  },
+  {
+    id: "num-5",
+    problemTitle: "Binding Energy and Binding Energy per Nucleon of Alpha Particle",
+    topicCategory: "Binding Energy",
+    statement: "Find the total binding energy (in MeV) and the binding energy per nucleon of an alpha particle (⁴₂He). Given: mass of proton m_p = 1.00728 u, mass of neutron m_n = 1.00866 u, mass of ⁴₂He nucleus = 4.00150 u. (1 u = 931.5 MeV).",
+    given: ["Z = 2, N = 2, A = 4", "m_p = 1.00728 u", "m_n = 1.00866 u", "M_α = 4.00150 u", "1 u = 931.5 MeV"],
+    required: "Total Binding Energy E_b and E_bn = E_b / A",
+    concept: "Δm = 2m_p + 2m_n − M_α; E_b = Δm × 931.5 MeV; E_bn = E_b / 4.",
+    formula: "E_b = [2m_p + 2m_n − M_α] × 931.5 MeV; E_bn = E_b / A",
+    unitConversion: "Multiply Δm (in u) directly by 931.5 to get energy in MeV.",
+    substitution: "2m_p = 2.01456 u; 2m_n = 2.01732 u; Sum = 4.03188 u. Δm = 4.03188 − 4.00150 = 0.03038 u. E_b = 0.03038 × 931.5 MeV.",
+    calculation: "E_b = 28.29897 MeV ≈ 28.30 MeV. E_bn = 28.30 / 4 = 7.075 MeV/nucleon.",
+    finalAnswer: "Total Binding Energy E_b ≈ 28.30 MeV; E_bn ≈ 7.07 MeV/nucleon.",
+    neetShortcut: "Standard textbook constant for Helium: E_b(⁴He) ≈ 28.3 MeV and E_bn ≈ 7.07 MeV/nucleon. Extremely high stability compared to Deuteron (1.11 MeV/n)."
+  },
+  {
+    id: "num-6",
+    problemTitle: "Binding Energy Calculation using Atomic Masses",
+    topicCategory: "Binding Energy",
+    statement: "Calculate the binding energy of Nitrogen nucleus (¹⁴₇N) given: atomic mass of ¹⁴₇N = 14.003074 u, atomic mass of ¹₁H = 1.007825 u, mass of neutron = 1.008665 u. (1 u = 931.5 MeV).",
+    given: ["Z = 7, N = 7, A = 14", "m(¹H) = 1.007825 u", "m_n = 1.008665 u", "M_atom(¹⁴N) = 14.003074 u"],
+    required: "Total Binding energy E_b (MeV) and E_bn",
+    concept: "Using atomic mass formula: Δm = 7·m(¹H) + 7·m_n − M_atom(¹⁴N). The 7 electron masses cancel automatically.",
+    formula: "Δm = 7[m(¹H) + m_n] − M_atom(¹⁴N); E_b = Δm × 931.5 MeV",
+    unitConversion: "1 u = 931.5 MeV",
+    substitution: "m(¹H) + m_n = 1.007825 + 1.008665 = 2.016490 u. 7 × 2.016490 = 14.115430 u. Δm = 14.115430 − 14.003074 = 0.112356 u.",
+    calculation: "E_b = 0.112356 × 931.5 = 104.66 MeV. E_bn = 104.66 / 14 = 7.476 MeV/nucleon.",
+    finalAnswer: "Binding Energy = 104.66 MeV; Binding Energy per nucleon = 7.48 MeV/nucleon.",
+    neetShortcut: "Whenever atomic mass of target atom and hydrogen atom ¹H are given, DO NOT subtract electron mass; they cancel out exactly."
+  },
+  {
+    id: "num-7",
+    problemTitle: "Energy Released in D-T Nuclear Fusion",
+    topicCategory: "Nuclear Fusion",
+    statement: "Calculate the Q-value (energy released) in the fusion reaction: ²₁H + ³₁H ➔ ⁴₂He + ¹₀n. Given: m(²H) = 2.014102 u, m(³H) = 3.016049 u, m(⁴He) = 4.002603 u, m_n = 1.008665 u.",
+    given: ["Mass of Reactants: m(²H) = 2.014102 u, m(³H) = 3.016049 u", "Mass of Products: m(⁴He) = 4.002603 u, m_n = 1.008665 u"],
+    required: "Energy released Q in MeV",
+    concept: "Q = [ Σ m_initial − Σ m_final ] × 931.5 MeV",
+    formula: "Q = [ m(²H) + m(³H) − (m(⁴He) + m_n) ] × 931.5 MeV",
+    unitConversion: "1 u = 931.5 MeV",
+    substitution: "m_initial = 2.014102 + 3.016049 = 5.030151 u. m_final = 4.002603 + 1.008665 = 5.011268 u. Δm = 5.030151 − 5.011268 = 0.018883 u.",
+    calculation: "Q = 0.018883 × 931.5 MeV = 17.5895 MeV ≈ 17.59 MeV.",
+    finalAnswer: "Q ≈ 17.59 MeV (standard ~17.6 MeV).",
+    neetShortcut: "D-T fusion releases 17.6 MeV per event. The alpha particle carries (1/5) × 17.6 ≈ 3.5 MeV, and the neutron carries (4/5) × 17.6 ≈ 14.1 MeV (due to momentum conservation)."
+  },
+  {
+    id: "num-8",
+    problemTitle: "Energy Released in Nuclear Fission of 1 kg of U-235",
+    topicCategory: "Nuclear Fission",
+    statement: "Assuming 200 MeV of usable energy is released per fission event of ²³⁵₉₂U, calculate the total energy released (in Joules and kWh) by complete fission of 1 kg of pure ²³⁵U. (Avogadro's number N_A = 6.022 × 10²³ mol⁻¹).",
+    given: ["Mass of uranium m = 1 kg = 1000 g", "Molar mass M = 235 g/mol", "Energy per fission E_f = 200 MeV", "N_A = 6.022 × 10²³"],
+    required: "Total Energy in Joules and kilowatt-hours (kWh)",
+    concept: "Total fissions N = (m / M) × N_A. Total Energy E = N × 200 MeV.",
+    formula: "E = (1000 / 235) × (6.022 × 10²³) × (200 × 10⁶ × 1.6 × 10⁻¹⁹ J)",
+    unitConversion: "1 eV = 1.6 × 10⁻¹⁹ J ⟹ 200 MeV = 200 × 10⁶ × 1.6 × 10⁻¹⁹ = 3.2 × 10⁻¹¹ J. 1 kWh = 3.6 × 10⁶ J.",
+    substitution: "N = 4.255 × 6.022 × 10²³ = 2.562 × 10²⁴ atoms. E(Joules) = 2.562 × 10²⁴ × 3.2 × 10⁻¹¹ J.",
+    calculation: "E = 8.199 × 10¹³ J ≈ 8.2 × 10¹³ J. In kWh: E = (8.2 × 10¹³ J) / (3.6 × 10⁶ J/kWh) = 2.28 × 10⁷ kWh = 22.8 million kWh.",
+    finalAnswer: "E ≈ 8.2 × 10¹³ J ≈ 2.28 × 10⁷ kWh.",
+    neetShortcut: "1 kg ²³⁵U fission produces ~8.2 × 10¹³ J, equivalent to burning ~2.5 million kg (2500 tonnes) of high-grade coal!"
+  },
+  {
+    id: "num-9",
+    problemTitle: "Number of Half-Lives and Undecayed Fraction",
+    topicCategory: "Radioactive Decay Law",
+    statement: "The half-life of a radioactive isotope is 20 days. What fraction of the original sample remains undecayed after 80 days?",
+    given: ["Half-life T₁/₂ = 20 days", "Total elapsed time t = 80 days"],
+    required: "Remaining fraction N / N₀",
+    concept: "Number of half-lives elapsed n = t / T₁/₂. Remaining fraction N / N₀ = (1/2)^n.",
+    formula: "n = t / T₁/₂ ; N / N₀ = (1/2)^n",
+    unitConversion: "Both times are in days, no conversion required.",
+    substitution: "n = 80 / 20 = 4 half-lives. N / N₀ = (1/2)⁴",
+    calculation: "(1/2)⁴ = 1 / 16 = 0.0625 (or 6.25%).",
+    finalAnswer: "Remaining fraction = 1/16 = 6.25% (Fraction decayed = 15/16 = 93.75%).",
+    neetShortcut: "Direct power of 2: n = 80/20 = 4 ➔ 2⁴ = 16 ➔ Remaining = 1/16."
+  },
+  {
+    id: "num-10",
+    problemTitle: "Decay Constant from Half-Life",
+    topicCategory: "Decay Constant",
+    statement: "Radon has a half-life of 3.8 days. Calculate its decay constant (λ) in s⁻¹.",
+    given: ["Half-life T₁/₂ = 3.8 days"],
+    required: "Decay constant λ in s⁻¹",
+    concept: "λ = ln(2) / T₁/₂ = 0.693 / T₁/₂.",
+    formula: "λ = 0.693 / T₁/₂",
+    unitConversion: "3.8 days = 3.8 × 24 × 3600 seconds = 328,320 s = 3.2832 × 10⁵ s.",
+    substitution: "λ = 0.693 / (3.2832 × 10⁵ s)",
+    calculation: "λ = 2.1107 × 10⁻⁶ s⁻¹.",
+    finalAnswer: "λ ≈ 2.11 × 10⁻⁶ s⁻¹.",
+    neetShortcut: "Remember: λ = 0.693 / (days × 86400). 3.8 × 86400 ≈ 3.28 × 10⁵ s ➔ 0.693 / 3.28 × 10⁵ ≈ 2.1 × 10⁻⁶ s⁻¹."
+  },
+  {
+    id: "num-11",
+    problemTitle: "Initial Activity of 1 Milligram of Radium-226",
+    topicCategory: "Activity",
+    statement: "Calculate the initial activity (in Bq and Curies) of 1.0 mg of pure ²²⁶₈₈Ra whose half-life is 1600 years. (Avogadro number N_A = 6.022 × 10²³).",
+    given: ["Mass m = 1.0 mg = 10⁻³ g", "Molar mass M = 226 g/mol", "Half-life T₁/₂ = 1600 years = 1600 × 365.25 × 86400 s = 5.05 × 10¹⁰ s"],
+    required: "Activity A = λN in Bq and Ci",
+    concept: "Number of nuclei N = (m / M) × N_A; λ = 0.693 / T₁/₂; Activity A = λN.",
+    formula: "A = [ 0.693 / T₁/₂ ] × [ (m / M) · N_A ]",
+    unitConversion: "1 Ci = 3.7 × 10¹⁰ Bq (1 Bq = 1 decay/s).",
+    substitution: "N = (10⁻³ / 226) × 6.022 × 10²³ = 2.6646 × 10¹⁸ nuclei. λ = 0.693 / (5.05 × 10¹⁰ s) = 1.372 × 10⁻¹¹ s⁻¹. A = (1.372 × 10⁻¹¹ s⁻¹) × (2.6646 × 10¹⁸)",
+    calculation: "A = 3.656 × 10⁷ Bq (decays/s). In Curies: A = (3.656 × 10⁷ Bq) / (3.7 × 10¹⁰ Bq/Ci) ≈ 0.988 × 10⁻³ Ci ≈ 1 mCi.",
+    finalAnswer: "Activity A ≈ 3.66 × 10⁷ Bq ≈ 1 mCi.",
+    neetShortcut: "By definition, 1 gram of ²²⁶Ra has an activity of exactly 1 Curie (3.7 × 10¹⁰ Bq). Therefore, 1 milligram (1/1000 g) has an activity of 1 millicurie (mCi) = 3.7 × 10⁷ Bq!"
+  },
+  {
+    id: "num-12",
+    problemTitle: "Time Required for 7/8 of Sample to Disintegrate",
+    topicCategory: "Radioactive Decay Law",
+    statement: "A radioactive element has a half-life of 15 hours. How long will it take for 7/8 of the initial quantity of this isotope to decay?",
+    given: ["Half-life T₁/₂ = 15 hours", "Decayed fraction = 7/8"],
+    required: "Time t",
+    concept: "Remaining fraction N / N₀ = 1 − Decayed fraction = 1 − 7/8 = 1/8 = (1/2)³. Elapsed time t = n × T₁/₂.",
+    formula: "N / N₀ = (1/2)^n ; t = n · T₁/₂",
+    unitConversion: "Time in hours.",
+    substitution: "1/8 = (1/2)³ ⟹ n = 3 half-lives. t = 3 × 15 hours",
+    calculation: "t = 45 hours.",
+    finalAnswer: "t = 45 hours.",
+    neetShortcut: "7/8 decayed ⟹ 1/8 remains ⟹ (1/2)³ ⟹ 3 half-lives ⟹ 3 × 15 = 45 hours."
+  },
+  {
+    id: "num-13",
+    problemTitle: "Finding Half-Life from Activity Drop",
+    topicCategory: "Activity & Half-life",
+    statement: "The activity of a radioactive sample drops from 8000 Bq to 1000 Bq in 60 minutes. Find the half-life of the sample.",
+    given: ["Initial activity A₀ = 8000 Bq", "Final activity A = 1000 Bq", "Time t = 60 minutes"],
+    required: "Half-life T₁/₂",
+    concept: "Activity scales identically to number of nuclei: A / A₀ = (1/2)^n.",
+    formula: "A / A₀ = (1/2)^n ; T₁/₂ = t / n",
+    unitConversion: "Minutes to minutes.",
+    substitution: "1000 / 8000 = 1/8 = (1/2)³ ⟹ n = 3 half-lives.",
+    calculation: "T₁/₂ = t / n = 60 min / 3 = 20 minutes.",
+    finalAnswer: "Half-life T₁/₂ = 20 minutes.",
+    neetShortcut: "8000 ➔ 4000 (1) ➔ 2000 (2) ➔ 1000 (3). 3 steps in 60 min ➔ 60 / 3 = 20 min."
+  },
+  {
+    id: "num-14",
+    problemTitle: "Mean Life from Half-Life",
+    topicCategory: "Mean Life",
+    statement: "The half-life of Carbon-14 is 5730 years. Calculate its mean life.",
+    given: ["Half-life T₁/₂ = 5730 years"],
+    required: "Mean life τ",
+    concept: "τ = T₁/₂ / ln(2) = T₁/₂ / 0.693 = 1.443 × T₁/₂.",
+    formula: "τ = 1.443 × T₁/₂",
+    unitConversion: "Time in years.",
+    substitution: "τ = 5730 / 0.693",
+    calculation: "τ = 8268.4 years.",
+    finalAnswer: "Mean life τ ≈ 8268 years.",
+    neetShortcut: "Mean life is always ~44% greater than half-life (τ = 1.44 T₁/₂)."
+  },
+  {
+    id: "num-15",
+    problemTitle: "Alpha Decay Q-value and Kinetic Energy of Alpha Particle",
+    topicCategory: "Alpha Decay",
+    statement: "²³⁸₉₂U decays by alpha emission into ²³⁴₉₀Th. If total decay energy Q = 4.27 MeV, calculate the kinetic energy of the emitted alpha particle, assuming the parent nucleus was initially at rest.",
+    given: ["Parent mass number A = 238", "Alpha mass number A_α = 4", "Daughter mass number A_d = 234", "Total Q = 4.27 MeV"],
+    required: "Kinetic energy of alpha particle K_α",
+    concept: "From conservation of linear momentum in 2-body decay: K_α = [(A − 4) / A] × Q.",
+    formula: "K_α = [(A − 4) / A] · Q",
+    unitConversion: "Energy in MeV.",
+    substitution: "K_α = (234 / 238) × 4.27 MeV",
+    calculation: "K_α = 0.98319 × 4.27 MeV = 4.198 MeV ≈ 4.20 MeV.",
+    finalAnswer: "Kinetic energy of alpha particle K_α ≈ 4.20 MeV (the recoil Th nucleus carries the remaining 0.07 MeV).",
+    neetShortcut: "The lighter alpha particle carries almost all (~98.3%) of the decay energy: K_α = (234/238) Q."
+  },
+  {
+    id: "num-16",
+    problemTitle: "Ratio of Number of Nuclei of Two Radioactive Elements",
+    topicCategory: "Radioactive Decay Law",
+    statement: "Two radioactive materials X₁ and X₂ have decay constants 10λ and λ respectively. If initially they have the same number of nuclei, after what time will the ratio of the number of nuclei of X₁ to that of X₂ be 1/e?",
+    given: ["λ₁ = 10λ", "λ₂ = λ", "Initial N₁(0) = N₂(0) = N₀", "Ratio N₁(t) / N₂(t) = 1/e"],
+    required: "Time t",
+    concept: "N₁(t) = N₀ e^(−λ₁ t), N₂(t) = N₀ e^(−λ₂ t). N₁(t) / N₂(t) = e^[−(λ₁ − λ₂) t].",
+    formula: "N₁ / N₂ = e^(−(λ₁ − λ₂)t) = 1/e = e⁻¹",
+    unitConversion: "Dimensionless exponent.",
+    substitution: "(λ₁ − λ₂) t = 1 ⟹ (10λ − λ) t = 1",
+    calculation: "9λ t = 1 ⟹ t = 1 / (9λ).",
+    finalAnswer: "t = 1 / (9λ).",
+    neetShortcut: "Δλ · t = ln(e) = 1 ⟹ (10λ − λ) t = 1 ⟹ t = 1/(9λ) in 10 seconds!"
+  },
+  {
+    id: "num-17",
+    problemTitle: "Comparison of Stability of Two Nuclei from Binding Energy",
+    topicCategory: "Nuclear Stability",
+    statement: "Nucleus X has mass number 60 and total binding energy 525 MeV. Nucleus Y has mass number 200 and total binding energy 1540 MeV. Which nucleus is more stable?",
+    given: ["For X: A_X = 60, E_b(X) = 525 MeV", "For Y: A_Y = 200, E_b(Y) = 1540 MeV"],
+    required: "Identify more stable nucleus by calculating E_bn = E_b / A",
+    concept: "Nuclear stability is strictly determined by Binding Energy per Nucleon (E_bn = E_b / A), NOT by total binding energy.",
+    formula: "E_bn = E_b / A",
+    unitConversion: "Energy in MeV/nucleon.",
+    substitution: "E_bn(X) = 525 / 60 ; E_bn(Y) = 1540 / 200",
+    calculation: "E_bn(X) = 8.75 MeV / nucleon. E_bn(Y) = 7.70 MeV / nucleon.",
+    finalAnswer: "Nucleus X is more stable because its E_bn (8.75 MeV/n) is significantly higher than that of Y (7.70 MeV/n).",
+    neetShortcut: "Never look at total binding energy (1540 > 525 is a trap!). Always divide by A: 525/60 = 8.75 > 1540/200 = 7.70."
+  },
+  {
+    id: "num-18",
+    problemTitle: "Mass Equivalent of Energy Produced by Sun per Second",
+    topicCategory: "Mass-Energy Equivalence",
+    statement: "The Sun radiates energy at the rate of 3.8 × 10²⁶ Watts (J/s). Calculate the rate at which the mass of the Sun is decreasing due to nuclear fusion.",
+    given: ["Power P = 3.8 × 10²⁶ J/s", "Speed of light c = 3.0 × 10⁸ m/s"],
+    required: "Rate of mass loss dm/dt in kg/s",
+    concept: "E = mc² ⟹ P = dE/dt = (dm/dt) · c² ⟹ dm/dt = P / c².",
+    formula: "dm/dt = P / c²",
+    unitConversion: "P in J/s (W), c in m/s ⟹ dm/dt in kg/s.",
+    substitution: "dm/dt = (3.8 × 10²⁶) / (3.0 × 10⁸)² = (3.8 × 10²⁶) / (9.0 × 10¹⁶)",
+    calculation: "dm/dt = 4.22 × 10⁹ kg/s (about 4.2 million tonnes per second!).",
+    finalAnswer: "dm/dt ≈ 4.22 × 10⁹ kg/s.",
+    neetShortcut: "Direct formula: dm/dt = P / c² = 3.8 × 10²⁶ / 9 × 10¹⁶ = 0.422 × 10¹⁰ = 4.22 × 10⁹ kg/s."
+  }
+];

@@ -1,0 +1,17 @@
+{
+  "name": "VG NEET Library",
+  "short_name": "VG NEET",
+  "description": "Learn every NEET concept, one topic at a time. Digital library & study companion for NEET UG.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "pwa-icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
