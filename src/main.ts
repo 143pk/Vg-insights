@@ -5,6 +5,7 @@ import { RouterService, RouteState } from './services/routerService';
 import { WeaknessDoctorService } from './services/weaknessDoctorService';
 import { WeeklyMockService } from './services/weeklyMockService';
 import { MistakeBookService } from './services/mistakeBookService';
+import { StudyTimerService, StudySubject } from './services/studyTimerService';
 
 import { renderHeader, renderBreadcrumb } from './components/headerComponent';
 import { renderSidebar } from './components/sidebarComponent';
@@ -39,6 +40,9 @@ import { renderChaptersDirectoryView } from './components/chaptersDirectoryCompo
 import { renderSearchModal, handleSearchInput } from './components/searchModalComponent';
 import { renderBookmarksModal } from './components/bookmarksModalComponent';
 import { renderProgressModal } from './components/progressModalComponent';
+import { renderLandingPage, initLandingPageEvents } from './components/landingPageComponent';
+import { renderAuthModal, initAuthModalEvents } from './components/authModalComponent';
+import { AuthService } from './services/authService';
 
 class App {
   private currentSearchFilter: string = 'all';
@@ -54,6 +58,11 @@ class App {
     // Initialize Theme
     StorageService.initTheme();
 
+    // Initialize Study Session Timer
+    StudyTimerService.init();
+    const initialRoute = RouterService.parseHash(window.location.hash);
+    StudyTimerService.updateRoute(initialRoute);
+
     // Register PWA Service Worker if supported
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
@@ -65,6 +74,25 @@ class App {
 
     // Initial Layout Render
     this.renderApp();
+
+    // Scroll listener for sticky header visual height & translucency refinement
+    let isHeaderTicking = false;
+    window.addEventListener('scroll', () => {
+      if (!isHeaderTicking) {
+        requestAnimationFrame(() => {
+          const header = document.getElementById('main-app-header');
+          if (header) {
+            if (window.scrollY > 20) {
+              header.classList.add('app-header-scrolled');
+            } else {
+              header.classList.remove('app-header-scrolled');
+            }
+          }
+          isHeaderTicking = false;
+        });
+        isHeaderTicking = true;
+      }
+    }, { passive: true });
 
     // Listen to hash route changes
     window.addEventListener('hashchange', () => {
@@ -150,6 +178,9 @@ class App {
   private handleRouteChange(): void {
     const routeState: RouteState = RouterService.parseHash(window.location.hash);
 
+    // Sync study timer with navigated subject/topic/chapter
+    StudyTimerService.updateRoute(routeState);
+
     // Reset session states if leaving practice or quiz
     if (routeState.type !== 'weakness-practice') {
       this.currentPracticeSession = null;
@@ -163,12 +194,57 @@ class App {
       this.stopMockTimer();
     }
 
-    this.renderMainContent();
+    if (routeState.type === 'landing' || routeState.type === 'login') {
+      this.renderLandingLayout(routeState.type === 'login');
+    } else {
+      const appContent = document.getElementById('app-content');
+      if (!appContent) {
+        this.renderApp();
+      } else {
+        this.renderMainContent();
+      }
+    }
+  }
+
+  private renderLandingLayout(autoOpenLogin: boolean = false): void {
+    const root = document.getElementById('root');
+    if (!root) return;
+
+    document.title = 'VG Insights – NEET UG Preparation Platform';
+
+    root.innerHTML = `
+      ${renderLandingPage()}
+      <div id="modals-container">
+        ${renderAuthModal()}
+      </div>
+    `;
+
+    initLandingPageEvents(() => this.openAuthModal());
+    initAuthModalEvents(() => {
+      RouterService.navigateTo('home');
+      this.renderApp();
+    });
+
+    if (autoOpenLogin) {
+      this.openAuthModal();
+    }
+  }
+
+  public openAuthModal(): void {
+    this.openModal('modal-auth');
+    const emailInput = document.getElementById('auth-email-input') as HTMLInputElement | null;
+    emailInput?.focus();
   }
 
   private renderApp(): void {
     const root = document.getElementById('root');
     if (!root) return;
+
+    const routeState = RouterService.parseHash(window.location.hash);
+    if (routeState.type === 'landing' || routeState.type === 'login') {
+      this.renderLandingLayout(routeState.type === 'login');
+      return;
+    }
 
     root.innerHTML = `
       <div id="header-container"></div>
@@ -184,14 +260,16 @@ class App {
         ${renderSearchModal()}
         ${renderBookmarksModal()}
         ${renderProgressModal()}
+        ${renderAuthModal()}
       </div>
 
       <footer class="border-t border-slate-200/80 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 py-6 text-center text-xs text-slate-500 dark:text-slate-400">
         <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div class="font-semibold text-slate-700 dark:text-slate-300">
-            VG NEET Library — Built for NEET UG Aspirants
+            VG Insights — Built for NEET UG Aspirants
           </div>
           <div class="flex flex-wrap items-center justify-center gap-4">
+            <a href="#landing" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline">🌐 Landing Page</a>
             <a href="#home" class="hover:underline">Home</a>
             <a href="#weekly-mock" class="text-blue-600 dark:text-blue-400 font-bold hover:underline">📝 Weekly Mock</a>
             <a href="#weakness-doctor" class="text-rose-600 dark:text-rose-400 font-bold hover:underline">AI Weakness Doctor 🩺</a>
@@ -204,6 +282,9 @@ class App {
 
     this.attachHeaderEvents();
     this.attachModalEvents();
+    initAuthModalEvents(() => {
+      this.refreshHeader();
+    });
     this.renderMainContent();
   }
 
@@ -234,7 +315,7 @@ class App {
       }
     }
 
-    // Update Breadcrumbs
+    // Update Breadcrumbs & Document Title
     const breadcrumbContainer = document.getElementById('breadcrumb-container');
     if (breadcrumbContainer) {
       if (routeState.type === 'weekly-mock-test') {
@@ -244,9 +325,22 @@ class App {
       }
     }
 
+    // Set page title with VG Insights branding
+    if (routeState.type === 'home' || !routeState.breadcrumbs.length) {
+      document.title = 'VG Insights – NEET UG Notes, PYQs, Practice & Study Library';
+    } else {
+      const lastCrumb = routeState.breadcrumbs[routeState.breadcrumbs.length - 1];
+      document.title = `${lastCrumb.label} | VG Insights`;
+    }
+
     // Update Main Body
     const appContent = document.getElementById('app-content');
     if (!appContent) return;
+
+    // Reset and trigger smooth page entrance animation
+    appContent.classList.remove('animate-page-enter');
+    void appContent.offsetWidth; // force reflow for smooth re-trigger
+    appContent.classList.add('animate-page-enter');
 
     switch (routeState.type) {
       case 'home':
@@ -402,20 +496,47 @@ class App {
       this.renderMainContent();
     });
 
-    // Search button
+    // User profile menu dropdown
+    const userProfileBtn = document.getElementById('btn-user-profile-menu');
+    const userProfileDropdown = document.getElementById('user-profile-dropdown');
+    userProfileBtn?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      userProfileDropdown?.classList.toggle('hidden');
+      const isHidden = userProfileDropdown?.classList.contains('hidden');
+      userProfileBtn.setAttribute('aria-expanded', isHidden ? 'false' : 'true');
+    });
+
+    // Sign out button
+    document.getElementById('btn-header-logout')?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      AuthService.logout();
+      RouterService.navigateTo('landing');
+    });
+
+    // Close user dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      if (userProfileDropdown && !userProfileDropdown.contains(e.target as Node) && e.target !== userProfileBtn) {
+        userProfileDropdown.classList.add('hidden');
+        userProfileBtn?.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Search button (Desktop)
     document.getElementById('btn-header-search')?.addEventListener('click', () => {
       this.openModal('modal-search');
     });
+  }
 
-    // Bookmarks button
-    document.getElementById('btn-header-bookmarks')?.addEventListener('click', () => {
-      this.openBookmarksModal();
-    });
-
-    // Progress button
-    document.getElementById('btn-header-progress')?.addEventListener('click', () => {
-      this.openProgressModal();
-    });
+  private refreshHeader(): void {
+    const headerContainer = document.getElementById('header-container');
+    if (headerContainer) {
+      headerContainer.innerHTML = renderHeader(
+        () => this.openModal('modal-search'),
+        () => this.openBookmarksModal(),
+        () => this.openProgressModal()
+      );
+      this.attachHeaderEvents();
+    }
   }
 
   private attachHomeEvents(): void {
@@ -976,25 +1097,49 @@ class App {
   }
 
   private initWeaknessPracticeSession(topicId: string): void {
-    if (!this.currentPracticeSession || this.currentPracticeSession.topicId !== topicId) {
-      const state = WeaknessDoctorService.getStorageState();
-      const attempts = state.attempts.filter(a => a.topicId === topicId);
-      const history = state.topicHistories[topicId] || [];
-      const initialStats = WeaknessDoctorService.calculateTopicStats(topicId, attempts, history);
-      const questions = WeaknessDoctorService.getQuestionsForTopic(topicId);
+    if (this.currentPracticeSession && this.currentPracticeSession.topicId === topicId) {
+      return;
+    }
 
-      this.currentPracticeSession = {
-        topicId,
-        questions,
-        currentIndex: 0,
-        userAnswers: {},
-        startTime: Date.now(),
-        questionStartTime: Date.now(),
-        isCompleted: false,
-        initialStats,
-        updatedStats: initialStats,
-        isLoadingAIQuestions: false
-      };
+    try {
+      const saved = sessionStorage.getItem(`vg_neet_drill_${topicId}`);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (parsed && parsed.topicId === topicId && Array.isArray(parsed.questions) && parsed.questions.length > 0) {
+          this.currentPracticeSession = parsed;
+          return;
+        }
+      }
+    } catch (e) {
+      console.warn('Could not restore drill session', e);
+    }
+
+    const state = WeaknessDoctorService.getStorageState();
+    const attempts = state.attempts.filter(a => a.topicId === topicId);
+    const history = state.topicHistories[topicId] || [];
+    const initialStats = WeaknessDoctorService.calculateTopicStats(topicId, attempts, history);
+    const questions = WeaknessDoctorService.getQuestionsForTopic(topicId);
+
+    this.currentPracticeSession = {
+      topicId,
+      questions,
+      currentIndex: 0,
+      userAnswers: {},
+      startTime: Date.now(),
+      questionStartTime: Date.now(),
+      isCompleted: false,
+      initialStats,
+      updatedStats: initialStats,
+      isLoadingAIQuestions: false
+    };
+    this.persistDrillSession();
+  }
+
+  private persistDrillSession(): void {
+    if (this.currentPracticeSession) {
+      try {
+        sessionStorage.setItem(`vg_neet_drill_${this.currentPracticeSession.topicId}`, JSON.stringify(this.currentPracticeSession));
+      } catch (e) {}
     }
   }
 
@@ -1018,6 +1163,7 @@ class App {
           isCorrect,
           timeSpent
         };
+        this.persistDrillSession();
 
         const currentQ = session.questions[session.currentIndex];
         
@@ -1051,6 +1197,7 @@ class App {
         session.currentIndex++;
         session.questionStartTime = Date.now();
       }
+      this.persistDrillSession();
 
       const appContent = document.getElementById('app-content');
       if (appContent) {
@@ -1067,6 +1214,7 @@ class App {
         session.currentIndex++;
         session.questionStartTime = Date.now();
       }
+      this.persistDrillSession();
 
       const appContent = document.getElementById('app-content');
       if (appContent) {
@@ -1077,6 +1225,9 @@ class App {
 
     // Practice Again Button
     document.getElementById('btn-practice-again')?.addEventListener('click', () => {
+      try {
+        sessionStorage.removeItem(`vg_neet_drill_${topicId}`);
+      } catch (e) {}
       this.currentPracticeSession = null;
       this.initWeaknessPracticeSession(topicId);
       const appContent = document.getElementById('app-content');
@@ -1291,7 +1442,7 @@ class App {
   }
 
   private closeAllModals(): void {
-    ['modal-search', 'modal-bookmarks', 'modal-progress'].forEach(id => this.closeModal(id));
+    ['modal-search', 'modal-bookmarks', 'modal-progress', 'modal-auth'].forEach(id => this.closeModal(id));
   }
 }
 

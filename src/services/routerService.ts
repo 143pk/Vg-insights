@@ -7,6 +7,8 @@ export interface BreadcrumbItem {
 
 export interface RouteState {
   type:
+    | 'landing'
+    | 'login'
     | 'home'
     | 'subject'
     | 'class'
@@ -45,7 +47,23 @@ export interface RouteState {
 export class RouterService {
   static parseHash(hash: string): RouteState {
     const cleanHash = hash.replace(/^#\/?/, '').trim();
-    if (!cleanHash || cleanHash === 'home') {
+    
+    // Landing page is the public entry point
+    if (!cleanHash || cleanHash === 'landing') {
+      return {
+        type: 'landing',
+        breadcrumbs: []
+      };
+    }
+
+    if (cleanHash === 'login') {
+      return {
+        type: 'login',
+        breadcrumbs: []
+      };
+    }
+
+    if (cleanHash === 'home') {
       return {
         type: 'home',
         breadcrumbs: [{ label: 'Home', path: '#home' }]

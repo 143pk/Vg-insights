@@ -36,51 +36,51 @@ export function renderDiagnosticQuizView(state?: DiagnosticQuizState): string {
     return `
       <div class="w-full max-w-3xl mx-auto space-y-6 pb-16 font-sans text-slate-900 dark:text-slate-100 animate-fade-in" id="diagnostic-quiz-completed">
         
-        <section class="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-rose-950 via-slate-900 to-indigo-950 text-white shadow-2xl border border-rose-900/40 text-center space-y-4">
-          <div class="w-16 h-16 rounded-3xl bg-rose-500/20 text-rose-400 flex items-center justify-center font-bold text-3xl mx-auto border border-rose-400/30">
+        <section class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm text-center space-y-4">
+          <div class="w-14 h-14 rounded-2xl bg-rose-50 dark:bg-rose-950/50 text-rose-600 dark:text-rose-400 flex items-center justify-center font-bold text-2xl mx-auto border border-rose-200 dark:border-rose-800">
             🩺
           </div>
           <div class="space-y-1">
-            <span class="text-xs font-bold text-rose-400 uppercase tracking-wider">
+            <span class="text-xs font-bold text-rose-600 dark:text-rose-400 uppercase tracking-wider">
               Diagnostic Assessment Complete
             </span>
-            <h2 class="text-2xl sm:text-3xl font-black">
+            <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">
               NEET Weakness Profile Generated
             </h2>
-            <p class="text-xs text-slate-300">
+            <p class="text-xs text-slate-600 dark:text-slate-400">
               All question attempts evaluated and indexed into AI Weakness Doctor.
             </p>
           </div>
 
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-3 text-left">
-            <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10">
-              <span class="text-[11px] text-slate-400 block">Total Score</span>
-              <span class="text-xl font-black text-white">${correctCount}/${totalAttempted}</span>
-              <span class="text-[10px] text-rose-300 block">${accuracy}% accuracy</span>
+            <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80">
+              <span class="text-[11px] text-slate-400 block font-semibold">Total Score</span>
+              <span class="text-xl font-black text-slate-900 dark:text-white">${correctCount}/${totalAttempted}</span>
+              <span class="text-[10px] text-rose-600 dark:text-rose-400 block">${accuracy}% accuracy</span>
             </div>
 
-            <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10">
-              <span class="text-[11px] text-slate-400 block">Weak Areas</span>
-              <span class="text-xl font-black text-rose-400">${metrics.weakTopicsCount}</span>
+            <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80">
+              <span class="text-[11px] text-slate-400 block font-semibold">Weak Areas</span>
+              <span class="text-xl font-black text-rose-600 dark:text-rose-400">${metrics.weakTopicsCount}</span>
               <span class="text-[10px] text-slate-400 block">&lt;50% accuracy</span>
             </div>
 
-            <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10">
-              <span class="text-[11px] text-slate-400 block">Improving</span>
-              <span class="text-xl font-black text-amber-400">${metrics.improvingTopicsCount}</span>
+            <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80">
+              <span class="text-[11px] text-slate-400 block font-semibold">Improving</span>
+              <span class="text-xl font-black text-amber-600 dark:text-amber-400">${metrics.improvingTopicsCount}</span>
               <span class="text-[10px] text-slate-400 block">50-74% accuracy</span>
             </div>
 
-            <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10">
-              <span class="text-[11px] text-slate-400 block">Mastered</span>
-              <span class="text-xl font-black text-emerald-400">${metrics.masteredTopicsCount}</span>
+            <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80">
+              <span class="text-[11px] text-slate-400 block font-semibold">Mastered</span>
+              <span class="text-xl font-black text-emerald-600 dark:text-emerald-400">${metrics.masteredTopicsCount}</span>
               <span class="text-[10px] text-slate-400 block">≥90% accuracy</span>
             </div>
           </div>
         </section>
 
         <div class="flex items-center justify-center gap-3">
-          <a href="#weakness-doctor" class="px-6 py-3 rounded-2xl bg-rose-600 hover:bg-rose-500 text-white font-bold text-xs sm:text-sm shadow-lg shadow-rose-600/20 transition-all flex items-center gap-2">
+          <a href="#weakness-doctor" class="px-6 py-3 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs sm:text-sm shadow-sm transition-all flex items-center gap-2">
             <span>🩺</span> Open AI Weakness Doctor Dashboard →
           </a>
         </div>
@@ -127,7 +127,7 @@ export function renderDiagnosticQuizView(state?: DiagnosticQuizState): string {
       </div>
 
       <!-- Question Card -->
-      <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-6">
+      <div class="academic-question-card p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm space-y-6">
         <div class="flex items-center justify-between text-xs font-bold">
           <span class="px-3 py-1 rounded-xl bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900">
             Question ${currentIndex + 1}
@@ -178,9 +178,16 @@ export function renderDiagnosticQuizView(state?: DiagnosticQuizState): string {
         </div>
 
         ${currentAnswer ? `
-          <div class="p-4 rounded-2xl border ${currentAnswer.isCorrect ? 'bg-emerald-50 dark:bg-emerald-950/40 border-emerald-300 text-emerald-900 dark:text-emerald-200' : 'bg-rose-50 dark:bg-rose-950/40 border-rose-300 text-rose-900 dark:text-rose-200'} text-xs space-y-1.5 animate-fade-in">
+          <div class="p-4 rounded-2xl border ${currentAnswer.isCorrect ? 'bg-emerald-50 dark:bg-emerald-950/40 border-emerald-300 text-emerald-900 dark:text-emerald-200' : 'bg-rose-50 dark:bg-rose-950/40 border-rose-300 text-rose-900 dark:text-rose-200'} text-xs space-y-2 animate-fade-in">
             <span class="font-bold block">${currentAnswer.isCorrect ? '✓ Correct Answer!' : '✗ Incorrect Concept:'}</span>
-            <p class="leading-relaxed font-medium">${renderInlineMathHTML(currentQ.explanation)}</p>
+            <div class="p-3 rounded-xl bg-white/80 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 space-y-1 text-slate-800 dark:text-slate-200">
+              <p class="leading-relaxed font-medium">${renderInlineMathHTML(currentQ.explanation)}</p>
+            </div>
+            ${WeaknessDoctorService.renderLearnTopicSection({
+              topicId: currentQ.topicId,
+              topicTitle: currentQ.topicTitle,
+              subjectId: currentQ.subjectName?.toLowerCase()
+            })}
           </div>
         ` : ''}
 

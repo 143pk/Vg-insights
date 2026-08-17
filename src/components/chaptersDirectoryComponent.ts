@@ -14,30 +14,32 @@ export function renderChaptersDirectoryView(): string {
   });
 
   return `
-    <div class="max-w-5xl mx-auto space-y-6 animate-fadeIn pb-16">
-      <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-blue-900 via-indigo-950 to-slate-900 text-white shadow-xl border border-blue-800/40 space-y-2">
-        <span class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-bold uppercase tracking-wider border border-blue-400/30">
-          📖 Complete Syllabus Directory
-        </span>
-        <h1 class="text-2xl sm:text-3xl font-black text-white">
+    <div class="max-w-5xl mx-auto space-y-6 pb-16">
+      
+      <!-- White Academic Header -->
+      <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/50 text-blue-700 dark:text-blue-300 text-xs font-bold uppercase tracking-wider border border-blue-200 dark:border-blue-800">
+          <span>📖</span> Complete Syllabus Directory
+        </div>
+        <h1 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">
           All NEET UG Chapters (${chaptersList.length})
         </h1>
-        <p class="text-xs sm:text-sm text-slate-300 max-w-2xl">
-          Class 11 and 12 chapter modules covering Physics, Chemistry, and Biology.
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-2xl">
+          Class 11 and 12 chapter modules covering Physics, Chemistry, and Biology with high-yield focus topics.
         </p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         ${chaptersList.map(ch => `
-          <a href="#chapter/${ch.id}" class="p-5 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-2 hover:border-blue-500/40 transition-all block">
+          <a href="#chapter/${ch.id}" class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm space-y-2 hover:border-blue-500/50 dark:hover:border-blue-500/50 hover:shadow-md transition-all block">
             <div class="flex items-center justify-between">
               <span class="px-2 py-0.5 rounded-md text-[10px] font-bold ${
-                ch.subjectId === 'physics' ? 'bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400' :
-                (ch.subjectId === 'chemistry' ? 'bg-emerald-50 text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-400' : 'bg-purple-50 text-purple-600 dark:bg-purple-900/30 dark:text-purple-400')
+                ch.subjectId === 'physics' ? 'bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400 border border-blue-200 dark:border-blue-800' :
+                (ch.subjectId === 'chemistry' ? 'bg-emerald-50 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800' : 'bg-purple-50 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400 border border-purple-200 dark:border-purple-800')
               }">
                 ${ch.subjectName}
               </span>
-              <span class="text-xs text-slate-400">${ch.topicCount} Topics</span>
+              <span class="text-xs text-slate-400 font-medium">${ch.topicCount} Topics</span>
             </div>
             <h3 class="font-bold text-slate-900 dark:text-white text-sm">
               ${ch.title}

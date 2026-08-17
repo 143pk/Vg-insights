@@ -3,13 +3,88 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VG NEET Library — Learn Every NEET Concept One Topic at a Time</title>
-    <meta name="description" content="A modular digital library and educational app for NEET UG preparation." />
+    
+    <!-- Primary Page Title & Meta -->
+    <title>VG Insights – NEET UG Preparation Platform</title>
+    <meta name="description" content="VG Insights is a NEET UG preparation platform for concepts, NCERT learning, PYQs, revision, mock tests, progress tracking and AI-powered weakness diagnosis." />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="canonical" href="https://vginsights.in/" />
+    
+    <!-- Theme & App Manifest -->
     <meta name="theme-color" content="#2563eb" />
+    <meta name="application-name" content="VG Insights" />
+    <meta name="apple-mobile-web-app-title" content="VG Insights" />
     <link rel="manifest" href="/manifest.json" />
-    <link rel="icon" type="image/svg+xml" href="/pwa-icon.svg" />
+
+    <!-- Favicon & Touch Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="VG Insights" />
+    <meta property="og:url" content="https://vginsights.in/" />
+    <meta property="og:title" content="VG Insights – NEET UG Preparation Platform" />
+    <meta property="og:description" content="VG Insights is a NEET UG preparation platform for concepts, NCERT learning, PYQs, revision, mock tests, progress tracking and AI-powered weakness diagnosis." />
+    <meta property="og:image" content="https://vginsights.in/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="VG Insights – NEET UG Preparation Platform" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="VG Insights – NEET UG Preparation Platform" />
+    <meta name="twitter:description" content="VG Insights is a NEET UG preparation platform for concepts, NCERT learning, PYQs, revision, mock tests, progress tracking and AI-powered weakness diagnosis." />
+    <meta name="twitter:image" content="https://vginsights.in/og-image.png" />
+
+    <!-- Schema.org WebSite & Organization Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://vginsights.in/#website",
+          "name": "VG Insights",
+          "alternateName": "VG Insights",
+          "url": "https://vginsights.in/",
+          "description": "VG Insights is a NEET UG preparation platform for concepts, NCERT learning, PYQs, revision, mock tests, progress tracking and AI-powered weakness diagnosis.",
+          "inLanguage": "en-US",
+          "publisher": {
+            "@id": "https://vginsights.in/#organization"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://vginsights.in/#organization",
+          "name": "VG Insights",
+          "url": "https://vginsights.in/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://vginsights.in/apple-touch-icon.png",
+            "width": 180,
+            "height": 180
+          }
+        }
+      ]
+    }
+    </script>
+    <!-- Google Fonts: Plus Jakarta Sans (Display) & Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- KaTeX CSS & JS CDN for Mathematical Typography -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
   </head>
-  <body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen font-sans antialiased selection:bg-blue-500 selection:text-white transition-colors duration-200">
+  <body class="bg-[#F8FAFC] dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen font-sans antialiased selection:bg-blue-600 selection:text-white transition-colors duration-200">
     <div id="root" class="min-h-screen flex flex-col"></div>
     <script type="module" src="/src/main.ts"></script>
   </body>

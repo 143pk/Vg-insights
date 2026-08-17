@@ -2,8 +2,482 @@
 @import "katex/dist/katex.min.css";
 
 /* ==================================================
+   VG INSIGHTS - CLEAN WHITE-THEMED DESIGN SYSTEM
+   Professional, Academic, Trustworthy, Modern
+   ================================================== */
+
+:root {
+  --font-inter: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  --color-primary-blue: #2563EB;
+  --color-primary-dark: #1D4ED8;
+  --color-slate-900: #0F172A;
+  --color-slate-700: #334155;
+  --color-slate-600: #475569;
+  --color-slate-500: #64748B;
+  --color-slate-200: #E2E8F0;
+  --color-slate-100: #F1F5F9;
+  --color-slate-50: #F8FAFC;
+  --color-ai-accent: #E11D48;
+}
+
+/* ==================================================
+   PREMIUM MINIMAL SAAS APP HEADER STYLES
+   ================================================== */
+.app-header-base {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E5E7EB;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+}
+
+.dark .app-header-base {
+  background-color: #0F172A;
+  border-bottom: 1px solid #1E293B;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Scrolled down state: reduced height, slight translucency and subtle backdrop blur */
+.app-header-scrolled {
+  background-color: rgba(255, 255, 255, 0.90) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border-bottom-color: rgba(229, 231, 235, 0.85) !important;
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.03) !important;
+}
+
+.dark .app-header-scrolled {
+  background-color: rgba(15, 23, 42, 0.90) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border-bottom-color: rgba(30, 41, 59, 0.85) !important;
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Scrolled down height compression */
+.app-header-scrolled #header-inner-bar {
+  height: 56px !important;
+}
+
+@media (min-width: 640px) {
+  .app-header-scrolled #header-inner-bar {
+    height: 58px !important;
+  }
+}
+
+
+/* ==================================================
+   HIGH-END LANDING PAGE 3D & FLOATING ANIMATION SYSTEM
+   ================================================== */
+
+.landing-grid-pattern {
+  background-image: radial-gradient(rgba(37, 99, 235, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.landing-dark-grid-pattern {
+  background-image: radial-gradient(rgba(59, 130, 246, 0.12) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.hero-radial-glow {
+  background: radial-gradient(circle at 50% 30%, rgba(37, 99, 235, 0.12) 0%, rgba(239, 246, 255, 0.4) 45%, transparent 70%);
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger-1 { transition-delay: 80ms; }
+.reveal-stagger-2 { transition-delay: 160ms; }
+.reveal-stagger-3 { transition-delay: 240ms; }
+.reveal-stagger-4 { transition-delay: 320ms; }
+
+/* KaTeX custom typography overrides */
+.katex-display {
+  margin: 0.5em 0 !important;
+}
+
+.katex {
+  font-size: 1.12em;
+}
+
+/* Hero Entrance & Parallax Animation States */
+.hero-mockup-init {
+  opacity: 0;
+  transform: scale(0.95) translateY(24px);
+  will-change: transform, opacity;
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-mockup-entered {
+  opacity: 1;
+  transform: scale(1) translateY(0px);
+}
+
+.hero-card-init {
+  opacity: 0;
+  transform: scale(0.84) translateY(24px);
+  will-change: transform, opacity;
+  transition: opacity 0.7s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.hero-card-entered {
+  opacity: 1;
+  transform: scale(1) translateY(0px);
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
+
+@keyframes floatReverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(8px) rotate(-1.5deg);
+  }
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes ambientGlow {
+  0%, 100% {
+    opacity: 0.45;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes pulseBorder {
+  0%, 100% {
+    border-color: rgba(37, 99, 235, 0.2);
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.1);
+  }
+  50% {
+    border-color: rgba(37, 99, 235, 0.6);
+    box-shadow: 0 0 20px 4px rgba(37, 99, 235, 0.2);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: floatReverse 7s ease-in-out infinite;
+}
+
+.animate-float-gentle {
+  animation: floatGentle 4.5s ease-in-out infinite;
+}
+
+.animate-ambient-glow {
+  animation: ambientGlow 8s ease-in-out infinite;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.perspective-1500 {
+  perspective: 1500px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Reduced Motion Respect */
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-slow,
+  .animate-float-reverse,
+  .animate-float-gentle,
+  .animate-ambient-glow,
+  .animate-gentle-pulse,
+  .animate-card-enter,
+  .animate-page-enter {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+body {
+  font-family: var(--font-inter);
+  background-color: #F8FAFC;
+  color: #0F172A;
+}
+
+/* Crisp White Academic Card */
+.academic-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+}
+
+.academic-card:hover {
+  border-color: #CBD5E1;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px -2px rgba(0, 0, 0, 0.06), 0 3px 6px -2px rgba(0, 0, 0, 0.04);
+}
+
+.dark .academic-card {
+  background-color: #0F172A;
+  border-color: #1E293B;
+  box-shadow: none;
+}
+
+.dark .academic-card:hover {
+  border-color: #334155;
+  transform: translateY(-2px);
+}
+
+/* ==================================================
+   SMOOTH ACADEMIC ANIMATIONS & TRANSITIONS
+   ================================================== */
+
+/* Page View Transition */
+@keyframes pageEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-page-enter {
+  animation: pageEntrance 0.26s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
+}
+
+/* Question & Content Card Entrance */
+@keyframes academicCardEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(12px) scale(0.995);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-card-enter,
+.academic-question-card,
+.practice-card,
+.pyq-card,
+.mock-card {
+  animation: academicCardEntrance 0.32s cubic-bezier(0.16, 1, 0.3, 1) both;
+  will-change: transform, opacity;
+}
+
+/* Stagger Delays for Cascade Entrances */
+.stagger-1 { animation-delay: 35ms; }
+.stagger-2 { animation-delay: 70ms; }
+.stagger-3 { animation-delay: 105ms; }
+.stagger-4 { animation-delay: 140ms; }
+.stagger-5 { animation-delay: 175ms; }
+.stagger-6 { animation-delay: 210ms; }
+.stagger-7 { animation-delay: 245ms; }
+.stagger-8 { animation-delay: 280ms; }
+
+/* Modal & Dialog Entrance */
+@keyframes modalScaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.96) translateY(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-modal-enter {
+  animation: modalScaleIn 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
+}
+
+/* Fade In */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+/* Option Select Micro-Interaction */
+@keyframes optionSelectPulse {
+  0% { transform: scale(0.985); }
+  50% { transform: scale(1.01); }
+  100% { transform: scale(1); }
+}
+
+.animate-option-select {
+  animation: optionSelectPulse 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Explanation / Accordion Expansion */
+@keyframes explanationReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-explanation-open {
+  animation: explanationReveal 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Live Timer & Indicator Gentle Pulse */
+@keyframes gentlePulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.65;
+    transform: scale(1.25);
+  }
+}
+
+.animate-gentle-pulse {
+  animation: gentlePulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Subtle Shimmer for High-Score / Diagnostic Highlights */
+@keyframes shimmerPass {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.animate-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.25) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: shimmerPass 2.5s infinite;
+}
+
+/* Interactive Interactive Press & Transitions */
+button,
+a,
+.btn-academic-primary,
+.btn-academic-secondary {
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+button:active,
+.btn-academic-primary:active,
+.btn-academic-secondary:active {
+  transform: scale(0.98);
+}
+
+/* Primary Academic Button */
+.btn-academic-primary {
+  background-color: #2563EB;
+  color: #FFFFFF;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  padding: 0.625rem 1.25rem;
+  transition: background-color 0.15s ease-in-out, transform 0.1s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-academic-primary:hover {
+  background-color: #1D4ED8;
+}
+
+.btn-academic-primary:active {
+  transform: translateY(1px);
+}
+
+/* Secondary Neutral Button */
+.btn-academic-secondary {
+  background-color: #FFFFFF;
+  color: #334155;
+  border: 1px solid #E2E8F0;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  padding: 0.625rem 1.25rem;
+  transition: all 0.15s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-academic-secondary:hover {
+  background-color: #F8FAFC;
+  border-color: #CBD5E1;
+  color: #0F172A;
+}
+
+.dark .btn-academic-secondary {
+  background-color: #1E293B;
+  border-color: #334155;
+  color: #E2E8F0;
+}
+
+.dark .btn-academic-secondary:hover {
+  background-color: #334155;
+  color: #FFFFFF;
+}
+
+/* ==================================================
    GLOBAL MOBILE RESPONSIVENESS & OVERFLOW PREVENTION CSS
-   VG NEET Library - Zero Horizontal Scroll Architecture
+   VG Insights - Zero Horizontal Scroll Architecture
    ================================================== */
 
 *, ::before, ::after {

@@ -16,22 +16,22 @@ export function renderChapterTestsView(selectedSubject: string = 'all'): string 
   const filtered = selectedSubject === 'all' ? chaptersList : chaptersList.filter(c => c.subjectId === selectedSubject);
 
   return `
-    <div class="max-w-5xl mx-auto space-y-6 animate-fadeIn pb-16">
+    <div class="max-w-5xl mx-auto space-y-6 pb-16">
       
-      <!-- Header Banner -->
-      <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-indigo-900 via-blue-900 to-slate-900 text-white shadow-xl border border-indigo-800/40 space-y-3">
+      <!-- White Academic Header Banner -->
+      <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm space-y-3">
         <div class="flex items-center justify-between">
-          <span class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-bold uppercase tracking-wider border border-blue-400/30">
+          <span class="px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/50 text-blue-700 dark:text-blue-300 text-xs font-bold uppercase tracking-wider border border-blue-200 dark:border-blue-800">
             📑 Chapter Tests
           </span>
-          <a href="#weekly-mock" class="text-xs font-bold text-blue-300 hover:underline">
+          <a href="#weekly-mock" class="text-xs font-bold text-blue-600 dark:text-blue-400 hover:underline">
             ← Full Weekly Mock
           </a>
         </div>
-        <h1 class="text-2xl sm:text-3xl font-black text-white">
+        <h1 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">
           NEET Chapter-Wise Test Series
         </h1>
-        <p class="text-xs sm:text-sm text-slate-300 max-w-2xl leading-relaxed">
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
           Targeted 20-30 question chapter test simulations. Test individual chapters to reinforce high-yield concepts before attempting full weekly mocks.
         </p>
       </div>

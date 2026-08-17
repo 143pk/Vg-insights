@@ -1,6 +1,6 @@
 {
-  "name": "VG NEET Library",
-  "description": "A modular digital library and educational app for NEET UG preparation featuring the AI Weakness Doctor precision diagnostics engine.",
+  "name": "VG Insights",
+  "description": "VG Insights is a NEET UG preparation platform for concepts, NCERT learning, PYQs, revision, mock tests, progress tracking and AI-powered weakness diagnosis.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

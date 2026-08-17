@@ -1,15 +1,36 @@
 {
-  "name": "VG NEET Library",
-  "short_name": "VG NEET",
-  "description": "Learn every NEET concept, one topic at a time. Digital library & study companion for NEET UG.",
-  "start_url": "/",
+  "name": "VG Insights – NEET UG Notes & Practice",
+  "short_name": "VG Insights",
+  "description": "VG Insights is a NEET UG preparation platform with Class 11 & 12 notes, chapter-wise topics, PYQs, practice questions, detailed solutions and NEET study resources.",
+  "start_url": "https://vginsights.in/",
   "display": "standalone",
   "background_color": "#0f172a",
   "theme_color": "#2563eb",
   "icons": [
     {
-      "src": "pwa-icon.svg",
-      "sizes": "192x192 512x512",
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"
     }

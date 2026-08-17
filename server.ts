@@ -2,6 +2,12 @@ import express from 'express';
 import path from 'path';
 import { createServer as createViteServer } from 'vite';
 import { GoogleGenAI } from '@google/genai';
+import sendEmailHandler from './api/send-email.js';
+import verifySmtpHandler from './api/verify-smtp.js';
+import checkEmailHandler from './api/auth/check-email.js';
+import requestOtpHandler from './api/auth/request-otp.js';
+import verifyOtpHandler from './api/auth/verify-otp.js';
+import userMeHandler from './api/auth/me.js';
 
 async function startServer() {
   const app = express();
@@ -13,6 +19,17 @@ async function startServer() {
   app.get('/api/health', (req, res) => {
     res.json({ status: 'ok', service: 'VG NEET AI Weakness Doctor' });
   });
+
+  // Secure Gmail SMTP Email Endpoints
+  app.post('/api/send-email', (req, res) => sendEmailHandler(req, res));
+  app.get('/api/verify-smtp', (req, res) => verifySmtpHandler(req, res));
+  app.post('/api/verify-smtp', (req, res) => verifySmtpHandler(req, res));
+
+  // Authentication & First-Time Signup Endpoints
+  app.post('/api/auth/check-email', (req, res) => checkEmailHandler(req, res));
+  app.post('/api/auth/request-otp', (req, res) => requestOtpHandler(req, res));
+  app.post('/api/auth/verify-otp', (req, res) => verifyOtpHandler(req, res));
+  app.get('/api/auth/me', (req, res) => userMeHandler(req, res));
 
   // AI Weakness Questions Batch Generator Endpoint
   // Performs ONE batch call per requested topic drill, never per-question calls

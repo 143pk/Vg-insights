@@ -70,57 +70,57 @@ export function renderWeaknessPracticeView(topicId: string, sessionState?: Weakn
       <div class="w-full max-w-3xl mx-auto space-y-6 pb-16 font-sans text-slate-900 dark:text-slate-100 animate-fade-in" id="weakness-practice-completed">
         
         <!-- Summary Header -->
-        <section class="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-emerald-950 via-slate-900 to-indigo-950 text-white shadow-2xl border border-emerald-900/40 text-center space-y-4">
-          <div class="w-16 h-16 rounded-3xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-3xl mx-auto border border-emerald-400/30">
+        <section class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm text-center space-y-4">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-50 dark:bg-emerald-950/50 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-2xl mx-auto border border-emerald-200 dark:border-emerald-800">
             🎉
           </div>
           <div class="space-y-1">
-            <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider">
+            <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">
               Focused Practice Completed
             </span>
-            <h2 class="text-2xl sm:text-3xl font-black">
+            <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">
               ${context.topicTitle}
             </h2>
-            <p class="text-xs text-slate-300">
+            <p class="text-xs text-slate-600 dark:text-slate-400">
               ${context.subjectName} • ${context.chapterTitle}
             </p>
           </div>
 
           <!-- Score Transformation Card -->
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-3 text-left">
-            <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10">
-              <span class="text-[11px] text-slate-400 block">Session Score</span>
-              <span class="text-xl font-extrabold text-white">${correctCount}/${totalAttempted}</span>
-              <span class="text-[10px] text-emerald-400 block">${sessionAccuracy}% session accuracy</span>
+            <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80">
+              <span class="text-[11px] text-slate-400 block font-semibold">Session Score</span>
+              <span class="text-xl font-extrabold text-slate-900 dark:text-white">${correctCount}/${totalAttempted}</span>
+              <span class="text-[10px] text-emerald-600 dark:text-emerald-400 block">${sessionAccuracy}% session accuracy</span>
             </div>
 
-            <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10">
-              <span class="text-[11px] text-slate-400 block">Topic Accuracy</span>
-              <div class="flex items-center gap-1.5 text-base font-extrabold">
+            <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80">
+              <span class="text-[11px] text-slate-400 block font-semibold">Topic Accuracy</span>
+              <div class="flex items-center gap-1.5 text-base font-extrabold text-slate-900 dark:text-white">
                 <span class="text-slate-400 line-through">${initialStats.accuracy}%</span>
                 <span>→</span>
-                <span class="text-emerald-400 font-black">${updatedStats.accuracy}%</span>
+                <span class="text-emerald-600 dark:text-emerald-400 font-black">${updatedStats.accuracy}%</span>
               </div>
-              <span class="text-[10px] text-emerald-300 block">Locally recalculated</span>
+              <span class="text-[10px] text-emerald-600 dark:text-emerald-400 block">Locally recalculated</span>
             </div>
 
-            <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10">
-              <span class="text-[11px] text-slate-400 block">Status Transition</span>
+            <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80">
+              <span class="text-[11px] text-slate-400 block font-semibold">Status Transition</span>
               <div class="flex items-center gap-1 text-xs font-extrabold mt-1">
-                <span class="px-2 py-0.5 rounded bg-white/10 text-slate-300">${initialStats.status}</span>
+                <span class="px-2 py-0.5 rounded bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300">${initialStats.status}</span>
                 <span>→</span>
                 <span class="px-2 py-0.5 rounded ${
-                  updatedStats.status === 'MASTERED' ? 'bg-indigo-500 text-white' :
-                  updatedStats.status === 'STRONG' ? 'bg-emerald-500 text-white' :
-                  updatedStats.status === 'IMPROVING' ? 'bg-amber-500 text-white' :
-                  'bg-rose-500 text-white'
+                  updatedStats.status === 'MASTERED' ? 'bg-indigo-600 text-white' :
+                  updatedStats.status === 'STRONG' ? 'bg-emerald-600 text-white' :
+                  updatedStats.status === 'IMPROVING' ? 'bg-amber-600 text-white' :
+                  'bg-rose-600 text-white'
                 }">${updatedStats.status}</span>
               </div>
             </div>
 
-            <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10">
-              <span class="text-[11px] text-slate-400 block">Mark Gain Potential</span>
-              <span class="text-xl font-extrabold text-emerald-400">+${correctCount * 4} Marks</span>
+            <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80">
+              <span class="text-[11px] text-slate-400 block font-semibold">Mark Gain Potential</span>
+              <span class="text-xl font-extrabold text-emerald-600 dark:text-emerald-400">+${correctCount * 4} Marks</span>
               <span class="text-[10px] text-slate-400 block">NEET UG Equivalent</span>
             </div>
           </div>
@@ -151,7 +151,7 @@ export function renderWeaknessPracticeView(topicId: string, sessionState?: Weakn
               const isUserCorrect = ans?.isCorrect ?? false;
 
               return `
-                <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border ${isUserCorrect ? 'border-emerald-200 dark:border-emerald-900/50' : 'border-rose-200 dark:border-rose-900/50'} shadow-sm space-y-3">
+                <div class="academic-question-card p-5 rounded-2xl bg-white dark:bg-slate-900 border ${isUserCorrect ? 'border-emerald-200 dark:border-emerald-900/50' : 'border-rose-200 dark:border-rose-900/50'} shadow-sm space-y-3">
                   <div class="flex items-center justify-between text-xs">
                     <span class="px-2.5 py-1 rounded-lg ${isUserCorrect ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400' : 'bg-rose-500/10 text-rose-600 dark:text-rose-400'} font-bold">
                       Question ${idx + 1} • ${isUserCorrect ? '✓ Correct' : '✗ Incorrect'}
@@ -191,6 +191,14 @@ export function renderWeaknessPracticeView(topicId: string, sessionState?: Weakn
                       ${renderInlineMathHTML(q.explanation)}
                     </div>
                   </div>
+
+                  <!-- 📚 Learn This Topic Section -->
+                  ${WeaknessDoctorService.renderLearnTopicSection({
+                    topicId: (q as any).topicId || topicId,
+                    conceptTested: q.conceptTested,
+                    chapterId: context.chapterId,
+                    subjectId: context.subjectId
+                  })}
                 </div>
               `;
             }).join('')}
@@ -239,7 +247,7 @@ export function renderWeaknessPracticeView(topicId: string, sessionState?: Weakn
       </div>
 
       <!-- Active Question Box -->
-      <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-6" id="practice-card-box">
+      <div class="academic-question-card p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm space-y-6" id="practice-card-box">
         
         <div class="flex items-center justify-between text-xs font-bold">
           <div class="flex items-center gap-2">
@@ -318,6 +326,14 @@ export function renderWeaknessPracticeView(topicId: string, sessionState?: Weakn
                 ${renderInlineMathHTML(currentQ.explanation)}
               </p>
             </div>
+
+            <!-- 📚 Learn This Topic Section -->
+            ${WeaknessDoctorService.renderLearnTopicSection({
+              topicId: (currentQ as any).topicId || topicId,
+              conceptTested: currentQ.conceptTested,
+              chapterId: context.chapterId,
+              subjectId: context.subjectId
+            })}
           </div>
         ` : ''}
 

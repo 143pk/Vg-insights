@@ -8,23 +8,23 @@ export function renderCustomTestView(): string {
   }));
 
   return `
-    <div class="max-w-3xl mx-auto space-y-6 animate-fadeIn pb-16">
+    <div class="max-w-3xl mx-auto space-y-6 pb-16">
       
-      <!-- Banner -->
-      <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white shadow-xl border border-indigo-800/40 space-y-2">
-        <span class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-bold uppercase tracking-wider border border-blue-400/30">
-          ⚙️ Custom Test Builder
-        </span>
-        <h1 class="text-2xl sm:text-3xl font-black text-white">
+      <!-- White Academic Banner -->
+      <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/50 text-blue-700 dark:text-blue-300 text-xs font-bold uppercase tracking-wider border border-blue-200 dark:border-blue-800">
+          <span>⚙️</span> Custom Test Builder
+        </div>
+        <h1 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">
           Create Personalized NEET Mock
         </h1>
-        <p class="text-xs sm:text-sm text-slate-300">
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
           Select subjects, target chapters, question volume, and timer limit to generate a custom practice paper.
         </p>
       </div>
 
       <!-- Builder Form Card -->
-      <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-6">
+      <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm space-y-6">
         
         <!-- Step 1: Select Subject -->
         <div class="space-y-2">

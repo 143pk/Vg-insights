@@ -6,42 +6,42 @@ export function renderTestHistoryView(): string {
   const personalBests = WeeklyMockService.getPersonalBests();
 
   return `
-    <div class="max-w-5xl mx-auto space-y-6 animate-fadeIn pb-16">
+    <div class="max-w-5xl mx-auto space-y-6 pb-16">
       
-      <!-- History Header -->
-      <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white shadow-xl border border-blue-800/40 space-y-3">
+      <!-- White Academic Header -->
+      <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm space-y-4">
         <div class="flex items-center justify-between">
-          <span class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-bold uppercase tracking-wider border border-blue-400/30">
+          <span class="px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/50 text-blue-700 dark:text-blue-300 text-xs font-bold uppercase tracking-wider border border-blue-200 dark:border-blue-800">
             📊 NEET Mock Archive
           </span>
-          <a href="#weekly-mock" class="text-xs font-bold text-blue-300 hover:underline">
+          <a href="#weekly-mock" class="text-xs font-bold text-blue-600 dark:text-blue-400 hover:underline">
             ← Take Weekly Mock
           </a>
         </div>
-        <h1 class="text-2xl sm:text-3xl font-black text-white">
+        <h1 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">
           Test History & Score Tracker
         </h1>
-        <p class="text-xs sm:text-sm text-slate-300 max-w-2xl">
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-2xl">
           Review your complete past test attempts, score growth trends, and detailed solution archives.
         </p>
 
         <!-- KPI Row -->
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
-          <div class="p-3.5 rounded-2xl bg-white/10 border border-white/10 text-center">
-            <span class="text-[10px] font-bold uppercase text-slate-300 block">Tests Taken</span>
-            <span class="text-xl sm:text-2xl font-black text-white">${history.length}</span>
+          <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 text-center">
+            <span class="text-[10px] font-bold uppercase text-slate-400 block">Tests Taken</span>
+            <span class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">${history.length}</span>
           </div>
-          <div class="p-3.5 rounded-2xl bg-white/10 border border-white/10 text-center">
-            <span class="text-[10px] font-bold uppercase text-slate-300 block">Highest Score</span>
-            <span class="text-xl sm:text-2xl font-black text-emerald-400">${personalBests.bestScore} <span class="text-xs text-slate-300">/720</span></span>
+          <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 text-center">
+            <span class="text-[10px] font-bold uppercase text-slate-400 block">Highest Score</span>
+            <span class="text-xl sm:text-2xl font-black text-emerald-600 dark:text-emerald-400">${personalBests.bestScore} <span class="text-xs text-slate-400">/720</span></span>
           </div>
-          <div class="p-3.5 rounded-2xl bg-white/10 border border-white/10 text-center">
-            <span class="text-[10px] font-bold uppercase text-slate-300 block">Peak Accuracy</span>
-            <span class="text-xl sm:text-2xl font-black text-blue-300">${personalBests.bestAccuracy}%</span>
+          <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 text-center">
+            <span class="text-[10px] font-bold uppercase text-slate-400 block">Peak Accuracy</span>
+            <span class="text-xl sm:text-2xl font-black text-blue-600 dark:text-blue-400">${personalBests.bestAccuracy}%</span>
           </div>
-          <div class="p-3.5 rounded-2xl bg-white/10 border border-white/10 text-center">
-            <span class="text-[10px] font-bold uppercase text-amber-300 block">Weekly Streak</span>
-            <span class="text-xl sm:text-2xl font-black text-amber-400">🔥 ${personalBests.weeklyStreak}</span>
+          <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 text-center">
+            <span class="text-[10px] font-bold uppercase text-amber-600 dark:text-amber-400 block">Weekly Streak</span>
+            <span class="text-xl sm:text-2xl font-black text-amber-600 dark:text-amber-400">🔥 ${personalBests.weeklyStreak}</span>
           </div>
         </div>
       </div>

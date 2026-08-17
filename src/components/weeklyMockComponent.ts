@@ -37,86 +37,81 @@ export class WeeklyMockUI {
     const pastWeeklyMocks = state.history.filter(h => h.testType === 'weekly' || h.mockId.startsWith('WEEKLY_MOCK_'));
 
     return `
-      <div class="space-y-8 animate-fadeIn max-w-5xl mx-auto pb-12">
+      <div class="space-y-8 max-w-5xl mx-auto pb-12">
         
-        <!-- Hero Banner -->
-        <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-900 via-indigo-900 to-slate-900 text-white p-6 sm:p-10 shadow-xl border border-blue-800/40">
-          <div class="absolute -right-16 -top-16 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl pointer-events-none"></div>
-          <div class="absolute -left-16 -bottom-16 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl pointer-events-none"></div>
-
-          <div class="relative z-10 space-y-4">
-            <div class="flex flex-wrap items-center gap-2.5">
-              <span class="px-3.5 py-1 rounded-full bg-rose-500 text-white text-xs font-extrabold uppercase tracking-wider shadow-sm animate-pulse">
-                WEEK ${weekNumber} • LIVE
-              </span>
-              <span class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-200 border border-blue-400/30 text-xs font-semibold">
-                Full NEET UG Simulation
-              </span>
-              <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 text-xs font-semibold">
-                100% Offline Engine
-              </span>
-            </div>
-
-            <div>
-              <h1 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-white">
-                📝 Weekly NEET Mock Test
-              </h1>
-              <p class="text-slate-300 text-sm sm:text-base max-w-2xl mt-1.5 leading-relaxed">
-                Experience real NTA NEET UG examination conditions. 180 high-yield questions, negative marking, instant subject analytics, and AI Weakness Doctor integration.
-              </p>
-            </div>
-
-            <!-- Key Test Metrics Bar -->
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
-              <div class="p-3.5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10">
-                <span class="text-[11px] font-bold uppercase tracking-wider text-slate-300 block">Questions</span>
-                <span class="text-xl sm:text-2xl font-black text-white">180</span>
-                <span class="text-[10px] text-blue-200 block">45P + 45C + 90B</span>
-              </div>
-              <div class="p-3.5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10">
-                <span class="text-[11px] font-bold uppercase tracking-wider text-slate-300 block">Duration</span>
-                <span class="text-xl sm:text-2xl font-black text-white">180 <span class="text-sm font-semibold">min</span></span>
-                <span class="text-[10px] text-blue-200 block">Timer with Auto-Save</span>
-              </div>
-              <div class="p-3.5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10">
-                <span class="text-[11px] font-bold uppercase tracking-wider text-slate-300 block">Max Marks</span>
-                <span class="text-xl sm:text-2xl font-black text-white">720</span>
-                <span class="text-[10px] text-emerald-300 block">+4 / -1 Marking</span>
-              </div>
-              <div class="p-3.5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10">
-                <span class="text-[11px] font-bold uppercase tracking-wider text-slate-300 block">Status</span>
-                <span class="text-sm sm:text-base font-extrabold ${isSubmitted ? 'text-emerald-400' : (hasActiveAttempt ? 'text-amber-300' : 'text-slate-200')} block">
-                  ${isSubmitted ? '✓ Submitted' : (hasActiveAttempt ? '⏳ In Progress' : 'Not Started')}
-                </span>
-                <span class="text-[10px] text-slate-300 block">Week ${weekNumber}, ${year}</span>
-              </div>
-            </div>
-
-            <!-- Primary Action Buttons -->
-            <div class="pt-4 flex flex-wrap items-center gap-3">
-              ${isSubmitted ? `
-                <a href="#weekly-mock/result/${mockId}" class="px-6 py-3.5 rounded-2xl bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold text-sm sm:text-base shadow-lg shadow-emerald-500/30 transition-all flex items-center gap-2">
-                  <span>🎉 View Week ${weekNumber} Results & Solutions →</span>
-                </a>
-                <button id="btn-retake-weekly-mock" class="px-5 py-3.5 rounded-2xl bg-white/15 hover:bg-white/25 text-white font-bold text-xs sm:text-sm border border-white/20 transition-all">
-                  🔄 Retake Fresh Attempt
-                </button>
-              ` : hasActiveAttempt ? `
-                <a href="#weekly-mock/test/${mockId}" class="px-6 py-3.5 rounded-2xl bg-amber-500 hover:bg-amber-600 text-slate-900 font-extrabold text-sm sm:text-base shadow-lg shadow-amber-500/30 transition-all flex items-center gap-2 animate-bounce">
-                  <span>▶ Resume Active Mock Test →</span>
-                </a>
-              ` : `
-                <a href="#weekly-mock/instructions/${mockId}" class="px-6 py-3.5 rounded-2xl bg-blue-500 hover:bg-blue-600 text-white font-extrabold text-sm sm:text-base shadow-lg shadow-blue-500/30 hover:scale-[1.02] transition-all flex items-center gap-2">
-                  <span>🚀 Start Weekly NEET Mock →</span>
-                </a>
-              `}
-              
-              <a href="#test-history" class="px-4 py-3.5 rounded-2xl bg-slate-800/80 hover:bg-slate-800 text-slate-200 font-semibold text-xs sm:text-sm border border-slate-700 transition-all flex items-center gap-1.5">
-                <span>📊 Past Test History</span>
-              </a>
-            </div>
-
+        <!-- White Academic Header Banner -->
+        <div class="rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 p-6 sm:p-10 shadow-sm space-y-4">
+          <div class="flex flex-wrap items-center gap-2.5">
+            <span class="px-3.5 py-1 rounded-full bg-rose-50 dark:bg-rose-950/50 text-rose-700 dark:text-rose-300 text-xs font-bold uppercase tracking-wider border border-rose-200 dark:border-rose-800">
+              WEEK ${weekNumber} • LIVE
+            </span>
+            <span class="px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/50 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 text-xs font-semibold">
+              Full NEET UG Simulation
+            </span>
+            <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 text-xs font-semibold">
+              100% Offline Engine
+            </span>
           </div>
+
+          <div>
+            <h1 class="text-2xl sm:text-4xl font-black tracking-tight text-slate-900 dark:text-white">
+              Weekly NEET Mock Test
+            </h1>
+            <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base max-w-2xl mt-1.5 leading-relaxed">
+              Experience real NTA NEET UG examination conditions: 180 high-yield questions, negative marking, instant subject analytics, and AI Weakness Doctor integration.
+            </p>
+          </div>
+
+          <!-- Key Test Metrics Bar -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+            <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">Questions</span>
+              <span class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">180</span>
+              <span class="text-[10px] text-blue-600 dark:text-blue-400 font-medium block">45P + 45C + 90B</span>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">Duration</span>
+              <span class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">180 <span class="text-xs font-semibold">min</span></span>
+              <span class="text-[10px] text-slate-500 block">Timer with Auto-Save</span>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">Max Marks</span>
+              <span class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">720</span>
+              <span class="text-[10px] text-emerald-600 dark:text-emerald-400 font-medium block">+4 / -1 Marking</span>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">Status</span>
+              <span class="text-sm sm:text-base font-extrabold ${isSubmitted ? 'text-emerald-600 dark:text-emerald-400' : (hasActiveAttempt ? 'text-amber-600 dark:text-amber-400' : 'text-slate-700 dark:text-slate-300')} block">
+                ${isSubmitted ? '✓ Submitted' : (hasActiveAttempt ? '⏳ In Progress' : 'Not Started')}
+              </span>
+              <span class="text-[10px] text-slate-400 block">Week ${weekNumber}, ${year}</span>
+            </div>
+          </div>
+
+          <!-- Primary Action Buttons -->
+          <div class="pt-4 flex flex-wrap items-center gap-3">
+            ${isSubmitted ? `
+              <a href="#weekly-mock/result/${mockId}" class="px-6 py-3 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm sm:text-base shadow-sm transition-all flex items-center gap-2">
+                <span>View Week ${weekNumber} Results & Solutions →</span>
+              </a>
+              <button id="btn-retake-weekly-mock" class="px-5 py-3 rounded-2xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-bold text-xs sm:text-sm border border-slate-200 dark:border-slate-700 transition-all">
+                🔄 Retake Fresh Attempt
+              </button>
+            ` : hasActiveAttempt ? `
+              <a href="#weekly-mock/test/${mockId}" class="px-6 py-3 rounded-2xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-sm sm:text-base shadow-sm transition-all flex items-center gap-2">
+                <span>▶ Resume Active Mock Test →</span>
+              </a>
+            ` : `
+              <a href="#weekly-mock/instructions/${mockId}" class="px-6 py-3 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm sm:text-base shadow-sm transition-all flex items-center gap-2">
+                <span>🚀 Start Weekly NEET Mock →</span>
+              </a>
+            `}
+            
+            <a href="#test-history" class="px-4 py-3 rounded-2xl bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-semibold text-xs sm:text-sm border border-slate-200 dark:border-slate-700 transition-all flex items-center gap-1.5">
+              <span>📊 Past Test History</span>
+            </a>
+          </div>
+
         </div>
 
         <!-- Subject Breakdown & Difficulty Grid -->
@@ -469,7 +464,7 @@ export class WeeklyMockUI {
           <!-- Question Area (8 cols on desktop) -->
           <div class="lg:col-span-8 space-y-4">
             
-            <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-6">
+            <div class="academic-question-card p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm space-y-6">
               
               <!-- Question Header Meta -->
               <div class="flex flex-wrap items-center justify-between gap-2 pb-4 border-b border-slate-100 dark:border-slate-800">
@@ -1070,7 +1065,7 @@ export class WeeklyMockUI {
               const optLetters = ['A', 'B', 'C', 'D'];
 
               return `
-                <div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+                <div class="academic-question-card p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm space-y-4">
                   
                   <!-- Question Top Bar -->
                   <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-100 dark:border-slate-800">

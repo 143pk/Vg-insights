@@ -17,38 +17,38 @@ export function renderMistakeBookView(currentFilter: string = 'all', searchQuery
     <div class="max-w-5xl mx-auto space-y-6 animate-fadeIn pb-16">
       
       <!-- Mistake Book Header -->
-      <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-amber-900 via-orange-950 to-slate-900 text-white shadow-xl border border-amber-800/40 space-y-4">
+      <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm space-y-4">
         <div class="flex flex-wrap items-center justify-between gap-3">
           <div>
-            <span class="px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold uppercase tracking-wider border border-amber-400/30">
-              📕 Error Analysis & Mastery
+            <span class="px-3 py-1 rounded-full bg-amber-50 dark:bg-amber-950/50 text-amber-700 dark:text-amber-300 text-xs font-bold uppercase tracking-wider border border-amber-200 dark:border-amber-800">
+              Error Analysis & Mastery
             </span>
-            <h1 class="text-2xl sm:text-3xl font-black text-white mt-1.5">
+            <h1 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white mt-2">
               NEET Mistake Book
             </h1>
           </div>
-          <a href="#weekly-mock" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-xs font-bold text-white transition-colors">
-            📝 Take Weekly Mock →
+          <a href="#weekly-mock" class="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-xs font-bold text-white shadow-sm transition-colors">
+            Take Weekly Mock →
           </a>
         </div>
 
-        <p class="text-xs sm:text-sm text-slate-300 max-w-2xl leading-relaxed">
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
           Every question you get wrong in Weekly Mocks, Chapter Tests, or Diagnostic Quizzes is automatically logged here. Review recurring misconceptions and turn your mistakes into guaranteed marks.
         </p>
 
         <!-- Stats Counter Grid -->
         <div class="grid grid-cols-3 gap-3 pt-2">
-          <div class="p-3.5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 text-center">
-            <span class="text-[10px] font-bold uppercase text-slate-300 block">Total Mistakes</span>
-            <span class="text-2xl font-black text-white">${allMistakesCount}</span>
+          <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 text-center">
+            <span class="text-[10px] font-bold uppercase text-slate-400 block">Total Mistakes</span>
+            <span class="text-2xl font-black text-slate-900 dark:text-white">${allMistakesCount}</span>
           </div>
-          <div class="p-3.5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 text-center">
-            <span class="text-[10px] font-bold uppercase text-rose-300 block">🔥 Repeated Mistakes</span>
-            <span class="text-2xl font-black text-rose-400">${repeatedCount}</span>
+          <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 text-center">
+            <span class="text-[10px] font-bold uppercase text-rose-600 dark:text-rose-400 block">Repeated Mistakes</span>
+            <span class="text-2xl font-black text-rose-600 dark:text-rose-400">${repeatedCount}</span>
           </div>
-          <div class="p-3.5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 text-center">
-            <span class="text-[10px] font-bold uppercase text-emerald-300 block">Resolved</span>
-            <span class="text-2xl font-black text-emerald-400">${resolvedCount}</span>
+          <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 text-center">
+            <span class="text-[10px] font-bold uppercase text-emerald-600 dark:text-emerald-400 block">Resolved</span>
+            <span class="text-2xl font-black text-emerald-600 dark:text-emerald-400">${resolvedCount}</span>
           </div>
         </div>
       </div>
@@ -93,7 +93,7 @@ export function renderMistakeBookView(currentFilter: string = 'all', searchQuery
           ${mistakes.map(m => {
             const optLetters = ['A', 'B', 'C', 'D'];
             return `
-              <div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+              <div class="academic-question-card p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm space-y-4">
                 
                 <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-100 dark:border-slate-800">
                   <div class="flex items-center gap-2">

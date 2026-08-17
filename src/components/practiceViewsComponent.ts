@@ -9,15 +9,16 @@ export function renderWeakTopicPracticeView(): string {
   const combined = [...critical, ...improving];
 
   return `
-    <div class="max-w-5xl mx-auto space-y-6 animate-fadeIn pb-16">
-      <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-rose-900 via-red-950 to-slate-900 text-white shadow-xl border border-rose-800/40 space-y-2">
-        <span class="px-3 py-1 rounded-full bg-rose-500/20 text-rose-300 text-xs font-bold uppercase tracking-wider border border-rose-400/30">
-          🔥 Target Weaknesses
-        </span>
-        <h1 class="text-2xl sm:text-3xl font-black text-white">
+    <div class="max-w-5xl mx-auto space-y-6 pb-16">
+      <!-- White Academic Banner -->
+      <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-50 dark:bg-rose-950/50 text-rose-700 dark:text-rose-300 text-xs font-bold uppercase tracking-wider border border-rose-200 dark:border-rose-800">
+          <span>🔥</span> Target Weaknesses
+        </div>
+        <h1 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">
           Weak Topic Practice Drills
         </h1>
-        <p class="text-xs sm:text-sm text-slate-300 max-w-2xl">
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-2xl">
           High-intensity 5-10 question drills focused specifically on your identified weak chapters and topics.
         </p>
       </div>

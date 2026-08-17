@@ -8,37 +8,37 @@ export function renderStrengthsWeaknessesView(): string {
   const mastered = WeaknessDoctorService.getMasteredTopics(15);
 
   return `
-    <div class="max-w-5xl mx-auto space-y-6 animate-fadeIn pb-16">
+    <div class="max-w-5xl mx-auto space-y-6 pb-16">
       
-      <!-- Banner -->
-      <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-slate-900 via-purple-950 to-slate-900 text-white shadow-xl border border-purple-800/40 space-y-3">
+      <!-- White Academic Banner -->
+      <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm space-y-4">
         <div class="flex items-center justify-between">
-          <span class="px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs font-bold uppercase tracking-wider border border-purple-400/30">
+          <span class="px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950/50 text-purple-700 dark:text-purple-300 text-xs font-bold uppercase tracking-wider border border-purple-200 dark:border-purple-800">
             🎯 Mastery Spectrum
           </span>
-          <a href="#weakness-doctor" class="text-xs font-bold text-purple-300 hover:underline">
+          <a href="#weakness-doctor" class="text-xs font-bold text-blue-600 dark:text-blue-400 hover:underline">
             🩺 Open AI Weakness Doctor →
           </a>
         </div>
-        <h1 class="text-2xl sm:text-3xl font-black text-white">
+        <h1 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">
           Strengths & Weaknesses Matrix
         </h1>
-        <p class="text-xs sm:text-sm text-slate-300 max-w-2xl">
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-2xl">
           Comprehensive topic classification derived from your real quiz and mock test attempts.
         </p>
 
         <div class="grid grid-cols-3 gap-3 pt-2">
-          <div class="p-3.5 rounded-2xl bg-white/10 border border-white/10 text-center">
-            <span class="text-[10px] font-bold uppercase text-rose-300 block">Critical Weaknesses</span>
-            <span class="text-2xl font-black text-rose-400">${critical.length}</span>
+          <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 text-center">
+            <span class="text-[10px] font-bold uppercase text-rose-600 dark:text-rose-400 block">Critical Weaknesses</span>
+            <span class="text-2xl font-black text-rose-600 dark:text-rose-400">${critical.length}</span>
           </div>
-          <div class="p-3.5 rounded-2xl bg-white/10 border border-white/10 text-center">
-            <span class="text-[10px] font-bold uppercase text-amber-300 block">Improving Topics</span>
-            <span class="text-2xl font-black text-amber-400">${improving.length}</span>
+          <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 text-center">
+            <span class="text-[10px] font-bold uppercase text-amber-600 dark:text-amber-400 block">Improving Topics</span>
+            <span class="text-2xl font-black text-amber-600 dark:text-amber-400">${improving.length}</span>
           </div>
-          <div class="p-3.5 rounded-2xl bg-white/10 border border-white/10 text-center">
-            <span class="text-[10px] font-bold uppercase text-emerald-300 block">Mastered Topics</span>
-            <span class="text-2xl font-black text-emerald-400">${mastered.length}</span>
+          <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 text-center">
+            <span class="text-[10px] font-bold uppercase text-emerald-600 dark:text-emerald-400 block">Mastered Topics</span>
+            <span class="text-2xl font-black text-emerald-600 dark:text-emerald-400">${mastered.length}</span>
           </div>
         </div>
       </div>

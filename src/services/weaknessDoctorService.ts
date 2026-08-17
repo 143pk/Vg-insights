@@ -100,6 +100,183 @@ export class WeaknessDoctorService {
   }
 
   /**
+   * Static Topic Mapping System (0 API calls, 0 AI cost):
+   * Maps any question's topicId, conceptTested, chapterId or topic name directly to the
+   * corresponding existing topic learning route (#topic/{topicId}) or closest chapter in VG NEET Library.
+   */
+  public static resolveTopicLearningRoute(params: {
+    topicId?: string;
+    topicTitle?: string;
+    chapterId?: string;
+    subjectId?: string;
+    conceptTested?: string;
+  }): {
+    topicTitle: string;
+    route: string;
+    isExactTopic: boolean;
+    chapterTitle?: string;
+    subjectName?: string;
+  } {
+    const rawId = (params.topicId || '').trim();
+    const rawTitle = (params.topicTitle || params.conceptTested || '').trim();
+
+    // 1. Direct match by exact topicId in TOPICS
+    if (rawId && TOPICS[rawId]) {
+      return {
+        topicTitle: TOPICS[rawId].title,
+        route: `#topic/${rawId}`,
+        isExactTopic: true
+      };
+    }
+
+    // 2. Direct match with subject prefixes (phys-, chem-, bio-) or without
+    if (rawId) {
+      for (const prefix of ['phys-', 'chem-', 'bio-']) {
+        const candidateId = rawId.startsWith(prefix) ? rawId : `${prefix}${rawId}`;
+        if (TOPICS[candidateId]) {
+          return {
+            topicTitle: TOPICS[candidateId].title,
+            route: `#topic/${candidateId}`,
+            isExactTopic: true
+          };
+        }
+      }
+      const strippedId = rawId.replace(/^(phys|chem|bio)-/, '');
+      if (TOPICS[strippedId]) {
+        return {
+          topicTitle: TOPICS[strippedId].title,
+          route: `#topic/${strippedId}`,
+          isExactTopic: true
+        };
+      }
+    }
+
+    // 3. Search in TOPIC_DETAILS
+    const detailKey = rawId || rawTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    const detail = (TOPIC_DETAILS as any)[detailKey] ||
+      (TOPIC_DETAILS as any)[`phys-${detailKey}`] ||
+      (TOPIC_DETAILS as any)[`chem-${detailKey}`] ||
+      (TOPIC_DETAILS as any)[`bio-${detailKey}`];
+
+    if (detail) {
+      const matchedId = detail.id || detailKey;
+      const title = detail.topicName || detail.title || rawTitle || WeaknessDoctorService.resolveTopicContext(matchedId).topicTitle;
+      return {
+        topicTitle: title,
+        route: `#topic/${matchedId}`,
+        isExactTopic: true
+      };
+    }
+
+    // 4. Fuzzy match normalized title or topic ID against all registered topics in NEET Library
+    const queryStr = (rawTitle || rawId).toLowerCase().replace(/[^a-z0-9]/g, '');
+    if (queryStr) {
+      // 4a. Exact normalized title/ID match
+      for (const [id, topic] of Object.entries(TOPICS)) {
+        const normTitle = topic.title.toLowerCase().replace(/[^a-z0-9]/g, '');
+        const normId = id.toLowerCase().replace(/[^a-z0-9]/g, '');
+        if (normTitle === queryStr || normId === queryStr) {
+          return {
+            topicTitle: topic.title,
+            route: `#topic/${id}`,
+            isExactTopic: true
+          };
+        }
+      }
+
+      // 4b. Substring match
+      for (const [id, topic] of Object.entries(TOPICS)) {
+        const normTitle = topic.title.toLowerCase().replace(/[^a-z0-9]/g, '');
+        if (normTitle.includes(queryStr) || (queryStr.length >= 4 && queryStr.includes(normTitle))) {
+          return {
+            topicTitle: topic.title,
+            route: `#topic/${id}`,
+            isExactTopic: true
+          };
+        }
+      }
+    }
+
+    // 5. Fallback to closest Chapter if topic ID or chapter ID is known
+    const context = WeaknessDoctorService.resolveTopicContext(rawId || params.chapterId || '');
+    if (context.chapterId && CHAPTERS[context.chapterId]) {
+      const ch = CHAPTERS[context.chapterId];
+      if (ch.topicIds && ch.topicIds.length > 0 && TOPICS[ch.topicIds[0]]) {
+        return {
+          topicTitle: context.topicTitle || ch.title,
+          route: `#topic/${ch.topicIds[0]}`,
+          isExactTopic: false,
+          chapterTitle: ch.title,
+          subjectName: context.subjectName
+        };
+      }
+      return {
+        topicTitle: context.topicTitle || ch.title,
+        route: `#chapter/${context.chapterId}`,
+        isExactTopic: false,
+        chapterTitle: ch.title,
+        subjectName: context.subjectName
+      };
+    }
+
+    // 6. Subject Fallback
+    if (context.subjectId) {
+      return {
+        topicTitle: context.topicTitle || 'NEET Concept',
+        route: `#subject/${context.subjectId}`,
+        isExactTopic: false,
+        subjectName: context.subjectName
+      };
+    }
+
+    return {
+      topicTitle: rawTitle || 'NEET Study Notes',
+      route: '#home',
+      isExactTopic: false
+    };
+  }
+
+  /**
+   * Renders the "📚 Learn This Topic" section immediately below question solutions/explanations
+   * Using 100% static routing and existing dark-theme VG NEET styling (0 API calls, 0 AI cost).
+   */
+  public static renderLearnTopicSection(params: {
+    topicId?: string;
+    topicTitle?: string;
+    chapterId?: string;
+    subjectId?: string;
+    conceptTested?: string;
+  }): string {
+    const resolved = this.resolveTopicLearningRoute(params);
+    let displayTitle = resolved.topicTitle || 'This Topic';
+    
+    // Clean display title if it already has "Learn" or similar prefix
+    displayTitle = displayTitle.replace(/^learn\s+/i, '');
+
+    return `
+      <div class="learn-topic-section mt-3.5 p-3.5 sm:p-4 rounded-2xl bg-blue-50/80 dark:bg-blue-950/40 border border-blue-200/80 dark:border-blue-800/60 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+        <div class="space-y-0.5 min-w-0">
+          <div class="flex items-center gap-1.5 font-bold text-blue-900 dark:text-blue-300 text-xs">
+            <span>📚</span>
+            <span>Related Learning</span>
+          </div>
+          <p class="text-slate-600 dark:text-slate-400 text-[11px] leading-relaxed">
+            Review core NCERT concepts, formulas, and high-yield notes for this topic.
+          </p>
+        </div>
+
+        <a
+          href="${resolved.route}"
+          class="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 active:scale-[0.98] text-white font-bold text-xs shadow-md shadow-blue-600/20 transition-all shrink-0 hover:scale-[1.01]"
+        >
+          <span>📖</span>
+          <span>Learn: ${displayTitle} →</span>
+        </a>
+      </div>
+    `;
+  }
+
+  /**
    * Deterministically records a single question attempt locally (0 API calls)
    */
   public static recordQuestionAttempt(params: {
@@ -488,6 +665,7 @@ export class WeaknessDoctorService {
    */
   public static getQuestionsForTopic(topicId: string): Array<{
     id: string;
+    topicId?: string;
     question: string;
     options: string[];
     correctAnswer: number;
@@ -499,7 +677,7 @@ export class WeaknessDoctorService {
     const questions: Array<any> = [];
     const seenQuestions = new Set<string>();
 
-    const addQ = (q: any, defaultSource: string) => {
+    const addQ = (q: any, defaultSource: string, specificTopicId?: string) => {
       const qText = q.question || q.questionText || '';
       if (!qText || seenQuestions.has(qText.trim())) return;
       seenQuestions.add(qText.trim());
@@ -513,6 +691,7 @@ export class WeaknessDoctorService {
 
       questions.push({
         id: q.id || `q_${topicId}_${questions.length + 1}`,
+        topicId: specificTopicId || q.topicId || topicId,
         question: qText,
         options: rawOpts,
         correctAnswer: correctAns,
@@ -531,15 +710,15 @@ export class WeaknessDoctorService {
       (TOPIC_DETAILS as any)[topicId.replace(/^(phys|chem|bio)-/, '')];
 
     if (detail) {
-      (detail.pyqs || []).forEach((q: any) => addQ(q, 'NEET UG PYQ'));
-      (detail.practiceQuestions || detail.practiceCards || []).forEach((q: any) => addQ(q, 'NCERT Practice Drill'));
+      (detail.pyqs || []).forEach((q: any) => addQ(q, 'NEET UG PYQ', topicId));
+      (detail.practiceQuestions || detail.practiceCards || []).forEach((q: any) => addQ(q, 'NCERT Practice Drill', topicId));
     }
 
     // 2. Look in TOPICS
     const topic = TOPICS[topicId] || TOPICS[`phys-${topicId}`] || TOPICS[`chem-${topicId}`] || TOPICS[`bio-${topicId}`];
     if (topic) {
-      (topic.pyqs || []).forEach((q: any) => addQ(q, 'NEET UG PYQ'));
-      (topic.notes?.practiceQuestions || []).forEach((q: any) => addQ(q, 'Concept Drill'));
+      (topic.pyqs || []).forEach((q: any) => addQ(q, 'NEET UG PYQ', topicId));
+      (topic.notes?.practiceQuestions || []).forEach((q: any) => addQ(q, 'Concept Drill', topicId));
     }
 
     // 3. If very few questions found, look for questions in sibling topics of the same chapter
@@ -550,8 +729,8 @@ export class WeaknessDoctorService {
           if (siblingId !== topicId && questions.length < 10) {
             const sibDetail = (TOPIC_DETAILS as any)[siblingId];
             if (sibDetail) {
-              (sibDetail.pyqs || []).forEach((q: any) => addQ(q, 'Chapter PYQ'));
-              (sibDetail.practiceQuestions || []).forEach((q: any) => addQ(q, 'Chapter Drill'));
+              (sibDetail.pyqs || []).forEach((q: any) => addQ(q, 'Chapter PYQ', siblingId));
+              (sibDetail.practiceQuestions || []).forEach((q: any) => addQ(q, 'Chapter Drill', siblingId));
             }
           }
         });

@@ -20,33 +20,32 @@ export function renderWeaknessDashboard(activeSubjectFilter: string = 'all'): st
     <div class="w-full max-w-7xl mx-auto space-y-8 pb-16 font-sans text-slate-900 dark:text-slate-100" id="weakness-doctor-root">
       
       <!-- Doctor Banner Header -->
-      <section class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-rose-950 via-slate-900 to-indigo-950 text-white p-6 sm:p-10 shadow-2xl border border-rose-900/40">
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-rose-500/20 via-blue-500/10 to-transparent pointer-events-none"></div>
-        <div class="relative z-10 space-y-4 max-w-4xl">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-400/30 text-rose-300 text-xs font-bold uppercase tracking-wider">
-            <span class="w-2.5 h-2.5 rounded-full bg-rose-500 animate-pulse"></span>
+      <section class="rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 p-6 sm:p-10 shadow-sm space-y-6">
+        <div class="space-y-4 max-w-4xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-50 dark:bg-rose-950/50 border border-rose-200 dark:border-rose-800 text-rose-700 dark:text-rose-300 text-xs font-bold uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-rose-600 animate-pulse"></span>
             NEET UG Precision Diagnostics Engine
           </div>
           
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
-              <h1 class="text-3xl sm:text-5xl font-black tracking-tight leading-tight flex items-center gap-3">
-                <span>🩺</span> AI WEAKNESS DOCTOR
+              <h1 class="text-2xl sm:text-4xl font-black tracking-tight text-slate-900 dark:text-white flex items-center gap-2.5">
+                AI Weakness Doctor
               </h1>
-              <p class="text-slate-300 text-sm sm:text-lg font-light leading-relaxed mt-1">
+              <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed mt-1">
                 Zero-delay deterministic weakness detection & targeted high-yield drills for NEET UG.
               </p>
             </div>
             
             <div class="flex flex-wrap items-center gap-2 shrink-0">
-              <a href="#diagnostic-quiz" class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-rose-600 to-indigo-600 hover:from-rose-500 hover:to-indigo-500 text-white text-xs font-bold shadow-lg shadow-rose-900/40 transition-all flex items-center gap-2">
+              <a href="#diagnostic-quiz" class="px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold shadow-sm transition-all flex items-center gap-2">
                 ⚡ 5-Min Diagnostic Quiz
               </a>
-              <button id="btn-seed-sample-weakness" class="px-3.5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-slate-200 text-xs font-medium border border-white/10 transition-colors" title="Load sample diagnostic test attempts for demonstration">
+              <button id="btn-seed-sample-weakness" class="px-3.5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold border border-slate-200 dark:border-slate-700 transition-colors" title="Load sample diagnostic test attempts for demonstration">
                 🧪 Sample Benchmark
               </button>
               ${hasData ? `
-                <button id="btn-reset-weakness-data" class="px-3 py-2.5 rounded-xl bg-rose-500/10 hover:bg-rose-500/20 text-rose-300 text-xs font-medium border border-rose-500/20 transition-colors" title="Reset all test history">
+                <button id="btn-reset-weakness-data" class="px-3 py-2.5 rounded-xl bg-rose-50 hover:bg-rose-100 dark:bg-rose-950/50 text-rose-700 dark:text-rose-300 text-xs font-semibold border border-rose-200 dark:border-rose-800 transition-colors" title="Reset all test history">
                   🔄 Reset
                 </button>
               ` : ''}
@@ -54,46 +53,46 @@ export function renderWeaknessDashboard(activeSubjectFilter: string = 'all'): st
           </div>
 
           <!-- Overall KPI Bar -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2.5 pt-4 border-t border-white/10 text-xs">
-            <div class="p-3 rounded-2xl bg-white/5 border border-white/10">
-              <span class="text-slate-400 text-[11px] block">Overall Accuracy</span>
-              <span class="text-xl font-black text-white">${metrics.overallAccuracy}%</span>
+          <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2.5 pt-4 border-t border-slate-200/80 dark:border-slate-800 text-xs">
+            <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80">
+              <span class="text-slate-500 dark:text-slate-400 text-[11px] font-semibold block">Overall Accuracy</span>
+              <span class="text-xl font-black text-slate-900 dark:text-white">${metrics.overallAccuracy}%</span>
               <span class="text-[10px] text-slate-400 block">${metrics.totalQuestionsAttempted} questions</span>
             </div>
 
-            <div class="p-3 rounded-2xl bg-white/5 border border-white/10">
-              <span class="text-slate-400 text-[11px] block">Strongest Subject</span>
-              <span class="text-sm font-bold text-emerald-400 truncate block">${metrics.strongestSubject?.name || '—'}</span>
+            <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80">
+              <span class="text-slate-500 dark:text-slate-400 text-[11px] font-semibold block">Strongest Subject</span>
+              <span class="text-sm font-bold text-emerald-600 dark:text-emerald-400 truncate block">${metrics.strongestSubject?.name || '—'}</span>
               <span class="text-[10px] text-slate-400 block">${metrics.strongestSubject ? `${metrics.strongestSubject.accuracy}% acc` : 'Pending data'}</span>
             </div>
 
-            <div class="p-3 rounded-2xl bg-white/5 border border-white/10">
-              <span class="text-slate-400 text-[11px] block">Weakest Subject</span>
-              <span class="text-sm font-bold text-rose-400 truncate block">${metrics.weakestSubject?.name || '—'}</span>
+            <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80">
+              <span class="text-slate-500 dark:text-slate-400 text-[11px] font-semibold block">Weakest Subject</span>
+              <span class="text-sm font-bold text-rose-600 dark:text-rose-400 truncate block">${metrics.weakestSubject?.name || '—'}</span>
               <span class="text-[10px] text-slate-400 block">${metrics.weakestSubject ? `${metrics.weakestSubject.accuracy}% acc` : 'Pending data'}</span>
             </div>
 
-            <div class="p-3 rounded-2xl bg-white/5 border border-white/10">
-              <span class="text-slate-400 text-[11px] block">Weakest Chapter</span>
-              <span class="text-sm font-bold text-amber-300 truncate block" title="${metrics.weakestChapter?.title || ''}">${metrics.weakestChapter?.title || '—'}</span>
+            <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80">
+              <span class="text-slate-500 dark:text-slate-400 text-[11px] font-semibold block">Weakest Chapter</span>
+              <span class="text-sm font-bold text-amber-700 dark:text-amber-400 truncate block" title="${metrics.weakestChapter?.title || ''}">${metrics.weakestChapter?.title || '—'}</span>
               <span class="text-[10px] text-slate-400 block">${metrics.weakestChapter ? `${metrics.weakestChapter.mistakes} mistakes` : 'None detected'}</span>
             </div>
 
-            <div class="p-3 rounded-2xl bg-white/5 border border-white/10">
-              <span class="text-slate-400 text-[11px] block">Weakest Topic</span>
-              <span class="text-sm font-bold text-rose-400 truncate block" title="${metrics.weakestTopic?.topicTitle || ''}">${metrics.weakestTopic?.topicTitle || '—'}</span>
+            <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80">
+              <span class="text-slate-500 dark:text-slate-400 text-[11px] font-semibold block">Weakest Topic</span>
+              <span class="text-sm font-bold text-rose-600 dark:text-rose-400 truncate block" title="${metrics.weakestTopic?.topicTitle || ''}">${metrics.weakestTopic?.topicTitle || '—'}</span>
               <span class="text-[10px] text-slate-400 block">${metrics.weakestTopic ? `${metrics.weakestTopic.accuracy}% acc` : 'No weak topic'}</span>
             </div>
 
-            <div class="p-3 rounded-2xl bg-white/5 border border-white/10">
-              <span class="text-slate-400 text-[11px] block">Topics Mastered</span>
-              <span class="text-xl font-black text-emerald-400">${metrics.masteredTopicsCount} ⭐</span>
+            <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80">
+              <span class="text-slate-500 dark:text-slate-400 text-[11px] font-semibold block">Topics Mastered</span>
+              <span class="text-xl font-black text-emerald-600 dark:text-emerald-400">${metrics.masteredTopicsCount} ⭐</span>
               <span class="text-[10px] text-slate-400 block">≥90% accuracy</span>
             </div>
 
-            <div class="p-3 rounded-2xl bg-white/5 border border-white/10">
-              <span class="text-slate-400 text-[11px] block">Needing Revision</span>
-              <span class="text-xl font-black text-rose-400">${metrics.needsRevisionTopicsCount} 🔴</span>
+            <div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80">
+              <span class="text-slate-500 dark:text-slate-400 text-[11px] font-semibold block">Needing Revision</span>
+              <span class="text-xl font-black text-rose-600 dark:text-rose-400">${metrics.needsRevisionTopicsCount} 🔴</span>
               <span class="text-[10px] text-slate-400 block">&lt;75% accuracy</span>
             </div>
           </div>
