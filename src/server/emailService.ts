@@ -67,10 +67,25 @@ export function createEmailTransporter(): Transporter {
   const port = parseInt(process.env.SMTP_PORT || '465', 10);
   const secure = process.env.SMTP_SECURE ? process.env.SMTP_SECURE === 'true' : port === 465;
   const user = process.env.SMTP_USER?.trim();
-  const pass = process.env.SMTP_PASSWORD?.trim();
+  const pass = process.env.SMTP_PASSWORD?.trim().replace(/\s+/g, '');
 
   if (!user || !pass) {
     throw new Error('SMTP credentials missing: Please set SMTP_USER and SMTP_PASSWORD in environment variables.');
+  }
+
+  const isGmail = host.toLowerCase().includes('gmail.com');
+
+  if (isGmail) {
+    return nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user,
+        pass,
+      },
+      connectionTimeout: 10000,
+      greetingTimeout: 10000,
+      socketTimeout: 15000,
+    });
   }
 
   return nodemailer.createTransport({
@@ -81,10 +96,12 @@ export function createEmailTransporter(): Transporter {
       user,
       pass,
     },
-    // Gmail TLS/SSL security settings
     tls: {
-      rejectUnauthorized: true,
+      rejectUnauthorized: false,
     },
+    connectionTimeout: 10000,
+    greetingTimeout: 10000,
+    socketTimeout: 15000,
   });
 }
 

@@ -4,12 +4,20 @@
 [build]
   publish = "dist"
   command = "npm run build"
+  functions = "netlify/functions"
 
 [build.environment]
   NODE_VERSION = "20"
   NPM_FLAGS = "--legacy-peer-deps"
 
-# Single-Page Application (SPA) routing
+# 1. Netlify Serverless Functions for all backend API endpoints
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+  force = true
+
+# 2. Single-Page Application (SPA) routing for all frontend routes
 [[redirects]]
   from = "/*"
   to = "/index.html"
