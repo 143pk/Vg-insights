@@ -1447,7 +1447,30 @@ class App {
 }
 
 // Instantiate and initialize app when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-  const app = new App();
-  app.init();
-});
+function startApp(): void {
+  try {
+    const app = new App();
+    app.init();
+  } catch (err) {
+    console.error('[VG Insights] Failed to initialize app:', err);
+    const root = document.getElementById('root');
+    if (root && root.innerHTML.trim() === '') {
+      root.innerHTML = `
+        <div style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; text-align: center; background: #0f172a; color: #f8fafc;">
+          <div style="max-width: 480px; background: #1e293b; padding: 32px; border-radius: 16px; border: 1px solid #334155;">
+            <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: #60a5fa;">VG Insights – Initializing</h2>
+            <p style="font-size: 14px; color: #94a3b8; margin-bottom: 20px;">Please refresh or click below to enter the portal.</p>
+            <button onclick="window.location.reload()" style="background: #2563eb; color: white; border: none; padding: 10px 24px; border-radius: 8px; font-weight: 600; cursor: pointer;">Reload Application</button>
+          </div>
+        </div>
+      `;
+    }
+  }
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', startApp);
+} else {
+  startApp();
+}
+
