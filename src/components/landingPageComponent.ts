@@ -182,11 +182,23 @@ export function renderLandingPage(): string {
                 <span class="text-blue-200 text-lg">→</span>
               </button>
               <a
+                href="/vg-insights.apk"
+                download="vg-insights.apk"
+                id="btn-hero-download-apk"
+                class="w-full sm:w-auto px-6 py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 text-white text-base font-bold shadow-lg shadow-emerald-600/25 active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer"
+                title="Download Android App APK file"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+                <span>Download Android APK</span>
+              </a>
+              <a
                 href="#home"
                 id="btn-hero-explore"
-                class="w-full sm:w-auto px-7 py-4 rounded-2xl bg-white dark:bg-slate-800 text-slate-800 dark:text-white border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-750 text-base font-bold shadow-xs hover:border-slate-400 active:scale-[0.98] transition-all flex items-center justify-center gap-2"
+                class="w-full sm:w-auto px-6 py-4 rounded-2xl bg-white dark:bg-slate-800 text-slate-800 dark:text-white border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-750 text-base font-bold shadow-xs hover:border-slate-400 active:scale-[0.98] transition-all flex items-center justify-center gap-2"
               >
-                <span>Continue Without Login</span>
+                <span>Web App</span>
                 <span class="text-amber-500 font-bold">⚡</span>
               </a>
             </div>
@@ -1101,10 +1113,11 @@ export function renderLandingPage(): string {
               </ul>
             </div>
 
-            <!-- Column 3: Platform -->
+            <!-- Column 3: Platform & Apps -->
             <div class="space-y-2">
-              <p class="font-bold text-slate-900 uppercase tracking-wider text-[11px]">Platform</p>
+              <p class="font-bold text-slate-900 uppercase tracking-wider text-[11px]">Apps & Platform</p>
               <ul class="space-y-1.5 text-slate-600">
+                <li><a href="/vg-insights.apk" download="vg-insights.apk" class="text-emerald-600 font-semibold hover:underline flex items-center gap-1"><span>📥 Download Android APK</span></a></li>
                 <li><a href="#home" class="hover:text-blue-600">Direct App Access</a></li>
                 <li><a href="#landing" class="hover:text-blue-600">Privacy & Terms</a></li>
                 <li><a href="https://vginsights.in/" class="hover:text-blue-600">vginsights.in</a></li>

@@ -47,18 +47,30 @@ export function renderPwaInstallModal(): string {
           Get the complete NEET UG preparation experience on your phone with fullscreen mock tests, offline formula sheets, and zero lag.
         </p>
 
-        <!-- Primary 1-Click Install Button -->
-        <div class="space-y-3 mb-5">
+        <!-- Action Buttons: Direct 1-Click PWA & Download APK -->
+        <div class="space-y-2.5 mb-5">
           <button
             id="btn-pwa-direct-install"
             type="button"
-            class="w-full flex items-center justify-center gap-2.5 px-4 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white text-xs font-semibold shadow-md shadow-blue-600/25 transition-all transform active:scale-[0.98]"
+            class="w-full flex items-center justify-center gap-2.5 px-4 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white text-xs font-semibold shadow-md shadow-blue-600/25 transition-all transform active:scale-[0.98] cursor-pointer"
           >
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4.5 h-4.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+            </svg>
+            <span>Install App on Phone (1-Click PWA)</span>
+          </button>
+
+          <a
+            id="btn-direct-apk-download"
+            href="/vg-insights.apk"
+            download="vg-insights.apk"
+            class="w-full flex items-center justify-center gap-2.5 px-4 py-2.5 rounded-xl border border-emerald-500/30 bg-emerald-50/80 dark:bg-emerald-950/40 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 text-xs font-semibold shadow-xs transition-all transform active:scale-[0.98]"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4.5 h-4.5 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
             </svg>
-            <span>Install App on Device (1-Click)</span>
-          </button>
+            <span>Download Android .APK File</span>
+          </a>
 
           <p id="pwa-install-feedback" class="hidden text-center text-[11px] font-medium text-emerald-600 dark:text-emerald-400"></p>
         </div>
@@ -69,15 +81,17 @@ export function renderPwaInstallModal(): string {
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 24 24">
               <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993.0001.5511-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993 0 .5511-.4483.9997-.9993.9997m11.4045-6.02l1.996-3.4572c.156-.2702.0633-.6153-.2069-.7713-.2701-.156-.6152-.0633-.7712.2069l-2.0223 3.5029c-1.4553-.6644-3.0906-1.0347-4.8771-1.0347-1.7865 0-3.4218.3703-4.8771 1.0347L5.1006 5.3008c-.156-.2702-.5011-.3629-.7712-.2069-.2702.156-.3629.5011-.2069.7713l1.996 3.4572C2.7483 11.2307.458 14.7335.0002 18.9998h23.9996c-.4578-4.2663-2.7481-7.7691-6.118-9.6784"/>
             </svg>
-            <span>Direct Android Installation Guide</span>
+            <span>How to Install on Your Android Phone</span>
           </div>
 
-          <ol class="space-y-1.5 text-[11px] text-slate-600 dark:text-slate-300 list-decimal list-inside">
-            <li>Open <strong class="text-slate-800 dark:text-white">vginsights.in</strong> in Chrome / Browser on your Android phone.</li>
-            <li>Tap the <strong class="text-slate-800 dark:text-white">three dots (⋮)</strong> at the top right of your browser.</li>
-            <li>Tap <strong class="text-blue-600 dark:text-blue-400">"Install app"</strong> or <strong class="text-blue-600 dark:text-blue-400">"Add to Home screen"</strong>.</li>
-            <li>The VG Insights icon will be added to your phone's app drawer!</li>
-          </ol>
+          <ul class="space-y-1.5 text-[11px] text-slate-600 dark:text-slate-300">
+            <li class="flex items-start gap-1.5">
+              <strong class="text-blue-600 dark:text-blue-400">Method 1 (Instant):</strong> Tap "Install App on Phone" or Chrome menu (⋮) → "Install app".
+            </li>
+            <li class="flex items-start gap-1.5">
+              <strong class="text-emerald-600 dark:text-emerald-400">Method 2 (APK):</strong> Tap "Download Android .APK File", open the downloaded file, and tap "Install".
+            </li>
+          </ul>
         </div>
 
         <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400">
