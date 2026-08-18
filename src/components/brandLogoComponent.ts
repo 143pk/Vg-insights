@@ -83,14 +83,14 @@ export function renderBrandLogo(options: BrandLogoOptions = {}): string {
       <img
         src="/vg-insights-logo.svg"
         alt="${alt}"
-        class="${baseImgClass} dark:hidden"
+        class="${baseImgClass} brand-logo-light dark:hidden"
         loading="eager"
         referrerPolicy="no-referrer"
       />
       <img
         src="/vg-insights-logo-dark.svg"
         alt="${alt}"
-        class="${baseImgClass} hidden dark:block"
+        class="${baseImgClass} brand-logo-dark hidden dark:block"
         loading="eager"
         referrerPolicy="no-referrer"
       />

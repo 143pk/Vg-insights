@@ -263,7 +263,10 @@ export function renderInlineMathHTML(text: string | undefined | null): string {
     });
   }
 
-  // 4. Convert Greek letters and math symbols ONLY when preceded by a backslash \
+  // 4. Square roots \sqrt{...}
+  s = s.replace(/\\sqrt\{([^{}]+)\}/g, '√($1)');
+
+  // 5. Convert Greek letters and math symbols
   s = s.replace(/\\Delta\b/g, 'Δ');
   s = s.replace(/\\delta\b/g, 'δ');
   s = s.replace(/\\sum\b/g, 'Σ');
@@ -273,7 +276,10 @@ export function renderInlineMathHTML(text: string | undefined | null): string {
   s = s.replace(/\\gamma\b/g, 'γ');
   s = s.replace(/\\lambda\b/g, 'λ');
   s = s.replace(/\\nu\b/g, 'ν');
+  s = s.replace(/\\mu_0\b|\\mu_\{0\}/g, 'μ₀');
   s = s.replace(/\\mu\b/g, 'μ');
+  s = s.replace(/\\varepsilon_0\b|\\varepsilon_\{0\}/g, 'ε₀');
+  s = s.replace(/\\varepsilon\b|\\epsilon\b/g, 'ε');
   s = s.replace(/\\pi\b/g, 'π');
   s = s.replace(/\\theta\b/g, 'θ');
   s = s.replace(/\\rho\b/g, 'ρ');
@@ -283,7 +289,6 @@ export function renderInlineMathHTML(text: string | undefined | null): string {
   s = s.replace(/\\Omega\b/g, 'Ω');
   s = s.replace(/\\phi\b/g, 'φ');
   s = s.replace(/\\eta\b/g, 'η');
-  s = s.replace(/\\epsilon\b/g, 'ε');
   s = s.replace(/\\infty\b/g, '∞');
   s = s.replace(/\\pm\b/g, '±');
   s = s.replace(/\\approx\b/g, '≈');
@@ -297,19 +302,28 @@ export function renderInlineMathHTML(text: string | undefined | null): string {
   s = s.replace(/\\implies\b/g, '⇒');
   s = s.replace(/\^circ|\^\circ/g, '°');
   s = s.replace(/\\(?:dots|ldots|cdots)/g, '...');
+  s = s.replace(/\\log_\{10\}|\\log_10/g, 'log₁₀');
+  s = s.replace(/\\log\b/g, 'log');
+  s = s.replace(/\\ln\b/g, 'ln');
+  s = s.replace(/\\degree\b/g, '°');
 
-  // 5. Convert Ionic Charges, Superscripts, and Subscripts
+  // 6. Convert Ionic Charges, Superscripts, and Subscripts
   s = s.replace(/\^\{2\+\}|\^2\+/g, '²⁺').replace(/\^\{3\+\}|\^3\+/g, '³⁺').replace(/\^\+|\^\{\+\}/g, '⁺');
   s = s.replace(/\^\{2\-\}|\^2\-/g, '²⁻').replace(/\^\{3\-\}|\^3\-/g, '³⁻').replace(/\^\-|\^\{\-\}/g, '⁻');
   s = s.replace(/\^\{([0-9]+)\}/g, (_, d) => d.split('').map((c: string) => SUP_MAP[c] || c).join(''));
+  s = s.replace(/\^([0-9])/g, (_, d) => SUP_MAP[d] || d);
 
   s = s.replace(/_\{([0-9]+)\}/g, (_, d) => d.split('').map((c: string) => SUB_MAP[c] || c).join(''));
   s = s.replace(/_([0-9])/g, (_, d) => SUB_MAP[d] || d);
+  s = s.replace(/_\{([a-zA-Z0-9_\-\s\.]+)\}/g, '<sub>$1</sub>');
 
-  // 6. Units
+  // 7. Units
   s = s.replace(/\|?kJ\s*mol\^{-1}|\|?kJ\s*mol-1/gi, 'kJ mol⁻¹');
   s = s.replace(/\|?g\s*mol\^{-1}|\|?g\s*mol-1/gi, 'g mol⁻¹');
   s = s.replace(/\|?L\s*mol\^{-1}|\|?L\s*mol-1/gi, 'L mol⁻¹');
+
+  // 8. Clean leftover isolated backslashes from simple tokens
+  s = s.replace(/\\([a-zA-Z]+)/g, '$1');
 
   return s;
 }

@@ -1,5 +1,6 @@
 import { SUBJECTS, TOPICS } from '../data/neetData';
 import { renderBrandLogo } from './brandLogoComponent';
+import { StorageService } from '../services/storageService';
 
 // Helper to safely render KaTeX formula string or HTML fallback
 function renderKaTeXFormula(latex: string, displayMode: boolean = false): string {
@@ -60,6 +61,22 @@ export function renderLandingPage(): string {
 
             <!-- Right Actions -->
             <div class="flex items-center shrink-0 gap-1.5 sm:gap-3">
+              <!-- Theme Toggle Button -->
+              <button
+                id="btn-landing-theme-toggle"
+                type="button"
+                class="flex items-center justify-center w-9 h-9 rounded-xl text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 shrink-0 cursor-pointer"
+                title="Toggle light / dark theme"
+                aria-label="Toggle theme"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4.5 h-4.5 brand-logo-dark hidden dark:block text-amber-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4.5 h-4.5 brand-logo-light dark:hidden text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                </svg>
+              </button>
+
               <button
                 type="button"
                 id="btn-nav-login"
@@ -1123,6 +1140,16 @@ export function renderLandingPage(): string {
 }
 
 export function initLandingPageEvents(onOpenAuthModal: () => void): void {
+  // Theme Toggle Button
+  const landingThemeBtn = document.getElementById('btn-landing-theme-toggle');
+  if (landingThemeBtn) {
+    landingThemeBtn.addEventListener('click', () => {
+      const current = StorageService.getTheme();
+      const next = current === 'dark' ? 'light' : 'dark';
+      StorageService.setTheme(next);
+    });
+  }
+
   // 1. Hook up all Login / Get Started buttons to open Auth Modal
   const authButtons = [
     'btn-nav-login',

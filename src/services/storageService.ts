@@ -17,9 +17,14 @@ export class StorageService {
     localStorage.setItem(STORAGE_KEYS.THEME, theme);
     if (theme === 'dark') {
       document.documentElement.classList.add('dark');
+      document.documentElement.setAttribute('data-theme', 'dark');
+      document.documentElement.style.colorScheme = 'dark';
     } else {
       document.documentElement.classList.remove('dark');
+      document.documentElement.setAttribute('data-theme', 'light');
+      document.documentElement.style.colorScheme = 'light';
     }
+    window.dispatchEvent(new CustomEvent('vg-theme-change', { detail: { theme } }));
   }
 
   static initTheme(): void {
