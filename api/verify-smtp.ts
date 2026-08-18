@@ -1,5 +1,5 @@
 import type { Request, Response } from 'express';
-import { verifySmtpConnection, getSmtpConfigStatus } from '../src/server/emailService.js';
+import { verifySmtpConnection, getSmtpConfigStatus } from '../src/server/emailService';
 
 /**
  * Serverless / Express API Handler for verifying Gmail SMTP credentials.

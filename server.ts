@@ -2,12 +2,12 @@ import express from 'express';
 import path from 'path';
 import { createServer as createViteServer } from 'vite';
 import { GoogleGenAI } from '@google/genai';
-import sendEmailHandler from './api/send-email.js';
-import verifySmtpHandler from './api/verify-smtp.js';
-import checkEmailHandler from './api/auth/check-email.js';
-import requestOtpHandler from './api/auth/request-otp.js';
-import verifyOtpHandler from './api/auth/verify-otp.js';
-import userMeHandler from './api/auth/me.js';
+import sendEmailHandler from './api/send-email';
+import verifySmtpHandler from './api/verify-smtp';
+import checkEmailHandler from './api/auth/check-email';
+import requestOtpHandler from './api/auth/request-otp';
+import verifyOtpHandler from './api/auth/verify-otp';
+import userMeHandler from './api/auth/me';
 
 async function startServer() {
   const app = express();

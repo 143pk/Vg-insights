@@ -1,5 +1,5 @@
 import type { Request, Response } from 'express';
-import { UserDatabase } from '../../src/server/userDatabase.js';
+import { UserDatabase } from '../../src/server/userDatabase';
 
 export default async function handler(req: Request | any, res: Response | any) {
   // CORS Headers

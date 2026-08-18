@@ -1,5 +1,5 @@
 import type { Request, Response } from 'express';
-import { sendEmail, getSmtpConfigStatus, SendEmailOptions } from '../src/server/emailService.js';
+import { sendEmail, getSmtpConfigStatus, SendEmailOptions } from '../src/server/emailService';
 
 /**
  * Serverless / Express API Handler for sending emails via Gmail SMTP.

@@ -1,7 +1,7 @@
 import type { Request, Response } from 'express';
-import { UserDatabase } from '../../src/server/userDatabase.js';
-import { sendEmail, getSmtpConfigStatus } from '../../src/server/emailService.js';
-import { generateOtpEmailTemplate } from '../../src/server/otpEmailTemplate.js';
+import { UserDatabase } from '../../src/server/userDatabase';
+import { sendEmail, getSmtpConfigStatus } from '../../src/server/emailService';
+import { generateOtpEmailTemplate } from '../../src/server/otpEmailTemplate';
 
 export default async function handler(req: Request | any, res: Response | any) {
   // CORS Headers
