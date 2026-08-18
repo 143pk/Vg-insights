@@ -176,31 +176,11 @@ export function renderLandingPage(): string {
               <button
                 type="button"
                 id="btn-hero-start-free"
-                class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-[#2563EB] to-[#1D4ED8] hover:from-[#1D4ED8] hover:to-[#1E40AF] text-white text-base font-bold shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer"
+                class="w-full sm:w-auto px-10 py-4.5 rounded-2xl bg-gradient-to-r from-[#2563EB] to-[#1D4ED8] hover:from-[#1D4ED8] hover:to-[#1E40AF] text-white text-lg font-bold shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 active:scale-[0.98] transition-all flex items-center justify-center gap-2.5 cursor-pointer"
               >
                 <span>Start Learning Free</span>
-                <span class="text-blue-200 text-lg">→</span>
+                <span class="text-blue-200 text-xl">→</span>
               </button>
-              <a
-                href="/vg-insights.apk"
-                download="vg-insights.apk"
-                id="btn-hero-download-apk"
-                class="w-full sm:w-auto px-6 py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 text-white text-base font-bold shadow-lg shadow-emerald-600/25 active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer"
-                title="Download Android App APK file"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                </svg>
-                <span>Download Android APK</span>
-              </a>
-              <a
-                href="#home"
-                id="btn-hero-explore"
-                class="w-full sm:w-auto px-6 py-4 rounded-2xl bg-white dark:bg-slate-800 text-slate-800 dark:text-white border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-750 text-base font-bold shadow-xs hover:border-slate-400 active:scale-[0.98] transition-all flex items-center justify-center gap-2"
-              >
-                <span>Web App</span>
-                <span class="text-amber-500 font-bold">⚡</span>
-              </a>
             </div>
 
             <!-- Trust Row -->
