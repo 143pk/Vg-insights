@@ -46,6 +46,7 @@ import { renderPwaInstallModal, initPwaInstallModal } from './components/pwaInst
 import { renderMobileBottomNav } from './components/mobileNavComponent';
 import { AuthService } from './services/authService';
 import { PWAInstallService } from './services/pwaInstallService';
+import { SEOService } from './services/seoService';
 
 class App {
   private currentSearchFilter: string = 'all';
@@ -184,6 +185,9 @@ class App {
   private handleRouteChange(): void {
     const routeState: RouteState = RouterService.parseHash(window.location.hash);
 
+    // Dynamic SEO, OpenGraph and Schema.org tag updates for Google rankings
+    SEOService.updateMetaForRoute(routeState);
+
     // Sync study timer with navigated subject/topic/chapter
     StudyTimerService.updateRoute(routeState);
 
@@ -216,7 +220,7 @@ class App {
     const root = document.getElementById('root');
     if (!root) return;
 
-    document.title = 'VG Insights – NEET UG Preparation Platform';
+    SEOService.updateMetaForRoute({ type: 'landing', breadcrumbs: [] });
 
     root.innerHTML = `
       ${renderLandingPage()}
@@ -249,6 +253,7 @@ class App {
     if (!root) return;
 
     const routeState = RouterService.parseHash(window.location.hash);
+    SEOService.updateMetaForRoute(routeState);
     if (routeState.type === 'landing' || routeState.type === 'login') {
       this.renderLandingLayout(routeState.type === 'login');
       return;
