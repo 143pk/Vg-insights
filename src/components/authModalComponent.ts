@@ -124,17 +124,6 @@ export function renderAuthModal(): string {
               </p>
             </div>
 
-            <!-- Demo Helper Callout -->
-            <div id="auth-demo-callout" class="p-3 rounded-xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800/60 flex items-center justify-between text-xs">
-              <div class="flex items-center gap-2 text-blue-700 dark:text-blue-300 min-w-0 truncate">
-                <span>🔑</span>
-                <span class="truncate">Passcode: <strong class="font-mono text-sm tracking-wider" id="auth-demo-otp-hint">123456</strong></span>
-              </div>
-              <button type="button" id="btn-autofill-otp" class="text-[11px] font-bold text-blue-600 dark:text-blue-400 hover:underline shrink-0 ml-2">
-                Use code
-              </button>
-            </div>
-
             <form id="form-auth-otp" class="space-y-4">
               <div>
                 <label for="auth-otp-input" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
@@ -144,7 +133,7 @@ export function renderAuthModal(): string {
                   type="text"
                   id="auth-otp-input"
                   maxlength="6"
-                  placeholder="123456"
+                  placeholder="• • • • • •"
                   pattern="[0-9]*"
                   inputmode="numeric"
                   autocomplete="one-time-code"
@@ -201,9 +190,7 @@ export function initAuthModalEvents(onLoginSuccess: () => void): void {
   const otpError = document.getElementById('auth-otp-error');
   const displayEmail = document.getElementById('auth-display-email');
   const btnChangeEmail = document.getElementById('btn-auth-change-email');
-  const btnAutofill = document.getElementById('btn-autofill-otp');
   const btnResend = document.getElementById('btn-auth-resend');
-  const demoOtpHint = document.getElementById('auth-demo-otp-hint');
 
   let currentEmail = '';
   let isCurrentNewUser = false;
@@ -385,7 +372,6 @@ export function initAuthModalEvents(onLoginSuccess: () => void): void {
       if (res.success) {
         currentEmail = email;
         if (displayEmail) displayEmail.textContent = email;
-        if (demoOtpHint) demoOtpHint.textContent = res.demoOtp || '123456';
         if (stepEmail && stepOtp) {
           stepEmail.classList.add('hidden');
           stepOtp.classList.remove('hidden');
@@ -412,36 +398,14 @@ export function initAuthModalEvents(onLoginSuccess: () => void): void {
     });
   }
 
-  // Auto fill demo OTP and submit
-  if (btnAutofill && inputOtp && demoOtpHint && formOtp) {
-    btnAutofill.addEventListener('click', () => {
-      const code = demoOtpHint.textContent || '123456';
-      inputOtp.value = code;
-      formOtp.dispatchEvent(new Event('submit', { cancelable: true, bubbles: true }));
-    });
-  }
-
-  // Auto-submit when 6 digits are typed
-  if (inputOtp && formOtp) {
-    inputOtp.addEventListener('input', () => {
-      const val = inputOtp.value.trim();
-      if (val.length === 6 && /^\d{6}$/.test(val)) {
-        formOtp.dispatchEvent(new Event('submit', { cancelable: true, bubbles: true }));
-      }
-    });
-  }
-
   // Resend OTP
-  if (btnResend && demoOtpHint) {
+  if (btnResend) {
     btnResend.addEventListener('click', async () => {
       if (!currentEmail) return;
       const fullName = isCurrentNewUser ? (inputName?.value.trim() || '') : '';
       btnResend.textContent = 'Sending...';
-      const res = await AuthService.requestOtp(currentEmail, fullName);
-      btnResend.textContent = 'Code resent!';
-      if (demoOtpHint && res.demoOtp) {
-        demoOtpHint.textContent = res.demoOtp;
-      }
+      await AuthService.requestOtp(currentEmail, fullName);
+      btnResend.textContent = 'Code resent to email!';
       setTimeout(() => {
         btnResend.textContent = 'Resend OTP';
       }, 3000);
