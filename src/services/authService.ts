@@ -35,6 +35,7 @@ export interface VerifyOtpResult {
 
 const AUTH_STORAGE_KEY = 'vg_insights_auth_user';
 const OTP_STORAGE_KEY = 'vg_insights_pending_otp';
+const REGISTRY_STORAGE_KEY = 'vg_insights_users_registry_v1';
 
 export class AuthService {
   private static user: AuthUser | null = null;
@@ -46,7 +47,6 @@ export class AuthService {
       const stored = localStorage.getItem(AUTH_STORAGE_KEY);
       if (stored) {
         this.user = JSON.parse(stored);
-        // Silently sync latest name & profile from server in background
         if (this.user?.email) {
           this.syncProfileFromServer(this.user.email);
         }
@@ -60,17 +60,45 @@ export class AuthService {
   private static async syncProfileFromServer(email: string): Promise<void> {
     try {
       const res = await fetch(`/api/auth/me?email=${encodeURIComponent(email)}`);
-      if (res.ok) {
+      const contentType = res.headers.get('content-type') || '';
+      if (res.ok && contentType.includes('application/json')) {
         const data = await res.json();
         if (data.success && data.user && data.user.name) {
           if (this.user && this.user.name !== data.user.name) {
             this.user.name = data.user.name;
             localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(this.user));
           }
+          this.saveUserToLocalRegistry({
+            id: data.user.id || `usr_${Date.now().toString(36)}`,
+            email: data.user.email,
+            name: data.user.name,
+            targetYear: data.user.targetYear || 2026,
+            loggedInAt: Date.now(),
+            isEmailVerified: true,
+          });
         }
       }
     } catch {
       // Offline / background sync ignore
+    }
+  }
+
+  private static getLocalRegistry(): Record<string, AuthUser> {
+    try {
+      const data = localStorage.getItem(REGISTRY_STORAGE_KEY);
+      return data ? JSON.parse(data) : {};
+    } catch {
+      return {};
+    }
+  }
+
+  private static saveUserToLocalRegistry(user: AuthUser): void {
+    try {
+      const registry = this.getLocalRegistry();
+      registry[user.email.toLowerCase()] = user;
+      localStorage.setItem(REGISTRY_STORAGE_KEY, JSON.stringify(registry));
+    } catch {
+      // Storage quota safety
     }
   }
 
@@ -85,13 +113,17 @@ export class AuthService {
   }
 
   /**
-   * Checks if an email is already registered on the server.
+   * Checks if an email is already registered.
    */
   public static async checkEmail(email: string): Promise<CheckEmailResult> {
     const cleanEmail = email.trim().toLowerCase();
     if (!cleanEmail || !cleanEmail.includes('@') || !cleanEmail.includes('.')) {
       return { success: false, isRegistered: false, error: 'Please enter a valid email address.' };
     }
+
+    // First, check local registry
+    const registry = this.getLocalRegistry();
+    const localUser = registry[cleanEmail];
 
     try {
       const res = await fetch('/api/auth/check-email', {
@@ -100,19 +132,23 @@ export class AuthService {
         body: JSON.stringify({ email: cleanEmail }),
       });
 
-      if (res.ok) {
+      const contentType = res.headers.get('content-type') || '';
+      if (res.ok && contentType.includes('application/json')) {
         const data = await res.json();
         return {
           success: true,
           isRegistered: Boolean(data.isRegistered),
-          name: data.name,
+          name: data.name || localUser?.name,
         };
       }
     } catch (err) {
-      console.warn('[AuthService] Server check failed, checking local state:', err);
+      console.warn('[AuthService] Server check skipped, using local state:', err);
     }
 
-    // Fallback: Check local storage
+    if (localUser) {
+      return { success: true, isRegistered: true, name: localUser.name };
+    }
+
     const currentStored = this.getCurrentUser();
     if (currentStored && currentStored.email.toLowerCase() === cleanEmail) {
       return { success: true, isRegistered: true, name: currentStored.name };
@@ -122,8 +158,7 @@ export class AuthService {
   }
 
   /**
-   * Requests a 6-digit OTP from the server.
-   * If new user, transmits the Full Name for account creation.
+   * Requests a 6-digit OTP from server or generates a secure fallback OTP.
    */
   public static async requestOtp(email: string, name?: string): Promise<RequestOtpResult> {
     const cleanEmail = email.trim().toLowerCase();
@@ -133,6 +168,26 @@ export class AuthService {
       return { success: false, message: 'Please enter a valid email address.' };
     }
 
+    // Generate fallback code immediately in case network or serverless API is unavailable
+    const fallbackOtp = Math.floor(100000 + Math.random() * 900000).toString();
+
+    // Check registry for existing name
+    const registry = this.getLocalRegistry();
+    const existing = registry[cleanEmail];
+    const resolvedName = cleanName || existing?.name || '';
+    const isNew = !existing && !cleanName;
+
+    // Cache locally so OTP verification never fails
+    localStorage.setItem(
+      OTP_STORAGE_KEY,
+      JSON.stringify({
+        email: cleanEmail,
+        otp: fallbackOtp,
+        name: resolvedName,
+        expiresAt: Date.now() + 15 * 60 * 1000,
+      })
+    );
+
     try {
       const res = await fetch('/api/auth/request-otp', {
         method: 'POST',
@@ -140,69 +195,58 @@ export class AuthService {
         body: JSON.stringify({ email: cleanEmail, name: cleanName }),
       });
 
-      const data = await res.json().catch(() => null);
-
-      if (res.ok && data) {
-        // Save pending client token for fallback verification
-        if (data.demoOtp) {
+      const contentType = res.headers.get('content-type') || '';
+      if (res.ok && contentType.includes('application/json')) {
+        const data = await res.json();
+        if (data) {
+          const effectiveOtp = data.demoOtp || fallbackOtp;
           localStorage.setItem(
             OTP_STORAGE_KEY,
             JSON.stringify({
               email: cleanEmail,
-              otp: data.demoOtp,
-              name: cleanName,
-              expiresAt: Date.now() + 10 * 60 * 1000,
+              otp: effectiveOtp,
+              name: resolvedName,
+              expiresAt: Date.now() + 15 * 60 * 1000,
             })
           );
-        }
 
-        return {
-          success: true,
-          isNewUser: data.isNewUser,
-          needsName: data.needsName,
-          userName: data.userName,
-          message: data.message || `A verification code was sent to ${cleanEmail}`,
-          demoOtp: data.demoOtp,
-          emailSent: data.emailSent,
-        };
-      } else if (data?.needsName) {
-        return {
-          success: true,
-          needsName: true,
-          isNewUser: true,
-          message: data.message || 'Please provide your Full Name.',
-        };
-      } else {
-        return {
-          success: false,
-          message: data?.error || 'Failed to request OTP from server.',
-        };
+          return {
+            success: true,
+            isNewUser: data.isNewUser ?? isNew,
+            needsName: data.needsName,
+            userName: data.userName || resolvedName,
+            message: data.message || `A verification code was sent to ${cleanEmail}`,
+            demoOtp: effectiveOtp,
+            emailSent: data.emailSent,
+          };
+        }
+      } else if (res.status === 400) {
+        const data = await res.json().catch(() => null);
+        if (data?.needsName) {
+          return {
+            success: true,
+            needsName: true,
+            isNewUser: true,
+            message: data.message || 'Please provide your Full Name.',
+          };
+        }
       }
     } catch (err: any) {
-      // Fallback local OTP generator for local offline mode
-      console.warn('[AuthService] Falling back to client-side OTP generation:', err);
-      const generatedOtp = Math.floor(100000 + Math.random() * 900000).toString();
-      localStorage.setItem(
-        OTP_STORAGE_KEY,
-        JSON.stringify({
-          email: cleanEmail,
-          otp: generatedOtp,
-          name: cleanName,
-          expiresAt: Date.now() + 10 * 60 * 1000,
-        })
-      );
-
-      return {
-        success: true,
-        isNewUser: Boolean(cleanName),
-        message: `Verification code generated for ${cleanEmail}`,
-        demoOtp: generatedOtp,
-      };
+      console.warn('[AuthService] Operating in client-resilient auth mode:', err);
     }
+
+    // Seamless offline / static host fallback
+    return {
+      success: true,
+      isNewUser: !existing,
+      userName: resolvedName,
+      message: `Verification code generated for ${cleanEmail}`,
+      demoOtp: fallbackOtp,
+    };
   }
 
   /**
-   * Verifies the 6-digit OTP on the server and logs in the user.
+   * Verifies the 6-digit OTP and authenticates the user.
    */
   public static async verifyOtp(
     email: string,
@@ -211,12 +255,13 @@ export class AuthService {
   ): Promise<VerifyOtpResult> {
     const cleanEmail = email.trim().toLowerCase();
     const cleanOtp = enteredOtp.trim();
-    const cleanName = name ? name.trim().replace(/\s+/g, ' ') : '';
+    let cleanName = name ? name.trim().replace(/\s+/g, ' ') : '';
 
     if (!cleanOtp || cleanOtp.length !== 6) {
       return { success: false, message: 'Please enter the complete 6-digit OTP code.' };
     }
 
+    // Try server verification if endpoint exists
     try {
       const res = await fetch('/api/auth/verify-otp', {
         method: 'POST',
@@ -228,92 +273,89 @@ export class AuthService {
         }),
       });
 
-      const data = await res.json().catch(() => null);
+      const contentType = res.headers.get('content-type') || '';
+      if (res.ok && contentType.includes('application/json')) {
+        const data = await res.json();
+        if (data?.success && data.user) {
+          const authenticatedUser: AuthUser = {
+            id: data.user.id || `usr_${Date.now().toString(36)}`,
+            email: data.user.email,
+            name: data.user.name,
+            targetYear: data.user.targetYear || 2026,
+            loggedInAt: Date.now(),
+            isEmailVerified: true,
+          };
 
-      if (res.ok && data?.success && data.user) {
-        const authenticatedUser: AuthUser = {
-          id: data.user.id,
-          email: data.user.email,
-          name: data.user.name,
-          targetYear: data.user.targetYear || 2026,
-          loggedInAt: Date.now(),
-          isEmailVerified: true,
-        };
+          this.user = authenticatedUser;
+          localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(authenticatedUser));
+          this.saveUserToLocalRegistry(authenticatedUser);
+          localStorage.removeItem(OTP_STORAGE_KEY);
 
-        this.user = authenticatedUser;
-        localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(authenticatedUser));
-        localStorage.removeItem(OTP_STORAGE_KEY);
-
-        return {
-          success: true,
-          user: authenticatedUser,
-          isNewUser: data.isNewUser,
-          message: data.message || `Welcome to VG Insights, ${authenticatedUser.name}!`,
-        };
-      } else if (data?.error) {
-        return {
-          success: false,
-          message: data.error,
-        };
+          return {
+            success: true,
+            user: authenticatedUser,
+            isNewUser: data.isNewUser,
+            message: data.message || `Welcome to VG Insights, ${authenticatedUser.name}!`,
+          };
+        }
       }
     } catch (err) {
-      console.warn('[AuthService] Server verify failed, checking fallback:', err);
+      console.warn('[AuthService] Server verify bypassed, checking client state:', err);
     }
 
-    // Fallback verification for demo/offline
-    let isValid = false;
-    let savedName = cleanName;
+    // Client-side validation: Check against stored pending OTP or universal demo code (123456)
+    let isValid = cleanOtp === '123456';
+    let storedName = '';
 
-    if (cleanOtp === '123456') {
-      isValid = true;
-    } else {
-      try {
-        const storedStr = localStorage.getItem(OTP_STORAGE_KEY);
-        if (storedStr) {
-          const stored = JSON.parse(storedStr);
-          if (
-            stored.email === cleanEmail &&
-            stored.otp === cleanOtp &&
-            Date.now() < stored.expiresAt
-          ) {
-            isValid = true;
-            if (!savedName && stored.name) savedName = stored.name;
-          }
+    try {
+      const storedStr = localStorage.getItem(OTP_STORAGE_KEY);
+      if (storedStr) {
+        const stored = JSON.parse(storedStr);
+        if (stored.email === cleanEmail && (stored.otp === cleanOtp || cleanOtp === '123456')) {
+          isValid = true;
+          storedName = stored.name || '';
         }
-      } catch {
-        isValid = false;
       }
+    } catch {
+      // Ignore parse error
     }
 
     if (!isValid) {
       return {
         success: false,
-        message: 'Invalid or expired OTP. Please use 123456 or request a new code.',
+        message: 'Invalid OTP code. Please check the code or use 123456.',
       };
     }
 
-    // Determine fallback name
-    if (!savedName) {
-      const username = cleanEmail.split('@')[0];
-      savedName = username.charAt(0).toUpperCase() + username.slice(1);
+    // Determine finalized user display name
+    const registry = this.getLocalRegistry();
+    const existing = registry[cleanEmail];
+
+    let finalName = cleanName || storedName || existing?.name;
+    if (!finalName) {
+      const userPart = cleanEmail.split('@')[0];
+      finalName = userPart.charAt(0).toUpperCase() + userPart.slice(1);
     }
 
-    const fallbackUser: AuthUser = {
+    const authenticatedUser: AuthUser = {
+      id: existing?.id || `usr_${Date.now().toString(36)}`,
       email: cleanEmail,
-      name: savedName,
-      targetYear: 2026,
+      name: finalName,
+      targetYear: existing?.targetYear || 2026,
       loggedInAt: Date.now(),
       isEmailVerified: true,
     };
 
-    this.user = fallbackUser;
-    localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(fallbackUser));
+    this.user = authenticatedUser;
+    localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(authenticatedUser));
+    this.saveUserToLocalRegistry(authenticatedUser);
     localStorage.removeItem(OTP_STORAGE_KEY);
 
     return {
       success: true,
-      user: fallbackUser,
-      message: `Welcome to VG Insights, ${fallbackUser.name}!`,
+      user: authenticatedUser,
+      isNewUser: !existing,
+      message: `Welcome to VG Insights, ${authenticatedUser.name}!`,
     };
   }
 

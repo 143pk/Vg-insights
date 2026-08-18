@@ -411,12 +411,22 @@ export function initAuthModalEvents(onLoginSuccess: () => void): void {
     });
   }
 
-  // Auto fill demo OTP
-  if (btnAutofill && inputOtp && demoOtpHint) {
+  // Auto fill demo OTP and submit
+  if (btnAutofill && inputOtp && demoOtpHint && formOtp) {
     btnAutofill.addEventListener('click', () => {
       const code = demoOtpHint.textContent || '123456';
       inputOtp.value = code;
-      inputOtp.focus();
+      formOtp.dispatchEvent(new Event('submit', { cancelable: true, bubbles: true }));
+    });
+  }
+
+  // Auto-submit when 6 digits are typed
+  if (inputOtp && formOtp) {
+    inputOtp.addEventListener('input', () => {
+      const val = inputOtp.value.trim();
+      if (val.length === 6 && /^\d{6}$/.test(val)) {
+        formOtp.dispatchEvent(new Event('submit', { cancelable: true, bubbles: true }));
+      }
     });
   }
 
