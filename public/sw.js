@@ -1,9 +1,14 @@
-const CACHE_NAME = 'vg-neet-library-v1';
+const CACHE_NAME = 'vg-insights-pwa-v2';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
   '/manifest.json',
-  '/pwa-icon.svg'
+  '/icon-192x192.png',
+  '/icon-512x512.png',
+  '/icon-maskable-512x512.png',
+  '/apple-touch-icon.png',
+  '/favicon.png',
+  '/favicon.svg'
 ];
 
 self.addEventListener('install', (event) => {
@@ -32,10 +37,14 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
+  
+  // Exclude API requests from SW cache
+  if (event.request.url.includes('/api/')) return;
+
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
       if (cachedResponse) {
-        // Return cached, then update cache in background
+        // Return cached, then update cache in background (stale-while-revalidate)
         fetch(event.request).then((networkResponse) => {
           if (networkResponse && networkResponse.status === 200) {
             caches.open(CACHE_NAME).then((cache) => cache.put(event.request, networkResponse));

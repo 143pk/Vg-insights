@@ -1,44 +1,82 @@
 {
-  "id": "/",
+  "id": "https://vginsights.in/",
   "name": "VG Insights – NEET UG Preparation Platform",
   "short_name": "VG Insights",
   "description": "VG Insights is a NEET UG preparation platform with Class 11 & 12 NCERT notes, chapter tests, PYQs, full mock tests, and AI weakness diagnosis.",
-  "start_url": "/?source=pwa",
-  "scope": "/",
+  "lang": "en",
+  "dir": "ltr",
+  "start_url": "https://vginsights.in/?source=pwa",
+  "scope": "https://vginsights.in/",
   "display": "standalone",
-  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "display_override": [
+    "window-controls-overlay",
+    "tabbed",
+    "standalone",
+    "minimal-ui"
+  ],
   "orientation": "portrait-primary",
   "background_color": "#0b1120",
   "theme_color": "#2563eb",
   "categories": ["education", "medical", "books"],
   "prefer_related_applications": false,
+  "launch_handler": {
+    "client_mode": "auto"
+  },
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
   "icons": [
     {
-      "src": "/favicon-32x32.png",
-      "sizes": "32x32",
-      "type": "image/png"
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
     },
     {
-      "src": "/favicon-48x48.png",
-      "sizes": "48x48",
-      "type": "image/png"
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     },
     {
       "src": "/apple-touch-icon.png",
       "sizes": "180x180",
-      "type": "image/png"
-    },
-    {
-      "src": "/favicon.png",
-      "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
-      "src": "/favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
+      "src": "/favicon-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-desktop.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "VG Insights NEET UG Preparation & Test Platform"
+    },
+    {
+      "src": "/screenshot-mobile.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "VG Insights Mobile App - Notes, PYQs & AI Weakness Doctor"
     }
   ],
   "shortcuts": [
@@ -46,19 +84,22 @@
       "name": "Weekly Mock Test",
       "short_name": "Mock Test",
       "description": "Take 720-mark NTA pattern full syllabus mock test",
-      "url": "/#weekly-mock"
+      "url": "https://vginsights.in/#weekly-mock",
+      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192" }]
     },
     {
       "name": "AI Weakness Doctor",
       "short_name": "AI Doctor",
       "description": "Diagnose weak NEET UG topics and practice custom questions",
-      "url": "/#weakness-doctor"
+      "url": "https://vginsights.in/#weakness-doctor",
+      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192" }]
     },
     {
       "name": "Mistake Book",
       "short_name": "Mistakes",
       "description": "Review and master bookmarked errors and incorrect MCQs",
-      "url": "/#mistake-book"
+      "url": "https://vginsights.in/#mistake-book",
+      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192" }]
     }
   ]
 }
