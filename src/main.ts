@@ -42,7 +42,9 @@ import { renderBookmarksModal } from './components/bookmarksModalComponent';
 import { renderProgressModal } from './components/progressModalComponent';
 import { renderLandingPage, initLandingPageEvents } from './components/landingPageComponent';
 import { renderAuthModal, initAuthModalEvents } from './components/authModalComponent';
+import { renderPwaInstallModal, initPwaInstallModal } from './components/pwaInstallModalComponent';
 import { AuthService } from './services/authService';
+import { PWAInstallService } from './services/pwaInstallService';
 
 class App {
   private currentSearchFilter: string = 'all';
@@ -62,6 +64,9 @@ class App {
     StudyTimerService.init();
     const initialRoute = RouterService.parseHash(window.location.hash);
     StudyTimerService.updateRoute(initialRoute);
+
+    // Initialize PWA / Android WebAPK Installation Manager
+    PWAInstallService.init();
 
     // Register PWA Service Worker if supported
     if ('serviceWorker' in navigator) {
@@ -216,6 +221,7 @@ class App {
       ${renderLandingPage()}
       <div id="modals-container">
         ${renderAuthModal()}
+        ${renderPwaInstallModal()}
       </div>
     `;
 
@@ -224,6 +230,7 @@ class App {
       RouterService.navigateTo('home');
       this.renderApp();
     });
+    initPwaInstallModal();
 
     if (autoOpenLogin) {
       this.openAuthModal();
@@ -261,6 +268,7 @@ class App {
         ${renderBookmarksModal()}
         ${renderProgressModal()}
         ${renderAuthModal()}
+        ${renderPwaInstallModal()}
       </div>
 
       <footer class="border-t border-slate-200/80 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 py-6 text-center text-xs text-slate-500 dark:text-slate-400">
@@ -285,6 +293,7 @@ class App {
     initAuthModalEvents(() => {
       this.refreshHeader();
     });
+    initPwaInstallModal();
     this.renderMainContent();
   }
 
@@ -524,6 +533,17 @@ class App {
     // Search button (Desktop)
     document.getElementById('btn-header-search')?.addEventListener('click', () => {
       this.openModal('modal-search');
+    });
+
+    // Install Mobile / Android App Buttons
+    document.getElementById('btn-header-install-app')?.addEventListener('click', () => {
+      PWAInstallService.openInstallModal();
+    });
+
+    document.getElementById('btn-dropdown-install-app')?.addEventListener('click', () => {
+      userProfileDropdown?.classList.add('hidden');
+      userProfileBtn?.setAttribute('aria-expanded', 'false');
+      PWAInstallService.openInstallModal();
     });
   }
 

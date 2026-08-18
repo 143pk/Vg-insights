@@ -95,6 +95,19 @@ export function renderHeader(
             <kbd class="ml-1 px-1.5 py-0.5 text-[10px] font-mono text-slate-400 dark:text-slate-500 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded">⌘K</kbd>
           </button>
 
+          <!-- Install Mobile/Android App Button -->
+          <button
+            id="btn-header-install-app"
+            type="button"
+            class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-blue-200 dark:border-blue-900/60 bg-blue-50/80 dark:bg-blue-950/40 hover:bg-blue-100 dark:hover:bg-blue-900/50 text-blue-700 dark:text-blue-300 transition-colors text-xs font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 shrink-0"
+            title="Install VG Insights App on Android / Desktop"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blue-600 dark:text-blue-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+            </svg>
+            <span class="hidden md:inline">Install App</span>
+          </button>
+
           <!-- Theme Toggle (Clean, minimal icon) -->
           <button
             id="btn-theme-toggle"
@@ -153,6 +166,16 @@ export function renderHeader(
                   </svg>
                   <span>Progress Radar</span>
                 </a>
+                <button
+                  id="btn-dropdown-install-app"
+                  type="button"
+                  class="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-medium text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950/40 transition-colors text-left"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                  </svg>
+                  <span>Install App / APK</span>
+                </button>
                 <a
                   href="#landing"
                   class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"

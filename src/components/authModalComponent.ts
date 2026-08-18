@@ -1,4 +1,5 @@
 import { AuthService } from '../services/authService';
+import { PWAInstallService } from '../services/pwaInstallService';
 import { renderBrandLogo } from './brandLogoComponent';
 
 export function renderAuthModal(): string {
@@ -474,6 +475,13 @@ export function initAuthModalEvents(onLoginSuccess: () => void): void {
       if (res.success) {
         closeModal();
         onLoginSuccess();
+
+        // Prompt student to install app / APK on their phone if not already installed
+        if (!PWAInstallService.isAppAlreadyInstalled()) {
+          setTimeout(() => {
+            PWAInstallService.openInstallModal();
+          }, 600);
+        }
       } else {
         if (otpError) {
           otpError.textContent = res.message || 'Invalid verification code. Please check and try again.';

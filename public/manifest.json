@@ -1,11 +1,17 @@
 {
-  "name": "VG Insights – NEET UG Notes & Practice",
+  "id": "/",
+  "name": "VG Insights – NEET UG Preparation Platform",
   "short_name": "VG Insights",
-  "description": "VG Insights is a NEET UG preparation platform with Class 11 & 12 notes, chapter-wise topics, PYQs, practice questions, detailed solutions and NEET study resources.",
-  "start_url": "https://vginsights.in/",
+  "description": "VG Insights is a NEET UG preparation platform with Class 11 & 12 NCERT notes, chapter tests, PYQs, full mock tests, and AI weakness diagnosis.",
+  "start_url": "/?source=pwa",
+  "scope": "/",
   "display": "standalone",
-  "background_color": "#0f172a",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "orientation": "portrait-primary",
+  "background_color": "#0b1120",
   "theme_color": "#2563eb",
+  "categories": ["education", "medical", "books"],
+  "prefer_related_applications": false,
   "icons": [
     {
       "src": "/favicon-32x32.png",
@@ -33,6 +39,26 @@
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Weekly Mock Test",
+      "short_name": "Mock Test",
+      "description": "Take 720-mark NTA pattern full syllabus mock test",
+      "url": "/#weekly-mock"
+    },
+    {
+      "name": "AI Weakness Doctor",
+      "short_name": "AI Doctor",
+      "description": "Diagnose weak NEET UG topics and practice custom questions",
+      "url": "/#weakness-doctor"
+    },
+    {
+      "name": "Mistake Book",
+      "short_name": "Mistakes",
+      "description": "Review and master bookmarked errors and incorrect MCQs",
+      "url": "/#mistake-book"
     }
   ]
 }
