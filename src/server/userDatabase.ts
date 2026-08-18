@@ -82,7 +82,7 @@ export class UserDatabase {
     return usersCache.has(cleanEmail);
   }
 
-  public static createUser(email: string, name: string, targetYear: number = 2026): UserRecord {
+  public static createUser(email: string, name: string, targetYear: number = 2027): UserRecord {
     this.init();
     const cleanEmail = email.trim().toLowerCase();
     const cleanName = name.trim().replace(/\s+/g, ' ');

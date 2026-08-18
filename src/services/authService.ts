@@ -72,7 +72,7 @@ export class AuthService {
             id: data.user.id || `usr_${Date.now().toString(36)}`,
             email: data.user.email,
             name: data.user.name,
-            targetYear: data.user.targetYear || 2026,
+            targetYear: data.user.targetYear || 2027,
             loggedInAt: Date.now(),
             isEmailVerified: true,
           });
@@ -281,7 +281,7 @@ export class AuthService {
             id: data.user.id || `usr_${Date.now().toString(36)}`,
             email: data.user.email,
             name: data.user.name,
-            targetYear: data.user.targetYear || 2026,
+            targetYear: data.user.targetYear || 2027,
             loggedInAt: Date.now(),
             isEmailVerified: true,
           };
@@ -341,7 +341,7 @@ export class AuthService {
       id: existing?.id || `usr_${Date.now().toString(36)}`,
       email: cleanEmail,
       name: finalName,
-      targetYear: existing?.targetYear || 2026,
+      targetYear: existing?.targetYear || 2027,
       loggedInAt: Date.now(),
       isEmailVerified: true,
     };

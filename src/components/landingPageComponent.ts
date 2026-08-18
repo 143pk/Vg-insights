@@ -247,7 +247,7 @@ export function renderLandingPage(): string {
                   <span>https://vginsights.in/app</span>
                 </div>
                 <div class="flex items-center gap-2 text-xs font-semibold text-slate-400">
-                  <span class="hidden sm:inline text-blue-400">NEET UG 2026 Batch</span>
+                  <span class="hidden sm:inline text-blue-400">NEET UG 2027 / 2028 Batch</span>
                   <span class="px-2 py-0.5 rounded bg-blue-900/60 text-blue-300 text-[10px] font-bold">NTA Pattern</span>
                 </div>
               </div>
@@ -1030,7 +1030,7 @@ export function renderLandingPage(): string {
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 reveal-on-scroll">
           
           <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950 border border-blue-200 dark:border-blue-800 text-blue-700 dark:text-blue-300 text-xs font-bold uppercase tracking-wider">
-            <span>GET READY FOR NEET UG 2026</span>
+            <span>GET READY FOR NEET UG 2027</span>
           </span>
 
           <h2 class="font-display text-4xl sm:text-6xl lg:text-7xl font-extrabold text-[#0F172A] dark:text-white tracking-tight leading-[1.08]">

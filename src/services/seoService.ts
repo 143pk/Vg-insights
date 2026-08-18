@@ -10,19 +10,19 @@ export class SEOService {
    * based on the active route state.
    */
   public static updateMetaForRoute(route: RouteState): void {
-    let title = `${this.SITE_NAME} – NEET UG 2026 Preparation, Chapterwise PYQs & 720 Mock Tests`;
+    let title = `${this.SITE_NAME} – NEET UG 2027 Preparation, Chapterwise PYQs & 720 Mock Tests`;
     let description =
-      'Master NEET UG 2026 with VG Insights. Access 10+ years chapterwise PYQs, weekly 720-mark simulated mock tests, NCERT formula revision sheets, and AI-powered weakness diagnosis.';
+      'Master NEET UG 2027 with VG Insights. Access 10+ years chapterwise PYQs, weekly 720-mark simulated mock tests, NCERT formula revision sheets, and AI-powered weakness diagnosis.';
     let keywords =
-      'NEET UG 2026, NEET PYQs chapterwise, NEET Physics formula sheet, NEET Chemistry revision notes, NEET Biology NCERT questions, NEET mock test 720, NEET test series free, AI weakness doctor NEET, VG Insights';
+      'NEET UG 2027, NEET 2027 preparation, NEET 2028, NEET PYQs chapterwise, NEET Physics formula sheet, NEET Chemistry revision notes, NEET Biology NCERT questions, NEET mock test 720, NEET test series free, AI weakness doctor NEET, VG Insights';
     let canonicalUrl = `${this.BASE_URL}/`;
     let structuredData: any = null;
 
     switch (route.type) {
       case 'landing':
-        title = `VG Insights – NEET UG 2026 Preparation, Chapterwise PYQs & 720 Mock Tests`;
+        title = `VG Insights – NEET UG 2027 Preparation, Chapterwise PYQs & 720 Mock Tests`;
         description =
-          'Master NEET UG 2026 with VG Insights. Access 10+ years chapterwise PYQs, weekly 720-mark simulated mock tests, NCERT formula revision sheets, and AI-powered weakness diagnosis.';
+          'Master NEET UG 2027 with VG Insights. Access 10+ years chapterwise PYQs, weekly 720-mark simulated mock tests, NCERT formula revision sheets, and AI-powered weakness diagnosis.';
         canonicalUrl = `${this.BASE_URL}/`;
         break;
 
@@ -36,7 +36,7 @@ export class SEOService {
       case 'subject': {
         const sub = route.subjectId ? SUBJECTS[route.subjectId] : null;
         const subTitle = sub ? sub.title : 'Subject Hub';
-        title = `NEET UG ${subTitle} 2026 – Chapterwise Notes, PYQs & Formulas | ${this.SITE_NAME}`;
+        title = `NEET UG ${subTitle} 2027 – Chapterwise Notes, PYQs & Formulas | ${this.SITE_NAME}`;
         description = `Comprehensive NCERT-based syllabus, high-yield weightage chapters, formula sheets, and past year questions for NEET UG ${subTitle}.`;
         keywords = `NEET ${subTitle}, NEET UG ${subTitle} notes, ${subTitle} PYQs NEET, ${subTitle} formula sheet, VG Insights`;
         canonicalUrl = `${this.BASE_URL}/#subject/${route.subjectId || ''}`;
@@ -113,7 +113,7 @@ export class SEOService {
         title = `Free NEET 720 Full Mock Test (NTA Pattern Simulation) | ${this.SITE_NAME}`;
         description =
           'Attempt 720-mark full syllabus NEET UG mock tests under realistic 3 hour 20 minute exam timer with negative marking (+4 / -1) and instant rank prediction.';
-        keywords = 'NEET 720 mock test free, NEET mock test online, NTA NEET pattern mock test, NEET test series 2026, VG Insights';
+        keywords = 'NEET 720 mock test free, NEET mock test online, NTA NEET pattern mock test, NEET test series 2027, VG Insights';
         canonicalUrl = `${this.BASE_URL}/#weekly-mock`;
 
         structuredData = {
@@ -156,10 +156,10 @@ export class SEOService {
         break;
 
       case 'chapters':
-        title = `NEET UG 2026 Complete Chapter Directory & Weightage Guide | ${this.SITE_NAME}`;
+        title = `NEET UG 2027 Complete Chapter Directory & Weightage Guide | ${this.SITE_NAME}`;
         description =
           'Explore all 97 chapters across Physics, Chemistry, Botany, and Zoology with 10-year question frequency analysis and NCERT alignment.';
-        keywords = 'NEET chapter weightage, NEET syllabus 2026, NEET chapterwise question distribution, VG Insights';
+        keywords = 'NEET chapter weightage, NEET syllabus 2027, NEET chapterwise question distribution, VG Insights';
         canonicalUrl = `${this.BASE_URL}/#chapters`;
         break;
 
