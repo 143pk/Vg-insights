@@ -107,6 +107,79 @@
 
 .katex {
   font-size: 1.12em;
+  color: inherit;
+}
+
+/* ==================================================
+   THEME-AWARE KATEX MATHEMATICAL FORMULA CONTRAST
+   High-contrast #F8FAFC formulas in dark mode and dark cards
+   ================================================== */
+.dark .katex,
+.dark .katex-html,
+.dark .katex-display,
+.dark .katex-render-target,
+.dark .katex .base,
+.dark .katex .strut,
+.dark .katex .mord,
+.dark .katex .mbin,
+.dark .katex .mrel,
+.dark .katex .mopen,
+.dark .katex .mclose,
+.dark .katex .mpunct,
+.dark .katex .minner,
+.dark .katex .mord.text,
+.dark .katex .text,
+.dark .katex .msupsub,
+.dark .katex .vlist-t,
+.dark .katex .vlist-r,
+.dark .katex .vlist,
+.dark .katex .sizing,
+.dark .katex .fontsize-ensurer,
+.dark .katex .mop {
+  color: #F8FAFC !important;
+}
+
+.dark .katex .frac-line,
+.dark .katex .sqrt-line,
+.dark .katex .stretchy {
+  border-color: #F8FAFC !important;
+  border-bottom-color: #F8FAFC !important;
+  border-top-color: #F8FAFC !important;
+}
+
+.dark .katex svg,
+.dark .katex svg path,
+.dark .katex svg line {
+  fill: #F8FAFC !important;
+  stroke: #F8FAFC !important;
+}
+
+/* Ensure math formulas inside dark card elements always have bright contrast */
+.dark-formula-target,
+.dark-formula-target .katex,
+.dark-formula-target .katex-html,
+.dark-formula-target .katex-display,
+.dark-formula-target .katex .mord,
+.dark-formula-target .katex .mbin,
+.dark-formula-target .katex .mrel,
+.dark-formula-target .katex .mopen,
+.dark-formula-target .katex .mclose,
+.dark-formula-target .katex .mpunct,
+.dark-formula-target .katex .minner,
+.dark-formula-target .katex .text,
+.dark-formula-target .katex .mord.text {
+  color: #F8FAFC !important;
+}
+
+.dark-formula-target .katex .frac-line,
+.dark-formula-target .katex .sqrt-line {
+  border-bottom-color: #F8FAFC !important;
+}
+
+.dark-formula-target .katex svg path,
+.dark-formula-target .katex svg line {
+  fill: #F8FAFC !important;
+  stroke: #F8FAFC !important;
 }
 
 /* Hero Entrance & Parallax Animation States */
@@ -231,7 +304,14 @@ body {
   color: #0F172A;
 }
 
-/* Crisp White Academic Card */
+html.dark,
+.dark body,
+html.dark body {
+  background-color: #0B0F19;
+  color: #F8FAFC;
+}
+
+/* Crisp Dark & Light Mode Academic Card */
 .academic-card {
   background-color: #FFFFFF;
   border: 1px solid #E2E8F0;
@@ -249,12 +329,50 @@ body {
 .dark .academic-card {
   background-color: #0F172A;
   border-color: #1E293B;
-  box-shadow: none;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
 }
 
 .dark .academic-card:hover {
   border-color: #334155;
   transform: translateY(-2px);
+}
+
+/* Custom dark mode scrollbar */
+.dark ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #0B0F19;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Dark mode select options and input contrast */
+.dark select,
+.dark select option {
+  background-color: #0F172A;
+  color: #F8FAFC;
+}
+
+.dark input[type="text"],
+.dark input[type="search"],
+.dark textarea {
+  background-color: #0F172A;
+  color: #F8FAFC;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #64748B;
 }
 
 /* ==================================================

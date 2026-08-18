@@ -43,6 +43,7 @@ import { renderProgressModal } from './components/progressModalComponent';
 import { renderLandingPage, initLandingPageEvents } from './components/landingPageComponent';
 import { renderAuthModal, initAuthModalEvents } from './components/authModalComponent';
 import { renderPwaInstallModal, initPwaInstallModal } from './components/pwaInstallModalComponent';
+import { renderMobileBottomNav } from './components/mobileNavComponent';
 import { AuthService } from './services/authService';
 import { PWAInstallService } from './services/pwaInstallService';
 
@@ -271,7 +272,7 @@ class App {
         ${renderPwaInstallModal()}
       </div>
 
-      <footer class="border-t border-slate-200/80 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 py-6 text-center text-xs text-slate-500 dark:text-slate-400">
+      <footer class="border-t border-slate-200/80 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 py-6 text-center text-xs text-slate-500 dark:text-slate-400 pb-20 lg:pb-6">
         <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div class="font-semibold text-slate-700 dark:text-slate-300">
             VG Insights — Built for NEET UG Aspirants
@@ -286,6 +287,9 @@ class App {
           </div>
         </div>
       </footer>
+
+      <!-- Mobile Bottom Navigation Bar -->
+      <div id="mobile-nav-container"></div>
     `;
 
     this.attachHeaderEvents();
@@ -300,6 +304,20 @@ class App {
   private renderMainContent(): void {
     const routeState: RouteState = RouterService.parseHash(window.location.hash);
     const currentHash = window.location.hash || '#home';
+
+    // Update Mobile Bottom Navigation
+    const mobileNavContainer = document.getElementById('mobile-nav-container');
+    if (mobileNavContainer) {
+      if (routeState.type === 'weekly-mock-test' || routeState.type === 'landing' || routeState.type === 'login') {
+        mobileNavContainer.innerHTML = '';
+      } else {
+        mobileNavContainer.innerHTML = renderMobileBottomNav(currentHash);
+        const searchBtn = document.getElementById('btn-mobile-nav-search');
+        if (searchBtn) {
+          searchBtn.onclick = () => this.openModal('modal-search');
+        }
+      }
+    }
 
     // Update Header buttons state
     const headerContainer = document.getElementById('header-container');
