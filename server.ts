@@ -20,6 +20,12 @@ async function startServer() {
     res.json({ status: 'ok', service: 'VG NEET AI Weakness Doctor' });
   });
 
+  // Google AdSense ads.txt verification endpoint
+  app.get('/ads.txt', (req, res) => {
+    res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+    res.send('google.com, pub-8902157215045513, DIRECT, f08c47fec0942fa0\n');
+  });
+
   // Secure Gmail SMTP Email Endpoints
   app.post('/api/send-email', (req, res) => sendEmailHandler(req, res));
   app.get('/api/verify-smtp', (req, res) => verifySmtpHandler(req, res));
