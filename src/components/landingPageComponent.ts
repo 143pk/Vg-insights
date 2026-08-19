@@ -1069,6 +1069,61 @@ export function renderLandingPage(): string {
       </section>
 
       <!-- ==========================================
+           FOUNDERS & LEADERSHIP SECTION (SHORT & CONCISE)
+           ========================================== -->
+      <section id="founders" class="py-16 sm:py-20 bg-slate-50/70 dark:bg-[#0c1427]/60 border-t border-slate-200/80 dark:border-slate-800/80">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 reveal-on-scroll">
+          
+          <div class="text-center space-y-3">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-100/70 dark:bg-blue-950/70 border border-blue-200 dark:border-blue-800 text-blue-700 dark:text-blue-300 text-[11px] font-bold uppercase tracking-wider">
+              <span>LEADERSHIP & VISION</span>
+            </span>
+            <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+              Meet the Founders
+            </h2>
+            <p class="text-sm text-slate-600 dark:text-slate-400 max-w-lg mx-auto">
+              Built with medical precision and intelligent technology to transform how NEET UG aspirants prepare.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            
+            <!-- Founder: Dr. Prajwal Kabadi, MBBS -->
+            <div class="bg-white dark:bg-slate-900/90 rounded-2xl border border-slate-200/90 dark:border-slate-800 p-6 sm:p-7 shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center space-y-2.5">
+              <div class="space-y-1">
+                <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white">
+                  Dr. Prajwal Kabadi
+                </h3>
+                <p class="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">
+                  Founder • MBBS
+                </p>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed pt-1">
+                Medical doctor dedicated to simplifying high-yield NCERT concepts, clinical relevance, and high-scoring exam strategy for NEET UG aspirants.
+              </p>
+            </div>
+
+            <!-- Co-Founder: Mr. Amit Bangare -->
+            <div class="bg-white dark:bg-slate-900/90 rounded-2xl border border-slate-200/90 dark:border-slate-800 p-6 sm:p-7 shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center space-y-2.5">
+              <div class="space-y-1">
+                <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white">
+                  Mr. Amit Bangare
+                </h3>
+                <p class="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider">
+                  Co-Founder & Tech Lead
+                </p>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed pt-1">
+                Product architect & technologist focused on AI-driven weakness diagnosis, high-speed mock test engines, and data-backed student analytics.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==========================================
            SECTION 12: PREMIUM EDITORIAL FOOTER
            ========================================== -->
       <footer class="bg-[#FFFFFF] dark:bg-[#080D1A] border-t border-slate-200/80 dark:border-slate-800 py-12 text-slate-600 dark:text-slate-400 text-xs">
@@ -1082,6 +1137,9 @@ export function renderLandingPage(): string {
               </div>
               <p class="text-xs text-slate-500 dark:text-slate-400 max-w-sm leading-relaxed">
                 Master NEET. One Concept at a Time. The comprehensive digital library, PYQ explorer, and diagnostic AI workspace for NEET UG aspirants.
+              </p>
+              <p class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">
+                Founder: <span class="text-slate-700 dark:text-slate-300 font-semibold">Dr. Prajwal Kabadi, MBBS</span> • Co-Founder: <span class="text-slate-700 dark:text-slate-300 font-semibold">Mr. Amit Bangare</span>
               </p>
               <p class="text-[11px] text-slate-400 dark:text-slate-500">
                 Official Domain: <a href="https://vginsights.in/" class="text-blue-600 dark:text-blue-400 hover:underline">vginsights.in</a>
