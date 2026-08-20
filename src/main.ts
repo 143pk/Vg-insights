@@ -933,6 +933,23 @@ class App {
     };
     document.getElementById('btn-retake-test-result')?.addEventListener('click', onRetake);
     document.getElementById('btn-bottom-retake-test')?.addEventListener('click', onRetake);
+
+    // Copy scorecard share link
+    document.getElementById('btn-copy-score-share')?.addEventListener('click', (e) => {
+      const target = e.currentTarget as HTMLElement;
+      const shareText = decodeURIComponent(target.getAttribute('data-share-text') || '');
+      const label = document.getElementById('copy-score-text');
+      if (navigator.clipboard && shareText) {
+        navigator.clipboard.writeText(shareText).then(() => {
+          if (label) {
+            label.textContent = 'Copied! ✓';
+            setTimeout(() => {
+              label.textContent = 'Copy Link';
+            }, 2500);
+          }
+        });
+      }
+    });
   }
 
   // ==========================================

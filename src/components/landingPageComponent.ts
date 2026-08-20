@@ -1069,53 +1069,122 @@ export function renderLandingPage(): string {
       </section>
 
       <!-- ==========================================
-           FOUNDERS & LEADERSHIP SECTION (SHORT & CONCISE)
+           COMMUNITY & SOCIAL SHARE BAR (VIRAL ORGANIC GROWTH)
            ========================================== -->
-      <section id="founders" class="py-16 sm:py-20 bg-slate-50/70 dark:bg-[#0c1427]/60 border-t border-slate-200/80 dark:border-slate-800/80">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 reveal-on-scroll">
+      <section class="py-8 bg-blue-600 dark:bg-blue-950/80 border-y border-blue-500/30 text-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+          <div class="space-y-1">
+            <h3 class="font-bold text-base sm:text-lg flex items-center justify-center sm:justify-start gap-2">
+              <span>🚀</span> Share VG Insights with Your NEET Study Group
+            </h3>
+            <p class="text-xs text-blue-100 dark:text-blue-200">
+              Help your batchmates access free chapterwise PYQs, NCERT formula sheets, and 720-mark full mock tests.
+            </p>
+          </div>
+          <div class="flex items-center gap-2.5 shrink-0 flex-wrap justify-center">
+            <a
+              href="https://api.whatsapp.com/send?text=${encodeURIComponent('🩺 Free NEET UG Preparation Platform: Chapterwise 10+ Years PYQs, 720-Mark Weekly Mocks, and AI Weakness Doctor on VG Insights: https://vginsights.in/')}"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-4 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs flex items-center gap-1.5 transition-all shadow-md active:scale-95"
+            >
+              <span>💬</span> WhatsApp Batchmates
+            </a>
+            <a
+              href="https://t.me/share/url?url=${encodeURIComponent('https://vginsights.in/')}&text=${encodeURIComponent('🩺 Free NEET UG Preparation: 10+ Years PYQs, 720 Mocks & AI Weakness Doctor on VG Insights:')}"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-4 py-2.5 rounded-xl bg-sky-500 hover:bg-sky-600 text-white font-bold text-xs flex items-center gap-1.5 transition-all shadow-md active:scale-95"
+            >
+              <span>✈️</span> Telegram Channel
+            </a>
+            <button
+              type="button"
+              id="btn-landing-copy-link"
+              class="px-4 py-2.5 rounded-xl bg-white/20 hover:bg-white/30 text-white font-bold text-xs flex items-center gap-1.5 transition-all active:scale-95"
+            >
+              <span>📋</span> <span id="landing-copy-text">Copy Link</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           FOUNDERS & LEADERSHIP SECTION (SOPHISTICATED & PRESTIGIOUS)
+           ========================================== -->
+      <section id="founders" class="py-16 sm:py-24 bg-gradient-to-b from-slate-50/80 via-white to-slate-50/80 dark:from-[#0c1427]/80 dark:via-[#090f1e] dark:to-[#0c1427]/80 border-t border-slate-200/80 dark:border-slate-800/80">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 reveal-on-scroll">
           
           <div class="text-center space-y-3">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-100/70 dark:bg-blue-950/70 border border-blue-200 dark:border-blue-800 text-blue-700 dark:text-blue-300 text-[11px] font-bold uppercase tracking-wider">
-              <span>LEADERSHIP & VISION</span>
-            </span>
-            <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-[11px] font-bold uppercase tracking-widest shadow-sm">
+              <span>✦</span> ACADEMIC & TECHNICAL LEADERSHIP
+            </div>
+            <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
               Meet the Founders
             </h2>
-            <p class="text-sm text-slate-600 dark:text-slate-400 max-w-lg mx-auto">
-              Built with medical precision and intelligent technology to transform how NEET UG aspirants prepare.
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-xl mx-auto leading-relaxed">
+              Crafted at the intersection of medical clinical expertise and high-performance educational engineering to empower future doctors.
             </p>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 max-w-3xl mx-auto">
             
             <!-- Founder: Dr. Prajwal Kabadi, MBBS -->
-            <div class="bg-white dark:bg-slate-900/90 rounded-2xl border border-slate-200/90 dark:border-slate-800 p-6 sm:p-7 shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center space-y-2.5">
-              <div class="space-y-1">
-                <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white">
+            <div class="relative group bg-white dark:bg-slate-900/95 rounded-3xl border border-slate-200/90 dark:border-slate-800/90 p-7 sm:p-8 shadow-sm hover:shadow-xl hover:border-blue-500/40 dark:hover:border-blue-500/40 transition-all duration-300 flex flex-col items-center text-center space-y-4">
+              <div class="absolute -top-3 px-3 py-0.5 rounded-full bg-blue-50 dark:bg-blue-950/80 border border-blue-200 dark:border-blue-800 text-[10px] font-bold text-blue-700 dark:text-blue-300 tracking-wider uppercase">
+                Academic Direction
+              </div>
+              
+              <!-- Distinguished Medical Monogram Badge -->
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-600 text-white flex items-center justify-center font-bold text-xl shadow-md ring-4 ring-blue-50 dark:ring-blue-950/50">
+                🩺
+              </div>
+
+              <div class="space-y-1.5">
+                <h3 class="font-display text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">
                   Dr. Prajwal Kabadi
                 </h3>
-                <p class="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">
-                  Founder • MBBS
-                </p>
+                <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-lg bg-blue-100/70 dark:bg-blue-950/70 border border-blue-200/80 dark:border-blue-800/80 text-blue-700 dark:text-blue-300 text-xs font-bold tracking-wide">
+                  <span>Founder • MBBS</span>
+                </div>
               </div>
-              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed pt-1">
-                Medical doctor dedicated to simplifying high-yield NCERT concepts, clinical relevance, and high-scoring exam strategy for NEET UG aspirants.
+
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed max-w-xs">
+                Physician & Academic Mentor dedicated to high-yield NCERT pedagogy, clinical biology frameworks, and structured high-scoring exam strategy for NEET UG aspirants.
               </p>
+
+              <div class="pt-2 border-t border-slate-100 dark:border-slate-800/60 w-full flex items-center justify-center gap-2 text-[11px] text-slate-500 dark:text-slate-400 font-medium">
+                <span class="text-emerald-500">✓</span> Verified Medical Mentor
+              </div>
             </div>
 
             <!-- Co-Founder: Mr. Amit Bangare -->
-            <div class="bg-white dark:bg-slate-900/90 rounded-2xl border border-slate-200/90 dark:border-slate-800 p-6 sm:p-7 shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center space-y-2.5">
-              <div class="space-y-1">
-                <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white">
+            <div class="relative group bg-white dark:bg-slate-900/95 rounded-3xl border border-slate-200/90 dark:border-slate-800/90 p-7 sm:p-8 shadow-sm hover:shadow-xl hover:border-indigo-500/40 dark:hover:border-indigo-500/40 transition-all duration-300 flex flex-col items-center text-center space-y-4">
+              <div class="absolute -top-3 px-3 py-0.5 rounded-full bg-indigo-50 dark:bg-indigo-950/80 border border-indigo-200 dark:border-indigo-800 text-[10px] font-bold text-indigo-700 dark:text-indigo-300 tracking-wider uppercase">
+                Technical Architecture
+              </div>
+
+              <!-- Distinguished Tech Monogram Badge -->
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-indigo-600 to-slate-800 text-white flex items-center justify-center font-bold text-xl shadow-md ring-4 ring-indigo-50 dark:ring-indigo-950/50">
+                ⚡
+              </div>
+
+              <div class="space-y-1.5">
+                <h3 class="font-display text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">
                   Mr. Amit Bangare
                 </h3>
-                <p class="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider">
-                  Co-Founder & Tech Lead
-                </p>
+                <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-lg bg-indigo-100/70 dark:bg-indigo-950/70 border border-indigo-200/80 dark:border-indigo-800/80 text-indigo-700 dark:text-indigo-300 text-xs font-bold tracking-wide">
+                  <span>Co-Founder & Tech Lead</span>
+                </div>
               </div>
-              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed pt-1">
-                Product architect & technologist focused on AI-driven weakness diagnosis, high-speed mock test engines, and data-backed student analytics.
+
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed max-w-xs">
+                Product architect and technologist focused on AI-driven weakness diagnosis, high-speed test engines, and data-backed performance analytics for competitive medical aspirants.
               </p>
+
+              <div class="pt-2 border-t border-slate-100 dark:border-slate-800/60 w-full flex items-center justify-center gap-2 text-[11px] text-slate-500 dark:text-slate-400 font-medium">
+                <span class="text-emerald-500">✓</span> Lead Systems Architect
+              </div>
             </div>
 
           </div>
@@ -1227,6 +1296,25 @@ export function initLandingPageEvents(onOpenAuthModal: () => void): void {
       });
     }
   });
+
+  // Community Share Copy Link
+  const landingCopyBtn = document.getElementById('btn-landing-copy-link');
+  if (landingCopyBtn) {
+    landingCopyBtn.addEventListener('click', () => {
+      const shareUrl = 'https://vginsights.in/';
+      const label = document.getElementById('landing-copy-text');
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(shareUrl).then(() => {
+          if (label) {
+            label.textContent = 'Copied! ✓';
+            setTimeout(() => {
+              label.textContent = 'Copy Link';
+            }, 2500);
+          }
+        });
+      }
+    });
+  }
 
   // 2. Mobile Menu Toggle
   const mobileToggle = document.getElementById('btn-mobile-menu-toggle');

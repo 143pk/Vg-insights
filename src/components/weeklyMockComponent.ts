@@ -875,6 +875,43 @@ export class WeeklyMockUI {
             </div>
           </div>
 
+          <!-- Viral Social Scorecard Sharing Bar -->
+          <div class="p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div class="flex items-center gap-2.5">
+              <span class="text-xl">🚀</span>
+              <div>
+                <p class="text-xs font-bold text-white">Share Your NEET Score & Challenge Friends</p>
+                <p class="text-[11px] text-slate-300">Invite batchmates on WhatsApp & Telegram to compare scores.</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 w-full sm:w-auto justify-end">
+              <a
+                href="https://api.whatsapp.com/send?text=${encodeURIComponent(`🎯 I just scored ${result.totalScore}/720 (${result.accuracyPercentage}% accuracy) on VG Insights NEET Full Mock Test! 🩺 Check your All-India readiness free here: https://vginsights.in/#weekly-mock`)}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-3.5 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs flex items-center gap-1.5 transition-all shadow-sm"
+              >
+                <span>💬</span> WhatsApp
+              </a>
+              <a
+                href="https://t.me/share/url?url=${encodeURIComponent('https://vginsights.in/#weekly-mock')}&text=${encodeURIComponent(`🎯 I just scored ${result.totalScore}/720 (${result.accuracyPercentage}% accuracy) on VG Insights NEET Full Mock Test! Check your All-India readiness free:`)}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-3.5 py-2 rounded-xl bg-sky-500 hover:bg-sky-600 text-white font-bold text-xs flex items-center gap-1.5 transition-all shadow-sm"
+              >
+                <span>✈️</span> Telegram
+              </a>
+              <button
+                type="button"
+                id="btn-copy-score-share"
+                data-share-text="${encodeURIComponent(`🎯 I scored ${result.totalScore}/720 (${result.accuracyPercentage}% accuracy) on VG Insights NEET Full Mock Test! Test your preparation free: https://vginsights.in/#weekly-mock`)}"
+                class="px-3.5 py-2 rounded-xl bg-white/20 hover:bg-white/30 text-white font-bold text-xs flex items-center gap-1.5 transition-all"
+              >
+                <span>📋</span> <span id="copy-score-text">Copy Link</span>
+              </button>
+            </div>
+          </div>
+
           <!-- Subject Marks Progress Bars -->
           <div class="space-y-3 pt-2">
             <h4 class="text-xs font-bold uppercase tracking-wider text-slate-300">Subject Performance</h4>

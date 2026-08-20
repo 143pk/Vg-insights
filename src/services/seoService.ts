@@ -12,17 +12,19 @@ export class SEOService {
   public static updateMetaForRoute(route: RouteState): void {
     let title = `${this.SITE_NAME} – NEET UG 2027 Preparation, Chapterwise PYQs & 720 Mock Tests`;
     let description =
-      'Master NEET UG 2027 with VG Insights. Access 10+ years chapterwise PYQs, weekly 720-mark simulated mock tests, NCERT formula revision sheets, and AI-powered weakness diagnosis.';
+      'Master NEET UG 2027 with VG Insights, founded by Dr. Prajwal Kabadi (MBBS) and Mr. Amit Bangare. Access 10+ years chapterwise PYQs, weekly 720 mock tests, and AI weakness diagnosis.';
     let keywords =
-      'NEET UG 2027, NEET 2027 preparation, NEET 2028, NEET PYQs chapterwise, NEET Physics formula sheet, NEET Chemistry revision notes, NEET Biology NCERT questions, NEET mock test 720, NEET test series free, AI weakness doctor NEET, VG Insights';
+      'NEET UG 2027, Dr. Prajwal Kabadi, Prajwal Kabadi MBBS, Amit Bangare, VG Insights, NEET 2027 preparation, NEET PYQs chapterwise, NEET Physics formula sheet, NEET Biology NCERT questions, NEET mock test 720, AI weakness doctor NEET';
     let canonicalUrl = `${this.BASE_URL}/`;
     let structuredData: any = null;
 
     switch (route.type) {
       case 'landing':
-        title = `VG Insights – NEET UG 2027 Preparation, Chapterwise PYQs & 720 Mock Tests`;
+        title = `VG Insights – NEET UG 2027 Preparation | Founded by Dr. Prajwal Kabadi (MBBS)`;
         description =
-          'Master NEET UG 2027 with VG Insights. Access 10+ years chapterwise PYQs, weekly 720-mark simulated mock tests, NCERT formula revision sheets, and AI-powered weakness diagnosis.';
+          'Master NEET UG 2027 with VG Insights, led by Dr. Prajwal Kabadi (MBBS) & Amit Bangare. Access 10+ years chapterwise PYQs, weekly 720-mark mock tests, and AI-powered weakness diagnosis.';
+        keywords =
+          'Dr. Prajwal Kabadi, Prajwal Kabadi, Prajwal Kabadi MBBS, Dr Prajwal Kabadi NEET, Amit Bangare, VG Insights, NEET UG 2027, NEET 2028, NEET PYQs, NEET mock test 720';
         canonicalUrl = `${this.BASE_URL}/`;
         break;
 
