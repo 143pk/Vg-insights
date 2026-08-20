@@ -2,4 +2,9 @@
 User-agent: *
 Allow: /
 
+# Google AdSense Crawler
+User-agent: Mediapartners-Google
+Allow: /
+Allow: /ads.txt
+
 Sitemap: https://vginsights.in/sitemap.xml

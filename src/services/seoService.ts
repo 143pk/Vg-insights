@@ -1,5 +1,6 @@
 import { RouteState } from './routerService';
 import { CHAPTERS, TOPICS, SUBJECTS } from '../data/neetData';
+import { TOPIC_DETAILS } from '../data/topicDetails';
 
 export class SEOService {
   private static readonly BASE_URL = 'https://vginsights.in';
@@ -82,21 +83,48 @@ export class SEOService {
         keywords = `${topTitle} NEET, ${topTitle} formula, ${topTitle} questions, ${chName} ${topTitle}, VG Insights`;
         canonicalUrl = `${this.BASE_URL}/#topic/${route.topicId || ''}`;
 
+        // Passage Indexing Enhancement: Extract specific formula entities for Schema FAQ & Graph
+        const topicDetail = route.topicId ? (TOPIC_DETAILS[route.topicId] || (TOPIC_DETAILS as any)[`phys-${route.topicId}`] || (TOPIC_DETAILS as any)[`chem-${route.topicId}`] || (TOPIC_DETAILS as any)[`bio-${route.topicId}`]) : null;
+        const formulaeList = (topicDetail?.formulae || []).slice(0, 4);
+
+        const passageFaqs = formulaeList.map((f: any) => {
+          const fTitle = typeof f === 'string' ? 'Key Formula' : (f.title || f.formulaName || 'Formula');
+          const fExp = typeof f === 'string' ? f : (f.formula || f.expression || '');
+          const fMeaning = typeof f === 'string' ? '' : (f.meaning || f.explanation || f.description || '');
+          return {
+            '@type': 'Question',
+            'name': `What is the formula and meaning for ${fTitle} in ${topTitle}?`,
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': `Formula: ${fExp}. ${fMeaning ? `Definition: ${fMeaning}.` : ''} Essential for NEET UG ${chName} preparation on VG Insights.`
+            }
+          };
+        });
+
         structuredData = {
           '@context': 'https://schema.org',
-          '@type': 'Article',
-          'headline': `${topTitle} – High-Yield NEET UG Revision Notes`,
-          'description': description,
-          'author': {
-            '@type': 'Organization',
-            'name': `${this.SITE_NAME} Academic Team`
-          },
-          'publisher': {
-            '@type': 'EducationalOrganization',
-            'name': this.SITE_NAME,
-            'url': this.BASE_URL
-          },
-          'mainEntityOfPage': canonicalUrl
+          '@graph': [
+            {
+              '@type': 'Article',
+              'headline': `${topTitle} – High-Yield NEET UG Revision Notes & Formulas`,
+              'description': description,
+              'author': {
+                '@type': 'Person',
+                'name': 'Dr. Prajwal Kabadi, MBBS',
+                'jobTitle': 'Founder & Chief Academic Mentor'
+              },
+              'publisher': {
+                '@type': 'EducationalOrganization',
+                'name': this.SITE_NAME,
+                'url': this.BASE_URL
+              },
+              'mainEntityOfPage': canonicalUrl
+            },
+            ...(passageFaqs.length > 0 ? [{
+              '@type': 'FAQPage',
+              'mainEntity': passageFaqs
+            }] : [])
+          ]
         };
         break;
       }
@@ -173,6 +201,7 @@ export class SEOService {
     document.title = title;
 
     // 2. Helper to set/update <meta> tags
+    this.setMetaTag('name', 'google-adsense-account', 'ca-pub-8902157215045513');
     this.setMetaTag('name', 'description', description);
     this.setMetaTag('name', 'keywords', keywords);
     this.setMetaTag('property', 'og:title', title);

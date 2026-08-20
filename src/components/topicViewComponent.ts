@@ -500,41 +500,48 @@ function renderDetailedContent(detail: DetailedTopicContent, topic: any, pyqs: P
           </div>
 
           <div class="space-y-6">
-            ${validFormulae.map(f => `
-              <div class="p-5 sm:p-6 rounded-2xl bg-emerald-50/20 dark:bg-emerald-950/20 border border-emerald-500/30 space-y-3">
-                <div class="flex items-center justify-between">
-                  <h3 class="text-xs sm:text-sm font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">
-                    ${renderInlineMathHTML(f.title)}
+            ${validFormulae.map((f, idx) => {
+              const formulaSlug = `formula-${f.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') || idx}`;
+              return `
+              <div id="${formulaSlug}" class="p-5 sm:p-6 rounded-2xl bg-emerald-50/20 dark:bg-emerald-950/20 border border-emerald-500/30 space-y-3 scroll-mt-20 group relative transition-all" itemscope itemtype="https://schema.org/Question">
+                <div class="flex items-center justify-between gap-2">
+                  <h3 class="text-xs sm:text-sm font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400 flex items-center gap-1.5" itemprop="name">
+                    <span>${renderInlineMathHTML(f.title)}</span>
+                    <a href="#${formulaSlug}" class="opacity-0 group-hover:opacity-100 text-emerald-500/70 hover:text-emerald-600 transition-opacity text-xs" title="Direct Anchor Link">🔗</a>
                   </h3>
                   ${f.unit ? `<span class="px-2.5 py-1 rounded-full bg-emerald-100 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-300 font-mono text-[11px] font-bold">Unit: ${renderInlineMathHTML(f.unit)}</span>` : ''}
                 </div>
 
-                <!-- Formula Box (Centered Textbook Style) -->
-                ${renderFormulaHTML(f.formula)}
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" class="space-y-3">
+                  <!-- Formula Box (Centered Textbook Style & Direct Search Extract) -->
+                  <div class="formula-passage-target" itemprop="text">
+                    ${renderFormulaHTML(f.formula)}
+                  </div>
 
-                ${f.meaning ? `
-                  <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium">
-                    <span class="font-bold text-slate-900 dark:text-slate-100">Meaning:</span> ${renderInlineMathHTML(f.meaning)}
-                  </p>
-                ` : ''}
+                  ${f.meaning ? `
+                    <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium">
+                      <strong class="font-bold text-slate-900 dark:text-slate-100">Formula Definition / Meaning:</strong> ${renderInlineMathHTML(f.meaning)}
+                    </p>
+                  ` : ''}
 
-                ${f.symbols ? `
-                  <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-medium">
-                    <span class="font-bold text-slate-800 dark:text-slate-200">Symbols:</span> ${renderInlineMathHTML(f.symbols)}
-                  </p>
-                ` : ''}
+                  ${f.symbols ? `
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-medium">
+                      <strong class="font-bold text-slate-800 dark:text-slate-200">Where & Symbols:</strong> ${renderInlineMathHTML(f.symbols)}
+                    </p>
+                  ` : ''}
 
-                ${f.conditions ? `
-                  <p class="text-xs sm:text-sm text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/40 p-3 rounded-xl border border-amber-200 dark:border-amber-900/40">
-                    <span class="font-bold">Conditions & Assumptions:</span> ${renderInlineMathHTML(f.conditions)}
-                  </p>
-                ` : ''}
+                  ${f.conditions ? `
+                    <p class="text-xs sm:text-sm text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/40 p-3 rounded-xl border border-amber-200 dark:border-amber-900/40">
+                      <strong class="font-bold">Conditions & Assumptions:</strong> ${renderInlineMathHTML(f.conditions)}
+                    </p>
+                  ` : ''}
 
-                ${f.whenToUse ? `
-                  <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 bg-emerald-100/50 dark:bg-emerald-950/50 p-3.5 rounded-xl">
-                    <span class="font-bold">When to use in NEET:</span> ${renderInlineMathHTML(f.whenToUse)}
-                  </p>
-                ` : ''}
+                  ${f.whenToUse ? `
+                    <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 bg-emerald-100/50 dark:bg-emerald-950/50 p-3.5 rounded-xl">
+                      <strong class="font-bold">When to use in NEET:</strong> ${renderInlineMathHTML(f.whenToUse)}
+                    </p>
+                  ` : ''}
+                </div>
 
                 ${f.calculationExample ? `
                   <!-- Worked Example Box -->
@@ -559,7 +566,8 @@ function renderDetailedContent(detail: DetailedTopicContent, topic: any, pyqs: P
                   </div>
                 ` : ''}
               </div>
-            `).join('')}
+            `;
+            }).join('')}
           </div>
         </section>
       `;
