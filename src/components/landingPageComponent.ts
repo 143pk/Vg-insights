@@ -135,12 +135,6 @@ export function renderLandingPage(): string {
               ${renderBrandLogo({ size: 'hero' })}
             </div>
 
-            <!-- Top Animated Badge -->
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50/90 dark:bg-blue-950/70 border border-blue-200/90 dark:border-blue-800 text-blue-700 dark:text-blue-300 text-[11px] sm:text-xs font-bold tracking-wider uppercase shadow-xs">
-              <span class="w-2 h-2 rounded-full bg-blue-600 animate-ping"></span>
-              <span>THE SMARTER WAY TO PREPARE FOR NEET</span>
-            </div>
-
             <!-- Hero Headline -->
             <h1 class="font-display text-3xl sm:text-5xl md:text-6xl lg:text-[76px] font-extrabold tracking-tight text-[#0F172A] dark:text-white leading-[1.08]">
               Your NEET Preparation.<br />
@@ -399,18 +393,8 @@ export function renderLandingPage(): string {
           <!-- Central Ecosystem Diagram Visual -->
           <div class="relative max-w-4xl mx-auto bg-slate-50 dark:bg-slate-900/70 rounded-3xl p-5 sm:p-8 lg:p-10 border border-slate-200/90 dark:border-slate-800 shadow-sm reveal-on-scroll">
             
-            <!-- Central Hub Node -->
-            <div class="text-center my-3 sm:my-4">
-              <div class="inline-flex flex-col items-center justify-center p-4 sm:p-5 rounded-3xl bg-slate-900 text-white shadow-xl shadow-blue-500/15 border-4 border-white dark:border-slate-800">
-                <div class="mb-1">
-                  ${renderBrandLogo({ size: 'sm', isDarkOnly: true })}
-                </div>
-                <span class="text-xs text-blue-300 font-semibold mt-0.5">Central Learning Engine</span>
-              </div>
-            </div>
-
             <!-- Orbiting 8 Integrated Modules -->
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mt-6 sm:mt-8">
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
               
               <div class="bg-white dark:bg-slate-900 p-3.5 sm:p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-md transition-all text-center space-y-1.5">
                 <div class="text-xl sm:text-2xl">📚</div>
@@ -760,88 +744,6 @@ export function renderLandingPage(): string {
       </section>
 
       <!-- ==========================================
-           SECTION 7: AI WEAKNESS DOCTOR (DARK MIDNIGHT SECTION)
-           ========================================== -->
-      <section id="weakness-doctor" class="py-12 sm:py-16 lg:py-20 bg-[#0F172A] text-white relative overflow-hidden landing-dark-grid-pattern">
-        
-        <!-- Neural Ambient Glows -->
-        <div class="absolute -top-40 -left-40 w-96 h-96 bg-blue-500/15 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-rose-500/15 rounded-full blur-3xl pointer-events-none"></div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          
-          <div class="text-center max-w-3xl mx-auto space-y-2.5 sm:space-y-3 mb-8 sm:mb-10 lg:mb-12 reveal-on-scroll">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-950/80 border border-rose-800/80 text-rose-400 text-xs font-extrabold uppercase tracking-widest">
-              <span class="w-2 h-2 rounded-full bg-rose-500 animate-ping"></span>
-              <span>PATENTED DIAGNOSTIC ENGINE</span>
-            </div>
-            <h2 class="font-display text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
-              Your preparation becomes personal.
-            </h2>
-            <p class="text-sm sm:text-base lg:text-lg text-slate-400">
-              Identify what is holding you back and focus your practice where it matters.
-            </p>
-          </div>
-
-          <!-- Futuristic AI Diagnostic UI -->
-          <div class="max-w-4xl mx-auto bg-slate-900/90 backdrop-blur-xl rounded-3xl border border-slate-800 p-5 sm:p-8 shadow-2xl space-y-6 reveal-on-scroll">
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 items-center">
-              
-              <!-- State 1: Misconception Detected -->
-              <div class="p-4 sm:p-5 rounded-2xl bg-rose-950/40 border border-rose-900/60 space-y-2">
-                <div class="flex items-center justify-between text-xs">
-                  <span class="px-2 py-0.5 rounded bg-rose-900/70 text-rose-300 font-bold uppercase text-[10px]">Misconception</span>
-                  <span class="text-rose-400 font-bold">42% Accuracy</span>
-                </div>
-                <h4 class="font-display text-sm sm:text-base font-bold text-white">Electrochemistry</h4>
-                <p class="text-xs text-rose-200/80 leading-relaxed">
-                  "Recurring calculation error in standard cell EMF when applying Nernst equation log term."
-                </p>
-              </div>
-
-              <!-- State 2: AI Doctor Diagnostic Remedy -->
-              <div class="p-4 sm:p-5 rounded-2xl bg-blue-950/60 border border-blue-800/80 space-y-2 text-center">
-                <div class="w-9 h-9 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-base mx-auto shadow-md shadow-blue-500/30">
-                  ⚡
-                </div>
-                <h4 class="font-display text-xs sm:text-sm font-bold text-white">AI Weakness Doctor</h4>
-                <p class="text-xs text-blue-200 leading-relaxed">
-                  Targeted drill generated: 12 high-precision diagnostic questions with active feedback.
-                </p>
-              </div>
-
-              <!-- State 3: Post-Drill Mastery -->
-              <div class="p-4 sm:p-5 rounded-2xl bg-emerald-950/40 border border-emerald-900/60 space-y-2">
-                <div class="flex items-center justify-between text-xs">
-                  <span class="px-2 py-0.5 rounded bg-emerald-900/70 text-emerald-300 font-bold uppercase text-[10px]">Post-Drill</span>
-                  <span class="text-emerald-400 font-bold">78% Accuracy</span>
-                </div>
-                <h4 class="font-display text-sm sm:text-base font-bold text-white">Concept Mastered</h4>
-                <p class="text-xs text-emerald-200/80 leading-relaxed">
-                  +16 marks score surge projected in upcoming All-India mock test series.
-                </p>
-              </div>
-
-            </div>
-
-            <!-- Launch Button -->
-            <div class="pt-2 sm:pt-3 text-center">
-              <a
-                href="#weakness-doctor"
-                class="inline-flex items-center gap-2 px-7 py-3 sm:px-8 sm:py-3.5 rounded-2xl bg-gradient-to-r from-rose-600 to-indigo-600 hover:from-rose-500 hover:to-indigo-500 text-white text-xs sm:text-sm font-bold shadow-lg shadow-rose-600/30 active:scale-[0.98] transition-all"
-              >
-                <span>Launch Weakness Doctor</span>
-                <span>→</span>
-              </a>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-      <!-- ==========================================
            SECTION 8: ACTIVE RECALL LOOP
            ========================================== -->
       <section class="py-12 sm:py-16 lg:py-20 bg-[#FFFFFF] dark:bg-[#0B1120]">
@@ -1015,14 +917,6 @@ export function renderLandingPage(): string {
               <span>Start Learning Free</span>
               <span class="text-blue-200 text-base sm:text-lg">→</span>
             </button>
-            <a
-              href="#home"
-              id="btn-footer-guest"
-              class="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-white dark:bg-slate-800 text-slate-800 dark:text-white border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 text-sm sm:text-base font-bold shadow-xs active:scale-[0.98] transition-all flex items-center justify-center gap-2"
-            >
-              <span>Continue Without Login</span>
-              <span class="text-slate-400">⚡</span>
-            </a>
           </div>
 
           <p class="text-xs font-medium text-slate-400 pt-1">
@@ -1033,48 +927,7 @@ export function renderLandingPage(): string {
       </section>
 
       <!-- ==========================================
-           COMMUNITY & SOCIAL SHARE BAR (VIRAL ORGANIC GROWTH)
-           ========================================== -->
-      <section class="py-6 sm:py-8 bg-blue-600 dark:bg-blue-950/80 border-y border-blue-500/30 text-white">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3.5 sm:gap-4 text-center sm:text-left">
-          <div class="space-y-0.5">
-            <h3 class="font-bold text-sm sm:text-base flex items-center justify-center sm:justify-start gap-2">
-              <span>🚀</span> Share VG Insights with Your NEET Study Group
-            </h3>
-            <p class="text-xs text-blue-100 dark:text-blue-200">
-              Help your batchmates access free chapterwise PYQs, NCERT formula sheets, and 720-mark full mock tests.
-            </p>
-          </div>
-          <div class="flex items-center gap-2.5 shrink-0 flex-wrap justify-center">
-            <a
-              href="https://api.whatsapp.com/send?text=${encodeURIComponent('🩺 Free NEET UG Preparation Platform: Chapterwise 10+ Years PYQs, 720-Mark Weekly Mocks, and AI Weakness Doctor on VG Insights: https://vginsights.in/')}"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs flex items-center gap-1.5 transition-all shadow-md active:scale-95"
-            >
-              <span>💬</span> WhatsApp Batchmates
-            </a>
-            <a
-              href="https://t.me/share/url?url=${encodeURIComponent('https://vginsights.in/')}&text=${encodeURIComponent('🩺 Free NEET UG Preparation: 10+ Years PYQs, 720 Mocks & AI Weakness Doctor on VG Insights:')}"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="px-4 py-2 rounded-xl bg-sky-500 hover:bg-sky-600 text-white font-bold text-xs flex items-center gap-1.5 transition-all shadow-md active:scale-95"
-            >
-              <span>✈️</span> Telegram Channel
-            </a>
-            <button
-              type="button"
-              id="btn-landing-copy-link"
-              class="px-4 py-2 rounded-xl bg-white/20 hover:bg-white/30 text-white font-bold text-xs flex items-center gap-1.5 transition-all active:scale-95"
-            >
-              <span>📋</span> <span id="landing-copy-text">Copy Link</span>
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <!-- ==========================================
-           FOUNDERS & LEADERSHIP SECTION (SOPHISTICATED & PRESTIGIOUS)
+           FOUNDERS & LEADERSHIP SECTION
            ========================================== -->
       <section id="founders" class="py-12 sm:py-16 bg-gradient-to-b from-slate-50/80 via-white to-slate-50/80 dark:from-[#0c1427]/80 dark:via-[#090f1e] dark:to-[#0c1427]/80 border-t border-slate-200/80 dark:border-slate-800/80">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-10 reveal-on-scroll">
@@ -1095,15 +948,6 @@ export function renderLandingPage(): string {
             
             <!-- Founder: Dr. Prajwal Kabadi, MBBS -->
             <div class="relative group bg-white dark:bg-slate-900/95 rounded-3xl border border-slate-200/90 dark:border-slate-800/90 p-5 sm:p-7 shadow-sm hover:shadow-xl hover:border-blue-500/40 dark:hover:border-blue-500/40 transition-all duration-300 flex flex-col items-center text-center space-y-3.5">
-              <div class="absolute -top-3 px-3 py-0.5 rounded-full bg-blue-50 dark:bg-blue-950/80 border border-blue-200 dark:border-blue-800 text-[10px] font-bold text-blue-700 dark:text-blue-300 tracking-wider uppercase">
-                Academic Direction
-              </div>
-              
-              <!-- Distinguished Medical Monogram Badge -->
-              <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-600 text-white flex items-center justify-center font-bold text-lg shadow-md ring-4 ring-blue-50 dark:ring-blue-950/50">
-                🩺
-              </div>
-
               <div class="space-y-1">
                 <h3 class="font-display text-lg sm:text-xl font-black text-slate-900 dark:text-white tracking-tight">
                   Dr. Prajwal Kabadi
@@ -1124,15 +968,6 @@ export function renderLandingPage(): string {
 
             <!-- Co-Founder: Mr. Amit Bangare -->
             <div class="relative group bg-white dark:bg-slate-900/95 rounded-3xl border border-slate-200/90 dark:border-slate-800/90 p-5 sm:p-7 shadow-sm hover:shadow-xl hover:border-indigo-500/40 dark:hover:border-indigo-500/40 transition-all duration-300 flex flex-col items-center text-center space-y-3.5">
-              <div class="absolute -top-3 px-3 py-0.5 rounded-full bg-indigo-50 dark:bg-indigo-950/80 border border-indigo-200 dark:border-indigo-800 text-[10px] font-bold text-indigo-700 dark:text-indigo-300 tracking-wider uppercase">
-                Technical Architecture
-              </div>
-
-              <!-- Distinguished Tech Monogram Badge -->
-              <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-indigo-600 to-slate-800 text-white flex items-center justify-center font-bold text-lg shadow-md ring-4 ring-indigo-50 dark:ring-indigo-950/50">
-                ⚡
-              </div>
-
               <div class="space-y-1">
                 <h3 class="font-display text-lg sm:text-xl font-black text-slate-900 dark:text-white tracking-tight">
                   Mr. Amit Bangare

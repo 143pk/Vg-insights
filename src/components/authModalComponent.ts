@@ -58,6 +58,34 @@ export function renderAuthModal(): string {
                 <span id="btn-auth-google-text">Continue with Google (1-Tap)</span>
               </button>
 
+              <div class="relative flex py-1 items-center">
+                <div class="flex-grow border-t border-slate-200 dark:border-slate-800"></div>
+                <span class="flex-shrink mx-3 text-[11px] font-semibold text-slate-400 dark:text-slate-500 uppercase">or Enter with Name</span>
+                <div class="flex-grow border-t border-slate-200 dark:border-slate-800"></div>
+              </div>
+
+              <!-- Quick Student Sign-In Form -->
+              <form id="form-quick-student-login" class="space-y-3 text-left">
+                <div>
+                  <input
+                    type="text"
+                    id="quick-student-name"
+                    placeholder="Enter your Full Name (e.g. Dr. Aman)"
+                    required
+                    minlength="2"
+                    class="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm font-semibold text-slate-900 dark:text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  id="btn-quick-student-submit"
+                  class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-blue-600 dark:hover:bg-blue-500 text-white font-bold text-xs shadow-sm active:scale-[0.98] transition-all flex items-center justify-center gap-1.5 cursor-pointer"
+                >
+                  <span>Enter Student Workspace</span>
+                  <span>→</span>
+                </button>
+              </form>
+
               <div id="auth-error-msg" class="hidden p-3 rounded-xl bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800/60 text-xs text-rose-600 dark:text-rose-400 font-medium text-left"></div>
             </div>
 
@@ -250,7 +278,19 @@ export function initAuthModalEvents(onLoginSuccess: () => void): void {
 
   const showError = (msg: string) => {
     if (errorBox) {
-      errorBox.textContent = msg;
+      if (msg.includes('Domain not authorized') || msg.includes('unauthorized-domain')) {
+        errorBox.innerHTML = `
+          <div class="space-y-2">
+            <p class="font-bold text-rose-700 dark:text-rose-300">${msg}</p>
+            <p class="text-[11px] text-slate-600 dark:text-slate-300">Tip: You can enter instantly with your name below without waiting for domain whitelist.</p>
+          </div>
+        `;
+        // Auto-focus quick student name input
+        const quickInput = document.getElementById('quick-student-name') as HTMLInputElement | null;
+        quickInput?.focus();
+      } else {
+        errorBox.textContent = msg;
+      }
       errorBox.classList.remove('hidden');
     }
   };
@@ -279,6 +319,22 @@ export function initAuthModalEvents(onLoginSuccess: () => void): void {
   (window as any).openAuthModal = openModal;
   (window as any).openEditNameModal = openEditNameModal;
   (window as any).closeAuthModal = closeModal;
+
+  // Quick Student Login Form (Instant & Works on any domain)
+  const formQuickStudent = document.getElementById('form-quick-student-login') as HTMLFormElement | null;
+  const inputQuickName = document.getElementById('quick-student-name') as HTMLInputElement | null;
+  formQuickStudent?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = inputQuickName?.value.trim() || '';
+    if (!name || name.length < 2) {
+      showError('Please enter your full name (at least 2 characters).');
+      inputQuickName?.focus();
+      return;
+    }
+    AuthService.quickStudentLogin(name, 2026);
+    closeModal();
+    onLoginSuccess();
+  });
 
   // 1. Google Sign-In Action -> Flows seamlessly to Name Confirmation
   btnGoogle?.addEventListener('click', async () => {
