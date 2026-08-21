@@ -12,7 +12,7 @@ import {
 import { getFirestore, doc, setDoc, getDoc } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAl5f0BUtU07n7E72MOIyCva0VPnvJk1Nw",
+  apiKey: "AIzaSyAl5fOBUtU07n7E72MOIyCva0VPnvJk1Nw",
   authDomain: "vginsights-bed28.firebaseapp.com",
   projectId: "vginsights-bed28",
   storageBucket: "vginsights-bed28.firebasestorage.app",
