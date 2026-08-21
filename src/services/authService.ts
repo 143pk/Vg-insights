@@ -2,6 +2,8 @@ import {
   auth, 
   googleProvider, 
   signInWithPopup, 
+  signInWithRedirect,
+  getRedirectResult,
   signInWithEmailAndPassword, 
   createUserWithEmailAndPassword, 
   signOut, 
@@ -60,6 +62,19 @@ export class AuthService {
 
     // Subscribe to Firebase Auth state
     try {
+      // Check for redirect result (mobile auth return)
+      getRedirectResult(auth).then(async (result) => {
+        if (result && result.user) {
+          const syncedUser = await this.syncFromFirebaseUser(result.user);
+          this.user = syncedUser;
+          localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(syncedUser));
+          this.saveUserToLocalRegistry(syncedUser);
+          this.notifyListeners();
+        }
+      }).catch((err) => {
+        console.warn('[AuthService] getRedirectResult error:', err);
+      });
+
       onAuthStateChanged(auth, async (fbUser: FirebaseUser | null) => {
         if (fbUser) {
           const syncedUser = await this.syncFromFirebaseUser(fbUser);
@@ -177,17 +192,26 @@ export class AuthService {
 
       return { success: true, user };
     } catch (err: any) {
+      // Don't log expected cancellations as errors
+      if (err.code === 'auth/popup-closed-by-user' || err.code === 'auth/cancelled-popup-request') {
+        return { success: false, error: 'Sign-in cancelled' };
+      }
+
       console.error('[AuthService] Google Sign-In error:', err);
       let errMsg = err.message || 'Google Sign-In failed. Please try again.';
+      
       if (err.code === 'auth/unauthorized-domain' || (err.message && err.message.includes('unauthorized-domain'))) {
         const domain = typeof window !== 'undefined' ? window.location.hostname : 'your live domain';
-        errMsg = `Domain not authorized: Please add "${domain}" to your Firebase Console (Authentication → Settings → Authorized domains).`;
+        errMsg = `Domain "${domain}" is not authorized in Firebase. In Firebase Console → Authentication → Settings → Authorized domains, add "${domain}". Or enter with name below!`;
+      } else if (err.code === 'auth/popup-blocked' || (err.message && err.message.includes('popup-blocked'))) {
+        errMsg = 'Popup was blocked by your browser. Please allow popups or enter your name below to continue.';
+      } else if (err.code === 'auth/network-request-failed') {
+        errMsg = 'Network connection issue. Please check your internet or enter your name below.';
       }
+
       return { 
         success: false, 
-        error: err.message?.includes('popup-closed') 
-          ? 'Sign-in cancelled' 
-          : errMsg 
+        error: errMsg 
       };
     }
   }
