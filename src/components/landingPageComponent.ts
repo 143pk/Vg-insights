@@ -64,23 +64,16 @@ export function renderLandingPage(): string {
               <button
                 type="button"
                 id="btn-nav-login"
-                class="hidden sm:inline-flex px-3 py-2 text-sm font-bold text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors focus:outline-none cursor-pointer"
+                class="hidden sm:inline-flex px-3.5 py-2 text-sm font-bold text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors focus:outline-none cursor-pointer"
               >
-                Login
+                Sign In
               </button>
-              <a
-                href="#home"
-                id="btn-nav-guest"
-                class="hidden md:inline-flex px-3.5 py-2 text-xs font-bold text-slate-600 dark:text-slate-300 hover:text-blue-600 bg-slate-100 dark:bg-slate-800 rounded-xl transition-colors"
-              >
-                Guest Access
-              </a>
               <button
                 type="button"
                 id="btn-nav-get-started"
                 class="px-3 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-gradient-to-r from-[#2563EB] to-[#1D4ED8] hover:from-[#1D4ED8] hover:to-[#1E40AF] text-white text-xs sm:text-sm font-bold shadow-md shadow-blue-500/20 active:scale-[0.98] transition-all flex items-center gap-1 sm:gap-1.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 cursor-pointer"
               >
-                <span>Start Free</span>
+                <span>Enter Workspace</span>
                 <span class="text-blue-200 hidden xs:inline">→</span>
               </button>
 
@@ -112,23 +105,10 @@ export function renderLandingPage(): string {
             <div class="pt-3 border-t border-slate-200 dark:border-slate-800 flex flex-col gap-2">
               <button
                 type="button"
-                id="btn-mobile-login"
-                class="w-full py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 text-sm font-bold text-slate-800 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
-              >
-                Login with Email & OTP
-              </button>
-              <a
-                href="#home"
-                class="w-full py-2.5 text-center rounded-xl bg-slate-100 dark:bg-slate-800 text-sm font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-200 transition-colors"
-              >
-                Continue as Guest
-              </a>
-              <button
-                type="button"
                 id="btn-mobile-get-started"
-                class="w-full py-2.5 rounded-xl bg-blue-600 text-white text-sm font-bold hover:bg-blue-700 transition-colors"
+                class="w-full py-3 rounded-xl bg-blue-600 text-white text-sm font-bold hover:bg-blue-700 transition-colors shadow-md shadow-blue-500/20"
               >
-                Start Learning Free →
+                Enter Study Workspace →
               </button>
             </div>
           </div>

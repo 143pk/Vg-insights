@@ -1,8 +1,10 @@
 import { StorageService } from '../services/storageService'
 import { StudyTimerService } from '../services/studyTimerService'
+import { AuthService } from '../services/authService'
 import { TOPICS, CHAPTERS, SUBJECTS } from '../data/neetData'
 
 export function renderProgressModal(): string {
+  const currentUser = AuthService.getCurrentUser();
   const progress = StorageService.getProgress();
   const completedCount = progress.completedTopics.length;
   const totalTopics = Object.keys(TOPICS).length;
@@ -41,6 +43,31 @@ export function renderProgressModal(): string {
 
         <!-- Content -->
         <div class="p-5 overflow-y-auto space-y-6">
+          
+          <!-- User Profile Identity Banner -->
+          ${currentUser ? `
+            <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 flex items-center justify-between gap-3">
+              <div class="flex items-center gap-3 min-w-0">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 text-white font-bold flex items-center justify-center text-sm shadow-sm shrink-0">
+                  ${(currentUser.name || 'S').charAt(0).toUpperCase()}
+                </div>
+                <div class="min-w-0">
+                  <div class="flex items-center gap-2">
+                    <span class="font-bold text-sm text-slate-900 dark:text-white truncate">${currentUser.name}</span>
+                    <span class="px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 text-[10px] font-bold shrink-0">NEET ${currentUser.targetYear || 2026}</span>
+                  </div>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 truncate">${currentUser.email}</p>
+                </div>
+              </div>
+              <button
+                type="button"
+                id="btn-progress-change-name"
+                class="px-3 py-1.5 rounded-xl bg-white dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 text-xs font-semibold border border-slate-200 dark:border-slate-600 transition-colors shrink-0 flex items-center gap-1.5 cursor-pointer shadow-sm"
+              >
+                <span>✏️ Change Name</span>
+              </button>
+            </div>
+          ` : ''}
           
           <!-- Stat Cards Grid -->
           <div class="grid grid-cols-3 gap-3">

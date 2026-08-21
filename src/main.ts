@@ -244,8 +244,6 @@ class App {
 
   public openAuthModal(): void {
     this.openModal('modal-auth');
-    const emailInput = document.getElementById('auth-email-input') as HTMLInputElement | null;
-    emailInput?.focus();
   }
 
   private renderApp(): void {
@@ -556,6 +554,13 @@ class App {
     // Search button (Desktop)
     document.getElementById('btn-header-search')?.addEventListener('click', () => {
       this.openModal('modal-search');
+    });
+
+    // Edit Full Name Button
+    document.getElementById('btn-dropdown-edit-name')?.addEventListener('click', () => {
+      userProfileDropdown?.classList.add('hidden');
+      userProfileBtn?.setAttribute('aria-expanded', 'false');
+      (window as any).openEditNameModal?.();
     });
 
     // Install Mobile / Android App Buttons
@@ -1475,6 +1480,11 @@ class App {
 
       document.getElementById('btn-close-progress')?.addEventListener('click', () => {
         this.closeModal('modal-progress');
+      });
+
+      document.getElementById('btn-progress-change-name')?.addEventListener('click', () => {
+        this.closeModal('modal-progress');
+        (window as any).openEditNameModal?.();
       });
 
       this.openModal('modal-progress');

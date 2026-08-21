@@ -154,6 +154,16 @@ export function renderHeader(
                   <p class="text-xs font-semibold text-slate-900 dark:text-white truncate">${currentUser.name}</p>
                   <p class="text-[11px] text-slate-500 dark:text-slate-400 truncate">${currentUser.email}</p>
                 </div>
+                <button
+                  id="btn-dropdown-edit-name"
+                  type="button"
+                  class="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-left"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                  </svg>
+                  <span>Change Full Name</span>
+                </button>
                 <a
                   href="#my-progress"
                   class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
