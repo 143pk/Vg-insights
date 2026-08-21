@@ -12,12 +12,13 @@ import {
 import { getFirestore, doc, setDoc, getDoc } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDIUbbPizPlV-u7FDJuEs1uIBKBQxY6zu4",
-  authDomain: "elated-acronym-8gtt6.firebaseapp.com",
-  projectId: "elated-acronym-8gtt6",
-  storageBucket: "elated-acronym-8gtt6.firebasestorage.app",
-  messagingSenderId: "535700227761",
-  appId: "1:535700227761:web:b5d38089083925f5d9c490"
+  apiKey: "AIzaSyAl5f0BUtU07n7E72MOIyCva0VPnvJk1Nw",
+  authDomain: "vginsights-bed28.firebaseapp.com",
+  projectId: "vginsights-bed28",
+  storageBucket: "vginsights-bed28.firebasestorage.app",
+  messagingSenderId: "585927930818",
+  appId: "1:585927930818:web:d808a407264b512853dc5b",
+  measurementId: "G-Q05M87PQ1B"
 };
 
 // Initialize Firebase App
@@ -31,7 +32,7 @@ googleProvider.setCustomParameters({
 });
 
 // Firestore Database
-export const db = getFirestore(app, "ai-studio-vgneetlibrary-3b00fd74-c6ce-405a-a558-93f8081595a7");
+export const db = getFirestore(app);
 
 export {
   signInWithPopup,
