@@ -124,17 +124,15 @@ function renderDetailedContent(detail: DetailedTopicContent, topic: any, pyqs: P
   const practiceQuestions = detail.practiceQuestions || (detail as any).practiceCards || [];
 
   return `
-    ${marksPotentialHtml}
-
-    <!-- 1. WHAT IS THIS TOPIC? & BASIC IDEA -->
-    <section id="section-intro" class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-6">
+      <!-- 1. WHAT IS THIS TOPIC & BASIC IDEA -->
+    <section id="section-intro" aria-labelledby="heading-section-intro" class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-6">
       <div class="flex items-center gap-3 border-b border-slate-100 dark:border-slate-800 pb-4">
         <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center font-bold text-xl shrink-0">
           📖
         </div>
         <div>
-          <h2 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-slate-100">
-            1. What is this Topic? & Basic Idea
+          <h2 id="heading-section-intro" class="text-lg sm:text-xl font-bold text-slate-900 dark:text-slate-100">
+            1. What is this Topic? & Core Basic Idea
           </h2>
           <p class="text-xs text-slate-500 dark:text-slate-400">
             EL10 Approach: Building the core concept from zero with complete scientific accuracy.
@@ -142,79 +140,83 @@ function renderDetailedContent(detail: DetailedTopicContent, topic: any, pyqs: P
         </div>
       </div>
 
-      <!-- Intro paragraph -->
-      <div class="p-5 rounded-2xl bg-blue-50/50 dark:bg-blue-950/20 border border-blue-500/20 space-y-2">
+      <!-- Intro article passage -->
+      <article id="passage-topic-intro" class="p-5 rounded-2xl bg-blue-50/50 dark:bg-blue-950/20 border border-blue-500/20 space-y-2">
         <h3 class="text-xs font-bold uppercase tracking-wider text-blue-700 dark:text-blue-400">
-          💡 Simple Introduction
+          💡 Core Topic Definition & Overview
         </h3>
-        <p class="text-sm sm:text-base text-slate-800 dark:text-slate-200 leading-relaxed">
+        <p class="text-sm sm:text-base text-slate-800 dark:text-slate-200 leading-relaxed font-medium">
           ${detail.whatIsThisTopic || topic.summary || ''}
         </p>
-      </div>
+      </article>
 
       <!-- Basic Idea points -->
       <div class="space-y-3">
         <h3 class="text-sm font-bold text-slate-900 dark:text-slate-100">
-          Core Pillars:
+          Fundamental Conceptual Pillars:
         </h3>
-        ${basicIdea.map(idea => `
-          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200/60 dark:border-slate-800 text-sm sm:text-base text-slate-700 dark:text-slate-300 leading-relaxed">
+        ${basicIdea.map((idea, idx) => `
+          <article id="passage-pillar-${idx + 1}" class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200/60 dark:border-slate-800 text-sm sm:text-base text-slate-700 dark:text-slate-300 leading-relaxed">
             ${idea}
-          </div>
+          </article>
         `).join('')}
       </div>
     </section>
 
-    <!-- 2. IMPORTANT TERMS -->
-    <section id="section-terms" class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-6">
+    <!-- 2. IMPORTANT TERMS & DEFINITIONS (SEMANTIC PASSAGE STRUCTURE) -->
+    <section id="section-terms" aria-labelledby="heading-section-terms" class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-6">
       <div class="flex items-center gap-3 border-b border-slate-100 dark:border-slate-800 pb-4">
         <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center font-bold text-xl shrink-0">
           🔤
         </div>
         <div>
-          <h2 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-slate-100">
-            2. Important Terms & Definitions
+          <h2 id="heading-section-terms" class="text-lg sm:text-xl font-bold text-slate-900 dark:text-slate-100">
+            2. Important Terms & High-Yield Definitions
           </h2>
           <p class="text-xs text-slate-500 dark:text-slate-400">
-            Every technical term explained clearly when introduced.
+            Every technical scientific term defined with precision for NEET UG.
           </p>
         </div>
       </div>
 
       <div class="grid grid-cols-1 gap-4">
-        ${importantTerms.map(t => `
-          <div class="p-5 rounded-2xl bg-slate-50/80 dark:bg-slate-800/40 border border-slate-200/80 dark:border-slate-700/80 space-y-2">
+        ${importantTerms.map((t, idx) => {
+          const termSlug = `def-${(t.term || `term-${idx}`).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`;
+          return `
+          <article id="${termSlug}" class="p-5 rounded-2xl bg-slate-50/80 dark:bg-slate-800/40 border border-slate-200/80 dark:border-slate-700/80 space-y-2.5 scroll-mt-20 group relative" itemscope itemtype="https://schema.org/DefinedTerm">
             <div class="flex items-center justify-between gap-2">
-              <span class="text-sm sm:text-base font-bold text-purple-700 dark:text-purple-300">
-                ${renderInlineMathHTML(t.term)}
-              </span>
+              <h3 class="text-sm sm:text-base font-bold text-purple-700 dark:text-purple-300 flex items-center gap-1.5" itemprop="name">
+                <span>${renderInlineMathHTML(t.term)} Definition</span>
+                <a href="#${termSlug}" class="opacity-0 group-hover:opacity-100 text-purple-400 hover:text-purple-600 transition-opacity text-xs" title="Direct Link">🔗</a>
+              </h3>
               ${t.symbol ? `
                 <span class="px-2.5 py-0.5 rounded-md bg-purple-100 dark:bg-purple-950/60 text-purple-700 dark:text-purple-300 text-xs font-bold">
                   Symbol: ${renderInlineMathHTML(t.symbol)}
                 </span>
               ` : ''}
             </div>
-            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
-              ${renderInlineMathHTML(t.definition)}
+            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed font-medium" itemprop="description">
+              <strong class="font-bold text-slate-900 dark:text-slate-100">Scientific Definition:</strong> ${renderInlineMathHTML(t.definition)}
             </p>
             ${t.neetNote ? `
               <p class="text-xs font-medium text-emerald-700 dark:text-emerald-400 bg-emerald-50/60 dark:bg-emerald-950/30 p-2.5 rounded-xl border border-emerald-500/20">
-                💡 ${renderInlineMathHTML(t.neetNote)}
+                💡 <strong class="font-bold">NEET Application:</strong> ${renderInlineMathHTML(t.neetNote)}
               </p>
             ` : ''}
-          </div>
-        `).join('')}
+          </article>
+        `;
+        }).join('')}
       </div>
     </section>
 
     <!-- 3. CONCEPT EXPLANATION -->
-    <section id="section-explanation" class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-6">
+    <section id="section-explanation" aria-labelledby="heading-section-explanation" class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-6">
       <div class="flex items-center gap-3 border-b border-slate-100 dark:border-slate-800 pb-4">
         <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold text-xl shrink-0">
           🧠
         </div>
         <div>
-          <h2 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-slate-100">
+          <h2 id="heading-section-explanation" class="text-lg sm:text-xl font-bold text-slate-900 dark:text-slate-100">
             3. Concept Explanation (Step-by-Step)
           </h2>
           <p class="text-xs text-slate-500 dark:text-slate-400">
@@ -224,14 +226,15 @@ function renderDetailedContent(detail: DetailedTopicContent, topic: any, pyqs: P
       </div>
 
       <div class="space-y-6">
-        ${conceptExplanation.map(sec => {
+        ${conceptExplanation.map((sec, idx) => {
           const conceptVisuals: ConceptVisual[] = sec.visuals || (sec.visual ? [sec.visual] : []);
           const paragraphs: string[] = sec.paragraphs || (sec as any).subpoints || (sec as any).points || (sec as any).content || [];
           const formulas = sec.formulas || [];
           const examples = sec.examples || [];
           const secPoints = sec.importantPoints || [];
+          const secSlug = `concept-passage-${(sec.heading || `part-${idx}`).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`;
           return `
-            <div class="space-y-4 p-5 sm:p-6 rounded-2xl bg-indigo-50/30 dark:bg-indigo-950/20 border border-indigo-500/20 shadow-xs">
+            <article id="${secSlug}" class="space-y-4 p-5 sm:p-6 rounded-2xl bg-indigo-50/30 dark:bg-indigo-950/20 border border-indigo-500/20 shadow-xs scroll-mt-20">
               <h3 class="text-sm sm:text-base font-bold text-indigo-900 dark:text-indigo-300">
                 ${renderInlineMathHTML(sec.heading)}
               </h3>
@@ -358,7 +361,7 @@ function renderDetailedContent(detail: DetailedTopicContent, topic: any, pyqs: P
                 </div>
               ` : ''}
 
-            </div>
+            </article>
           `;
         }).join('')}
       </div>
@@ -574,13 +577,13 @@ function renderDetailedContent(detail: DetailedTopicContent, topic: any, pyqs: P
     })()}
 
     <!-- 6. NEET IMPORTANT POINTS -->
-    <section id="section-neet-points" class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-6">
+    <section id="section-neet-points" aria-labelledby="heading-section-neet-points" class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-6">
       <div class="flex items-center gap-3 border-b border-slate-100 dark:border-slate-800 pb-4">
         <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold text-xl shrink-0">
           📌
         </div>
         <div>
-          <h2 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-slate-100">
+          <h2 id="heading-section-neet-points" class="text-lg sm:text-xl font-bold text-slate-900 dark:text-slate-100">
             6. NEET High-Yield Important Points
           </h2>
           <p class="text-xs text-slate-500 dark:text-slate-400">
@@ -590,25 +593,25 @@ function renderDetailedContent(detail: DetailedTopicContent, topic: any, pyqs: P
       </div>
 
       <div class="space-y-3">
-        ${neetImportantPoints.map(pt => `
-          <div class="p-4 rounded-2xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-500/30 flex items-start gap-3">
+        ${neetImportantPoints.map((pt, idx) => `
+          <article id="passage-ncert-point-${idx + 1}" class="p-4 rounded-2xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-500/30 flex items-start gap-3 scroll-mt-20">
             <span class="text-amber-600 dark:text-amber-400 font-bold shrink-0 mt-0.5">📌</span>
             <p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-medium leading-relaxed">
-              ${renderInlineMathHTML(pt)}
+              <strong class="font-bold text-amber-900 dark:text-amber-300">NCERT Key Fact #${idx + 1}:</strong> ${renderInlineMathHTML(pt)}
             </p>
-          </div>
+          </article>
         `).join('')}
       </div>
     </section>
 
     <!-- 7. COMMON CONFUSIONS -->
-    <section id="section-confusions" class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-6">
+    <section id="section-confusions" aria-labelledby="heading-section-confusions" class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-6">
       <div class="flex items-center gap-3 border-b border-slate-100 dark:border-slate-800 pb-4">
         <div class="w-10 h-10 rounded-xl bg-red-500/10 text-red-600 dark:text-red-400 flex items-center justify-center font-bold text-xl shrink-0">
           ⚠️
         </div>
         <div>
-          <h2 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-slate-100">
+          <h2 id="heading-section-confusions" class="text-lg sm:text-xl font-bold text-slate-900 dark:text-slate-100">
             7. Common Confusions & Negative Mark Traps
           </h2>
           <p class="text-xs text-slate-500 dark:text-slate-400">
@@ -618,26 +621,29 @@ function renderDetailedContent(detail: DetailedTopicContent, topic: any, pyqs: P
       </div>
 
       <div class="space-y-4">
-        ${commonConfusions.map((c: any) => {
+        ${commonConfusions.map((c: any, idx) => {
           const confusionText = c.commonConfusion || c.misconception || c.trap || '';
           const correctText = c.correctFact || c.correction || c.reality || '';
           const whyText = c.whyItMattersForNEET || c.whyTrap || c.neetImpact || '';
+          const trapSlug = `passage-trap-${idx + 1}`;
           return `
-            <div class="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-xs">
+            <article id="${trapSlug}" class="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-xs scroll-mt-20">
               <div class="p-4 bg-red-50 dark:bg-red-950/40 border-b border-red-200 dark:border-red-900/40 text-xs sm:text-sm font-bold text-red-700 dark:text-red-300 flex items-start gap-2">
-                <span class="shrink-0">❌ Common Confusion:</span>
-                <span>${renderInlineMathHTML(confusionText)}</span>
+                <h3 class="font-bold text-xs sm:text-sm text-red-700 dark:text-red-300 flex items-start gap-2">
+                  <span class="shrink-0">❌ Common Confusion:</span>
+                  <span>${renderInlineMathHTML(confusionText)}</span>
+                </h3>
               </div>
               <div class="p-4 bg-emerald-50/60 dark:bg-emerald-950/30 text-xs sm:text-sm font-bold text-emerald-800 dark:text-emerald-300 flex items-start gap-2 border-b border-emerald-200 dark:border-emerald-900/30">
-                <span class="shrink-0">✅ Correct Fact:</span>
+                <span class="shrink-0">✅ Correct NCERT Fact:</span>
                 <span>${renderInlineMathHTML(correctText)}</span>
               </div>
               ${whyText ? `
                 <div class="p-3.5 bg-slate-50 dark:bg-slate-800/40 text-xs text-slate-600 dark:text-slate-400 italic">
-                  💡 Why it matters for NEET: ${renderInlineMathHTML(whyText)}
+                  💡 <strong class="font-bold">Why it matters for NEET:</strong> ${renderInlineMathHTML(whyText)}
                 </div>
               ` : ''}
-            </div>
+            </article>
           `;
         }).join('')}
       </div>
@@ -759,7 +765,7 @@ function renderFallbackContent(topic: any, pyqs: PYQuestion[]): string {
     ${marksPotentialHtml}
 
     <!-- 1. TOPIC OVERVIEW & IMPORTANCE -->
-    <section class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-4">
+    <section aria-label="Topic Overview and NEET Significance" class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-4">
       <div class="flex items-center gap-3 border-b border-slate-100 dark:border-slate-800 pb-4">
         <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold text-xl shrink-0">
           📌
@@ -774,12 +780,17 @@ function renderFallbackContent(topic: any, pyqs: PYQuestion[]): string {
         </div>
       </div>
       <div class="space-y-3">
-        ${learnList.map(p => `<p class="p-4 rounded-2xl bg-indigo-50/30 dark:bg-indigo-950/20 border border-indigo-500/20 text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed font-medium">${renderInlineMathHTML(p)}</p>`).join('')}
+        ${learnList.map((p, idx) => `
+          <article id="passage-fb-overview-${idx + 1}" class="p-4 rounded-2xl bg-indigo-50/30 dark:bg-indigo-950/20 border border-indigo-500/20 text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed font-medium">
+            <h3 class="text-xs font-bold text-indigo-900 dark:text-indigo-300 uppercase tracking-wider mb-1">Core Principle</h3>
+            <p>${renderInlineMathHTML(p)}</p>
+          </article>
+        `).join('')}
       </div>
     </section>
 
     <!-- 2. KEY CONCEPTS & EXPLANATION -->
-    <section class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-4">
+    <section aria-label="Core Concept Explanations" class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-4">
       <div class="flex items-center gap-3 border-b border-slate-100 dark:border-slate-800 pb-4">
         <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center font-bold text-xl shrink-0">
           🧠
@@ -794,18 +805,19 @@ function renderFallbackContent(topic: any, pyqs: PYQuestion[]): string {
         </div>
       </div>
       <div class="space-y-4">
-        ${keyConceptsList.map(c => {
+        ${keyConceptsList.map((c, idx) => {
           if (typeof c === 'string') {
             return `
-              <div class="p-4 rounded-2xl bg-blue-50/30 dark:bg-blue-950/20 border border-blue-500/20 text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed font-medium">
-                • ${renderInlineMathHTML(c)}
-              </div>
+              <article id="passage-fb-concept-${idx + 1}" class="p-4 rounded-2xl bg-blue-50/30 dark:bg-blue-950/20 border border-blue-500/20 text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed font-medium">
+                <h3 class="font-bold text-xs text-blue-900 dark:text-blue-300 uppercase tracking-wider mb-1">Concept Point #${idx + 1}</h3>
+                <p>• ${renderInlineMathHTML(c)}</p>
+              </article>
             `;
           }
           const conceptObj = c as any;
           const conceptVisuals: ConceptVisual[] = conceptObj.visuals || (conceptObj.visual ? [conceptObj.visual] : []);
           return `
-            <div class="p-5 rounded-2xl bg-blue-50/30 dark:bg-blue-950/20 border border-blue-500/20 space-y-3">
+            <article id="passage-fb-concept-${idx + 1}" class="p-5 rounded-2xl bg-blue-50/30 dark:bg-blue-950/20 border border-blue-500/20 space-y-3">
               ${conceptObj.heading ? `<h3 class="font-bold text-sm sm:text-base text-blue-900 dark:text-blue-300">${renderInlineMathHTML(conceptObj.heading)}</h3>` : ''}
               ${conceptObj.paragraphs ? `<div class="space-y-2 text-xs sm:text-sm text-slate-700 dark:text-slate-300">${(conceptObj.paragraphs || []).map((p: string) => `<p>${renderInlineMathHTML(p)}</p>`).join('')}</div>` : ''}
               ${conceptVisuals.length > 0 ? `
@@ -818,7 +830,7 @@ function renderFallbackContent(topic: any, pyqs: PYQuestion[]): string {
                   `).join('')}
                 </div>
               ` : ''}
-            </div>
+            </article>
           `;
         }).join('')}
       </div>
@@ -826,7 +838,7 @@ function renderFallbackContent(topic: any, pyqs: PYQuestion[]): string {
 
     <!-- 3. FORMULAS (If present) -->
     ${(formulasList.length > 0) ? `
-      <section class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-4">
+      <section aria-label="Essential Formulas" class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-4">
         <div class="flex items-center gap-3 border-b border-slate-100 dark:border-slate-800 pb-4">
           <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-xl shrink-0">
             📐
@@ -841,14 +853,16 @@ function renderFallbackContent(topic: any, pyqs: PYQuestion[]): string {
           </div>
         </div>
         <div class="space-y-3">
-          ${formulasList.map(f => {
+          ${formulasList.map((f, idx) => {
             const formStr = typeof f === 'string' ? f : (f.formula || (f as any).expression || '');
-            const titleStr = typeof f === 'object' && f && (f.title || (f as any).name || (f as any).formulaName) ? String(f.title || (f as any).name || (f as any).formulaName) : '';
+            const titleStr = typeof f === 'object' && f && (f.title || (f as any).name || (f as any).formulaName) ? String(f.title || (f as any).name || (f as any).formulaName) : `Formula #${idx + 1}`;
             return `
-              <div class="p-4 rounded-2xl bg-emerald-50/20 dark:bg-emerald-950/20 border border-emerald-500/30 text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-medium space-y-2">
-                ${titleStr ? `<div class="font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider text-xs">${renderInlineMathHTML(titleStr)}</div>` : ''}
-                ${renderFormulaHTML(formStr)}
-              </div>
+              <article id="passage-fb-formula-${idx + 1}" class="p-4 rounded-2xl bg-emerald-50/20 dark:bg-emerald-950/20 border border-emerald-500/30 text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-medium space-y-2" itemscope itemtype="https://schema.org/Question">
+                <h3 class="font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider text-xs" itemprop="name">${renderInlineMathHTML(titleStr)}</h3>
+                <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                  <div itemprop="text">${renderFormulaHTML(formStr)}</div>
+                </div>
+              </article>
             `;
           }).join('')}
         </div>
@@ -857,7 +871,7 @@ function renderFallbackContent(topic: any, pyqs: PYQuestion[]): string {
 
     <!-- 4. HIGH-YIELD NCERT FACTS -->
     ${(neetImportantPointsList.length > 0) ? `
-      <section class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-4">
+      <section aria-label="NEET High-Yield NCERT Facts" class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-4">
         <div class="flex items-center gap-3 border-b border-slate-100 dark:border-slate-800 pb-4">
           <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold text-xl shrink-0">
             📌
@@ -872,13 +886,13 @@ function renderFallbackContent(topic: any, pyqs: PYQuestion[]): string {
           </div>
         </div>
         <div class="space-y-2.5">
-          ${neetImportantPointsList.map(pt => `
-            <div class="p-3.5 rounded-2xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-500/30 flex items-start gap-3">
+          ${neetImportantPointsList.map((pt, idx) => `
+            <article id="passage-fb-ncert-${idx + 1}" class="p-3.5 rounded-2xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-500/30 flex items-start gap-3">
               <span class="text-amber-600 dark:text-amber-400 font-bold shrink-0 mt-0.5">📌</span>
               <p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-medium leading-relaxed">
-                ${renderInlineMathHTML(pt)}
+                <strong class="font-bold text-amber-900 dark:text-amber-300">NCERT Point #${idx + 1}:</strong> ${renderInlineMathHTML(pt)}
               </p>
-            </div>
+            </article>
           `).join('')}
         </div>
       </section>
@@ -886,7 +900,7 @@ function renderFallbackContent(topic: any, pyqs: PYQuestion[]): string {
 
     <!-- 5. COMMON CONFUSIONS -->
     ${(commonConfusionsList.length > 0) ? `
-      <section class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-4">
+      <section aria-label="Common Confusions and Negative Mark Traps" class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-4">
         <div class="flex items-center gap-3 border-b border-slate-100 dark:border-slate-800 pb-4">
           <div class="w-10 h-10 rounded-xl bg-red-500/10 text-red-600 dark:text-red-400 flex items-center justify-center font-bold text-xl shrink-0">
             ⚠️
@@ -901,23 +915,24 @@ function renderFallbackContent(topic: any, pyqs: PYQuestion[]): string {
           </div>
         </div>
         <div class="space-y-3">
-          ${commonConfusionsList.map((c: any) => {
+          ${commonConfusionsList.map((c: any, idx) => {
             if (typeof c === 'string') {
               return `
-                <div class="p-4 rounded-2xl bg-red-50/40 dark:bg-red-950/20 border border-red-500/30 text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-medium">
-                  ⚠️ ${renderInlineMathHTML(c)}
-                </div>
+                <article id="passage-fb-trap-${idx + 1}" class="p-4 rounded-2xl bg-red-50/40 dark:bg-red-950/20 border border-red-500/30 text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-medium">
+                  <h3 class="font-bold text-red-700 dark:text-red-400 mb-1">⚠️ NEET MCQ Caution:</h3>
+                  <p>${renderInlineMathHTML(c)}</p>
+                </article>
               `;
             }
             const confusionText = c.commonConfusion || c.misconception || ''
             const correctText = c.correctFact || c.correction || ''
             const whyText = c.whyItMattersForNEET || c.whyTrap || ''
             return `
-              <div class="p-4 rounded-2xl bg-red-50/40 dark:bg-red-950/20 border border-red-500/30 text-xs sm:text-sm space-y-1.5">
-                <div class="font-bold text-red-700 dark:text-red-400">❌ Common Trap: ${renderInlineMathHTML(confusionText)}</div>
+              <article id="passage-fb-trap-${idx + 1}" class="p-4 rounded-2xl bg-red-50/40 dark:bg-red-950/20 border border-red-500/30 text-xs sm:text-sm space-y-1.5">
+                <h3 class="font-bold text-red-700 dark:text-red-400 text-xs">❌ Common Trap: ${renderInlineMathHTML(confusionText)}</h3>
                 <div class="font-bold text-emerald-700 dark:text-emerald-400">✓ Correct Fact: ${renderInlineMathHTML(correctText)}</div>
-                ${whyText ? `<div class="text-slate-600 dark:text-slate-400 text-xs italic">💡 Why it matters: ${renderInlineMathHTML(whyText)}</div>` : ''}
-              </div>
+                ${whyText ? `<div class="text-slate-600 dark:text-slate-400 text-xs italic">💡 <strong class="font-bold">Why it matters:</strong> ${renderInlineMathHTML(whyText)}</div>` : ''}
+              </article>
             `;
           }).join('')}
         </div>

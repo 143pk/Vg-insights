@@ -1,34 +1,18 @@
 import { SUBJECTS, TOPICS } from '../data/neetData';
 import { renderBrandLogo } from './brandLogoComponent';
 import { StorageService } from '../services/storageService';
-
-// Helper to safely render KaTeX formula string or HTML fallback
-function renderKaTeXFormula(latex: string, displayMode: boolean = false): string {
-  // If katex is globally available in window, render it immediately
-  if (typeof window !== 'undefined' && (window as any).katex) {
-    try {
-      return (window as any).katex.renderToString(latex, {
-        displayMode,
-        throwOnError: false,
-      });
-    } catch {
-      // fallback
-    }
-  }
-  // Return semantic formula container that will be picked up by auto-render
-  return `<span class="katex-render-target ${displayMode ? 'block my-2 text-center' : 'inline-block'}" data-latex="${encodeURIComponent(latex)}" data-display="${displayMode ? 'true' : 'false'}">${latex}</span>`;
-}
+import { renderFormulaHTML, renderInlineMathHTML, renderMath } from '../utils/mathRenderer';
 
 export function renderLandingPage(): string {
   const totalTopics = TOPICS.length || 277;
 
   // Pre-rendered formulas for zero-flicker instant display
-  const nernstEq = renderKaTeXFormula("E_{\\text{cell}} = E^\\circ_{\\text{cell}} - \\frac{0.0591}{n}\\log_{10} Q \\quad \\text{at } 298\\text{ K}", true);
-  const gibbsEq = renderKaTeXFormula("\\Delta G = \\Delta H - T\\Delta S", true);
-  const gibbsKeq = renderKaTeXFormula("\\Delta G^\\circ = -RT \\ln K = -2.303 RT \\log_{10} K", true);
-  const coulombEq = renderKaTeXFormula("F = \\frac{1}{4\\pi\\varepsilon_0 \\varepsilon_r} \\cdot \\frac{|q_1 q_2|}{r^2}", true);
-  const aldolEq = renderKaTeXFormula("2\\,\\text{CH}_3\\text{CHO} \\xrightarrow{\\text{OH}^-} \\text{CH}_3\\text{CH}=\\text{CHCHO} + \\text{H}_2\\text{O}", true);
-  const opticsEq = renderKaTeXFormula("\\frac{1}{f} = \\frac{1}{v} + \\frac{1}{u}", true);
+  const nernstEq = renderFormulaHTML("E_{\\text{cell}} = E^\\circ_{\\text{cell}} - \\frac{0.0591}{n}\\log_{10} Q \\quad \\text{at } 298\\text{ K}");
+  const gibbsEq = renderFormulaHTML("\\Delta G = \\Delta H - T\\Delta S");
+  const gibbsKeq = renderFormulaHTML("\\Delta G^\\circ = -RT \\ln K = -2.303 RT \\log_{10} K");
+  const coulombEq = renderFormulaHTML("F = \\frac{1}{4\\pi\\varepsilon_0 \\varepsilon_r} \\cdot \\frac{|q_1 q_2|}{r^2}");
+  const aldolEq = renderFormulaHTML("2\\,\\text{CH}_3\\text{CHO} \\xrightarrow{\\text{OH}^-} \\text{CH}_3\\text{CH}=\\text{CHCHO} + \\text{H}_2\\text{O}");
+  const opticsEq = renderFormulaHTML("\\frac{1}{f} = \\frac{1}{v} + \\frac{1}{u}");
 
   return `
     <div class="min-h-screen bg-[#FFFFFF] dark:bg-[#0B1120] text-[#0F172A] dark:text-[#F8FAFC] font-sans antialiased selection:bg-blue-600 selection:text-white flex flex-col overflow-x-hidden transition-colors duration-200">
@@ -154,7 +138,7 @@ export function renderLandingPage(): string {
       <!-- ==========================================
            SECTION 1: HERO SECTION & ASPIRATIONAL POSTER COMPOSITION
            ========================================== -->
-      <section class="relative pt-6 pb-16 sm:pt-10 sm:pb-24 lg:pt-16 lg:pb-28 overflow-hidden landing-grid-pattern dark:landing-dark-grid-pattern">
+      <section class="relative pt-4 pb-10 sm:pt-6 sm:pb-16 lg:pt-10 lg:pb-20 overflow-hidden landing-grid-pattern dark:landing-dark-grid-pattern">
         
         <!-- Ambient Radial Light Layers -->
         <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[48rem] h-[32rem] hero-radial-glow pointer-events-none -z-10 animate-ambient-glow"></div>
@@ -164,44 +148,44 @@ export function renderLandingPage(): string {
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <!-- Top Hero Editorial Typography -->
-          <div class="max-w-4xl mx-auto text-center space-y-6 sm:space-y-7">
+          <div class="max-w-4xl mx-auto text-center space-y-3.5 sm:space-y-4 md:space-y-5">
             
             <!-- Official VG Insights Logo at top of Hero -->
-            <div class="flex items-center justify-center pt-2 pb-1">
+            <div class="flex items-center justify-center pt-1 pb-0.5">
               ${renderBrandLogo({ size: 'hero' })}
             </div>
 
             <!-- Top Animated Badge -->
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50/90 dark:bg-blue-950/70 border border-blue-200/90 dark:border-blue-800 text-blue-700 dark:text-blue-300 text-xs font-bold tracking-wider uppercase shadow-xs">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50/90 dark:bg-blue-950/70 border border-blue-200/90 dark:border-blue-800 text-blue-700 dark:text-blue-300 text-[11px] sm:text-xs font-bold tracking-wider uppercase shadow-xs">
               <span class="w-2 h-2 rounded-full bg-blue-600 animate-ping"></span>
               <span>THE SMARTER WAY TO PREPARE FOR NEET</span>
             </div>
 
             <!-- Hero Headline -->
-            <h1 class="font-display text-4xl sm:text-6xl md:text-7xl lg:text-[80px] font-extrabold tracking-tight text-[#0F172A] dark:text-white leading-[1.06]">
+            <h1 class="font-display text-3xl sm:text-5xl md:text-6xl lg:text-[76px] font-extrabold tracking-tight text-[#0F172A] dark:text-white leading-[1.08]">
               Your NEET Preparation.<br />
               <span class="text-[#2563EB] bg-gradient-to-r from-[#2563EB] via-[#3B82F6] to-[#1D4ED8] bg-clip-text text-transparent">Reimagined.</span>
             </h1>
 
             <!-- Subheading -->
-            <p class="text-lg sm:text-xl md:text-2xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed">
+            <p class="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed">
               Learn concepts. Practice questions. Master your weaknesses.
             </p>
 
             <!-- CTA Buttons -->
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 pt-2">
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-1">
               <button
                 type="button"
                 id="btn-hero-start-free"
-                class="w-full sm:w-auto px-10 py-4.5 rounded-2xl bg-gradient-to-r from-[#2563EB] to-[#1D4ED8] hover:from-[#1D4ED8] hover:to-[#1E40AF] text-white text-lg font-bold shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 active:scale-[0.98] transition-all flex items-center justify-center gap-2.5 cursor-pointer"
+                class="w-full sm:w-auto px-8 py-3.5 sm:px-9 sm:py-4 rounded-2xl bg-gradient-to-r from-[#2563EB] to-[#1D4ED8] hover:from-[#1D4ED8] hover:to-[#1E40AF] text-white text-base sm:text-lg font-bold shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 active:scale-[0.98] transition-all flex items-center justify-center gap-2.5 cursor-pointer"
               >
                 <span>Start Learning Free</span>
-                <span class="text-blue-200 text-xl">→</span>
+                <span class="text-blue-200 text-lg sm:text-xl">→</span>
               </button>
             </div>
 
             <!-- Trust Row -->
-            <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs sm:text-sm font-semibold text-slate-500 dark:text-slate-400 pt-2">
+            <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs sm:text-sm font-semibold text-slate-500 dark:text-slate-400 pt-1">
               <span class="flex items-center gap-1.5">
                 <svg class="w-4 h-4 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
@@ -227,7 +211,7 @@ export function renderLandingPage(): string {
           <!-- ==========================================
                HERO VISUAL: CINEMATIC ASPIRATIONAL POSTER & PRODUCT DASHBOARD
                ========================================== -->
-          <div id="hero-visual-container" class="mt-12 sm:mt-16 lg:mt-20 relative max-w-5xl mx-auto perspective-1500">
+          <div id="hero-visual-container" class="mt-8 sm:mt-10 lg:mt-14 relative max-w-5xl mx-auto perspective-1500">
             
             <!-- Atmospheric Outer Glow -->
             <div class="absolute -inset-2 bg-gradient-to-r from-blue-600/20 via-indigo-600/15 to-blue-600/20 rounded-3xl blur-2xl -z-10"></div>
@@ -376,35 +360,35 @@ export function renderLandingPage(): string {
       <!-- ==========================================
            SECTION 2: STATISTICS & PROVEN COVERAGE
            ========================================== -->
-      <section class="py-14 sm:py-18 bg-[#F8FAFC] dark:bg-[#0B132B]/60 border-y border-slate-200/80 dark:border-slate-800">
+      <section class="py-8 sm:py-12 bg-[#F8FAFC] dark:bg-[#0B132B]/60 border-y border-slate-200/80 dark:border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="grid grid-cols-2 md:grid-cols-5 gap-6 sm:gap-8 text-center">
+          <div class="grid grid-cols-2 md:grid-cols-5 gap-4 sm:gap-6 text-center">
             
-            <div class="space-y-1 reveal-on-scroll">
+            <div class="space-y-0.5 sm:space-y-1 reveal-on-scroll">
               <div class="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-blue-600 dark:text-blue-400 counter-val" data-target="10" data-suffix="+">10+</div>
               <p class="text-xs sm:text-sm font-bold text-slate-700 dark:text-slate-300">Years of PYQs</p>
               <p class="text-[11px] text-slate-500 dark:text-slate-400">2014 to 2025 Solved</p>
             </div>
 
-            <div class="space-y-1 reveal-on-scroll reveal-stagger-1">
+            <div class="space-y-0.5 sm:space-y-1 reveal-on-scroll reveal-stagger-1">
               <div class="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white counter-val" data-target="${totalTopics}" data-suffix="+">${totalTopics}+</div>
               <p class="text-xs sm:text-sm font-bold text-slate-700 dark:text-slate-300">High-Yield Concepts</p>
               <p class="text-[11px] text-slate-500 dark:text-slate-400">NCERT Mastered</p>
             </div>
 
-            <div class="space-y-1 reveal-on-scroll reveal-stagger-2">
+            <div class="space-y-0.5 sm:space-y-1 reveal-on-scroll reveal-stagger-2">
               <div class="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-emerald-600 dark:text-emerald-400 counter-val" data-target="720" data-suffix=" Marks">720 Marks</div>
               <p class="text-xs sm:text-sm font-bold text-slate-700 dark:text-slate-300">Full-Length Mocks</p>
               <p class="text-[11px] text-slate-500 dark:text-slate-400">Real NTA Simulation</p>
             </div>
 
-            <div class="space-y-1 reveal-on-scroll reveal-stagger-3">
+            <div class="space-y-0.5 sm:space-y-1 reveal-on-scroll reveal-stagger-3">
               <div class="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-indigo-600 dark:text-indigo-400 counter-val" data-target="3" data-suffix=" Subjects">3 Subjects</div>
               <p class="text-xs sm:text-sm font-bold text-slate-700 dark:text-slate-300">Core Disciplines</p>
               <p class="text-[11px] text-slate-500 dark:text-slate-400">Physics, Chem, Bio</p>
             </div>
 
-            <div class="col-span-2 md:col-span-1 space-y-1 reveal-on-scroll reveal-stagger-4">
+            <div class="col-span-2 md:col-span-1 space-y-0.5 sm:space-y-1 reveal-on-scroll reveal-stagger-4">
               <div class="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-rose-600 dark:text-rose-400 counter-val" data-target="100" data-suffix="%">100%</div>
               <p class="text-xs sm:text-sm font-bold text-slate-700 dark:text-slate-300">NCERT-Aligned</p>
               <p class="text-[11px] text-slate-500 dark:text-slate-400">Zero Distractions</p>
@@ -417,28 +401,28 @@ export function renderLandingPage(): string {
       <!-- ==========================================
            SECTION 3: ONE ECOSYSTEM FOR NEET PREPARATION
            ========================================== -->
-      <section id="ecosystem" class="py-20 lg:py-28 bg-[#FFFFFF] dark:bg-[#0B1120] relative overflow-hidden">
+      <section id="ecosystem" class="py-12 sm:py-16 lg:py-20 bg-[#FFFFFF] dark:bg-[#0B1120] relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div class="text-center max-w-3xl mx-auto space-y-4 mb-16 reveal-on-scroll">
+          <div class="text-center max-w-3xl mx-auto space-y-2.5 sm:space-y-3 mb-8 sm:mb-10 lg:mb-12 reveal-on-scroll">
             <span class="text-xs font-extrabold tracking-widest text-blue-600 dark:text-blue-400 uppercase">
               COMPLETE INTEGRATED ARCHITECTURE
             </span>
-            <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-[#0F172A] dark:text-white tracking-tight leading-tight">
+            <h2 class="font-display text-2xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F172A] dark:text-white tracking-tight leading-tight">
               One ecosystem for your entire NEET preparation.
             </h2>
-            <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300">
+            <p class="text-sm sm:text-base lg:text-lg text-slate-600 dark:text-slate-300">
               Everything you need to learn, practice, revise and improve — in one place.
             </p>
           </div>
 
           <!-- Central Ecosystem Diagram Visual -->
-          <div class="relative max-w-4xl mx-auto bg-slate-50 dark:bg-slate-900/70 rounded-3xl p-6 sm:p-10 lg:p-12 border border-slate-200/90 dark:border-slate-800 shadow-sm reveal-on-scroll">
+          <div class="relative max-w-4xl mx-auto bg-slate-50 dark:bg-slate-900/70 rounded-3xl p-5 sm:p-8 lg:p-10 border border-slate-200/90 dark:border-slate-800 shadow-sm reveal-on-scroll">
             
             <!-- Central Hub Node -->
-            <div class="text-center my-6">
-              <div class="inline-flex flex-col items-center justify-center p-5 sm:p-6 rounded-3xl bg-slate-900 text-white shadow-xl shadow-blue-500/15 border-4 border-white dark:border-slate-800">
-                <div class="mb-1.5">
+            <div class="text-center my-3 sm:my-4">
+              <div class="inline-flex flex-col items-center justify-center p-4 sm:p-5 rounded-3xl bg-slate-900 text-white shadow-xl shadow-blue-500/15 border-4 border-white dark:border-slate-800">
+                <div class="mb-1">
                   ${renderBrandLogo({ size: 'sm', isDarkOnly: true })}
                 </div>
                 <span class="text-xs text-blue-300 font-semibold mt-0.5">Central Learning Engine</span>
@@ -446,52 +430,52 @@ export function renderLandingPage(): string {
             </div>
 
             <!-- Orbiting 8 Integrated Modules -->
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 mt-8">
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mt-6 sm:mt-8">
               
-              <div class="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-md transition-all text-center space-y-2">
-                <div class="text-2xl">📚</div>
+              <div class="bg-white dark:bg-slate-900 p-3.5 sm:p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-md transition-all text-center space-y-1.5">
+                <div class="text-xl sm:text-2xl">📚</div>
                 <h3 class="font-display text-xs sm:text-sm font-bold text-slate-900 dark:text-white">Unified Library</h3>
                 <p class="text-[11px] text-slate-500 dark:text-slate-400">Class 11 & 12 structured notes</p>
               </div>
 
-              <div class="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-md transition-all text-center space-y-2">
-                <div class="text-2xl">🏆</div>
+              <div class="bg-white dark:bg-slate-900 p-3.5 sm:p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-md transition-all text-center space-y-1.5">
+                <div class="text-xl sm:text-2xl">🏆</div>
                 <h3 class="font-display text-xs sm:text-sm font-bold text-slate-900 dark:text-white">10+ Years PYQs</h3>
                 <p class="text-[11px] text-slate-500 dark:text-slate-400">2014–2025 verified solutions</p>
               </div>
 
-              <div class="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-md transition-all text-center space-y-2">
-                <div class="text-2xl">⚡</div>
+              <div class="bg-white dark:bg-slate-900 p-3.5 sm:p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-md transition-all text-center space-y-1.5">
+                <div class="text-xl sm:text-2xl">⚡</div>
                 <h3 class="font-display text-xs sm:text-sm font-bold text-slate-900 dark:text-white">Revision Sheets</h3>
                 <p class="text-[11px] text-slate-500 dark:text-slate-400">Formula & reaction mindmaps</p>
               </div>
 
-              <div class="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-md transition-all text-center space-y-2">
-                <div class="text-2xl">📝</div>
+              <div class="bg-white dark:bg-slate-900 p-3.5 sm:p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-md transition-all text-center space-y-1.5">
+                <div class="text-xl sm:text-2xl">📝</div>
                 <h3 class="font-display text-xs sm:text-sm font-bold text-slate-900 dark:text-white">Active Practice</h3>
                 <p class="text-[11px] text-slate-500 dark:text-slate-400">Targeted topic question drills</p>
               </div>
 
-              <div class="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-md transition-all text-center space-y-2">
-                <div class="text-2xl">📊</div>
+              <div class="bg-white dark:bg-slate-900 p-3.5 sm:p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-md transition-all text-center space-y-1.5">
+                <div class="text-xl sm:text-2xl">📊</div>
                 <h3 class="font-display text-xs sm:text-sm font-bold text-slate-900 dark:text-white">Progress Radar</h3>
                 <p class="text-[11px] text-slate-500 dark:text-slate-400">Real-time mastery tracking</p>
               </div>
 
-              <div class="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-md transition-all text-center space-y-2">
-                <div class="text-2xl">🧠</div>
+              <div class="bg-white dark:bg-slate-900 p-3.5 sm:p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-md transition-all text-center space-y-1.5">
+                <div class="text-xl sm:text-2xl">🧠</div>
                 <h3 class="font-display text-xs sm:text-sm font-bold text-slate-900 dark:text-white">AI Weakness Doctor</h3>
                 <p class="text-[11px] text-slate-500 dark:text-slate-400">Algorithmic error remedy</p>
               </div>
 
-              <div class="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-md transition-all text-center space-y-2">
-                <div class="text-2xl">⏱</div>
+              <div class="bg-white dark:bg-slate-900 p-3.5 sm:p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-md transition-all text-center space-y-1.5">
+                <div class="text-xl sm:text-2xl">⏱</div>
                 <h3 class="font-display text-xs sm:text-sm font-bold text-slate-900 dark:text-white">Study Stopwatch</h3>
                 <p class="text-[11px] text-slate-500 dark:text-slate-400">Focus timer per concept</p>
               </div>
 
-              <div class="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-md transition-all text-center space-y-2">
-                <div class="text-2xl">🎯</div>
+              <div class="bg-white dark:bg-slate-900 p-3.5 sm:p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-md transition-all text-center space-y-1.5">
+                <div class="text-xl sm:text-2xl">🎯</div>
                 <h3 class="font-display text-xs sm:text-sm font-bold text-slate-900 dark:text-white">Weekly 720 Mock</h3>
                 <p class="text-[11px] text-slate-500 dark:text-slate-400">180Q NTA standard test</p>
               </div>
@@ -506,23 +490,23 @@ export function renderLandingPage(): string {
       <!-- ==========================================
            SECTION 4: PYQ EXPLORER (REVERSE-ENGINEER THE EXAM)
            ========================================== -->
-      <section id="pyqs" class="py-20 lg:py-28 bg-[#F8FAFC] dark:bg-[#0B132B]/60 border-y border-slate-200/80 dark:border-slate-800">
+      <section id="pyqs" class="py-12 sm:py-16 lg:py-20 bg-[#F8FAFC] dark:bg-[#0B132B]/60 border-y border-slate-200/80 dark:border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div class="text-center max-w-3xl mx-auto space-y-4 mb-16 reveal-on-scroll">
+          <div class="text-center max-w-3xl mx-auto space-y-2.5 sm:space-y-3 mb-8 sm:mb-10 lg:mb-12 reveal-on-scroll">
             <span class="text-xs font-extrabold tracking-widest text-blue-600 dark:text-blue-400 uppercase">
               10+ YEARS PAST PAPERS
             </span>
-            <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-[#0F172A] dark:text-white tracking-tight leading-tight">
+            <h2 class="font-display text-2xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F172A] dark:text-white tracking-tight leading-tight">
               NEET has already asked the question.<br />Now understand why.
             </h2>
-            <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300">
+            <p class="text-sm sm:text-base lg:text-lg text-slate-600 dark:text-slate-300">
               Every past paper question from 2014 to 2025 comes with detailed verified solutions and 1-click links to the underlying concept.
             </p>
           </div>
 
           <!-- Realistic PYQ Mockup Interface -->
-          <div class="max-w-3xl mx-auto bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/90 dark:border-slate-800 shadow-xl p-6 sm:p-8 space-y-6 text-left reveal-on-scroll">
+          <div class="max-w-3xl mx-auto bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/90 dark:border-slate-800 shadow-xl p-5 sm:p-7 space-y-4 sm:space-y-5 text-left reveal-on-scroll">
             
             <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-100 dark:border-slate-800">
               <div class="flex items-center gap-2">
@@ -533,31 +517,31 @@ export function renderLandingPage(): string {
             </div>
 
             <!-- Question Statement -->
-            <div class="space-y-2">
+            <div class="space-y-1.5">
               <p class="text-base sm:text-lg font-bold text-slate-900 dark:text-white leading-relaxed">
                 Q: Which of the following expressions correctly represents the relationship between standard Gibbs energy change ($\Delta G^\circ$) and the equilibrium constant ($K$) of a reaction?
               </p>
             </div>
 
             <!-- 4 Options Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-semibold">
-              <div class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 bg-slate-50/50 dark:bg-slate-950/50">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs font-semibold">
+              <div class="p-3 sm:p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 bg-slate-50/50 dark:bg-slate-950/50">
                 A) $\\Delta G^\\circ = RT \\ln K$
               </div>
-              <div class="p-3.5 rounded-xl border-2 border-emerald-500 bg-emerald-50/70 dark:bg-emerald-950/70 text-emerald-900 dark:text-emerald-200 font-bold flex items-center justify-between shadow-xs">
+              <div class="p-3 sm:p-3.5 rounded-xl border-2 border-emerald-500 bg-emerald-50/70 dark:bg-emerald-950/70 text-emerald-900 dark:text-emerald-200 font-bold flex items-center justify-between shadow-xs">
                 <span>B) $\\Delta G^\\circ = -RT \\ln K$</span>
                 <span class="w-5 h-5 rounded-full bg-emerald-500 text-white flex items-center justify-center text-[10px]">✓</span>
               </div>
-              <div class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 bg-slate-50/50 dark:bg-slate-950/50">
+              <div class="p-3 sm:p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 bg-slate-50/50 dark:bg-slate-950/50">
                 C) $\\Delta G^\\circ = -nFE^\\circ$
               </div>
-              <div class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 bg-slate-50/50 dark:bg-slate-950/50">
+              <div class="p-3 sm:p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 bg-slate-50/50 dark:bg-slate-950/50">
                 D) $\\Delta G^\\circ = \\Delta H^\\circ - T\\Delta S^\\circ$
               </div>
             </div>
 
             <!-- Step-by-Step Verified Solution -->
-            <div class="p-4 sm:p-5 bg-slate-50 dark:bg-slate-950 rounded-2xl border border-slate-200/80 dark:border-slate-800 space-y-3">
+            <div class="p-3.5 sm:p-4 bg-slate-50 dark:bg-slate-950 rounded-2xl border border-slate-200/80 dark:border-slate-800 space-y-2 sm:space-y-2.5">
               <div class="flex items-center justify-between text-xs font-bold text-slate-800 dark:text-slate-200">
                 <span class="flex items-center gap-1.5 text-emerald-700 dark:text-emerald-400">
                   <span>✓</span> Step-by-Step Verified Solution
@@ -567,10 +551,10 @@ export function renderLandingPage(): string {
               <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                 At thermodynamic equilibrium, $\\Delta G = 0$ and the reaction quotient $Q = K$. From the fundamental isotherm:
               </p>
-              <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 text-center dark-formula-target">
+              <div class="p-2 sm:p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 text-center dark-formula-target">
                 ${gibbsKeq}
               </div>
-              <div class="pt-1">
+              <div class="pt-0.5">
                 <a href="#home" class="inline-flex items-center gap-1.5 text-xs font-bold text-blue-600 dark:text-blue-400 hover:underline">
                   <span>Learn Related Concept: Gibbs Free Energy & Equilibrium →</span>
                 </a>
@@ -578,7 +562,7 @@ export function renderLandingPage(): string {
             </div>
 
             <!-- Visual Flow Indicator -->
-            <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-center">
+            <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-center">
               <div class="flex-1">
                 <div class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase">Step 1</div>
                 <div class="text-xs font-extrabold text-blue-600 dark:text-blue-400">PYQ Question</div>
@@ -603,53 +587,53 @@ export function renderLandingPage(): string {
       <!-- ==========================================
            SECTION 5: FORMULA / CONCEPT VISUAL (KATEX BEAUTY)
            ========================================== -->
-      <section id="library" class="py-20 lg:py-28 bg-[#FFFFFF] dark:bg-[#0B1120]">
+      <section id="library" class="py-12 sm:py-16 lg:py-20 bg-[#FFFFFF] dark:bg-[#0B1120]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             <!-- Left Description -->
-            <div class="lg:col-span-5 space-y-6 text-left reveal-on-scroll">
+            <div class="lg:col-span-5 space-y-4 text-left reveal-on-scroll">
               <span class="text-xs font-extrabold tracking-widest text-blue-600 dark:text-blue-400 uppercase">
                 ACADEMIC RIGOR & CLARITY
               </span>
-              <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F172A] dark:text-white tracking-tight leading-tight">
+              <h2 class="font-display text-2xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F172A] dark:text-white tracking-tight leading-tight">
                 From formula to understanding.
               </h2>
-              <p class="text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+              <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
                 NEET questions test the derivation and constraints behind formulas. VG Insights renders beautifully formatted mathematical equations alongside worked examples and trap alerts.
               </p>
 
-              <div class="space-y-3 pt-2">
-                <div class="flex items-start gap-3">
-                  <div class="w-6 h-6 rounded-lg bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">✓</div>
-                  <p class="text-sm font-semibold text-slate-700 dark:text-slate-300">KaTeX mathematical typography with standard fractions & units.</p>
+              <div class="space-y-2.5 pt-1">
+                <div class="flex items-start gap-2.5">
+                  <div class="w-5 h-5 rounded-lg bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">✓</div>
+                  <p class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300">KaTeX mathematical typography with standard fractions & units.</p>
                 </div>
-                <div class="flex items-start gap-3">
-                  <div class="w-6 h-6 rounded-lg bg-amber-100 dark:bg-amber-950 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">⚠️</div>
-                  <p class="text-sm font-semibold text-slate-700 dark:text-slate-300">NEET Trap Warnings: Prevent common examiner calculation traps.</p>
+                <div class="flex items-start gap-2.5">
+                  <div class="w-5 h-5 rounded-lg bg-amber-100 dark:bg-amber-950 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">⚠️</div>
+                  <p class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300">NEET Trap Warnings: Prevent common examiner calculation traps.</p>
                 </div>
-                <div class="flex items-start gap-3">
-                  <div class="w-6 h-6 rounded-lg bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">🧮</div>
-                  <p class="text-sm font-semibold text-slate-700 dark:text-slate-300">Worked step-by-step examples from standard Daniell & galvanic cells.</p>
+                <div class="flex items-start gap-2.5">
+                  <div class="w-5 h-5 rounded-lg bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">🧮</div>
+                  <p class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300">Worked step-by-step examples from standard Daniell & galvanic cells.</p>
                 </div>
               </div>
             </div>
 
             <!-- Right Concept Interface Mockup -->
             <div class="lg:col-span-7 reveal-on-scroll">
-              <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/90 dark:border-slate-800 shadow-xl p-6 sm:p-8 space-y-5 text-left relative">
+              <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/90 dark:border-slate-800 shadow-xl p-5 sm:p-7 space-y-4 text-left relative">
                 
-                <div class="flex flex-wrap items-center justify-between gap-2 pb-4 border-b border-slate-100 dark:border-slate-800">
+                <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-100 dark:border-slate-800">
                   <div>
-                    <div class="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400 font-semibold mb-1">
+                    <div class="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400 font-semibold mb-0.5">
                       <span>Class 12</span>
                       <span>›</span>
                       <span>Chemistry</span>
                       <span>›</span>
                       <span>Electrochemistry</span>
                     </div>
-                    <h3 class="font-display text-2xl font-black text-slate-900 dark:text-white">
+                    <h3 class="font-display text-xl sm:text-2xl font-black text-slate-900 dark:text-white">
                       Nernst Equation & Cell Potential
                     </h3>
                   </div>
@@ -659,32 +643,32 @@ export function renderLandingPage(): string {
                 </div>
 
                 <!-- Beautiful KaTeX Formula Display -->
-                <div class="p-4 sm:p-5 bg-slate-50 dark:bg-slate-950 rounded-2xl border border-slate-200/80 dark:border-slate-800 space-y-2">
+                <div class="p-3.5 sm:p-4 bg-slate-50 dark:bg-slate-950 rounded-2xl border border-slate-200/80 dark:border-slate-800 space-y-1.5">
                   <div class="text-xs font-bold text-slate-700 dark:text-slate-300">Master Formula: Cell EMF Under Non-Standard Conditions</div>
-                  <div class="py-2.5 px-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 font-bold text-slate-900 dark:text-white dark-formula-target">
+                  <div class="py-1 px-2 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
                     ${nernstEq}
                   </div>
                 </div>
 
                 <!-- Worked Example Daniell Cell -->
-                <div class="p-4 sm:p-5 bg-blue-50/60 dark:bg-blue-950/40 rounded-2xl border border-blue-200/70 dark:border-blue-900/60 space-y-2">
+                <div class="p-3.5 sm:p-4 bg-blue-50/60 dark:bg-blue-950/40 rounded-2xl border border-blue-200/70 dark:border-blue-900/60 space-y-2">
                   <div class="flex items-center justify-between text-xs font-bold text-blue-900 dark:text-blue-300">
                     <span>Worked Example: Daniell Cell</span>
                     <span class="text-blue-600 dark:text-blue-400">NEET Standard</span>
                   </div>
-                  <p class="text-xs text-slate-700 dark:text-slate-300">
-                    For $\\text{Zn}(s) + \\text{Cu}^{2+}(0.1\\text{ M}) \\rightarrow \\text{Zn}^{2+}(0.01\\text{ M}) + \\text{Cu}(s)$ with $E^\\circ_{\\text{cell}} = 1.10\\text{ V}$, calculate $E_{\\text{cell}}$.
+                  <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">
+                    ${renderInlineMathHTML("For $\\text{Zn}(s) + \\text{Cu}^{2+}(0.1\\text{ M}) \\rightarrow \\text{Zn}^{2+}(0.01\\text{ M}) + \\text{Cu}(s)$ with $E^\\circ_{\\text{cell}} = 1.10\\text{ V}$, calculate $E_{\\text{cell}}$.")}
                   </p>
-                  <p class="text-xs font-mono text-blue-900 dark:text-blue-200 bg-white dark:bg-slate-900 p-2.5 rounded-xl border border-blue-100 dark:border-slate-800 dark-formula-target">
-                    E_{\\text{cell}} = 1.10 - \\frac{0.0591}{2}\\log_{10}\\left(\\frac{0.01}{0.1}\\right) = 1.10 + 0.0295 = 1.1295\\text{ V}
-                  </p>
+                  <div class="bg-white dark:bg-slate-900 p-2.5 rounded-xl border border-blue-100 dark:border-slate-800 overflow-x-auto text-xs">
+                    ${renderFormulaHTML("E_{\\text{cell}} = 1.10 - \\frac{0.0591}{2}\\log_{10}\\left(\\frac{0.01}{0.1}\\right) = 1.10 + 0.0295 = 1.1295\\text{ V}", { displayMode: false })}
+                  </div>
                 </div>
 
                 <!-- NEET Trap Warning -->
-                <div class="p-4 bg-rose-50 dark:bg-rose-950/40 rounded-2xl border border-rose-200/80 dark:border-rose-900/60 flex items-start gap-3 text-xs text-rose-900 dark:text-rose-200">
-                  <span class="text-rose-600 dark:text-rose-400 font-bold text-base">⚠️</span>
+                <div class="p-3.5 bg-rose-50 dark:bg-rose-950/40 rounded-2xl border border-rose-200/80 dark:border-rose-900/60 flex items-start gap-2.5 text-xs text-rose-900 dark:text-rose-200">
+                  <span class="text-rose-600 dark:text-rose-400 font-bold text-sm">⚠️</span>
                   <div>
-                    <span class="font-bold">NEET Trap:</span> In reaction quotient $Q$, pure solids ($[\\text{Zn}] = [\\text{Cu}] = 1$) are omitted. Always raise ion concentrations to their stoichiometric powers (e.g. $[\\text{Ag}^+]^2$).
+                    <span class="font-bold">NEET Trap:</span> ${renderInlineMathHTML("In reaction quotient $Q$, pure solids ($[\\text{Zn}] = [\\text{Cu}] = 1$) are omitted. Always raise ion concentrations to their stoichiometric powers (e.g. $[\\text{Ag}^+]^2$).")}
                   </div>
                 </div>
 
@@ -698,73 +682,73 @@ export function renderLandingPage(): string {
       <!-- ==========================================
            SECTION 6: WEEKLY MOCK TEST SECTION (720 MARKS)
            ========================================== -->
-      <section id="mock" class="py-20 lg:py-28 bg-gradient-to-b from-[#EFF6FF] to-[#FFFFFF] dark:from-[#0B132B] dark:to-[#0B1120] border-y border-slate-200/80 dark:border-slate-800">
+      <section id="mock" class="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-[#EFF6FF] to-[#FFFFFF] dark:from-[#0B132B] dark:to-[#0B1120] border-y border-slate-200/80 dark:border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div class="text-center max-w-3xl mx-auto space-y-4 mb-16 reveal-on-scroll">
+          <div class="text-center max-w-3xl mx-auto space-y-2.5 sm:space-y-3 mb-8 sm:mb-10 lg:mb-12 reveal-on-scroll">
             <span class="text-xs font-extrabold tracking-widest text-blue-600 dark:text-blue-400 uppercase">
               REAL EXAM BENCHMARK
             </span>
-            <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-[#0F172A] dark:text-white tracking-tight leading-tight">
+            <h2 class="font-display text-2xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F172A] dark:text-white tracking-tight leading-tight">
               Every week.<br />One real test.
             </h2>
-            <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300">
+            <p class="text-sm sm:text-base lg:text-lg text-slate-600 dark:text-slate-300">
               Train under the same pressure. Know exactly where you stand.
             </p>
           </div>
 
           <!-- Mock Simulation Card Visual -->
-          <div class="max-w-4xl mx-auto bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/90 dark:border-slate-800 shadow-xl p-6 sm:p-10 space-y-8 text-left reveal-on-scroll">
+          <div class="max-w-4xl mx-auto bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/90 dark:border-slate-800 shadow-xl p-5 sm:p-8 space-y-5 sm:space-y-6 text-left reveal-on-scroll">
             
-            <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
+            <div class="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-slate-100 dark:border-slate-800">
               <div>
-                <span class="px-2.5 py-1 rounded bg-blue-100 dark:bg-blue-950 text-blue-800 dark:text-blue-300 text-xs font-bold">ALL-INDIA SIMULATION #08</span>
-                <h3 class="font-display text-2xl font-black text-slate-900 dark:text-white mt-1">
+                <span class="px-2.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-800 dark:text-blue-300 text-xs font-bold">ALL-INDIA SIMULATION #08</span>
+                <h3 class="font-display text-xl sm:text-2xl font-black text-slate-900 dark:text-white mt-1">
                   National Full-Length NEET Mock
                 </h3>
               </div>
               <div class="text-right">
                 <span class="text-xs font-bold text-slate-400 uppercase">Your Performance</span>
-                <div class="text-3xl sm:text-4xl font-black text-blue-600 dark:text-blue-400">
-                  567 <span class="text-base text-slate-400 font-semibold">/ 720</span>
+                <div class="text-2xl sm:text-4xl font-black text-blue-600 dark:text-blue-400">
+                  567 <span class="text-sm sm:text-base text-slate-400 font-semibold">/ 720</span>
                 </div>
               </div>
             </div>
 
             <!-- Subject-wise Marks Progress -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3.5 sm:gap-4">
               
               <!-- Physics Bar -->
-              <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/70 dark:border-slate-800 space-y-2.5">
+              <div class="p-3.5 sm:p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/70 dark:border-slate-800 space-y-2">
                 <div class="flex items-center justify-between text-xs font-bold">
                   <span class="text-slate-800 dark:text-slate-200">⚡ Physics</span>
                   <span class="text-blue-600 dark:text-blue-400">142 / 180</span>
                 </div>
-                <div class="w-full h-2.5 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+                <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
                   <div class="h-full bg-blue-600 rounded-full transition-all duration-1000" style="width: 78.8%;"></div>
                 </div>
                 <p class="text-[11px] text-slate-500 dark:text-slate-400">Accuracy: 84% • 36 Correct, 4 Incorrect</p>
               </div>
 
               <!-- Chemistry Bar -->
-              <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/70 dark:border-slate-800 space-y-2.5">
+              <div class="p-3.5 sm:p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/70 dark:border-slate-800 space-y-2">
                 <div class="flex items-center justify-between text-xs font-bold">
                   <span class="text-slate-800 dark:text-slate-200">🧪 Chemistry</span>
                   <span class="text-emerald-600 dark:text-emerald-400">155 / 180</span>
                 </div>
-                <div class="w-full h-2.5 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+                <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
                   <div class="h-full bg-emerald-600 rounded-full transition-all duration-1000" style="width: 86.1%;"></div>
                 </div>
                 <p class="text-[11px] text-slate-500 dark:text-slate-400">Accuracy: 91% • 39 Correct, 2 Incorrect</p>
               </div>
 
               <!-- Biology Bar -->
-              <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/70 dark:border-slate-800 space-y-2.5">
+              <div class="p-3.5 sm:p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/70 dark:border-slate-800 space-y-2">
                 <div class="flex items-center justify-between text-xs font-bold">
                   <span class="text-slate-800 dark:text-slate-200">🧬 Biology</span>
                   <span class="text-indigo-600 dark:text-indigo-400">320 / 360</span>
                 </div>
-                <div class="w-full h-2.5 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+                <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
                   <div class="h-full bg-indigo-600 rounded-full transition-all duration-1000" style="width: 88.9%;"></div>
                 </div>
                 <p class="text-[11px] text-slate-500 dark:text-slate-400">Accuracy: 93% • 81 Correct, 6 Incorrect</p>
@@ -773,17 +757,17 @@ export function renderLandingPage(): string {
             </div>
 
             <!-- Bottom Test Meta & Action -->
-            <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-100 dark:border-slate-800">
-              <div class="flex items-center gap-4 text-xs text-slate-500 dark:text-slate-400 font-semibold">
+            <div class="pt-3 flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-slate-100 dark:border-slate-800">
+              <div class="flex items-center gap-3 text-xs text-slate-500 dark:text-slate-400 font-semibold">
                 <span>⏱ 180 Minutes</span>
                 <span>•</span>
-                <span>🎯 78.7% Overall Accuracy</span>
+                <span>🎯 78.7% Accuracy</span>
                 <span>•</span>
-                <span>🏆 Top 3.8% Percentile</span>
+                <span>🏆 Top 3.8%</span>
               </div>
               <a
                 href="#weekly-mock"
-                class="w-full sm:w-auto px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold shadow-md shadow-blue-500/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2"
+                class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold shadow-md shadow-blue-500/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2"
               >
                 <span>Attempt Live Mock</span>
                 <span>→</span>
@@ -798,7 +782,7 @@ export function renderLandingPage(): string {
       <!-- ==========================================
            SECTION 7: AI WEAKNESS DOCTOR (DARK MIDNIGHT SECTION)
            ========================================== -->
-      <section id="weakness-doctor" class="py-20 lg:py-32 bg-[#0F172A] text-white relative overflow-hidden landing-dark-grid-pattern">
+      <section id="weakness-doctor" class="py-12 sm:py-16 lg:py-20 bg-[#0F172A] text-white relative overflow-hidden landing-dark-grid-pattern">
         
         <!-- Neural Ambient Glows -->
         <div class="absolute -top-40 -left-40 w-96 h-96 bg-blue-500/15 rounded-full blur-3xl pointer-events-none"></div>
@@ -806,54 +790,54 @@ export function renderLandingPage(): string {
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           
-          <div class="text-center max-w-3xl mx-auto space-y-4 mb-16 reveal-on-scroll">
+          <div class="text-center max-w-3xl mx-auto space-y-2.5 sm:space-y-3 mb-8 sm:mb-10 lg:mb-12 reveal-on-scroll">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-950/80 border border-rose-800/80 text-rose-400 text-xs font-extrabold uppercase tracking-widest">
               <span class="w-2 h-2 rounded-full bg-rose-500 animate-ping"></span>
               <span>PATENTED DIAGNOSTIC ENGINE</span>
             </div>
-            <h2 class="font-display text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+            <h2 class="font-display text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
               Your preparation becomes personal.
             </h2>
-            <p class="text-base sm:text-lg text-slate-400">
+            <p class="text-sm sm:text-base lg:text-lg text-slate-400">
               Identify what is holding you back and focus your practice where it matters.
             </p>
           </div>
 
           <!-- Futuristic AI Diagnostic UI -->
-          <div class="max-w-4xl mx-auto bg-slate-900/90 backdrop-blur-xl rounded-3xl border border-slate-800 p-6 sm:p-10 shadow-2xl space-y-8 reveal-on-scroll">
+          <div class="max-w-4xl mx-auto bg-slate-900/90 backdrop-blur-xl rounded-3xl border border-slate-800 p-5 sm:p-8 shadow-2xl space-y-6 reveal-on-scroll">
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 items-center">
               
               <!-- State 1: Misconception Detected -->
-              <div class="p-5 rounded-2xl bg-rose-950/40 border border-rose-900/60 space-y-3">
+              <div class="p-4 sm:p-5 rounded-2xl bg-rose-950/40 border border-rose-900/60 space-y-2">
                 <div class="flex items-center justify-between text-xs">
                   <span class="px-2 py-0.5 rounded bg-rose-900/70 text-rose-300 font-bold uppercase text-[10px]">Misconception</span>
                   <span class="text-rose-400 font-bold">42% Accuracy</span>
                 </div>
-                <h4 class="font-display text-base font-bold text-white">Electrochemistry</h4>
+                <h4 class="font-display text-sm sm:text-base font-bold text-white">Electrochemistry</h4>
                 <p class="text-xs text-rose-200/80 leading-relaxed">
                   "Recurring calculation error in standard cell EMF when applying Nernst equation log term."
                 </p>
               </div>
 
               <!-- State 2: AI Doctor Diagnostic Remedy -->
-              <div class="p-5 rounded-2xl bg-blue-950/60 border border-blue-800/80 space-y-3 text-center">
-                <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-lg mx-auto shadow-md shadow-blue-500/30">
+              <div class="p-4 sm:p-5 rounded-2xl bg-blue-950/60 border border-blue-800/80 space-y-2 text-center">
+                <div class="w-9 h-9 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-base mx-auto shadow-md shadow-blue-500/30">
                   ⚡
                 </div>
-                <h4 class="font-display text-sm font-bold text-white">AI Weakness Doctor</h4>
+                <h4 class="font-display text-xs sm:text-sm font-bold text-white">AI Weakness Doctor</h4>
                 <p class="text-xs text-blue-200 leading-relaxed">
                   Targeted drill generated: 12 high-precision diagnostic questions with active feedback.
                 </p>
               </div>
 
               <!-- State 3: Post-Drill Mastery -->
-              <div class="p-5 rounded-2xl bg-emerald-950/40 border border-emerald-900/60 space-y-3">
+              <div class="p-4 sm:p-5 rounded-2xl bg-emerald-950/40 border border-emerald-900/60 space-y-2">
                 <div class="flex items-center justify-between text-xs">
                   <span class="px-2 py-0.5 rounded bg-emerald-900/70 text-emerald-300 font-bold uppercase text-[10px]">Post-Drill</span>
                   <span class="text-emerald-400 font-bold">78% Accuracy</span>
                 </div>
-                <h4 class="font-display text-base font-bold text-white">Concept Mastered</h4>
+                <h4 class="font-display text-sm sm:text-base font-bold text-white">Concept Mastered</h4>
                 <p class="text-xs text-emerald-200/80 leading-relaxed">
                   +16 marks score surge projected in upcoming All-India mock test series.
                 </p>
@@ -862,10 +846,10 @@ export function renderLandingPage(): string {
             </div>
 
             <!-- Launch Button -->
-            <div class="pt-4 text-center">
+            <div class="pt-2 sm:pt-3 text-center">
               <a
                 href="#weakness-doctor"
-                class="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-r from-rose-600 to-indigo-600 hover:from-rose-500 hover:to-indigo-500 text-white text-sm font-bold shadow-lg shadow-rose-600/30 active:scale-[0.98] transition-all"
+                class="inline-flex items-center gap-2 px-7 py-3 sm:px-8 sm:py-3.5 rounded-2xl bg-gradient-to-r from-rose-600 to-indigo-600 hover:from-rose-500 hover:to-indigo-500 text-white text-xs sm:text-sm font-bold shadow-lg shadow-rose-600/30 active:scale-[0.98] transition-all"
               >
                 <span>Launch Weakness Doctor</span>
                 <span>→</span>
@@ -880,51 +864,51 @@ export function renderLandingPage(): string {
       <!-- ==========================================
            SECTION 8: ACTIVE RECALL LOOP
            ========================================== -->
-      <section class="py-20 lg:py-28 bg-[#FFFFFF] dark:bg-[#0B1120]">
+      <section class="py-12 sm:py-16 lg:py-20 bg-[#FFFFFF] dark:bg-[#0B1120]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div class="text-center max-w-3xl mx-auto space-y-4 mb-16 reveal-on-scroll">
+          <div class="text-center max-w-3xl mx-auto space-y-2.5 sm:space-y-3 mb-8 sm:mb-10 lg:mb-12 reveal-on-scroll">
             <span class="text-xs font-extrabold tracking-widest text-blue-600 dark:text-blue-400 uppercase">
               COGNITIVE RETENTION
             </span>
-            <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-[#0F172A] dark:text-white tracking-tight leading-tight">
+            <h2 class="font-display text-2xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F172A] dark:text-white tracking-tight leading-tight">
               Learn it.<br />Solve it.<br />Own it.
             </h2>
-            <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300">
+            <p class="text-sm sm:text-base lg:text-lg text-slate-600 dark:text-slate-300">
               The continuous 4-step loop engineered to turn weak questions into permanent retention.
             </p>
           </div>
 
           <!-- 4-Step Process Grid -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal-on-scroll">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 reveal-on-scroll">
             
-            <div class="p-6 rounded-3xl bg-blue-50/60 dark:bg-blue-950/40 border border-blue-200/80 dark:border-blue-900/60 space-y-3">
-              <span class="font-display text-2xl font-black text-blue-600 dark:text-blue-400">01</span>
-              <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white">Attempt Question</h3>
+            <div class="p-4.5 sm:p-5 rounded-3xl bg-blue-50/60 dark:bg-blue-950/40 border border-blue-200/80 dark:border-blue-900/60 space-y-2">
+              <span class="font-display text-xl sm:text-2xl font-black text-blue-600 dark:text-blue-400">01</span>
+              <h3 class="font-display text-base font-bold text-slate-900 dark:text-white">Attempt Question</h3>
               <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                 Test yourself under realistic timed conditions without peeking at answers.
               </p>
             </div>
 
-            <div class="p-6 rounded-3xl bg-rose-50/60 dark:bg-rose-950/40 border border-rose-200/80 dark:border-rose-900/60 space-y-3">
-              <span class="font-display text-2xl font-black text-rose-600 dark:text-rose-400">02</span>
-              <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white">Detect Error</h3>
+            <div class="p-4.5 sm:p-5 rounded-3xl bg-rose-50/60 dark:bg-rose-950/40 border border-rose-200/80 dark:border-rose-900/60 space-y-2">
+              <span class="font-display text-xl sm:text-2xl font-black text-rose-600 dark:text-rose-400">02</span>
+              <h3 class="font-display text-base font-bold text-slate-900 dark:text-white">Detect Error</h3>
               <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                 Instantly isolate whether the mistake was formula, sign convention, or conceptual.
               </p>
             </div>
 
-            <div class="p-6 rounded-3xl bg-amber-50/60 dark:bg-amber-950/40 border border-amber-200/80 dark:border-amber-900/60 space-y-3">
-              <span class="font-display text-2xl font-black text-amber-600 dark:text-amber-400">03</span>
-              <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white">Review Concept</h3>
+            <div class="p-4.5 sm:p-5 rounded-3xl bg-amber-50/60 dark:bg-amber-950/40 border border-amber-200/80 dark:border-amber-900/60 space-y-2">
+              <span class="font-display text-xl sm:text-2xl font-black text-amber-600 dark:text-amber-400">03</span>
+              <h3 class="font-display text-base font-bold text-slate-900 dark:text-white">Review Concept</h3>
               <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                 Jump straight into the concise NCERT note and examine worked examples.
               </p>
             </div>
 
-            <div class="p-6 rounded-3xl bg-emerald-50/60 dark:bg-emerald-950/40 border border-emerald-200/80 dark:border-emerald-900/60 space-y-3">
-              <span class="font-display text-2xl font-black text-emerald-600 dark:text-emerald-400">04</span>
-              <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white">Mastery Achieved</h3>
+            <div class="p-4.5 sm:p-5 rounded-3xl bg-emerald-50/60 dark:bg-emerald-950/40 border border-emerald-200/80 dark:border-emerald-900/60 space-y-2">
+              <span class="font-display text-xl sm:text-2xl font-black text-emerald-600 dark:text-emerald-400">04</span>
+              <h3 class="font-display text-base font-bold text-slate-900 dark:text-white">Mastery Achieved</h3>
               <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                 Solve fresh variation questions until your accuracy surpasses 90%.
               </p>
@@ -938,62 +922,62 @@ export function renderLandingPage(): string {
       <!-- ==========================================
            SECTION 9: REVISION SECTION (HIGH-YIELD SHEETS)
            ========================================== -->
-      <section id="revision" class="py-20 lg:py-28 bg-[#F8FAFC] dark:bg-[#0B132B]/60 border-y border-slate-200/80 dark:border-slate-800">
+      <section id="revision" class="py-12 sm:py-16 lg:py-20 bg-[#F8FAFC] dark:bg-[#0B132B]/60 border-y border-slate-200/80 dark:border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div class="text-center max-w-3xl mx-auto space-y-4 mb-16 reveal-on-scroll">
+          <div class="text-center max-w-3xl mx-auto space-y-2.5 sm:space-y-3 mb-8 sm:mb-10 lg:mb-12 reveal-on-scroll">
             <span class="text-xs font-extrabold tracking-widest text-blue-600 dark:text-blue-400 uppercase">
               HIGH-YIELD REVISION SHEETS
             </span>
-            <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-[#0F172A] dark:text-white tracking-tight leading-tight">
+            <h2 class="font-display text-2xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F172A] dark:text-white tracking-tight leading-tight">
               Revision, without the chaos.
             </h2>
-            <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300">
+            <p class="text-sm sm:text-base lg:text-lg text-slate-600 dark:text-slate-300">
               Formula summaries, high-yield reactions, memory maps and exam traps — built for fast recall.
             </p>
           </div>
 
           <!-- Revision Cards Grid -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 reveal-on-scroll">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 reveal-on-scroll">
             
             <!-- Card 1: Gibbs Free Energy -->
-            <div class="bg-white dark:bg-slate-900 p-5 rounded-3xl border border-slate-200/90 dark:border-slate-800 shadow-sm hover:shadow-lg transition-all space-y-3">
+            <div class="bg-white dark:bg-slate-900 p-4 sm:p-4.5 rounded-3xl border border-slate-200/90 dark:border-slate-800 shadow-sm hover:shadow-lg transition-all space-y-2.5">
               <div class="flex items-center justify-between text-[11px]">
                 <span class="px-2 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 font-bold uppercase">Formula</span>
                 <span class="text-slate-400 font-semibold">Thermodynamics</span>
               </div>
               <h3 class="font-display text-base font-bold text-slate-900 dark:text-white">Gibbs Free Energy</h3>
-              <div class="p-3 bg-slate-50 dark:bg-slate-950 rounded-2xl text-center dark-formula-target">
+              <div class="p-1 bg-slate-50 dark:bg-slate-950 rounded-2xl text-center">
                 ${gibbsEq}
               </div>
               <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-                Spontaneous when $\\Delta G < 0$. Endothermic reactions become spontaneous at high temperatures if $\\Delta S > 0$.
+                ${renderInlineMathHTML("Spontaneous when $\\Delta G < 0$. Endothermic reactions become spontaneous at high temperatures if $\\Delta S > 0$.")}
               </p>
             </div>
 
             <!-- Card 2: Aldol Condensation -->
-            <div class="bg-white dark:bg-slate-900 p-5 rounded-3xl border border-slate-200/90 dark:border-slate-800 shadow-sm hover:shadow-lg transition-all space-y-3">
+            <div class="bg-white dark:bg-slate-900 p-4 sm:p-4.5 rounded-3xl border border-slate-200/90 dark:border-slate-800 shadow-sm hover:shadow-lg transition-all space-y-2.5">
               <div class="flex items-center justify-between text-[11px]">
                 <span class="px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 font-bold uppercase">Reaction</span>
                 <span class="text-slate-400 font-semibold">Aldehydes</span>
               </div>
               <h3 class="font-display text-base font-bold text-slate-900 dark:text-white">Aldol Condensation</h3>
-              <div class="p-2.5 bg-slate-50 dark:bg-slate-950 rounded-2xl text-center dark-formula-target">
+              <div class="p-1 bg-slate-50 dark:bg-slate-950 rounded-2xl text-center">
                 ${aldolEq}
               </div>
               <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-                Requires at least one $\\alpha$-hydrogen. Forms $\\alpha,\\beta$-unsaturated carbonyl compound upon dehydration.
+                ${renderInlineMathHTML("Requires at least one $\\alpha$-hydrogen. Forms $\\alpha,\\beta$-unsaturated carbonyl compound upon dehydration.")}
               </p>
             </div>
 
             <!-- Card 3: Genetic Code Rules -->
-            <div class="bg-white dark:bg-slate-900 p-5 rounded-3xl border border-slate-200/90 dark:border-slate-800 shadow-sm hover:shadow-lg transition-all space-y-3">
+            <div class="bg-white dark:bg-slate-900 p-4 sm:p-4.5 rounded-3xl border border-slate-200/90 dark:border-slate-800 shadow-sm hover:shadow-lg transition-all space-y-2.5">
               <div class="flex items-center justify-between text-[11px]">
                 <span class="px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 font-bold uppercase">High-Yield</span>
                 <span class="text-slate-400 font-semibold">Genetics</span>
               </div>
               <h3 class="font-display text-base font-bold text-slate-900 dark:text-white">Genetic Code Rules</h3>
-              <div class="p-3 bg-slate-50 dark:bg-slate-950 rounded-2xl text-xs font-bold text-slate-800 dark:text-slate-200 space-y-1">
+              <div class="p-2.5 bg-slate-50 dark:bg-slate-950 rounded-2xl text-xs font-bold text-slate-800 dark:text-slate-200 space-y-1">
                 <div>• Degenerate (61 codons, 20 AAs)</div>
                 <div>• Unambiguous & Universal</div>
                 <div>• AUG: Methionine & Start Codon</div>
@@ -1004,17 +988,17 @@ export function renderLandingPage(): string {
             </div>
 
             <!-- Card 4: NEET Trap Warning (Mirror Formula) -->
-            <div class="bg-white dark:bg-slate-900 p-5 rounded-3xl border border-slate-200/90 dark:border-slate-800 shadow-sm hover:shadow-lg transition-all space-y-3">
+            <div class="bg-white dark:bg-slate-900 p-4 sm:p-4.5 rounded-3xl border border-slate-200/90 dark:border-slate-800 shadow-sm hover:shadow-lg transition-all space-y-2.5">
               <div class="flex items-center justify-between text-[11px]">
                 <span class="px-2 py-0.5 rounded bg-rose-100 dark:bg-rose-950 text-rose-700 dark:text-rose-300 font-bold uppercase">NEET Trap</span>
                 <span class="text-slate-400 font-semibold">Ray Optics</span>
               </div>
               <h3 class="font-display text-base font-bold text-slate-900 dark:text-white">Mirror Formula Signs</h3>
-              <div class="p-3 bg-slate-50 dark:bg-slate-950 rounded-2xl text-center dark-formula-target">
+              <div class="p-1 bg-slate-50 dark:bg-slate-950 rounded-2xl text-center">
                 ${opticsEq}
               </div>
               <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-                Always substitute $u$, $v$, and $f$ with proper Cartesian signs (e.g. concave mirror $f < 0$).
+                ${renderInlineMathHTML("Always substitute $u$, $v$, and $f$ with proper Cartesian signs (e.g. concave mirror $f < 0$).")}
               </p>
             </div>
 
@@ -1026,42 +1010,42 @@ export function renderLandingPage(): string {
       <!-- ==========================================
            SECTION 11: FINAL DRAMATIC HERO CTA
            ========================================== -->
-      <section class="py-20 lg:py-32 bg-gradient-to-b from-[#FFFFFF] to-[#EFF6FF] dark:from-[#0B1120] dark:to-[#0B132B] text-center relative overflow-hidden">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 reveal-on-scroll">
+      <section class="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-[#FFFFFF] to-[#EFF6FF] dark:from-[#0B1120] dark:to-[#0B132B] text-center relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5 sm:space-y-6 reveal-on-scroll">
           
-          <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950 border border-blue-200 dark:border-blue-800 text-blue-700 dark:text-blue-300 text-xs font-bold uppercase tracking-wider">
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950 border border-blue-200 dark:border-blue-800 text-blue-700 dark:text-blue-300 text-xs font-bold uppercase tracking-wider">
             <span>GET READY FOR NEET UG 2027</span>
           </span>
 
-          <h2 class="font-display text-4xl sm:text-6xl lg:text-7xl font-extrabold text-[#0F172A] dark:text-white tracking-tight leading-[1.08]">
+          <h2 class="font-display text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#0F172A] dark:text-white tracking-tight leading-tight">
             Ready to master NEET,<br />
             <span class="text-[#2563EB] dark:text-blue-400">one concept at a time?</span>
           </h2>
 
-          <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-300 max-w-xl mx-auto leading-relaxed">
+          <p class="text-sm sm:text-base lg:text-lg text-slate-600 dark:text-slate-300 max-w-xl mx-auto leading-relaxed">
             Stop studying everything. Start mastering what matters.
           </p>
 
-          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 pt-1 sm:pt-2">
             <button
               type="button"
               id="btn-footer-start-free"
-              class="w-full sm:w-auto px-9 py-4 rounded-2xl bg-gradient-to-r from-[#2563EB] to-[#1D4ED8] hover:from-[#1D4ED8] hover:to-[#1E40AF] text-white text-base font-bold shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer"
+              class="w-full sm:w-auto px-8 py-3.5 rounded-2xl bg-gradient-to-r from-[#2563EB] to-[#1D4ED8] hover:from-[#1D4ED8] hover:to-[#1E40AF] text-white text-sm sm:text-base font-bold shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer"
             >
               <span>Start Learning Free</span>
-              <span class="text-blue-200 text-lg">→</span>
+              <span class="text-blue-200 text-base sm:text-lg">→</span>
             </button>
             <a
               href="#home"
               id="btn-footer-guest"
-              class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white dark:bg-slate-800 text-slate-800 dark:text-white border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 text-base font-bold shadow-xs active:scale-[0.98] transition-all flex items-center justify-center gap-2"
+              class="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-white dark:bg-slate-800 text-slate-800 dark:text-white border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 text-sm sm:text-base font-bold shadow-xs active:scale-[0.98] transition-all flex items-center justify-center gap-2"
             >
               <span>Continue Without Login</span>
               <span class="text-slate-400">⚡</span>
             </a>
           </div>
 
-          <p class="text-xs font-medium text-slate-400 pt-2">
+          <p class="text-xs font-medium text-slate-400 pt-1">
             No credit card required. Free to explore the entire NEET library.
           </p>
 
@@ -1071,10 +1055,10 @@ export function renderLandingPage(): string {
       <!-- ==========================================
            COMMUNITY & SOCIAL SHARE BAR (VIRAL ORGANIC GROWTH)
            ========================================== -->
-      <section class="py-8 bg-blue-600 dark:bg-blue-950/80 border-y border-blue-500/30 text-white">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-          <div class="space-y-1">
-            <h3 class="font-bold text-base sm:text-lg flex items-center justify-center sm:justify-start gap-2">
+      <section class="py-6 sm:py-8 bg-blue-600 dark:bg-blue-950/80 border-y border-blue-500/30 text-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3.5 sm:gap-4 text-center sm:text-left">
+          <div class="space-y-0.5">
+            <h3 class="font-bold text-sm sm:text-base flex items-center justify-center sm:justify-start gap-2">
               <span>🚀</span> Share VG Insights with Your NEET Study Group
             </h3>
             <p class="text-xs text-blue-100 dark:text-blue-200">
@@ -1086,7 +1070,7 @@ export function renderLandingPage(): string {
               href="https://api.whatsapp.com/send?text=${encodeURIComponent('🩺 Free NEET UG Preparation Platform: Chapterwise 10+ Years PYQs, 720-Mark Weekly Mocks, and AI Weakness Doctor on VG Insights: https://vginsights.in/')}"
               target="_blank"
               rel="noopener noreferrer"
-              class="px-4 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs flex items-center gap-1.5 transition-all shadow-md active:scale-95"
+              class="px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs flex items-center gap-1.5 transition-all shadow-md active:scale-95"
             >
               <span>💬</span> WhatsApp Batchmates
             </a>
@@ -1094,14 +1078,14 @@ export function renderLandingPage(): string {
               href="https://t.me/share/url?url=${encodeURIComponent('https://vginsights.in/')}&text=${encodeURIComponent('🩺 Free NEET UG Preparation: 10+ Years PYQs, 720 Mocks & AI Weakness Doctor on VG Insights:')}"
               target="_blank"
               rel="noopener noreferrer"
-              class="px-4 py-2.5 rounded-xl bg-sky-500 hover:bg-sky-600 text-white font-bold text-xs flex items-center gap-1.5 transition-all shadow-md active:scale-95"
+              class="px-4 py-2 rounded-xl bg-sky-500 hover:bg-sky-600 text-white font-bold text-xs flex items-center gap-1.5 transition-all shadow-md active:scale-95"
             >
               <span>✈️</span> Telegram Channel
             </a>
             <button
               type="button"
               id="btn-landing-copy-link"
-              class="px-4 py-2.5 rounded-xl bg-white/20 hover:bg-white/30 text-white font-bold text-xs flex items-center gap-1.5 transition-all active:scale-95"
+              class="px-4 py-2 rounded-xl bg-white/20 hover:bg-white/30 text-white font-bold text-xs flex items-center gap-1.5 transition-all active:scale-95"
             >
               <span>📋</span> <span id="landing-copy-text">Copy Link</span>
             </button>
@@ -1112,10 +1096,10 @@ export function renderLandingPage(): string {
       <!-- ==========================================
            FOUNDERS & LEADERSHIP SECTION (SOPHISTICATED & PRESTIGIOUS)
            ========================================== -->
-      <section id="founders" class="py-16 sm:py-24 bg-gradient-to-b from-slate-50/80 via-white to-slate-50/80 dark:from-[#0c1427]/80 dark:via-[#090f1e] dark:to-[#0c1427]/80 border-t border-slate-200/80 dark:border-slate-800/80">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 reveal-on-scroll">
+      <section id="founders" class="py-12 sm:py-16 bg-gradient-to-b from-slate-50/80 via-white to-slate-50/80 dark:from-[#0c1427]/80 dark:via-[#090f1e] dark:to-[#0c1427]/80 border-t border-slate-200/80 dark:border-slate-800/80">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-10 reveal-on-scroll">
           
-          <div class="text-center space-y-3">
+          <div class="text-center space-y-2.5">
             <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-[11px] font-bold uppercase tracking-widest shadow-sm">
               <span>✦</span> ACADEMIC & TECHNICAL LEADERSHIP
             </div>
@@ -1127,21 +1111,21 @@ export function renderLandingPage(): string {
             </p>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 max-w-3xl mx-auto">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 max-w-3xl mx-auto">
             
             <!-- Founder: Dr. Prajwal Kabadi, MBBS -->
-            <div class="relative group bg-white dark:bg-slate-900/95 rounded-3xl border border-slate-200/90 dark:border-slate-800/90 p-7 sm:p-8 shadow-sm hover:shadow-xl hover:border-blue-500/40 dark:hover:border-blue-500/40 transition-all duration-300 flex flex-col items-center text-center space-y-4">
+            <div class="relative group bg-white dark:bg-slate-900/95 rounded-3xl border border-slate-200/90 dark:border-slate-800/90 p-5 sm:p-7 shadow-sm hover:shadow-xl hover:border-blue-500/40 dark:hover:border-blue-500/40 transition-all duration-300 flex flex-col items-center text-center space-y-3.5">
               <div class="absolute -top-3 px-3 py-0.5 rounded-full bg-blue-50 dark:bg-blue-950/80 border border-blue-200 dark:border-blue-800 text-[10px] font-bold text-blue-700 dark:text-blue-300 tracking-wider uppercase">
                 Academic Direction
               </div>
               
               <!-- Distinguished Medical Monogram Badge -->
-              <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-600 text-white flex items-center justify-center font-bold text-xl shadow-md ring-4 ring-blue-50 dark:ring-blue-950/50">
+              <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-600 text-white flex items-center justify-center font-bold text-lg shadow-md ring-4 ring-blue-50 dark:ring-blue-950/50">
                 🩺
               </div>
 
-              <div class="space-y-1.5">
-                <h3 class="font-display text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">
+              <div class="space-y-1">
+                <h3 class="font-display text-lg sm:text-xl font-black text-slate-900 dark:text-white tracking-tight">
                   Dr. Prajwal Kabadi
                 </h3>
                 <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-lg bg-blue-100/70 dark:bg-blue-950/70 border border-blue-200/80 dark:border-blue-800/80 text-blue-700 dark:text-blue-300 text-xs font-bold tracking-wide">
@@ -1159,18 +1143,18 @@ export function renderLandingPage(): string {
             </div>
 
             <!-- Co-Founder: Mr. Amit Bangare -->
-            <div class="relative group bg-white dark:bg-slate-900/95 rounded-3xl border border-slate-200/90 dark:border-slate-800/90 p-7 sm:p-8 shadow-sm hover:shadow-xl hover:border-indigo-500/40 dark:hover:border-indigo-500/40 transition-all duration-300 flex flex-col items-center text-center space-y-4">
+            <div class="relative group bg-white dark:bg-slate-900/95 rounded-3xl border border-slate-200/90 dark:border-slate-800/90 p-5 sm:p-7 shadow-sm hover:shadow-xl hover:border-indigo-500/40 dark:hover:border-indigo-500/40 transition-all duration-300 flex flex-col items-center text-center space-y-3.5">
               <div class="absolute -top-3 px-3 py-0.5 rounded-full bg-indigo-50 dark:bg-indigo-950/80 border border-indigo-200 dark:border-indigo-800 text-[10px] font-bold text-indigo-700 dark:text-indigo-300 tracking-wider uppercase">
                 Technical Architecture
               </div>
 
               <!-- Distinguished Tech Monogram Badge -->
-              <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-indigo-600 to-slate-800 text-white flex items-center justify-center font-bold text-xl shadow-md ring-4 ring-indigo-50 dark:ring-indigo-950/50">
+              <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-indigo-600 to-slate-800 text-white flex items-center justify-center font-bold text-lg shadow-md ring-4 ring-indigo-50 dark:ring-indigo-950/50">
                 ⚡
               </div>
 
-              <div class="space-y-1.5">
-                <h3 class="font-display text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">
+              <div class="space-y-1">
+                <h3 class="font-display text-lg sm:text-xl font-black text-slate-900 dark:text-white tracking-tight">
                   Mr. Amit Bangare
                 </h3>
                 <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-lg bg-indigo-100/70 dark:bg-indigo-950/70 border border-indigo-200/80 dark:border-indigo-800/80 text-indigo-700 dark:text-indigo-300 text-xs font-bold tracking-wide">
@@ -1195,9 +1179,9 @@ export function renderLandingPage(): string {
       <!-- ==========================================
            SECTION 12: PREMIUM EDITORIAL FOOTER
            ========================================== -->
-      <footer class="bg-[#FFFFFF] dark:bg-[#080D1A] border-t border-slate-200/80 dark:border-slate-800 py-12 text-slate-600 dark:text-slate-400 text-xs">
+      <footer class="bg-[#FFFFFF] dark:bg-[#080D1A] border-t border-slate-200/80 dark:border-slate-800 py-8 sm:py-10 text-slate-600 dark:text-slate-400 text-xs">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="grid grid-cols-2 md:grid-cols-5 gap-8 pb-12 border-b border-slate-100 dark:border-slate-800">
+          <div class="grid grid-cols-2 md:grid-cols-5 gap-6 sm:gap-8 pb-8 sm:pb-10 border-b border-slate-100 dark:border-slate-800">
             
             <!-- Brand Column -->
             <div class="col-span-2 space-y-3">
@@ -1250,7 +1234,7 @@ export function renderLandingPage(): string {
 
           </div>
 
-          <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-400 dark:text-slate-500 text-[11px]">
+          <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-400 dark:text-slate-500 text-[11px]">
             <div>
               © 2026 VG Insights (vginsights.in). Built for NEET UG Aspirants. All rights reserved.
             </div>
@@ -1486,41 +1470,5 @@ function animateCountUp(element: HTMLElement, target: number, suffix: string): v
 }
 
 function renderAllKaTeXFormulas(): void {
-  // If auto-render extension is loaded
-  if (typeof window !== 'undefined' && (window as any).renderMathInElement) {
-    try {
-      (window as any).renderMathInElement(document.body, {
-        delimiters: [
-          { left: '$$', right: '$$', display: true },
-          { left: '$', right: '$', display: false },
-          { left: '\\(', right: '\\)', display: false },
-          { left: '\\[', right: '\\]', display: true },
-        ],
-        throwOnError: false,
-      });
-      return;
-    } catch {
-      // fallback to individual render
-    }
-  }
-
-  // Fallback to manual element rendering if window.katex is available
-  if (typeof window !== 'undefined' && (window as any).katex) {
-    const targets = document.querySelectorAll('.katex-render-target');
-    targets.forEach((target) => {
-      const rawLatex = target.getAttribute('data-latex');
-      const isDisplay = target.getAttribute('data-display') === 'true';
-      if (rawLatex) {
-        try {
-          const decoded = decodeURIComponent(rawLatex);
-          (window as any).katex.render(decoded, target, {
-            displayMode: isDisplay,
-            throwOnError: false,
-          });
-        } catch {
-          // ignore
-        }
-      }
-    });
-  }
+  renderMath(document.body);
 }

@@ -1,4 +1,5 @@
 import { TOPIC_DETAILS } from '../data/topicDetails';
+import { renderFormulaHTML, renderInlineMathHTML } from '../utils/mathRenderer';
 
 export function renderRevisionView(): string {
   // Collect high-yield formulas and concepts
@@ -50,30 +51,33 @@ export function renderRevisionView(): string {
         </div>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        ${formulaCards.slice(0, 30).map((f, idx) => {
-          const cardSlug = `formula-sheet-${(f.formulaName || f.title || `item-${idx}`).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`;
-          return `
-          <div id="${cardSlug}" class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm space-y-2.5 scroll-mt-20 group relative" itemscope itemtype="https://schema.org/Question">
-            <div class="flex items-center justify-between gap-2">
-              <span class="text-[10px] font-bold uppercase text-indigo-600 dark:text-indigo-400 tracking-wider">${f.topicTitle}</span>
-              <a href="#${cardSlug}" class="opacity-0 group-hover:opacity-100 text-slate-400 hover:text-indigo-600 transition-opacity text-xs" title="Direct Anchor Link">🔗</a>
-            </div>
-            <h3 class="font-bold text-base text-slate-900 dark:text-white" itemprop="name">
-              ${f.formulaName || f.title}
-            </h3>
-            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" class="space-y-2">
-              <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700/80 text-slate-900 dark:text-slate-100 font-mono text-sm font-bold text-center katex-render-target formula-passage-target" itemprop="text">
-                ${f.formula || f.expression}
+      <section aria-labelledby="revision-grid-heading" class="space-y-4">
+        <h2 id="revision-grid-heading" class="sr-only">High-Yield NEET UG Formula Cards</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          ${formulaCards.slice(0, 30).map((f, idx) => {
+            const cardSlug = `formula-sheet-${(f.formulaName || f.title || `item-${idx}`).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`;
+            return `
+            <article id="${cardSlug}" class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm space-y-2.5 scroll-mt-20 group relative" itemscope itemtype="https://schema.org/Question">
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-[10px] font-bold uppercase text-indigo-600 dark:text-indigo-400 tracking-wider">${renderInlineMathHTML(f.topicTitle)}</span>
+                <a href="#${cardSlug}" class="opacity-0 group-hover:opacity-100 text-slate-400 hover:text-indigo-600 transition-opacity text-xs" title="Direct Anchor Link">🔗</a>
               </div>
-              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                <strong class="text-slate-800 dark:text-slate-200">Core Relation:</strong> ${f.meaning || f.explanation || f.description || ''}
-              </p>
-            </div>
-          </div>
-        `;
-        }).join('')}
-      </div>
+              <h3 class="font-bold text-base text-slate-900 dark:text-white" itemprop="name">
+                ${renderInlineMathHTML(f.formulaName || f.title)} Formula & Equation
+              </h3>
+              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" class="space-y-2">
+                <div class="formula-passage-target" itemprop="text">
+                  ${renderFormulaHTML(f.formula || f.expression)}
+                </div>
+                <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                  <strong class="text-slate-800 dark:text-slate-200">Core Relation & Meaning:</strong> ${renderInlineMathHTML(f.meaning || f.explanation || f.description || '')}
+                </p>
+              </div>
+            </article>
+          `;
+          }).join('')}
+        </div>
+      </section>
     </div>
   `;
 }

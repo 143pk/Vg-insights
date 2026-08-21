@@ -1,0 +1,44 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile with NEET target year and preferences",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "name": { "type": "string" },
+        "targetYear": { "type": "number" },
+        "photoURL": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["email", "name"]
+    },
+    "UserTestHistory": {
+      "title": "UserTestHistory",
+      "description": "Test attempt records for a student",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "testTitle": { "type": "string" },
+        "subject": { "type": "string" },
+        "score": { "type": "number" },
+        "maxScore": { "type": "number" },
+        "accuracy": { "type": "number" },
+        "correctCount": { "type": "number" },
+        "incorrectCount": { "type": "number" },
+        "unattemptedCount": { "type": "number" },
+        "completedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "score"]
+    }
+  },
+  "firestore": {
+    "users": {
+      "entity": "UserProfile",
+      "security": "allow read, write: if request.auth != null && request.auth.uid == userId;"
+    }
+  }
+}

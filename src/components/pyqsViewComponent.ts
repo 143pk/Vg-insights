@@ -1,5 +1,6 @@
 import { TOPIC_DETAILS } from '../data/topicDetails';
 import { TOPICS } from '../data/neetData';
+import { renderInlineMathHTML } from '../utils/mathRenderer';
 
 export function renderPYQsView(): string {
   // Collect all verified PYQs
@@ -38,15 +39,15 @@ export function renderPYQsView(): string {
                 ${q.exam || 'NEET UG'} ${q.year || ''}
               </span>
               <a href="#topic/${q.topicId}" class="text-xs font-bold text-blue-600 dark:text-blue-400 hover:underline">
-                ${q.topicTitle} →
+                ${renderInlineMathHTML(q.topicTitle)} →
               </a>
             </div>
-            <div class="text-sm font-medium text-slate-800 dark:text-slate-200 katex-render-target leading-relaxed">
-              ${q.question || q.questionText}
+            <div class="text-sm font-medium text-slate-800 dark:text-slate-200 leading-relaxed">
+              ${renderInlineMathHTML(q.question || q.questionText)}
             </div>
             ${q.explanation ? `
               <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                <strong class="text-slate-900 dark:text-white">Explanation:</strong> ${q.explanation}
+                <strong class="text-slate-900 dark:text-white">Explanation:</strong> ${renderInlineMathHTML(q.explanation)}
               </div>
             ` : ''}
           </div>

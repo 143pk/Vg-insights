@@ -25,141 +25,119 @@ export function renderAuthModal(): string {
         </div>
 
         <!-- Body -->
-        <div class="p-5 sm:p-6">
+        <div class="p-5 sm:p-6 space-y-4">
           
-          <!-- Step 1: Email & Identity Form -->
-          <div id="auth-step-email" class="space-y-4">
-            
-            <div class="space-y-1 text-left">
-              <div class="flex items-center gap-2">
-                <h4 id="auth-header-title" class="text-base font-bold text-slate-900 dark:text-slate-100">
-                  Enter your email
-                </h4>
-                <span id="auth-user-badge" class="hidden text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-800">
-                  New Account
-                </span>
-              </div>
-              <p id="auth-header-desc" class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-                We'll verify your email with a secure 6-digit one-time passcode (OTP).
-              </p>
-            </div>
-
-            <form id="form-auth-email" class="space-y-3.5">
-              
-              <!-- Email Field -->
-              <div>
-                <label for="auth-email-input" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
-                  Email Address
-                </label>
-                <div class="relative">
-                  <input
-                    type="email"
-                    id="auth-email-input"
-                    placeholder="aspirant@gmail.com"
-                    autocomplete="email"
-                    required
-                    class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-sm font-medium text-slate-900 dark:text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                  />
-                </div>
-              </div>
-
-              <!-- Required Full Name Field (Revealed for First-Time Registration) -->
-              <div id="auth-name-group" class="hidden space-y-1.5 transition-all duration-300">
-                <div class="flex items-center justify-between">
-                  <label for="auth-name-input" class="block text-xs font-semibold text-slate-700 dark:text-slate-300">
-                    Full Name <span class="text-rose-500">*</span>
-                  </label>
-                  <span class="text-[10px] text-slate-400 dark:text-slate-500 font-medium">Required for new account</span>
-                </div>
-                <div class="relative">
-                  <input
-                    type="text"
-                    id="auth-name-input"
-                    placeholder="Enter your full name"
-                    autocomplete="name"
-                    class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-sm font-medium text-slate-900 dark:text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                  />
-                </div>
-              </div>
-
-              <!-- Returning User Recognized Greeting Box -->
-              <div id="auth-returning-greeting" class="hidden p-3 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 text-xs text-emerald-800 dark:text-emerald-300">
-                <div class="flex items-center gap-2 font-semibold">
-                  <span>👋</span>
-                  <span>Welcome back, <strong id="auth-returning-name" class="font-bold">Aspirant</strong>!</span>
-                </div>
-              </div>
-
-              <div id="auth-email-error" class="hidden text-xs text-rose-500 font-medium text-left"></div>
-
-              <button
-                type="submit"
-                id="btn-auth-send-otp"
-                class="w-full py-3 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm shadow-md shadow-blue-500/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2"
-              >
-                <span id="btn-auth-send-otp-label">Continue</span>
-                <span id="btn-auth-send-otp-arrow">→</span>
-              </button>
-            </form>
-
-            <div class="pt-1 text-center">
-              <p class="text-[11px] text-slate-400 dark:text-slate-500">
-                By continuing, you agree to VG Insights Terms & Privacy Policy.
-              </p>
-            </div>
+          <div class="space-y-1 text-left">
+            <h4 class="text-lg font-bold text-slate-900 dark:text-slate-100">
+              Sign In to VG Insights
+            </h4>
+            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+              Sync your NEET scores, bookmarks, and personalized AI diagnoses across all your devices.
+            </p>
           </div>
 
-          <!-- Step 2: OTP Verification Form -->
-          <div id="auth-step-otp" class="hidden space-y-4">
-            
-            <div class="space-y-1 text-left">
-              <div class="flex items-center justify-between">
-                <h4 class="text-base font-bold text-slate-900 dark:text-slate-100">Enter 6-Digit Code</h4>
-                <button type="button" id="btn-auth-change-email" class="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline">
-                  Change Email
-                </button>
-              </div>
-              <p class="text-xs text-slate-500 dark:text-slate-400">
-                Enter the 6-digit code sent to <span id="auth-display-email" class="font-bold text-slate-700 dark:text-slate-300"></span>
-              </p>
+          <!-- 1. Google 1-Tap / Firebase Auth Button -->
+          <button
+            type="button"
+            id="btn-auth-google"
+            class="w-full py-3 px-4 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700/80 text-slate-800 dark:text-slate-100 font-bold text-sm border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow active:scale-[0.98] transition-all flex items-center justify-center gap-3"
+          >
+            <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24">
+              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+            </svg>
+            <span id="btn-auth-google-text">Continue with Google</span>
+          </button>
+
+          <!-- Divider -->
+          <div class="relative flex py-1 items-center">
+            <div class="flex-grow border-t border-slate-200 dark:border-slate-800"></div>
+            <span class="flex-shrink mx-3 text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider">Or with Email</span>
+            <div class="flex-grow border-t border-slate-200 dark:border-slate-800"></div>
+          </div>
+
+          <!-- 2. Email & Password Form -->
+          <form id="form-auth-email" class="space-y-3">
+            <div>
+              <label for="auth-email-input" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">
+                Email Address
+              </label>
+              <input
+                type="email"
+                id="auth-email-input"
+                placeholder="aspirant@gmail.com"
+                autocomplete="email"
+                required
+                class="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-sm font-medium text-slate-900 dark:text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+              />
             </div>
 
-            <form id="form-auth-otp" class="space-y-4">
-              <div>
-                <label for="auth-otp-input" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
-                  6-Digit OTP
+            <div>
+              <div class="flex items-center justify-between mb-1">
+                <label for="auth-password-input" class="block text-xs font-semibold text-slate-700 dark:text-slate-300">
+                  Password
                 </label>
-                <input
-                  type="text"
-                  id="auth-otp-input"
-                  maxlength="6"
-                  placeholder="• • • • • •"
-                  pattern="[0-9]*"
-                  inputmode="numeric"
-                  autocomplete="one-time-code"
-                  required
-                  class="w-full px-4 py-3 text-center tracking-[0.5em] font-mono text-xl font-bold rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                />
+                <span class="text-[10px] text-slate-400">Min 6 characters</span>
               </div>
-
-              <div id="auth-otp-error" class="hidden text-xs text-rose-500 font-medium text-center"></div>
-
-              <button
-                type="submit"
-                id="btn-auth-verify-otp"
-                class="w-full py-3 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm shadow-md shadow-blue-500/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2"
-              >
-                <span>Verify & Enter VG Insights</span>
-                <span>→</span>
-              </button>
-            </form>
-
-            <div class="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 pt-1">
-              <span>Didn't receive code?</span>
-              <button type="button" id="btn-auth-resend" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline">
-                Resend OTP
-              </button>
+              <input
+                type="password"
+                id="auth-password-input"
+                placeholder="••••••••"
+                autocomplete="current-password"
+                required
+                minlength="6"
+                class="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-sm font-medium text-slate-900 dark:text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+              />
             </div>
+
+            <!-- Optional Name for New Aspirants -->
+            <div id="auth-name-container" class="space-y-1">
+              <label for="auth-name-input" class="block text-xs font-semibold text-slate-700 dark:text-slate-300">
+                Full Name <span class="text-slate-400 font-normal">(for test certificates)</span>
+              </label>
+              <input
+                type="text"
+                id="auth-name-input"
+                placeholder="Dr. Aman Sharma"
+                autocomplete="name"
+                class="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-sm font-medium text-slate-900 dark:text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+              />
+            </div>
+
+            <div id="auth-error-msg" class="hidden p-2.5 rounded-xl bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800/60 text-xs text-rose-600 dark:text-rose-400 font-medium text-left"></div>
+
+            <button
+              type="submit"
+              id="btn-auth-submit-email"
+              class="w-full py-3 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm shadow-md shadow-blue-500/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2"
+            >
+              <span id="btn-auth-submit-label">Sign In / Register</span>
+              <span>→</span>
+            </button>
+          </form>
+
+          <!-- 3. Instant 1-Tap Guest Access Divider & Button -->
+          <div class="relative flex py-1 items-center">
+            <div class="flex-grow border-t border-slate-200 dark:border-slate-800"></div>
+            <span class="flex-shrink mx-3 text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider">Quick Start</span>
+            <div class="flex-grow border-t border-slate-200 dark:border-slate-800"></div>
+          </div>
+
+          <button
+            type="button"
+            id="btn-auth-quick-guest"
+            class="w-full py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-2 border border-slate-200/80 dark:border-slate-700"
+          >
+            <span>⚡</span>
+            <span>Instant Guest Access (Start Studying Immediately)</span>
+          </button>
+
+          <div class="pt-1 text-center">
+            <p class="text-[11px] text-slate-400 dark:text-slate-500">
+              Secured by Google Firebase &bull; Free Forever for Students
+            </p>
           </div>
 
         </div>
@@ -169,289 +147,148 @@ export function renderAuthModal(): string {
   `;
 }
 
+export function initAuthModal(onLoginSuccess: () => void): void {
+  initAuthModalEvents(onLoginSuccess);
+}
+
 export function initAuthModalEvents(onLoginSuccess: () => void): void {
   const modal = document.getElementById('modal-auth');
   const btnClose = document.getElementById('btn-close-auth');
-  const stepEmail = document.getElementById('auth-step-email');
-  const stepOtp = document.getElementById('auth-step-otp');
+  const btnGoogle = document.getElementById('btn-auth-google');
+  const btnGoogleText = document.getElementById('btn-auth-google-text');
   const formEmail = document.getElementById('form-auth-email') as HTMLFormElement | null;
-  const formOtp = document.getElementById('form-auth-otp') as HTMLFormElement | null;
   const inputEmail = document.getElementById('auth-email-input') as HTMLInputElement | null;
+  const inputPassword = document.getElementById('auth-password-input') as HTMLInputElement | null;
   const inputName = document.getElementById('auth-name-input') as HTMLInputElement | null;
-  const nameGroup = document.getElementById('auth-name-group');
-  const userBadge = document.getElementById('auth-user-badge');
-  const returningGreeting = document.getElementById('auth-returning-greeting');
-  const returningName = document.getElementById('auth-returning-name');
-  const headerTitle = document.getElementById('auth-header-title');
-  const headerDesc = document.getElementById('auth-header-desc');
-  const btnSendOtpLabel = document.getElementById('btn-auth-send-otp-label');
-  const inputOtp = document.getElementById('auth-otp-input') as HTMLInputElement | null;
-  const emailError = document.getElementById('auth-email-error');
-  const otpError = document.getElementById('auth-otp-error');
-  const displayEmail = document.getElementById('auth-display-email');
-  const btnChangeEmail = document.getElementById('btn-auth-change-email');
-  const btnResend = document.getElementById('btn-auth-resend');
+  const errorBox = document.getElementById('auth-error-msg');
+  const btnSubmit = document.getElementById('btn-auth-submit-email') as HTMLButtonElement | null;
+  const btnSubmitLabel = document.getElementById('btn-auth-submit-label');
+  const btnQuickGuest = document.getElementById('btn-auth-quick-guest');
 
-  let currentEmail = '';
-  let isCurrentNewUser = false;
-  let hasCheckedEmail = false;
-
-  const resetFormState = () => {
-    hasCheckedEmail = false;
-    isCurrentNewUser = false;
-    if (nameGroup) nameGroup.classList.add('hidden');
-    if (inputName) {
-      inputName.value = '';
-      inputName.removeAttribute('required');
-    }
-    if (userBadge) userBadge.classList.add('hidden');
-    if (returningGreeting) returningGreeting.classList.add('hidden');
-    if (headerTitle) headerTitle.textContent = 'Enter your email';
-    if (headerDesc) headerDesc.textContent = "We'll verify your email with a secure 6-digit one-time passcode (OTP).";
-    if (btnSendOtpLabel) btnSendOtpLabel.textContent = 'Continue';
-    if (emailError) emailError.classList.add('hidden');
-    if (otpError) otpError.classList.add('hidden');
-  };
+  if (!modal) return;
 
   const closeModal = () => {
-    if (modal) {
-      modal.classList.add('hidden');
-      modal.classList.remove('flex');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    if (errorBox) {
+      errorBox.classList.add('hidden');
+      errorBox.textContent = '';
     }
   };
 
-  const openModal = (prefillEmail?: string) => {
-    if (modal) {
-      modal.classList.remove('hidden');
-      modal.classList.add('flex');
-      if (stepEmail && stepOtp) {
-        stepEmail.classList.remove('hidden');
-        stepOtp.classList.add('hidden');
-      }
-      resetFormState();
-      if (inputEmail) {
-        if (prefillEmail) {
-          inputEmail.value = prefillEmail;
-          checkEmailState(prefillEmail);
-        }
-        setTimeout(() => inputEmail.focus(), 50);
-      }
+  const openModal = () => {
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    setTimeout(() => {
+      inputEmail?.focus();
+    }, 100);
+  };
+
+  const showError = (msg: string) => {
+    if (errorBox) {
+      errorBox.textContent = msg;
+      errorBox.classList.remove('hidden');
     }
   };
 
-  // Check email registration state
-  const checkEmailState = async (email: string) => {
-    const clean = email.trim().toLowerCase();
-    if (!clean || !clean.includes('@') || !clean.includes('.')) {
-      resetFormState();
-      return;
-    }
-
-    const checkRes = await AuthService.checkEmail(clean);
-    hasCheckedEmail = true;
-
-    if (checkRes.isRegistered) {
-      // Existing Registered User
-      isCurrentNewUser = false;
-      if (nameGroup) nameGroup.classList.add('hidden');
-      if (inputName) {
-        inputName.value = '';
-        inputName.removeAttribute('required');
-      }
-      if (userBadge) userBadge.classList.add('hidden');
-      if (returningGreeting && returningName) {
-        returningName.textContent = checkRes.name || 'Aspirant';
-        returningGreeting.classList.remove('hidden');
-      }
-      if (headerTitle) headerTitle.textContent = 'Welcome back!';
-      if (headerDesc) headerDesc.textContent = 'Send a 6-digit login verification code to your email.';
-      if (btnSendOtpLabel) btnSendOtpLabel.textContent = 'Send Login Code';
-    } else {
-      // First-time Signup (New User) -> Ask for Full Name
-      isCurrentNewUser = true;
-      if (returningGreeting) returningGreeting.classList.add('hidden');
-      if (userBadge) {
-        userBadge.textContent = 'New Account';
-        userBadge.classList.remove('hidden');
-      }
-      if (nameGroup) nameGroup.classList.remove('hidden');
-      if (inputName) {
-        inputName.setAttribute('required', 'true');
-        setTimeout(() => inputName.focus(), 50);
-      }
-      if (headerTitle) headerTitle.textContent = 'Create your account';
-      if (headerDesc) headerDesc.textContent = 'Enter your Full Name to set up your VG Insights profile.';
-      if (btnSendOtpLabel) btnSendOtpLabel.textContent = 'Create Account & Send OTP';
+  const hideError = () => {
+    if (errorBox) {
+      errorBox.classList.add('hidden');
+      errorBox.textContent = '';
     }
   };
 
-  // Expose globally for triggers
+  // Bind close buttons
+  btnClose?.addEventListener('click', closeModal);
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  // Attach global trigger for open modal
   (window as any).openAuthModal = openModal;
   (window as any).closeAuthModal = closeModal;
 
-  if (btnClose) {
-    btnClose.addEventListener('click', closeModal);
-  }
+  // 1. Google 1-Tap / Popup Sign-In
+  btnGoogle?.addEventListener('click', async () => {
+    hideError();
+    if (btnGoogleText) btnGoogleText.textContent = 'Signing in with Google...';
+    btnGoogle.setAttribute('disabled', 'true');
 
-  if (modal) {
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) closeModal();
-    });
-  }
-
-  // Live email typing detection
-  let debounceTimer: any = null;
-  if (inputEmail) {
-    inputEmail.addEventListener('input', () => {
-      clearTimeout(debounceTimer);
-      const val = inputEmail.value.trim();
-      if (val.includes('@') && val.includes('.')) {
-        debounceTimer = setTimeout(() => {
-          checkEmailState(val);
-        }, 350);
-      } else {
-        resetFormState();
-      }
-    });
-
-    inputEmail.addEventListener('blur', () => {
-      const val = inputEmail.value.trim();
-      if (val.includes('@') && val.includes('.')) {
-        checkEmailState(val);
-      }
-    });
-  }
-
-  // Submit Step 1 (Email & Full Name for First-time Signup)
-  if (formEmail && inputEmail) {
-    formEmail.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const email = inputEmail.value.trim();
-      if (!email) return;
-
-      if (emailError) emailError.classList.add('hidden');
-
-      // If email has not yet been evaluated, check registration status first
-      if (!hasCheckedEmail) {
-        await checkEmailState(email);
-        if (isCurrentNewUser && inputName && !inputName.value.trim()) {
-          inputName.focus();
-          return;
-        }
-      }
-
-      // First-time signup validation: Full Name is strictly required
-      let fullName = '';
-      if (isCurrentNewUser) {
-        fullName = inputName?.value.trim().replace(/\s+/g, ' ') || '';
-        if (!fullName) {
-          if (emailError) {
-            emailError.textContent = 'Full Name is required for first-time account registration.';
-            emailError.classList.remove('hidden');
-          }
-          if (inputName) inputName.focus();
-          return;
-        }
-      }
-
-      const btnSubmit = document.getElementById('btn-auth-send-otp') as HTMLButtonElement | null;
-      if (btnSubmit) {
-        btnSubmit.disabled = true;
-        if (btnSendOtpLabel) btnSendOtpLabel.textContent = 'Sending code...';
-      }
-
-      const res = await AuthService.requestOtp(email, fullName);
-
-      if (btnSubmit) {
-        btnSubmit.disabled = false;
-        if (btnSendOtpLabel) {
-          btnSendOtpLabel.textContent = isCurrentNewUser ? 'Create Account & Send OTP' : 'Send Login Code';
-        }
-      }
-
-      if (res.success) {
-        currentEmail = email;
-        if (displayEmail) displayEmail.textContent = email;
-        if (stepEmail && stepOtp) {
-          stepEmail.classList.add('hidden');
-          stepOtp.classList.remove('hidden');
-        }
-        if (inputOtp) {
-          inputOtp.value = '';
-          setTimeout(() => inputOtp.focus(), 50);
-        }
-      } else {
-        if (emailError) {
-          emailError.textContent = res.message || 'Failed to send OTP code. Please try again.';
-          emailError.classList.remove('hidden');
-        }
-      }
-    });
-  }
-
-  // Change Email
-  if (btnChangeEmail && stepEmail && stepOtp) {
-    btnChangeEmail.addEventListener('click', () => {
-      stepOtp.classList.add('hidden');
-      stepEmail.classList.remove('hidden');
-      if (inputEmail) inputEmail.focus();
-    });
-  }
-
-  // Resend OTP
-  if (btnResend) {
-    btnResend.addEventListener('click', async () => {
-      if (!currentEmail) return;
-      const fullName = isCurrentNewUser ? (inputName?.value.trim() || '') : '';
-      btnResend.textContent = 'Sending...';
-      await AuthService.requestOtp(currentEmail, fullName);
-      btnResend.textContent = 'Code resent to email!';
-      setTimeout(() => {
-        btnResend.textContent = 'Resend OTP';
-      }, 3000);
-    });
-  }
-
-  // Submit Step 2 (Verify OTP)
-  if (formOtp && inputOtp) {
-    formOtp.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const otpVal = inputOtp.value.trim();
-      if (!otpVal) return;
-
-      if (otpError) otpError.classList.add('hidden');
-
-      const fullName = isCurrentNewUser ? (inputName?.value.trim() || '') : '';
-
-      const btnVerify = document.getElementById('btn-auth-verify-otp') as HTMLButtonElement | null;
-      if (btnVerify) {
-        btnVerify.disabled = true;
-        btnVerify.innerHTML = `<span>Verifying...</span>`;
-      }
-
-      const res = await AuthService.verifyOtp(currentEmail, otpVal, fullName);
-
-      if (btnVerify) {
-        btnVerify.disabled = false;
-        btnVerify.innerHTML = `<span>Verify & Enter VG Insights</span> <span>→</span>`;
-      }
-
-      if (res.success) {
+    try {
+      const res = await AuthService.signInWithGoogle();
+      if (res.success && res.user) {
         closeModal();
         onLoginSuccess();
-
-        // Prompt student to install app / APK on their phone if not already installed
         if (!PWAInstallService.isAppAlreadyInstalled()) {
           setTimeout(() => {
             PWAInstallService.openInstallModal();
           }, 600);
         }
       } else {
-        if (otpError) {
-          otpError.textContent = res.message || 'Invalid verification code. Please check and try again.';
-          otpError.classList.remove('hidden');
-        }
+        showError(res.error || 'Google Sign-In was cancelled or failed.');
       }
-    });
-  }
+    } catch (err: any) {
+      showError(err.message || 'Failed to sign in with Google.');
+    } finally {
+      if (btnGoogleText) btnGoogleText.textContent = 'Continue with Google';
+      btnGoogle.removeAttribute('disabled');
+    }
+  });
+
+  // 2. Email & Password Sign-In / Register
+  formEmail?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    hideError();
+
+    const email = inputEmail?.value.trim() || '';
+    const password = inputPassword?.value || '';
+    const name = inputName?.value.trim() || '';
+
+    if (!email) {
+      showError('Please enter your email address.');
+      return;
+    }
+    if (!password || password.length < 6) {
+      showError('Password must be at least 6 characters.');
+      return;
+    }
+
+    if (btnSubmitLabel) btnSubmitLabel.textContent = 'Authenticating...';
+    btnSubmit?.setAttribute('disabled', 'true');
+
+    try {
+      const res = await AuthService.signInWithEmail(email, password, name);
+      if (res.success && res.user) {
+        closeModal();
+        onLoginSuccess();
+        if (!PWAInstallService.isAppAlreadyInstalled()) {
+          setTimeout(() => {
+            PWAInstallService.openInstallModal();
+          }, 600);
+        }
+      } else {
+        showError(res.error || 'Authentication failed. Check your password or details.');
+      }
+    } catch (err: any) {
+      showError(err.message || 'An unexpected error occurred.');
+    } finally {
+      if (btnSubmitLabel) btnSubmitLabel.textContent = 'Sign In / Register';
+      btnSubmit?.removeAttribute('disabled');
+    }
+  });
+
+  // 3. Instant Guest Access
+  btnQuickGuest?.addEventListener('click', () => {
+    hideError();
+    const guestName = inputName?.value.trim() || (inputEmail?.value.includes('@') ? inputEmail.value.split('@')[0] : '') || 'NEET Aspirant';
+    AuthService.quickStudentLogin(guestName, 2026);
+    closeModal();
+    onLoginSuccess();
+
+    if (!PWAInstallService.isAppAlreadyInstalled()) {
+      setTimeout(() => {
+        PWAInstallService.openInstallModal();
+      }, 600);
+    }
+  });
 }

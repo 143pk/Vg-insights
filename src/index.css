@@ -164,13 +164,29 @@ html.dark .brand-logo-dark,
 
 .katex {
   font-size: 1.12em;
-  color: inherit;
+  color: #0F172A;
+}
+
+.katex .frac-line,
+.katex .sqrt-line,
+.katex .stretchy {
+  border-color: #0F172A;
+  border-bottom-color: #0F172A;
+  border-top-color: #0F172A;
+}
+
+.katex svg,
+.katex svg path,
+.katex svg line {
+  fill: #0F172A;
+  stroke: #0F172A;
 }
 
 /* ==================================================
    THEME-AWARE KATEX MATHEMATICAL FORMULA CONTRAST
    High-contrast #F8FAFC formulas in dark mode and dark cards
    ================================================== */
+html.dark .katex,
 .dark .katex,
 .dark .katex-html,
 .dark .katex-display,
@@ -192,51 +208,52 @@ html.dark .brand-logo-dark,
 .dark .katex .vlist,
 .dark .katex .sizing,
 .dark .katex .fontsize-ensurer,
-.dark .katex .mop {
+.dark .katex .mop,
+.dark-surface-math .katex,
+.dark-surface-math .katex-html,
+.dark-surface-math .katex-display,
+.dark-surface-math .katex .mord,
+.dark-surface-math .katex .mbin,
+.dark-surface-math .katex .mrel,
+.dark-surface-math .katex .mopen,
+.dark-surface-math .katex .mclose,
+.dark-surface-math .katex .mpunct,
+.dark-surface-math .katex .minner,
+.dark-surface-math .katex .text,
+.dark-surface-math .katex .mord.text {
   color: #F8FAFC !important;
 }
 
+html.dark .katex .frac-line,
+html.dark .katex .sqrt-line,
+html.dark .katex .stretchy,
 .dark .katex .frac-line,
 .dark .katex .sqrt-line,
-.dark .katex .stretchy {
+.dark .katex .stretchy,
+.dark-surface-math .katex .frac-line,
+.dark-surface-math .katex .sqrt-line {
   border-color: #F8FAFC !important;
   border-bottom-color: #F8FAFC !important;
   border-top-color: #F8FAFC !important;
 }
 
+html.dark .katex svg,
+html.dark .katex svg path,
+html.dark .katex svg line,
 .dark .katex svg,
 .dark .katex svg path,
-.dark .katex svg line {
+.dark .katex svg line,
+.dark-surface-math .katex svg path,
+.dark-surface-math .katex svg line {
   fill: #F8FAFC !important;
   stroke: #F8FAFC !important;
 }
 
-/* Ensure math formulas inside dark card elements always have bright contrast */
-.dark-formula-target,
-.dark-formula-target .katex,
-.dark-formula-target .katex-html,
-.dark-formula-target .katex-display,
-.dark-formula-target .katex .mord,
-.dark-formula-target .katex .mbin,
-.dark-formula-target .katex .mrel,
-.dark-formula-target .katex .mopen,
-.dark-formula-target .katex .mclose,
-.dark-formula-target .katex .mpunct,
-.dark-formula-target .katex .minner,
-.dark-formula-target .katex .text,
-.dark-formula-target .katex .mord.text {
-  color: #F8FAFC !important;
-}
-
-.dark-formula-target .katex .frac-line,
-.dark-formula-target .katex .sqrt-line {
-  border-bottom-color: #F8FAFC !important;
-}
-
-.dark-formula-target .katex svg path,
-.dark-formula-target .katex svg line {
-  fill: #F8FAFC !important;
-  stroke: #F8FAFC !important;
+/* Hide any empty formula containers cleanly */
+.math-formula-box:empty,
+.formula-passage-target:empty,
+.katex-render-target:empty {
+  display: none !important;
 }
 
 /* Hero Entrance & Parallax Animation States */

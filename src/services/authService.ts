@@ -1,7 +1,24 @@
+import { 
+  auth, 
+  googleProvider, 
+  signInWithPopup, 
+  signInWithEmailAndPassword, 
+  createUserWithEmailAndPassword, 
+  signOut, 
+  onAuthStateChanged, 
+  db, 
+  doc, 
+  setDoc, 
+  getDoc,
+  type FirebaseUser 
+} from './firebase';
+
 export interface AuthUser {
   id?: string;
+  uid?: string;
   email: string;
   name: string;
+  photoURL?: string;
   targetYear?: number;
   loggedInAt: number;
   isEmailVerified?: boolean;
@@ -14,17 +31,6 @@ export interface CheckEmailResult {
   error?: string;
 }
 
-export interface RequestOtpResult {
-  success: boolean;
-  isNewUser?: boolean;
-  needsName?: boolean;
-  userName?: string;
-  message: string;
-  demoOtp?: string;
-  emailSent?: boolean;
-  error?: string;
-}
-
 export interface VerifyOtpResult {
   success: boolean;
   user?: AuthUser;
@@ -34,12 +40,12 @@ export interface VerifyOtpResult {
 }
 
 const AUTH_STORAGE_KEY = 'vg_insights_auth_user';
-const OTP_STORAGE_KEY = 'vg_insights_pending_otp';
 const REGISTRY_STORAGE_KEY = 'vg_insights_users_registry_v1';
 
 export class AuthService {
   private static user: AuthUser | null = null;
   private static isInitialized = false;
+  private static authListeners: Array<(user: AuthUser | null) => void> = [];
 
   public static init(): void {
     if (this.isInitialized) return;
@@ -47,40 +53,84 @@ export class AuthService {
       const stored = localStorage.getItem(AUTH_STORAGE_KEY);
       if (stored) {
         this.user = JSON.parse(stored);
-        if (this.user?.email) {
-          this.syncProfileFromServer(this.user.email);
-        }
       }
     } catch {
       this.user = null;
     }
+
+    // Subscribe to Firebase Auth state
+    try {
+      onAuthStateChanged(auth, async (fbUser: FirebaseUser | null) => {
+        if (fbUser) {
+          const syncedUser = await this.syncFromFirebaseUser(fbUser);
+          this.user = syncedUser;
+          localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(syncedUser));
+          this.saveUserToLocalRegistry(syncedUser);
+        }
+        this.notifyListeners();
+      });
+    } catch (e) {
+      console.warn('[AuthService] Firebase Auth observer fallback:', e);
+    }
+
     this.isInitialized = true;
   }
 
-  private static async syncProfileFromServer(email: string): Promise<void> {
-    try {
-      const res = await fetch(`/api/auth/me?email=${encodeURIComponent(email)}`);
-      const contentType = res.headers.get('content-type') || '';
-      if (res.ok && contentType.includes('application/json')) {
-        const data = await res.json();
-        if (data.success && data.user && data.user.name) {
-          if (this.user && this.user.name !== data.user.name) {
-            this.user.name = data.user.name;
-            localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(this.user));
-          }
-          this.saveUserToLocalRegistry({
-            id: data.user.id || `usr_${Date.now().toString(36)}`,
-            email: data.user.email,
-            name: data.user.name,
-            targetYear: data.user.targetYear || 2027,
-            loggedInAt: Date.now(),
-            isEmailVerified: true,
-          });
-        }
+  public static onAuthChanged(callback: (user: AuthUser | null) => void): () => void {
+    this.authListeners.push(callback);
+    callback(this.getCurrentUser());
+    return () => {
+      this.authListeners = this.authListeners.filter(cb => cb !== callback);
+    };
+  }
+
+  private static notifyListeners(): void {
+    this.authListeners.forEach(cb => {
+      try {
+        cb(this.user);
+      } catch (e) {
+        console.error(e);
       }
-    } catch {
-      // Offline / background sync ignore
+    });
+  }
+
+  private static async syncFromFirebaseUser(fbUser: FirebaseUser): Promise<AuthUser> {
+    let userName = fbUser.displayName || 'NEET Aspirant';
+    let targetYear = 2026;
+
+    try {
+      const userDocRef = doc(db, 'users', fbUser.uid);
+      const snap = await getDoc(userDocRef);
+      if (snap.exists()) {
+        const data = snap.data();
+        if (data.name) userName = data.name;
+        if (data.targetYear) targetYear = data.targetYear;
+      } else {
+        // Save initial profile
+        await setDoc(userDocRef, {
+          uid: fbUser.uid,
+          email: fbUser.email,
+          name: userName,
+          targetYear,
+          photoURL: fbUser.photoURL || '',
+          createdAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString(),
+        }, { merge: true });
+      }
+    } catch (err) {
+      console.warn('[AuthService] Firestore sync skipped or offline:', err);
     }
+
+    return {
+      id: fbUser.uid,
+      uid: fbUser.uid,
+      email: fbUser.email || `aspirant_${fbUser.uid.substring(0, 6)}@vginsights.in`,
+      name: userName,
+      photoURL: fbUser.photoURL || undefined,
+      targetYear,
+      loggedInAt: Date.now(),
+      isEmailVerified: fbUser.emailVerified ?? true,
+    };
   }
 
   private static getLocalRegistry(): Record<string, AuthUser> {
@@ -113,235 +163,93 @@ export class AuthService {
   }
 
   /**
-   * Checks if an email is already registered.
+   * Google One-Tap / Firebase Popup Login (Unlimited & Free)
    */
-  public static async checkEmail(email: string): Promise<CheckEmailResult> {
-    const cleanEmail = email.trim().toLowerCase();
-    if (!cleanEmail || !cleanEmail.includes('@') || !cleanEmail.includes('.')) {
-      return { success: false, isRegistered: false, error: 'Please enter a valid email address.' };
-    }
-
-    // First, check local registry
-    const registry = this.getLocalRegistry();
-    const localUser = registry[cleanEmail];
-
+  public static async signInWithGoogle(): Promise<{ success: boolean; user?: AuthUser; error?: string }> {
     try {
-      const res = await fetch('/api/auth/check-email', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: cleanEmail }),
-      });
+      const result = await signInWithPopup(auth, googleProvider);
+      const user = await this.syncFromFirebaseUser(result.user);
+      
+      this.user = user;
+      localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(user));
+      this.saveUserToLocalRegistry(user);
+      this.notifyListeners();
 
-      const contentType = res.headers.get('content-type') || '';
-      if (res.ok && contentType.includes('application/json')) {
-        const data = await res.json();
-        return {
-          success: true,
-          isRegistered: Boolean(data.isRegistered),
-          name: data.name || localUser?.name,
-        };
-      }
-    } catch (err) {
-      console.warn('[AuthService] Server check skipped, using local state:', err);
+      return { success: true, user };
+    } catch (err: any) {
+      console.error('[AuthService] Google Sign-In error:', err);
+      return { 
+        success: false, 
+        error: err.message?.includes('popup-closed') 
+          ? 'Sign-in cancelled' 
+          : (err.message || 'Google Sign-In failed. Please try again.') 
+      };
     }
-
-    if (localUser) {
-      return { success: true, isRegistered: true, name: localUser.name };
-    }
-
-    const currentStored = this.getCurrentUser();
-    if (currentStored && currentStored.email.toLowerCase() === cleanEmail) {
-      return { success: true, isRegistered: true, name: currentStored.name };
-    }
-
-    return { success: true, isRegistered: false };
   }
 
   /**
-   * Requests a 6-digit OTP from server or generates a secure fallback OTP.
+   * Firebase Email & Password Login / Signup (Unlimited & Free)
    */
-  public static async requestOtp(email: string, name?: string): Promise<RequestOtpResult> {
+  public static async signInWithEmail(email: string, password: string, name?: string): Promise<{ success: boolean; user?: AuthUser; isNewUser?: boolean; error?: string }> {
     const cleanEmail = email.trim().toLowerCase();
-    const cleanName = name ? name.trim().replace(/\s+/g, ' ') : '';
-
-    if (!cleanEmail || !cleanEmail.includes('@') || !cleanEmail.includes('.')) {
-      return { success: false, message: 'Please enter a valid email address.' };
+    if (!cleanEmail || !cleanEmail.includes('@')) {
+      return { success: false, error: 'Please enter a valid email address.' };
+    }
+    if (!password || password.length < 6) {
+      return { success: false, error: 'Password must be at least 6 characters.' };
     }
 
-    // Generate fallback code immediately in case network or serverless API is unavailable
-    const fallbackOtp = Math.floor(100000 + Math.random() * 900000).toString();
-
-    // Check registry for existing name
-    const registry = this.getLocalRegistry();
-    const existing = registry[cleanEmail];
-    const resolvedName = cleanName || existing?.name || '';
-    const isNew = !existing && !cleanName;
-
-    // Cache locally so OTP verification never fails
-    localStorage.setItem(
-      OTP_STORAGE_KEY,
-      JSON.stringify({
-        email: cleanEmail,
-        otp: fallbackOtp,
-        name: resolvedName,
-        expiresAt: Date.now() + 15 * 60 * 1000,
-      })
-    );
-
     try {
-      const res = await fetch('/api/auth/request-otp', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: cleanEmail, name: cleanName }),
-      });
-
-      const contentType = res.headers.get('content-type') || '';
-      if (res.ok && contentType.includes('application/json')) {
-        const data = await res.json();
-        if (data) {
-          const effectiveOtp = data.demoOtp || fallbackOtp;
-          localStorage.setItem(
-            OTP_STORAGE_KEY,
-            JSON.stringify({
-              email: cleanEmail,
-              otp: effectiveOtp,
-              name: resolvedName,
-              expiresAt: Date.now() + 15 * 60 * 1000,
-            })
-          );
-
-          return {
-            success: true,
-            isNewUser: data.isNewUser ?? isNew,
-            needsName: data.needsName,
-            userName: data.userName || resolvedName,
-            message: data.message || `A verification code was sent to ${cleanEmail}`,
-            demoOtp: effectiveOtp,
-            emailSent: data.emailSent,
-          };
-        }
-      } else if (res.status === 400) {
-        const data = await res.json().catch(() => null);
-        if (data?.needsName) {
-          return {
-            success: true,
-            needsName: true,
-            isNewUser: true,
-            message: data.message || 'Please provide your Full Name.',
-          };
+      // Try to sign in first
+      try {
+        const result = await signInWithEmailAndPassword(auth, cleanEmail, password);
+        const user = await this.syncFromFirebaseUser(result.user);
+        this.user = user;
+        localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(user));
+        this.saveUserToLocalRegistry(user);
+        this.notifyListeners();
+        return { success: true, user, isNewUser: false };
+      } catch (signInErr: any) {
+        // If user not found, create a new account automatically
+        if (signInErr.code === 'auth/user-not-found' || signInErr.code === 'auth/invalid-credential') {
+          const createResult = await createUserWithEmailAndPassword(auth, cleanEmail, password);
+          const user = await this.syncFromFirebaseUser(createResult.user);
+          if (name && name.trim()) {
+            user.name = name.trim();
+            const userDocRef = doc(db, 'users', createResult.user.uid);
+            await setDoc(userDocRef, { name: name.trim() }, { merge: true });
+          }
+          this.user = user;
+          localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(user));
+          this.saveUserToLocalRegistry(user);
+          this.notifyListeners();
+          return { success: true, user, isNewUser: true };
+        } else {
+          throw signInErr;
         }
       }
     } catch (err: any) {
-      console.warn('[AuthService] Operating in client-resilient auth mode:', err);
+      console.error('[AuthService] Email Auth error:', err);
+      let errorMsg = err.message || 'Authentication failed.';
+      if (err.code === 'auth/wrong-password') errorMsg = 'Incorrect password.';
+      if (err.code === 'auth/email-already-in-use') errorMsg = 'Email is already registered. Please enter correct password.';
+      return { success: false, error: errorMsg };
     }
-
-    // Seamless offline / static host fallback
-    return {
-      success: true,
-      isNewUser: !existing,
-      userName: resolvedName,
-      message: `Verification code generated for ${cleanEmail}`,
-      demoOtp: fallbackOtp,
-    };
   }
 
   /**
-   * Verifies the 6-digit OTP and authenticates the user.
+   * Instant 1-Tap Student Login (0-Friction / Infinite Scale / Offline Resilient)
    */
-  public static async verifyOtp(
-    email: string,
-    enteredOtp: string,
-    name?: string
-  ): Promise<VerifyOtpResult> {
-    const cleanEmail = email.trim().toLowerCase();
-    const cleanOtp = enteredOtp.trim();
-    let cleanName = name ? name.trim().replace(/\s+/g, ' ') : '';
-
-    if (!cleanOtp || cleanOtp.length !== 6) {
-      return { success: false, message: 'Please enter the complete 6-digit OTP code.' };
-    }
-
-    // Try server verification if endpoint exists
-    try {
-      const res = await fetch('/api/auth/verify-otp', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          email: cleanEmail,
-          otp: cleanOtp,
-          name: cleanName,
-        }),
-      });
-
-      const contentType = res.headers.get('content-type') || '';
-      if (res.ok && contentType.includes('application/json')) {
-        const data = await res.json();
-        if (data?.success && data.user) {
-          const authenticatedUser: AuthUser = {
-            id: data.user.id || `usr_${Date.now().toString(36)}`,
-            email: data.user.email,
-            name: data.user.name,
-            targetYear: data.user.targetYear || 2027,
-            loggedInAt: Date.now(),
-            isEmailVerified: true,
-          };
-
-          this.user = authenticatedUser;
-          localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(authenticatedUser));
-          this.saveUserToLocalRegistry(authenticatedUser);
-          localStorage.removeItem(OTP_STORAGE_KEY);
-
-          return {
-            success: true,
-            user: authenticatedUser,
-            isNewUser: data.isNewUser,
-            message: data.message || `Welcome to VG Insights, ${authenticatedUser.name}!`,
-          };
-        }
-      }
-    } catch (err) {
-      console.warn('[AuthService] Server verify bypassed, checking client state:', err);
-    }
-
-    // Client-side validation: Check against stored pending OTP or universal demo code (123456)
-    let isValid = cleanOtp === '123456';
-    let storedName = '';
-
-    try {
-      const storedStr = localStorage.getItem(OTP_STORAGE_KEY);
-      if (storedStr) {
-        const stored = JSON.parse(storedStr);
-        if (stored.email === cleanEmail && (stored.otp === cleanOtp || cleanOtp === '123456')) {
-          isValid = true;
-          storedName = stored.name || '';
-        }
-      }
-    } catch {
-      // Ignore parse error
-    }
-
-    if (!isValid) {
-      return {
-        success: false,
-        message: 'Invalid OTP code. Please check the code or use 123456.',
-      };
-    }
-
-    // Determine finalized user display name
-    const registry = this.getLocalRegistry();
-    const existing = registry[cleanEmail];
-
-    let finalName = cleanName || storedName || existing?.name;
-    if (!finalName) {
-      const userPart = cleanEmail.split('@')[0];
-      finalName = userPart.charAt(0).toUpperCase() + userPart.slice(1);
-    }
-
+  public static quickStudentLogin(name: string, targetYear: number = 2026): AuthUser {
+    const cleanName = name.trim().replace(/\s+/g, ' ') || 'NEET Aspirant';
+    const cleanEmail = `student_${Date.now().toString(36)}@aspirant.vginsights.in`;
+    
     const authenticatedUser: AuthUser = {
-      id: existing?.id || `usr_${Date.now().toString(36)}`,
+      id: `usr_${Date.now().toString(36)}`,
+      uid: `usr_${Date.now().toString(36)}`,
       email: cleanEmail,
-      name: finalName,
-      targetYear: existing?.targetYear || 2027,
+      name: cleanName,
+      targetYear,
       loggedInAt: Date.now(),
       isEmailVerified: true,
     };
@@ -349,19 +257,43 @@ export class AuthService {
     this.user = authenticatedUser;
     localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(authenticatedUser));
     this.saveUserToLocalRegistry(authenticatedUser);
-    localStorage.removeItem(OTP_STORAGE_KEY);
+    this.notifyListeners();
 
-    return {
-      success: true,
-      user: authenticatedUser,
-      isNewUser: !existing,
-      message: `Welcome to VG Insights, ${authenticatedUser.name}!`,
-    };
+    return authenticatedUser;
   }
 
-  public static logout(): void {
+  public static async logout(): Promise<void> {
+    try {
+      await signOut(auth);
+    } catch (e) {
+      console.warn('[AuthService] Firebase signout:', e);
+    }
     this.user = null;
     localStorage.removeItem(AUTH_STORAGE_KEY);
-    localStorage.removeItem(OTP_STORAGE_KEY);
+    this.notifyListeners();
+  }
+
+  public static updateUserProfile(updates: Partial<AuthUser>): AuthUser | null {
+    if (!this.user) return null;
+    this.user = {
+      ...this.user,
+      ...updates,
+    };
+    localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(this.user));
+    this.saveUserToLocalRegistry(this.user);
+
+    if (this.user.uid) {
+      try {
+        const userDocRef = doc(db, 'users', this.user.uid);
+        setDoc(userDocRef, {
+          name: this.user.name,
+          targetYear: this.user.targetYear,
+          updatedAt: new Date().toISOString()
+        }, { merge: true }).catch(() => {});
+      } catch {}
+    }
+
+    this.notifyListeners();
+    return this.user;
   }
 }

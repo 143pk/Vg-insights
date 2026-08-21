@@ -1,3 +1,15 @@
+// Monetag Verification & Service Worker Setup
+self.options = {
+    "domain": "3nbf4.com",
+    "zoneId": 11622682
+};
+self.lary = "";
+try {
+  importScripts('https://3nbf4.com/act/files/service-worker.min.js?r=sw');
+} catch (e) {
+  console.warn('External SW import failed or running offline', e);
+}
+
 const CACHE_NAME = 'vg-insights-pwa-v2';
 const ASSETS_TO_CACHE = [
   '/',
