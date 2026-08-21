@@ -178,11 +178,16 @@ export class AuthService {
       return { success: true, user };
     } catch (err: any) {
       console.error('[AuthService] Google Sign-In error:', err);
+      let errMsg = err.message || 'Google Sign-In failed. Please try again.';
+      if (err.code === 'auth/unauthorized-domain' || (err.message && err.message.includes('unauthorized-domain'))) {
+        const domain = typeof window !== 'undefined' ? window.location.hostname : 'your live domain';
+        errMsg = `Domain not authorized: Please add "${domain}" to your Firebase Console (Authentication → Settings → Authorized domains).`;
+      }
       return { 
         success: false, 
         error: err.message?.includes('popup-closed') 
           ? 'Sign-in cancelled' 
-          : (err.message || 'Google Sign-In failed. Please try again.') 
+          : errMsg 
       };
     }
   }

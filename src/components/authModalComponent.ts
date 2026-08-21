@@ -292,12 +292,14 @@ export function initAuthModalEvents(onLoginSuccess: () => void): void {
         // Transition to Name Confirmation / Customization step!
         showStep('name', false);
       } else {
-        if (res.error && !res.error.includes('cancelled')) {
+        if (res.error && !res.error.toLowerCase().includes('cancel') && !res.error.toLowerCase().includes('closed')) {
           showError(res.error);
         }
       }
     } catch (err: any) {
-      showError(err.message || 'Failed to sign in with Google.');
+      if (!err.message?.includes('popup-closed-by-user')) {
+        showError(err.message || 'Failed to sign in with Google.');
+      }
     } finally {
       if (btnGoogleText) btnGoogleText.textContent = 'Continue with Google (1-Tap)';
       btnGoogle.removeAttribute('disabled');
