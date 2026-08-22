@@ -372,6 +372,81 @@ class App {
     void appContent.offsetWidth; // force reflow for smooth re-trigger
     appContent.classList.add('animate-page-enter');
 
+    // Authentication check for interactive/personalized test engines & AI Doctor
+    const requiresAuthRoutes = [
+      'weekly-mock',
+      'weekly-mock-instructions',
+      'weekly-mock-test',
+      'weekly-mock-result',
+      'chapter-tests',
+      'custom-test',
+      'test-history',
+      'mistake-book',
+      'incorrect-questions',
+      'strengths-weaknesses',
+      'weak-topic-practice',
+      'weakness-doctor',
+      'weakness-practice',
+      'diagnostic-quiz'
+    ];
+
+    if (requiresAuthRoutes.includes(routeState.type) && !AuthService.isAuthenticated()) {
+      appContent.innerHTML = `
+        <div class="max-w-xl mx-auto py-12 px-4 text-center animate-fade-in">
+          <div class="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl space-y-6">
+            <div class="w-16 h-16 mx-auto rounded-3xl bg-blue-50 dark:bg-blue-950/60 border border-blue-100 dark:border-blue-800/80 flex items-center justify-center text-blue-600 dark:text-blue-400 shadow-inner">
+              <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+            </div>
+
+            <div class="space-y-2">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-50 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 border border-blue-200/80 dark:border-blue-800/50">
+                Student Login Required
+              </span>
+              <h3 class="text-2xl font-black text-slate-900 dark:text-slate-100">
+                Sign In to Access Tests & AI Doctor
+              </h3>
+              <p class="text-sm text-slate-600 dark:text-slate-400 max-w-md mx-auto leading-relaxed">
+                Concepts and revision notes are 100% free to read anytime. To save your test scores, generate personalized weak-area analysis, and track your All-India NEET rank, please sign in.
+              </p>
+            </div>
+
+            <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+              <button
+                type="button"
+                id="btn-gate-open-login"
+                class="w-full sm:w-auto px-6 py-3.5 rounded-2xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm shadow-lg shadow-blue-500/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <svg class="w-5 h-5" viewBox="0 0 24 24">
+                  <path fill="#ffffff" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                </svg>
+                <span>Sign In with Google</span>
+              </button>
+
+              <button
+                type="button"
+                id="btn-gate-explore-notes"
+                class="w-full sm:w-auto px-5 py-3.5 rounded-2xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-semibold text-sm transition-all cursor-pointer"
+              >
+                Browse Free Study Notes
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+
+      document.getElementById('btn-gate-open-login')?.addEventListener('click', () => {
+        this.openAuthModal();
+      });
+
+      document.getElementById('btn-gate-explore-notes')?.addEventListener('click', () => {
+        RouterService.navigateTo('home');
+      });
+
+      return;
+    }
+
     switch (routeState.type) {
       case 'home':
         appContent.innerHTML = renderHomeDashboard();
