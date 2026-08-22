@@ -1076,22 +1076,36 @@ export function initLandingPageEvents(onOpenAuthModal: () => void): void {
     });
   }
 
-  // 1. Hook up all Login / Get Started buttons to open Auth Modal
-  const authButtons = [
+  // 1. Hook up Navigation & CTA buttons
+  const loginButtons = [
     'btn-nav-login',
-    'btn-nav-get-started',
-    'btn-hero-start-free',
-    'btn-footer-start-free',
     'btn-mobile-login',
-    'btn-mobile-get-started',
   ];
 
-  authButtons.forEach((btnId) => {
+  loginButtons.forEach((btnId) => {
     const el = document.getElementById(btnId);
     if (el) {
       el.addEventListener('click', (e) => {
         e.preventDefault();
         onOpenAuthModal();
+      });
+    }
+  });
+
+  // Direct study workspace buttons: enter immediately without blocking!
+  const directStudyButtons = [
+    'btn-nav-get-started',
+    'btn-hero-start-free',
+    'btn-footer-start-free',
+    'btn-mobile-get-started',
+  ];
+
+  directStudyButtons.forEach((btnId) => {
+    const el = document.getElementById(btnId);
+    if (el) {
+      el.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location.hash = '#home';
       });
     }
   });

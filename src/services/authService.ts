@@ -63,9 +63,9 @@ export class AuthService {
     // Subscribe to Firebase Auth state
     try {
       // Check for redirect result (mobile auth return)
-      getRedirectResult(auth).then(async (result) => {
+      getRedirectResult(auth).then((result) => {
         if (result && result.user) {
-          const syncedUser = await this.syncFromFirebaseUser(result.user);
+          const syncedUser = this.syncFromFirebaseUser(result.user);
           this.user = syncedUser;
           localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(syncedUser));
           this.saveUserToLocalRegistry(syncedUser);
@@ -75,9 +75,9 @@ export class AuthService {
         console.warn('[AuthService] getRedirectResult error:', err);
       });
 
-      onAuthStateChanged(auth, async (fbUser: FirebaseUser | null) => {
+      onAuthStateChanged(auth, (fbUser: FirebaseUser | null) => {
         if (fbUser) {
-          const syncedUser = await this.syncFromFirebaseUser(fbUser);
+          const syncedUser = this.syncFromFirebaseUser(fbUser);
           this.user = syncedUser;
           localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(syncedUser));
           this.saveUserToLocalRegistry(syncedUser);
@@ -109,34 +109,12 @@ export class AuthService {
     });
   }
 
-  private static async syncFromFirebaseUser(fbUser: FirebaseUser): Promise<AuthUser> {
-    let userName = fbUser.displayName || 'NEET Aspirant';
-    let targetYear = 2026;
+  private static syncFromFirebaseUser(fbUser: FirebaseUser): AuthUser {
+    const existing = this.user && this.user.uid === fbUser.uid ? this.user : null;
+    const userName = fbUser.displayName || existing?.name || 'NEET Aspirant';
+    const targetYear = existing?.targetYear || 2026;
 
-    try {
-      const userDocRef = doc(db, 'users', fbUser.uid);
-      const snap = await getDoc(userDocRef);
-      if (snap.exists()) {
-        const data = snap.data();
-        if (data.name) userName = data.name;
-        if (data.targetYear) targetYear = data.targetYear;
-      } else {
-        // Save initial profile
-        await setDoc(userDocRef, {
-          uid: fbUser.uid,
-          email: fbUser.email,
-          name: userName,
-          targetYear,
-          photoURL: fbUser.photoURL || '',
-          createdAt: new Date().toISOString(),
-          updatedAt: new Date().toISOString(),
-        }, { merge: true });
-      }
-    } catch (err) {
-      console.warn('[AuthService] Firestore sync skipped or offline:', err);
-    }
-
-    return {
+    const user: AuthUser = {
       id: fbUser.uid,
       uid: fbUser.uid,
       email: fbUser.email || `aspirant_${fbUser.uid.substring(0, 6)}@vginsights.in`,
@@ -146,6 +124,45 @@ export class AuthService {
       loggedInAt: Date.now(),
       isEmailVerified: fbUser.emailVerified ?? true,
     };
+
+    // Asynchronous background firestore sync (completely non-blocking)
+    try {
+      const userDocRef = doc(db, 'users', fbUser.uid);
+      getDoc(userDocRef).then((snap) => {
+        if (snap.exists()) {
+          const data = snap.data();
+          let updated = false;
+          if (data.name && data.name !== user.name) {
+            user.name = data.name;
+            updated = true;
+          }
+          if (data.targetYear && data.targetYear !== user.targetYear) {
+            user.targetYear = data.targetYear;
+            updated = true;
+          }
+          if (updated) {
+            localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(user));
+            this.notifyListeners();
+          }
+        } else {
+          setDoc(userDocRef, {
+            uid: fbUser.uid,
+            email: fbUser.email,
+            name: user.name,
+            targetYear: user.targetYear,
+            photoURL: fbUser.photoURL || '',
+            createdAt: new Date().toISOString(),
+            updatedAt: new Date().toISOString(),
+          }, { merge: true }).catch(() => {});
+        }
+      }).catch((e) => {
+        console.warn('[AuthService] Background firestore sync skipped:', e);
+      });
+    } catch {
+      // Ignore background sync errors
+    }
+
+    return user;
   }
 
   private static getLocalRegistry(): Record<string, AuthUser> {
@@ -183,7 +200,7 @@ export class AuthService {
   public static async signInWithGoogle(): Promise<{ success: boolean; user?: AuthUser; error?: string }> {
     try {
       const result = await signInWithPopup(auth, googleProvider);
-      const user = await this.syncFromFirebaseUser(result.user);
+      const user = this.syncFromFirebaseUser(result.user);
       
       this.user = user;
       localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(user));

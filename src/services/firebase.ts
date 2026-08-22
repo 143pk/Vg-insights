@@ -29,9 +29,7 @@ export const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getA
 // Firebase Auth & Providers
 export const auth = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();
-googleProvider.setCustomParameters({
-  prompt: 'select_account'
-});
+
 
 // Firestore Database
 export const db = getFirestore(app);

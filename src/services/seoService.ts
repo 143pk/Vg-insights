@@ -101,9 +101,48 @@ export class SEOService {
           };
         });
 
+        // Hierarchical Breadcrumbs Schema for Google Search Snippets
+        const subjectKey = route.topicId?.startsWith('phys')
+          ? 'physics'
+          : route.topicId?.startsWith('chem')
+          ? 'chemistry'
+          : 'biology';
+        const subjectName = subjectKey === 'physics' ? 'NEET Physics' : subjectKey === 'chemistry' ? 'NEET Chemistry' : 'NEET Biology';
+
+        const breadcrumbItems = [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'Home',
+            'item': `${this.BASE_URL}/`
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': `${subjectName} Syllabus`,
+            'item': `${this.BASE_URL}/#topics/${subjectKey}`
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': chName,
+            'item': canonicalUrl
+          },
+          {
+            '@type': 'ListItem',
+            'position': 4,
+            'name': topTitle,
+            'item': canonicalUrl
+          }
+        ];
+
         structuredData = {
           '@context': 'https://schema.org',
           '@graph': [
+            {
+              '@type': 'BreadcrumbList',
+              'itemListElement': breadcrumbItems
+            },
             {
               '@type': 'Article',
               'headline': `${topTitle} – High-Yield NEET UG Revision Notes & Formulas`,
@@ -204,11 +243,19 @@ export class SEOService {
     this.setMetaTag('name', 'google-adsense-account', 'ca-pub-8902157215045513');
     this.setMetaTag('name', 'description', description);
     this.setMetaTag('name', 'keywords', keywords);
+    this.setMetaTag('property', 'og:type', route.type === 'topic' ? 'article' : 'website');
+    this.setMetaTag('property', 'og:site_name', this.SITE_NAME);
     this.setMetaTag('property', 'og:title', title);
     this.setMetaTag('property', 'og:description', description);
     this.setMetaTag('property', 'og:url', canonicalUrl);
+    this.setMetaTag('property', 'og:image', `${this.BASE_URL}/og-image.png`);
+    this.setMetaTag('property', 'og:image:width', '1200');
+    this.setMetaTag('property', 'og:image:height', '630');
+    this.setMetaTag('name', 'twitter:card', 'summary_large_image');
+    this.setMetaTag('name', 'twitter:site', '@vginsights');
     this.setMetaTag('name', 'twitter:title', title);
     this.setMetaTag('name', 'twitter:description', description);
+    this.setMetaTag('name', 'twitter:image', `${this.BASE_URL}/og-image.png`);
 
     // 3. Update Canonical Link
     let canonicalTag = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;

@@ -355,8 +355,8 @@ export function initAuthModalEvents(onLoginSuccess: () => void): void {
     try {
       const res = await AuthService.signInWithGoogle();
       if (res.success && res.user) {
-        // Transition to Name Confirmation / Customization step immediately!
-        showStep('name', false);
+        closeModal();
+        onLoginSuccess();
       } else {
         if (res.error && !res.error.toLowerCase().includes('cancel') && !res.error.toLowerCase().includes('closed')) {
           showError(res.error);
