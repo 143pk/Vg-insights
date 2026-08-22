@@ -33,7 +33,7 @@ import { renderCustomTestView } from './components/customTestComponent';
 import { renderTestHistoryView } from './components/testHistoryComponent';
 import { renderStrengthsWeaknessesView } from './components/strengthsWeaknessesComponent';
 import { renderWeakTopicPracticeView, renderBookmarkedQuestionsView } from './components/practiceViewsComponent';
-import { renderPYQsView } from './components/pyqsViewComponent';
+import { renderPYQsView, attachPYQsEvents } from './components/pyqsViewComponent';
 import { renderRevisionView } from './components/revisionViewComponent';
 import { renderChaptersDirectoryView } from './components/chaptersDirectoryComponent';
 
@@ -523,6 +523,9 @@ class App {
 
       case 'pyqs':
         appContent.innerHTML = renderPYQsView();
+        attachPYQsEvents(() => {
+          this.renderMainContent();
+        });
         break;
 
       case 'revision':
