@@ -242,10 +242,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
-    <!-- KaTeX CSS & JS CDN for Mathematical Typography -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
     <!-- Theme Pre-Initializer Script (Zero-Flicker Synchronous Theme Application) -->
     <script>
       (function() {
@@ -265,8 +261,29 @@
       })();
     </script>
   </head>
-  <body class="bg-[#F8FAFC] dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen font-sans antialiased selection:bg-blue-600 selection:text-white transition-colors duration-200">
-    <div id="root" class="min-h-screen flex flex-col"></div>
+  <body class="bg-[#F8FAFC] dark:bg-[#0B1120] text-slate-900 dark:text-slate-100 min-h-screen font-sans antialiased selection:bg-blue-600 selection:text-white transition-colors duration-200">
+    <div id="root" class="min-h-screen flex flex-col">
+      <!-- Instant Zero-Latency Initial Render Shell (Replaced immediately on App Mount) -->
+      <div id="app-initial-loader" class="min-h-screen flex flex-col items-center justify-center p-6 bg-[#FFFFFF] dark:bg-[#0B1120] text-slate-900 dark:text-slate-100 transition-opacity duration-300">
+        <div class="flex flex-col items-center max-w-sm text-center">
+          <div class="relative w-16 h-16 sm:w-20 sm:h-20 mb-5 flex items-center justify-center">
+            <div class="absolute inset-0 rounded-2xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-sky-400 animate-pulse blur-md opacity-40"></div>
+            <div class="relative w-full h-full rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center shadow-lg shadow-blue-500/25 border border-white/20">
+              <span class="text-white font-black text-2xl tracking-tighter">VG</span>
+            </div>
+          </div>
+          <h1 class="text-lg sm:text-xl font-bold tracking-tight text-slate-900 dark:text-white mb-2">
+            VG Insights
+          </h1>
+          <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-6 font-medium">
+            Loading NEET Preparation Workspace...
+          </p>
+          <div class="w-36 h-1.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+            <div class="h-full bg-blue-600 rounded-full animate-[pulse_1s_ease-in-out_infinite] w-full"></div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

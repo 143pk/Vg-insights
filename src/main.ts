@@ -59,13 +59,26 @@ class App {
   private customTestDuration: number = 35;
 
   public init(): void {
-    // Initialize Theme
+    // Initialize Theme synchronously
     StorageService.initTheme();
+
+    // Initial Layout Render immediately to populate DOM and eliminate white screens
+    this.renderApp();
 
     // Initialize Study Session Timer
     StudyTimerService.init();
     const initialRoute = RouterService.parseHash(window.location.hash);
     StudyTimerService.updateRoute(initialRoute);
+
+    // Initialize AuthService observer to re-render when student logs in or logs out
+    AuthService.init();
+    AuthService.onAuthChanged(() => {
+      const currentRoute = RouterService.parseHash(window.location.hash);
+      if (currentRoute.type !== 'landing' && currentRoute.type !== 'login') {
+        this.refreshHeader();
+        this.renderMainContent();
+      }
+    });
 
     // Initialize PWA / Android WebAPK Installation Manager
     PWAInstallService.init();
@@ -78,9 +91,6 @@ class App {
         });
       });
     }
-
-    // Initial Layout Render
-    this.renderApp();
 
     // Scroll listener for sticky header visual height & translucency refinement
     let isHeaderTicking = false;
@@ -243,7 +253,11 @@ class App {
   }
 
   public openAuthModal(): void {
-    this.openModal('modal-auth');
+    if ((window as any).openAuthModal) {
+      (window as any).openAuthModal();
+    } else {
+      this.openModal('modal-auth');
+    }
   }
 
   private renderApp(): void {
@@ -299,6 +313,7 @@ class App {
     this.attachModalEvents();
     initAuthModalEvents(() => {
       this.refreshHeader();
+      this.renderMainContent();
     });
     initPwaInstallModal();
     this.renderMainContent();
