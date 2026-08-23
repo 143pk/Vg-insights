@@ -34,6 +34,15 @@ export function toKaTeXLatex(formulaStr: string): string {
     s = s.slice(2, -2).trim();
   }
 
+  // Normalize common unicode punctuation and math symbols
+  s = s.replace(/[–—―]/g, '-');
+  s = s.replace(/½/g, '\\frac{1}{2}');
+  s = s.replace(/¼/g, '\\frac{1}{4}');
+  s = s.replace(/¾/g, '\\frac{3}{4}');
+  s = s.replace(/µ/g, '\\mu ');
+  s = s.replace(/Å/g, '\\text{Å}');
+  s = s.replace(/√/g, '\\sqrt ');
+
   // 1. Escape unescaped percent signs % -> \% (Prevents KaTeX from treating % as a LaTeX comment!)
   s = s.replace(/(^|[^\\])%/g, '$1\\%');
 

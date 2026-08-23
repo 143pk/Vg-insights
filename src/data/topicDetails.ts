@@ -9366,5 +9366,23 @@ export const TOPIC_DETAILS: Record<string, any> = {
   "phys-thermal-expansion": physThermalExpansionDetails,
   "phys-heat-transfer": physHeatTransferDetails,
   "phys-blackbody-radiation": physBlackbodyRadiationDetails,
+  // Direct roadmap aliases to ensure 100% connection with rich NCERT details
+  "bio-cell-structure-functions": eukaryoticOrganellesDetails,
+  "cell-structure-functions": eukaryoticOrganellesDetails,
+  "chem-structure-atom-bohr": physRutherfordBohrAtomDetails,
+  "chem-chemical-bonding-vsepr": chemVseprTheoryDetails,
+  "bio-cell-cycle-mitosis-meiosis": bioMitosisMeiosisDetails,
+  "bio-biomolecules-structure-enzymes": bioEnzymesActionInhibitionDetails,
+  "bio-principles-inheritance-mendel": bioMendelianGeneticsDetails,
+  "phys-current-ohms-law": physOhmsLawDriftDetails,
+  "chem-chemical-kinetics-rate-law": chemZeroFirstOrderDetails,
+  "bio-molecular-basis-dna-replication": bioDnaReplicationEnzymesDetails,
+  "phys-optics-reflection-refraction": physRefractionTirDetails,
+  "chem-coordination-iupac-isomerism": chemCoordinationIupacDetails,
+  "bio-ecology-organisms-population": bioPopulationGrowthInteractionsDetails,
   ...EXPERIMENTAL_SKILLS_TOPIC_DETAILS
 };
+
+// Aliases for chemistry mole concept
+TOPIC_DETAILS["chem-atomic-mass-mole-concept"] = TOPIC_DETAILS["mole-concept-topic"];
+TOPIC_DETAILS["atomic-mass-mole-concept"] = TOPIC_DETAILS["mole-concept-topic"];

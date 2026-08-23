@@ -1,4 +1,4 @@
-import { SUBJECTS, CLASSIFICATIONS, CHAPTERS, TOPICS } from '../data/neetData';
+import { SUBJECTS, CLASSIFICATIONS, CHAPTERS, TOPICS, getTopicById } from '../data/neetData';
 
 export interface BreadcrumbItem {
   label: string;
@@ -10,6 +10,8 @@ export interface RouteState {
     | 'landing'
     | 'login'
     | 'home'
+    | 'start-here'
+    | 'roadmap'
     | 'subject'
     | 'class'
     | 'classification'
@@ -36,6 +38,8 @@ export interface RouteState {
     | 'my-progress';
   mockId?: string;
   subFilter?: string;
+  stepId?: string;
+  phaseId?: number;
   subjectId?: string;
   classLevel?: 'class-11' | 'class-12';
   classificationId?: string;
@@ -217,6 +221,20 @@ export class RouterService {
     }
 
     // 5. Study Modules
+    if (prefix === 'start-here' || prefix === 'roadmap' || prefix === 'beginner-path') {
+      const stepId = parts[1] || undefined;
+      const phaseId = parts[2] ? parseInt(parts[2], 10) : undefined;
+      return {
+        type: 'start-here',
+        stepId,
+        phaseId: isNaN(phaseId as number) ? undefined : phaseId,
+        breadcrumbs: [
+          { label: 'Home', path: '#home' },
+          { label: '🌱 Start Here (Beginner Path)', path: '#start-here' }
+        ]
+      };
+    }
+
     if (prefix === 'pyqs') {
       return {
         type: 'pyqs',
@@ -328,7 +346,7 @@ export class RouterService {
 
     if (prefix === 'topic' && parts[1]) {
       const topicId = parts[1];
-      const topic = TOPICS[topicId];
+      const topic = getTopicById(topicId);
       if (topic) {
         const chapter = CHAPTERS[topic.chapterId];
         const classification = chapter ? CLASSIFICATIONS[chapter.classificationId] : undefined;
@@ -346,7 +364,7 @@ export class RouterService {
 
         return {
           type: 'topic',
-          topicId,
+          topicId: topic.id || topicId,
           chapterId: topic.chapterId,
           classificationId: chapter?.classificationId,
           subjectId: classification?.subjectId,

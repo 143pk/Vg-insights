@@ -1,4 +1,4 @@
-import { TOPICS, CHAPTERS, CLASSIFICATIONS, SUBJECTS } from '../data/neetData'
+import { TOPICS, CHAPTERS, CLASSIFICATIONS, SUBJECTS, getTopicById, getChapterForTopic } from '../data/neetData'
 import { TOPIC_DETAILS } from '../data/topicDetails'
 import { StorageService } from '../services/storageService'
 import { DetailedTopicContent, TopicNote, PYQuestion, PracticeQuestion, NeetMarksPotential, ConceptVisual } from '../types/neet'
@@ -6,7 +6,7 @@ import { renderFormulaHTML, renderInlineMathHTML } from '../utils/mathRenderer'
 import { reconcileMarksPotential, normalizePYQRecord, deduplicateAndNormalizePYQs } from '../utils/marksPotentialCalculator'
 
 export function renderTopicView(topicId: string): string {
-  const topic = TOPICS[topicId];
+  const topic = getTopicById(topicId);
   if (!topic) {
     return `<div class="p-8 text-center text-slate-500">Topic not found. <a href="#home" class="text-blue-500 underline">Return Home</a></div>`;
   }
@@ -14,7 +14,7 @@ export function renderTopicView(topicId: string): string {
   // Record visited topic for Continue Learning
   StorageService.setLastVisitedTopic(topicId);
 
-  const chapter = CHAPTERS[topic.chapterId];
+  const chapter = getChapterForTopic(topic);
   const classification = chapter ? CLASSIFICATIONS[chapter.classificationId] : undefined;
   const subject = classification ? SUBJECTS.find(s => s.id === classification.subjectId) : undefined;
 
@@ -37,6 +37,30 @@ export function renderTopicView(topicId: string): string {
   return `
     <article class="w-full max-w-4xl mx-auto space-y-6 sm:space-y-8 pb-16 font-sans text-slate-900 dark:text-slate-100 min-w-0" id="topic-reader-root">
       
+      <!-- Semantic Breadcrumbs (SEO & Knowledge Hierarchy) -->
+      <nav aria-label="Breadcrumb" class="flex flex-wrap items-center gap-1.5 sm:gap-2 text-xs font-semibold text-slate-500 dark:text-slate-400 px-1">
+        <a href="#home" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center gap-1">
+          <span>🏠</span>
+          <span>Home</span>
+        </a>
+        <span class="text-slate-300 dark:text-slate-600">/</span>
+        ${subject ? `
+          <a href="#subject/${subject.id}" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+            ${subject.name}
+          </a>
+          <span class="text-slate-300 dark:text-slate-600">/</span>
+        ` : ''}
+        ${chapter ? `
+          <a href="#chapter/${chapter.id}" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+            ${chapter.title}
+          </a>
+          <span class="text-slate-300 dark:text-slate-600">/</span>
+        ` : ''}
+        <span class="text-slate-800 dark:text-slate-200 font-bold truncate max-w-[180px] sm:max-w-xs" aria-current="page">
+          ${topic.title}
+        </span>
+      </nav>
+
       <!-- Topic Main Header & Meta -->
       <header class="space-y-5 p-4 sm:p-6 lg:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm transition-all min-w-0">
         
@@ -106,13 +130,96 @@ export function renderTopicView(topicId: string): string {
 
       </header>
 
-      ${detail ? renderDetailedContent(detail, topic, pyqs) : renderFallbackContent(topic, pyqs)}
+      ${detail ? renderDetailedContent(detail, topic, pyqs, chapter, subject) : renderFallbackContent(topic, pyqs, chapter, subject)}
 
     </article>
   `;
 }
 
-function renderDetailedContent(detail: DetailedTopicContent, topic: any, pyqs: PYQuestion[]): string {
+function renderRelatedConceptsSection(topic: any, chapter?: any, subject?: any): string {
+  const chapterTopics = chapter ? (chapter.topicIds || []).map((id: string) => TOPICS[id] || getTopicById(id)).filter(Boolean) : [];
+  const currentIdx = chapterTopics.findIndex((t: any) => t.id === topic.id);
+  const prevTopic = currentIdx > 0 ? chapterTopics[currentIdx - 1] : null;
+  const nextTopic = currentIdx >= 0 && currentIdx < chapterTopics.length - 1 ? chapterTopics[currentIdx + 1] : null;
+  const otherTopics = chapterTopics.filter((t: any) => t.id !== topic.id).slice(0, 6);
+
+  return `
+    <!-- 11. RELATED CONCEPTS & CHAPTER KNOWLEDGE GRAPH -->
+    <section id="section-related-concepts" aria-labelledby="heading-related-concepts" class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-100 dark:border-slate-800 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold text-xl shrink-0">
+          🧭
+        </div>
+        <div>
+          <h2 id="heading-related-concepts" class="text-lg sm:text-xl font-bold text-slate-900 dark:text-slate-100">
+            11. Related Concepts & Chapter Navigation
+          </h2>
+          <p class="text-xs text-slate-500 dark:text-slate-400">
+            Continue your structured learning journey across ${chapter ? chapter.title : 'this chapter'} and NEET ${subject ? subject.name : 'UG'}.
+          </p>
+        </div>
+      </div>
+
+      <!-- Step Navigation (Previous & Next Topic) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        ${prevTopic ? `
+          <a href="#topic/${prevTopic.id}" class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200/80 dark:border-slate-700/80 hover:border-blue-500/50 dark:hover:border-blue-500/50 transition-all group flex flex-col justify-between">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400">← Previous Concept</span>
+            <span class="text-sm font-bold text-slate-900 dark:text-slate-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 mt-1">${prevTopic.title}</span>
+          </a>
+        ` : `
+          <div class="p-4 rounded-2xl bg-slate-50/50 dark:bg-slate-800/20 border border-slate-200/40 dark:border-slate-800 text-xs text-slate-400 flex items-center">
+            <span>First concept in this chapter sequence.</span>
+          </div>
+        `}
+
+        ${nextTopic ? `
+          <a href="#topic/${nextTopic.id}" class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200/80 dark:border-slate-700/80 hover:border-blue-500/50 dark:hover:border-blue-500/50 transition-all group flex flex-col justify-between text-right">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Next Concept →</span>
+            <span class="text-sm font-bold text-slate-900 dark:text-slate-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 mt-1">${nextTopic.title}</span>
+          </a>
+        ` : `
+          <div class="p-4 rounded-2xl bg-slate-50/50 dark:bg-slate-800/20 border border-slate-200/40 dark:border-slate-800 text-xs text-slate-400 flex items-center justify-end">
+            <span>Final concept in this chapter sequence.</span>
+          </div>
+        `}
+      </div>
+
+      <!-- Other Topics in Same Chapter -->
+      ${otherTopics.length > 0 ? `
+        <div class="space-y-3 pt-2">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+            More High-Yield Topics in ${chapter ? chapter.title : 'this Chapter'}
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5">
+            ${otherTopics.map((t: any) => `
+              <a href="#topic/${t.id}" class="p-3 rounded-xl bg-slate-50/80 dark:bg-slate-800/40 border border-slate-200/70 dark:border-slate-800 hover:border-blue-500/40 text-xs font-medium text-slate-800 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center justify-between">
+                <span class="truncate">${t.title}</span>
+                <span class="text-slate-400 shrink-0 ml-1">→</span>
+              </a>
+            `).join('')}
+          </div>
+        </div>
+      ` : ''}
+
+      <!-- Parent Chapter & Hub Links -->
+      <div class="p-4 rounded-2xl bg-blue-50/50 dark:bg-blue-950/20 border border-blue-200/60 dark:border-blue-800/40 flex flex-wrap items-center justify-between gap-3 text-xs">
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="font-bold text-blue-900 dark:text-blue-300">Quick Hubs:</span>
+          ${chapter ? `<a href="#chapter/${chapter.id}" class="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-800 border border-blue-200 dark:border-blue-800 font-semibold text-blue-700 dark:text-blue-300 hover:bg-blue-50">📂 ${chapter.title}</a>` : ''}
+          ${subject ? `<a href="#subject/${subject.id}" class="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-800 border border-blue-200 dark:border-blue-800 font-semibold text-blue-700 dark:text-blue-300 hover:bg-blue-50">${subject.icon} All ${subject.name} Chapters</a>` : ''}
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="#revision" class="text-blue-600 dark:text-blue-400 hover:underline font-semibold">📑 Formula Sheets</a>
+          <span>•</span>
+          <a href="#pyqs" class="text-blue-600 dark:text-blue-400 hover:underline font-semibold">🎯 All PYQs</a>
+        </div>
+      </div>
+    </section>
+  `;
+}
+
+function renderDetailedContent(detail: DetailedTopicContent, topic: any, pyqs: PYQuestion[], chapter?: any, subject?: any): string {
   const marksPotentialHtml = renderMarksPotentialSection(detail.neetMarksPotential, detail.topicName || topic.title, pyqs);
 
   const basicIdea = detail.basicIdea || [];
@@ -738,10 +845,12 @@ function renderDetailedContent(detail: DetailedTopicContent, topic: any, pyqs: P
         `}
       </div>
     </section>
+
+    ${renderRelatedConceptsSection(topic, chapter, subject)}
   `;
 }
 
-function renderFallbackContent(topic: any, pyqs: PYQuestion[]): string {
+function renderFallbackContent(topic: any, pyqs: PYQuestion[], chapter?: any, subject?: any): string {
   const notes: TopicNote = topic.notes || {
     learn: [topic.summary || 'Essential NEET UG syllabus topic.'],
     keyConcepts: [topic.summary || 'Fundamental concept for NEET examination.'],
@@ -999,6 +1108,8 @@ function renderFallbackContent(topic: any, pyqs: PYQuestion[]): string {
         `}
       </div>
     </section>
+
+    ${renderRelatedConceptsSection(topic, chapter, subject)}
   `;
 }
 

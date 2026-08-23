@@ -135,9 +135,24 @@ export function renderWeaknessPracticeView(topicId: string, sessionState?: Weakn
             🔄 Practice Again
           </button>
           <a href="#topic/${topicId}" class="px-6 py-3 rounded-2xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-bold text-xs sm:text-sm transition-colors">
-            📖 Study Notes
+            📖 Full Study Notes
           </a>
         </div>
+
+        ${correctCount < totalAttempted ? `
+          <!-- In-Place Learn & Concept Review Section for Failed/Missed Questions -->
+          <div class="pt-4 space-y-3">
+            <div class="flex items-center gap-2 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+              <span>📚</span> Review Core NCERT Concepts For This Topic
+            </div>
+            ${WeaknessDoctorService.renderLearnTopicSection({
+              topicId,
+              topicTitle: context.topicTitle,
+              subjectId: context.subjectId as any,
+              chapterId: context.chapterId
+            })}
+          </div>
+        ` : ''}
 
         <!-- Question Review List -->
         <div class="space-y-4 pt-4">

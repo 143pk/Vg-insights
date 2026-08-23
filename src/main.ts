@@ -36,6 +36,9 @@ import { renderWeakTopicPracticeView, renderBookmarkedQuestionsView } from './co
 import { renderPYQsView, attachPYQsEvents } from './components/pyqsViewComponent';
 import { renderRevisionView } from './components/revisionViewComponent';
 import { renderChaptersDirectoryView } from './components/chaptersDirectoryComponent';
+import { renderBeginnerRoadmapView } from './components/beginnerRoadmapComponent';
+import { renderAssessmentFailureLearnReview, attachAssessmentLearnReviewEvents, MissedQuestionDetail } from './components/assessmentLearnReviewComponent';
+import { LearningRoadmapService, ROADMAP_STEPS } from './data/learningRoadmapData';
 
 import { renderSearchModal, handleSearchInput } from './components/searchModalComponent';
 import { renderBookmarksModal } from './components/bookmarksModalComponent';
@@ -57,6 +60,9 @@ class App {
   private customTestSubject: string = 'all';
   private customTestCount: number = 30;
   private customTestDuration: number = 35;
+  private roadmapActiveStepId?: string;
+  private roadmapActivePhaseId?: number;
+  private roadmapSubjectFilter: string = 'all';
 
   public init(): void {
     // Initialize Theme synchronously
@@ -519,6 +525,17 @@ class App {
 
       case 'bookmarked-questions':
         appContent.innerHTML = renderBookmarkedQuestionsView();
+        break;
+
+      case 'start-here':
+      case 'roadmap':
+        if (routeState.stepId) {
+          this.roadmapActiveStepId = routeState.stepId;
+        } else if (!this.roadmapActiveStepId) {
+          this.roadmapActiveStepId = LearningRoadmapService.getNextRecommendedStepId();
+        }
+        appContent.innerHTML = renderBeginnerRoadmapView(this.roadmapActiveStepId);
+        this.attachRoadmapEvents();
         break;
 
       case 'pyqs':
@@ -1508,6 +1525,434 @@ class App {
         this.attachDiagnosticQuizEvents();
       }
     });
+  }
+
+  private attachRoadmapEvents(): void {
+    // Advance to next step button
+    document.querySelectorAll('.btn-advance-to-next').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const target = e.currentTarget as HTMLElement;
+        const currentStepId = target.getAttribute('data-current-step-id');
+        const nextStepId = target.getAttribute('data-next-step-id');
+        if (currentStepId) {
+          LearningRoadmapService.markStepCompleted(currentStepId, true);
+        }
+        if (nextStepId) {
+          this.roadmapActiveStepId = nextStepId;
+        }
+        const appContent = document.getElementById('app-content');
+        if (appContent) {
+          appContent.innerHTML = renderBeginnerRoadmapView(this.roadmapActiveStepId);
+          this.attachRoadmapEvents();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Scroll to test button when next topic is locked
+    document.getElementById('btn-scroll-to-test')?.addEventListener('click', () => {
+      document.getElementById('topic-mastery-assessment')?.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Step navigation buttons (Prev / Next)
+    document.querySelectorAll('.btn-nav-step').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const target = e.currentTarget as HTMLElement;
+        const stepId = target.getAttribute('data-step-id');
+        if (stepId) {
+          this.roadmapActiveStepId = stepId;
+          const appContent = document.getElementById('app-content');
+          if (appContent) {
+            appContent.innerHTML = renderBeginnerRoadmapView(this.roadmapActiveStepId);
+            this.attachRoadmapEvents();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+        }
+      });
+    });
+
+    // Toggle PYQ Solution visibility
+    document.querySelectorAll('.roadmap-toggle-pyq-sol').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const target = e.currentTarget as HTMLElement;
+        const targetId = target.getAttribute('data-target');
+        if (targetId) {
+          const solElement = document.getElementById(targetId);
+          if (solElement) {
+            const isHidden = solElement.classList.contains('hidden');
+            if (isHidden) {
+              solElement.classList.remove('hidden');
+              target.textContent = 'Hide Solution & Explanation ↑';
+            } else {
+              solElement.classList.add('hidden');
+              target.textContent = 'Show Solution & NCERT Explanation ↓';
+            }
+          }
+        }
+      });
+    });
+
+    // Mastery Quiz Option Selection & Palette Jump
+    const selectedAnswers: Record<number, number> = {};
+
+    // Jump to specific question from palette
+    document.querySelectorAll('.q-nav-bubble').forEach(bubble => {
+      bubble.addEventListener('click', (e) => {
+        const target = e.currentTarget as HTMLElement;
+        const targetQ = target.getAttribute('data-target-q');
+        if (targetQ !== null) {
+          const targetCard = document.getElementById(`mastery-card-${targetQ}`);
+          if (targetCard) {
+            targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            targetCard.classList.add('ring-2', 'ring-blue-500');
+            setTimeout(() => targetCard.classList.remove('ring-2', 'ring-blue-500'), 1500);
+          }
+        }
+      });
+    });
+
+    document.querySelectorAll('.mastery-opt-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const target = e.currentTarget as HTMLButtonElement;
+        const qIdx = parseInt(target.getAttribute('data-q-idx') || '0', 10);
+        const optIdx = parseInt(target.getAttribute('data-opt-idx') || '0', 10);
+
+        // Record selection
+        selectedAnswers[qIdx] = optIdx;
+
+        // Update answered count badge
+        const totalCards = document.querySelectorAll('.mastery-quiz-card').length;
+        const answeredCount = Object.keys(selectedAnswers).length;
+        const countBadge = document.getElementById('answered-counter-badge');
+        if (countBadge) {
+          countBadge.textContent = `${answeredCount} of ${totalCards} Answered`;
+          if (answeredCount === totalCards) {
+            countBadge.className = 'text-emerald-400 font-bold';
+            countBadge.textContent = `All ${totalCards} Answered — Ready to Submit!`;
+          }
+        }
+
+        // Update palette bubble
+        const bubble = document.querySelector(`.q-nav-bubble[data-target-q="${qIdx}"]`);
+        if (bubble) {
+          bubble.classList.remove('bg-slate-800', 'text-slate-300', 'border-slate-700');
+          bubble.classList.add('bg-blue-600', 'text-white', 'border-blue-400', 'font-black');
+        }
+
+        // Update card visual options
+        const parentCard = target.closest('.mastery-quiz-card');
+        if (parentCard) {
+          const allOptions = parentCard.querySelectorAll('.mastery-opt-btn');
+          allOptions.forEach(opt => {
+            opt.classList.remove('border-blue-600', 'bg-blue-50', 'dark:bg-blue-950/60', 'dark:border-blue-500', 'font-bold');
+            opt.classList.add('border-slate-200', 'dark:border-slate-700', 'bg-white', 'dark:bg-slate-900');
+            const ind = opt.querySelector('.opt-indicator');
+            if (ind) {
+              ind.classList.remove('border-blue-600', 'text-blue-600', 'bg-blue-100', 'dark:bg-blue-900/60');
+              ind.classList.add('border-slate-300', 'dark:border-slate-600', 'text-slate-500');
+            }
+          });
+
+          // Highlight selected option
+          target.classList.remove('border-slate-200', 'dark:border-slate-700', 'bg-white', 'dark:bg-slate-900');
+          target.classList.add('border-blue-600', 'bg-blue-50', 'dark:bg-blue-950/60', 'dark:border-blue-500', 'font-bold');
+          const ind = target.querySelector('.opt-indicator');
+          if (ind) {
+            ind.classList.remove('border-slate-300', 'dark:border-slate-600', 'text-slate-500');
+            ind.classList.add('border-blue-600', 'text-blue-600', 'bg-blue-100', 'dark:bg-blue-900/60');
+          }
+
+          // Update status badge
+          const statusBadge = parentCard.querySelector('.quiz-q-status');
+          if (statusBadge) {
+            statusBadge.textContent = `Selected: Option ${String.fromCharCode(65 + optIdx)}`;
+            statusBadge.className = 'quiz-q-status text-xs font-bold text-blue-600 dark:text-blue-400';
+          }
+        }
+      });
+    });
+
+    // Retake / Reset Topic Assessment button
+    document.querySelectorAll('#btn-retest-topic, #btn-retake-mastery-test').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const appContent = document.getElementById('app-content');
+        if (appContent) {
+          appContent.innerHTML = renderBeginnerRoadmapView(this.roadmapActiveStepId);
+          this.attachRoadmapEvents();
+          document.getElementById('topic-mastery-assessment')?.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Submit Mastery Test Action
+    const submitTestBtn = document.getElementById('btn-submit-mastery-test');
+    if (submitTestBtn) {
+      submitTestBtn.addEventListener('click', () => {
+        const stepId = submitTestBtn.getAttribute('data-step-id');
+        const nextStepId = submitTestBtn.getAttribute('data-next-step-id');
+        const totalQuestions = parseInt(submitTestBtn.getAttribute('data-total-questions') || '15', 10);
+
+        const quizCards = document.querySelectorAll('.mastery-quiz-card');
+        
+        // Check if all questions are answered
+        let unAnsweredIdx: number | null = null;
+        for (let i = 0; i < totalQuestions; i++) {
+          if (selectedAnswers[i] === undefined) {
+            unAnsweredIdx = i;
+            break;
+          }
+        }
+
+        if (unAnsweredIdx !== null) {
+          const targetCard = quizCards[unAnsweredIdx];
+          if (targetCard) {
+            targetCard.classList.add('ring-4', 'ring-amber-500');
+            targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            const countBadge = document.getElementById('answered-counter-badge');
+            if (countBadge) {
+              countBadge.textContent = `Please answer Question ${unAnsweredIdx + 1} before submitting!`;
+              countBadge.className = 'text-amber-400 font-black animate-bounce';
+            }
+
+            setTimeout(() => targetCard.classList.remove('ring-4', 'ring-amber-500'), 2500);
+          }
+          return;
+        }
+
+        // Evaluate score
+        let correctCount = 0;
+        const missedQuestions: MissedQuestionDetail[] = [];
+
+        quizCards.forEach((card, idx) => {
+          const correctIdx = parseInt(card.getAttribute('data-correct-idx') || '0', 10);
+          const userChoice = selectedAnswers[idx];
+          const isCorrect = userChoice === correctIdx;
+
+          const rawQ = card.getAttribute('data-question');
+          const questionText = rawQ ? decodeURIComponent(rawQ) : (card.querySelector('p')?.textContent?.trim() || `Question ${idx + 1}`);
+          const rawExp = card.getAttribute('data-explanation');
+          const explanation = rawExp ? decodeURIComponent(rawExp) : (card.querySelector('.exp-content')?.textContent?.trim() || '');
+          const rawOpts = card.getAttribute('data-options');
+          let optionsList: string[] = [];
+          if (rawOpts) {
+            try {
+              optionsList = JSON.parse(decodeURIComponent(rawOpts));
+            } catch (e) {}
+          }
+
+          const optionButtons = card.querySelectorAll('.mastery-opt-btn');
+          const selectedBtn = optionButtons[userChoice] as HTMLElement;
+          const correctBtn = optionButtons[correctIdx] as HTMLElement;
+
+          const userChoiceText = optionsList[userChoice] || (selectedBtn?.querySelector('.font-medium')?.textContent?.trim() || (userChoice !== undefined ? `Option ${String.fromCharCode(65 + userChoice)}` : 'Not Answered'));
+          const correctChoiceText = optionsList[correctIdx] || (correctBtn?.querySelector('.font-medium')?.textContent?.trim() || `Option ${String.fromCharCode(65 + correctIdx)}`);
+
+          if (isCorrect) {
+            correctCount++;
+          } else {
+            missedQuestions.push({
+              qIdx: idx,
+              question: questionText,
+              userChoice: userChoice ?? -1,
+              correctChoice: correctIdx,
+              userChoiceText,
+              correctChoiceText,
+              explanation
+            });
+          }
+
+          // Update palette bubble result
+          const bubble = document.querySelector(`.q-nav-bubble[data-target-q="${idx}"]`);
+          if (bubble) {
+            bubble.classList.remove('bg-blue-600', 'border-blue-400', 'bg-slate-800', 'border-slate-700');
+            if (isCorrect) {
+              bubble.classList.add('bg-emerald-600', 'text-white', 'border-emerald-400');
+            } else {
+              bubble.classList.add('bg-rose-600', 'text-white', 'border-rose-400');
+            }
+          }
+
+          // Disable buttons
+          optionButtons.forEach((b: any) => {
+            b.disabled = true;
+            b.classList.add('cursor-default');
+          });
+
+          // Style options
+          if (isCorrect && selectedBtn) {
+            selectedBtn.classList.remove('border-blue-600', 'bg-blue-50', 'dark:bg-blue-950/60');
+            selectedBtn.classList.add('border-emerald-500', 'bg-emerald-50', 'dark:bg-emerald-950/60', 'text-emerald-900', 'dark:text-emerald-200');
+            const feedback = selectedBtn.querySelector('.opt-feedback');
+            if (feedback) {
+              feedback.textContent = '✓ Correct';
+              feedback.classList.remove('hidden');
+              feedback.classList.add('text-emerald-600', 'dark:text-emerald-400');
+            }
+          } else {
+            if (selectedBtn) {
+              selectedBtn.classList.remove('border-blue-600', 'bg-blue-50', 'dark:bg-blue-950/60');
+              selectedBtn.classList.add('border-rose-500', 'bg-rose-50', 'dark:bg-rose-950/60', 'text-rose-900', 'dark:text-rose-200');
+              const feedback = selectedBtn.querySelector('.opt-feedback');
+              if (feedback) {
+                feedback.textContent = '✗ Incorrect';
+                feedback.classList.remove('hidden');
+                feedback.classList.add('text-rose-600', 'dark:text-rose-400');
+              }
+            }
+            if (correctBtn) {
+              correctBtn.classList.add('border-emerald-500', 'bg-emerald-50', 'dark:bg-emerald-950/60', 'text-emerald-900', 'dark:text-emerald-200', 'font-bold');
+              const feedback = correctBtn.querySelector('.opt-feedback');
+              if (feedback) {
+                feedback.textContent = '✓ Correct Answer';
+                feedback.classList.remove('hidden');
+                feedback.classList.add('text-emerald-600', 'dark:text-emerald-400');
+              }
+            }
+          }
+
+          // Show explanation
+          const expBox = document.getElementById(`mastery-exp-${idx}`);
+          if (expBox) expBox.classList.remove('hidden');
+        });
+
+        const isPassed = correctCount === totalQuestions;
+
+        if (isPassed && stepId) {
+          // Mark step completed in database/local storage
+          LearningRoadmapService.markStepCompleted(stepId, true);
+
+          // Find step info
+          const currentStep = ROADMAP_STEPS.find(s => s.id === stepId);
+          const nextStep = nextStepId ? ROADMAP_STEPS.find(s => s.id === nextStepId) : null;
+
+          // Update control box
+          const controlBox = document.getElementById('mastery-assessment-control-box');
+          if (controlBox) {
+            controlBox.innerHTML = `
+              <div class="p-6 sm:p-8 rounded-3xl bg-emerald-500/10 border-2 border-emerald-500 text-center space-y-4 animate-in fade-in zoom-in duration-300">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500 text-white font-black text-xs uppercase tracking-wider shadow-sm">
+                  <span>🎉</span> Perfect Score 15/15 (100%) — Topic Mastered!
+                </div>
+                <div class="space-y-1">
+                  <h4 class="text-xl sm:text-2xl font-black text-emerald-950 dark:text-emerald-200">
+                    ${currentStep ? currentStep.topicTitle : 'Topic'} Mastered!
+                  </h4>
+                  <p class="text-xs sm:text-sm text-emerald-800 dark:text-emerald-300 max-w-lg mx-auto">
+                    Outstanding! You scored a perfect 15/15. All fundamental NCERT concepts, formulas, and examiner traps for this topic are verified.
+                  </p>
+                </div>
+
+                ${currentStep?.keyConcepts ? `
+                  <div class="p-4 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-emerald-500/30 text-left space-y-2 max-w-xl mx-auto text-xs sm:text-sm">
+                    <div class="font-bold text-emerald-900 dark:text-emerald-300 uppercase tracking-wider text-[11px]">
+                      ✓ Mastered NCERT Competencies:
+                    </div>
+                    <ul class="space-y-1.5 text-slate-700 dark:text-slate-300">
+                      ${currentStep.keyConcepts.map(kc => `<li class="flex items-start gap-2"><span class="text-emerald-600 font-bold shrink-0">✓</span><span>${kc}</span></li>`).join('')}
+                    </ul>
+                  </div>
+                ` : ''}
+
+                <div class="pt-2 flex flex-wrap items-center justify-center gap-3">
+                  ${currentStep ? `
+                    <a
+                      href="#topic/${currentStep.topicId}"
+                      class="px-5 py-2.5 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 text-emerald-800 dark:text-emerald-200 border border-emerald-300 dark:border-emerald-800 font-bold text-xs transition-all shadow-xs inline-flex items-center gap-1.5 cursor-pointer"
+                    >
+                      <span>📖 Review Full Topic Notes & PYQs</span>
+                    </a>
+                  ` : ''}
+                </div>
+              </div>
+            `;
+          }
+
+          // Unlock Next Topic section
+          const unlockContainer = document.getElementById('next-topic-unlock-container');
+          if (unlockContainer) {
+            unlockContainer.innerHTML = `
+              <div class="p-6 sm:p-8 rounded-3xl bg-emerald-50 dark:bg-emerald-950/30 border-2 border-emerald-500/50 text-center space-y-4 shadow-lg shadow-emerald-500/10 animate-in fade-in zoom-in duration-500">
+                <div class="space-y-2 max-w-lg mx-auto">
+                  <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500 text-white text-xs font-black uppercase tracking-wider">
+                    <span>✓</span> Next Topic Unlocked
+                  </div>
+                  <h4 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">
+                    ${nextStep ? `🚀 Ready for Topic ${nextStep.stepNumber}: ${nextStep.topicTitle}` : (nextStepId ? '🚀 You Are Ready to Advance!' : '🏆 All Foundations Completed!')}
+                  </h4>
+                  <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                    Your 15/15 mastery is logged in your learning analytics. Click below to continue your journey.
+                  </p>
+                </div>
+
+                <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+                  ${nextStepId ? `
+                    <button
+                      type="button"
+                      class="btn-advance-to-next w-full sm:w-auto px-8 py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-black text-sm shadow-xl shadow-emerald-600/30 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                      data-current-step-id="${stepId}"
+                      data-next-step-id="${nextStepId}"
+                    >
+                      <span>Advance to Topic ${nextStep ? nextStep.stepNumber : ''} →</span>
+                    </button>
+                  ` : `
+                    <a
+                      href="#pyqs"
+                      class="px-8 py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-black text-sm shadow-xl transition-all inline-block"
+                    >
+                      Proceed to Full PYQ Practice Bank →
+                    </a>
+                  `}
+                </div>
+              </div>
+            `;
+          }
+
+          this.attachRoadmapEvents();
+          unlockContainer?.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          // Failed test (score < 15/15) - Comprehensive In-Test Learn Review
+          const currentStep = (stepId ? ROADMAP_STEPS.find(s => s.id === stepId) : null) || ROADMAP_STEPS[0];
+          const controlBox = document.getElementById('mastery-assessment-control-box');
+          
+          if (controlBox) {
+            controlBox.innerHTML = renderAssessmentFailureLearnReview({
+              step: currentStep,
+              topicId: currentStep.topicId,
+              topicTitle: currentStep.topicTitle,
+              correctCount,
+              totalQuestions,
+              missedQuestions,
+              nextStepId
+            });
+
+            attachAssessmentLearnReviewEvents(
+              () => {
+                // Retake callback
+                const appContent = document.getElementById('app-content');
+                if (appContent) {
+                  appContent.innerHTML = renderBeginnerRoadmapView(this.roadmapActiveStepId);
+                  this.attachRoadmapEvents();
+                  document.getElementById('topic-mastery-assessment')?.scrollIntoView({ behavior: 'smooth' });
+                }
+              },
+              () => {
+                // Scroll to notes callback
+                const studyNotes = document.getElementById('beginner-roadmap-study-notes');
+                if (studyNotes) {
+                  studyNotes.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+              }
+            );
+
+            // Smoothly scroll to the results review box
+            controlBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      });
+    }
   }
 
   private attachModalEvents(): void {

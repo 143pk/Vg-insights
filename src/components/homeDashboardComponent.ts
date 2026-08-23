@@ -40,6 +40,9 @@ export function renderHomeDashboard(): string {
           </p>
 
           <div class="pt-2 flex flex-wrap items-center gap-3">
+            <a href="#start-here" class="px-5 py-3 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold shadow-sm transition-all flex items-center gap-2 text-sm">
+              <span>🌱</span> Start Here (Beginner Path)
+            </a>
             <a href="#weekly-mock" class="px-5 py-3 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-bold shadow-sm transition-all flex items-center gap-2 text-sm">
               <span>📝</span> Start Week ${weekNumber} Mock
             </a>
@@ -134,6 +137,37 @@ export function renderHomeDashboard(): string {
         <div class="flex items-center gap-2 w-full sm:w-auto">
           <a href="#weakness-doctor" class="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-bold transition-all text-center shrink-0 shadow-sm">
             Open AI Doctor →
+          </a>
+        </div>
+      </section>
+
+      <!-- Beginner Sequential Roadmap Banner -->
+      <section class="p-5 sm:p-6 rounded-3xl bg-gradient-to-r from-emerald-900/90 via-slate-900 to-teal-950 border border-emerald-500/30 text-white shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 hover-card-lift">
+        <div class="flex items-start sm:items-center gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 flex items-center justify-center font-bold text-2xl shrink-0">
+            🌱
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider">
+                Beginner Learning Path
+              </span>
+              <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px] font-bold border border-emerald-500/30">
+                0 to 720 Sequence
+              </span>
+            </div>
+            <h3 class="text-base font-bold text-white mt-0.5">
+              New to NEET prep? Master topics one by one in structured order.
+            </h3>
+            <p class="text-xs text-slate-300">
+              Start with Step 1 (Cell Biology & Mole Concept) with NCERT concepts, key formulas, traps & PYQs.
+            </p>
+          </div>
+        </div>
+        
+        <div class="flex items-center gap-2 w-full sm:w-auto">
+          <a href="#start-here" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-black text-xs transition-all text-center shrink-0 shadow-sm">
+            Start Step 1 Now →
           </a>
         </div>
       </section>

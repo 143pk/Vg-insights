@@ -1,10 +1,25 @@
 # https://vginsights.in/ robots.txt
+# VG Insights – NEET UG 2027 Preparation Platform
+# Founders: Dr. Prajwal Kabadi (MBBS) & Mr. Amit Bangare
+
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /admin/
 
-# Google AdSense Crawler
+# Google Search & Specialized Crawlers
+User-agent: Googlebot
+Allow: /
+Allow: /assets/
+Allow: /sitemap.xml
+Allow: /manifest.json
+
 User-agent: Mediapartners-Google
 Allow: /
 Allow: /ads.txt
 
+User-agent: Bingbot
+Allow: /
+
 Sitemap: https://vginsights.in/sitemap.xml
+

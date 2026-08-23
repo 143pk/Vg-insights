@@ -17,6 +17,18 @@ export function renderSubjectView(subjectId: string): string {
   return `
     <div class="space-y-8 pb-12">
       
+      <!-- Semantic Breadcrumbs -->
+      <nav aria-label="Breadcrumb" class="flex flex-wrap items-center gap-1.5 sm:gap-2 text-xs font-semibold text-slate-500 dark:text-slate-400 px-1">
+        <a href="#home" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center gap-1">
+          <span>🏠</span>
+          <span>Home</span>
+        </a>
+        <span class="text-slate-300 dark:text-slate-600">/</span>
+        <span class="text-slate-800 dark:text-slate-200 font-bold" aria-current="page">
+          ${subject.name}
+        </span>
+      </nav>
+
       <!-- Subject Header -->
       <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm flex flex-col sm:flex-row items-start sm:items-center gap-6">
         <div class="w-20 h-20 rounded-2xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-4xl shrink-0">

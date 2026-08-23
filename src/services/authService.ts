@@ -12,6 +12,8 @@ import {
   doc, 
   setDoc, 
   getDoc,
+  handleFirestoreError,
+  OperationType,
   type FirebaseUser 
 } from './firebase';
 
@@ -126,40 +128,44 @@ export class AuthService {
     };
 
     // Asynchronous background firestore sync (completely non-blocking)
-    try {
-      const userDocRef = doc(db, 'users', fbUser.uid);
-      getDoc(userDocRef).then((snap) => {
-        if (snap.exists()) {
-          const data = snap.data();
-          let updated = false;
-          if (data.name && data.name !== user.name) {
-            user.name = data.name;
-            updated = true;
+    if (typeof navigator === 'undefined' || navigator.onLine) {
+      try {
+        const userDocRef = doc(db, 'users', fbUser.uid);
+        getDoc(userDocRef).then((snap) => {
+          if (snap.exists()) {
+            const data = snap.data();
+            let updated = false;
+            if (data.name && data.name !== user.name) {
+              user.name = data.name;
+              updated = true;
+            }
+            if (data.targetYear && data.targetYear !== user.targetYear) {
+              user.targetYear = data.targetYear;
+              updated = true;
+            }
+            if (updated) {
+              localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(user));
+              this.notifyListeners();
+            }
+          } else {
+            setDoc(userDocRef, {
+              uid: fbUser.uid,
+              email: fbUser.email,
+              name: user.name,
+              targetYear: user.targetYear,
+              photoURL: fbUser.photoURL || '',
+              createdAt: new Date().toISOString(),
+              updatedAt: new Date().toISOString(),
+            }, { merge: true }).catch((err) => {
+              handleFirestoreError(err, OperationType.WRITE, `users/${fbUser.uid}`);
+            });
           }
-          if (data.targetYear && data.targetYear !== user.targetYear) {
-            user.targetYear = data.targetYear;
-            updated = true;
-          }
-          if (updated) {
-            localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(user));
-            this.notifyListeners();
-          }
-        } else {
-          setDoc(userDocRef, {
-            uid: fbUser.uid,
-            email: fbUser.email,
-            name: user.name,
-            targetYear: user.targetYear,
-            photoURL: fbUser.photoURL || '',
-            createdAt: new Date().toISOString(),
-            updatedAt: new Date().toISOString(),
-          }, { merge: true }).catch(() => {});
-        }
-      }).catch((e) => {
-        console.warn('[AuthService] Background firestore sync skipped:', e);
-      });
-    } catch {
-      // Ignore background sync errors
+        }).catch((e) => {
+          handleFirestoreError(e, OperationType.GET, `users/${fbUser.uid}`);
+        });
+      } catch (err) {
+        handleFirestoreError(err, OperationType.GET, `users/${fbUser.uid}`);
+      }
     }
 
     return user;
@@ -328,15 +334,19 @@ export class AuthService {
     localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(this.user));
     this.saveUserToLocalRegistry(this.user);
 
-    if (this.user.uid) {
+    if (this.user.uid && (typeof navigator === 'undefined' || navigator.onLine)) {
       try {
         const userDocRef = doc(db, 'users', this.user.uid);
         setDoc(userDocRef, {
           name: this.user.name,
           targetYear: this.user.targetYear,
           updatedAt: new Date().toISOString()
-        }, { merge: true }).catch(() => {});
-      } catch {}
+        }, { merge: true }).catch((err) => {
+          handleFirestoreError(err, OperationType.UPDATE, `users/${this.user!.uid}`);
+        });
+      } catch (err) {
+        handleFirestoreError(err, OperationType.UPDATE, `users/${this.user.uid}`);
+      }
     }
 
     this.notifyListeners();

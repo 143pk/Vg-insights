@@ -124,6 +124,24 @@ export function renderChapterView(chapterId: string): string {
   return `
     <div class="space-y-8 pb-12">
       
+      <!-- Semantic Breadcrumbs -->
+      <nav aria-label="Breadcrumb" class="flex flex-wrap items-center gap-1.5 sm:gap-2 text-xs font-semibold text-slate-500 dark:text-slate-400 px-1">
+        <a href="#home" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center gap-1">
+          <span>🏠</span>
+          <span>Home</span>
+        </a>
+        <span class="text-slate-300 dark:text-slate-600">/</span>
+        ${subject ? `
+          <a href="#subject/${subject.id}" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+            ${subject.name}
+          </a>
+          <span class="text-slate-300 dark:text-slate-600">/</span>
+        ` : ''}
+        <span class="text-slate-800 dark:text-slate-200 font-bold truncate max-w-[200px] sm:max-w-xs" aria-current="page">
+          ${chapter.title}
+        </span>
+      </nav>
+
       <!-- Chapter Header -->
       <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-4">
         <div class="flex flex-wrap items-center gap-2">

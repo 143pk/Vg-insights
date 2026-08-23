@@ -117,6 +117,74 @@ Object.entries(CHAPTERS).forEach(([chId, ch]) => {
 
 export const TOPICS: Record<string, Topic> = ALL_TOPICS;
 
+export function getChapterForTopic(topic: Topic): Chapter | undefined {
+  if (!topic) return undefined;
+  if (topic.chapterId && CHAPTERS[topic.chapterId]) return CHAPTERS[topic.chapterId];
+
+  // Try matching by normalized chapter ID or title
+  if (topic.chapterId) {
+    const norm = topic.chapterId.toLowerCase().replace(/[^a-z0-9]/g, '');
+    const found = Object.values(CHAPTERS).find(ch => {
+      const chIdNorm = ch.id.toLowerCase().replace(/[^a-z0-9]/g, '');
+      const chTitleNorm = ch.title.toLowerCase().replace(/[^a-z0-9]/g, '');
+      return chIdNorm === norm || chTitleNorm === norm ||
+             chIdNorm.includes(norm) || norm.includes(chIdNorm) ||
+             chTitleNorm.includes(norm) || norm.includes(chTitleNorm);
+    });
+    if (found) return found;
+  }
+
+  // Try looking in chapters that include this topic's ID
+  const rawId = topic.id;
+  const trimmed = rawId.replace(/^(phys|chem|bio)-/, '');
+  const containingCh = Object.values(CHAPTERS).find(ch =>
+    ch.topicIds.includes(rawId) ||
+    ch.topicIds.includes(trimmed) ||
+    ch.topicIds.includes(`phys-${trimmed}`) ||
+    ch.topicIds.includes(`chem-${trimmed}`) ||
+    ch.topicIds.includes(`bio-${trimmed}`)
+  );
+  if (containingCh) return containingCh;
+
+  if (rawId.startsWith('phys-exp-') || rawId.includes('experimental')) {
+    return CHAPTERS['experimental-skills'];
+  }
+
+  return undefined;
+}
+
+export function getTopicById(topicId: string): Topic {
+  if (TOPICS[topicId]) return TOPICS[topicId];
+  
+  const trimmed = topicId.replace(/^(phys|chem|bio)-/, '');
+  if (TOPICS[trimmed]) return TOPICS[trimmed];
+  if (TOPICS[`phys-${trimmed}`]) return TOPICS[`phys-${trimmed}`];
+  if (TOPICS[`chem-${trimmed}`]) return TOPICS[`chem-${trimmed}`];
+  if (TOPICS[`bio-${trimmed}`]) return TOPICS[`bio-${trimmed}`];
+
+  // Look in TOPIC_DETAILS
+  const detail = TOPIC_DETAILS[topicId] || TOPIC_DETAILS[trimmed] || TOPIC_DETAILS[`phys-${trimmed}`] || TOPIC_DETAILS[`chem-${trimmed}`] || TOPIC_DETAILS[`bio-${trimmed}`];
+  if (detail) {
+    const chId = detail.chapterId || detail.chapter || '';
+    const generated = buildTopicFromDetails(topicId, detail, chId);
+    TOPICS[topicId] = generated;
+    return generated;
+  }
+
+  // Look through ALL_TOPICS values for matching title or ID fragments
+  const match = Object.values(TOPICS).find(t => 
+    t.id.includes(trimmed) || 
+    trimmed.includes(t.id) || 
+    t.title.toLowerCase().replace(/[^a-z0-9]/g, '') === trimmed.toLowerCase().replace(/[^a-z0-9]/g, '')
+  );
+  if (match) return match;
+
+  // Fallback to building standard topic so app never crashes
+  const fallback = buildTopicFromDetails(topicId, undefined, '');
+  TOPICS[topicId] = fallback;
+  return fallback;
+}
+
 // Helper function to calculate exact chapter and topic counts per subject
 function countSubjectStats(subjectId: string) {
   let c11Chapters = 0;

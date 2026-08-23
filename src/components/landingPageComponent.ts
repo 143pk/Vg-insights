@@ -30,7 +30,10 @@ export function renderLandingPage(): string {
             </a>
 
             <!-- Desktop Navigation Links -->
-            <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-600 dark:text-slate-300">
+            <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-600 dark:text-slate-300">
+              <a href="#start-here" class="px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-emerald-950/50 text-emerald-600 dark:text-emerald-400 font-bold border border-emerald-200 dark:border-emerald-800/60 hover:bg-emerald-100 flex items-center gap-1 transition-colors">
+                <span>🌱</span> Start Here
+              </a>
               <a href="#ecosystem" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Ecosystem</a>
               <a href="#library" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">NEET Library</a>
               <a href="#pyqs" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">PYQs</a>
@@ -95,6 +98,7 @@ export function renderLandingPage(): string {
           <!-- Mobile Dropdown Menu -->
           <div id="mobile-nav-dropdown" class="hidden lg:hidden border-t border-slate-200/80 dark:border-slate-800 px-5 py-4 space-y-3 bg-white/95 dark:bg-slate-900/95 rounded-b-2xl">
             <div class="flex flex-col space-y-2.5 font-semibold text-sm text-slate-600 dark:text-slate-300">
+              <a href="#start-here" class="py-1.5 font-bold text-emerald-600 dark:text-emerald-400 mobile-nav-link flex items-center gap-1.5">🌱 Start Here (Beginner Path)</a>
               <a href="#ecosystem" class="py-1.5 hover:text-blue-600 mobile-nav-link">Ecosystem</a>
               <a href="#library" class="py-1.5 hover:text-blue-600 mobile-nav-link">NEET Library</a>
               <a href="#pyqs" class="py-1.5 hover:text-blue-600 mobile-nav-link">PYQs (2014–2025)</a>
