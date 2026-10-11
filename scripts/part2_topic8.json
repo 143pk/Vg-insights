@@ -1,0 +1,779 @@
+[
+  {
+    "id": "msl-mcq-147",
+    "questionNumber": 147,
+    "question": "Which of the following conditions characterizes uniform motion in one dimension?",
+    "options": {
+      "A": "Equal distances are covered in equal intervals of time, however small these intervals may be.",
+      "B": "Speed increases linearly with time.",
+      "C": "Acceleration is a non-zero constant.",
+      "D": "Velocity changes its direction periodically."
+    },
+    "optionsList": [
+      "Equal distances are covered in equal intervals of time, however small these intervals may be.",
+      "Speed increases linearly with time.",
+      "Acceleration is a non-zero constant.",
+      "Velocity changes its direction periodically."
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn uniform motion, velocity is strictly constant in both magnitude and direction, meaning equal displacements (and distances) are traversed in equal time intervals.\n\n2. GIVEN:\nDefinition of uniform motion.\n\n3. FORMULA / PRINCIPLE:\nv = constant <=> a = 0 <=> x(t) = x\u2080 + v t.\n\n4. STEP-BY-STEP SOLUTION:\n1. By definition, uniform motion along a straight line means velocity does not change with time.\n2. Acceleration is identically zero (a = 0).\n3. In any time interval \u0394t, the displacement is \u0394x = v * \u0394t.\n4. Therefore, equal distances and displacements are covered in equal intervals of time, regardless of how small the time interval is chosen.\n5. Hence, Option A is the correct definition.\n\n5. FINAL ANSWER:\nOption A: Equal distances are covered in equal intervals of time, however small these intervals may be.\n\n6. QUICK TIP:\nUniform motion <=> Constant velocity <=> Zero acceleration <=> Linear position-time graph.",
+    "solutionStructured": {
+      "concept": "In uniform motion, velocity is strictly constant in both magnitude and direction, meaning equal displacements (and distances) are traversed in equal time intervals.",
+      "given": "Definition of uniform motion.",
+      "formula": "v = constant <=> a = 0 <=> x(t) = x\u2080 + v t.",
+      "stepByStep": "1. By definition, uniform motion along a straight line means velocity does not change with time.\n2. Acceleration is identically zero (a = 0).\n3. In any time interval \u0394t, the displacement is \u0394x = v * \u0394t.\n4. Therefore, equal distances and displacements are covered in equal intervals of time, regardless of how small the time interval is chosen.\n5. Hence, Option A is the correct definition.",
+      "finalAnswer": "Option A: Equal distances are covered in equal intervals of time, however small these intervals may be.",
+      "whyOtherOptionsWrong": "Option B describes uniformly accelerated motion. Option C has constant acceleration (non-uniform motion). Option D has varying direction."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-148",
+    "questionNumber": 148,
+    "question": "For a particle executing uniform motion along the x-axis, the shape of its position-time (x-t) graph is:",
+    "options": {
+      "A": "A straight line inclined to the time axis",
+      "B": "A parabola opening upwards",
+      "C": "A horizontal line parallel to the time axis",
+      "D": "A circle or ellipse"
+    },
+    "optionsList": [
+      "A straight line inclined to the time axis",
+      "A parabola opening upwards",
+      "A horizontal line parallel to the time axis",
+      "A circle or ellipse"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn uniform motion, x(t) = x\u2080 + v t is a linear equation (y = mx + c), which graphs as a straight line whose slope is the constant velocity v.\n\n2. GIVEN:\nPosition function x(t) = x\u2080 + v t.\n\n3. FORMULA / PRINCIPLE:\nSlope = dx/dt = v = constant.\n\n4. STEP-BY-STEP SOLUTION:\n1. For uniform motion, velocity v is constant.\n2. Integrating velocity gives x(t) = x\u2080 + v t.\n3. This is a first-degree polynomial in time t (equation of a straight line).\n4. The slope of this line represents the constant velocity v.\n5. Therefore, the x-t graph is a straight line inclined to the time axis.\n\n5. FINAL ANSWER:\nOption A: A straight line inclined to the time axis\n\n6. QUICK TIP:\nSlope of x-t graph = velocity. Constant slope = constant velocity = straight line!",
+    "solutionStructured": {
+      "concept": "In uniform motion, x(t) = x\u2080 + v t is a linear equation (y = mx + c), which graphs as a straight line whose slope is the constant velocity v.",
+      "given": "Position function x(t) = x\u2080 + v t.",
+      "formula": "Slope = dx/dt = v = constant.",
+      "stepByStep": "1. For uniform motion, velocity v is constant.\n2. Integrating velocity gives x(t) = x\u2080 + v t.\n3. This is a first-degree polynomial in time t (equation of a straight line).\n4. The slope of this line represents the constant velocity v.\n5. Therefore, the x-t graph is a straight line inclined to the time axis.",
+      "finalAnswer": "Option A: A straight line inclined to the time axis",
+      "whyOtherOptionsWrong": "Option B is for uniformly accelerated motion (x \u221d t\u00b2). Option C represents an object at rest (v = 0). Option D cannot exist for a single-valued function of time."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-149",
+    "questionNumber": 149,
+    "question": "Which of the following physical quantities is necessarily zero in uniform rectilinear motion?",
+    "options": {
+      "A": "Acceleration",
+      "B": "Velocity",
+      "C": "Displacement",
+      "D": "Speed"
+    },
+    "optionsList": [
+      "Acceleration",
+      "Velocity",
+      "Displacement",
+      "Speed"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nUniform rectilinear motion has constant velocity, so its time derivative (acceleration) is identically zero.\n\n2. GIVEN:\nUniform rectilinear motion.\n\n3. FORMULA / PRINCIPLE:\na = dv/dt = d(constant)/dt = 0.\n\n4. STEP-BY-STEP SOLUTION:\n1. Uniform motion means velocity v is constant.\n2. Acceleration is defined as a = dv/dt.\n3. The derivative of a constant is zero.\n4. Therefore, acceleration is necessarily zero in uniform rectilinear motion.\n\n5. FINAL ANSWER:\nOption A: Acceleration\n\n6. QUICK TIP:\nZero net force and zero acceleration are the defining criteria for uniform motion.",
+    "solutionStructured": {
+      "concept": "Uniform rectilinear motion has constant velocity, so its time derivative (acceleration) is identically zero.",
+      "given": "Uniform rectilinear motion.",
+      "formula": "a = dv/dt = d(constant)/dt = 0.",
+      "stepByStep": "1. Uniform motion means velocity v is constant.\n2. Acceleration is defined as a = dv/dt.\n3. The derivative of a constant is zero.\n4. Therefore, acceleration is necessarily zero in uniform rectilinear motion.",
+      "finalAnswer": "Option A: Acceleration",
+      "whyOtherOptionsWrong": "Options B, C, and D are non-zero for any moving object."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-150",
+    "questionNumber": 150,
+    "question": "A car moves along a straight highway at a constant velocity of 20 m/s for 15 seconds. How far does the car travel in this time?",
+    "options": {
+      "A": "300 m",
+      "B": "150 m",
+      "C": "600 m",
+      "D": "75 m"
+    },
+    "optionsList": [
+      "300 m",
+      "150 m",
+      "600 m",
+      "75 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor uniform motion, distance covered is simply speed multiplied by time: s = v * t.\n\n2. GIVEN:\nv = 20 m/s, t = 15 s.\n\n3. FORMULA / PRINCIPLE:\ns = v * t\n\n4. STEP-BY-STEP SOLUTION:\n1. Velocity is constant: v = 20 m/s.\n2. Time elapsed: t = 15 s.\n3. Distance traveled: s = v * t = 20 m/s * 15 s = 300 m.\n4. Therefore, the car travels 300 m.\n\n5. FINAL ANSWER:\nOption A: 300 m\n\n6. QUICK TIP:\nWhen acceleration is zero, you don't need any complex kinematic equations; just use distance = speed * time!",
+    "solutionStructured": {
+      "concept": "For uniform motion, distance covered is simply speed multiplied by time: s = v * t.",
+      "given": "v = 20 m/s, t = 15 s.",
+      "formula": "s = v * t",
+      "stepByStep": "1. Velocity is constant: v = 20 m/s.\n2. Time elapsed: t = 15 s.\n3. Distance traveled: s = v * t = 20 m/s * 15 s = 300 m.\n4. Therefore, the car travels 300 m.",
+      "finalAnswer": "Option A: 300 m",
+      "whyOtherOptionsWrong": "Option B uses (1/2)vt. Option C doubles the product. Option D is (1/4)vt."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-151",
+    "questionNumber": 151,
+    "question": "Non-uniform motion is defined as motion in which:",
+    "options": {
+      "A": "Velocity of the object changes with time",
+      "B": "Speed is constant along a straight line",
+      "C": "Acceleration is identically zero at all times",
+      "D": "Equal displacements are covered in equal time intervals"
+    },
+    "optionsList": [
+      "Velocity of the object changes with time",
+      "Speed is constant along a straight line",
+      "Acceleration is identically zero at all times",
+      "Equal displacements are covered in equal time intervals"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIf velocity varies with time (either in magnitude, direction, or both), the motion is non-uniform (accelerated).\n\n2. GIVEN:\nDefinition of non-uniform motion.\n\n3. FORMULA / PRINCIPLE:\ndv\u20d7/dt \u2260 0 (a\u20d7 \u2260 0).\n\n4. STEP-BY-STEP SOLUTION:\n1. Motion is uniform when velocity is constant.\n2. If velocity changes with time\u2014meaning acceleration is non-zero\u2014the motion is non-uniform.\n3. The change can be in speed, direction of motion, or both.\n4. Therefore, non-uniform motion is characterized by changing velocity.\n\n5. FINAL ANSWER:\nOption A: Velocity of the object changes with time\n\n6. QUICK TIP:\nNon-uniform motion = accelerated motion (a \u2260 0).",
+    "solutionStructured": {
+      "concept": "If velocity varies with time (either in magnitude, direction, or both), the motion is non-uniform (accelerated).",
+      "given": "Definition of non-uniform motion.",
+      "formula": "dv\u20d7/dt \u2260 0 (a\u20d7 \u2260 0).",
+      "stepByStep": "1. Motion is uniform when velocity is constant.\n2. If velocity changes with time\u2014meaning acceleration is non-zero\u2014the motion is non-uniform.\n3. The change can be in speed, direction of motion, or both.\n4. Therefore, non-uniform motion is characterized by changing velocity.",
+      "finalAnswer": "Option A: Velocity of the object changes with time",
+      "whyOtherOptionsWrong": "Options B, C, and D all describe uniform motion with constant velocity."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-152",
+    "questionNumber": 152,
+    "question": "A body moves in a straight line such that its displacement x is proportional to t\u00b3 (x = c t\u00b3). The acceleration of the body is:",
+    "options": {
+      "A": "Proportional to t",
+      "B": "Constant",
+      "C": "Proportional to t\u00b2",
+      "D": "Zero"
+    },
+    "optionsList": [
+      "Proportional to t",
+      "Constant",
+      "Proportional to t\u00b2",
+      "Zero"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDifferentiating x(t) = c t\u00b3 twice with respect to time yields acceleration a(t) = 6c t, which is directly proportional to t.\n\n2. GIVEN:\nx(t) = c t\u00b3.\n\n3. FORMULA / PRINCIPLE:\nv = dx/dt = 3c t\u00b2; a = dv/dt = 6c t \u221d t.\n\n4. STEP-BY-STEP SOLUTION:\n1. Differentiate position with respect to time:\n   v = dx/dt = 3c t\u00b2.\n2. Differentiate velocity to find acceleration:\n   a = dv/dt = 6c t.\n3. Since 6c is a constant, acceleration a is directly proportional to time t: a \u221d t.\n4. This represents non-uniformly accelerated motion (with constant jerk da/dt = 6c).\n\n5. FINAL ANSWER:\nOption A: Proportional to t\n\n6. QUICK TIP:\nPower rule: x \u221d t\u00b3 => v \u221d t\u00b2 => a \u221d t.",
+    "solutionStructured": {
+      "concept": "Differentiating x(t) = c t\u00b3 twice with respect to time yields acceleration a(t) = 6c t, which is directly proportional to t.",
+      "given": "x(t) = c t\u00b3.",
+      "formula": "v = dx/dt = 3c t\u00b2; a = dv/dt = 6c t \u221d t.",
+      "stepByStep": "1. Differentiate position with respect to time:\n   v = dx/dt = 3c t\u00b2.\n2. Differentiate velocity to find acceleration:\n   a = dv/dt = 6c t.\n3. Since 6c is a constant, acceleration a is directly proportional to time t: a \u221d t.\n4. This represents non-uniformly accelerated motion (with constant jerk da/dt = 6c).",
+      "finalAnswer": "Option A: Proportional to t",
+      "whyOtherOptionsWrong": "Option B would require x \u221d t\u00b2 (constant acceleration). Option C is velocity (v \u221d t\u00b2). Option D would require x \u221d t (uniform motion)."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-153",
+    "questionNumber": 153,
+    "question": "The velocity of a particle moving along a straight line varies with time as v = (2t\u00b2 - 8) m/s. During which time interval is the particle undergoing retardation while moving in the negative direction?",
+    "options": {
+      "A": "0 < t < 2 s",
+      "B": "t > 2 s",
+      "C": "t = 2 s only",
+      "D": "Never, because acceleration is always positive"
+    },
+    "optionsList": [
+      "0 < t < 2 s",
+      "t > 2 s",
+      "t = 2 s only",
+      "Never, because acceleration is always positive"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nMoving in the negative direction requires v < 0. Retardation requires acceleration to oppose velocity (a > 0).\n\n2. GIVEN:\nv(t) = 2t\u00b2 - 8 m/s.\n\n3. FORMULA / PRINCIPLE:\nv < 0 and a > 0 for retardation in the negative direction.\n\n4. STEP-BY-STEP SOLUTION:\n1. Find acceleration:\n   a(t) = dv/dt = d(2t\u00b2 - 8)/dt = 4t m/s\u00b2.\n   Notice that for all t > 0, acceleration is positive: a(t) > 0.\n2. Condition for moving in the negative direction:\n   v(t) < 0 => 2t\u00b2 - 8 < 0 => 2t\u00b2 < 8 => t\u00b2 < 4 => 0 < t < 2 s.\n3. For 0 < t < 2 s:\n   Velocity is negative (v < 0), but acceleration is positive (a > 0).\n4. Since v and a have opposite signs, the particle is slowing down (undergoing retardation)!\n5. Therefore, in the interval 0 < t < 2 s, the particle moves in the negative direction and undergoes retardation.\n\n5. FINAL ANSWER:\nOption A: 0 < t < 2 s\n\n6. QUICK TIP:\nGreat NEET concept: Here a = +4t is positive, but because v is negative, the particle is RETARDING! Its speed decreases from 8 m/s at t=0 to 0 m/s at t=2 s.",
+    "solutionStructured": {
+      "concept": "Moving in the negative direction requires v < 0. Retardation requires acceleration to oppose velocity (a > 0).",
+      "given": "v(t) = 2t\u00b2 - 8 m/s.",
+      "formula": "v < 0 and a > 0 for retardation in the negative direction.",
+      "stepByStep": "1. Find acceleration:\n   a(t) = dv/dt = d(2t\u00b2 - 8)/dt = 4t m/s\u00b2.\n   Notice that for all t > 0, acceleration is positive: a(t) > 0.\n2. Condition for moving in the negative direction:\n   v(t) < 0 => 2t\u00b2 - 8 < 0 => 2t\u00b2 < 8 => t\u00b2 < 4 => 0 < t < 2 s.\n3. For 0 < t < 2 s:\n   Velocity is negative (v < 0), but acceleration is positive (a > 0).\n4. Since v and a have opposite signs, the particle is slowing down (undergoing retardation)!\n5. Therefore, in the interval 0 < t < 2 s, the particle moves in the negative direction and undergoes retardation.",
+      "finalAnswer": "Option A: 0 < t < 2 s",
+      "whyOtherOptionsWrong": "Option B has v > 0 and a > 0, so the particle is moving in the positive direction and speeding up. Option C is just the instant of rest."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-154",
+    "questionNumber": 154,
+    "question": "A particle moves along a straight line such that its position is given by x = 12t - 3t\u00b2 (in meters). What is the total distance covered by the particle from t = 0 to t = 3 s?",
+    "options": {
+      "A": "15 m",
+      "B": "9 m",
+      "C": "12 m",
+      "D": "18 m"
+    },
+    "optionsList": [
+      "15 m",
+      "9 m",
+      "12 m",
+      "18 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTo find total distance in non-uniform motion, break the integral at any turning point where v = dx/dt = 0.\n\n2. GIVEN:\nx(t) = 12t - 3t\u00b2, interval [0, 3] s.\n\n3. FORMULA / PRINCIPLE:\nv = 12 - 6t = 0 => t = 2 s; Distance = |x(2) - x(0)| + |x(3) - x(2)|.\n\n4. STEP-BY-STEP SOLUTION:\n1. Find velocity:\n   v(t) = dx/dt = 12 - 6t.\n2. Turning point:\n   12 - 6t = 0 => t = 2 s.\n   Since 2 s is inside [0, 3] s, the particle stops and turns back at t = 2 s.\n3. Evaluate positions:\n   x(0) = 0 m.\n   x(2) = 12(2) - 3(2\u00b2) = 24 - 12 = 12 m.\n   x(3) = 12(3) - 3(3\u00b2) = 36 - 27 = 9 m.\n4. Distance from 0 to 2 s: |12 - 0| = 12 m (forward).\n5. Distance from 2 to 3 s: |9 - 12| = |-3| = 3 m (backward).\n6. Total distance = 12 m + 3 m = 15 m.\n7. (Note: Displacement is x(3) - x(0) = 9 m).\n\n5. FINAL ANSWER:\nOption A: 15 m\n\n6. QUICK TIP:\nRemember: Distance = Forward path + Backward path = 12 + 3 = 15 m. Displacement = 9 m.",
+    "solutionStructured": {
+      "concept": "To find total distance in non-uniform motion, break the integral at any turning point where v = dx/dt = 0.",
+      "given": "x(t) = 12t - 3t\u00b2, interval [0, 3] s.",
+      "formula": "v = 12 - 6t = 0 => t = 2 s; Distance = |x(2) - x(0)| + |x(3) - x(2)|.",
+      "stepByStep": "1. Find velocity:\n   v(t) = dx/dt = 12 - 6t.\n2. Turning point:\n   12 - 6t = 0 => t = 2 s.\n   Since 2 s is inside [0, 3] s, the particle stops and turns back at t = 2 s.\n3. Evaluate positions:\n   x(0) = 0 m.\n   x(2) = 12(2) - 3(2\u00b2) = 24 - 12 = 12 m.\n   x(3) = 12(3) - 3(3\u00b2) = 36 - 27 = 9 m.\n4. Distance from 0 to 2 s: |12 - 0| = 12 m (forward).\n5. Distance from 2 to 3 s: |9 - 12| = |-3| = 3 m (backward).\n6. Total distance = 12 m + 3 m = 15 m.\n7. (Note: Displacement is x(3) - x(0) = 9 m).",
+      "finalAnswer": "Option A: 15 m",
+      "whyOtherOptionsWrong": "Option B is displacement x(3) - x(0) = 9 m (common trap!). Option C is only the forward segment (12 m). Option D is 18 m."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-155",
+    "questionNumber": 155,
+    "question": "The acceleration of a moving particle along a straight line is inversely proportional to the square of its displacement from a fixed point: a = -k / x\u00b2 (k > 0). If the particle is released from rest at x = x\u2080, its velocity at distance x is:",
+    "options": {
+      "A": "\u221a[ 2k (1/x - 1/x\u2080) ]",
+      "B": "\u221a[ 2k (1/x\u2080 - 1/x) ]",
+      "C": "\u221a[ k (1/x\u00b2 - 1/x\u2080\u00b2) ]",
+      "D": "k (1/x - 1/x\u2080)"
+    },
+    "optionsList": [
+      "\u221a[ 2k (1/x - 1/x\u2080) ]",
+      "\u221a[ 2k (1/x\u2080 - 1/x) ]",
+      "\u221a[ k (1/x\u00b2 - 1/x\u2080\u00b2) ]",
+      "k (1/x - 1/x\u2080)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nUse a = v (dv/dx) = -k / x\u00b2 and integrate: v dv = -k x\u207b\u00b2 dx.\n\n2. GIVEN:\na = -k / x\u00b2, released from rest (v = 0) at x = x\u2080.\n\n3. FORMULA / PRINCIPLE:\n\u222b_0^v v dv = -k \u222b_{x\u2080}^x x\u207b\u00b2 dx.\n\n4. STEP-BY-STEP SOLUTION:\n1. Express acceleration as v (dv/dx):\n   v (dv/dx) = -k / x\u00b2.\n2. Separate variables:\n   v dv = -k x\u207b\u00b2 dx.\n3. Integrate from initial point (x = x\u2080, v = 0) to position x (with x < x\u2080 as it falls inward):\n   \u222b_0^v v dv = -k \u222b_{x\u2080}^x x\u207b\u00b2 dx.\n4. Evaluate integrals:\n   v\u00b2 / 2 = -k [ -1/x ]_{x\u2080}^x = k [ 1/x - 1/x\u2080 ].\n5. Multiply by 2 and take square root:\n   v\u00b2 = 2k (1/x - 1/x\u2080)\n   v = \u221a[ 2k (1/x - 1/x\u2080) ].\n6. This is the exact gravitational acceleration relation (falling towards Earth from height x\u2080)!\n\n5. FINAL ANSWER:\nOption A: \u221a[ 2k (1/x - 1/x\u2080) ]\n\n6. QUICK TIP:\nThis is gravitational free fall from outer space: (1/2) v\u00b2 - GM/x = -GM/x\u2080 => v = \u221a[2GM(1/x - 1/x\u2080)].",
+    "solutionStructured": {
+      "concept": "Use a = v (dv/dx) = -k / x\u00b2 and integrate: v dv = -k x\u207b\u00b2 dx.",
+      "given": "a = -k / x\u00b2, released from rest (v = 0) at x = x\u2080.",
+      "formula": "\u222b_0^v v dv = -k \u222b_{x\u2080}^x x\u207b\u00b2 dx.",
+      "stepByStep": "1. Express acceleration as v (dv/dx):\n   v (dv/dx) = -k / x\u00b2.\n2. Separate variables:\n   v dv = -k x\u207b\u00b2 dx.\n3. Integrate from initial point (x = x\u2080, v = 0) to position x (with x < x\u2080 as it falls inward):\n   \u222b_0^v v dv = -k \u222b_{x\u2080}^x x\u207b\u00b2 dx.\n4. Evaluate integrals:\n   v\u00b2 / 2 = -k [ -1/x ]_{x\u2080}^x = k [ 1/x - 1/x\u2080 ].\n5. Multiply by 2 and take square root:\n   v\u00b2 = 2k (1/x - 1/x\u2080)\n   v = \u221a[ 2k (1/x - 1/x\u2080) ].\n6. This is the exact gravitational acceleration relation (falling towards Earth from height x\u2080)!",
+      "finalAnswer": "Option A: \u221a[ 2k (1/x - 1/x\u2080) ]",
+      "whyOtherOptionsWrong": "Option B would produce an imaginary number for inward motion (x < x\u2080). Option C integrates x\u207b\u00b3 instead of x\u207b\u00b2. Option D lacks square root."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-156",
+    "questionNumber": 156,
+    "question": "A body starts from rest at the origin and moves along the positive x-axis such that its velocity varies with displacement as v = 4 \u221ax (in SI units). What is the displacement of the body as a function of time t?",
+    "options": {
+      "A": "x = 4 t\u00b2",
+      "B": "x = 8 t\u00b2",
+      "C": "x = 2 t\u00b2",
+      "D": "x = 16 t\u00b2"
+    },
+    "optionsList": [
+      "x = 4 t\u00b2",
+      "x = 8 t\u00b2",
+      "x = 2 t\u00b2",
+      "x = 16 t\u00b2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nExpress v as dx/dt = 4 \u221ax, separate variables, and integrate.\n\n2. GIVEN:\ndx/dt = 4 x^(1/2), x(0) = 0.\n\n3. FORMULA / PRINCIPLE:\n\u222b x^(-1/2) dx = 4 \u222b dt => 2 \u221ax = 4t => \u221ax = 2t.\n\n4. STEP-BY-STEP SOLUTION:\n1. Write differential equation:\n   dx / dt = 4 \u221ax.\n2. Separate variables:\n   dx / \u221ax = 4 dt\n   x^(-1/2) dx = 4 dt.\n3. Integrate both sides from 0 to t:\n   [ 2 x^(1/2) ]_0^x = 4 [ t ]_0^t\n   2 \u221ax = 4t\n   \u221ax = 2t.\n4. Square both sides to find x(t):\n   x(t) = (2t)\u00b2 = 4 t\u00b2.\n5. Therefore, the displacement as a function of time is x = 4 t\u00b2.\n\n5. FINAL ANSWER:\nOption A: x = 4 t\u00b2\n\n6. QUICK TIP:\nCheck: If x = 4t\u00b2, v = dx/dt = 8t. Since \u221ax = 2t, 4\u221ax = 4(2t) = 8t = v! Perfect match.",
+    "solutionStructured": {
+      "concept": "Express v as dx/dt = 4 \u221ax, separate variables, and integrate.",
+      "given": "dx/dt = 4 x^(1/2), x(0) = 0.",
+      "formula": "\u222b x^(-1/2) dx = 4 \u222b dt => 2 \u221ax = 4t => \u221ax = 2t.",
+      "stepByStep": "1. Write differential equation:\n   dx / dt = 4 \u221ax.\n2. Separate variables:\n   dx / \u221ax = 4 dt\n   x^(-1/2) dx = 4 dt.\n3. Integrate both sides from 0 to t:\n   [ 2 x^(1/2) ]_0^x = 4 [ t ]_0^t\n   2 \u221ax = 4t\n   \u221ax = 2t.\n4. Square both sides to find x(t):\n   x(t) = (2t)\u00b2 = 4 t\u00b2.\n5. Therefore, the displacement as a function of time is x = 4 t\u00b2.",
+      "finalAnswer": "Option A: x = 4 t\u00b2",
+      "whyOtherOptionsWrong": "Option B has coefficient 8. Option C has coefficient 2. Option D has coefficient 16."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-157",
+    "questionNumber": 157,
+    "question": "For the body in Q156 where v = 4 \u221ax and x = 4 t\u00b2, what is its acceleration?",
+    "options": {
+      "A": "8 m/s\u00b2",
+      "B": "4 m/s\u00b2",
+      "C": "16 m/s\u00b2",
+      "D": "2 m/s\u00b2"
+    },
+    "optionsList": [
+      "8 m/s\u00b2",
+      "4 m/s\u00b2",
+      "16 m/s\u00b2",
+      "2 m/s\u00b2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDifferentiate velocity with respect to time: a = dv/dt, or use a = v (dv/dx).\n\n2. GIVEN:\nx(t) = 4 t\u00b2 => v(t) = 8t.\n\n3. FORMULA / PRINCIPLE:\na = dv/dt = d(8t)/dt = 8 m/s\u00b2.\n\n4. STEP-BY-STEP SOLUTION:\n1. Position function: x(t) = 4 t\u00b2.\n2. Differentiate once to get velocity: v(t) = dx/dt = 8t.\n3. Differentiate again to get acceleration: a = dv/dt = 8 m/s\u00b2.\n4. Alternatively, using a = v (dv/dx):\n   v = 4 \u221ax => dv/dx = 4 * (1 / 2\u221ax) = 2 / \u221ax.\n   Then a = (4 \u221ax) * (2 / \u221ax) = 8 m/s\u00b2.\n5. Both methods yield an acceleration of exactly 8 m/s\u00b2.\n\n5. FINAL ANSWER:\nOption A: 8 m/s\u00b2\n\n6. QUICK TIP:\nWhen v = k\u221ax, acceleration is always constant and equals k\u00b2 / 2! Here (4\u00b2)/2 = 16/2 = 8 m/s\u00b2.",
+    "solutionStructured": {
+      "concept": "Differentiate velocity with respect to time: a = dv/dt, or use a = v (dv/dx).",
+      "given": "x(t) = 4 t\u00b2 => v(t) = 8t.",
+      "formula": "a = dv/dt = d(8t)/dt = 8 m/s\u00b2.",
+      "stepByStep": "1. Position function: x(t) = 4 t\u00b2.\n2. Differentiate once to get velocity: v(t) = dx/dt = 8t.\n3. Differentiate again to get acceleration: a = dv/dt = 8 m/s\u00b2.\n4. Alternatively, using a = v (dv/dx):\n   v = 4 \u221ax => dv/dx = 4 * (1 / 2\u221ax) = 2 / \u221ax.\n   Then a = (4 \u221ax) * (2 / \u221ax) = 8 m/s\u00b2.\n5. Both methods yield an acceleration of exactly 8 m/s\u00b2.",
+      "finalAnswer": "Option A: 8 m/s\u00b2",
+      "whyOtherOptionsWrong": "Option B is 4. Option C is 16. Option D is 2."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-158",
+    "questionNumber": 158,
+    "question": "The velocity of a particle moving along a straight line is given by v = v\u2080 (1 - t / T) for 0 \u2264 t \u2264 T. What is the total distance traveled by the particle in time T?",
+    "options": {
+      "A": "(1/2) v\u2080 T",
+      "B": "v\u2080 T",
+      "C": "(1/3) v\u2080 T",
+      "D": "(2/3) v\u2080 T"
+    },
+    "optionsList": [
+      "(1/2) v\u2080 T",
+      "v\u2080 T",
+      "(1/3) v\u2080 T",
+      "(2/3) v\u2080 T"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSince velocity decreases linearly from v\u2080 to 0 in time T, the distance is the area of the triangular v-t graph: (1/2) * base * height.\n\n2. GIVEN:\nv(t) = v\u2080 (1 - t/T), t \u2208 [0, T].\n\n3. FORMULA / PRINCIPLE:\ns = \u222b_0^T v\u2080 (1 - t/T) dt = (1/2) v\u2080 T.\n\n4. STEP-BY-STEP SOLUTION:\n1. In the interval [0, T], velocity is non-negative (v \u2265 0).\n2. Distance is simply the definite integral of velocity:\n   s = \u222b_0^T v\u2080 (1 - t/T) dt = v\u2080 [ t - t\u00b2 / (2T) ]_0^T.\n3. Evaluate at the limits:\n   s = v\u2080 [ T - T\u00b2 / (2T) ] = v\u2080 [ T - T/2 ] = (1/2) v\u2080 T.\n4. Geometrically, on a v-t plot, this is a right triangle with base T and height v\u2080:\n   Area = (1/2) * T * v\u2080 = (1/2) v\u2080 T.\n5. Therefore, the distance is (1/2) v\u2080 T.\n\n5. FINAL ANSWER:\nOption A: (1/2) v\u2080 T\n\n6. QUICK TIP:\nArea of triangle under linear retardation = (1/2) * v_initial * t_stop.",
+    "solutionStructured": {
+      "concept": "Since velocity decreases linearly from v\u2080 to 0 in time T, the distance is the area of the triangular v-t graph: (1/2) * base * height.",
+      "given": "v(t) = v\u2080 (1 - t/T), t \u2208 [0, T].",
+      "formula": "s = \u222b_0^T v\u2080 (1 - t/T) dt = (1/2) v\u2080 T.",
+      "stepByStep": "1. In the interval [0, T], velocity is non-negative (v \u2265 0).\n2. Distance is simply the definite integral of velocity:\n   s = \u222b_0^T v\u2080 (1 - t/T) dt = v\u2080 [ t - t\u00b2 / (2T) ]_0^T.\n3. Evaluate at the limits:\n   s = v\u2080 [ T - T\u00b2 / (2T) ] = v\u2080 [ T - T/2 ] = (1/2) v\u2080 T.\n4. Geometrically, on a v-t plot, this is a right triangle with base T and height v\u2080:\n   Area = (1/2) * T * v\u2080 = (1/2) v\u2080 T.\n5. Therefore, the distance is (1/2) v\u2080 T.",
+      "finalAnswer": "Option A: (1/2) v\u2080 T",
+      "whyOtherOptionsWrong": "Option B assumes constant velocity v\u2080. Options C and D are incorrect fractions."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-159",
+    "questionNumber": 159,
+    "question": "A body starts from rest and moves along a straight line such that its acceleration is proportional to the square root of time: a = k t^(1/2). What is the displacement of the body as a function of time t?",
+    "options": {
+      "A": "(4/15) k t^(5/2)",
+      "B": "(2/5) k t^(5/2)",
+      "C": "(2/3) k t^(3/2)",
+      "D": "(1/6) k t^(5/2)"
+    },
+    "optionsList": [
+      "(4/15) k t^(5/2)",
+      "(2/5) k t^(5/2)",
+      "(2/3) k t^(3/2)",
+      "(1/6) k t^(5/2)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIntegrate acceleration twice from rest: v = \u222b a dt, and x = \u222b v dt.\n\n2. GIVEN:\na(t) = k t^(1/2), u = 0, x(0) = 0.\n\n3. FORMULA / PRINCIPLE:\nv = \u222b k t^(1/2) dt = (2/3) k t^(3/2); x = \u222b v dt = (2/3) k \u222b t^(3/2) dt.\n\n4. STEP-BY-STEP SOLUTION:\n1. Integrate acceleration to find velocity:\n   v(t) = \u222b_0^t k t^(1/2) dt = k [ t^(3/2) / (3/2) ] = (2/3) k t^(3/2).\n2. Integrate velocity to find displacement:\n   x(t) = \u222b_0^t (2/3) k t^(3/2) dt = (2/3) k [ t^(5/2) / (5/2) ].\n3. Simplify the fraction:\n   (2/3) * (2/5) = 4/15.\n4. Therefore:\n   x(t) = (4/15) k t^(5/2).\n5. Hence, Option A is the correct expression.\n\n5. FINAL ANSWER:\nOption A: (4/15) k t^(5/2)\n\n6. QUICK TIP:\nIntegration fractions: 1/2 -> 3/2 (coeff 2/3) -> 5/2 (coeff (2/3)*(2/5) = 4/15).",
+    "solutionStructured": {
+      "concept": "Integrate acceleration twice from rest: v = \u222b a dt, and x = \u222b v dt.",
+      "given": "a(t) = k t^(1/2), u = 0, x(0) = 0.",
+      "formula": "v = \u222b k t^(1/2) dt = (2/3) k t^(3/2); x = \u222b v dt = (2/3) k \u222b t^(3/2) dt.",
+      "stepByStep": "1. Integrate acceleration to find velocity:\n   v(t) = \u222b_0^t k t^(1/2) dt = k [ t^(3/2) / (3/2) ] = (2/3) k t^(3/2).\n2. Integrate velocity to find displacement:\n   x(t) = \u222b_0^t (2/3) k t^(3/2) dt = (2/3) k [ t^(5/2) / (5/2) ].\n3. Simplify the fraction:\n   (2/3) * (2/5) = 4/15.\n4. Therefore:\n   x(t) = (4/15) k t^(5/2).\n5. Hence, Option A is the correct expression.",
+      "finalAnswer": "Option A: (4/15) k t^(5/2)",
+      "whyOtherOptionsWrong": "Option B misses the first factor 2/3. Option C is the velocity v(t). Option D is an incorrect coefficient."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-160",
+    "questionNumber": 160,
+    "question": "A particle moves along a straight line such that its velocity varies with displacement as v\u00b2 = a - b x, where a and b are positive constants. The motion of the particle is:",
+    "options": {
+      "A": "Uniformly retarded with acceleration -b/2",
+      "B": "Uniformly accelerated with acceleration +b",
+      "C": "Non-uniformly accelerated",
+      "D": "Uniform motion with zero acceleration"
+    },
+    "optionsList": [
+      "Uniformly retarded with acceleration -b/2",
+      "Uniformly accelerated with acceleration +b",
+      "Non-uniformly accelerated",
+      "Uniform motion with zero acceleration"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDifferentiating v\u00b2 = a - b x with respect to x gives 2v (dv/dx) = 2a_acc = -b => a_acc = -b/2 (constant negative acceleration).\n\n2. GIVEN:\nv\u00b2 = a - b x.\n\n3. FORMULA / PRINCIPLE:\n2 a_acc = d(v\u00b2)/dx = -b => a_acc = -b/2.\n\n4. STEP-BY-STEP SOLUTION:\n1. Differentiate both sides with respect to x:\n   d(v\u00b2)/dx = d(a - b x)/dx = -b.\n2. Since 2v (dv/dx) = d(v\u00b2)/dx:\n   2 a_acc = -b.\n3. Solve for acceleration:\n   a_acc = -b / 2.\n4. Because b is a positive constant, a_acc is constant and negative.\n5. Therefore, the motion is uniformly retarded with acceleration -b/2.\n\n5. FINAL ANSWER:\nOption A: Uniformly retarded with acceleration -b/2\n\n6. QUICK TIP:\nComparing with v\u00b2 = u\u00b2 + 2as: 2a_acc = -b => a_acc = -b/2 (constant acceleration!).",
+    "solutionStructured": {
+      "concept": "Differentiating v\u00b2 = a - b x with respect to x gives 2v (dv/dx) = 2a_acc = -b => a_acc = -b/2 (constant negative acceleration).",
+      "given": "v\u00b2 = a - b x.",
+      "formula": "2 a_acc = d(v\u00b2)/dx = -b => a_acc = -b/2.",
+      "stepByStep": "1. Differentiate both sides with respect to x:\n   d(v\u00b2)/dx = d(a - b x)/dx = -b.\n2. Since 2v (dv/dx) = d(v\u00b2)/dx:\n   2 a_acc = -b.\n3. Solve for acceleration:\n   a_acc = -b / 2.\n4. Because b is a positive constant, a_acc is constant and negative.\n5. Therefore, the motion is uniformly retarded with acceleration -b/2.",
+      "finalAnswer": "Option A: Uniformly retarded with acceleration -b/2",
+      "whyOtherOptionsWrong": "Option B has positive sign and misses 1/2. Option C incorrectly assumes non-uniform acceleration. Option D claims zero acceleration."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-161",
+    "questionNumber": 161,
+    "question": "A particle moves along the x-axis with an acceleration a = -32 x (in SI units). If it is released from rest at x = 2 m, what is the frequency of its oscillation?",
+    "options": {
+      "A": "(4\u221a2 / \u03c0) Hz \u2248 1.80 Hz",
+      "B": "(2\u221a2 / \u03c0) Hz",
+      "C": "4 Hz",
+      "D": "8 Hz"
+    },
+    "optionsList": [
+      "(4\u221a2 / \u03c0) Hz \u2248 1.80 Hz",
+      "(2\u221a2 / \u03c0) Hz",
+      "4 Hz",
+      "8 Hz"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nAcceleration proportional to negative displacement represents SHM: a = -\u03c9\u00b2 x. Frequency f = \u03c9 / (2\u03c0).\n\n2. GIVEN:\na = -32 x => \u03c9\u00b2 = 32.\n\n3. FORMULA / PRINCIPLE:\n\u03c9 = \u221a32 = 4\u221a2 rad/s; f = \u03c9 / (2\u03c0) = 4\u221a2 / (2\u03c0) = 2\u221a2 / \u03c0 Hz.\n\n4. STEP-BY-STEP SOLUTION:\n1. Compare the given equation a = -32 x with the standard SHM equation a = -\u03c9\u00b2 x.\n2. We have \u03c9\u00b2 = 32 => \u03c9 = \u221a32 = \u221a(16 * 2) = 4\u221a2 rad/s.\n3. The frequency f of oscillation is:\n   f = \u03c9 / (2\u03c0) = (4\u221a2) / (2\u03c0) = (2\u221a2 / \u03c0) Hz.\n4. Evaluating numerically: 2 * 1.414 / 3.1416 \u2248 2.828 / 3.1416 \u2248 0.90 Hz.\n5. Hence, Option B is the exact expression.\n\n5. FINAL ANSWER:\nOption B: (2\u221a2 / \u03c0) Hz\n\n6. QUICK TIP:\nIn any 1D equation of the form a = -k x, motion is non-uniform SHM with angular frequency \u03c9 = \u221ak.",
+    "solutionStructured": {
+      "concept": "Acceleration proportional to negative displacement represents SHM: a = -\u03c9\u00b2 x. Frequency f = \u03c9 / (2\u03c0).",
+      "given": "a = -32 x => \u03c9\u00b2 = 32.",
+      "formula": "\u03c9 = \u221a32 = 4\u221a2 rad/s; f = \u03c9 / (2\u03c0) = 4\u221a2 / (2\u03c0) = 2\u221a2 / \u03c0 Hz.",
+      "stepByStep": "1. Compare the given equation a = -32 x with the standard SHM equation a = -\u03c9\u00b2 x.\n2. We have \u03c9\u00b2 = 32 => \u03c9 = \u221a32 = \u221a(16 * 2) = 4\u221a2 rad/s.\n3. The frequency f of oscillation is:\n   f = \u03c9 / (2\u03c0) = (4\u221a2) / (2\u03c0) = (2\u221a2 / \u03c0) Hz.\n4. Evaluating numerically: 2 * 1.414 / 3.1416 \u2248 2.828 / 3.1416 \u2248 0.90 Hz.\n5. Hence, Option B is the exact expression.",
+      "finalAnswer": "Option B: (2\u221a2 / \u03c0) Hz",
+      "whyOtherOptionsWrong": "Option A forgets to divide by 2 in f = \u03c9/(2\u03c0). Options C and D neglect \u03c0."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-162",
+    "questionNumber": 162,
+    "question": "A particle moves along a straight line such that its velocity is given by v = v\u2080 (1 - x\u00b2 / d\u00b2) for 0 \u2264 x \u2264 d. What is the acceleration of the particle at x = d / 2?",
+    "options": {
+      "A": "-3 v\u2080\u00b2 / (4d)",
+      "B": "-v\u2080\u00b2 / (2d)",
+      "C": "-3 v\u2080\u00b2 / (2d)",
+      "D": "-v\u2080\u00b2 / d"
+    },
+    "optionsList": [
+      "-3 v\u2080\u00b2 / (4d)",
+      "-v\u2080\u00b2 / (2d)",
+      "-3 v\u2080\u00b2 / (2d)",
+      "-v\u2080\u00b2 / d"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nUse a = v (dv/dx). First evaluate v and dv/dx at x = d/2, then multiply.\n\n2. GIVEN:\nv(x) = v\u2080 (1 - x\u00b2/d\u00b2), x = d/2.\n\n3. FORMULA / PRINCIPLE:\na = v * (dv/dx)\n\n4. STEP-BY-STEP SOLUTION:\n1. Evaluate velocity at x = d/2:\n   v(d/2) = v\u2080 [ 1 - (d/2)\u00b2 / d\u00b2 ] = v\u2080 [ 1 - 1/4 ] = (3/4) v\u2080.\n2. Differentiate v with respect to x:\n   dv/dx = d/dx [ v\u2080 (1 - x\u00b2/d\u00b2) ] = v\u2080 [ -2x / d\u00b2 ] = -2 v\u2080 x / d\u00b2.\n3. Evaluate dv/dx at x = d/2:\n   (dv/dx)_{x = d/2} = -2 v\u2080 (d/2) / d\u00b2 = -v\u2080 / d.\n4. Compute acceleration:\n   a = v(d/2) * (dv/dx)_{x = d/2} = [ (3/4) v\u2080 ] * [ -v\u2080 / d ] = -3 v\u2080\u00b2 / (4d).\n5. Therefore, the acceleration is -3 v\u2080\u00b2 / (4d).\n\n5. FINAL ANSWER:\nOption A: -3 v\u2080\u00b2 / (4d)\n\n6. QUICK TIP:\nAlways calculate in two clean steps: v = (3/4)v\u2080 and dv/dx = -v\u2080/d => a = -(3/4)v\u2080\u00b2/d.",
+    "solutionStructured": {
+      "concept": "Use a = v (dv/dx). First evaluate v and dv/dx at x = d/2, then multiply.",
+      "given": "v(x) = v\u2080 (1 - x\u00b2/d\u00b2), x = d/2.",
+      "formula": "a = v * (dv/dx)",
+      "stepByStep": "1. Evaluate velocity at x = d/2:\n   v(d/2) = v\u2080 [ 1 - (d/2)\u00b2 / d\u00b2 ] = v\u2080 [ 1 - 1/4 ] = (3/4) v\u2080.\n2. Differentiate v with respect to x:\n   dv/dx = d/dx [ v\u2080 (1 - x\u00b2/d\u00b2) ] = v\u2080 [ -2x / d\u00b2 ] = -2 v\u2080 x / d\u00b2.\n3. Evaluate dv/dx at x = d/2:\n   (dv/dx)_{x = d/2} = -2 v\u2080 (d/2) / d\u00b2 = -v\u2080 / d.\n4. Compute acceleration:\n   a = v(d/2) * (dv/dx)_{x = d/2} = [ (3/4) v\u2080 ] * [ -v\u2080 / d ] = -3 v\u2080\u00b2 / (4d).\n5. Therefore, the acceleration is -3 v\u2080\u00b2 / (4d).",
+      "finalAnswer": "Option A: -3 v\u2080\u00b2 / (4d)",
+      "whyOtherOptionsWrong": "Option B is for x = 0. Option C lacks factor of 2. Option D is an incorrect estimate."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-163",
+    "questionNumber": 163,
+    "question": "A body starts from rest at t = 0 and moves along a straight line with an acceleration varying as a = 6t - 12 (in m/s\u00b2). What is the minimum position coordinate (most negative displacement) reached by the body?",
+    "options": {
+      "A": "-32 m",
+      "B": "-16 m",
+      "C": "-24 m",
+      "D": "-48 m"
+    },
+    "optionsList": [
+      "-32 m",
+      "-16 m",
+      "-24 m",
+      "-48 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIntegrate acceleration twice from rest to get v(t) and x(t). The turning point (extrema of position) occurs when v(t) = 0.\n\n2. GIVEN:\na(t) = 6t - 12, u = 0, x(0) = 0.\n\n3. FORMULA / PRINCIPLE:\nv(t) = 3t\u00b2 - 12t; x(t) = t\u00b3 - 6t\u00b2.\n\n4. STEP-BY-STEP SOLUTION:\n1. Integrate acceleration to find velocity:\n   v(t) = \u222b_0^t (6t - 12) dt = 3t\u00b2 - 12t.\n2. Position extrema occur when v(t) = 0:\n   3t\u00b2 - 12t = 0 => 3t(t - 4) = 0 => t = 0 and t = 4 s.\n3. Integrate velocity to find position:\n   x(t) = \u222b_0^t (3t\u00b2 - 12t) dt = t\u00b3 - 6t\u00b2.\n4. Evaluate position at the turning point t = 4 s:\n   x(4) = 4\u00b3 - 6(4\u00b2) = 64 - 6(16) = 64 - 96 = -32 m.\n5. Since v < 0 for 0 < t < 4 s and v > 0 for t > 4 s, x = -32 m is indeed the absolute minimum position.\n6. Therefore, the minimum position coordinate is -32 m.\n\n5. FINAL ANSWER:\nOption A: -32 m\n\n6. QUICK TIP:\nFind turning point from v(t) = 0: 3t(t - 4) = 0 => t = 4 s. Then x(4) = 4\u00b3 - 6(16) = -32 m.",
+    "solutionStructured": {
+      "concept": "Integrate acceleration twice from rest to get v(t) and x(t). The turning point (extrema of position) occurs when v(t) = 0.",
+      "given": "a(t) = 6t - 12, u = 0, x(0) = 0.",
+      "formula": "v(t) = 3t\u00b2 - 12t; x(t) = t\u00b3 - 6t\u00b2.",
+      "stepByStep": "1. Integrate acceleration to find velocity:\n   v(t) = \u222b_0^t (6t - 12) dt = 3t\u00b2 - 12t.\n2. Position extrema occur when v(t) = 0:\n   3t\u00b2 - 12t = 0 => 3t(t - 4) = 0 => t = 0 and t = 4 s.\n3. Integrate velocity to find position:\n   x(t) = \u222b_0^t (3t\u00b2 - 12t) dt = t\u00b3 - 6t\u00b2.\n4. Evaluate position at the turning point t = 4 s:\n   x(4) = 4\u00b3 - 6(4\u00b2) = 64 - 6(16) = 64 - 96 = -32 m.\n5. Since v < 0 for 0 < t < 4 s and v > 0 for t > 4 s, x = -32 m is indeed the absolute minimum position.\n6. Therefore, the minimum position coordinate is -32 m.",
+      "finalAnswer": "Option A: -32 m",
+      "whyOtherOptionsWrong": "Option B uses t = 2 s (inflection point, where acceleration is zero: x(2) = 8 - 24 = -16 m). Option C and D are arithmetic errors."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-164",
+    "questionNumber": 164,
+    "question": "A particle moves along a straight line with deceleration proportional to its displacement: a = -k x (k > 0). If it passes through the origin (x = 0) with velocity v\u2080, what is the maximum displacement reached before it stops?",
+    "options": {
+      "A": "v\u2080 / \u221ak",
+      "B": "v\u2080\u00b2 / (2k)",
+      "C": "v\u2080 / k",
+      "D": "\u221av\u2080 / k"
+    },
+    "optionsList": [
+      "v\u2080 / \u221ak",
+      "v\u2080\u00b2 / (2k)",
+      "v\u2080 / k",
+      "\u221av\u2080 / k"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nUse conservation of energy or integrate v dv = -k x dx to find maximum displacement where v = 0.\n\n2. GIVEN:\na = -k x, at x = 0, v = v\u2080; at x = x_max, v = 0.\n\n3. FORMULA / PRINCIPLE:\n\u222b_{v\u2080}^0 v dv = -k \u222b_0^{x_max} x dx => -v\u2080\u00b2 / 2 = -k x_max\u00b2 / 2.\n\n4. STEP-BY-STEP SOLUTION:\n1. Write a = v (dv/dx):\n   v (dv/dx) = -k x.\n2. Separate variables and integrate from x = 0 (v = v\u2080) to x = x_max (v = 0):\n   \u222b_{v\u2080}^0 v dv = -k \u222b_0^{x_max} x dx.\n3. Evaluate:\n   [ v\u00b2 / 2 ]_{v\u2080}^0 = -k [ x\u00b2 / 2 ]_0^{x_max}\n   0 - v\u2080\u00b2 / 2 = -k x_max\u00b2 / 2\n   v\u2080\u00b2 = k x_max\u00b2.\n4. Solve for x_max:\n   x_max\u00b2 = v\u2080\u00b2 / k => x_max = v\u2080 / \u221ak.\n5. Therefore, the maximum displacement is v\u2080 / \u221ak.\n\n5. FINAL ANSWER:\nOption A: v\u2080 / \u221ak\n\n6. QUICK TIP:\nEnergy method: Kinetic energy at origin = Potential energy at extreme: (1/2) m v\u2080\u00b2 = (1/2) k_eff x_max\u00b2 => x_max = v\u2080 / \u221ak.",
+    "solutionStructured": {
+      "concept": "Use conservation of energy or integrate v dv = -k x dx to find maximum displacement where v = 0.",
+      "given": "a = -k x, at x = 0, v = v\u2080; at x = x_max, v = 0.",
+      "formula": "\u222b_{v\u2080}^0 v dv = -k \u222b_0^{x_max} x dx => -v\u2080\u00b2 / 2 = -k x_max\u00b2 / 2.",
+      "stepByStep": "1. Write a = v (dv/dx):\n   v (dv/dx) = -k x.\n2. Separate variables and integrate from x = 0 (v = v\u2080) to x = x_max (v = 0):\n   \u222b_{v\u2080}^0 v dv = -k \u222b_0^{x_max} x dx.\n3. Evaluate:\n   [ v\u00b2 / 2 ]_{v\u2080}^0 = -k [ x\u00b2 / 2 ]_0^{x_max}\n   0 - v\u2080\u00b2 / 2 = -k x_max\u00b2 / 2\n   v\u2080\u00b2 = k x_max\u00b2.\n4. Solve for x_max:\n   x_max\u00b2 = v\u2080\u00b2 / k => x_max = v\u2080 / \u221ak.\n5. Therefore, the maximum displacement is v\u2080 / \u221ak.",
+      "finalAnswer": "Option A: v\u2080 / \u221ak",
+      "whyOtherOptionsWrong": "Option B assumes constant acceleration a = -k. Option C has wrong dimensions. Option D is dimensional mismatch."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-165",
+    "questionNumber": 165,
+    "question": "A body moves in a straight line with an acceleration given by a = 2 / v (in SI units), where v is velocity. If it starts from rest at t = 0 (or from negligible initial velocity u -> 0), what is its velocity at time t?",
+    "options": {
+      "A": "2 \u221at",
+      "B": "4 \u221at",
+      "C": "2 t",
+      "D": "4 t\u00b2"
+    },
+    "optionsList": [
+      "2 \u221at",
+      "4 \u221at",
+      "2 t",
+      "4 t\u00b2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSeparate variables in dv/dt = 2/v: v dv = 2 dt.\n\n2. GIVEN:\ndv/dt = 2 / v, v(0) = 0.\n\n3. FORMULA / PRINCIPLE:\nv dv = 2 dt => v\u00b2 / 2 = 2t => v\u00b2 = 4t => v = 2 \u221at.\n\n4. STEP-BY-STEP SOLUTION:\n1. Write equation: dv/dt = 2 / v.\n2. Separate variables:\n   v dv = 2 dt.\n3. Integrate from 0 to t:\n   \u222b_0^v v dv = 2 \u222b_0^t dt.\n4. Evaluate:\n   v\u00b2 / 2 = 2t\n   v\u00b2 = 4t.\n5. Take square root:\n   v(t) = 2 \u221at.\n6. Therefore, the velocity at time t is 2 \u221at.\n\n5. FINAL ANSWER:\nOption A: 2 \u221at\n\n6. QUICK TIP:\nIntegrating v dv = 2 dt yields v\u00b2 = 4t => v = 2\u221at. Acceleration a = 2/(2\u221at) = 1/\u221at.",
+    "solutionStructured": {
+      "concept": "Separate variables in dv/dt = 2/v: v dv = 2 dt.",
+      "given": "dv/dt = 2 / v, v(0) = 0.",
+      "formula": "v dv = 2 dt => v\u00b2 / 2 = 2t => v\u00b2 = 4t => v = 2 \u221at.",
+      "stepByStep": "1. Write equation: dv/dt = 2 / v.\n2. Separate variables:\n   v dv = 2 dt.\n3. Integrate from 0 to t:\n   \u222b_0^v v dv = 2 \u222b_0^t dt.\n4. Evaluate:\n   v\u00b2 / 2 = 2t\n   v\u00b2 = 4t.\n5. Take square root:\n   v(t) = 2 \u221at.\n6. Therefore, the velocity at time t is 2 \u221at.",
+      "finalAnswer": "Option A: 2 \u221at",
+      "whyOtherOptionsWrong": "Option B is 4\u221at. Option C assumes constant acceleration. Option D is 4t\u00b2."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-166",
+    "questionNumber": 166,
+    "question": "A particle moves along a straight line such that its displacement varies with time as x = a t\u00b2 - b t\u00b3, with a = 6 m/s\u00b2 and b = 1 m/s\u00b3. What is the distance traveled by the particle between t = 0 and t = 6 s?",
+    "options": {
+      "A": "64 m",
+      "B": "32 m",
+      "C": "0 m",
+      "D": "48 m"
+    },
+    "optionsList": [
+      "64 m",
+      "32 m",
+      "0 m",
+      "48 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nCheck for turning points where v = 0, find distances for forward and backward parts, and add them.\n\n2. GIVEN:\nx(t) = 6t\u00b2 - t\u00b3, interval [0, 6] s.\n\n3. FORMULA / PRINCIPLE:\nv = 12t - 3t\u00b2 = 0 => 3t(4 - t) = 0 => t = 4 s.\n\n4. STEP-BY-STEP SOLUTION:\n1. Velocity: v(t) = dx/dt = 12t - 3t\u00b2.\n2. Turning points: v(t) = 0 => 3t(4 - t) = 0 => t = 0 and t = 4 s.\n   Since t = 4 s is within [0, 6] s, motion reverses at t = 4 s.\n3. Positions:\n   x(0) = 0 m\n   x(4) = 6(4\u00b2) - 4\u00b3 = 6(16) - 64 = 96 - 64 = +32 m\n   x(6) = 6(6\u00b2) - 6\u00b3 = 216 - 216 = 0 m.\n4. Segment 1 (0 to 4 s): |x(4) - x(0)| = |32 - 0| = 32 m (forward).\n5. Segment 2 (4 to 6 s): |x(6) - x(4)| = |0 - 32| = 32 m (backward).\n6. Total distance = 32 m + 32 m = 64 m.\n7. (Note: Net displacement is x(6) - x(0) = 0 m!).\n\n5. FINAL ANSWER:\nOption A: 64 m\n\n6. QUICK TIP:\nGreat NEET trap: Displacement at t = 6 s is 0 m, but total distance is 32 + 32 = 64 m!",
+    "solutionStructured": {
+      "concept": "Check for turning points where v = 0, find distances for forward and backward parts, and add them.",
+      "given": "x(t) = 6t\u00b2 - t\u00b3, interval [0, 6] s.",
+      "formula": "v = 12t - 3t\u00b2 = 0 => 3t(4 - t) = 0 => t = 4 s.",
+      "stepByStep": "1. Velocity: v(t) = dx/dt = 12t - 3t\u00b2.\n2. Turning points: v(t) = 0 => 3t(4 - t) = 0 => t = 0 and t = 4 s.\n   Since t = 4 s is within [0, 6] s, motion reverses at t = 4 s.\n3. Positions:\n   x(0) = 0 m\n   x(4) = 6(4\u00b2) - 4\u00b3 = 6(16) - 64 = 96 - 64 = +32 m\n   x(6) = 6(6\u00b2) - 6\u00b3 = 216 - 216 = 0 m.\n4. Segment 1 (0 to 4 s): |x(4) - x(0)| = |32 - 0| = 32 m (forward).\n5. Segment 2 (4 to 6 s): |x(6) - x(4)| = |0 - 32| = 32 m (backward).\n6. Total distance = 32 m + 32 m = 64 m.\n7. (Note: Net displacement is x(6) - x(0) = 0 m!).",
+      "finalAnswer": "Option A: 64 m",
+      "whyOtherOptionsWrong": "Option B is the maximum displacement at t = 4 s. Option C is the net displacement (0 m). Option D is 48 m."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-167",
+    "questionNumber": 167,
+    "question": "In the previous question (x = 6t\u00b2 - t\u00b3), what is the instantaneous acceleration of the particle at the instant it returns to the origin (at t = 6 s)?",
+    "options": {
+      "A": "-24 m/s\u00b2",
+      "B": "-12 m/s\u00b2",
+      "C": "0 m/s\u00b2",
+      "D": "-36 m/s\u00b2"
+    },
+    "optionsList": [
+      "-24 m/s\u00b2",
+      "-12 m/s\u00b2",
+      "0 m/s\u00b2",
+      "-36 m/s\u00b2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFind acceleration a(t) = d\u00b2x/dt\u00b2 and evaluate at t = 6 s.\n\n2. GIVEN:\nx(t) = 6t\u00b2 - t\u00b3, returns to origin at t = 6 s.\n\n3. FORMULA / PRINCIPLE:\na(t) = d\u00b2x/dt\u00b2 = 12 - 6t.\n\n4. STEP-BY-STEP SOLUTION:\n1. Velocity: v(t) = 12t - 3t\u00b2.\n2. Acceleration: a(t) = dv/dt = 12 - 6t.\n3. Substitute t = 6 s:\n   a(6) = 12 - 6(6) = 12 - 36 = -24 m/s\u00b2.\n4. Therefore, the acceleration at t = 6 s is -24 m/s\u00b2.\n\n5. FINAL ANSWER:\nOption A: -24 m/s\u00b2\n\n6. QUICK TIP:\nDirect evaluation: a(t) = 12 - 6t => a(6) = 12 - 36 = -24 m/s\u00b2.",
+    "solutionStructured": {
+      "concept": "Find acceleration a(t) = d\u00b2x/dt\u00b2 and evaluate at t = 6 s.",
+      "given": "x(t) = 6t\u00b2 - t\u00b3, returns to origin at t = 6 s.",
+      "formula": "a(t) = d\u00b2x/dt\u00b2 = 12 - 6t.",
+      "stepByStep": "1. Velocity: v(t) = 12t - 3t\u00b2.\n2. Acceleration: a(t) = dv/dt = 12 - 6t.\n3. Substitute t = 6 s:\n   a(6) = 12 - 6(6) = 12 - 36 = -24 m/s\u00b2.\n4. Therefore, the acceleration at t = 6 s is -24 m/s\u00b2.",
+      "finalAnswer": "Option A: -24 m/s\u00b2",
+      "whyOtherOptionsWrong": "Option B is a(4) = 12 - 24 = -12 m/s\u00b2. Option C is at t = 2 s. Option D is -36."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  }
+]

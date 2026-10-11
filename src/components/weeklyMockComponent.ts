@@ -385,27 +385,65 @@ export class WeeklyMockUI {
    */
   public static renderTestView(mockId: string): string {
     const state = WeeklyMockService.getState();
-    const paper = state.savedMocks[mockId] || WeeklyMockService.getOrCreateCurrentWeeklyMock();
-    const attemptResult = WeeklyMockService.startOrResumeAttempt(paper, mockId.startsWith('WEEKLY_MOCK_') ? 'weekly' : 'custom');
+    let paper = (mockId && state.savedMocks[mockId]) ? state.savedMocks[mockId] : WeeklyMockService.getOrCreateCurrentWeeklyMock();
+    if (!paper || !Array.isArray(paper.questions) || paper.questions.length === 0) {
+      paper = WeeklyMockService.getOrCreateCurrentWeeklyMock();
+    }
+    if (!paper || !Array.isArray(paper.questions) || paper.questions.length === 0) {
+      return `
+        <div class="max-w-2xl mx-auto p-8 text-center space-y-4">
+          <span class="text-4xl">⚠️</span>
+          <h2 class="text-xl font-bold text-slate-800 dark:text-slate-200">Unable to Load Mock Paper</h2>
+          <p class="text-xs text-slate-500">The mock examination paper questions could not be prepared. Please return to the mock test dashboard.</p>
+          <a href="#weekly-mock" class="px-4 py-2 rounded-xl bg-blue-600 text-white font-bold text-xs inline-block">Return to Mock Dashboard</a>
+        </div>
+      `;
+    }
+    const attemptResult = WeeklyMockService.startOrResumeAttempt(paper, (mockId && mockId.startsWith('WEEKLY_MOCK_')) ? 'weekly' : 'custom');
     return this.renderActiveTestView(paper, attemptResult.activeAttempt);
   }
 
   public static renderActiveTestView(paper: WeeklyMockPaper, activeAttempt: NonNullable<ReturnType<typeof WeeklyMockService.getState>['activeAttempt']>): string {
-    const qIndex = activeAttempt.currentQuestionIndex;
-    const currentQ = paper.questions[qIndex] || paper.questions[0];
+    if (!paper || !Array.isArray(paper.questions) || paper.questions.length === 0) {
+      return `
+        <div class="max-w-2xl mx-auto p-8 text-center space-y-4">
+          <span class="text-4xl">⚠️</span>
+          <h2 class="text-xl font-bold text-slate-800 dark:text-slate-200">No Questions Found</h2>
+          <p class="text-xs text-slate-500">This test paper contains no questions. Please start a new attempt.</p>
+          <a href="#weekly-mock" class="px-4 py-2 rounded-xl bg-blue-600 text-white font-bold text-xs inline-block">Back to Mock Tests</a>
+        </div>
+      `;
+    }
     const totalQs = paper.questions.length;
-    const currentAnswer = activeAttempt.answers[currentQ.questionId];
+    const qIndex = (typeof activeAttempt?.currentQuestionIndex === 'number' && activeAttempt.currentQuestionIndex >= 0 && activeAttempt.currentQuestionIndex < totalQs)
+      ? activeAttempt.currentQuestionIndex
+      : 0;
+    const currentQ = paper.questions[qIndex] || paper.questions[0];
+    if (!currentQ || !currentQ.questionId) {
+      return `
+        <div class="max-w-2xl mx-auto p-8 text-center space-y-4">
+          <span class="text-4xl">⚠️</span>
+          <h2 class="text-xl font-bold text-slate-800 dark:text-slate-200">Question Unavailable</h2>
+          <p class="text-xs text-slate-500">The current question could not be loaded. Please return to the dashboard.</p>
+          <a href="#weekly-mock" class="px-4 py-2 rounded-xl bg-blue-600 text-white font-bold text-xs inline-block">Back to Mock Tests</a>
+        </div>
+      `;
+    }
+    const answers = (activeAttempt && activeAttempt.answers) ? activeAttempt.answers : {};
+    const currentAnswer = answers[currentQ.questionId];
     const selectedOpt = currentAnswer ? currentAnswer.selectedOption : null;
     const isMarked = currentAnswer ? currentAnswer.isMarkedForReview : false;
 
     // Remaining seconds
-    const remainingSeconds = Math.max(0, Math.round((activeAttempt.endTimestamp - Date.now()) / 1000));
+    const endTimestamp = (typeof activeAttempt?.endTimestamp === 'number') ? activeAttempt.endTimestamp : (Date.now() + 180 * 60 * 1000);
+    const remainingSeconds = Math.max(0, Math.round((endTimestamp - Date.now()) / 1000));
     const timeFormatted = this.formatTime(remainingSeconds);
 
     // Question stats for summary
     let answeredCount = 0;
     let reviewCount = 0;
-    Object.values(activeAttempt.answers).forEach(a => {
+    Object.values(answers).forEach(a => {
+      if (!a) return;
       if (a.selectedOption !== null && a.selectedOption !== undefined) answeredCount++;
       if (a.isMarkedForReview) reviewCount++;
     });
@@ -588,7 +626,8 @@ export class WeeklyMockUI {
             <!-- Numbered Palette Grid -->
             <div class="grid grid-cols-5 sm:grid-cols-6 gap-1.5 max-h-[380px] overflow-y-auto p-1 scrollbar-thin">
               ${paper.questions.map((q, idx) => {
-                const ans = activeAttempt.answers[q.questionId];
+                if (!q || !q.questionId) return '';
+                const ans = answers ? answers[q.questionId] : undefined;
                 const isAns = ans && ans.selectedOption !== null && ans.selectedOption !== undefined;
                 const isRev = ans && ans.isMarkedForReview;
                 const isCurrent = idx === qIndex;
@@ -656,7 +695,8 @@ export class WeeklyMockUI {
             <!-- Grid -->
             <div class="grid grid-cols-6 gap-2 overflow-y-auto p-1 flex-1 scrollbar-thin">
               ${paper.questions.map((q, idx) => {
-                const ans = activeAttempt.answers[q.questionId];
+                if (!q || !q.questionId) return '';
+                const ans = answers ? answers[q.questionId] : undefined;
                 const isAns = ans && ans.selectedOption !== null && ans.selectedOption !== undefined;
                 const isRev = ans && ans.isMarkedForReview;
                 const isCurrent = idx === qIndex;
@@ -755,7 +795,10 @@ export class WeeklyMockUI {
   public static renderResultView(mockId: string, resultFilter: string = 'all'): string {
     const result = WeeklyMockService.getSubmittedResult(mockId);
     const state = WeeklyMockService.getState();
-    const paper = state.savedMocks[mockId] || WeeklyMockService.getOrCreateCurrentWeeklyMock();
+    let paper = (mockId && state.savedMocks[mockId]) ? state.savedMocks[mockId] : WeeklyMockService.getOrCreateCurrentWeeklyMock();
+    if (!paper || !Array.isArray(paper.questions) || paper.questions.length === 0) {
+      paper = WeeklyMockService.getOrCreateCurrentWeeklyMock();
+    }
 
     if (!result) {
       return `
@@ -768,31 +811,34 @@ export class WeeklyMockUI {
       `;
     }
 
+    const allPaperQuestions = (paper && Array.isArray(paper.questions)) ? paper.questions.filter(q => q && q.questionId) : [];
+    const answers = (result && result.answers) ? result.answers : {};
+
     // Filter questions for detailed solutions
-    let filteredQuestions = paper.questions;
+    let filteredQuestions = allPaperQuestions;
     if (resultFilter === 'correct') {
-      filteredQuestions = paper.questions.filter(q => {
-        const a = result.answers[q.questionId];
+      filteredQuestions = allPaperQuestions.filter(q => {
+        const a = answers[q.questionId];
         return a && a.selectedOption === q.correctAnswer;
       });
     } else if (resultFilter === 'incorrect') {
-      filteredQuestions = paper.questions.filter(q => {
-        const a = result.answers[q.questionId];
+      filteredQuestions = allPaperQuestions.filter(q => {
+        const a = answers[q.questionId];
         return a && a.selectedOption !== null && a.selectedOption !== undefined && a.selectedOption !== q.correctAnswer;
       });
     } else if (resultFilter === 'unattempted') {
-      filteredQuestions = paper.questions.filter(q => {
-        const a = result.answers[q.questionId];
+      filteredQuestions = allPaperQuestions.filter(q => {
+        const a = answers[q.questionId];
         return !a || a.selectedOption === null || a.selectedOption === undefined;
       });
     } else if (resultFilter === 'review') {
-      filteredQuestions = paper.questions.filter(q => {
-        const a = result.answers[q.questionId];
+      filteredQuestions = allPaperQuestions.filter(q => {
+        const a = answers[q.questionId];
         return a && a.isMarkedForReview;
       });
     } else if (resultFilter === 'weak') {
-      const weakTopics = new Set(result.topicPerformance.filter(t => t.status === 'WEAK').map(t => t.topicId));
-      filteredQuestions = paper.questions.filter(q => weakTopics.has(q.topicId));
+      const weakTopics = new Set((result.topicPerformance || []).filter(t => t.status === 'WEAK').map(t => t.topicId));
+      filteredQuestions = allPaperQuestions.filter(q => weakTopics.has(q.topicId));
     }
 
     const timeUsedMinutes = Math.max(1, Math.round(result.totalTimeSeconds / 60));
@@ -804,18 +850,18 @@ export class WeeklyMockUI {
       <div class="max-w-5xl mx-auto space-y-8 animate-fadeIn pb-16">
         
         <!-- Result Hero Score Card -->
-        <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 via-indigo-950 to-blue-900 text-white p-6 sm:p-10 shadow-2xl border border-indigo-800/40 space-y-6">
-          <div class="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-white/10">
+        <div class="relative overflow-hidden rounded-3xl bg-white dark:bg-gradient-to-br dark:from-slate-900 dark:via-indigo-950 dark:to-blue-900 text-slate-900 dark:text-white p-6 sm:p-10 shadow-sm dark:shadow-2xl border border-slate-200/90 dark:border-indigo-800/40 space-y-6">
+          <div class="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-slate-100 dark:border-white/10">
             <div>
-              <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold uppercase tracking-wider border border-emerald-400/30">
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 text-xs font-bold uppercase tracking-wider border border-emerald-200 dark:border-emerald-400/30">
                 ✓ Test Completed
               </span>
-              <h1 class="text-2xl sm:text-4xl font-black text-white mt-1.5">
+              <h1 class="text-2xl sm:text-4xl font-black text-slate-900 dark:text-white mt-1.5">
                 🎉 Weekly Mock Result — Week ${result.weekNumber}
               </h1>
             </div>
             <div class="flex items-center gap-2 flex-wrap">
-              <a href="#weekly-mock" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-xs font-bold text-white transition-colors">
+              <a href="#weekly-mock" class="px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-white/10 dark:hover:bg-white/20 text-xs font-bold text-slate-700 dark:text-white transition-colors">
                 ← Back to Overview
               </a>
               <button id="btn-retake-test-result" data-mock-id="${result.mockId}" type="button" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-xs font-bold text-white transition-colors shadow-sm">
@@ -829,59 +875,59 @@ export class WeeklyMockUI {
 
           <!-- Quick Navigation Actions Bar -->
           <div class="flex flex-wrap items-center gap-2.5 pt-2">
-            <button id="btn-review-all-questions" type="button" class="px-4 py-2 rounded-xl bg-white/15 hover:bg-white/25 text-xs font-extrabold text-white transition-all flex items-center gap-1.5 border border-white/20">
+            <button id="btn-review-all-questions" type="button" class="px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-white/15 dark:hover:bg-white/25 text-xs font-extrabold text-slate-800 dark:text-white transition-all flex items-center gap-1.5 border border-slate-200/80 dark:border-white/20">
               <span>📋</span> Review All Questions
             </button>
-            <button id="btn-view-detailed-solutions" type="button" class="px-4 py-2 rounded-xl bg-blue-500 hover:bg-blue-600 text-xs font-extrabold text-white transition-all flex items-center gap-1.5 shadow-sm">
+            <button id="btn-view-detailed-solutions" type="button" class="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-xs font-extrabold text-white transition-all flex items-center gap-1.5 shadow-sm">
               <span>📖</span> View Detailed Solutions
             </button>
-            <a href="#mistake-book" class="px-4 py-2 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 text-xs font-bold text-amber-200 border border-amber-400/30 transition-all flex items-center gap-1.5">
+            <a href="#mistake-book" class="px-4 py-2 rounded-xl bg-amber-50 hover:bg-amber-100 dark:bg-amber-500/20 dark:hover:bg-amber-500/30 text-xs font-bold text-amber-800 dark:text-amber-200 border border-amber-200 dark:border-amber-400/30 transition-all flex items-center gap-1.5">
               <span>📕</span> View ${result.totalIncorrect} Mistakes in Mistake Book
             </a>
           </div>
 
           <!-- Major Score Numbers Grid -->
           <div class="grid grid-cols-2 sm:grid-cols-5 gap-3">
-            <div class="col-span-2 p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15">
-              <span class="text-[11px] font-bold uppercase tracking-wider text-slate-300 block">Total Score</span>
+            <div class="col-span-2 p-4 rounded-2xl bg-slate-50 dark:bg-white/10 dark:backdrop-blur-md border border-slate-200/70 dark:border-white/15">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-300 block">Total Score</span>
               <div class="flex items-baseline gap-1 mt-1">
-                <span class="text-3xl sm:text-5xl font-black text-white">${result.totalScore}</span>
-                <span class="text-base sm:text-xl font-bold text-slate-300">/ 720</span>
+                <span class="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white">${result.totalScore}</span>
+                <span class="text-base sm:text-xl font-bold text-slate-400 dark:text-slate-300">/ 720</span>
               </div>
-              <span class="text-xs font-semibold text-emerald-300 block mt-1">
+              <span class="text-xs font-semibold text-emerald-600 dark:text-emerald-300 block mt-1">
                 ${result.totalScore >= 600 ? '⭐ Outstanding (Top Medical Seat Tier)' : (result.totalScore >= 500 ? '🟢 Strong NEET Benchmark' : '🟡 Solid Foundation • Focus on Weak Topics')}
               </span>
             </div>
 
-            <div class="p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15">
-              <span class="text-[11px] font-bold uppercase tracking-wider text-slate-300 block">Accuracy</span>
-              <span class="text-2xl sm:text-3xl font-black text-emerald-400 mt-1 block">${result.accuracyPercentage}%</span>
-              <span class="text-[10px] text-slate-300">${result.totalCorrect} / ${result.totalCorrect + result.totalIncorrect} attempted</span>
+            <div class="p-4 rounded-2xl bg-slate-50 dark:bg-white/10 dark:backdrop-blur-md border border-slate-200/70 dark:border-white/15">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-300 block">Accuracy</span>
+              <span class="text-2xl sm:text-3xl font-black text-emerald-600 dark:text-emerald-400 mt-1 block">${result.accuracyPercentage}%</span>
+              <span class="text-[10px] text-slate-500 dark:text-slate-300">${result.totalCorrect} / ${result.totalCorrect + result.totalIncorrect} attempted</span>
             </div>
 
-            <div class="p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15">
-              <span class="text-[11px] font-bold uppercase tracking-wider text-slate-300 block">Breakdown</span>
+            <div class="p-4 rounded-2xl bg-slate-50 dark:bg-white/10 dark:backdrop-blur-md border border-slate-200/70 dark:border-white/15">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-300 block">Breakdown</span>
               <div class="text-xs font-bold space-y-0.5 mt-1">
-                <div class="text-emerald-300">+${result.totalCorrect} Correct</div>
-                <div class="text-rose-300">-${result.totalIncorrect} Incorrect</div>
-                <div class="text-slate-300">${result.totalUnattempted} Unattempted</div>
+                <div class="text-emerald-600 dark:text-emerald-300">+${result.totalCorrect} Correct</div>
+                <div class="text-rose-600 dark:text-rose-300">-${result.totalIncorrect} Incorrect</div>
+                <div class="text-slate-500 dark:text-slate-300">${result.totalUnattempted} Unattempted</div>
               </div>
             </div>
 
-            <div class="p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15">
-              <span class="text-[11px] font-bold uppercase tracking-wider text-slate-300 block">Time Used</span>
-              <span class="text-2xl sm:text-3xl font-black text-blue-300 mt-1 block">${timeUsedMinutes} <span class="text-xs font-semibold">min</span></span>
-              <span class="text-[10px] text-slate-300">${result.averageTimePerQuestion}s avg / question</span>
+            <div class="p-4 rounded-2xl bg-slate-50 dark:bg-white/10 dark:backdrop-blur-md border border-slate-200/70 dark:border-white/15">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-300 block">Time Used</span>
+              <span class="text-2xl sm:text-3xl font-black text-blue-600 dark:text-blue-300 mt-1 block">${timeUsedMinutes} <span class="text-xs font-semibold">min</span></span>
+              <span class="text-[10px] text-slate-500 dark:text-slate-300">${result.averageTimePerQuestion}s avg / question</span>
             </div>
           </div>
 
           <!-- Viral Social Scorecard Sharing Bar -->
-          <div class="p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-white/10 dark:backdrop-blur-md border border-slate-200/70 dark:border-white/20 flex flex-col sm:flex-row items-center justify-between gap-3">
             <div class="flex items-center gap-2.5">
               <span class="text-xl">🚀</span>
               <div>
-                <p class="text-xs font-bold text-white">Share Your NEET Score & Challenge Friends</p>
-                <p class="text-[11px] text-slate-300">Invite batchmates on WhatsApp & Telegram to compare scores.</p>
+                <p class="text-xs font-bold text-slate-900 dark:text-white">Share Your NEET Score & Challenge Friends</p>
+                <p class="text-[11px] text-slate-500 dark:text-slate-300">Invite batchmates on WhatsApp & Telegram to compare scores.</p>
               </div>
             </div>
             <div class="flex items-center gap-2 w-full sm:w-auto justify-end">
@@ -905,7 +951,7 @@ export class WeeklyMockUI {
                 type="button"
                 id="btn-copy-score-share"
                 data-share-text="${encodeURIComponent(`🎯 I scored ${result.totalScore}/720 (${result.accuracyPercentage}% accuracy) on VG Insights NEET Full Mock Test! Test your preparation free: https://vginsights.in/#weekly-mock`)}"
-                class="px-3.5 py-2 rounded-xl bg-white/20 hover:bg-white/30 text-white font-bold text-xs flex items-center gap-1.5 transition-all"
+                class="px-3.5 py-2 rounded-xl bg-slate-200 hover:bg-slate-300 dark:bg-white/20 dark:hover:bg-white/30 text-slate-700 dark:text-white font-bold text-xs flex items-center gap-1.5 transition-all"
               >
                 <span>📋</span> <span id="copy-score-text">Copy Link</span>
               </button>
@@ -914,49 +960,49 @@ export class WeeklyMockUI {
 
           <!-- Subject Marks Progress Bars -->
           <div class="space-y-3 pt-2">
-            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-300">Subject Performance</h4>
+            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-300">Subject Performance</h4>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
               
               <!-- Physics -->
-              <div class="p-3.5 rounded-xl bg-white/10 border border-white/10 space-y-1.5">
+              <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-white/10 border border-slate-200/70 dark:border-white/10 space-y-1.5">
                 <div class="flex items-center justify-between text-xs">
-                  <span class="font-bold text-blue-300">⚛️ Physics</span>
-                  <span class="font-black text-white">${result.subjectScores.physics.marks} / 180</span>
+                  <span class="font-bold text-blue-700 dark:text-blue-300">⚛️ Physics</span>
+                  <span class="font-black text-slate-900 dark:text-white">${result.subjectScores.physics.marks} / 180</span>
                 </div>
-                <div class="w-full h-2 rounded-full bg-black/30 overflow-hidden">
-                  <div class="h-full bg-blue-400 rounded-full" style="width: ${Math.max(0, Math.min(100, (result.subjectScores.physics.marks / 180) * 100))}%"></div>
+                <div class="w-full h-2 rounded-full bg-slate-200 dark:bg-black/30 overflow-hidden">
+                  <div class="h-full bg-blue-500 dark:bg-blue-400 rounded-full" style="width: ${Math.max(0, Math.min(100, (result.subjectScores.physics.marks / 180) * 100))}%"></div>
                 </div>
-                <div class="flex items-center justify-between text-[10px] text-slate-300">
+                <div class="flex items-center justify-between text-[10px] text-slate-500 dark:text-slate-300">
                   <span>${result.subjectScores.physics.accuracy}% Accuracy</span>
                   <span>${result.subjectScores.physics.correct}C / ${result.subjectScores.physics.incorrect}I</span>
                 </div>
               </div>
 
               <!-- Chemistry -->
-              <div class="p-3.5 rounded-xl bg-white/10 border border-white/10 space-y-1.5">
+              <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-white/10 border border-slate-200/70 dark:border-white/10 space-y-1.5">
                 <div class="flex items-center justify-between text-xs">
-                  <span class="font-bold text-emerald-300">🧪 Chemistry</span>
-                  <span class="font-black text-white">${result.subjectScores.chemistry.marks} / 180</span>
+                  <span class="font-bold text-emerald-700 dark:text-emerald-300">🧪 Chemistry</span>
+                  <span class="font-black text-slate-900 dark:text-white">${result.subjectScores.chemistry.marks} / 180</span>
                 </div>
-                <div class="w-full h-2 rounded-full bg-black/30 overflow-hidden">
-                  <div class="h-full bg-emerald-400 rounded-full" style="width: ${Math.max(0, Math.min(100, (result.subjectScores.chemistry.marks / 180) * 100))}%"></div>
+                <div class="w-full h-2 rounded-full bg-slate-200 dark:bg-black/30 overflow-hidden">
+                  <div class="h-full bg-emerald-500 dark:bg-emerald-400 rounded-full" style="width: ${Math.max(0, Math.min(100, (result.subjectScores.chemistry.marks / 180) * 100))}%"></div>
                 </div>
-                <div class="flex items-center justify-between text-[10px] text-slate-300">
+                <div class="flex items-center justify-between text-[10px] text-slate-500 dark:text-slate-300">
                   <span>${result.subjectScores.chemistry.accuracy}% Accuracy</span>
                   <span>${result.subjectScores.chemistry.correct}C / ${result.subjectScores.chemistry.incorrect}I</span>
                 </div>
               </div>
 
               <!-- Biology -->
-              <div class="p-3.5 rounded-xl bg-white/10 border border-white/10 space-y-1.5">
+              <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-white/10 border border-slate-200/70 dark:border-white/10 space-y-1.5">
                 <div class="flex items-center justify-between text-xs">
-                  <span class="font-bold text-purple-300">🧬 Biology</span>
-                  <span class="font-black text-white">${result.subjectScores.biology.marks} / 360</span>
+                  <span class="font-bold text-purple-700 dark:text-purple-300">🧬 Biology</span>
+                  <span class="font-black text-slate-900 dark:text-white">${result.subjectScores.biology.marks} / 360</span>
                 </div>
-                <div class="w-full h-2 rounded-full bg-black/30 overflow-hidden">
-                  <div class="h-full bg-purple-400 rounded-full" style="width: ${Math.max(0, Math.min(100, (result.subjectScores.biology.marks / 360) * 100))}%"></div>
+                <div class="w-full h-2 rounded-full bg-slate-200 dark:bg-black/30 overflow-hidden">
+                  <div class="h-full bg-purple-500 dark:bg-purple-400 rounded-full" style="width: ${Math.max(0, Math.min(100, (result.subjectScores.biology.marks / 360) * 100))}%"></div>
                 </div>
-                <div class="flex items-center justify-between text-[10px] text-slate-300">
+                <div class="flex items-center justify-between text-[10px] text-slate-500 dark:text-slate-300">
                   <span>${result.subjectScores.biology.accuracy}% Accuracy</span>
                   <span>${result.subjectScores.biology.correct}C / ${result.subjectScores.biology.incorrect}I</span>
                 </div>
@@ -1093,8 +1139,9 @@ export class WeeklyMockUI {
           <!-- Questions Solution Cards List -->
           <div class="space-y-4">
             ${filteredQuestions.map((q, idx) => {
-              const originalIndex = paper.questions.findIndex(pq => pq.questionId === q.questionId);
-              const userAns = result.answers[q.questionId];
+              if (!q || !q.questionId) return '';
+              const originalIndex = allPaperQuestions.findIndex(pq => pq && pq.questionId === q.questionId);
+              const userAns = answers ? answers[q.questionId] : undefined;
               const selectedOpt = userAns ? userAns.selectedOption : null;
               const isCorrect = selectedOpt === q.correctAnswer;
               const isUnattempted = selectedOpt === null || selectedOpt === undefined;

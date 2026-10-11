@@ -77,14 +77,14 @@ export function renderBookmarkedQuestionsView(): string {
 
   return `
     <div class="max-w-5xl mx-auto space-y-6 animate-fadeIn pb-16">
-      <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-amber-900 via-yellow-950 to-slate-900 text-white shadow-xl border border-amber-800/40 space-y-2">
-        <span class="px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold uppercase tracking-wider border border-amber-400/30">
+      <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-gradient-to-br dark:from-amber-900 dark:via-yellow-950 dark:to-slate-900 text-slate-900 dark:text-white shadow-sm dark:shadow-xl border border-slate-200/90 dark:border-amber-800/40 space-y-2">
+        <span class="px-3 py-1 rounded-full bg-amber-50 dark:bg-amber-500/20 text-amber-700 dark:text-amber-300 text-xs font-bold uppercase tracking-wider border border-amber-200 dark:border-amber-400/30">
           ⭐ Saved Library
         </span>
-        <h1 class="text-2xl sm:text-3xl font-black text-white">
+        <h1 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">
           Bookmarked Questions (${bookmarks.length})
         </h1>
-        <p class="text-xs sm:text-sm text-slate-300 max-w-2xl">
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-2xl">
           All high-yield questions, tricky formulas, and topics you have starred for quick revision.
         </p>
       </div>

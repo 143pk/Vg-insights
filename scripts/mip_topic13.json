@@ -1,0 +1,668 @@
+[
+  {
+    "id": "mip-mcq-215",
+    "questionNumber": 215,
+    "question": "What is the cross product of the unit vectors $\\hat{i} \\times \\hat{j}$?",
+    "options": {
+      "A": "$\\hat{k}$",
+      "B": "$-\\hat{k}$",
+      "C": "$0$",
+      "D": "$1$"
+    },
+    "optionsList": [
+      "$\\hat{k}$",
+      "$-\\hat{k}$",
+      "$0$",
+      "$1$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn a right-handed Cartesian coordinate system, the cyclic rule states: $\\hat{i} \\times \\hat{j} = \\hat{k}$, $\\hat{j} \\times \\hat{k} = \\hat{i}$, and \\hat{k} \\times \\hat{i} = \\hat{j}$.\n\n2. GIVEN:\nUnit vectors $\\hat{i}$ and $\\hat{j}$.\n\n3. FORMULA / PRINCIPLE:\n\\hat{i} \\times \\hat{j} = \\hat{k}\n\n4. STEP-BY-STEP SOLUTION:\n1. Magnitudes of both $\\hat{i}$ and $\\hat{j}$ are equal to 1.\n2. The angle between them is $90^\\circ$, and $\\sin 90^\\circ = 1$.\n3. By the right-hand thumb rule, curling fingers from the positive x-axis ($\\hat{i}$) toward the positive y-axis ($\\hat{j}$) points the thumb along the positive z-axis ($\\hat{k}$).\n4. Therefore, $\\hat{i} \\times \\hat{j} = \\hat{k}$.\n\n5. FINAL ANSWER:\nOption A: $\\hat{k}$\n\n6. QUICK TIP:\nUse the cyclic wheel: Clockwise ($\\{i \\to j \\to k\\}$) is positive $+$. Counter-clockwise ($\\{j \\to i\\}$) is negative $-$.",
+    "solutionStructured": {
+      "concept": "In a right-handed Cartesian coordinate system, the cyclic rule states: $\\hat{i} \\times \\hat{j} = \\hat{k}$, $\\hat{j} \\times \\hat{k} = \\hat{i}$, and \\hat{k} \\times \\hat{i} = \\hat{j}$.",
+      "given": "Unit vectors $\\hat{i}$ and $\\hat{j}$.",
+      "formula": "\\hat{i} \\times \\hat{j} = \\hat{k}",
+      "stepByStep": "1. Magnitudes of both $\\hat{i}$ and $\\hat{j}$ are equal to 1.\n2. The angle between them is $90^\\circ$, and $\\sin 90^\\circ = 1$.\n3. By the right-hand thumb rule, curling fingers from the positive x-axis ($\\hat{i}$) toward the positive y-axis ($\\hat{j}$) points the thumb along the positive z-axis ($\\hat{k}$).\n4. Therefore, $\\hat{i} \\times \\hat{j} = \\hat{k}$.",
+      "finalAnswer": "Option A: $\\hat{k}$",
+      "whyOtherOptionsWrong": "Option B is $\\hat{j} \\times \\hat{i}$; Option C confuses cross product with dot product $\\hat{i} \\cdot \\hat{j} = 0$."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Cross product and its applications",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-216",
+    "questionNumber": 216,
+    "question": "Which of the following is the correct relationship between $\\vec{A} \\times \\vec{B}$ and $\\vec{B} \\times \\vec{A}$?",
+    "options": {
+      "A": "$\\vec{A} \\times \\vec{B} = -(\\vec{B} \\times \\vec{A})$",
+      "B": "$\\vec{A} \\times \\vec{B} = \\vec{B} \\times \\vec{A}$",
+      "C": "$\\vec{A} \\times \\vec{B} = \\frac{1}{\\vec{B} \\times \\vec{A}}$",
+      "D": "$\\vec{A} \\times \\vec{B} = 0$"
+    },
+    "optionsList": [
+      "$\\vec{A} \\times \\vec{B} = -(\\vec{B} \\times \\vec{A})$",
+      "$\\vec{A} \\times \\vec{B} = \\vec{B} \\times \\vec{A}$",
+      "$\\vec{A} \\times \\vec{B} = \\frac{1}{\\vec{B} \\times \\vec{A}}$",
+      "$\\vec{A} \\times \\vec{B} = 0$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe cross product is anti-commutative: reversing the order of operands reverses the direction of the resulting vector by the right-hand rule.\n\n2. GIVEN:\nVectors $\\vec{A}$ and $\\vec{B}$.\n\n3. FORMULA / PRINCIPLE:\n\\vec{A} \\times \\vec{B} = -(\\vec{B} \\times \\vec{A})\n\n4. STEP-BY-STEP SOLUTION:\n1. By definition, $\\vec{A} \\times \\vec{B} = AB\\sin\\theta\\,\\hat{n}$, where $\\hat{n}$ is given by the right-hand rule.\n2. Reversing the order to $\\vec{B} \\times \\vec{A}$ curls the fingers from $\\vec{B}$ to $\\vec{A}$, pointing the thumb in the opposite direction $(-\\hat{n})$.\n3. Therefore, $\\vec{B} \\times \\vec{A} = AB\\sin\\theta(-\\hat{n}) = -(\\vec{A} \\times \\vec{B})$.\n\n5. FINAL ANSWER:\nOption A: $\\vec{A} \\times \\vec{B} = -(\\vec{B} \\times \\vec{A})$\n\n6. QUICK TIP:\nDot product is commutative ($\\vec{A}\\cdot\\vec{B} = \\vec{B}\\cdot\\vec{A}$), but cross product is ANTI-commutative!",
+    "solutionStructured": {
+      "concept": "The cross product is anti-commutative: reversing the order of operands reverses the direction of the resulting vector by the right-hand rule.",
+      "given": "Vectors $\\vec{A}$ and $\\vec{B}$.",
+      "formula": "\\vec{A} \\times \\vec{B} = -(\\vec{B} \\times \\vec{A})",
+      "stepByStep": "1. By definition, $\\vec{A} \\times \\vec{B} = AB\\sin\\theta\\,\\hat{n}$, where $\\hat{n}$ is given by the right-hand rule.\n2. Reversing the order to $\\vec{B} \\times \\vec{A}$ curls the fingers from $\\vec{B}$ to $\\vec{A}$, pointing the thumb in the opposite direction $(-\\hat{n})$.\n3. Therefore, $\\vec{B} \\times \\vec{A} = AB\\sin\\theta(-\\hat{n}) = -(\\vec{A} \\times \\vec{B})$.",
+      "finalAnswer": "Option A: $\\vec{A} \\times \\vec{B} = -(\\vec{B} \\times \\vec{A})$",
+      "whyOtherOptionsWrong": "Option B incorrectly asserts commutativity; Option C attempts division by vectors, which is undefined."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Cross product and its applications",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-217",
+    "questionNumber": 217,
+    "question": "What is the magnitude of the cross product of two collinear (parallel) vectors $\\vec{A}$ and $\\vec{B}$?",
+    "options": {
+      "A": "$0$",
+      "B": "$AB$",
+      "C": "$A^2 B^2$",
+      "D": "$A + B$"
+    },
+    "optionsList": [
+      "$0$",
+      "$AB$",
+      "$A^2 B^2$",
+      "$A + B$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor parallel vectors, the angle between them is $\\theta = 0^\\circ$ (or $\\theta = 180^\\circ$ for anti-parallel vectors). Since $\\sin 0^\\circ = \\sin 180^\\circ = 0$, the cross product vanishes.\n\n2. GIVEN:\nCollinear vectors with $\\theta = 0^\\circ$ or $180^\\circ$.\n\n3. FORMULA / PRINCIPLE:\n|\\vec{A} \\times \\vec{B}| = AB\\sin\\theta = AB\\sin 0^\\circ = 0\n\n4. STEP-BY-STEP SOLUTION:\n1. Formula for magnitude: $|\\vec{A} \\times \\vec{B}| = AB\\sin\\theta$.\n2. When two vectors are collinear, the angle between them is $0^\\circ$ or $180^\\circ$.\n3. $\\sin 0^\\circ = 0$ and $\\sin 180^\\circ = 0$.\n4. Therefore, $|\\vec{A} \\times \\vec{B}| = 0$.\n\n5. FINAL ANSWER:\nOption A: $0$\n\n6. QUICK TIP:\nZero cross product is the definitive test for collinearity/parallelism of two non-zero vectors.",
+    "solutionStructured": {
+      "concept": "For parallel vectors, the angle between them is $\\theta = 0^\\circ$ (or $\\theta = 180^\\circ$ for anti-parallel vectors). Since $\\sin 0^\\circ = \\sin 180^\\circ = 0$, the cross product vanishes.",
+      "given": "Collinear vectors with $\\theta = 0^\\circ$ or $180^\\circ$.",
+      "formula": "|\\vec{A} \\times \\vec{B}| = AB\\sin\\theta = AB\\sin 0^\\circ = 0",
+      "stepByStep": "1. Formula for magnitude: $|\\vec{A} \\times \\vec{B}| = AB\\sin\\theta$.\n2. When two vectors are collinear, the angle between them is $0^\\circ$ or $180^\\circ$.\n3. $\\sin 0^\\circ = 0$ and $\\sin 180^\\circ = 0$.\n4. Therefore, $|\\vec{A} \\times \\vec{B}| = 0$.",
+      "finalAnswer": "Option A: $0$",
+      "whyOtherOptionsWrong": "Option B occurs when vectors are perpendicular ($\\theta = 90^\\circ, \\sin 90^\\circ = 1$)."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Cross product and its applications",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-218",
+    "questionNumber": 218,
+    "question": "Which of the following physical quantities is defined using a vector cross product?",
+    "options": {
+      "A": "Torque ($\\vec{\\tau} = \\vec{r} \\times \\vec{F}$)",
+      "B": "Work done ($W = \\vec{F} \\cdot \\vec{s}$)",
+      "C": "Electric flux ($\\Phi = \\vec{E} \\cdot \\vec{A}$)",
+      "D": "Kinetic energy ($K = \\frac{1}{2} m v^2$)"
+    },
+    "optionsList": [
+      "Torque ($\\vec{\\tau} = \\vec{r} \\times \\vec{F}$)",
+      "Work done ($W = \\vec{F} \\cdot \\vec{s}$)",
+      "Electric flux ($\\Phi = \\vec{E} \\cdot \\vec{A}$)",
+      "Kinetic energy ($K = \\frac{1}{2} m v^2$)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTorque $\\vec{\\tau} = \\vec{r} \\times \\vec{F}$ and angular momentum $\\vec{L} = \\vec{r} \\times \\vec{p}$ are axial vectors defined as the cross product of position and linear force/momentum.\n\n2. GIVEN:\nPhysical formulas in mechanics.\n\n3. FORMULA / PRINCIPLE:\n\\vec{\\tau} = \\vec{r} \\times \\vec{F}\n\n4. STEP-BY-STEP SOLUTION:\n1. Torque is the rotational analogue of force, defined as $\\vec{\\tau} = \\vec{r} \\times \\vec{F}$.\n2. It is a pseudovector (axial vector) directed perpendicular to the plane containing $\\vec{r}$ and $\\vec{F}$.\n3. Work and electric flux are scalar quantities defined by dot products.\n\n5. FINAL ANSWER:\nOption A: Torque ($\\vec{\\tau} = \\vec{r} \\times \\vec{F}$)\n\n6. QUICK TIP:\nOrder matters in torque: it is $\\vec{r} \\times \\vec{F}$, NOT $\\vec{F} \\times \\vec{r}$!",
+    "solutionStructured": {
+      "concept": "Torque $\\vec{\\tau} = \\vec{r} \\times \\vec{F}$ and angular momentum $\\vec{L} = \\vec{r} \\times \\vec{p}$ are axial vectors defined as the cross product of position and linear force/momentum.",
+      "given": "Physical formulas in mechanics.",
+      "formula": "\\vec{\\tau} = \\vec{r} \\times \\vec{F}",
+      "stepByStep": "1. Torque is the rotational analogue of force, defined as $\\vec{\\tau} = \\vec{r} \\times \\vec{F}$.\n2. It is a pseudovector (axial vector) directed perpendicular to the plane containing $\\vec{r}$ and $\\vec{F}$.\n3. Work and electric flux are scalar quantities defined by dot products.",
+      "finalAnswer": "Option A: Torque ($\\vec{\\tau} = \\vec{r} \\times \\vec{F}$)",
+      "whyOtherOptionsWrong": "Options B and C are scalar dot products; Option D is a pure scalar."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Cross product and its applications",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-219",
+    "questionNumber": 219,
+    "question": "What is the area of a parallelogram whose adjacent sides are represented by the vectors $\\vec{A} = 3\\hat{i}$ and $\\vec{B} = 4\\hat{j}$?",
+    "options": {
+      "A": "$12\\text{ sq units}$",
+      "B": "$6\\text{ sq units}$",
+      "C": "$5\\text{ sq units}$",
+      "D": "$24\\text{ sq units}$"
+    },
+    "optionsList": [
+      "$12\\text{ sq units}$",
+      "$6\\text{ sq units}$",
+      "$5\\text{ sq units}$",
+      "$24\\text{ sq units}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe area of a parallelogram formed by adjacent sides $\\vec{A}$ and $\\vec{B}$ equals the magnitude of their cross product: $\\text{Area} = |\\vec{A} \\times \\vec{B}|$.\n\n2. GIVEN:\n$\\vec{A} = 3\\hat{i}$ and $\\vec{B} = 4\\hat{j}$.\n\n3. FORMULA / PRINCIPLE:\n\\text{Area} = |\\vec{A} \\times \\vec{B}|\n\n4. STEP-BY-STEP SOLUTION:\n1. Cross product: $\\vec{A} \\times \\vec{B} = (3\\hat{i}) \\times (4\\hat{j}) = 12(\\hat{i} \\times \\hat{j}) = 12\\hat{k}$.\n2. Magnitude: $|12\\hat{k}| = 12$.\n3. Thus, the area is $12\\text{ sq units}$.\n\n5. FINAL ANSWER:\nOption A: $12\\text{ sq units}$\n\n6. QUICK TIP:\nArea of parallelogram is $|\u000bec{A} \times \u000bec{B}|$; area of the triangle formed by them is $\\frac{1}{2}|\u000bec{A} \times \u000bec{B}| = 6$.",
+    "solutionStructured": {
+      "concept": "The area of a parallelogram formed by adjacent sides $\\vec{A}$ and $\\vec{B}$ equals the magnitude of their cross product: $\\text{Area} = |\\vec{A} \\times \\vec{B}|$.",
+      "given": "$\\vec{A} = 3\\hat{i}$ and $\\vec{B} = 4\\hat{j}$.",
+      "formula": "\\text{Area} = |\\vec{A} \\times \\vec{B}|",
+      "stepByStep": "1. Cross product: $\\vec{A} \\times \\vec{B} = (3\\hat{i}) \\times (4\\hat{j}) = 12(\\hat{i} \\times \\hat{j}) = 12\\hat{k}$.\n2. Magnitude: $|12\\hat{k}| = 12$.\n3. Thus, the area is $12\\text{ sq units}$.",
+      "finalAnswer": "Option A: $12\\text{ sq units}$",
+      "whyOtherOptionsWrong": "Option B is the area of the triangle formed by the vectors; Option C is the hypotenuse $\\sqrt{3^2 + 4^2} = 5$."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Cross product and its applications",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-220",
+    "questionNumber": 220,
+    "question": "Given $\\vec{A} = 2\\hat{i} + 3\\hat{j}$ and $\\vec{B} = \\hat{i} + 4\\hat{j}$, what is the cross product $\\vec{A} \\times \\vec{B}$?",
+    "options": {
+      "A": "$5\\hat{k}$",
+      "B": "$-5\\hat{k}$",
+      "C": "$11\\hat{k}$",
+      "D": "$5\\hat{i}$"
+    },
+    "optionsList": [
+      "$5\\hat{k}$",
+      "$-5\\hat{k}$",
+      "$11\\hat{k}$",
+      "$5\\hat{i}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn the xy-plane, the cross product of two vectors is perpendicular to the plane (along $\\hat{k}$), given by $(A_x B_y - A_y B_x)\\hat{k}$.\n\n2. GIVEN:\n$\\vec{A} = 2\\hat{i} + 3\\hat{j}$, $\\vec{B} = \\hat{i} + 4\\hat{j}$.\n\n3. FORMULA / PRINCIPLE:\n\\vec{A} \\times \\vec{B} = (A_x B_y - A_y B_x)\\hat{k}\n\n4. STEP-BY-STEP SOLUTION:\n1. Multiply: $A_x B_y = (2)(4) = 8$.\n2. Multiply: $A_y B_x = (3)(1) = 3$.\n3. Subtract: $A_x B_y - A_y B_x = 8 - 3 = 5$.\n4. Attach unit vector along z-axis: $\\vec{A} \\times \\vec{B} = 5\\hat{k}$.\n\n5. FINAL ANSWER:\nOption A: $5\\hat{k}$\n\n6. QUICK TIP:\nFor any 2D vectors in the xy-plane, the cross product ALWAYS points along $\\pm\\hat{k}$ (z-axis).",
+    "solutionStructured": {
+      "concept": "In the xy-plane, the cross product of two vectors is perpendicular to the plane (along $\\hat{k}$), given by $(A_x B_y - A_y B_x)\\hat{k}$.",
+      "given": "$\\vec{A} = 2\\hat{i} + 3\\hat{j}$, $\\vec{B} = \\hat{i} + 4\\hat{j}$.",
+      "formula": "\\vec{A} \\times \\vec{B} = (A_x B_y - A_y B_x)\\hat{k}",
+      "stepByStep": "1. Multiply: $A_x B_y = (2)(4) = 8$.\n2. Multiply: $A_y B_x = (3)(1) = 3$.\n3. Subtract: $A_x B_y - A_y B_x = 8 - 3 = 5$.\n4. Attach unit vector along z-axis: $\\vec{A} \\times \\vec{B} = 5\\hat{k}$.",
+      "finalAnswer": "Option A: $5\\hat{k}$",
+      "whyOtherOptionsWrong": "Option B calculates $3 - 8 = -5\\hat{k}$ (which is $\\vec{B} \\times \\vec{A}$); Option C calculates $8 + 3 = 11$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Cross product and its applications",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-221",
+    "questionNumber": 221,
+    "question": "Find a unit vector perpendicular to both vectors $\\vec{A} = 2\\hat{i} + \\hat{j} + \\hat{k}$ and $\\vec{B} = \\hat{i} - \\hat{j} + 2\\hat{k}$.",
+    "options": {
+      "A": "$\\frac{3\\hat{i} - 3\\hat{j} - 3\\hat{k}}{3\\sqrt{3}} = \\frac{\\hat{i} - \\hat{j} - \\hat{k}}{\\sqrt{3}}$",
+      "B": "$\\frac{\\hat{i} + \\hat{j} + \\hat{k}}{\\sqrt{3}}$",
+      "C": "$\\frac{3\\hat{i} + \\hat{j} - \\hat{k}}{\\sqrt{11}}$",
+      "D": "$\\frac{\\hat{i} - 2\\hat{j} + \\hat{k}}{\\sqrt{6}}$"
+    },
+    "optionsList": [
+      "$\\frac{3\\hat{i} - 3\\hat{j} - 3\\hat{k}}{3\\sqrt{3}} = \\frac{\\hat{i} - \\hat{j} - \\hat{k}}{\\sqrt{3}}$",
+      "$\\frac{\\hat{i} + \\hat{j} + \\hat{k}}{\\sqrt{3}}$",
+      "$\\frac{3\\hat{i} + \\hat{j} - \\hat{k}}{\\sqrt{11}}$",
+      "$\\frac{\\hat{i} - 2\\hat{j} + \\hat{k}}{\\sqrt{6}}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nA vector perpendicular to both $\\vec{A}$ and $\\vec{B}$ is given by their cross product $\\vec{C} = \\vec{A} \\times \\vec{B}$. A unit vector is obtained by dividing $\\vec{C}$ by its magnitude $|\\vec{C}|$.\n\n2. GIVEN:\n$\\vec{A} = 2\\hat{i} + \\hat{j} + \\hat{k}$, $\\vec{B} = \\hat{i} - \\hat{j} + 2\\hat{k}$.\n\n3. FORMULA / PRINCIPLE:\n\\hat{n} = \\frac{\\vec{A} \\times \\vec{B}}{|\\vec{A} \\times \\vec{B}|}\n\n4. STEP-BY-STEP SOLUTION:\n1. Compute the determinant:\n   $\\vec{A} \\times \\vec{B} = \\begin{vmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\ 2 & 1 & 1 \\\\ 1 & -1 & 2 \\end{vmatrix}$.\n2. Expand by minors:\n   $\\hat{i}[(1)(2) - (1)(-1)] = \\hat{i}[2 + 1] = 3\\hat{i}$.\n   $-\\hat{j}[(2)(2) - (1)(1)] = -\\hat{j}[4 - 1] = -3\\hat{j}$.\n   $\\hat{k}[(2)(-1) - (1)(1)] = \\hat{k}[-2 - 1] = -3\\hat{k}$.\n3. Resultant cross product: $\\vec{C} = 3\\hat{i} - 3\\hat{j} - 3\\hat{k}$.\n4. Magnitude: $|\\vec{C}| = \\sqrt{3^2 + (-3)^2 + (-3)^2} = \\sqrt{27} = 3\\sqrt{3}$.\n5. Unit vector: $\\hat{n} = \\frac{3(\\hat{i} - \\hat{j} - \\hat{k})}{3\\sqrt{3}} = \\frac{\\hat{i} - \\hat{j} - \\hat{k}}{\\sqrt{3}}$.\n\n5. FINAL ANSWER:\nOption A: $\\frac{3\\hat{i} - 3\\hat{j} - 3\\hat{k}}{3\\sqrt{3}} = \\frac{\\hat{i} - \\hat{j} - \\hat{k}}{\\sqrt{3}}$\n\n6. QUICK TIP:\nVerify perpendicularity instantly: $(\\hat{i} - \\hat{j} - \\hat{k}) \\cdot (2\\hat{i} + \\hat{j} + \\hat{k}) = 2 - 1 - 1 = 0$! And $(1 - (-1) - 2) = 1 + 1 - 2 = 0$!",
+    "solutionStructured": {
+      "concept": "A vector perpendicular to both $\\vec{A}$ and $\\vec{B}$ is given by their cross product $\\vec{C} = \\vec{A} \\times \\vec{B}$. A unit vector is obtained by dividing $\\vec{C}$ by its magnitude $|\\vec{C}|$.",
+      "given": "$\\vec{A} = 2\\hat{i} + \\hat{j} + \\hat{k}$, $\\vec{B} = \\hat{i} - \\hat{j} + 2\\hat{k}$.",
+      "formula": "\\hat{n} = \\frac{\\vec{A} \\times \\vec{B}}{|\\vec{A} \\times \\vec{B}|}",
+      "stepByStep": "1. Compute the determinant:\n   $\\vec{A} \\times \\vec{B} = \\begin{vmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\ 2 & 1 & 1 \\\\ 1 & -1 & 2 \\end{vmatrix}$.\n2. Expand by minors:\n   $\\hat{i}[(1)(2) - (1)(-1)] = \\hat{i}[2 + 1] = 3\\hat{i}$.\n   $-\\hat{j}[(2)(2) - (1)(1)] = -\\hat{j}[4 - 1] = -3\\hat{j}$.\n   $\\hat{k}[(2)(-1) - (1)(1)] = \\hat{k}[-2 - 1] = -3\\hat{k}$.\n3. Resultant cross product: $\\vec{C} = 3\\hat{i} - 3\\hat{j} - 3\\hat{k}$.\n4. Magnitude: $|\\vec{C}| = \\sqrt{3^2 + (-3)^2 + (-3)^2} = \\sqrt{27} = 3\\sqrt{3}$.\n5. Unit vector: $\\hat{n} = \\frac{3(\\hat{i} - \\hat{j} - \\hat{k})}{3\\sqrt{3}} = \\frac{\\hat{i} - \\hat{j} - \\hat{k}}{\\sqrt{3}}$.",
+      "finalAnswer": "Option A: $\\frac{3\\hat{i} - 3\\hat{j} - 3\\hat{k}}{3\\sqrt{3}} = \\frac{\\hat{i} - \\hat{j} - \\hat{k}}{\\sqrt{3}}$",
+      "whyOtherOptionsWrong": "Option B gives dot product $(1)(2) + (1)(1) + (1)(1) = 4 \\ne 0$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Cross product and its applications",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-222",
+    "questionNumber": 222,
+    "question": "The torque of a force $\\vec{F} = (2\\hat{i} - 3\\hat{j} + 4\\hat{k})\\text{ N}$ acting at the point $\\vec{r} = (3\\hat{i} + 2\\hat{j} + 3\\hat{k})\\text{ m}$ about the origin is:",
+    "options": {
+      "A": "$17\\hat{i} - 6\\hat{j} - 13\\hat{k}\\text{ N m}$",
+      "B": "$-17\\hat{i} + 6\\hat{j} + 13\\hat{k}\\text{ N m}$",
+      "C": "$17\\hat{i} + 6\\hat{j} - 13\\hat{k}\\text{ N m}$",
+      "D": "$7\\hat{i} - 6\\hat{j} - 13\\hat{k}\\text{ N m}$"
+    },
+    "optionsList": [
+      "$17\\hat{i} - 6\\hat{j} - 13\\hat{k}\\text{ N m}$",
+      "$-17\\hat{i} + 6\\hat{j} + 13\\hat{k}\\text{ N m}$",
+      "$17\\hat{i} + 6\\hat{j} - 13\\hat{k}\\text{ N m}$",
+      "$7\\hat{i} - 6\\hat{j} - 13\\hat{k}\\text{ N m}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTorque is defined as $\\vec{\\tau} = \\vec{r} \\times \\vec{F}$, calculated using determinant expansion.\n\n2. GIVEN:\n$\\vec{r} = 3\\hat{i} + 2\\hat{j} + 3\\hat{k}\\text{ m}$, $\\vec{F} = 2\\hat{i} - 3\\hat{j} + 4\\hat{k}\\text{ N}$.\n\n3. FORMULA / PRINCIPLE:\n\\vec{\\tau} = \\vec{r} \\times \\vec{F} = \\begin{vmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\ r_x & r_y & r_z \\\\ F_x & F_y & F_z \\end{vmatrix}\n\n4. STEP-BY-STEP SOLUTION:\n1. Write the determinant with $\\vec{r}$ in the second row and $\\vec{F}$ in the third row:\n   $\\begin{vmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\ 3 & 2 & 3 \\\\ 2 & -3 & 4 \\end{vmatrix}$.\n2. Component along $\\hat{i}$: $(2)(4) - (3)(-3) = 8 - (-9) = 17$.\n3. Component along $\\hat{j}$: $-[(3)(4) - (3)(2)] = -[12 - 6] = -6$.\n4. Component along $\\hat{k}$: $(3)(-3) - (2)(2) = -9 - 4 = -13$.\n5. Torque vector: $\\vec{\\tau} = 17\\hat{i} - 6\\hat{j} - 13\\hat{k}\\text{ N m}$.\n\n5. FINAL ANSWER:\nOption A: $17\\hat{i} - 6\\hat{j} - 13\\hat{k}\\text{ N m}$\n\n6. QUICK TIP:\nDo not swap rows! Putting $\\vec{F}$ first gives $\\vec{F} \\times \\vec{r} = -\\vec{\\tau}$ (Option B), which is incorrect.",
+    "solutionStructured": {
+      "concept": "Torque is defined as $\\vec{\\tau} = \\vec{r} \\times \\vec{F}$, calculated using determinant expansion.",
+      "given": "$\\vec{r} = 3\\hat{i} + 2\\hat{j} + 3\\hat{k}\\text{ m}$, $\\vec{F} = 2\\hat{i} - 3\\hat{j} + 4\\hat{k}\\text{ N}$.",
+      "formula": "\\vec{\\tau} = \\vec{r} \\times \\vec{F} = \\begin{vmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\ r_x & r_y & r_z \\\\ F_x & F_y & F_z \\end{vmatrix}",
+      "stepByStep": "1. Write the determinant with $\\vec{r}$ in the second row and $\\vec{F}$ in the third row:\n   $\\begin{vmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\ 3 & 2 & 3 \\\\ 2 & -3 & 4 \\end{vmatrix}$.\n2. Component along $\\hat{i}$: $(2)(4) - (3)(-3) = 8 - (-9) = 17$.\n3. Component along $\\hat{j}$: $-[(3)(4) - (3)(2)] = -[12 - 6] = -6$.\n4. Component along $\\hat{k}$: $(3)(-3) - (2)(2) = -9 - 4 = -13$.\n5. Torque vector: $\\vec{\\tau} = 17\\hat{i} - 6\\hat{j} - 13\\hat{k}\\text{ N m}$.",
+      "finalAnswer": "Option A: $17\\hat{i} - 6\\hat{j} - 13\\hat{k}\\text{ N m}$",
+      "whyOtherOptionsWrong": "Option B calculates $\\vec{F} \\times \\vec{r}$; Option C makes a sign error in the middle term."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Cross product and its applications",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-223",
+    "questionNumber": 223,
+    "question": "The area of a triangle having vertices with position vectors $\\vec{A} = \\vec{0}$, $\\vec{B} = 2\\hat{i} + 3\\hat{j}$, and $\\vec{C} = 4\\hat{i} - \\hat{j}$ is:",
+    "options": {
+      "A": "$7\\text{ sq units}$",
+      "B": "$14\\text{ sq units}$",
+      "C": "$10\\text{ sq units}$",
+      "D": "$28\\text{ sq units}$"
+    },
+    "optionsList": [
+      "$7\\text{ sq units}$",
+      "$14\\text{ sq units}$",
+      "$10\\text{ sq units}$",
+      "$28\\text{ sq units}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe area of a triangle formed by vectors $\\vec{B}$ and $\\vec{C}$ originating from a common vertex $\\vec{A} = 0$ is $\\frac{1}{2}|\\vec{B} \\times \\vec{C}|$.\n\n2. GIVEN:\n$\\vec{B} = 2\\hat{i} + 3\\hat{j}$, $\\vec{C} = 4\\hat{i} - \\hat{j}$.\n\n3. FORMULA / PRINCIPLE:\n\\text{Area} = \\frac{1}{2}|\\vec{B} \\times \\vec{C}| = \\frac{1}{2}|B_x C_y - B_y C_x|\n\n4. STEP-BY-STEP SOLUTION:\n1. Compute the cross product term: $B_x C_y - B_y C_x = (2)(-1) - (3)(4) = -2 - 12 = -14$.\n2. Take the absolute value: $|-14| = 14$.\n3. Divide by 2 for the triangle area: $\\text{Area} = \\frac{1}{2} \\times 14 = 7\\text{ sq units}$.\n\n5. FINAL ANSWER:\nOption A: $7\\text{ sq units}$\n\n6. QUICK TIP:\nTriangle area is HALF the parallelogram area. Parallelogram $= 14$, Triangle $= 7$.",
+    "solutionStructured": {
+      "concept": "The area of a triangle formed by vectors $\\vec{B}$ and $\\vec{C}$ originating from a common vertex $\\vec{A} = 0$ is $\\frac{1}{2}|\\vec{B} \\times \\vec{C}|$.",
+      "given": "$\\vec{B} = 2\\hat{i} + 3\\hat{j}$, $\\vec{C} = 4\\hat{i} - \\hat{j}$.",
+      "formula": "\\text{Area} = \\frac{1}{2}|\\vec{B} \\times \\vec{C}| = \\frac{1}{2}|B_x C_y - B_y C_x|",
+      "stepByStep": "1. Compute the cross product term: $B_x C_y - B_y C_x = (2)(-1) - (3)(4) = -2 - 12 = -14$.\n2. Take the absolute value: $|-14| = 14$.\n3. Divide by 2 for the triangle area: $\\text{Area} = \\frac{1}{2} \\times 14 = 7\\text{ sq units}$.",
+      "finalAnswer": "Option A: $7\\text{ sq units}$",
+      "whyOtherOptionsWrong": "Option B forgets to divide by 2 (area of parallelogram); Option D multiplies by 2."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Cross product and its applications",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-224",
+    "questionNumber": 224,
+    "question": "If $|\\vec{A} \\times \\vec{B}| = \\sqrt{3}(\\vec{A} \\cdot \\vec{B})$, what is the angle $\\theta$ between vectors $\\vec{A}$ and $\\vec{B}$?",
+    "options": {
+      "A": "$60^\\circ$",
+      "B": "$30^\\circ$",
+      "C": "$45^\\circ$",
+      "D": "$90^\\circ$"
+    },
+    "optionsList": [
+      "$60^\\circ$",
+      "$30^\\circ$",
+      "$45^\\circ$",
+      "$90^\\circ$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSubstitute $|\\vec{A} \\times \\vec{B}| = AB\\sin\\theta$ and $\\vec{A} \\cdot \\vec{B} = AB\\cos\\theta$ to find $\\tan\\theta$.\n\n2. GIVEN:\n$|\\vec{A} \\times \\vec{B}| = \\sqrt{3}(\\vec{A} \\cdot \\vec{B})$.\n\n3. FORMULA / PRINCIPLE:\n$AB\\sin\\theta = \\sqrt{3} AB\\cos\\theta \\implies \\tan\\theta = \\sqrt{3}$\n\n4. STEP-BY-STEP SOLUTION:\n1. Express magnitudes in trigonometric form:\n   $|\\vec{A} \\times \\vec{B}| = AB\\sin\\theta$.\n   $\\vec{A} \\cdot \\vec{B} = AB\\cos\\theta$.\n2. Substitute into given relation:\n   $AB\\sin\\theta = \\sqrt{3} AB\\cos\\theta$.\n3. Divide by $AB\\cos\\theta$:\n   $\\frac{\\sin\\theta}{\\cos\\theta} = \\tan\\theta = \\sqrt{3}$.\n4. Since $\\tan 60^\\circ = \\sqrt{3}$, the angle is $\\theta = 60^\\circ$.\n\n5. FINAL ANSWER:\nOption A: $60^\\circ$\n\n6. QUICK TIP:\nClassic NEET relationship: $\\tan\\theta = \\frac{|\\vec{A} \\times \\vec{B}|}{\\vec{A} \\cdot \\vec{B}}$. When ratio is $\\sqrt{3} \\implies 60^\\circ$. When ratio is $1 \\implies 45^\\circ$. When ratio is $1/\\sqrt{3} \\implies 30^\\circ$.",
+    "solutionStructured": {
+      "concept": "Substitute $|\\vec{A} \\times \\vec{B}| = AB\\sin\\theta$ and $\\vec{A} \\cdot \\vec{B} = AB\\cos\\theta$ to find $\\tan\\theta$.",
+      "given": "$|\\vec{A} \\times \\vec{B}| = \\sqrt{3}(\\vec{A} \\cdot \\vec{B})$.",
+      "formula": "$AB\\sin\\theta = \\sqrt{3} AB\\cos\\theta \\implies \\tan\\theta = \\sqrt{3}$",
+      "stepByStep": "1. Express magnitudes in trigonometric form:\n   $|\\vec{A} \\times \\vec{B}| = AB\\sin\\theta$.\n   $\\vec{A} \\cdot \\vec{B} = AB\\cos\\theta$.\n2. Substitute into given relation:\n   $AB\\sin\\theta = \\sqrt{3} AB\\cos\\theta$.\n3. Divide by $AB\\cos\\theta$:\n   $\\frac{\\sin\\theta}{\\cos\\theta} = \\tan\\theta = \\sqrt{3}$.\n4. Since $\\tan 60^\\circ = \\sqrt{3}$, the angle is $\\theta = 60^\\circ$.",
+      "finalAnswer": "Option A: $60^\\circ$",
+      "whyOtherOptionsWrong": "Option B ($30^\\circ$) corresponds to ratio $1/\\sqrt{3}$; Option C corresponds to ratio $1$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Cross product and its applications",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-225",
+    "questionNumber": 225,
+    "question": "In the previous question, what is the magnitude of the resultant vector $|\\vec{A} + \\vec{B}|$ when $|\\vec{A}| = A$ and $|\\vec{B}| = A$?",
+    "options": {
+      "A": "$A\\sqrt{3}$",
+      "B": "$A$",
+      "C": "$A\\sqrt{2}$",
+      "D": "$2A$"
+    },
+    "optionsList": [
+      "$A\\sqrt{3}$",
+      "$A$",
+      "$A\\sqrt{2}$",
+      "$2A$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nUsing the angle $\\theta = 60^\\circ$ found earlier, compute the magnitude of the resultant $|\\vec{A} + \\vec{B}| = \\sqrt{A^2 + B^2 + 2AB\\cos 60^\\circ}$.\n\n2. GIVEN:\n$A = B$ and $\\theta = 60^\\circ$.\n\n3. FORMULA / PRINCIPLE:\n$R = \\sqrt{A^2 + A^2 + 2A^2\\cos 60^\\circ}$\n\n4. STEP-BY-STEP SOLUTION:\n1. From previous question, $\\theta = 60^\\circ$.\n2. Resultant formula for equal vectors: $R = 2A\\cos(\\theta/2) = 2A\\cos 30^\\circ$.\n3. Since $\\cos 30^\\circ = \\frac{\\sqrt{3}}{2}$, $R = 2A \\left(\\frac{\\sqrt{3}}{2}\\right) = A\\sqrt{3}$.\n4. Or using standard formula: $\\sqrt{A^2 + A^2 + 2A^2(0.5)} = \\sqrt{3A^2} = A\\sqrt{3}$.\n\n5. FINAL ANSWER:\nOption A: $A\\sqrt{3}$\n\n6. QUICK TIP:\nFor two equal vectors: at $60^\\circ$, resultant is $A\\sqrt{3}$; at $90^\\circ$, resultant is $A\\sqrt{2}$; at $120^\\circ$, resultant is $A$.",
+    "solutionStructured": {
+      "concept": "Using the angle $\\theta = 60^\\circ$ found earlier, compute the magnitude of the resultant $|\\vec{A} + \\vec{B}| = \\sqrt{A^2 + B^2 + 2AB\\cos 60^\\circ}$.",
+      "given": "$A = B$ and $\\theta = 60^\\circ$.",
+      "formula": "$R = \\sqrt{A^2 + A^2 + 2A^2\\cos 60^\\circ}$",
+      "stepByStep": "1. From previous question, $\\theta = 60^\\circ$.\n2. Resultant formula for equal vectors: $R = 2A\\cos(\\theta/2) = 2A\\cos 30^\\circ$.\n3. Since $\\cos 30^\\circ = \\frac{\\sqrt{3}}{2}$, $R = 2A \\left(\\frac{\\sqrt{3}}{2}\\right) = A\\sqrt{3}$.\n4. Or using standard formula: $\\sqrt{A^2 + A^2 + 2A^2(0.5)} = \\sqrt{3A^2} = A\\sqrt{3}$.",
+      "finalAnswer": "Option A: $A\\sqrt{3}$",
+      "whyOtherOptionsWrong": "Option B corresponds to $\\theta = 120^\\circ$; Option C corresponds to $\\theta = 90^\\circ$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Cross product and its applications",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-226",
+    "questionNumber": 226,
+    "question": "The diagonals of a parallelogram are represented by $\\vec{d}_1 = 3\\hat{i} + \\hat{j} - 2\\hat{k}$ and $\\vec{d}_2 = \\hat{i} - 3\\hat{j} + 4\\hat{k}$. What is the area of the parallelogram?",
+    "options": {
+      "A": "$5\\sqrt{3} \\approx 8.66\\text{ sq units}$",
+      "B": "$10\\sqrt{3}\\text{ sq units}$",
+      "C": "$15\\text{ sq units}$",
+      "D": "$20\\text{ sq units}$"
+    },
+    "optionsList": [
+      "$5\\sqrt{3} \\approx 8.66\\text{ sq units}$",
+      "$10\\sqrt{3}\\text{ sq units}$",
+      "$15\\text{ sq units}$",
+      "$20\\text{ sq units}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nWhen the diagonals $\\vec{d}_1$ and $\\vec{d}_2$ of a parallelogram are given, its area is given by $\\text{Area} = \\frac{1}{2}|\\vec{d}_1 \\times \\vec{d}_2|$.\n\n2. GIVEN:\n$\\vec{d}_1 = 3\\hat{i} + \\hat{j} - 2\\hat{k}$, $\\vec{d}_2 = \\hat{i} - 3\\hat{j} + 4\\hat{k}$.\n\n3. FORMULA / PRINCIPLE:\n\\text{Area} = \\frac{1}{2}|\\vec{d}_1 \\times \\vec{d}_2|\n\n4. STEP-BY-STEP SOLUTION:\n1. Compute cross product $\\vec{d}_1 \\times \\vec{d}_2$:\n   $\\begin{vmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\ 3 & 1 & -2 \\\\ 1 & -3 & 4 \\end{vmatrix}$.\n2. $\\hat{i}[(1)(4) - (-2)(-3)] = \\hat{i}[4 - 6] = -2\\hat{i}$.\n3. $-\\hat{j}[(3)(4) - (-2)(1)] = -\\hat{j}[12 + 2] = -14\\hat{j}$.\n4. $\\hat{k}[(3)(-3) - (1)(1)] = \\hat{k}[-9 - 1] = -10\\hat{k}$.\n5. $\\vec{d}_1 \\times \\vec{d}_2 = -2\\hat{i} - 14\\hat{j} - 10\\hat{k}$.\n6. Magnitude: $\\sqrt{(-2)^2 + (-14)^2 + (-10)^2} = \\sqrt{4 + 196 + 100} = \\sqrt{300} = 10\\sqrt{3}$.\n7. Area: $\\frac{1}{2} \\times 10\\sqrt{3} = 5\\sqrt{3}\\text{ sq units}$.\n\n5. FINAL ANSWER:\nOption A: $5\\sqrt{3} \\approx 8.66\\text{ sq units}$\n\n6. QUICK TIP:\nCRITICAL DIFFERENCE: If sides are given $\\implies |\\vec{A} \\times \\vec{B}|$. If DIAGONALS are given $\\implies \\frac{1}{2}|\\vec{d}_1 \\times \\vec{d}_2|$!",
+    "solutionStructured": {
+      "concept": "When the diagonals $\\vec{d}_1$ and $\\vec{d}_2$ of a parallelogram are given, its area is given by $\\text{Area} = \\frac{1}{2}|\\vec{d}_1 \\times \\vec{d}_2|$.",
+      "given": "$\\vec{d}_1 = 3\\hat{i} + \\hat{j} - 2\\hat{k}$, $\\vec{d}_2 = \\hat{i} - 3\\hat{j} + 4\\hat{k}$.",
+      "formula": "\\text{Area} = \\frac{1}{2}|\\vec{d}_1 \\times \\vec{d}_2|",
+      "stepByStep": "1. Compute cross product $\\vec{d}_1 \\times \\vec{d}_2$:\n   $\\begin{vmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\ 3 & 1 & -2 \\\\ 1 & -3 & 4 \\end{vmatrix}$.\n2. $\\hat{i}[(1)(4) - (-2)(-3)] = \\hat{i}[4 - 6] = -2\\hat{i}$.\n3. $-\\hat{j}[(3)(4) - (-2)(1)] = -\\hat{j}[12 + 2] = -14\\hat{j}$.\n4. $\\hat{k}[(3)(-3) - (1)(1)] = \\hat{k}[-9 - 1] = -10\\hat{k}$.\n5. $\\vec{d}_1 \\times \\vec{d}_2 = -2\\hat{i} - 14\\hat{j} - 10\\hat{k}$.\n6. Magnitude: $\\sqrt{(-2)^2 + (-14)^2 + (-10)^2} = \\sqrt{4 + 196 + 100} = \\sqrt{300} = 10\\sqrt{3}$.\n7. Area: $\\frac{1}{2} \\times 10\\sqrt{3} = 5\\sqrt{3}\\text{ sq units}$.",
+      "finalAnswer": "Option A: $5\\sqrt{3} \\approx 8.66\\text{ sq units}$",
+      "whyOtherOptionsWrong": "Option B forgets the factor of $\\frac{1}{2}$ for diagonals."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Cross product and its applications",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-227",
+    "questionNumber": 227,
+    "question": "A particle of mass $m = 2\\text{ kg}$ is moving with a constant velocity $\\vec{v} = 5\\hat{i}\\text{ m/s}$ along the line $y = 4\\text{ m}$. What is the magnitude of its angular momentum about the origin?",
+    "options": {
+      "A": "$40\\text{ kg m}^2\\text{/s}$",
+      "B": "$10\\text{ kg m}^2\\text{/s}$",
+      "C": "$0$",
+      "D": "$20\\text{ kg m}^2\\text{/s}$"
+    },
+    "optionsList": [
+      "$40\\text{ kg m}^2\\text{/s}$",
+      "$10\\text{ kg m}^2\\text{/s}$",
+      "$0$",
+      "$20\\text{ kg m}^2\\text{/s}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nAngular momentum is $\\vec{L} = \\vec{r} \\times \\vec{p} = m(\\vec{r} \\times \\vec{v})$. For a line parallel to velocity, the magnitude is $m v r_{\\perp}$.\n\n2. GIVEN:\n$m = 2\\text{ kg}$, $\\vec{v} = 5\\hat{i}\\text{ m/s}$, path is along $y = 4\\text{ m}$ (so $\\vec{r} = x\\hat{i} + 4\\hat{j}$).\n\n3. FORMULA / PRINCIPLE:\n\\vec{L} = \\vec{r} \\times (m\\vec{v}); |\\vec{L}| = m v y_0\n\n4. STEP-BY-STEP SOLUTION:\n1. Linear momentum: $\\vec{p} = m\\vec{v} = 2 \\times 5\\hat{i} = 10\\hat{i}\\text{ kg m/s}$.\n2. Position vector of any point on the trajectory: $\\vec{r} = x\\hat{i} + 4\\hat{j}$.\n3. Cross product:\n   $\\vec{L} = (x\\hat{i} + 4\\hat{j}) \\times (10\\hat{i}) = x(10)(\\hat{i} \\times \\hat{i}) + 4(10)(\\hat{j} \\times \\hat{i}) = 0 + 40(-\\hat{k}) = -40\\hat{k}\\text{ kg m}^2\\text{/s}$.\n4. Magnitude: $|\\vec{L}| = 40\\text{ kg m}^2\\text{/s}$.\n\n5. FINAL ANSWER:\nOption A: $40\\text{ kg m}^2\\text{/s}$\n\n6. QUICK TIP:\nNotice that $x$ completely drops out! The angular momentum of a free particle moving at constant velocity is strictly CONSERVED about any chosen fixed point.",
+    "solutionStructured": {
+      "concept": "Angular momentum is $\\vec{L} = \\vec{r} \\times \\vec{p} = m(\\vec{r} \\times \\vec{v})$. For a line parallel to velocity, the magnitude is $m v r_{\\perp}$.",
+      "given": "$m = 2\\text{ kg}$, $\\vec{v} = 5\\hat{i}\\text{ m/s}$, path is along $y = 4\\text{ m}$ (so $\\vec{r} = x\\hat{i} + 4\\hat{j}$).",
+      "formula": "\\vec{L} = \\vec{r} \\times (m\\vec{v}); |\\vec{L}| = m v y_0",
+      "stepByStep": "1. Linear momentum: $\\vec{p} = m\\vec{v} = 2 \\times 5\\hat{i} = 10\\hat{i}\\text{ kg m/s}$.\n2. Position vector of any point on the trajectory: $\\vec{r} = x\\hat{i} + 4\\hat{j}$.\n3. Cross product:\n   $\\vec{L} = (x\\hat{i} + 4\\hat{j}) \\times (10\\hat{i}) = x(10)(\\hat{i} \\times \\hat{i}) + 4(10)(\\hat{j} \\times \\hat{i}) = 0 + 40(-\\hat{k}) = -40\\hat{k}\\text{ kg m}^2\\text{/s}$.\n4. Magnitude: $|\\vec{L}| = 40\\text{ kg m}^2\\text{/s}$.",
+      "finalAnswer": "Option A: $40\\text{ kg m}^2\\text{/s}$",
+      "whyOtherOptionsWrong": "Option D forgets mass $m=2$; Option C wrongly assumes angular momentum is zero for straight-line motion."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Cross product and its applications",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-228",
+    "questionNumber": 228,
+    "question": "Using Lagrange's identity, if $|\u000bec{A}| = 5$, $|\u000bec{B}| = 6$, and $\u000bec{A} \\cdot \u000bec{B} = 24$, what is the magnitude of the cross product $|\u000bec{A} \times \u000bec{B}|$?",
+    "options": {
+      "A": "$18$",
+      "B": "$20$",
+      "C": "$15$",
+      "D": "$12$"
+    },
+    "optionsList": [
+      "$18$",
+      "$20$",
+      "$15$",
+      "$12$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nLagrange's vector identity connects dot product and cross product: $|\u000bec{A} \times \u000bec{B}|^2 + (\u000bec{A} \\cdot \u000bec{B})^2 = A^2 B^2$.\n\n2. GIVEN:\n$A = 5$, $B = 6$, $\u000bec{A} \\cdot \u000bec{B} = 24$.\n\n3. FORMULA / PRINCIPLE:\n$|\u000bec{A} \times \u000bec{B}| = \\sqrt{A^2 B^2 - (\u000bec{A} \\cdot \u000bec{B})^2}$\n\n4. STEP-BY-STEP SOLUTION:\n1. Calculate $A^2 B^2 = (5^2)(6^2) = 25 \times 36 = 900$.\n2. Calculate $(\u000bec{A} \\cdot \u000bec{B})^2 = 24^2 = 576$.\n3. Apply Lagrange's identity:\n   $|\u000bec{A} \times \u000bec{B}|^2 = 900 - 576 = 324$.\n4. Take square root:\n   $|\u000bec{A} \times \u000bec{B}| = \\sqrt{324} = 18$.\n\n5. FINAL ANSWER:\nOption A: $18$\n\n6. QUICK TIP:\nLagrange's identity is just $\\sin^2\\theta + \\cos^2\\theta = 1$ in vector clothing! $A^2 B^2 \\sin^2\\theta + A^2 B^2 \\cos^2\\theta = A^2 B^2$.",
+    "solutionStructured": {
+      "concept": "Lagrange's vector identity connects dot product and cross product: $|\u000bec{A} \times \u000bec{B}|^2 + (\u000bec{A} \\cdot \u000bec{B})^2 = A^2 B^2$.",
+      "given": "$A = 5$, $B = 6$, $\u000bec{A} \\cdot \u000bec{B} = 24$.",
+      "formula": "$|\u000bec{A} \times \u000bec{B}| = \\sqrt{A^2 B^2 - (\u000bec{A} \\cdot \u000bec{B})^2}$",
+      "stepByStep": "1. Calculate $A^2 B^2 = (5^2)(6^2) = 25 \times 36 = 900$.\n2. Calculate $(\u000bec{A} \\cdot \u000bec{B})^2 = 24^2 = 576$.\n3. Apply Lagrange's identity:\n   $|\u000bec{A} \times \u000bec{B}|^2 = 900 - 576 = 324$.\n4. Take square root:\n   $|\u000bec{A} \times \u000bec{B}| = \\sqrt{324} = 18$.",
+      "finalAnswer": "Option A: $18$",
+      "whyOtherOptionsWrong": "Option B calculates $\\sqrt{900 - 500}$; Option D uses $\\cos\\theta$ directly without squaring."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Cross product and its applications",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-229",
+    "questionNumber": 229,
+    "question": "If $\\vec{A} \\times \\vec{B} = \\vec{C} \\times \\vec{D}$ and $\\vec{A} \\times \\vec{C} = \\vec{B} \\times \\vec{D}$, which of the following vector pairs is collinear?",
+    "options": {
+      "A": "$(\\vec{A} - \\vec{D})$ and $(\\vec{B} - \\vec{C})$",
+      "B": "$(\\vec{A} + \\vec{B})$ and $(\\vec{C} + \\vec{D})$",
+      "C": "$(\\vec{A} - \\vec{B})$ and $(\\vec{C} - \\vec{D})$",
+      "D": "$\\vec{A}$ and $\\vec{D}$"
+    },
+    "optionsList": [
+      "$(\\vec{A} - \\vec{D})$ and $(\\vec{B} - \\vec{C})$",
+      "$(\\vec{A} + \\vec{B})$ and $(\\vec{C} + \\vec{D})$",
+      "$(\\vec{A} - \\vec{B})$ and $(\\vec{C} - \\vec{D})$",
+      "$\\vec{A}$ and $\\vec{D}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSubtract the two equations and factor using distributivity: two vectors whose cross product vanishes are collinear.\n\n2. GIVEN:\n$\\vec{A} \\times \\vec{B} = \\vec{C} \\times \\vec{D}$ and $\\vec{A} \\times \\vec{C} = \\vec{B} \\times \\vec{D}$.\n\n3. FORMULA / PRINCIPLE:\n(\\vec{A} - \\vec{D}) \\times (\\vec{B} - \\vec{C}) = 0$\n\n4. STEP-BY-STEP SOLUTION:\n1. Subtract the second equation from the first:\n   $(\\vec{A} \\times \\vec{B}) - (\\vec{A} \\times \\vec{C}) = (\\vec{C} \\times \\vec{D}) - (\\vec{B} \\times \\vec{D})$.\n2. Factor the left-hand side: $\\vec{A} \\times (\\vec{B} - \\vec{C})$.\n3. Use anti-commutativity on the RHS: $(\\vec{C} \\times \\vec{D}) - (\\vec{B} \\times \\vec{D}) = -(\\vec{D} \\times \\vec{C}) + (\\vec{D} \\times \\vec{B}) = \\vec{D} \\times (\\vec{B} - \\vec{C})$.\n4. Bring to one side:\n   $\\vec{A} \\times (\\vec{B} - \\vec{C}) - \\vec{D} \\times (\\vec{B} - \\vec{C}) = 0$.\n5. Factor common term $(\\vec{B} - \\vec{C})$:\n   $(\\vec{A} - \\vec{D}) \\times (\\vec{B} - \\vec{C}) = 0$.\n6. Since their cross product is zero, $(\\vec{A} - \\vec{D})$ and $(\\vec{B} - \\vec{C})$ must be collinear (parallel).\n\n5. FINAL ANSWER:\nOption A: $(\\vec{A} - \\vec{D})$ and $(\\vec{B} - \\vec{C})$\n\n6. QUICK TIP:\nClassic algebra technique: gather terms with common factors and use $\\vec{u} \\times \\vec{v} = 0 \\iff \\vec{u} \\parallel \\vec{v}$.",
+    "solutionStructured": {
+      "concept": "Subtract the two equations and factor using distributivity: two vectors whose cross product vanishes are collinear.",
+      "given": "$\\vec{A} \\times \\vec{B} = \\vec{C} \\times \\vec{D}$ and $\\vec{A} \\times \\vec{C} = \\vec{B} \\times \\vec{D}$.",
+      "formula": "(\\vec{A} - \\vec{D}) \\times (\\vec{B} - \\vec{C}) = 0$",
+      "stepByStep": "1. Subtract the second equation from the first:\n   $(\\vec{A} \\times \\vec{B}) - (\\vec{A} \\times \\vec{C}) = (\\vec{C} \\times \\vec{D}) - (\\vec{B} \\times \\vec{D})$.\n2. Factor the left-hand side: $\\vec{A} \\times (\\vec{B} - \\vec{C})$.\n3. Use anti-commutativity on the RHS: $(\\vec{C} \\times \\vec{D}) - (\\vec{B} \\times \\vec{D}) = -(\\vec{D} \\times \\vec{C}) + (\\vec{D} \\times \\vec{B}) = \\vec{D} \\times (\\vec{B} - \\vec{C})$.\n4. Bring to one side:\n   $\\vec{A} \\times (\\vec{B} - \\vec{C}) - \\vec{D} \\times (\\vec{B} - \\vec{C}) = 0$.\n5. Factor common term $(\\vec{B} - \\vec{C})$:\n   $(\\vec{A} - \\vec{D}) \\times (\\vec{B} - \\vec{C}) = 0$.\n6. Since their cross product is zero, $(\\vec{A} - \\vec{D})$ and $(\\vec{B} - \\vec{C})$ must be collinear (parallel).",
+      "finalAnswer": "Option A: $(\\vec{A} - \\vec{D})$ and $(\\vec{B} - \\vec{C})$",
+      "whyOtherOptionsWrong": "Option C is incorrect because the cross terms do not match the given equations."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Cross product and its applications",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-230",
+    "questionNumber": 230,
+    "question": "A force $\\vec{F} = \\alpha\\hat{i} + 3\\hat{j} + 6\\hat{k}$ acts at a point $\\vec{r} = 2\\hat{i} - 6\\hat{j} - 12\\hat{k}$. If the torque of this force about the origin is strictly ZERO, what is the value of the scalar constant $\\alpha$?",
+    "options": {
+      "A": "$-1$",
+      "B": "$1$",
+      "C": "$2$",
+      "D": "$-2$"
+    },
+    "optionsList": [
+      "$-1$",
+      "$1$",
+      "$2$",
+      "$-2$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor torque about origin to be zero, $\\vec{\\tau} = \\vec{r} \\times \\vec{F} = \\vec{0}$, which means force $\\vec{F}$ and position $\\vec{r}$ must be collinear: $\\frac{F_x}{r_x} = \\frac{F_y}{r_y} = \\frac{F_z}{r_z}$.\n\n2. GIVEN:\n$\\vec{r} = 2\\hat{i} - 6\\hat{j} - 12\\hat{k}$, $\\vec{F} = \\alpha\\hat{i} + 3\\hat{j} + 6\\hat{k}$, $\\vec{\\tau} = \\vec{0}$.\n\n3. FORMULA / PRINCIPLE:\n\\frac{\\alpha}{2} = \\frac{3}{-6} = \\frac{6}{-12}\n\n4. STEP-BY-STEP SOLUTION:\n1. Check the ratio of the given components:\n   $\\frac{F_y}{r_y} = \\frac{3}{-6} = -\\frac{1}{2}$.\n   $\\frac{F_z}{r_z} = \\frac{6}{-12} = -\\frac{1}{2}$.\n2. For collinearity, the x-ratio must also equal $-\\frac{1}{2}$:\n   $\\frac{F_x}{r_x} = \\frac{\\alpha}{2} = -\\frac{1}{2}$.\n3. Solve for $\\alpha$:\n   $\\alpha = 2 \\times \\left(-\\frac{1}{2}\\right) = -1$.\n\n5. FINAL ANSWER:\nOption A: $-1$\n\n6. QUICK TIP:\nWhen cross product is zero, avoid computing the full 3x3 determinant! Simply equate the component ratios: $F_x/r_x = F_y/r_y = F_z/r_z$!",
+    "solutionStructured": {
+      "concept": "For torque about origin to be zero, $\\vec{\\tau} = \\vec{r} \\times \\vec{F} = \\vec{0}$, which means force $\\vec{F}$ and position $\\vec{r}$ must be collinear: $\\frac{F_x}{r_x} = \\frac{F_y}{r_y} = \\frac{F_z}{r_z}$.",
+      "given": "$\\vec{r} = 2\\hat{i} - 6\\hat{j} - 12\\hat{k}$, $\\vec{F} = \\alpha\\hat{i} + 3\\hat{j} + 6\\hat{k}$, $\\vec{\\tau} = \\vec{0}$.",
+      "formula": "\\frac{\\alpha}{2} = \\frac{3}{-6} = \\frac{6}{-12}",
+      "stepByStep": "1. Check the ratio of the given components:\n   $\\frac{F_y}{r_y} = \\frac{3}{-6} = -\\frac{1}{2}$.\n   $\\frac{F_z}{r_z} = \\frac{6}{-12} = -\\frac{1}{2}$.\n2. For collinearity, the x-ratio must also equal $-\\frac{1}{2}$:\n   $\\frac{F_x}{r_x} = \\frac{\\alpha}{2} = -\\frac{1}{2}$.\n3. Solve for $\\alpha$:\n   $\\alpha = 2 \\times \\left(-\\frac{1}{2}\\right) = -1$.",
+      "finalAnswer": "Option A: $-1$",
+      "whyOtherOptionsWrong": "Option B gives $\\alpha = 1$, which would give ratio $+1/2 \\ne -1/2$, resulting in a non-zero torque."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Cross product and its applications",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-231",
+    "questionNumber": 231,
+    "question": "If $\\vec{A}, \\vec{B}, \\vec{C}$ are three non-coplanar vectors, what does the scalar triple product $\\vec{A} \\cdot (\\vec{B} \\times \\vec{C})$ physically represent?",
+    "options": {
+      "A": "Volume of a parallelepiped with coterminous edges $\\vec{A}, \\vec{B}, \\vec{C}$",
+      "B": "Area of a triangle with sides $\\vec{A}, \\vec{B}, \\vec{C}$",
+      "C": "Surface area of the parallelepiped",
+      "D": "Work done in rotating the vectors"
+    },
+    "optionsList": [
+      "Volume of a parallelepiped with coterminous edges $\\vec{A}, \\vec{B}, \\vec{C}$",
+      "Area of a triangle with sides $\\vec{A}, \\vec{B}, \\vec{C}$",
+      "Surface area of the parallelepiped",
+      "Work done in rotating the vectors"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe base area of the parallelepiped is $|\u000bec{B} \times \u000bec{C}|$, and the height is the projection of $\u000bec{A}$ along the normal to the base $A\\cos\\phi$. Thus, $\text{Volume} = \text{Base} \times \text{Height} = \u000bec{A} \\cdot (\u000bec{B} \times \u000bec{C})$.\n\n2. GIVEN:\nVectors $\\vec{A}, \\vec{B}, \\vec{C}$ forming coterminous edges of a 3D prism.\n\n3. FORMULA / PRINCIPLE:\nV = |\\vec{A} \\cdot (\\vec{B} \\times \\vec{C})|\n\n4. STEP-BY-STEP SOLUTION:\n1. The cross product $\\vec{B} \\times \\vec{C}$ yields a vector whose magnitude is the area of the base parallelogram, pointing perpendicular to that base.\n2. The dot product of $\\vec{A}$ with this normal vector multiplies the base area by the perpendicular height of the solid.\n3. Base Area $\\times$ Height = Volume of the parallelepiped.\n4. If the three vectors are coplanar, the volume is 0, so $\\vec{A} \\cdot (\\vec{B} \\times \\vec{C}) = 0$.\n\n5. FINAL ANSWER:\nOption A: Volume of a parallelepiped with coterminous edges $\\vec{A}, \\vec{B}, \\vec{C}$\n\n6. QUICK TIP:\nScalar triple product test: Coplanar vectors have $\\vec{A} \\cdot (\\vec{B} \\times \\vec{C}) = 0$ because a flat 2D shape has zero 3D volume!",
+    "solutionStructured": {
+      "concept": "The base area of the parallelepiped is $|\u000bec{B} \times \u000bec{C}|$, and the height is the projection of $\u000bec{A}$ along the normal to the base $A\\cos\\phi$. Thus, $\text{Volume} = \text{Base} \times \text{Height} = \u000bec{A} \\cdot (\u000bec{B} \times \u000bec{C})$.",
+      "given": "Vectors $\\vec{A}, \\vec{B}, \\vec{C}$ forming coterminous edges of a 3D prism.",
+      "formula": "V = |\\vec{A} \\cdot (\\vec{B} \\times \\vec{C})|",
+      "stepByStep": "1. The cross product $\\vec{B} \\times \\vec{C}$ yields a vector whose magnitude is the area of the base parallelogram, pointing perpendicular to that base.\n2. The dot product of $\\vec{A}$ with this normal vector multiplies the base area by the perpendicular height of the solid.\n3. Base Area $\\times$ Height = Volume of the parallelepiped.\n4. If the three vectors are coplanar, the volume is 0, so $\\vec{A} \\cdot (\\vec{B} \\times \\vec{C}) = 0$.",
+      "finalAnswer": "Option A: Volume of a parallelepiped with coterminous edges $\\vec{A}, \\vec{B}, \\vec{C}$",
+      "whyOtherOptionsWrong": "Option B is a 2D measure; Option C requires sum of 6 face areas."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Cross product and its applications",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-232",
+    "questionNumber": 232,
+    "question": "What is the value of $(\\vec{A} - \\vec{B}) \\times (\\vec{A} + \\vec{B})$ in simplified form?",
+    "options": {
+      "A": "$2(\\vec{A} \\times \\vec{B})$",
+      "B": "$\\vec{0}$",
+      "C": "$A^2 - B^2$",
+      "D": "$2(\\vec{B} \\times \\vec{A})$"
+    },
+    "optionsList": [
+      "$2(\\vec{A} \\times \\vec{B})$",
+      "$\\vec{0}$",
+      "$A^2 - B^2$",
+      "$2(\\vec{B} \\times \\vec{A})$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nExpand using the distributive property and anti-commutativity of the cross product: $\\vec{A} \\times \\vec{A} = 0$, $\\vec{B} \\times \\vec{B} = 0$, and $-\\vec{B} \\times \\vec{A} = +\\vec{A} \\times \\vec{B}$.\n\n2. GIVEN:\nExpression $(\\vec{A} - \\vec{B}) \\times (\\vec{A} + \\vec{B})$.\n\n3. FORMULA / PRINCIPLE:\n(\\vec{A} - \\vec{B}) \\times (\\vec{A} + \\vec{B}) = \\vec{A}\\times\\vec{A} + \\vec{A}\\times\\vec{B} - \\vec{B}\\times\\vec{A} - \\vec{B}\\times\\vec{B}\n\n4. STEP-BY-STEP SOLUTION:\n1. Expand using distributivity:\n   $(\\vec{A} - \\vec{B}) \\times (\\vec{A} + \\vec{B}) = \\vec{A}\\times\\vec{A} + \\vec{A}\\times\\vec{B} - \\vec{B}\\times\\vec{A} - \\vec{B}\\times\\vec{B}$.\n2. The self cross products vanish: $\\vec{A}\\times\\vec{A} = \\vec{0}$ and $\\vec{B}\\times\\vec{B} = \\vec{0}$.\n3. By anti-commutativity: $-\\vec{B}\\times\\vec{A} = +\\vec{A}\\times\\vec{B}$.\n4. Substitute: $\\vec{0} + \\vec{A}\\times\\vec{B} + \\vec{A}\\times\\vec{B} - \\vec{0} = 2(\\vec{A} \\times \\vec{B})$.\n\n5. FINAL ANSWER:\nOption A: $2(\\vec{A} \\times \\vec{B})$\n\n6. QUICK TIP:\nGeometric insight: The diagonals of a parallelogram formed by $\\vec{A}$ and $\\vec{B}$ are $\\vec{d}_1 = \\vec{A}+\\vec{B}$ and $\\vec{d}_2 = \\vec{A}-\\vec{B}$. The cross product of the diagonals is TWICE the cross product of the sides!",
+    "solutionStructured": {
+      "concept": "Expand using the distributive property and anti-commutativity of the cross product: $\\vec{A} \\times \\vec{A} = 0$, $\\vec{B} \\times \\vec{B} = 0$, and $-\\vec{B} \\times \\vec{A} = +\\vec{A} \\times \\vec{B}$.",
+      "given": "Expression $(\\vec{A} - \\vec{B}) \\times (\\vec{A} + \\vec{B})$.",
+      "formula": "(\\vec{A} - \\vec{B}) \\times (\\vec{A} + \\vec{B}) = \\vec{A}\\times\\vec{A} + \\vec{A}\\times\\vec{B} - \\vec{B}\\times\\vec{A} - \\vec{B}\\times\\vec{B}",
+      "stepByStep": "1. Expand using distributivity:\n   $(\\vec{A} - \\vec{B}) \\times (\\vec{A} + \\vec{B}) = \\vec{A}\\times\\vec{A} + \\vec{A}\\times\\vec{B} - \\vec{B}\\times\\vec{A} - \\vec{B}\\times\\vec{B}$.\n2. The self cross products vanish: $\\vec{A}\\times\\vec{A} = \\vec{0}$ and $\\vec{B}\\times\\vec{B} = \\vec{0}$.\n3. By anti-commutativity: $-\\vec{B}\\times\\vec{A} = +\\vec{A}\\times\\vec{B}$.\n4. Substitute: $\\vec{0} + \\vec{A}\\times\\vec{B} + \\vec{A}\\times\\vec{B} - \\vec{0} = 2(\\vec{A} \\times \\vec{B})$.",
+      "finalAnswer": "Option A: $2(\\vec{A} \\times \\vec{B})$",
+      "whyOtherOptionsWrong": "Option B falsely treats it as an algebraic difference of squares; Option C confuses cross product with dot product $(\\vec{A}-\\vec{B})\\cdot(\\vec{A}+\\vec{B}) = A^2 - B^2$."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Cross product and its applications",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  }
+]

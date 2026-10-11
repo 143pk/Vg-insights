@@ -1,0 +1,1704 @@
+[
+  {
+    "id": "mip-mcq-376",
+    "questionNumber": 376,
+    "question": "A stone is thrown horizontally with velocity $u$ from the top of a tower of height $h$. If it strikes the ground with velocity $v$, what is the relationship between $v, u, h$ and $g$?",
+    "options": {
+      "A": "$v = \\sqrt{u^2 + 2gh}$",
+      "B": "$v = u + \\sqrt{2gh}$",
+      "C": "$v = \\sqrt{u^2 - 2gh}$",
+      "D": "$v = \\sqrt{2gh}$"
+    },
+    "optionsList": [
+      "$v = \\sqrt{u^2 + 2gh}$",
+      "$v = u + \\sqrt{2gh}$",
+      "$v = \\sqrt{u^2 - 2gh}$",
+      "$v = \\sqrt{2gh}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nBy conservation of mechanical energy, the initial energy $E_i = \\frac{1}{2}m u^2 + mgh$ equals the final kinetic energy at ground impact $E_f = \\frac{1}{2}m v^2$. Thus, $v = \\sqrt{u^2 + 2gh}$.\n\n2. GIVEN:\nHorizontal launch speed $u$, tower height $h$.\n\n3. FORMULA / PRINCIPLE:\nv = \\sqrt{v_x^2 + v_y^2} = \\sqrt{u^2 + 2gh}\n\n4. STEP-BY-STEP SOLUTION:\n1. Horizontal component of velocity remains constant: $v_x = u$.\n2. Vertical component acquired in falling through height $h$: $v_y^2 = 0 + 2gh = 2gh$.\n3. Total impact speed: $v = \\sqrt{v_x^2 + v_y^2} = \\sqrt{u^2 + 2gh}$.\n\n5. FINAL ANSWER:\nOption A: $v = \\sqrt{u^2 + 2gh}$\n\n6. QUICK TIP:\nEnergy shortcut: The striking speed depends ONLY on launch speed $u$ and height $h$, regardless of whether thrown horizontally, upwards, or downwards!",
+    "solutionStructured": {
+      "concept": "By conservation of mechanical energy, the initial energy $E_i = \\frac{1}{2}m u^2 + mgh$ equals the final kinetic energy at ground impact $E_f = \\frac{1}{2}m v^2$. Thus, $v = \\sqrt{u^2 + 2gh}$.",
+      "given": "Horizontal launch speed $u$, tower height $h$.",
+      "formula": "v = \\sqrt{v_x^2 + v_y^2} = \\sqrt{u^2 + 2gh}",
+      "stepByStep": "1. Horizontal component of velocity remains constant: $v_x = u$.\n2. Vertical component acquired in falling through height $h$: $v_y^2 = 0 + 2gh = 2gh$.\n3. Total impact speed: $v = \\sqrt{v_x^2 + v_y^2} = \\sqrt{u^2 + 2gh}$.",
+      "finalAnswer": "Option A: $v = \\sqrt{u^2 + 2gh}$",
+      "whyOtherOptionsWrong": "Option B simply adds speeds; Option D is for dropping from rest ($u = 0$)."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Projectile launched from an elevated position",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-377",
+    "questionNumber": 377,
+    "question": "From the top of a building $45\\text{ m}$ high, a ball is thrown horizontally with speed $12\\text{ m/s}$. Taking $g = 10\\text{ m/s}^2$, what is the horizontal distance from the base of the building to the landing point?",
+    "options": {
+      "A": "$36\\text{ m}$",
+      "B": "$45\\text{ m}$",
+      "C": "$24\\text{ m}$",
+      "D": "$54\\text{ m}$"
+    },
+    "optionsList": [
+      "$36\\text{ m}$",
+      "$45\\text{ m}$",
+      "$24\\text{ m}$",
+      "$54\\text{ m}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTime of flight is $t = \\sqrt{2h/g}$. Horizontal range is $R = u \\times t$.\n\n2. GIVEN:\n$h = 45\\text{ m}$, $u = 12\\text{ m/s}$, $g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\nt = \\sqrt{\\frac{2h}{g}}; R = u t\n\n4. STEP-BY-STEP SOLUTION:\n1. Time of flight: $t = \\sqrt{\\frac{2 \\times 45}{10}} = \\sqrt{9} = 3\\text{ s}$.\n2. Horizontal distance: $R = u \\times t = 12 \\times 3 = 36\\text{ m}$.\n\n5. FINAL ANSWER:\nOption A: $36\\text{ m}$\n\n6. QUICK TIP:\nVertical fall time is always $\\sqrt{2h/g}$ for horizontal projection.",
+    "solutionStructured": {
+      "concept": "Time of flight is $t = \\sqrt{2h/g}$. Horizontal range is $R = u \\times t$.",
+      "given": "$h = 45\\text{ m}$, $u = 12\\text{ m/s}$, $g = 10\\text{ m/s}^2$.",
+      "formula": "t = \\sqrt{\\frac{2h}{g}}; R = u t",
+      "stepByStep": "1. Time of flight: $t = \\sqrt{\\frac{2 \\times 45}{10}} = \\sqrt{9} = 3\\text{ s}$.\n2. Horizontal distance: $R = u \\times t = 12 \\times 3 = 36\\text{ m}$.",
+      "finalAnswer": "Option A: $36\\text{ m}$",
+      "whyOtherOptionsWrong": "Option B assumes range equals building height; Option C uses $t = 2\\text{ s}$."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Projectile launched from an elevated position",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-378",
+    "questionNumber": 378,
+    "question": "Three balls A, B, and C are projected from the top of a tower of height $h$ with the SAME speed $u$. Ball A is thrown vertically upwards, Ball B horizontally, and Ball C vertically downwards. Comparing their speeds $v_A, v_B, v_C$ upon striking the ground (neglecting air resistance):",
+    "options": {
+      "A": "$v_A = v_B = v_C$",
+      "B": "$v_A > v_B > v_C$",
+      "C": "$v_C > v_B > v_A$",
+      "D": "$v_B > v_A = v_C$"
+    },
+    "optionsList": [
+      "$v_A = v_B = v_C$",
+      "$v_A > v_B > v_C$",
+      "$v_C > v_B > v_A$",
+      "$v_B > v_A = v_C$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nMechanical energy conservation: All three balls start with the same kinetic energy $\\frac{1}{2}mu^2$ and same potential energy $mgh$. Since gravity is conservative and air resistance is neglected, all three have the exact same kinetic energy and therefore the same speed upon hitting the ground: $v = \\sqrt{u^2 + 2gh}$.\n\n2. GIVEN:\nSame launch speed $u$, same height $h$, different projection angles.\n\n3. FORMULA / PRINCIPLE:\nv = \\sqrt{u^2 + 2gh}\n\n4. STEP-BY-STEP SOLUTION:\n1. Mechanical energy at launch: $E = \\frac{1}{2}m u^2 + mgh$ for all three balls.\n2. Upon reaching the ground, potential energy is zero: $E = \\frac{1}{2}m v^2$.\n3. By conservation of energy, $\\frac{1}{2}m v^2 = \\frac{1}{2}m u^2 + mgh \\implies v = \\sqrt{u^2 + 2gh}$.\n4. Since $u, g, h$ are identical for all three, $v_A = v_B = v_C$.\n\n5. FINAL ANSWER:\nOption A: $v_A = v_B = v_C$\n\n6. QUICK TIP:\nTheir landing SPEEDS are identical, but their times of flight differ ($t_A > t_B > t_C$) and their velocity DIRECTIONS differ!",
+    "solutionStructured": {
+      "concept": "Mechanical energy conservation: All three balls start with the same kinetic energy $\\frac{1}{2}mu^2$ and same potential energy $mgh$. Since gravity is conservative and air resistance is neglected, all three have the exact same kinetic energy and therefore the same speed upon hitting the ground: $v = \\sqrt{u^2 + 2gh}$.",
+      "given": "Same launch speed $u$, same height $h$, different projection angles.",
+      "formula": "v = \\sqrt{u^2 + 2gh}",
+      "stepByStep": "1. Mechanical energy at launch: $E = \\frac{1}{2}m u^2 + mgh$ for all three balls.\n2. Upon reaching the ground, potential energy is zero: $E = \\frac{1}{2}m v^2$.\n3. By conservation of energy, $\\frac{1}{2}m v^2 = \\frac{1}{2}m u^2 + mgh \\implies v = \\sqrt{u^2 + 2gh}$.\n4. Since $u, g, h$ are identical for all three, $v_A = v_B = v_C$.",
+      "finalAnswer": "Option A: $v_A = v_B = v_C$",
+      "whyOtherOptionsWrong": "Options B and C confuse landing speed with time of flight."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Projectile launched from an elevated position",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-379",
+    "questionNumber": 379,
+    "question": "In the previous question, comparing their TIMES OF FLIGHT $t_A, t_B, t_C$:",
+    "options": {
+      "A": "$t_A > t_B > t_C$",
+      "B": "$t_A = t_B = t_C$",
+      "C": "$t_C > t_B > t_A$",
+      "D": "$t_B > t_A > t_C$"
+    },
+    "optionsList": [
+      "$t_A > t_B > t_C$",
+      "$t_A = t_B = t_C$",
+      "$t_C > t_B > t_A$",
+      "$t_B > t_A > t_C$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nBall A has initial upward vertical velocity $+u$ (rises before falling, longest time). Ball B has zero initial vertical velocity (intermediate time). Ball C has downward vertical velocity $-u$ (accelerates downward immediately, shortest time).\n\n2. GIVEN:\nBalls thrown up, horizontal, and down.\n\n3. FORMULA / PRINCIPLE:\nt_A = \\frac{u + \\sqrt{u^2 + 2gh}}{g}; t_B = \\sqrt{\\frac{2h}{g}}; t_C = \\frac{-u + \\sqrt{u^2 + 2gh}}{g}\n\n4. STEP-BY-STEP SOLUTION:\n1. Ball A must rise to apex and fall all the way down: longest duration $t_A$.\n2. Ball B falls from rest vertically: $t_B = \\sqrt{2h/g}$.\n3. Ball C is pushed directly downwards: shortest duration $t_C$.\n4. Therefore, $t_A > t_B > t_C$.\n\n5. FINAL ANSWER:\nOption A: $t_A > t_B > t_C$\n\n6. QUICK TIP:\nFamous NEET relation between the three times: $t_B = \\sqrt{t_A t_C}$! The horizontal flight time is the geometric mean of the vertical flight times!",
+    "solutionStructured": {
+      "concept": "Ball A has initial upward vertical velocity $+u$ (rises before falling, longest time). Ball B has zero initial vertical velocity (intermediate time). Ball C has downward vertical velocity $-u$ (accelerates downward immediately, shortest time).",
+      "given": "Balls thrown up, horizontal, and down.",
+      "formula": "t_A = \\frac{u + \\sqrt{u^2 + 2gh}}{g}; t_B = \\sqrt{\\frac{2h}{g}}; t_C = \\frac{-u + \\sqrt{u^2 + 2gh}}{g}",
+      "stepByStep": "1. Ball A must rise to apex and fall all the way down: longest duration $t_A$.\n2. Ball B falls from rest vertically: $t_B = \\sqrt{2h/g}$.\n3. Ball C is pushed directly downwards: shortest duration $t_C$.\n4. Therefore, $t_A > t_B > t_C$.",
+      "finalAnswer": "Option A: $t_A > t_B > t_C$",
+      "whyOtherOptionsWrong": "Option B falsely assumes equal flight times."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Projectile launched from an elevated position",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-380",
+    "questionNumber": 380,
+    "question": "A ball is thrown from the top of a tower of height $h$. If $t_1$ is the time taken to reach the ground when thrown vertically upwards with speed $u$, and $t_2$ is the time taken when thrown vertically downwards with the same speed $u$, what is the time taken $t$ to reach the ground when thrown HORIZONTALLY with speed $u$?",
+    "options": {
+      "A": "$t = \\sqrt{t_1 t_2}$",
+      "B": "$t = \\frac{t_1 + t_2}{2}$",
+      "C": "$t = \\frac{t_1 - t_2}{2}$",
+      "D": "$t = \\frac{2 t_1 t_2}{t_1 + t_2}$"
+    },
+    "optionsList": [
+      "$t = \\sqrt{t_1 t_2}$",
+      "$t = \\frac{t_1 + t_2}{2}$",
+      "$t = \\frac{t_1 - t_2}{2}$",
+      "$t = \\frac{2 t_1 t_2}{t_1 + t_2}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor upward throw: $-h = u t_1 - \\frac{1}{2}gt_1^2 \\implies \\frac{1}{2}gt_1^2 - ut_1 - h = 0$. For downward throw: $h = u t_2 + \\frac{1}{2}gt_2^2 \\implies \\frac{1}{2}gt_2^2 + ut_2 - h = 0$. Eliminating $u$ yields $h = \\frac{1}{2}g t_1 t_2$. Since horizontal flight time is $t = \\sqrt{2h/g}$, we have $t = \\sqrt{t_1 t_2}$.\n\n2. GIVEN:\nUpward time $t_1$, downward time $t_2$, horizontal time $t$.\n\n3. FORMULA / PRINCIPLE:\nh = \\frac{1}{2}g t_1 t_2; t = \\sqrt{\\frac{2h}{g}} = \\sqrt{t_1 t_2}\n\n4. STEP-BY-STEP SOLUTION:\n1. Equation for upward throw: $h = -u t_1 + \\frac{1}{2}g t_1^2$.\n2. Equation for downward throw: $h = u t_2 + \\frac{1}{2}g t_2^2$.\n3. Multiply Eq 1 by $t_2$ and Eq 2 by $t_1$, and add them:\n   $h(t_1 + t_2) = \\frac{1}{2}g t_1 t_2(t_1 + t_2) \\implies h = \\frac{1}{2}g t_1 t_2$.\n4. Horizontal projection flight time is $t = \\sqrt{\\frac{2h}{g}}$.\n5. Substitute $h = \\frac{1}{2}g t_1 t_2$:\n   $t = \\sqrt{\\frac{2(\\frac{1}{2}g t_1 t_2)}{g}} = \\sqrt{t_1 t_2}$.\n\n5. FINAL ANSWER:\nOption A: $t = \\sqrt{t_1 t_2}$\n\n6. QUICK TIP:\nNEET classic result: $t_{horizontal} = \\sqrt{t_{up} \\times t_{down}}$. Geometric mean!",
+    "solutionStructured": {
+      "concept": "For upward throw: $-h = u t_1 - \\frac{1}{2}gt_1^2 \\implies \\frac{1}{2}gt_1^2 - ut_1 - h = 0$. For downward throw: $h = u t_2 + \\frac{1}{2}gt_2^2 \\implies \\frac{1}{2}gt_2^2 + ut_2 - h = 0$. Eliminating $u$ yields $h = \\frac{1}{2}g t_1 t_2$. Since horizontal flight time is $t = \\sqrt{2h/g}$, we have $t = \\sqrt{t_1 t_2}$.",
+      "given": "Upward time $t_1$, downward time $t_2$, horizontal time $t$.",
+      "formula": "h = \\frac{1}{2}g t_1 t_2; t = \\sqrt{\\frac{2h}{g}} = \\sqrt{t_1 t_2}",
+      "stepByStep": "1. Equation for upward throw: $h = -u t_1 + \\frac{1}{2}g t_1^2$.\n2. Equation for downward throw: $h = u t_2 + \\frac{1}{2}g t_2^2$.\n3. Multiply Eq 1 by $t_2$ and Eq 2 by $t_1$, and add them:\n   $h(t_1 + t_2) = \\frac{1}{2}g t_1 t_2(t_1 + t_2) \\implies h = \\frac{1}{2}g t_1 t_2$.\n4. Horizontal projection flight time is $t = \\sqrt{\\frac{2h}{g}}$.\n5. Substitute $h = \\frac{1}{2}g t_1 t_2$:\n   $t = \\sqrt{\\frac{2(\\frac{1}{2}g t_1 t_2)}{g}} = \\sqrt{t_1 t_2}$.",
+      "finalAnswer": "Option A: $t = \\sqrt{t_1 t_2}$",
+      "whyOtherOptionsWrong": "Option B is the arithmetic mean; Option D is the harmonic mean."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Projectile launched from an elevated position",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-381",
+    "questionNumber": 381,
+    "question": "In the previous question, if $t_1 = 9\\text{ s}$ and $t_2 = 4\\text{ s}$, what is the height of the tower $h$? (Take $g = 10\\text{ m/s}^2$)",
+    "options": {
+      "A": "$180\\text{ m}$",
+      "B": "$360\\text{ m}$",
+      "C": "$90\\text{ m}$",
+      "D": "$60\\text{ m}$"
+    },
+    "optionsList": [
+      "$180\\text{ m}$",
+      "$360\\text{ m}$",
+      "$90\\text{ m}$",
+      "$60\\text{ m}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nApply $h = \\frac{1}{2}g t_1 t_2$.\n\n2. GIVEN:\n$t_1 = 9\\text{ s}, t_2 = 4\\text{ s}, g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\nh = \\frac{1}{2}g t_1 t_2\n\n4. STEP-BY-STEP SOLUTION:\n1. Substitute into formula:\n   $h = \\frac{1}{2} \\times 10 \\times (9 \\times 4) = 5 \\times 36 = 180\\text{ m}$.\n\n5. FINAL ANSWER:\nOption A: $180\\text{ m}$\n\n6. QUICK TIP:\nAlso notice: $t_{horiz} = \\sqrt{9 \\times 4} = \\sqrt{36} = 6\\text{ s}$, which gives $h = \\frac{1}{2}(10)(6^2) = 180\\text{ m}$!",
+    "solutionStructured": {
+      "concept": "Apply $h = \\frac{1}{2}g t_1 t_2$.",
+      "given": "$t_1 = 9\\text{ s}, t_2 = 4\\text{ s}, g = 10\\text{ m/s}^2$.",
+      "formula": "h = \\frac{1}{2}g t_1 t_2",
+      "stepByStep": "1. Substitute into formula:\n   $h = \\frac{1}{2} \\times 10 \\times (9 \\times 4) = 5 \\times 36 = 180\\text{ m}$.",
+      "finalAnswer": "Option A: $180\\text{ m}$",
+      "whyOtherOptionsWrong": "Option B forgets the factor of $1/2$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Projectile launched from an elevated position",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-382",
+    "questionNumber": 382,
+    "question": "A body is projected horizontally from the top of a tower. After $t = 2\\text{ s}$, the velocity vector makes an angle of $45^\\circ$ with the horizontal. What was the initial speed of projection? (Take $g = 10\\text{ m/s}^2$)",
+    "options": {
+      "A": "$20\\text{ m/s}$",
+      "B": "$10\\text{ m/s}$",
+      "C": "$40\\text{ m/s}$",
+      "D": "$15\\text{ m/s}$"
+    },
+    "optionsList": [
+      "$20\\text{ m/s}$",
+      "$10\\text{ m/s}$",
+      "$40\\text{ m/s}$",
+      "$15\\text{ m/s}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor horizontal projection, $\\tan\\theta = \\frac{v_y}{v_x} = \\frac{gt}{u}$. For $\\theta = 45^\\circ$, $\\tan 45^\\circ = 1 \\implies u = gt$.\n\n2. GIVEN:\n$t = 2\\text{ s}$, $\\theta = 45^\\circ$, $g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\nu = gt = 10 \\times 2 = 20\\text{ m/s}\n\n4. STEP-BY-STEP SOLUTION:\n1. Horizontal velocity: $v_x = u$.\n2. Vertical velocity after $t = 2\\text{ s}$: $v_y = gt = 10 \\times 2 = 20\\text{ m/s}$.\n3. Angle condition: $\\tan 45^\\circ = \\frac{v_y}{v_x} = 1 \\implies v_x = v_y$.\n4. Therefore, $u = 20\\text{ m/s}$.\n\n5. FINAL ANSWER:\nOption A: $20\\text{ m/s}$\n\n6. QUICK TIP:\nAt $45^\\circ$, horizontal speed equals vertical speed: $u = gt$.",
+    "solutionStructured": {
+      "concept": "For horizontal projection, $\\tan\\theta = \\frac{v_y}{v_x} = \\frac{gt}{u}$. For $\\theta = 45^\\circ$, $\\tan 45^\\circ = 1 \\implies u = gt$.",
+      "given": "$t = 2\\text{ s}$, $\\theta = 45^\\circ$, $g = 10\\text{ m/s}^2$.",
+      "formula": "u = gt = 10 \\times 2 = 20\\text{ m/s}",
+      "stepByStep": "1. Horizontal velocity: $v_x = u$.\n2. Vertical velocity after $t = 2\\text{ s}$: $v_y = gt = 10 \\times 2 = 20\\text{ m/s}$.\n3. Angle condition: $\\tan 45^\\circ = \\frac{v_y}{v_x} = 1 \\implies v_x = v_y$.\n4. Therefore, $u = 20\\text{ m/s}$.",
+      "finalAnswer": "Option A: $20\\text{ m/s}$",
+      "whyOtherOptionsWrong": "Option B calculates $u = gt/2 = 10\\text{ m/s}$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Projectile launched from an elevated position",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-383",
+    "questionNumber": 383,
+    "question": "A bomber aircraft is flying horizontally at an altitude of $500\\text{ m}$ with a speed of $100\\text{ m/s}$. To hit a stationary target on the ground, at what horizontal distance from the target must the pilot release the bomb? (Take $g = 10\\text{ m/s}^2$)",
+    "options": {
+      "A": "$1000\\text{ m} = 1\\text{ km}$",
+      "B": "$500\\text{ m}$",
+      "C": "$1500\\text{ m}$",
+      "D": "$2000\\text{ m}$"
+    },
+    "optionsList": [
+      "$1000\\text{ m} = 1\\text{ km}$",
+      "$500\\text{ m}$",
+      "$1500\\text{ m}$",
+      "$2000\\text{ m}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe released bomb maintains the horizontal speed of the aircraft $u = 100\\text{ m/s}$. The required distance is $x = u\\sqrt{\\frac{2h}{g}}$.\n\n2. GIVEN:\n$h = 500\\text{ m}$, $u = 100\\text{ m/s}$, $g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\nt = \\sqrt{\\frac{2h}{g}}; x = u t\n\n4. STEP-BY-STEP SOLUTION:\n1. Fall time of bomb: $t = \\sqrt{\\frac{2 \\times 500}{10}} = \\sqrt{100} = 10\\text{ s}$.\n2. Horizontal distance traveled during fall:\n   $x = u \\times t = 100 \\times 10 = 1000\\text{ m} = 1\\text{ km}$.\n\n5. FINAL ANSWER:\nOption A: $1000\\text{ m} = 1\\text{ km}$\n\n6. QUICK TIP:\nRelease lead distance = Plane speed $\\times$ Free fall time.",
+    "solutionStructured": {
+      "concept": "The released bomb maintains the horizontal speed of the aircraft $u = 100\\text{ m/s}$. The required distance is $x = u\\sqrt{\\frac{2h}{g}}$.",
+      "given": "$h = 500\\text{ m}$, $u = 100\\text{ m/s}$, $g = 10\\text{ m/s}^2$.",
+      "formula": "t = \\sqrt{\\frac{2h}{g}}; x = u t",
+      "stepByStep": "1. Fall time of bomb: $t = \\sqrt{\\frac{2 \\times 500}{10}} = \\sqrt{100} = 10\\text{ s}$.\n2. Horizontal distance traveled during fall:\n   $x = u \\times t = 100 \\times 10 = 1000\\text{ m} = 1\\text{ km}$.",
+      "finalAnswer": "Option A: $1000\\text{ m} = 1\\text{ km}$",
+      "whyOtherOptionsWrong": "Option B is the vertical altitude, not the horizontal release distance."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Projectile launched from an elevated position",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-384",
+    "questionNumber": 384,
+    "question": "In the previous question, what is the line-of-sight sighting angle $\\phi$ with the vertical at which the pilot should view the target at the moment of bomb release?",
+    "options": {
+      "A": "$\\tan^{-1}(2) \\approx 63.4^\\circ$",
+      "B": "$45^\\circ$",
+      "C": "$\\tan^{-1}(0.5) \\approx 26.6^\\circ$",
+      "D": "$30^\\circ$"
+    },
+    "optionsList": [
+      "$\\tan^{-1}(2) \\approx 63.4^\\circ$",
+      "$45^\\circ$",
+      "$\\tan^{-1}(0.5) \\approx 26.6^\\circ$",
+      "$30^\\circ$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe sighting angle with the vertical is $\\tan\\phi = \\frac{\\text{horizontal distance}}{\\text{vertical altitude}} = \\frac{x}{h}$.\n\n2. GIVEN:\n$x = 1000\\text{ m}, h = 500\\text{ m}$.\n\n3. FORMULA / PRINCIPLE:\n\\tan\\phi = \\frac{x}{h} = \\frac{1000}{500} = 2\n\n4. STEP-BY-STEP SOLUTION:\n1. Horizontal separation at release: $x = 1000\\text{ m}$.\n2. Vertical altitude: $h = 500\\text{ m}$.\n3. Angle with vertical: $\\tan\\phi = \\frac{x}{h} = \\frac{1000}{500} = 2$.\n4. Thus, $\\phi = \\tan^{-1}(2) \\approx 63.4^\\circ$.\n\n5. FINAL ANSWER:\nOption A: $\\tan^{-1}(2) \\approx 63.4^\\circ$\n\n6. QUICK TIP:\nAngle with vertical is $x/h = 2$; angle with horizontal is $h/x = 0.5$. Always verify the reference axis requested!",
+    "solutionStructured": {
+      "concept": "The sighting angle with the vertical is $\\tan\\phi = \\frac{\\text{horizontal distance}}{\\text{vertical altitude}} = \\frac{x}{h}$.",
+      "given": "$x = 1000\\text{ m}, h = 500\\text{ m}$.",
+      "formula": "\\tan\\phi = \\frac{x}{h} = \\frac{1000}{500} = 2",
+      "stepByStep": "1. Horizontal separation at release: $x = 1000\\text{ m}$.\n2. Vertical altitude: $h = 500\\text{ m}$.\n3. Angle with vertical: $\\tan\\phi = \\frac{x}{h} = \\frac{1000}{500} = 2$.\n4. Thus, $\\phi = \\tan^{-1}(2) \\approx 63.4^\\circ$.",
+      "finalAnswer": "Option A: $\\tan^{-1}(2) \\approx 63.4^\\circ$",
+      "whyOtherOptionsWrong": "Option C is the angle with horizontal, not with vertical."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Projectile launched from an elevated position",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-385",
+    "questionNumber": 385,
+    "question": "A ball is thrown from the top of an elevated tower of height $H = 25\\text{ m}$ at an angle of $30^\\circ$ above the horizontal with speed $u = 20\\text{ m/s}$. Taking $g = 10\\text{ m/s}^2$, what is the maximum height reached by the ball ABOVE THE GROUND?",
+    "options": {
+      "A": "$30\\text{ m}$",
+      "B": "$5\\text{ m}$",
+      "C": "$25\\text{ m}$",
+      "D": "$45\\text{ m}$"
+    },
+    "optionsList": [
+      "$30\\text{ m}$",
+      "$5\\text{ m}$",
+      "$25\\text{ m}$",
+      "$45\\text{ m}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTotal maximum height above ground is the sum of tower height $H$ and the maximum projectile rise above the launch level: $H_{total} = H + \\frac{u^2\\sin^2\\theta}{2g}$.\n\n2. GIVEN:\n$H = 25\\text{ m}$, $u = 20\\text{ m/s}$, $\\theta = 30^\\circ$, $g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\nH_{total} = H + \\frac{u^2\\sin^2\\theta}{2g}\n\n4. STEP-BY-STEP SOLUTION:\n1. Rise above tower: $h_{rise} = \\frac{u^2\\sin^2 30^\\circ}{2g} = \\frac{20^2 (0.5)^2}{2(10)} = \\frac{400 \\times 0.25}{20} = \\frac{100}{20} = 5\\text{ m}$.\n2. Tower height: $H = 25\\text{ m}$.\n3. Total height above ground: $H_{total} = 25 + 5 = 30\\text{ m}$.\n\n5. FINAL ANSWER:\nOption A: $30\\text{ m}$\n\n6. QUICK TIP:\nWatch the wording carefully: 'Above ground' means add tower height ($25 + 5 = 30\\text{ m}$); 'above tower' means just $5\\text{ m}$.",
+    "solutionStructured": {
+      "concept": "Total maximum height above ground is the sum of tower height $H$ and the maximum projectile rise above the launch level: $H_{total} = H + \\frac{u^2\\sin^2\\theta}{2g}$.",
+      "given": "$H = 25\\text{ m}$, $u = 20\\text{ m/s}$, $\\theta = 30^\\circ$, $g = 10\\text{ m/s}^2$.",
+      "formula": "H_{total} = H + \\frac{u^2\\sin^2\\theta}{2g}",
+      "stepByStep": "1. Rise above tower: $h_{rise} = \\frac{u^2\\sin^2 30^\\circ}{2g} = \\frac{20^2 (0.5)^2}{2(10)} = \\frac{400 \\times 0.25}{20} = \\frac{100}{20} = 5\\text{ m}$.\n2. Tower height: $H = 25\\text{ m}$.\n3. Total height above ground: $H_{total} = 25 + 5 = 30\\text{ m}$.",
+      "finalAnswer": "Option A: $30\\text{ m}$",
+      "whyOtherOptionsWrong": "Option B is the height above the tower roof only."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Projectile launched from an elevated position",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-386",
+    "questionNumber": 386,
+    "question": "A projectile is thrown horizontally with velocity $u$ from the top of a tower. After what time $t$ will the displacement vector of the projectile make an angle of $45^\\circ$ with the horizontal?",
+    "options": {
+      "A": "$\\frac{2u}{g}$",
+      "B": "$\\frac{u}{g}$",
+      "C": "$\\frac{u}{2g}$",
+      "D": "$\\frac{\\sqrt{2}u}{g}$"
+    },
+    "optionsList": [
+      "$\\frac{2u}{g}$",
+      "$\\frac{u}{g}$",
+      "$\\frac{u}{2g}$",
+      "$\\frac{\\sqrt{2}u}{g}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDistinguish displacement angle from velocity angle! Horizontal displacement is $x = ut$, vertical displacement is $y = \\frac{1}{2}gt^2$. Displacement angle is $\\tan\\beta = \\frac{y}{x} = \\frac{gt}{2u}$. For $\\beta = 45^\\circ$, $\\frac{gt}{2u} = 1 \\implies t = \\frac{2u}{g}$.\n\n2. GIVEN:\nDisplacement angle $\\beta = 45^\\circ$.\n\n3. FORMULA / PRINCIPLE:\n\\tan\\beta = \\frac{y}{x} = \\frac{gt}{2u} = 1 \\implies t = \\frac{2u}{g}\n\n4. STEP-BY-STEP SOLUTION:\n1. Horizontal displacement: $x = ut$.\n2. Vertical displacement downward: $y = \\frac{1}{2}gt^2$.\n3. Direction of displacement vector: $\\tan\\beta = \\frac{y}{x} = \\frac{\\frac{1}{2}gt^2}{ut} = \\frac{gt}{2u}$.\n4. Given $\\beta = 45^\\circ \\implies \\tan 45^\\circ = 1$:\n   $\\frac{gt}{2u} = 1 \\implies t = \\frac{2u}{g}$.\n\n5. FINAL ANSWER:\nOption A: $\\frac{2u}{g}$\n\n6. QUICK TIP:\nCRUCIAL DISTINCTION: Velocity makes $45^\\circ$ at $t = u/g$ (since $\\tan\\theta = v_y/v_x = gt/u$). But DISPLACEMENT makes $45^\\circ$ at $t = 2u/g$ (since $y/x = gt/2u$)! Double the time!",
+    "solutionStructured": {
+      "concept": "Distinguish displacement angle from velocity angle! Horizontal displacement is $x = ut$, vertical displacement is $y = \\frac{1}{2}gt^2$. Displacement angle is $\\tan\\beta = \\frac{y}{x} = \\frac{gt}{2u}$. For $\\beta = 45^\\circ$, $\\frac{gt}{2u} = 1 \\implies t = \\frac{2u}{g}$.",
+      "given": "Displacement angle $\\beta = 45^\\circ$.",
+      "formula": "\\tan\\beta = \\frac{y}{x} = \\frac{gt}{2u} = 1 \\implies t = \\frac{2u}{g}",
+      "stepByStep": "1. Horizontal displacement: $x = ut$.\n2. Vertical displacement downward: $y = \\frac{1}{2}gt^2$.\n3. Direction of displacement vector: $\\tan\\beta = \\frac{y}{x} = \\frac{\\frac{1}{2}gt^2}{ut} = \\frac{gt}{2u}$.\n4. Given $\\beta = 45^\\circ \\implies \\tan 45^\\circ = 1$:\n   $\\frac{gt}{2u} = 1 \\implies t = \\frac{2u}{g}$.",
+      "finalAnswer": "Option A: $\\frac{2u}{g}$",
+      "whyOtherOptionsWrong": "Option B is the time when the VELOCITY vector makes $45^\\circ$, not the displacement vector."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Projectile launched from an elevated position",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-387",
+    "questionNumber": 387,
+    "question": "In horizontal projection from height $h$, what is the relationship between the angle $\\theta$ made by the velocity vector with the horizontal and the angle $\\beta$ made by the displacement vector with the horizontal at any instant?",
+    "options": {
+      "A": "$\\tan\\theta = 2\\tan\\beta$",
+      "B": "$\\tan\\theta = \\tan\\beta$",
+      "C": "$\\tan\\beta = 2\\tan\\theta$",
+      "D": "$\\tan\\theta = \\frac{1}{2}\\tan\\beta$"
+    },
+    "optionsList": [
+      "$\\tan\\theta = 2\\tan\\beta$",
+      "$\\tan\\theta = \\tan\\beta$",
+      "$\\tan\\beta = 2\\tan\\theta$",
+      "$\\tan\\theta = \\frac{1}{2}\\tan\\beta$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nVelocity angle satisfies $\\tan\\theta = \\frac{v_y}{v_x} = \\frac{gt}{u}$. Displacement angle satisfies $\\tan\\beta = \\frac{y}{x} = \\frac{gt}{2u}$. Therefore, $\\tan\\theta = 2\\tan\\beta$.\n\n2. GIVEN:\nHorizontal projection at time $t$.\n\n3. FORMULA / PRINCIPLE:\n\\tan\\theta = \\frac{gt}{u}; \\tan\\beta = \\frac{gt}{2u} \\implies \\tan\\theta = 2\\tan\\beta\n\n4. STEP-BY-STEP SOLUTION:\n1. Velocity ratio: $\\tan\\theta = \\frac{v_y}{v_x} = \\frac{gt}{u}$.\n2. Displacement ratio: $\\tan\\beta = \\frac{y}{x} = \\frac{\\frac{1}{2}gt^2}{ut} = \\frac{gt}{2u}$.\n3. Comparing the two expressions:\n   $\\tan\\theta = 2 \\left(\\frac{gt}{2u}\\right) = 2\\tan\\beta$.\n\n5. FINAL ANSWER:\nOption A: $\\tan\\theta = 2\\tan\\beta$\n\n6. QUICK TIP:\nUniversal property of all parabolas: The slope of the tangent (velocity) is always TWICE the slope of the secant (displacement) from the vertex!",
+    "solutionStructured": {
+      "concept": "Velocity angle satisfies $\\tan\\theta = \\frac{v_y}{v_x} = \\frac{gt}{u}$. Displacement angle satisfies $\\tan\\beta = \\frac{y}{x} = \\frac{gt}{2u}$. Therefore, $\\tan\\theta = 2\\tan\\beta$.",
+      "given": "Horizontal projection at time $t$.",
+      "formula": "\\tan\\theta = \\frac{gt}{u}; \\tan\\beta = \\frac{gt}{2u} \\implies \\tan\\theta = 2\\tan\\beta",
+      "stepByStep": "1. Velocity ratio: $\\tan\\theta = \\frac{v_y}{v_x} = \\frac{gt}{u}$.\n2. Displacement ratio: $\\tan\\beta = \\frac{y}{x} = \\frac{\\frac{1}{2}gt^2}{ut} = \\frac{gt}{2u}$.\n3. Comparing the two expressions:\n   $\\tan\\theta = 2 \\left(\\frac{gt}{2u}\\right) = 2\\tan\\beta$.",
+      "finalAnswer": "Option A: $\\tan\\theta = 2\\tan\\beta$",
+      "whyOtherOptionsWrong": "Option C inverts the ratio 2."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Projectile launched from an elevated position",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-388",
+    "questionNumber": 388,
+    "question": "Two towers of heights $h_1 = 40\\text{ m}$ and $h_2 = 20\\text{ m}$ are separated by a horizontal distance $d = 20\\text{ m}$. A stone is thrown horizontally from the top of the taller tower with speed $u$. What must be the speed $u$ so that it lands exactly on top of the shorter tower? (Take $g = 10\\text{ m/s}^2$)",
+    "options": {
+      "A": "$10\\text{ m/s}$",
+      "B": "$20\\text{ m/s}$",
+      "C": "$5\\text{ m/s}$",
+      "D": "$14.14\\text{ m/s}$"
+    },
+    "optionsList": [
+      "$10\\text{ m/s}$",
+      "$20\\text{ m/s}$",
+      "$5\\text{ m/s}$",
+      "$14.14\\text{ m/s}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe vertical drop between the two tower roofs is $\\Delta h = h_1 - h_2 = 40 - 20 = 20\\text{ m}$. Time to fall this distance is $t = \\sqrt{2\\Delta h/g}$. Then $u = d / t$.\n\n2. GIVEN:\n$h_1 = 40\\text{ m}, h_2 = 20\\text{ m}, d = 20\\text{ m}, g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n\\Delta h = h_1 - h_2; t = \\sqrt{\\frac{2\\Delta h}{g}}; u = \\frac{d}{t}\n\n4. STEP-BY-STEP SOLUTION:\n1. Vertical distance to be fallen: $\\Delta h = 40 - 20 = 20\\text{ m}$.\n2. Fall time: $t = \\sqrt{\\frac{2 \\times 20}{10}} = \\sqrt{4} = 2\\text{ s}$.\n3. Horizontal distance between roofs: $d = 20\\text{ m}$.\n4. Required launch speed: $u = \\frac{d}{t} = \\frac{20}{2} = 10\\text{ m/s}$.\n\n5. FINAL ANSWER:\nOption A: $10\\text{ m/s}$\n\n6. QUICK TIP:\nNotice that ground height is irrelevant: only the difference in height $\\Delta h$ matters!",
+    "solutionStructured": {
+      "concept": "The vertical drop between the two tower roofs is $\\Delta h = h_1 - h_2 = 40 - 20 = 20\\text{ m}$. Time to fall this distance is $t = \\sqrt{2\\Delta h/g}$. Then $u = d / t$.",
+      "given": "$h_1 = 40\\text{ m}, h_2 = 20\\text{ m}, d = 20\\text{ m}, g = 10\\text{ m/s}^2$.",
+      "formula": "\\Delta h = h_1 - h_2; t = \\sqrt{\\frac{2\\Delta h}{g}}; u = \\frac{d}{t}",
+      "stepByStep": "1. Vertical distance to be fallen: $\\Delta h = 40 - 20 = 20\\text{ m}$.\n2. Fall time: $t = \\sqrt{\\frac{2 \\times 20}{10}} = \\sqrt{4} = 2\\text{ s}$.\n3. Horizontal distance between roofs: $d = 20\\text{ m}$.\n4. Required launch speed: $u = \\frac{d}{t} = \\frac{20}{2} = 10\\text{ m/s}$.",
+      "finalAnswer": "Option A: $10\\text{ m/s}$",
+      "whyOtherOptionsWrong": "Option B uses $t = 1\\text{ s}$."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Projectile launched from an elevated position",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-389",
+    "questionNumber": 389,
+    "question": "A ball is projected horizontally with velocity $u$ from the top of a tower. At the instant when the velocity vector makes an angle of $45^\\circ$ with the horizontal, what is the radius of curvature of the path?",
+    "options": {
+      "A": "$\\frac{2\\sqrt{2} u^2}{g}$",
+      "B": "$\\frac{\\sqrt{2} u^2}{g}$",
+      "C": "$\\frac{u^2}{g}$",
+      "D": "$\\frac{2u^2}{g}$"
+    },
+    "optionsList": [
+      "$\\frac{2\\sqrt{2} u^2}{g}$",
+      "$\\frac{\\sqrt{2} u^2}{g}$",
+      "$\\frac{u^2}{g}$",
+      "$\\frac{2u^2}{g}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nRadius of curvature is $R_c = \\frac{v^2}{a_{\\perp}}$. At $45^\\circ$, $v_x = u$ and $v_y = u$, so $v = u\\sqrt{2}$. The component of gravity perpendicular to velocity is $g\\cos 45^\\circ = g/\\sqrt{2}$.\n\n2. GIVEN:\n$v_x = u, v_y = u, v = u\\sqrt{2}$, angle with horizontal is $45^\\circ$.\n\n3. FORMULA / PRINCIPLE:\nR_c = \\frac{v^2}{a_{\\perp}} = \\frac{(u\\sqrt{2})^2}{g\\cos 45^\\circ} = \\frac{2u^2}{g / \\sqrt{2}} = \\frac{2\\sqrt{2}u^2}{g}\n\n4. STEP-BY-STEP SOLUTION:\n1. At $45^\\circ$, $v_y = v_x = u$, so total speed is $v = \\sqrt{u^2 + u^2} = u\\sqrt{2}$.\n2. Gravity acts vertically downward. The angle between gravity and velocity is $45^\\circ$.\n3. Perpendicular acceleration component: $a_{\\perp} = g\\cos 45^\\circ = \\frac{g}{\\sqrt{2}}$.\n4. Radius of curvature:\n   $R_c = \\frac{v^2}{a_{\\perp}} = \\frac{(u\\sqrt{2})^2}{g / \\sqrt{2}} = \\frac{2u^2}{g / \\sqrt{2}} = \\frac{2\\sqrt{2}u^2}{g}$.\n\n5. FINAL ANSWER:\nOption A: $\\frac{2\\sqrt{2} u^2}{g}$\n\n6. QUICK TIP:\nSubstitute carefully: $v^2 = 2u^2$ and $a_{\\perp} = g/\\sqrt{2} \\implies R_c = 2\\sqrt{2}u^2/g$.",
+    "solutionStructured": {
+      "concept": "Radius of curvature is $R_c = \\frac{v^2}{a_{\\perp}}$. At $45^\\circ$, $v_x = u$ and $v_y = u$, so $v = u\\sqrt{2}$. The component of gravity perpendicular to velocity is $g\\cos 45^\\circ = g/\\sqrt{2}$.",
+      "given": "$v_x = u, v_y = u, v = u\\sqrt{2}$, angle with horizontal is $45^\\circ$.",
+      "formula": "R_c = \\frac{v^2}{a_{\\perp}} = \\frac{(u\\sqrt{2})^2}{g\\cos 45^\\circ} = \\frac{2u^2}{g / \\sqrt{2}} = \\frac{2\\sqrt{2}u^2}{g}",
+      "stepByStep": "1. At $45^\\circ$, $v_y = v_x = u$, so total speed is $v = \\sqrt{u^2 + u^2} = u\\sqrt{2}$.\n2. Gravity acts vertically downward. The angle between gravity and velocity is $45^\\circ$.\n3. Perpendicular acceleration component: $a_{\\perp} = g\\cos 45^\\circ = \\frac{g}{\\sqrt{2}}$.\n4. Radius of curvature:\n   $R_c = \\frac{v^2}{a_{\\perp}} = \\frac{(u\\sqrt{2})^2}{g / \\sqrt{2}} = \\frac{2u^2}{g / \\sqrt{2}} = \\frac{2\\sqrt{2}u^2}{g}$.",
+      "finalAnswer": "Option A: $\\frac{2\\sqrt{2} u^2}{g}$",
+      "whyOtherOptionsWrong": "Option B forgets the factor of 2 from $v^2 = 2u^2$."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Projectile launched from an elevated position",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-390",
+    "questionNumber": 390,
+    "question": "From the top of a tower of height $H = 20\\text{ m}$, two particles are projected horizontally in opposite directions with speeds $u_1 = 3\\text{ m/s}$ and $u_2 = 4\\text{ m/s}$. What is the distance between the two particles when their velocity vectors are MUTUALLY PERPENDICULAR?",
+    "options": {
+      "A": "$1.4\\sqrt{3}\\text{ m} \\approx 2.42\\text{ m}$",
+      "B": "$3.5\\text{ m}$",
+      "C": "$7.0\\text{ m}$",
+      "D": "$4.9\\text{ m}$"
+    },
+    "optionsList": [
+      "$2.45\\sqrt{12}\\dots$ wait, compute time first: $t = \\frac{\\sqrt{u_1 u_2}}{g}$",
+      "$2.45\\text{ m}$",
+      "$7\\text{ m}$",
+      "$4.9\\text{ m}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nVelocities are $\\vec{v}_1 = u_1\\hat{i} - gt\\hat{j}$ and $\\vec{v}_2 = -u_2\\hat{i} - gt\\hat{j}$. Perpendicularity condition is $\\vec{v}_1 \\cdot \\vec{v}_2 = 0 \\implies -u_1 u_2 + g^2 t^2 = 0 \\implies t = \\frac{\\sqrt{u_1 u_2}}{g}$. Separation distance is $(u_1 + u_2)t$.\n\n2. GIVEN:\n$u_1 = 3\\text{ m/s}, u_2 = 4\\text{ m/s}, g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\nt = \\frac{\\sqrt{u_1 u_2}}{g}; d = (u_1 + u_2)t\n\n4. STEP-BY-STEP SOLUTION:\n1. Dot product condition for perpendicularity:\n   $\\vec{v}_1 \\cdot \\vec{v}_2 = (u_1)(-u_2) + (-gt)(-gt) = -u_1 u_2 + g^2 t^2 = 0$.\n2. Solve for time: $t = \\frac{\\sqrt{u_1 u_2}}{g}$.\n3. For $u_1 = 3, u_2 = 4$: $u_1 u_2 = 12 \\implies t = \\frac{\\sqrt{12}}{10} = \\frac{2\\sqrt{3}}{10} = \\frac{\\sqrt{3}}{5}\\text{ s}$.\n4. Both particles fall at the same vertical rate, so vertical separation is zero!\n5. Horizontal separation distance: $d = x_1 - (-x_2) = (u_1 + u_2)t = (3 + 4)t = 7 \\times \\frac{\\sqrt{12}}{10} = \\frac{7\\sqrt{12}}{10} = \\frac{14\\sqrt{3}}{10} = 1.4\\sqrt{3} \\approx 2.42\\text{ m}$.\n\n5. FINAL ANSWER:\nOption A: $2.45\\sqrt{12}\\dots$ wait, compute time first: $t = \\frac{\\sqrt{u_1 u_2}}{g}$\n\n6. QUICK TIP:\nFamous NEET result: Condition for mutual perpendicularity is $t = \\frac{\\sqrt{u_1 u_2}}{g}$, and horizontal separation is $\\frac{(u_1 + u_2)\\sqrt{u_1 u_2}}{g}$!",
+    "solutionStructured": {
+      "concept": "Velocities are $\\vec{v}_1 = u_1\\hat{i} - gt\\hat{j}$ and $\\vec{v}_2 = -u_2\\hat{i} - gt\\hat{j}$. Perpendicularity condition is $\\vec{v}_1 \\cdot \\vec{v}_2 = 0 \\implies -u_1 u_2 + g^2 t^2 = 0 \\implies t = \\frac{\\sqrt{u_1 u_2}}{g}$. Separation distance is $(u_1 + u_2)t$.",
+      "given": "$u_1 = 3\\text{ m/s}, u_2 = 4\\text{ m/s}, g = 10\\text{ m/s}^2$.",
+      "formula": "t = \\frac{\\sqrt{u_1 u_2}}{g}; d = (u_1 + u_2)t",
+      "stepByStep": "1. Dot product condition for perpendicularity:\n   $\\vec{v}_1 \\cdot \\vec{v}_2 = (u_1)(-u_2) + (-gt)(-gt) = -u_1 u_2 + g^2 t^2 = 0$.\n2. Solve for time: $t = \\frac{\\sqrt{u_1 u_2}}{g}$.\n3. For $u_1 = 3, u_2 = 4$: $u_1 u_2 = 12 \\implies t = \\frac{\\sqrt{12}}{10} = \\frac{2\\sqrt{3}}{10} = \\frac{\\sqrt{3}}{5}\\text{ s}$.\n4. Both particles fall at the same vertical rate, so vertical separation is zero!\n5. Horizontal separation distance: $d = x_1 - (-x_2) = (u_1 + u_2)t = (3 + 4)t = 7 \\times \\frac{\\sqrt{12}}{10} = \\frac{7\\sqrt{12}}{10} = \\frac{14\\sqrt{3}}{10} = 1.4\\sqrt{3} \\approx 2.42\\text{ m}$.",
+      "finalAnswer": "Option A: $1.4\\sqrt{3}\\text{ m} \\approx 2.42\\text{ m}$",
+      "whyOtherOptionsWrong": "Option C is $(u_1 + u_2) \\times 1\\text{ s}$."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Projectile launched from an elevated position",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-391",
+    "questionNumber": 391,
+    "question": "In the previous question, what is the vertical displacement fallen by each particle when their velocity vectors become mutually perpendicular?",
+    "options": {
+      "A": "$\\frac{u_1 u_2}{2g} = 0.6\\text{ m}$",
+      "B": "$1.2\\text{ m}$",
+      "C": "$0.3\\text{ m}$",
+      "D": "$2.4\\text{ m}$"
+    },
+    "optionsList": [
+      "$\\frac{u_1 u_2}{2g} = 0.6\\text{ m}$",
+      "$1.2\\text{ m}$",
+      "$0.3\\text{ m}$",
+      "$2.4\\text{ m}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSubstitute $t^2 = \\frac{u_1 u_2}{g^2}$ into $y = \\frac{1}{2}gt^2$: $y = \\frac{1}{2}g \\left(\\frac{u_1 u_2}{g^2}\\right) = \\frac{u_1 u_2}{2g}$.\n\n2. GIVEN:\n$u_1 = 3\\text{ m/s}, u_2 = 4\\text{ m/s}, g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\ny = \\frac{u_1 u_2}{2g}\n\n4. STEP-BY-STEP SOLUTION:\n1. Time of perpendicularity squared: $t^2 = \\frac{u_1 u_2}{g^2}$.\n2. Vertical drop: $y = \\frac{1}{2}g t^2 = \\frac{1}{2}g \\left(\\frac{u_1 u_2}{g^2}\\right) = \\frac{u_1 u_2}{2g}$.\n3. Substitute values:\n   $y = \\frac{3 \\times 4}{2 \\times 10} = \\frac{12}{20} = 0.6\\text{ m}$.\n\n5. FINAL ANSWER:\nOption A: $\\frac{u_1 u_2}{2g} = 0.6\\text{ m}$\n\n6. QUICK TIP:\nUniversal NEET formula: Vertical drop when velocities are perpendicular is $y = \\frac{u_1 u_2}{2g}$.",
+    "solutionStructured": {
+      "concept": "Substitute $t^2 = \\frac{u_1 u_2}{g^2}$ into $y = \\frac{1}{2}gt^2$: $y = \\frac{1}{2}g \\left(\\frac{u_1 u_2}{g^2}\\right) = \\frac{u_1 u_2}{2g}$.",
+      "given": "$u_1 = 3\\text{ m/s}, u_2 = 4\\text{ m/s}, g = 10\\text{ m/s}^2$.",
+      "formula": "y = \\frac{u_1 u_2}{2g}",
+      "stepByStep": "1. Time of perpendicularity squared: $t^2 = \\frac{u_1 u_2}{g^2}$.\n2. Vertical drop: $y = \\frac{1}{2}g t^2 = \\frac{1}{2}g \\left(\\frac{u_1 u_2}{g^2}\\right) = \\frac{u_1 u_2}{2g}$.\n3. Substitute values:\n   $y = \\frac{3 \\times 4}{2 \\times 10} = \\frac{12}{20} = 0.6\\text{ m}$.",
+      "finalAnswer": "Option A: $\\frac{u_1 u_2}{2g} = 0.6\\text{ m}$",
+      "whyOtherOptionsWrong": "Option B forgets the $1/2$ in $\\frac{1}{2}gt^2$."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Projectile launched from an elevated position",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-392",
+    "questionNumber": 392,
+    "question": "Two angles of projection are said to be complementary if their sum is:",
+    "options": {
+      "A": "$90^\\circ$ (or $\\frac{\\pi}{2}\\text{ rad}$)",
+      "B": "$180^\\circ$ (or $\\pi\\text{ rad}$)",
+      "C": "$45^\\circ$",
+      "D": "$360^\\circ$"
+    },
+    "optionsList": [
+      "$90^\\circ$ (or $\\frac{\\pi}{2}\\text{ rad}$)",
+      "$180^\\circ$ (or $\\pi\\text{ rad}$)",
+      "$45^\\circ$",
+      "$360^\\circ$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nBy geometric definition, two angles are complementary if their sum is $90^\\circ$. For projectiles with the same launch speed, complementary angles produce the identical horizontal range.\n\n2. GIVEN:\nDefinition of complementary angles.\n\n3. FORMULA / PRINCIPLE:\n\\theta_1 + \\theta_2 = 90^\\circ\n\n4. STEP-BY-STEP SOLUTION:\n1. Two angles $\\theta_1$ and $\\theta_2$ are complementary if $\\theta_1 + \\theta_2 = 90^\\circ$.\n2. Examples include $(30^\\circ, 60^\\circ)$, $(15^\\circ, 75^\\circ)$, and $(45^\\circ + \\alpha, 45^\\circ - \\alpha)$.\n\n5. FINAL ANSWER:\nOption A: $90^\\circ$ (or $\\frac{\\pi}{2}\\text{ rad}$)\n\n6. QUICK TIP:\nComplementary means $90^\\circ$; supplementary means $180^\\circ$.",
+    "solutionStructured": {
+      "concept": "By geometric definition, two angles are complementary if their sum is $90^\\circ$. For projectiles with the same launch speed, complementary angles produce the identical horizontal range.",
+      "given": "Definition of complementary angles.",
+      "formula": "\\theta_1 + \\theta_2 = 90^\\circ",
+      "stepByStep": "1. Two angles $\\theta_1$ and $\\theta_2$ are complementary if $\\theta_1 + \\theta_2 = 90^\\circ$.\n2. Examples include $(30^\\circ, 60^\\circ)$, $(15^\\circ, 75^\\circ)$, and $(45^\\circ + \\alpha, 45^\\circ - \\alpha)$.",
+      "finalAnswer": "Option A: $90^\\circ$ (or $\\frac{\\pi}{2}\\text{ rad}$)",
+      "whyOtherOptionsWrong": "Option B defines supplementary angles."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Complementary projection angles",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-393",
+    "questionNumber": 393,
+    "question": "A projectile thrown at $30^\\circ$ has a horizontal range of $60\\text{ m}$. What will be the horizontal range if thrown with the SAME speed at $60^\\circ$?",
+    "options": {
+      "A": "$60\\text{ m}$",
+      "B": "$30\\text{ m}$",
+      "C": "$120\\text{ m}$",
+      "D": "$60\\sqrt{3}\\text{ m}$"
+    },
+    "optionsList": [
+      "$60\\text{ m}$",
+      "$30\\text{ m}$",
+      "$120\\text{ m}$",
+      "$60\\sqrt{3}\\text{ m}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSince $30^\\circ + 60^\\circ = 90^\\circ$, they are complementary angles. For the same speed $u$, $R(30^\\circ) = R(60^\\circ) = 60\\text{ m}$.\n\n2. GIVEN:\n$R(30^\\circ) = 60\\text{ m}$, same speed at $60^\\circ$.\n\n3. FORMULA / PRINCIPLE:\nR(\\theta) = R(90^\\circ - \\theta)\n\n4. STEP-BY-STEP SOLUTION:\n1. $30^\\circ$ and $60^\\circ$ are complementary angles.\n2. The horizontal range for both angles is given by $R = \\frac{u^2\\sin 2\\theta}{g}$.\n3. $\\sin(2 \\times 30^\\circ) = \\sin 60^\\circ$ and $\\sin(2 \\times 60^\\circ) = \\sin 120^\\circ = \\sin 60^\\circ$.\n4. Both produce the identical range of $60\\text{ m}$.\n\n5. FINAL ANSWER:\nOption A: $60\\text{ m}$\n\n6. QUICK TIP:\nZero calculation needed: Complementary angles always have equal ranges for the same launch speed!",
+    "solutionStructured": {
+      "concept": "Since $30^\\circ + 60^\\circ = 90^\\circ$, they are complementary angles. For the same speed $u$, $R(30^\\circ) = R(60^\\circ) = 60\\text{ m}$.",
+      "given": "$R(30^\\circ) = 60\\text{ m}$, same speed at $60^\\circ$.",
+      "formula": "R(\\theta) = R(90^\\circ - \\theta)",
+      "stepByStep": "1. $30^\\circ$ and $60^\\circ$ are complementary angles.\n2. The horizontal range for both angles is given by $R = \\frac{u^2\\sin 2\\theta}{g}$.\n3. $\\sin(2 \\times 30^\\circ) = \\sin 60^\\circ$ and $\\sin(2 \\times 60^\\circ) = \\sin 120^\\circ = \\sin 60^\\circ$.\n4. Both produce the identical range of $60\\text{ m}$.",
+      "finalAnswer": "Option A: $60\\text{ m}$",
+      "whyOtherOptionsWrong": "Options B, C, and D violate the complementary angle theorem."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Complementary projection angles",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-394",
+    "questionNumber": 394,
+    "question": "Between two complementary angles $\\theta$ and $(90^\\circ - \\theta)$ with $\\theta < 45^\\circ$, which trajectory has the longer time of flight?",
+    "options": {
+      "A": "The larger angle $(90^\\circ - \\theta)$",
+      "B": "The smaller angle $\\theta$",
+      "C": "Both have the same time of flight",
+      "D": "It depends on the mass"
+    },
+    "optionsList": [
+      "The larger angle $(90^\\circ - \\theta)$",
+      "The smaller angle $\\theta$",
+      "Both have the same time of flight",
+      "It depends on the mass"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTime of flight is $T = \\frac{2u\\sin\\alpha}{g}$. Since $\\sin\\alpha$ increases with angle $\\alpha$ in $[0, 90^\\circ]$, the larger angle has a larger vertical velocity component $u_y$, resulting in a longer time of flight.\n\n2. GIVEN:\nComplementary angles with $\\theta < 45^\\circ < (90^\\circ - \\theta)$.\n\n3. FORMULA / PRINCIPLE:\nT \\propto \\sin\\alpha\n\n4. STEP-BY-STEP SOLUTION:\n1. Time of flight: $T = \\frac{2u\\sin\\alpha}{g}$.\n2. For the larger angle, $\\sin(90^\\circ - \\theta) = \\cos\\theta > \\sin\\theta$.\n3. Therefore, $T(90^\\circ - \\theta) > T(\\theta)$.\n\n5. FINAL ANSWER:\nOption A: The larger angle $(90^\\circ - \\theta)$\n\n6. QUICK TIP:\nThe steeper trajectory stays in the air longer and reaches higher, even though both land at the same horizontal distance!",
+    "solutionStructured": {
+      "concept": "Time of flight is $T = \\frac{2u\\sin\\alpha}{g}$. Since $\\sin\\alpha$ increases with angle $\\alpha$ in $[0, 90^\\circ]$, the larger angle has a larger vertical velocity component $u_y$, resulting in a longer time of flight.",
+      "given": "Complementary angles with $\\theta < 45^\\circ < (90^\\circ - \\theta)$.",
+      "formula": "T \\propto \\sin\\alpha",
+      "stepByStep": "1. Time of flight: $T = \\frac{2u\\sin\\alpha}{g}$.\n2. For the larger angle, $\\sin(90^\\circ - \\theta) = \\cos\\theta > \\sin\\theta$.\n3. Therefore, $T(90^\\circ - \\theta) > T(\\theta)$.",
+      "finalAnswer": "Option A: The larger angle $(90^\\circ - \\theta)$",
+      "whyOtherOptionsWrong": "Option C is true for range, not time of flight."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Complementary projection angles",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-395",
+    "questionNumber": 395,
+    "question": "For complementary angles of projection with the same launch speed $u$, what is the sum of the maximum heights $(H_1 + H_2)$?",
+    "options": {
+      "A": "$\\frac{u^2}{2g}$",
+      "B": "$\\frac{u^2}{g}$",
+      "C": "$\\frac{2u^2}{g}$",
+      "D": "$\\frac{u^2}{4g}$"
+    },
+    "optionsList": [
+      "$\\frac{u^2}{2g}$",
+      "$\\frac{u^2}{g}$",
+      "$\\frac{2u^2}{g}$",
+      "$\\frac{u^2}{4g}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\n$H_1 + H_2 = \\frac{u^2\\sin^2\\theta}{2g} + \\frac{u^2\\cos^2\\theta}{2g} = \\frac{u^2}{2g}(\\sin^2\\theta + \\cos^2\\theta) = \\frac{u^2}{2g}$.\n\n2. GIVEN:\n$\theta_1 = \theta, \theta_2 = 90^\\circ - \theta$.\n\n3. FORMULA / PRINCIPLE:\nH_1 + H_2 = \\frac{u^2}{2g}\n\n4. STEP-BY-STEP SOLUTION:\n1. $H_1 = \\frac{u^2\\sin^2\\theta}{2g}$.\n2. $H_2 = \\frac{u^2\\sin^2(90^\\circ - \\theta)}{2g} = \\frac{u^2\\cos^2\\theta}{2g}$.\n3. Add: $H_1 + H_2 = \\frac{u^2}{2g}(\\sin^2\\theta + \\cos^2\\theta) = \\frac{u^2}{2g}$.\n\n5. FINAL ANSWER:\nOption A: $\\frac{u^2}{2g}$\n\n6. QUICK TIP:\nThe sum of the heights is constant and equal to the maximum vertical height achieved at $90^\\circ$!",
+    "solutionStructured": {
+      "concept": "$H_1 + H_2 = \\frac{u^2\\sin^2\\theta}{2g} + \\frac{u^2\\cos^2\\theta}{2g} = \\frac{u^2}{2g}(\\sin^2\\theta + \\cos^2\\theta) = \\frac{u^2}{2g}$.",
+      "given": "$\theta_1 = \theta, \theta_2 = 90^\\circ - \theta$.",
+      "formula": "H_1 + H_2 = \\frac{u^2}{2g}",
+      "stepByStep": "1. $H_1 = \\frac{u^2\\sin^2\\theta}{2g}$.\n2. $H_2 = \\frac{u^2\\sin^2(90^\\circ - \\theta)}{2g} = \\frac{u^2\\cos^2\\theta}{2g}$.\n3. Add: $H_1 + H_2 = \\frac{u^2}{2g}(\\sin^2\\theta + \\cos^2\\theta) = \\frac{u^2}{2g}$.",
+      "finalAnswer": "Option A: $\\frac{u^2}{2g}$",
+      "whyOtherOptionsWrong": "Option B lacks the 2 in the denominator."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Complementary projection angles",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-396",
+    "questionNumber": 396,
+    "question": "If $T_1$ and $T_2$ are the times of flight for two complementary angles with the same launch speed $u$, what is the relationship between $(T_1^2 + T_2^2)$ and $u$?",
+    "options": {
+      "A": "$T_1^2 + T_2^2 = \\frac{4u^2}{g^2}$",
+      "B": "$T_1^2 + T_2^2 = \\frac{2u^2}{g^2}$",
+      "C": "$T_1^2 + T_2^2 = \\frac{u^2}{g^2}$",
+      "D": "$T_1^2 + T_2^2 = \\frac{8u^2}{g^2}$"
+    },
+    "optionsList": [
+      "$T_1^2 + T_2^2 = \\frac{4u^2}{g^2}$",
+      "$T_1^2 + T_2^2 = \\frac{2u^2}{g^2}$",
+      "$T_1^2 + T_2^2 = \\frac{u^2}{g^2}$",
+      "$T_1^2 + T_2^2 = \\frac{8u^2}{g^2}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSum of squares: $T_1^2 + T_2^2 = \\frac{4u^2\\sin^2\\theta}{g^2} + \\frac{4u^2\\cos^2\\theta}{g^2} = \\frac{4u^2}{g^2}(\\sin^2\\theta + \\cos^2\\theta) = \\frac{4u^2}{g^2}$.\n\n2. GIVEN:\nComplementary times of flight $T_1$ and $T_2$.\n\n3. FORMULA / PRINCIPLE:\nT_1^2 + T_2^2 = \\frac{4u^2}{g^2}\n\n4. STEP-BY-STEP SOLUTION:\n1. $T_1 = \\frac{2u\\sin\\theta}{g} \\implies T_1^2 = \\frac{4u^2\\sin^2\\theta}{g^2}$.\n2. $T_2 = \\frac{2u\\cos\\theta}{g} \\implies T_2^2 = \\frac{4u^2\\cos^2\\theta}{g^2}$.\n3. Add them: $T_1^2 + T_2^2 = \\frac{4u^2}{g^2}(\\sin^2\\theta + \\cos^2\\theta) = \\frac{4u^2}{g^2}$.\n\n5. FINAL ANSWER:\nOption A: $T_1^2 + T_2^2 = \\frac{4u^2}{g^2}$\n\n6. QUICK TIP:\nUniversal constant: $T_1^2 + T_2^2 = \\frac{4u^2}{g^2}$ is independent of the angle $\\theta$!",
+    "solutionStructured": {
+      "concept": "Sum of squares: $T_1^2 + T_2^2 = \\frac{4u^2\\sin^2\\theta}{g^2} + \\frac{4u^2\\cos^2\\theta}{g^2} = \\frac{4u^2}{g^2}(\\sin^2\\theta + \\cos^2\\theta) = \\frac{4u^2}{g^2}$.",
+      "given": "Complementary times of flight $T_1$ and $T_2$.",
+      "formula": "T_1^2 + T_2^2 = \\frac{4u^2}{g^2}",
+      "stepByStep": "1. $T_1 = \\frac{2u\\sin\\theta}{g} \\implies T_1^2 = \\frac{4u^2\\sin^2\\theta}{g^2}$.\n2. $T_2 = \\frac{2u\\cos\\theta}{g} \\implies T_2^2 = \\frac{4u^2\\cos^2\\theta}{g^2}$.\n3. Add them: $T_1^2 + T_2^2 = \\frac{4u^2}{g^2}(\\sin^2\\theta + \\cos^2\\theta) = \\frac{4u^2}{g^2}$.",
+      "finalAnswer": "Option A: $T_1^2 + T_2^2 = \\frac{4u^2}{g^2}$",
+      "whyOtherOptionsWrong": "Option B loses a factor of 2 in squaring."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Complementary projection angles",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-397",
+    "questionNumber": 397,
+    "question": "The ratio of the maximum heights reached by a projectile at complementary angles is $1 : 3$. What are the two projection angles?",
+    "options": {
+      "A": "$30^\\circ$ and $60^\\circ$",
+      "B": "$15^\\circ$ and $75^\\circ$",
+      "C": "$45^\\circ$ and $45^\\circ$",
+      "D": "$20^\\circ$ and $70^\\circ$"
+    },
+    "optionsList": [
+      "$30^\\circ$ and $60^\\circ$",
+      "$15^\\circ$ and $75^\\circ$",
+      "$45^\\circ$ and $45^\\circ$",
+      "$20^\\circ$ and $70^\\circ$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe ratio of heights is $\\frac{H_1}{H_2} = \\frac{\\sin^2\\theta}{\\cos^2\\theta} = \\tan^2\\theta$. If $\\tan^2\\theta = 1/3$, then $\\tan\\theta = 1/\\sqrt{3} \\implies \\theta = 30^\\circ$. The complementary angle is $60^\\circ$.\n\n2. GIVEN:\n$\\frac{H_1}{H_2} = \\frac{1}{3}$.\n\n3. FORMULA / PRINCIPLE:\n\\tan^2\\theta = \\frac{1}{3} \\implies \\tan\\theta = \\frac{1}{\\sqrt{3}} \\implies \\theta = 30^\\circ\n\n4. STEP-BY-STEP SOLUTION:\n1. Ratio of heights: $\\frac{H_1}{H_2} = \\frac{u^2\\sin^2\\theta / 2g}{u^2\\cos^2\\theta / 2g} = \\tan^2\\theta$.\n2. Given: $\\tan^2\\theta = \\frac{1}{3}$.\n3. Take square root: $\\tan\\theta = \\frac{1}{\\sqrt{3}}$.\n4. Therefore, $\\theta = 30^\\circ$, and its complement is $90^\\circ - 30^\\circ = 60^\\circ$.\n\n5. FINAL ANSWER:\nOption A: $30^\\circ$ and $60^\\circ$\n\n6. QUICK TIP:\n$\\frac{H_1}{H_2} = \\tan^2\\theta$. If ratio is $1:3 \\implies \\theta = 30^\\circ$. If ratio is $1:1 \\implies \\theta = 45^\\circ$!",
+    "solutionStructured": {
+      "concept": "The ratio of heights is $\\frac{H_1}{H_2} = \\frac{\\sin^2\\theta}{\\cos^2\\theta} = \\tan^2\\theta$. If $\\tan^2\\theta = 1/3$, then $\\tan\\theta = 1/\\sqrt{3} \\implies \\theta = 30^\\circ$. The complementary angle is $60^\\circ$.",
+      "given": "$\\frac{H_1}{H_2} = \\frac{1}{3}$.",
+      "formula": "\\tan^2\\theta = \\frac{1}{3} \\implies \\tan\\theta = \\frac{1}{\\sqrt{3}} \\implies \\theta = 30^\\circ",
+      "stepByStep": "1. Ratio of heights: $\\frac{H_1}{H_2} = \\frac{u^2\\sin^2\\theta / 2g}{u^2\\cos^2\\theta / 2g} = \\tan^2\\theta$.\n2. Given: $\\tan^2\\theta = \\frac{1}{3}$.\n3. Take square root: $\\tan\\theta = \\frac{1}{\\sqrt{3}}$.\n4. Therefore, $\\theta = 30^\\circ$, and its complement is $90^\\circ - 30^\\circ = 60^\\circ$.",
+      "finalAnswer": "Option A: $30^\\circ$ and $60^\\circ$",
+      "whyOtherOptionsWrong": "Option B gives $\\tan^2 15^\\circ = (2 - \\sqrt{3})^2 \\approx 0.07$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Complementary projection angles",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-398",
+    "questionNumber": 398,
+    "question": "For two complementary projection angles $\\theta$ and $(90^\\circ - \\theta)$, if $R$ is the common range, what is $\\frac{R}{\\sqrt{H_1 H_2}}$?",
+    "options": {
+      "A": "$4$",
+      "B": "$2$",
+      "C": "$16$",
+      "D": "$1$"
+    },
+    "optionsList": [
+      "$4$",
+      "$2$",
+      "$16$",
+      "$1$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFrom $R = 4\\sqrt{H_1 H_2}$, the ratio $\\frac{R}{\\sqrt{H_1 H_2}}$ is identically equal to $4$.\n\n2. GIVEN:\nCommon range $R$, complementary heights $H_1, H_2$.\n\n3. FORMULA / PRINCIPLE:\nR = 4\\sqrt{H_1 H_2} \\implies \\frac{R}{\\sqrt{H_1 H_2}} = 4\n\n4. STEP-BY-STEP SOLUTION:\n1. $H_1 = \\frac{u^2\\sin^2\\theta}{2g}$, $H_2 = \\frac{u^2\\cos^2\\theta}{2g}$.\n2. $\\sqrt{H_1 H_2} = \\frac{u^2\\sin\\theta\\cos\\theta}{2g}$.\n3. Range $R = \\frac{2u^2\\sin\\theta\\cos\\theta}{g} = 4 \\left(\\frac{u^2\\sin\\theta\\cos\\theta}{2g}\\right) = 4\\sqrt{H_1 H_2}$.\n4. Thus, $\\frac{R}{\\sqrt{H_1 H_2}} = 4$.\n\n5. FINAL ANSWER:\nOption A: $4$\n\n6. QUICK TIP:\nA pure numerical invariant: $R / \\sqrt{H_1 H_2} = 4$, regardless of speed, gravity, or angles!",
+    "solutionStructured": {
+      "concept": "From $R = 4\\sqrt{H_1 H_2}$, the ratio $\\frac{R}{\\sqrt{H_1 H_2}}$ is identically equal to $4$.",
+      "given": "Common range $R$, complementary heights $H_1, H_2$.",
+      "formula": "R = 4\\sqrt{H_1 H_2} \\implies \\frac{R}{\\sqrt{H_1 H_2}} = 4",
+      "stepByStep": "1. $H_1 = \\frac{u^2\\sin^2\\theta}{2g}$, $H_2 = \\frac{u^2\\cos^2\\theta}{2g}$.\n2. $\\sqrt{H_1 H_2} = \\frac{u^2\\sin\\theta\\cos\\theta}{2g}$.\n3. Range $R = \\frac{2u^2\\sin\\theta\\cos\\theta}{g} = 4 \\left(\\frac{u^2\\sin\\theta\\cos\\theta}{2g}\\right) = 4\\sqrt{H_1 H_2}$.\n4. Thus, $\\frac{R}{\\sqrt{H_1 H_2}} = 4$.",
+      "finalAnswer": "Option A: $4$",
+      "whyOtherOptionsWrong": "Option C is $R^2 / (H_1 H_2) = 16$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Complementary projection angles",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-399",
+    "questionNumber": 399,
+    "question": "Two projectiles launched with the same speed at complementary angles have times of flight $T_1 = 3\\text{ s}$ and $T_2 = 4\\text{ s}$. Taking $g = 10\\text{ m/s}^2$, what is their common horizontal range?",
+    "options": {
+      "A": "$60\\text{ m}$",
+      "B": "$120\\text{ m}$",
+      "C": "$30\\text{ m}$",
+      "D": "$240\\text{ m}$"
+    },
+    "optionsList": [
+      "$60\\text{ m}$",
+      "$120\\text{ m}$",
+      "$30\\text{ m}$",
+      "$240\\text{ m}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nApply $R = \\frac{1}{2}g T_1 T_2$.\n\n2. GIVEN:\n$T_1 = 3\\text{ s}, T_2 = 4\\text{ s}, g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\nR = \\frac{1}{2}g T_1 T_2\n\n4. STEP-BY-STEP SOLUTION:\n1. From $T_1 T_2 = \\frac{2R}{g}$, we have $R = \\frac{1}{2}g T_1 T_2$.\n2. Substitute values:\n   $R = \\frac{1}{2} \\times 10 \\times (3 \\times 4) = 5 \\times 12 = 60\\text{ m}$.\n\n5. FINAL ANSWER:\nOption A: $60\\text{ m}$\n\n6. QUICK TIP:\nDirect substitution: $R = 5 \\times 3 \\times 4 = 60\\text{ m}$!",
+    "solutionStructured": {
+      "concept": "Apply $R = \\frac{1}{2}g T_1 T_2$.",
+      "given": "$T_1 = 3\\text{ s}, T_2 = 4\\text{ s}, g = 10\\text{ m/s}^2$.",
+      "formula": "R = \\frac{1}{2}g T_1 T_2",
+      "stepByStep": "1. From $T_1 T_2 = \\frac{2R}{g}$, we have $R = \\frac{1}{2}g T_1 T_2$.\n2. Substitute values:\n   $R = \\frac{1}{2} \\times 10 \\times (3 \\times 4) = 5 \\times 12 = 60\\text{ m}$.",
+      "finalAnswer": "Option A: $60\\text{ m}$",
+      "whyOtherOptionsWrong": "Option B forgets the factor of $1/2$ ($g T_1 T_2 = 120$)."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Complementary projection angles",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-400",
+    "questionNumber": 400,
+    "question": "In the previous question, what was the initial launch speed $u$ of both projectiles?",
+    "options": {
+      "A": "$25\\text{ m/s}$",
+      "B": "$20\\text{ m/s}$",
+      "C": "$50\\text{ m/s}$",
+      "D": "$15\\text{ m/s}$"
+    },
+    "optionsList": [
+      "$25\\text{ m/s}$",
+      "$20\\text{ m/s}$",
+      "$50\\text{ m/s}$",
+      "$15\\text{ m/s}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFrom $T_1^2 + T_2^2 = \\frac{4u^2}{g^2}$, solve for $u$: $u = \\frac{g}{2}\\sqrt{T_1^2 + T_2^2}$.\n\n2. GIVEN:\n$T_1 = 3\\text{ s}, T_2 = 4\\text{ s}, g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\nu = \\frac{g}{2}\\sqrt{T_1^2 + T_2^2}\n\n4. STEP-BY-STEP SOLUTION:\n1. Sum of squares: $T_1^2 + T_2^2 = 3^2 + 4^2 = 9 + 16 = 25$.\n2. Square root: $\\sqrt{T_1^2 + T_2^2} = 5\\text{ s}$.\n3. Launch speed:\n   $u = \\frac{g}{2} \\times 5 = \\frac{10}{2} \\times 5 = 5 \\times 5 = 25\\text{ m/s}$.\n\n5. FINAL ANSWER:\nOption A: $25\\text{ m/s}$\n\n6. QUICK TIP:\nNotice the 3-4-5 triangle: $\\sqrt{3^2 + 4^2} = 5$. Speed is $\\frac{g}{2} \\times 5 = 25\\text{ m/s}$!",
+    "solutionStructured": {
+      "concept": "From $T_1^2 + T_2^2 = \\frac{4u^2}{g^2}$, solve for $u$: $u = \\frac{g}{2}\\sqrt{T_1^2 + T_2^2}$.",
+      "given": "$T_1 = 3\\text{ s}, T_2 = 4\\text{ s}, g = 10\\text{ m/s}^2$.",
+      "formula": "u = \\frac{g}{2}\\sqrt{T_1^2 + T_2^2}",
+      "stepByStep": "1. Sum of squares: $T_1^2 + T_2^2 = 3^2 + 4^2 = 9 + 16 = 25$.\n2. Square root: $\\sqrt{T_1^2 + T_2^2} = 5\\text{ s}$.\n3. Launch speed:\n   $u = \\frac{g}{2} \\times 5 = \\frac{10}{2} \\times 5 = 5 \\times 5 = 25\\text{ m/s}$.",
+      "finalAnswer": "Option A: $25\\text{ m/s}$",
+      "whyOtherOptionsWrong": "Option C forgets to divide by 2."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Complementary projection angles",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-401",
+    "questionNumber": 401,
+    "question": "Two projectiles are launched at complementary angles with the same speed $u$. What is the angle between their initial velocity vectors?",
+    "options": {
+      "A": "$|90^\\circ - 2\\theta|$",
+      "B": "$90^\\circ$",
+      "C": "$2\\theta$",
+      "D": "$45^\\circ$"
+    },
+    "optionsList": [
+      "$|90^\\circ - 2\\theta|$",
+      "$90^\\circ$",
+      "$2\\theta$",
+      "$45^\\circ$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe angle between the two velocity vectors is the difference between their launch angles: $\\Delta\\alpha = |(90^\\circ - \\theta) - \\theta| = |90^\\circ - 2\\theta|$.\n\n2. GIVEN:\nAngles $\\theta$ and $90^\\circ - \\theta$.\n\n3. FORMULA / PRINCIPLE:\n\\Delta\\alpha = |90^\\circ - 2\\theta|\n\n4. STEP-BY-STEP SOLUTION:\n1. First vector makes angle $\\theta$ with horizontal.\n2. Second vector makes angle $90^\\circ - \\theta$ with horizontal.\n3. Angle between them is the difference: $(90^\\circ - \\theta) - \\theta = 90^\\circ - 2\\theta$.\n\n5. FINAL ANSWER:\nOption A: $|90^\\circ - 2\\theta|$\n\n6. QUICK TIP:\nFor example: for $30^\\circ$ and $60^\\circ$, angle between them is $60^\\circ - 30^\\circ = 30^\\circ = 90^\\circ - 2(30^\\circ)$!",
+    "solutionStructured": {
+      "concept": "The angle between the two velocity vectors is the difference between their launch angles: $\\Delta\\alpha = |(90^\\circ - \\theta) - \\theta| = |90^\\circ - 2\\theta|$.",
+      "given": "Angles $\\theta$ and $90^\\circ - \\theta$.",
+      "formula": "\\Delta\\alpha = |90^\\circ - 2\\theta|",
+      "stepByStep": "1. First vector makes angle $\\theta$ with horizontal.\n2. Second vector makes angle $90^\\circ - \\theta$ with horizontal.\n3. Angle between them is the difference: $(90^\\circ - \\theta) - \\theta = 90^\\circ - 2\\theta$.",
+      "finalAnswer": "Option A: $|90^\\circ - 2\\theta|$",
+      "whyOtherOptionsWrong": "Option B confuses the sum of angles ($90^\\circ$) with their difference."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Complementary projection angles",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-402",
+    "questionNumber": 402,
+    "question": "If two projectiles are launched with the same speed at complementary angles, when are their initial velocity vectors MUTUALLY PERPENDICULAR?",
+    "options": {
+      "A": "Never (unless one is $0^\\circ$ and the other is $90^\\circ$)",
+      "B": "When $\\theta = 45^\\circ$",
+      "C": "When $\\theta = 30^\\circ$",
+      "D": "Always"
+    },
+    "optionsList": [
+      "Never (unless one is $0^\\circ$ and the other is $90^\\circ$)",
+      "When $\\theta = 45^\\circ$",
+      "When $\\theta = 30^\\circ$",
+      "Always"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor $\\Delta\\alpha = 90^\\circ$, $|90^\\circ - 2\\theta| = 90^\\circ \\implies 2\\theta = 0 \\implies \\theta = 0^\\circ$ (horizontal) and $90^\\circ$ (vertical). For any intermediate angle ($0 < \\theta < 90^\\circ$), the angle between them is strictly less than $90^\\circ$.\n\n2. GIVEN:\nAngle difference $|90^\\circ - 2\\theta| = 90^\\circ$.\n\n3. FORMULA / PRINCIPLE:\n|90^\\circ - 2\\theta| = 90^\\circ \\implies \\theta = 0^\\circ\n\n4. STEP-BY-STEP SOLUTION:\n1. Angle between vectors is $|90^\\circ - 2\\theta|$.\n2. For perpendicularity, $|90^\\circ - 2\\theta| = 90^\\circ$.\n3. This requires $2\\theta = 0^\\circ \\implies \\theta = 0^\\circ$ or $2\\theta = 180^\\circ \\implies \\theta = 90^\\circ$.\n4. For true oblique projectiles ($0 < \\theta < 90^\\circ$), they can never be mutually perpendicular.\n\n5. FINAL ANSWER:\nOption A: Never (unless one is $0^\\circ$ and the other is $90^\\circ$)\n\n6. QUICK TIP:\nAt $\\theta = 45^\\circ$, they are collinear (angle difference is $0^\\circ$). The difference is strictly between $0^\\circ$ and $90^\\circ$.",
+    "solutionStructured": {
+      "concept": "For $\\Delta\\alpha = 90^\\circ$, $|90^\\circ - 2\\theta| = 90^\\circ \\implies 2\\theta = 0 \\implies \\theta = 0^\\circ$ (horizontal) and $90^\\circ$ (vertical). For any intermediate angle ($0 < \\theta < 90^\\circ$), the angle between them is strictly less than $90^\\circ$.",
+      "given": "Angle difference $|90^\\circ - 2\\theta| = 90^\\circ$.",
+      "formula": "|90^\\circ - 2\\theta| = 90^\\circ \\implies \\theta = 0^\\circ",
+      "stepByStep": "1. Angle between vectors is $|90^\\circ - 2\\theta|$.\n2. For perpendicularity, $|90^\\circ - 2\\theta| = 90^\\circ$.\n3. This requires $2\\theta = 0^\\circ \\implies \\theta = 0^\\circ$ or $2\\theta = 180^\\circ \\implies \\theta = 90^\\circ$.\n4. For true oblique projectiles ($0 < \\theta < 90^\\circ$), they can never be mutually perpendicular.",
+      "finalAnswer": "Option A: Never (unless one is $0^\\circ$ and the other is $90^\\circ$)",
+      "whyOtherOptionsWrong": "Option B gives angle difference $0^\\circ$ (parallel)."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Complementary projection angles",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-403",
+    "questionNumber": 403,
+    "question": "Two bodies are projected from the same point with the same speed $u$ at complementary angles $\\theta$ and $(90^\\circ - \\theta)$. What is the distance between them at the instant when the lower projectile reaches its maximum height?",
+    "options": {
+      "A": "$\\frac{\\sqrt{2}u^2\\sin\\theta(\\cos\\theta - \\sin\\theta)}{g}$",
+      "B": "$\\frac{u^2\\cos 2\\theta}{g}$",
+      "C": "$\\frac{u^2}{2g}$",
+      "D": "$\\frac{\\sqrt{2}u^2}{g}$"
+    },
+    "optionsList": [
+      "$\\frac{u^2}{2g}\\sin\\theta\\sqrt{(\\cot\\theta - 1)^2 + (\\tan\\theta - 1)^2}\\dots$ wait, compute directly using coordinates",
+      "$\\frac{u^2}{g}$",
+      "$H_2 - H_1$",
+      "$\\frac{u^2\\cos 2\\theta}{g}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSince both experience the same acceleration $\\vec{g}$, their relative acceleration is zero: $\\vec{a}_{rel} = 0$. The separation vector at time $t$ is simply $\\Delta\\vec{r}(t) = (\\vec{u}_1 - \\vec{u}_2)t$. At $t = \\frac{u\\sin\\theta}{g}$, compute $|\\vec{u}_1 - \\vec{u}_2| t$.\n\n2. GIVEN:\nRelative velocity $\\Delta\\vec{u} = u(\\cos\\theta - \\sin\\theta)\\hat{i} + u(\\sin\\theta - \\cos\\theta)\\hat{j}$.\n\n3. FORMULA / PRINCIPLE:\n|\\Delta\\vec{r}| = |\\Delta\\vec{u}| t = \\sqrt{2} u |\\cos\\theta - \\sin\\theta| \\left(\\frac{u\\sin\\theta}{g}\\right)\n\n4. STEP-BY-STEP SOLUTION:\n1. Relative velocity between the two projectiles:\n   $\\Delta v_x = u\\cos\\theta - u\\sin\\theta = u(\\cos\\theta - \\sin\\theta)$.\n   $\\Delta v_y = u\\sin\\theta - u\\cos\\theta = -u(\\cos\\theta - \\sin\\theta)$.\n2. Magnitude of relative velocity:\n   $|\\Delta\\vec{v}| = \\sqrt{(\\Delta v_x)^2 + (\\Delta v_y)^2} = \\sqrt{2} u |\\cos\\theta - \\sin\\theta|$.\n3. Since relative acceleration is ZERO ($\\vec{a}_{rel} = \\vec{g} - \\vec{g} = 0$):\n   Separation distance at time $t$ is $d(t) = |\\Delta\\vec{v}| \\times t$.\n4. Time to reach maximum height for the lower projectile: $t = \\frac{u\\sin\\theta}{g}$.\n5. Distance: $d = \\sqrt{2} u |\\cos\\theta - \\sin\\theta| \\times \\frac{u\\sin\\theta}{g} = \\frac{\\sqrt{2}u^2\\sin\\theta(\\cos\\theta - \\sin\\theta)}{g}$.\n\n5. FINAL ANSWER:\nOption A: $\\frac{u^2}{2g}\\sin\\theta\\sqrt{(\\cot\\theta - 1)^2 + (\\tan\\theta - 1)^2}\\dots$ wait, compute directly using coordinates\n\n6. QUICK TIP:\nSuper shortcut: Because relative acceleration is zero, separation is simply Relative Speed $\\times$ Time!",
+    "solutionStructured": {
+      "concept": "Since both experience the same acceleration $\\vec{g}$, their relative acceleration is zero: $\\vec{a}_{rel} = 0$. The separation vector at time $t$ is simply $\\Delta\\vec{r}(t) = (\\vec{u}_1 - \\vec{u}_2)t$. At $t = \\frac{u\\sin\\theta}{g}$, compute $|\\vec{u}_1 - \\vec{u}_2| t$.",
+      "given": "Relative velocity $\\Delta\\vec{u} = u(\\cos\\theta - \\sin\\theta)\\hat{i} + u(\\sin\\theta - \\cos\\theta)\\hat{j}$.",
+      "formula": "|\\Delta\\vec{r}| = |\\Delta\\vec{u}| t = \\sqrt{2} u |\\cos\\theta - \\sin\\theta| \\left(\\frac{u\\sin\\theta}{g}\\right)",
+      "stepByStep": "1. Relative velocity between the two projectiles:\n   $\\Delta v_x = u\\cos\\theta - u\\sin\\theta = u(\\cos\\theta - \\sin\\theta)$.\n   $\\Delta v_y = u\\sin\\theta - u\\cos\\theta = -u(\\cos\\theta - \\sin\\theta)$.\n2. Magnitude of relative velocity:\n   $|\\Delta\\vec{v}| = \\sqrt{(\\Delta v_x)^2 + (\\Delta v_y)^2} = \\sqrt{2} u |\\cos\\theta - \\sin\\theta|$.\n3. Since relative acceleration is ZERO ($\\vec{a}_{rel} = \\vec{g} - \\vec{g} = 0$):\n   Separation distance at time $t$ is $d(t) = |\\Delta\\vec{v}| \\times t$.\n4. Time to reach maximum height for the lower projectile: $t = \\frac{u\\sin\\theta}{g}$.\n5. Distance: $d = \\sqrt{2} u |\\cos\\theta - \\sin\\theta| \\times \\frac{u\\sin\\theta}{g} = \\frac{\\sqrt{2}u^2\\sin\\theta(\\cos\\theta - \\sin\\theta)}{g}$.",
+      "finalAnswer": "Option A: $\\frac{\\sqrt{2}u^2\\sin\\theta(\\cos\\theta - \\sin\\theta)}{g}$",
+      "whyOtherOptionsWrong": "Option B ignores the angular dependence."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Complementary projection angles",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-404",
+    "questionNumber": 404,
+    "question": "In the previous question, if $\\theta = 30^\\circ$ and $u = 20\\text{ m/s}$ (with $g = 10\\text{ m/s}^2$), what is the separation distance between the two projectiles at $t = 1\\text{ s}$ (the peak of the $30^\\circ$ projectile)?",
+    "options": {
+      "A": "$20\\sqrt{2}(\\frac{\\sqrt{3}-1}{2})\\text{ m} = 10\\sqrt{2}(\\sqrt{3}-1)\\text{ m} \\approx 10.35\\text{ m}$",
+      "B": "$15.5\\text{ m}$",
+      "C": "$20\\text{ m}$",
+      "D": "$5\\sqrt{2}\\text{ m}$"
+    },
+    "optionsList": [
+      "$20\\sqrt{2}(\\frac{\\sqrt{3}-1}{2})\\text{ m} = 10\\sqrt{2}(\\sqrt{3}-1)\\text{ m} \\approx 10.35\\text{ m}$",
+      "$15.5\\text{ m}$",
+      "$20\\text{ m}$",
+      "$5\\sqrt{2}\\text{ m}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSubstitute values into $d = \\sqrt{2}u(\\cos 30^\\circ - \\sin 30^\\circ) t$.\n\n2. GIVEN:\n$u = 20\\text{ m/s}, \\theta = 30^\\circ, t = 1\\text{ s}$.\n\n3. FORMULA / PRINCIPLE:\nd = \\sqrt{2} \\times 20 \\times \\left(\\frac{\\sqrt{3} - 1}{2}\\right) \\times 1 = 10\\sqrt{2}(\\sqrt{3} - 1)\n\n4. STEP-BY-STEP SOLUTION:\n1. Component difference: $\\cos 30^\\circ - \\sin 30^\\circ = \\frac{\\sqrt{3}}{2} - \\frac{1}{2} = \\frac{\\sqrt{3} - 1}{2}$.\n2. Relative speed: $v_{rel} = \\sqrt{2} u \\left(\\frac{\\sqrt{3}-1}{2}\\right) = \\sqrt{2}(20)\\left(\\frac{\\sqrt{3}-1}{2}\\right) = 10\\sqrt{2}(\\sqrt{3}-1)$.\n3. At $t = 1\\text{ s}$, distance is $d = v_{rel} \\times 1 = 10\\sqrt{2}(\\sqrt{3}-1) \\approx 14.14 \\times 0.732 \\approx 10.35\\text{ m}$.\n\n5. FINAL ANSWER:\nOption A: $20\\sqrt{2}(\\frac{\\sqrt{3}-1}{2})\\text{ m} = 10\\sqrt{2}(\\sqrt{3}-1)\\text{ m} \\approx 10.35\\text{ m}$\n\n6. QUICK TIP:\nCalculate: $10\\sqrt{2} \\approx 14.14$, $(\\sqrt{3}-1) \\approx 0.732$. Product $\\approx 10.35\\text{ m}$.",
+    "solutionStructured": {
+      "concept": "Substitute values into $d = \\sqrt{2}u(\\cos 30^\\circ - \\sin 30^\\circ) t$.",
+      "given": "$u = 20\\text{ m/s}, \\theta = 30^\\circ, t = 1\\text{ s}$.",
+      "formula": "d = \\sqrt{2} \\times 20 \\times \\left(\\frac{\\sqrt{3} - 1}{2}\\right) \\times 1 = 10\\sqrt{2}(\\sqrt{3} - 1)",
+      "stepByStep": "1. Component difference: $\\cos 30^\\circ - \\sin 30^\\circ = \\frac{\\sqrt{3}}{2} - \\frac{1}{2} = \\frac{\\sqrt{3} - 1}{2}$.\n2. Relative speed: $v_{rel} = \\sqrt{2} u \\left(\\frac{\\sqrt{3}-1}{2}\\right) = \\sqrt{2}(20)\\left(\\frac{\\sqrt{3}-1}{2}\\right) = 10\\sqrt{2}(\\sqrt{3}-1)$.\n3. At $t = 1\\text{ s}$, distance is $d = v_{rel} \\times 1 = 10\\sqrt{2}(\\sqrt{3}-1) \\approx 14.14 \\times 0.732 \\approx 10.35\\text{ m}$.",
+      "finalAnswer": "Option A: $20\\sqrt{2}(\\frac{\\sqrt{3}-1}{2})\\text{ m} = 10\\sqrt{2}(\\sqrt{3}-1)\\text{ m} \\approx 10.35\\text{ m}$",
+      "whyOtherOptionsWrong": "Option C ignores the relative angle trigonometric factors."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Complementary projection angles",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-405",
+    "questionNumber": 405,
+    "question": "For complementary angles $\\theta$ and $(90^\\circ - \\theta)$, what is the ratio of their kinetic energies at their respective highest points?",
+    "options": {
+      "A": "$\\cot^2\\theta$",
+      "B": "$\\tan^2\\theta$",
+      "C": "$\\tan\\theta$",
+      "D": "$1$"
+    },
+    "optionsList": [
+      "$\\cot^2\\theta$",
+      "$\\tan^2\\theta$",
+      "$\\tan\\theta$",
+      "$1$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nAt highest point, kinetic energy is $K_{top} = K_0\\cos^2\\alpha$. For $\\alpha_1 = \\theta$, $K_{top1} = K_0\\cos^2\\theta$. For $\\alpha_2 = 90^\\circ - \\theta$, $K_{top2} = K_0\\cos^2(90^\\circ - \\theta) = K_0\\sin^2\\theta$. Ratio is $\\frac{\\cos^2\\theta}{\\sin^2\\theta} = \\cot^2\\theta$.\n\n2. GIVEN:\nAngles $\\theta$ and $90^\\circ - \\theta$.\n\n3. FORMULA / PRINCIPLE:\n\\frac{K_{top1}}{K_{top2}} = \\frac{\\cos^2\\theta}{\\sin^2\\theta} = \\cot^2\\theta\n\n4. STEP-BY-STEP SOLUTION:\n1. Kinetic energy at top for first projectile: $K_1 = \\frac{1}{2}m (u\\cos\\theta)^2 = K_0 \\cos^2\\theta$.\n2. Kinetic energy at top for second projectile: $K_2 = \\frac{1}{2}m (u\\cos(90^\\circ - \\theta))^2 = K_0 \\sin^2\\theta$.\n3. Ratio: $\\frac{K_1}{K_2} = \\frac{\\cos^2\\theta}{\\sin^2\\theta} = \\cot^2\\theta$.\n\n5. FINAL ANSWER:\nOption A: $\\cot^2\\theta$\n\n6. QUICK TIP:\nNotice this is the INVERSE of the height ratio: $\\frac{K_{top1}}{K_{top2}} = \\frac{H_2}{H_1} = \\cot^2\\theta$!",
+    "solutionStructured": {
+      "concept": "At highest point, kinetic energy is $K_{top} = K_0\\cos^2\\alpha$. For $\\alpha_1 = \\theta$, $K_{top1} = K_0\\cos^2\\theta$. For $\\alpha_2 = 90^\\circ - \\theta$, $K_{top2} = K_0\\cos^2(90^\\circ - \\theta) = K_0\\sin^2\\theta$. Ratio is $\\frac{\\cos^2\\theta}{\\sin^2\\theta} = \\cot^2\\theta$.",
+      "given": "Angles $\\theta$ and $90^\\circ - \\theta$.",
+      "formula": "\\frac{K_{top1}}{K_{top2}} = \\frac{\\cos^2\\theta}{\\sin^2\\theta} = \\cot^2\\theta",
+      "stepByStep": "1. Kinetic energy at top for first projectile: $K_1 = \\frac{1}{2}m (u\\cos\\theta)^2 = K_0 \\cos^2\\theta$.\n2. Kinetic energy at top for second projectile: $K_2 = \\frac{1}{2}m (u\\cos(90^\\circ - \\theta))^2 = K_0 \\sin^2\\theta$.\n3. Ratio: $\\frac{K_1}{K_2} = \\frac{\\cos^2\\theta}{\\sin^2\\theta} = \\cot^2\\theta$.",
+      "finalAnswer": "Option A: $\\cot^2\\theta$",
+      "whyOtherOptionsWrong": "Option B is the height ratio $H_1/H_2 = \\tan^2\\theta$."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Complementary projection angles",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-406",
+    "questionNumber": 406,
+    "question": "A target at distance $R$ can be hit by two trajectories with times of flight $T_1$ and $T_2$. If a delay $\\Delta t = (T_2 - T_1)$ is introduced between firing the faster trajectory and the slower trajectory, both projectiles will strike the target simultaneously. What is the value of $(T_2 - T_1)$ in terms of $R, \\theta$ and $g$?",
+    "options": {
+      "A": "$\\frac{2u}{g}(\\cos\\theta - \\sin\\theta)$",
+      "B": "$\\frac{2u}{g}$",
+      "C": "$\\frac{R}{u}$",
+      "D": "$\\frac{2u}{g}\\sin 2\\theta$"
+    },
+    "optionsList": [
+      "$\\frac{2u}{g}(\\cos\\theta - \\sin\\theta)$",
+      "$\\frac{2u}{g}$",
+      "$\\frac{R}{u}$",
+      "$\\frac{2u}{g}\\sin 2\\theta$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSubtract the two times of flight: $T_2 - T_1 = \\frac{2u\\cos\\theta}{g} - \\frac{2u\\sin\\theta}{g} = \\frac{2u}{g}(\\cos\\theta - \\sin\\theta)$.\n\n2. GIVEN:\n$T_1 = \\frac{2u\\sin\\theta}{g}, T_2 = \\frac{2u\\cos\\theta}{g}$ with $\\theta < 45^\\circ$.\n\n3. FORMULA / PRINCIPLE:\nT_2 - T_1 = \\frac{2u}{g}(\\cos\\theta - \\sin\\theta)\n\n4. STEP-BY-STEP SOLUTION:\n1. Times of flight: $T_1 = \\frac{2u\\sin\\theta}{g}$ and $T_2 = \\frac{2u\\cos\\theta}{g}$.\n2. Since $\\theta < 45^\\circ$, $\\cos\\theta > \\sin\\theta$, so $T_2 > T_1$.\n3. Difference: $\\Delta t = T_2 - T_1 = \\frac{2u}{g}(\\cos\\theta - \\sin\\theta)$.\n\n5. FINAL ANSWER:\nOption A: $\\frac{2u}{g}(\\cos\\theta - \\sin\\theta)$\n\n6. QUICK TIP:\nMilitary ballistics application: To hit a target simultaneously with two shells from one gun, fire the high trajectory first, then wait $\\Delta t$ and fire the low trajectory!",
+    "solutionStructured": {
+      "concept": "Subtract the two times of flight: $T_2 - T_1 = \\frac{2u\\cos\\theta}{g} - \\frac{2u\\sin\\theta}{g} = \\frac{2u}{g}(\\cos\\theta - \\sin\\theta)$.",
+      "given": "$T_1 = \\frac{2u\\sin\\theta}{g}, T_2 = \\frac{2u\\cos\\theta}{g}$ with $\\theta < 45^\\circ$.",
+      "formula": "T_2 - T_1 = \\frac{2u}{g}(\\cos\\theta - \\sin\\theta)",
+      "stepByStep": "1. Times of flight: $T_1 = \\frac{2u\\sin\\theta}{g}$ and $T_2 = \\frac{2u\\cos\\theta}{g}$.\n2. Since $\\theta < 45^\\circ$, $\\cos\\theta > \\sin\\theta$, so $T_2 > T_1$.\n3. Difference: $\\Delta t = T_2 - T_1 = \\frac{2u}{g}(\\cos\\theta - \\sin\\theta)$.",
+      "finalAnswer": "Option A: $\\frac{2u}{g}(\\cos\\theta - \\sin\\theta)$",
+      "whyOtherOptionsWrong": "Option B lacks the angle factor; Option C is just the flat transit time."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Complementary projection angles",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-407",
+    "questionNumber": 407,
+    "question": "When analyzing projectile motion on an inclined plane of inclination $\\alpha$, which coordinate axes are most convenient to choose?",
+    "options": {
+      "A": "x-axis along the inclined plane and y-axis perpendicular to the inclined plane",
+      "B": "Horizontal and vertical axes",
+      "C": "Polar coordinates",
+      "D": "Only vertical axis"
+    },
+    "optionsList": [
+      "x-axis along the inclined plane and y-axis perpendicular to the inclined plane",
+      "Horizontal and vertical axes",
+      "Polar coordinates",
+      "Only vertical axis"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTilting the coordinate axes such that the x-axis lies along the incline and the y-axis is perpendicular to the incline reduces the landing condition to simply $y = 0$.\n\n2. GIVEN:\nMotion on an incline of angle $\\alpha$.\n\n3. FORMULA / PRINCIPLE:\na_x = -g\\sin\\alpha; a_y = -g\\cos\\alpha\n\n4. STEP-BY-STEP SOLUTION:\n1. Choosing the x-axis parallel to the incline and y-axis normal to the incline means the surface of the incline is the line $y = 0$.\n2. The landing condition is then simply $y(T) = 0$, exactly like standard projectile motion on level ground.\n3. Acceleration due to gravity decomposes into: $a_x = -g\\sin\\alpha$ (down the slope) and $a_y = -g\\cos\\alpha$ (into the slope).\n\n5. FINAL ANSWER:\nOption A: x-axis along the inclined plane and y-axis perpendicular to the inclined plane\n\n6. QUICK TIP:\nIn tilted axes: gravity has BOTH an x-component ($-g\\sin\\alpha$) and a y-component ($-g\\cos\\alpha$)!",
+    "solutionStructured": {
+      "concept": "Tilting the coordinate axes such that the x-axis lies along the incline and the y-axis is perpendicular to the incline reduces the landing condition to simply $y = 0$.",
+      "given": "Motion on an incline of angle $\\alpha$.",
+      "formula": "a_x = -g\\sin\\alpha; a_y = -g\\cos\\alpha",
+      "stepByStep": "1. Choosing the x-axis parallel to the incline and y-axis normal to the incline means the surface of the incline is the line $y = 0$.\n2. The landing condition is then simply $y(T) = 0$, exactly like standard projectile motion on level ground.\n3. Acceleration due to gravity decomposes into: $a_x = -g\\sin\\alpha$ (down the slope) and $a_y = -g\\cos\\alpha$ (into the slope).",
+      "finalAnswer": "Option A: x-axis along the inclined plane and y-axis perpendicular to the inclined plane",
+      "whyOtherOptionsWrong": "Option B makes the landing boundary an oblique line $y = x\\tan\\alpha$, complicating the algebra."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Projectile motion on inclined or sloping ground",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-408",
+    "questionNumber": 408,
+    "question": "What is the component of acceleration due to gravity PERPENDICULAR to an inclined plane of angle $\\alpha$?",
+    "options": {
+      "A": "$g\\cos\\alpha$",
+      "B": "$g\\sin\\alpha$",
+      "C": "$g\\tan\\alpha$",
+      "D": "$g$"
+    },
+    "optionsList": [
+      "$g\\cos\\alpha$",
+      "$g\\sin\\alpha$",
+      "$g\\tan\\alpha$",
+      "$g$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nResolve the vertically downward gravity vector along the tilted axes: the normal component into the incline is $g\\cos\\alpha$, and the downhill component is $g\\sin\\alpha$.\n\n2. GIVEN:\nIncline of angle $\\alpha$.\n\n3. FORMULA / PRINCIPLE:\na_{\\perp} = g\\cos\\alpha; a_{\\parallel} = g\\sin\\alpha\n\n4. STEP-BY-STEP SOLUTION:\n1. Incline angle with horizontal is $\\alpha$.\n2. The normal to the incline makes an angle $\\alpha$ with the vertical.\n3. Therefore, the component of gravity along the normal is $g\\cos\\alpha$.\n\n5. FINAL ANSWER:\nOption A: $g\\cos\\alpha$\n\n6. QUICK TIP:\nAt $\\alpha = 0$ (flat ground), normal component is $g\\cos 0^\\circ = g$. As $\\alpha \\to 90^\\circ$ (cliff), normal component approaches 0.",
+    "solutionStructured": {
+      "concept": "Resolve the vertically downward gravity vector along the tilted axes: the normal component into the incline is $g\\cos\\alpha$, and the downhill component is $g\\sin\\alpha$.",
+      "given": "Incline of angle $\\alpha$.",
+      "formula": "a_{\\perp} = g\\cos\\alpha; a_{\\parallel} = g\\sin\\alpha",
+      "stepByStep": "1. Incline angle with horizontal is $\\alpha$.\n2. The normal to the incline makes an angle $\\alpha$ with the vertical.\n3. Therefore, the component of gravity along the normal is $g\\cos\\alpha$.",
+      "finalAnswer": "Option A: $g\\cos\\alpha$",
+      "whyOtherOptionsWrong": "Option B is the parallel (downhill) component."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Projectile motion on inclined or sloping ground",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-409",
+    "questionNumber": 409,
+    "question": "A projectile is thrown UP an inclined plane of angle $\\alpha$ with speed $u$ at an angle $\\beta$ with the inclined plane. What is its time of flight $T$ on the incline?",
+    "options": {
+      "A": "$T = \\frac{2u\\sin\\beta}{g\\cos\\alpha}$",
+      "B": "$T = \\frac{2u\\sin\\beta}{g}$",
+      "C": "$T = \\frac{2u\\cos\\beta}{g\\sin\\alpha}$",
+      "D": "$T = \\frac{u\\sin\\beta}{g\\cos\\alpha}$"
+    },
+    "optionsList": [
+      "$T = \\frac{2u\\sin\\beta}{g\\cos\\alpha}$",
+      "$T = \\frac{2u\\sin\\beta}{g}$",
+      "$T = \\frac{2u\\cos\\beta}{g\\sin\\alpha}$",
+      "$T = \\frac{u\\sin\\beta}{g\\cos\\alpha}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn the tilted frame, initial velocity normal to incline is $u_y = u\\sin\\beta$ and normal acceleration is $a_y = -g\\cos\\alpha$. Set $y = u_y T - \\frac{1}{2}(g\\cos\\alpha)T^2 = 0 \\implies T = \\frac{2u\\sin\\beta}{g\\cos\\alpha}$.\n\n2. GIVEN:\nIncline angle $\\alpha$, launch angle with incline $\\beta$.\n\n3. FORMULA / PRINCIPLE:\nT = \\frac{2u\\sin\\beta}{g\\cos\\alpha}\n\n4. STEP-BY-STEP SOLUTION:\n1. Initial velocity perpendicular to incline: $u_{\\perp} = u\\sin\\beta$.\n2. Acceleration perpendicular to incline: $a_{\\perp} = g\\cos\\alpha$.\n3. Flight time is when perpendicular displacement returns to zero: $y = 0$.\n4. $u_{\\perp} T - \\frac{1}{2}a_{\\perp} T^2 = 0 \\implies T = \\frac{2u_{\\perp}}{a_{\\perp}} = \\frac{2u\\sin\\beta}{g\\cos\\alpha}$.\n\n5. FINAL ANSWER:\nOption A: $T = \\frac{2u\\sin\\beta}{g\\cos\\alpha}$\n\n6. QUICK TIP:\nNotice: simply replace $g$ with the effective normal gravity $g\\cos\\alpha$!",
+    "solutionStructured": {
+      "concept": "In the tilted frame, initial velocity normal to incline is $u_y = u\\sin\\beta$ and normal acceleration is $a_y = -g\\cos\\alpha$. Set $y = u_y T - \\frac{1}{2}(g\\cos\\alpha)T^2 = 0 \\implies T = \\frac{2u\\sin\\beta}{g\\cos\\alpha}$.",
+      "given": "Incline angle $\\alpha$, launch angle with incline $\\beta$.",
+      "formula": "T = \\frac{2u\\sin\\beta}{g\\cos\\alpha}",
+      "stepByStep": "1. Initial velocity perpendicular to incline: $u_{\\perp} = u\\sin\\beta$.\n2. Acceleration perpendicular to incline: $a_{\\perp} = g\\cos\\alpha$.\n3. Flight time is when perpendicular displacement returns to zero: $y = 0$.\n4. $u_{\\perp} T - \\frac{1}{2}a_{\\perp} T^2 = 0 \\implies T = \\frac{2u_{\\perp}}{a_{\\perp}} = \\frac{2u\\sin\\beta}{g\\cos\\alpha}$.",
+      "finalAnswer": "Option A: $T = \\frac{2u\\sin\\beta}{g\\cos\\alpha}$",
+      "whyOtherOptionsWrong": "Option B uses standard flat-ground gravity $g$."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Projectile motion on inclined or sloping ground",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-410",
+    "questionNumber": 410,
+    "question": "How does the time of flight for projectile motion DOWN an incline compare with that UP an incline, for the same launch speed $u$, same incline angle $\\alpha$, and same relative launch angle $\\beta$?",
+    "options": {
+      "A": "They are exactly equal: $T_{down} = T_{up} = \\frac{2u\\sin\\beta}{g\\cos\\alpha}$",
+      "B": "$T_{down} > T_{up}$",
+      "C": "$T_{down} < T_{up}$",
+      "D": "$T_{down} = 2 T_{up}$"
+    },
+    "optionsList": [
+      "They are exactly equal: $T_{down} = T_{up} = \\frac{2u\\sin\\beta}{g\\cos\\alpha}$",
+      "$T_{down} > T_{up}$",
+      "$T_{down} < T_{up}$",
+      "$T_{down} = 2 T_{up}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe perpendicular motion is governed solely by $u_{\\perp} = u\\sin\\beta$ and $a_{\\perp} = g\\cos\\alpha$, which are completely identical whether moving uphill or downhill. Thus $T_{down} = T_{up}$.\n\n2. GIVEN:\nUphill vs downhill projection with identical $u, \\alpha, \\beta$.\n\n3. FORMULA / PRINCIPLE:\nT = \\frac{2u\\sin\\beta}{g\\cos\\alpha}\n\n4. STEP-BY-STEP SOLUTION:\n1. For uphill: $a_y = -g\\cos\\alpha$, $u_y = u\\sin\\beta \\implies T = \\frac{2u\\sin\\beta}{g\\cos\\alpha}$.\n2. For downhill: $a_y = -g\\cos\\alpha$, $u_y = u\\sin\\beta \\implies T = \\frac{2u\\sin\\beta}{g\\cos\\alpha}$.\n3. The normal acceleration does not care whether motion is up or down the slope.\n4. Therefore, the times of flight are identical.\n\n5. FINAL ANSWER:\nOption A: They are exactly equal: $T_{down} = T_{up} = \\frac{2u\\sin\\beta}{g\\cos\\alpha}$\n\n6. QUICK TIP:\nTime of flight is identical up or down the incline! But RANGE down the incline is much larger because downhill gravity assists the motion!",
+    "solutionStructured": {
+      "concept": "The perpendicular motion is governed solely by $u_{\\perp} = u\\sin\\beta$ and $a_{\\perp} = g\\cos\\alpha$, which are completely identical whether moving uphill or downhill. Thus $T_{down} = T_{up}$.",
+      "given": "Uphill vs downhill projection with identical $u, \\alpha, \\beta$.",
+      "formula": "T = \\frac{2u\\sin\\beta}{g\\cos\\alpha}",
+      "stepByStep": "1. For uphill: $a_y = -g\\cos\\alpha$, $u_y = u\\sin\\beta \\implies T = \\frac{2u\\sin\\beta}{g\\cos\\alpha}$.\n2. For downhill: $a_y = -g\\cos\\alpha$, $u_y = u\\sin\\beta \\implies T = \\frac{2u\\sin\\beta}{g\\cos\\alpha}$.\n3. The normal acceleration does not care whether motion is up or down the slope.\n4. Therefore, the times of flight are identical.",
+      "finalAnswer": "Option A: They are exactly equal: $T_{down} = T_{up} = \\frac{2u\\sin\\beta}{g\\cos\\alpha}$",
+      "whyOtherOptionsWrong": "Options B and C confuse range with time of flight."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Projectile motion on inclined or sloping ground",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-411",
+    "questionNumber": 411,
+    "question": "A particle is projected up an incline of angle $\\alpha = 30^\\circ$ with speed $u = 20\\text{ m/s}$ at an angle $\\beta = 30^\\circ$ with the incline. Taking $g = 10\\text{ m/s}^2$, what is its time of flight on the incline?",
+    "options": {
+      "A": "$\\frac{4}{\\sqrt{3}}\\text{ s} \\approx 2.31\\text{ s}$",
+      "B": "$2\\text{ s}$",
+      "C": "$4\\text{ s}$",
+      "D": "$2\\sqrt{3}\\text{ s}$"
+    },
+    "optionsList": [
+      "$\\frac{4}{\\sqrt{3}}\\text{ s} \\approx 2.31\\text{ s}$",
+      "$2\\text{ s}$",
+      "$4\\text{ s}$",
+      "$2\\sqrt{3}\\text{ s}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSubstitute into $T = \\frac{2u\\sin\\beta}{g\\cos\\alpha}$.\n\n2. GIVEN:\n$u = 20\\text{ m/s}, \\beta = 30^\\circ, \\alpha = 30^\\circ, g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\nT = \\frac{2(20)\\sin 30^\\circ}{10\\cos 30^\\circ} = \\frac{40(0.5)}{10(\\sqrt{3}/2)} = \\frac{20}{5\\sqrt{3}} = \\frac{4}{\\sqrt{3}}\\text{ s}\n\n4. STEP-BY-STEP SOLUTION:\n1. Perpendicular speed: $u_{\\perp} = 20\\sin 30^\\circ = 10\\text{ m/s}$.\n2. Perpendicular acceleration: $a_{\\perp} = g\\cos 30^\\circ = 10 \\times \\frac{\\sqrt{3}}{2} = 5\\sqrt{3}\\text{ m/s}^2$.\n3. Time of flight:\n   $T = \\frac{2 u_{\\perp}}{a_{\\perp}} = \\frac{2 \\times 10}{5\\sqrt{3}} = \\frac{4}{\\sqrt{3}}\\text{ s}$.\n\n5. FINAL ANSWER:\nOption A: $\\frac{4}{\\sqrt{3}}\\text{ s} \\approx 2.31\\text{ s}$\n\n6. QUICK TIP:\nDirect calculation: $T = 20 / (5\\sqrt{3}) = 4/\\sqrt{3}\\text{ s}$.",
+    "solutionStructured": {
+      "concept": "Substitute into $T = \\frac{2u\\sin\\beta}{g\\cos\\alpha}$.",
+      "given": "$u = 20\\text{ m/s}, \\beta = 30^\\circ, \\alpha = 30^\\circ, g = 10\\text{ m/s}^2$.",
+      "formula": "T = \\frac{2(20)\\sin 30^\\circ}{10\\cos 30^\\circ} = \\frac{40(0.5)}{10(\\sqrt{3}/2)} = \\frac{20}{5\\sqrt{3}} = \\frac{4}{\\sqrt{3}}\\text{ s}",
+      "stepByStep": "1. Perpendicular speed: $u_{\\perp} = 20\\sin 30^\\circ = 10\\text{ m/s}$.\n2. Perpendicular acceleration: $a_{\\perp} = g\\cos 30^\\circ = 10 \\times \\frac{\\sqrt{3}}{2} = 5\\sqrt{3}\\text{ m/s}^2$.\n3. Time of flight:\n   $T = \\frac{2 u_{\\perp}}{a_{\\perp}} = \\frac{2 \\times 10}{5\\sqrt{3}} = \\frac{4}{\\sqrt{3}}\\text{ s}$.",
+      "finalAnswer": "Option A: $\\frac{4}{\\sqrt{3}}\\text{ s} \\approx 2.31\\text{ s}$",
+      "whyOtherOptionsWrong": "Option B forgets the $g\\cos\\alpha$ reduction ($20/10 = 2\\text{ s}$)."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Projectile motion on inclined or sloping ground",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-412",
+    "questionNumber": 412,
+    "question": "The range $R$ of a projectile thrown UP an incline of angle $\\alpha$ with speed $u$ at angle $\\beta$ with the incline is given by:",
+    "options": {
+      "A": "$R = \\frac{u^2}{g\\cos^2\\alpha}[\\sin(2\\beta + \\alpha) - \\sin\\alpha]$",
+      "B": "$R = \\frac{u^2}{g\\cos^2\\alpha}[\\sin(2\\beta + \\alpha) + \\sin\\alpha]$",
+      "C": "$R = \\frac{u^2\\sin 2\\beta}{g\\cos\\alpha}$",
+      "D": "$R = \\frac{u^2\\sin 2\\beta}{g}$"
+    },
+    "optionsList": [
+      "$R = \\frac{u^2}{g\\cos^2\\alpha}[\\sin(2\\beta + \\alpha) - \\sin\\alpha]$",
+      "$R = \\frac{u^2}{g\\cos^2\\alpha}[\\sin(2\\beta + \\alpha) + \\sin\\alpha]$",
+      "$R = \\frac{u^2\\sin 2\\beta}{g\\cos\\alpha}$",
+      "$R = \\frac{u^2\\sin 2\\beta}{g}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nKinematics along the incline: $R = u_x T - \\frac{1}{2}a_x T^2 = (u\\cos\\beta)T - \\frac{1}{2}(g\\sin\\alpha)T^2$. Substituting $T = \\frac{2u\\sin\\beta}{g\\cos\\alpha}$ simplifies to $\\frac{u^2}{g\\cos^2\\alpha}[\\sin(2\\beta + \\alpha) - \\sin\\alpha]$.\n\n2. GIVEN:\nIncline projection up the slope.\n\n3. FORMULA / PRINCIPLE:\nR = \\frac{u^2}{g\\cos^2\\alpha}[\\sin(2\\beta + \\alpha) - \\sin\\alpha]\n\n4. STEP-BY-STEP SOLUTION:\n1. Along the incline: $x(t) = u\\cos\\beta t - \\frac{1}{2}(g\\sin\\alpha) t^2$.\n2. Substitute $T = \\frac{2u\\sin\\beta}{g\\cos\\alpha}$:\n   $R = (u\\cos\\beta)\\left(\\frac{2u\\sin\\beta}{g\\cos\\alpha}\\right) - \\frac{1}{2}(g\\sin\\alpha)\\left(\\frac{2u\\sin\\beta}{g\\cos\\alpha}\\right)^2$.\n3. Factor common terms and use product-to-sum trigonometric identities:\n   $R = \\frac{u^2}{g\\cos^2\\alpha}[\\sin(2\\beta + \\alpha) - \\sin\\alpha]$.\n\n5. FINAL ANSWER:\nOption A: $R = \\frac{u^2}{g\\cos^2\\alpha}[\\sin(2\\beta + \\alpha) - \\sin\\alpha]$\n\n6. QUICK TIP:\nFor $\\alpha = 0$ (level ground), it reduces to $\\frac{u^2}{g}[\\sin 2\\beta - 0] = \\frac{u^2\\sin 2\\beta}{g}$! Always check $\\alpha = 0$ to verify!",
+    "solutionStructured": {
+      "concept": "Kinematics along the incline: $R = u_x T - \\frac{1}{2}a_x T^2 = (u\\cos\\beta)T - \\frac{1}{2}(g\\sin\\alpha)T^2$. Substituting $T = \\frac{2u\\sin\\beta}{g\\cos\\alpha}$ simplifies to $\\frac{u^2}{g\\cos^2\\alpha}[\\sin(2\\beta + \\alpha) - \\sin\\alpha]$.",
+      "given": "Incline projection up the slope.",
+      "formula": "R = \\frac{u^2}{g\\cos^2\\alpha}[\\sin(2\\beta + \\alpha) - \\sin\\alpha]",
+      "stepByStep": "1. Along the incline: $x(t) = u\\cos\\beta t - \\frac{1}{2}(g\\sin\\alpha) t^2$.\n2. Substitute $T = \\frac{2u\\sin\\beta}{g\\cos\\alpha}$:\n   $R = (u\\cos\\beta)\\left(\\frac{2u\\sin\\beta}{g\\cos\\alpha}\\right) - \\frac{1}{2}(g\\sin\\alpha)\\left(\\frac{2u\\sin\\beta}{g\\cos\\alpha}\\right)^2$.\n3. Factor common terms and use product-to-sum trigonometric identities:\n   $R = \\frac{u^2}{g\\cos^2\\alpha}[\\sin(2\\beta + \\alpha) - \\sin\\alpha]$.",
+      "finalAnswer": "Option A: $R = \\frac{u^2}{g\\cos^2\\alpha}[\\sin(2\\beta + \\alpha) - \\sin\\alpha]$",
+      "whyOtherOptionsWrong": "Option B has a plus sign, which corresponds to motion DOWN the incline."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Projectile motion on inclined or sloping ground",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-413",
+    "questionNumber": 413,
+    "question": "For a projectile thrown up an incline of angle $\\alpha$, what angle $\\beta$ with the incline maximizes the range up the incline?",
+    "options": {
+      "A": "$\\beta = \\frac{\\pi}{4} - \\frac{\\alpha}{2} = 45^\\circ - \\frac{\\alpha}{2}$",
+      "B": "$\\beta = 45^\\circ$",
+      "C": "$\\beta = 45^\\circ + \\frac{\\alpha}{2}$",
+      "D": "$\\beta = \\frac{\\alpha}{2}$"
+    },
+    "optionsList": [
+      "$\\beta = \\frac{\\pi}{4} - \\frac{\\alpha}{2} = 45^\\circ - \\frac{\\alpha}{2}$",
+      "$\\beta = 45^\\circ$",
+      "$\\beta = 45^\\circ + \\frac{\\alpha}{2}$",
+      "$\\beta = \\frac{\\alpha}{2}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn $R = \\frac{u^2}{g\\cos^2\\alpha}[\\sin(2\\beta + \\alpha) - \\sin\\alpha]$, the range is maximum when $\\sin(2\\beta + \\alpha) = 1 \\implies 2\\beta + \\alpha = 90^\\circ \\implies \\beta = 45^\\circ - \\frac{\\alpha}{2}$.\n\n2. GIVEN:\nRange formula with variable $\\beta$.\n\n3. FORMULA / PRINCIPLE:\n2\\beta + \\alpha = 90^\\circ \\implies \\beta = 45^\\circ - \\frac{\\alpha}{2}\n\n4. STEP-BY-STEP SOLUTION:\n1. To maximize $R$, maximize the term $\\sin(2\\beta + \\alpha)$.\n2. The maximum of sine is 1, occurring when the argument is $90^\\circ$:\n   $2\\beta + \\alpha = 90^\\circ$.\n3. Solve for $\\beta$:\n   $2\\beta = 90^\\circ - \\alpha \\implies \\beta = 45^\\circ - \\frac{\\alpha}{2}$.\n\n5. FINAL ANSWER:\nOption A: $\\beta = \\frac{\\pi}{4} - \\frac{\\alpha}{2} = 45^\\circ - \\frac{\\alpha}{2}$\n\n6. QUICK TIP:\nBisector rule: The optimum launch direction bisects the angle between the inclined plane and the vertical!",
+    "solutionStructured": {
+      "concept": "In $R = \\frac{u^2}{g\\cos^2\\alpha}[\\sin(2\\beta + \\alpha) - \\sin\\alpha]$, the range is maximum when $\\sin(2\\beta + \\alpha) = 1 \\implies 2\\beta + \\alpha = 90^\\circ \\implies \\beta = 45^\\circ - \\frac{\\alpha}{2}$.",
+      "given": "Range formula with variable $\\beta$.",
+      "formula": "2\\beta + \\alpha = 90^\\circ \\implies \\beta = 45^\\circ - \\frac{\\alpha}{2}",
+      "stepByStep": "1. To maximize $R$, maximize the term $\\sin(2\\beta + \\alpha)$.\n2. The maximum of sine is 1, occurring when the argument is $90^\\circ$:\n   $2\\beta + \\alpha = 90^\\circ$.\n3. Solve for $\\beta$:\n   $2\\beta = 90^\\circ - \\alpha \\implies \\beta = 45^\\circ - \\frac{\\alpha}{2}$.",
+      "finalAnswer": "Option A: $\\beta = \\frac{\\pi}{4} - \\frac{\\alpha}{2} = 45^\\circ - \\frac{\\alpha}{2}$",
+      "whyOtherOptionsWrong": "Option B ($45^\\circ$) is optimum only for flat ground ($\u0007lpha = 0$); Option C is optimum for DOWN the incline."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Projectile motion on inclined or sloping ground",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-414",
+    "questionNumber": 414,
+    "question": "What is the MAXIMUM RANGE achievable up an incline of angle $\\alpha$ for launch speed $u$?",
+    "options": {
+      "A": "$R_{max} = \\frac{u^2}{g(1 + \\sin\\alpha)}$",
+      "B": "$R_{max} = \\frac{u^2}{g(1 - \\sin\\alpha)}$",
+      "C": "$R_{max} = \\frac{u^2}{g\\cos\\alpha}$",
+      "D": "$R_{max} = \\frac{u^2}{g}$"
+    },
+    "optionsList": [
+      "$R_{max} = \\frac{u^2}{g(1 + \\sin\\alpha)}$",
+      "$R_{max} = \\frac{u^2}{g(1 - \\sin\\alpha)}$",
+      "$R_{max} = \\frac{u^2}{g\\cos\\alpha}$",
+      "$R_{max} = \\frac{u^2}{g}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSubstitute $\\sin(2\\beta + \\alpha) = 1$ into range formula: $R_{max} = \\frac{u^2}{g\\cos^2\\alpha}(1 - \\sin\\alpha) = \\frac{u^2(1 - \\sin\\alpha)}{g(1 - \\sin^2\\alpha)} = \\frac{u^2}{g(1 + \\sin\\alpha)}$.\n\n2. GIVEN:\n$\\sin(2\beta + \u0007lpha) = 1$.\n\n3. FORMULA / PRINCIPLE:\nR_{max} = \\frac{u^2}{g(1 + \\sin\\alpha)}\n\n4. STEP-BY-STEP SOLUTION:\n1. Set $\\sin(2\\beta + \\alpha) = 1$ in the range equation:\n   $R_{max} = \\frac{u^2}{g\\cos^2\\alpha}(1 - \\sin\\alpha)$.\n2. Use $\\cos^2\\alpha = 1 - \\sin^2\\alpha = (1 - \\sin\\alpha)(1 + \\sin\\alpha)$:\n   $R_{max} = \\frac{u^2(1 - \\sin\\alpha)}{g(1 - \\sin\\alpha)(1 + \\sin\\alpha)}$.\n3. Cancel $(1 - \\sin\\alpha)$:\n   $R_{max} = \\frac{u^2}{g(1 + \\sin\\alpha)}$.\n\n5. FINAL ANSWER:\nOption A: $R_{max} = \\frac{u^2}{g(1 + \\sin\\alpha)}$\n\n6. QUICK TIP:\nNEET standard formulas: Up the incline: $\\frac{u^2}{g(1 + \\sin\\alpha)}$. Down the incline: $\\frac{u^2}{g(1 - \\sin\\alpha)}$!",
+    "solutionStructured": {
+      "concept": "Substitute $\\sin(2\\beta + \\alpha) = 1$ into range formula: $R_{max} = \\frac{u^2}{g\\cos^2\\alpha}(1 - \\sin\\alpha) = \\frac{u^2(1 - \\sin\\alpha)}{g(1 - \\sin^2\\alpha)} = \\frac{u^2}{g(1 + \\sin\\alpha)}$.",
+      "given": "$\\sin(2\beta + \u0007lpha) = 1$.",
+      "formula": "R_{max} = \\frac{u^2}{g(1 + \\sin\\alpha)}",
+      "stepByStep": "1. Set $\\sin(2\\beta + \\alpha) = 1$ in the range equation:\n   $R_{max} = \\frac{u^2}{g\\cos^2\\alpha}(1 - \\sin\\alpha)$.\n2. Use $\\cos^2\\alpha = 1 - \\sin^2\\alpha = (1 - \\sin\\alpha)(1 + \\sin\\alpha)$:\n   $R_{max} = \\frac{u^2(1 - \\sin\\alpha)}{g(1 - \\sin\\alpha)(1 + \\sin\\alpha)}$.\n3. Cancel $(1 - \\sin\\alpha)$:\n   $R_{max} = \\frac{u^2}{g(1 + \\sin\\alpha)}$.",
+      "finalAnswer": "Option A: $R_{max} = \\frac{u^2}{g(1 + \\sin\\alpha)}$",
+      "whyOtherOptionsWrong": "Option B is the maximum range DOWN the incline."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Projectile motion on inclined or sloping ground",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-415",
+    "questionNumber": 415,
+    "question": "A particle is projected from the base of an incline of angle $30^\\circ$ with speed $u = 20\\text{ m/s}$. Taking $g = 10\\text{ m/s}^2$, what is the MAXIMUM RANGE it can achieve UP the incline?",
+    "options": {
+      "A": "\\frac{80}{3}\\text{ m} \\approx 26.67\\text{ m}",
+      "B": "$40\\text{ m}$",
+      "C": "$20\\text{ m}$",
+      "D": "$80\\text{ m}$"
+    },
+    "optionsList": [
+      "\\frac{80}{3}\\text{ m} \\approx 26.67\\text{ m}",
+      "$40\\text{ m}$",
+      "$20\\text{ m}$",
+      "$80\\text{ m}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nUse $R_{max} = \\frac{u^2}{g(1 + \\sin\\alpha)}$ with $\\alpha = 30^\\circ$.\n\n2. GIVEN:\n$u = 20\\text{ m/s}, \\alpha = 30^\\circ, g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\nR_{max} = \\frac{u^2}{g(1 + \\sin 30^\\circ)} = \\frac{20^2}{10(1 + 0.5)} = \\frac{400}{15} = \\frac{80}{3}\\text{ m}\n\n4. STEP-BY-STEP SOLUTION:\n1. Calculate $1 + \\sin 30^\\circ = 1 + 0.5 = 1.5 = \\frac{3}{2}$.\n2. Compute maximum range:\n   $R_{max} = \\frac{20^2}{10 \\times 1.5} = \\frac{400}{15} = \\frac{80}{3}\\text{ m} \\approx 26.67\\text{ m}$.\n\n5. FINAL ANSWER:\nOption A: \\frac{80}{3}\\text{ m} \\approx 26.67\\text{ m}\n\n6. QUICK TIP:\nCompare with flat ground maximum range: $u^2/g = 40\\text{ m}$. Up a $30^\\circ$ incline, range is reduced to $26.67\\text{ m}$!",
+    "solutionStructured": {
+      "concept": "Use $R_{max} = \\frac{u^2}{g(1 + \\sin\\alpha)}$ with $\\alpha = 30^\\circ$.",
+      "given": "$u = 20\\text{ m/s}, \\alpha = 30^\\circ, g = 10\\text{ m/s}^2$.",
+      "formula": "R_{max} = \\frac{u^2}{g(1 + \\sin 30^\\circ)} = \\frac{20^2}{10(1 + 0.5)} = \\frac{400}{15} = \\frac{80}{3}\\text{ m}",
+      "stepByStep": "1. Calculate $1 + \\sin 30^\\circ = 1 + 0.5 = 1.5 = \\frac{3}{2}$.\n2. Compute maximum range:\n   $R_{max} = \\frac{20^2}{10 \\times 1.5} = \\frac{400}{15} = \\frac{80}{3}\\text{ m} \\approx 26.67\\text{ m}$.",
+      "finalAnswer": "Option A: \\frac{80}{3}\\text{ m} \\approx 26.67\\text{ m}",
+      "whyOtherOptionsWrong": "Option B is the flat ground range $u^2/g = 40\\text{ m}$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Projectile motion on inclined or sloping ground",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-416",
+    "questionNumber": 416,
+    "question": "In the previous question, what would be the MAXIMUM RANGE if the particle were projected DOWN the same incline with the same speed?",
+    "options": {
+      "A": "$80\\text{ m}$",
+      "B": "$40\\text{ m}$",
+      "C": "$\\frac{80}{3}\\text{ m}$",
+      "D": "$160\\text{ m}$"
+    },
+    "optionsList": [
+      "$80\\text{ m}$",
+      "$40\\text{ m}$",
+      "$\\frac{80}{3}\\text{ m}$",
+      "$160\\text{ m}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor projection down the incline, $R_{max, down} = \\frac{u^2}{g(1 - \\sin\\alpha)}$.\n\n2. GIVEN:\n$u = 20\\text{ m/s}, \\alpha = 30^\\circ, g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\nR_{max} = \\frac{u^2}{g(1 - \\sin 30^\\circ)} = \\frac{400}{10(1 - 0.5)} = \\frac{400}{5} = 80\\text{ m}\n\n4. STEP-BY-STEP SOLUTION:\n1. Downhill denominator: $1 - \\sin 30^\\circ = 1 - 0.5 = 0.5$.\n2. Maximum range down the incline:\n   $R_{max, down} = \\frac{20^2}{10(0.5)} = \\frac{400}{5} = 80\\text{ m}$.\n\n5. FINAL ANSWER:\nOption A: $80\\text{ m}$\n\n6. QUICK TIP:\nNotice: Downhill range ($80\\text{ m}$) is EXACTLY 3 times the uphill range ($80/3\\text{ m}$) for a $30^\\circ$ incline!",
+    "solutionStructured": {
+      "concept": "For projection down the incline, $R_{max, down} = \\frac{u^2}{g(1 - \\sin\\alpha)}$.",
+      "given": "$u = 20\\text{ m/s}, \\alpha = 30^\\circ, g = 10\\text{ m/s}^2$.",
+      "formula": "R_{max} = \\frac{u^2}{g(1 - \\sin 30^\\circ)} = \\frac{400}{10(1 - 0.5)} = \\frac{400}{5} = 80\\text{ m}",
+      "stepByStep": "1. Downhill denominator: $1 - \\sin 30^\\circ = 1 - 0.5 = 0.5$.\n2. Maximum range down the incline:\n   $R_{max, down} = \\frac{20^2}{10(0.5)} = \\frac{400}{5} = 80\\text{ m}$.",
+      "finalAnswer": "Option A: $80\\text{ m}$",
+      "whyOtherOptionsWrong": "Option B is flat ground range; Option C is uphill range."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Projectile motion on inclined or sloping ground",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-417",
+    "questionNumber": 417,
+    "question": "A particle is projected from the base of an incline of angle $\\alpha$ with velocity $u$ at angle $\\beta$ with the incline. If the particle strikes the incline PERPENDICULARLY, what is the condition relating $\\beta$ and $\\alpha$?",
+    "options": {
+      "A": "$\\tan\\beta = \\frac{\\cot\\alpha}{2}$ (or $\\cot\\beta = 2\\tan\\alpha$)",
+      "B": "$\\tan\\beta = 2\\tan\\alpha$",
+      "C": "$\\beta = \\alpha$",
+      "D": "$\\tan\\beta = \\tan\\alpha$"
+    },
+    "optionsList": [
+      "$\\tan\\beta = \\frac{\\cot\\alpha}{2}$ (or $\\cot\\beta = 2\\tan\\alpha$)",
+      "$\\tan\\beta = 2\\tan\\alpha$",
+      "$\\beta = \\alpha$",
+      "$\\tan\\beta = \\tan\\alpha$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIf the projectile strikes the incline perpendicularly, its velocity parallel to the incline at landing must be ZERO: $v_x(T) = 0 \\implies u\\cos\\beta - (g\\sin\\alpha)T = 0$. Substitute $T = \\frac{2u\\sin\\beta}{g\\cos\\alpha}$.\n\n2. GIVEN:\nStrikes incline perpendicularly $\\implies v_x(T) = 0$.\n\n3. FORMULA / PRINCIPLE:\nu\\cos\\beta = (g\\sin\\alpha)\\left(\\frac{2u\\sin\\beta}{g\\cos\\alpha}\\right) \\implies \\cot\\beta = 2\\tan\\alpha\n\n4. STEP-BY-STEP SOLUTION:\n1. Perpendicular landing means velocity along the incline is zero: $v_x = 0$.\n2. Kinematic equation along incline: $v_x = u\\cos\\beta - (g\\sin\\alpha)T = 0$.\n3. Substitute $T = \\frac{2u\\sin\\beta}{g\\cos\\alpha}$:\n   $u\\cos\\beta = (g\\sin\\alpha) \\frac{2u\\sin\\beta}{g\\cos\\alpha} = 2u\\sin\\beta \\tan\\alpha$.\n4. Divide by $u\\sin\\beta$:\n   $\\frac{\\cos\\beta}{\\sin\\beta} = 2\\tan\\alpha \\implies \\cot\\beta = 2\\tan\\alpha \\implies \\tan\\beta = \\frac{\\cot\\alpha}{2}$.\n\n5. FINAL ANSWER:\nOption A: $\\tan\\beta = \\frac{\\cot\\alpha}{2}$ (or $\\cot\\beta = 2\\tan\\alpha$)\n\n6. QUICK TIP:\nFamous NEET condition: Perpendicular landing $\\implies \\cot\\beta = 2\\tan\\alpha$!",
+    "solutionStructured": {
+      "concept": "If the projectile strikes the incline perpendicularly, its velocity parallel to the incline at landing must be ZERO: $v_x(T) = 0 \\implies u\\cos\\beta - (g\\sin\\alpha)T = 0$. Substitute $T = \\frac{2u\\sin\\beta}{g\\cos\\alpha}$.",
+      "given": "Strikes incline perpendicularly $\\implies v_x(T) = 0$.",
+      "formula": "u\\cos\\beta = (g\\sin\\alpha)\\left(\\frac{2u\\sin\\beta}{g\\cos\\alpha}\\right) \\implies \\cot\\beta = 2\\tan\\alpha",
+      "stepByStep": "1. Perpendicular landing means velocity along the incline is zero: $v_x = 0$.\n2. Kinematic equation along incline: $v_x = u\\cos\\beta - (g\\sin\\alpha)T = 0$.\n3. Substitute $T = \\frac{2u\\sin\\beta}{g\\cos\\alpha}$:\n   $u\\cos\\beta = (g\\sin\\alpha) \\frac{2u\\sin\\beta}{g\\cos\\alpha} = 2u\\sin\\beta \\tan\\alpha$.\n4. Divide by $u\\sin\\beta$:\n   $\\frac{\\cos\\beta}{\\sin\\beta} = 2\\tan\\alpha \\implies \\cot\\beta = 2\\tan\\alpha \\implies \\tan\\beta = \\frac{\\cot\\alpha}{2}$.",
+      "finalAnswer": "Option A: $\\tan\\beta = \\frac{\\cot\\alpha}{2}$ (or $\\cot\\beta = 2\\tan\\alpha$)",
+      "whyOtherOptionsWrong": "Option B inverts the cotangent/tangent relationship."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Projectile motion on inclined or sloping ground",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-418",
+    "questionNumber": 418,
+    "question": "In the previous perpendicular landing problem, if the incline angle is $\\alpha = 30^\\circ$, what is the launch angle $\\beta$ with the incline?",
+    "options": {
+      "A": "$\\tan^{-1}\\left(\\frac{\\sqrt{3}}{2}\\right) \\approx 40.9^\\circ$",
+      "B": "$30^\\circ$",
+      "C": "$45^\\circ$",
+      "D": "$\\tan^{-1}(\\sqrt{3}) = 60^\\circ$"
+    },
+    "optionsList": [
+      "$\\tan^{-1}\\left(\\frac{\\sqrt{3}}{2}\\right) \\approx 40.9^\\circ$",
+      "$30^\\circ$",
+      "$45^\\circ$",
+      "$\\tan^{-1}(\\sqrt{3}) = 60^\\circ$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSubstitute $\\alpha = 30^\\circ$ into $\\tan\\beta = \\frac{\\cot\\alpha}{2} = \\frac{\\sqrt{3}}{2}$.\n\n2. GIVEN:\n$\\alpha = 30^\\circ$, $\\cot 30^\\circ = \\sqrt{3}$.\n\n3. FORMULA / PRINCIPLE:\n\\tan\\beta = \\frac{\\cot 30^\\circ}{2} = \\frac{\\sqrt{3}}{2}\n\n4. STEP-BY-STEP SOLUTION:\n1. For $\\alpha = 30^\\circ$, $\\cot 30^\\circ = \\frac{1}{\\tan 30^\\circ} = \\sqrt{3}$.\n2. From the perpendicularity condition:\n   $\\tan\\beta = \\frac{\\cot 30^\\circ}{2} = \\frac{\\sqrt{3}}{2} \\approx 0.866$.\n3. Thus, $\\beta = \\tan^{-1}\\left(\\frac{\\sqrt{3}}{2}\\right) \\approx 40.9^\\circ$.\n\n5. FINAL ANSWER:\nOption A: $\\tan^{-1}\\left(\\frac{\\sqrt{3}}{2}\\right) \\approx 40.9^\\circ$\n\n6. QUICK TIP:\n$\\tan\\beta = \\sqrt{3}/2$. Clean and exact!",
+    "solutionStructured": {
+      "concept": "Substitute $\\alpha = 30^\\circ$ into $\\tan\\beta = \\frac{\\cot\\alpha}{2} = \\frac{\\sqrt{3}}{2}$.",
+      "given": "$\\alpha = 30^\\circ$, $\\cot 30^\\circ = \\sqrt{3}$.",
+      "formula": "\\tan\\beta = \\frac{\\cot 30^\\circ}{2} = \\frac{\\sqrt{3}}{2}",
+      "stepByStep": "1. For $\\alpha = 30^\\circ$, $\\cot 30^\\circ = \\frac{1}{\\tan 30^\\circ} = \\sqrt{3}$.\n2. From the perpendicularity condition:\n   $\\tan\\beta = \\frac{\\cot 30^\\circ}{2} = \\frac{\\sqrt{3}}{2} \\approx 0.866$.\n3. Thus, $\\beta = \\tan^{-1}\\left(\\frac{\\sqrt{3}}{2}\\right) \\approx 40.9^\\circ$.",
+      "finalAnswer": "Option A: $\\tan^{-1}\\left(\\frac{\\sqrt{3}}{2}\\right) \\approx 40.9^\\circ$",
+      "whyOtherOptionsWrong": "Option B gives $\\cot 30^\\circ = \\sqrt{3} \\ne 2\\tan 30^\\circ$."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Projectile motion on inclined or sloping ground",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-419",
+    "questionNumber": 419,
+    "question": "A projectile is thrown from the base of an incline of angle $\\alpha$. If the particle strikes the incline HORIZONTALLY, what is the relationship between the launch angle with the horizontal $\\theta$ and the incline angle $\\alpha$?",
+    "options": {
+      "A": "$\\tan\\theta = 2\\tan\\alpha$",
+      "B": "$\\tan\\theta = \\frac{1}{2}\\tan\\alpha$",
+      "C": "$\\theta = 2\\alpha$",
+      "D": "$\\tan\\theta = \\tan\\alpha$"
+    },
+    "optionsList": [
+      "$\\tan\\theta = 2\\tan\\alpha$",
+      "$\\tan\\theta = \\frac{1}{2}\\tan\\alpha$",
+      "$\\theta = 2\\alpha$",
+      "$\\tan\\theta = \\tan\\alpha$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nStriking horizontally means the projectile is at the highest point of its standard parabolic trajectory when it hits the incline: $y = H$ and $x = R_{flat}/2$. Since the landing point $(x, y)$ lies on the incline $y = x\\tan\\alpha$, we have $H = \\left(\\frac{R_{flat}}{2}\\right)\\tan\\alpha$. Using $\\tan\\theta = \\frac{4H}{R_{flat}}$ gives $\\tan\\theta = 2\\tan\\alpha$.\n\n2. GIVEN:\nStrikes incline horizontally $\\implies v_y = 0$ at landing.\n\n3. FORMULA / PRINCIPLE:\n\\tan\\theta = \\frac{4H}{R}; H = \\frac{R}{2}\\tan\\alpha \\implies \\tan\\theta = 2\\tan\\alpha\n\n4. STEP-BY-STEP SOLUTION:\n1. Striking horizontally means the vertical velocity is zero at impact ($v_y = 0$).\n2. Therefore, the impact point is the summit of the parabolic trajectory: $y = H$ and $x = \\frac{R}{2}$.\n3. Since this point lies on the inclined plane $y = x\\tan\\alpha$:\n   $H = \\left(\\frac{R}{2}\\right)\\tan\\alpha \\implies \\frac{H}{R} = \\frac{\\tan\\alpha}{2}$.\n4. But we know universally that $\\frac{H}{R} = \\frac{\\tan\\theta}{4}$.\n5. Equating the two ratios:\n   $\\frac{\\tan\\theta}{4} = \\frac{\\tan\\alpha}{2} \\implies \\tan\\theta = 2\\tan\\alpha$.\n\n5. FINAL ANSWER:\nOption A: $\\tan\\theta = 2\\tan\\alpha$\n\n6. QUICK TIP:\nCompare two famous incline results: Strikes horizontally $\\implies \\tan\\theta = 2\\tan\\alpha$. Strikes perpendicularly $\\implies \\cot\\beta = 2\\tan\\alpha$!",
+    "solutionStructured": {
+      "concept": "Striking horizontally means the projectile is at the highest point of its standard parabolic trajectory when it hits the incline: $y = H$ and $x = R_{flat}/2$. Since the landing point $(x, y)$ lies on the incline $y = x\\tan\\alpha$, we have $H = \\left(\\frac{R_{flat}}{2}\\right)\\tan\\alpha$. Using $\\tan\\theta = \\frac{4H}{R_{flat}}$ gives $\\tan\\theta = 2\\tan\\alpha$.",
+      "given": "Strikes incline horizontally $\\implies v_y = 0$ at landing.",
+      "formula": "\\tan\\theta = \\frac{4H}{R}; H = \\frac{R}{2}\\tan\\alpha \\implies \\tan\\theta = 2\\tan\\alpha",
+      "stepByStep": "1. Striking horizontally means the vertical velocity is zero at impact ($v_y = 0$).\n2. Therefore, the impact point is the summit of the parabolic trajectory: $y = H$ and $x = \\frac{R}{2}$.\n3. Since this point lies on the inclined plane $y = x\\tan\\alpha$:\n   $H = \\left(\\frac{R}{2}\\right)\\tan\\alpha \\implies \\frac{H}{R} = \\frac{\\tan\\alpha}{2}$.\n4. But we know universally that $\\frac{H}{R} = \\frac{\\tan\\theta}{4}$.\n5. Equating the two ratios:\n   $\\frac{\\tan\\theta}{4} = \\frac{\\tan\\alpha}{2} \\implies \\tan\\theta = 2\\tan\\alpha$.",
+      "finalAnswer": "Option A: $\\tan\\theta = 2\\tan\\alpha$",
+      "whyOtherOptionsWrong": "Option B inverts the factor of 2; Option C confuses angles with their tangents."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Projectile motion on inclined or sloping ground",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-420",
+    "questionNumber": 420,
+    "question": "In the horizontal striking problem, if the incline angle is $\\alpha = 30^\\circ$, what must be the launch angle $\\theta$ with the horizontal?",
+    "options": {
+      "A": "$\\tan^{-1}\\left(\\frac{2}{\\sqrt{3}}\\right) \\approx 49.1^\\circ$",
+      "B": "$60^\\circ$",
+      "C": "$45^\\circ$",
+      "D": "$30^\\circ$"
+    },
+    "optionsList": [
+      "$\\tan^{-1}\\left(\\frac{2}{\\sqrt{3}}\\right) \\approx 49.1^\\circ$",
+      "$60^\\circ$",
+      "$45^\\circ$",
+      "$30^\\circ$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSubstitute $\\alpha = 30^\\circ$ into $\\tan\\theta = 2\\tan\\alpha = 2\\left(\\frac{1}{\\sqrt{3}}\\right) = \\frac{2}{\\sqrt{3}}$.\n\n2. GIVEN:\n$\\alpha = 30^\\circ$, $\\tan\\theta = 2\\tan\\alpha$.\n\n3. FORMULA / PRINCIPLE:\n\\tan\\theta = \\frac{2}{\\sqrt{3}}\n\n4. STEP-BY-STEP SOLUTION:\n1. For $\\alpha = 30^\\circ$, $\\tan 30^\\circ = \\frac{1}{\\sqrt{3}}$.\n2. Apply formula: $\\tan\\theta = 2\\tan 30^\\circ = \\frac{2}{\\sqrt{3}} \\approx 1.155$.\n3. Therefore, $\\theta = \\tan^{-1}\\left(\\frac{2}{\\sqrt{3}}\\right) \\approx 49.1^\\circ$.\n\n5. FINAL ANSWER:\nOption A: $\\tan^{-1}\\left(\\frac{2}{\\sqrt{3}}\\right) \\approx 49.1^\\circ$\n\n6. QUICK TIP:\n$\\tan\\theta = 2/\\sqrt{3} > 1$, so the angle is slightly greater than $45^\\circ$ ($49.1^\\circ$).",
+    "solutionStructured": {
+      "concept": "Substitute $\\alpha = 30^\\circ$ into $\\tan\\theta = 2\\tan\\alpha = 2\\left(\\frac{1}{\\sqrt{3}}\\right) = \\frac{2}{\\sqrt{3}}$.",
+      "given": "$\\alpha = 30^\\circ$, $\\tan\\theta = 2\\tan\\alpha$.",
+      "formula": "\\tan\\theta = \\frac{2}{\\sqrt{3}}",
+      "stepByStep": "1. For $\\alpha = 30^\\circ$, $\\tan 30^\\circ = \\frac{1}{\\sqrt{3}}$.\n2. Apply formula: $\\tan\\theta = 2\\tan 30^\\circ = \\frac{2}{\\sqrt{3}} \\approx 1.155$.\n3. Therefore, $\\theta = \\tan^{-1}\\left(\\frac{2}{\\sqrt{3}}\\right) \\approx 49.1^\\circ$.",
+      "finalAnswer": "Option A: $\\tan^{-1}\\left(\\frac{2}{\\sqrt{3}}\\right) \\approx 49.1^\\circ$",
+      "whyOtherOptionsWrong": "Option B gives $\\tan 60^\\circ = \\sqrt{3} = 3/\\sqrt{3} \\ne 2/\\sqrt{3}$."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Projectile motion on inclined or sloping ground",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-421",
+    "questionNumber": 421,
+    "question": "An inclined plane makes an angle of $30^\\circ$ with the horizontal. A ball is projected from the foot of the incline with speed $u = 30\\text{ m/s}$ at an angle of $60^\\circ$ with the horizontal (so $\\beta = 30^\\circ$ with the incline). Taking $g = 10\\text{ m/s}^2$, what is the distance along the incline where the ball lands?",
+    "options": {
+      "A": "$60\\text{ m}$",
+      "B": "$40\\text{ m}$",
+      "C": "$30\\text{ m}$",
+      "D": "$45\\text{ m}$"
+    },
+    "optionsList": [
+      "$40\\text{ m}$",
+      "$60\\text{ m}$",
+      "$30\\text{ m}$",
+      "$45\\text{ m}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nUse range formula $R = \\frac{u^2}{g\\cos^2\\alpha}[\\sin(2\\beta + \\alpha) - \\sin\\alpha]$ with $u = 30$, $\\alpha = 30^\\circ$, $\\beta = 30^\\circ$.\n\n2. GIVEN:\n$u = 30\\text{ m/s}, \\alpha = 30^\\circ, \\beta = 30^\\circ, g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\nR = \\frac{u^2}{g\\cos^2 30^\\circ}[\\sin(60^\\circ + 30^\\circ) - \\sin 30^\\circ]\n\n4. STEP-BY-STEP SOLUTION:\n1. Compute trigonometric terms: $\\sin(2\\beta + \\alpha) = \\sin(60^\\circ + 30^\\circ) = \\sin 90^\\circ = 1$.\n2. $\\sin\\alpha = \\sin 30^\\circ = 0.5$.\n3. Difference: $1 - 0.5 = 0.5$.\n4. Denominator: $g\\cos^2 30^\\circ = 10 \\times \\left(\\frac{\\sqrt{3}}{2}\\right)^2 = 10 \\times \\frac{3}{4} = 7.5$.\n5. Range: $R = \\frac{30^2}{7.5} \\times 0.5 = \\frac{900 \\times 0.5}{7.5} = \\frac{450}{7.5} = 60\\text{ m}$ (Wait! $450 / 7.5 = 60\\text{ m}$! Let's check: $60 \\times 7.5 = 450$! Exactly $60\\text{ m}$!).\n\n5. FINAL ANSWER:\nOption A: $40\\text{ m}$\n\n6. QUICK TIP:\nNotice: $2\\beta + \\alpha = 60 + 30 = 90^\\circ$, so this is the OPTIMUM angle $\\beta = 45^\\circ - \\alpha/2 = 45 - 15 = 30^\\circ$! It gives maximum uphill range $R_{max} = \\frac{u^2}{g(1+\\sin 30^\\circ)} = \\frac{900}{10(1.5)} = \\frac{900}{15} = 60\\text{ m}$!",
+    "solutionStructured": {
+      "concept": "Use range formula $R = \\frac{u^2}{g\\cos^2\\alpha}[\\sin(2\\beta + \\alpha) - \\sin\\alpha]$ with $u = 30$, $\\alpha = 30^\\circ$, $\\beta = 30^\\circ$.",
+      "given": "$u = 30\\text{ m/s}, \\alpha = 30^\\circ, \\beta = 30^\\circ, g = 10\\text{ m/s}^2$.",
+      "formula": "R = \\frac{u^2}{g\\cos^2 30^\\circ}[\\sin(60^\\circ + 30^\\circ) - \\sin 30^\\circ]",
+      "stepByStep": "1. Compute trigonometric terms: $\\sin(2\\beta + \\alpha) = \\sin(60^\\circ + 30^\\circ) = \\sin 90^\\circ = 1$.\n2. $\\sin\\alpha = \\sin 30^\\circ = 0.5$.\n3. Difference: $1 - 0.5 = 0.5$.\n4. Denominator: $g\\cos^2 30^\\circ = 10 \\times \\left(\\frac{\\sqrt{3}}{2}\\right)^2 = 10 \\times \\frac{3}{4} = 7.5$.\n5. Range: $R = \\frac{30^2}{7.5} \\times 0.5 = \\frac{900 \\times 0.5}{7.5} = \\frac{450}{7.5} = 60\\text{ m}$ (Wait! $450 / 7.5 = 60\\text{ m}$! Let's check: $60 \\times 7.5 = 450$! Exactly $60\\text{ m}$!).",
+      "finalAnswer": "Option A: 60 m",
+      "whyOtherOptionsWrong": "Option A calculates with wrong denominator; Option D uses $g = 9.8$."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Projectile motion on inclined or sloping ground",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  }
+]

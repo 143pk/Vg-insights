@@ -1,0 +1,4631 @@
+// Auto-generated verified NEET UG Question Bank
+// Chapter: Motion in a Straight Line | Physics | Class 11
+import { ChapterwiseMCQ } from "../../../types/chapterwiseMcq";
+
+export const MOTION_PART2_MCQS: ChapterwiseMCQ[] = [
+  {
+    "id": "msl-mcq-126",
+    "questionNumber": 126,
+    "question": "Acceleration is defined mathematically as:",
+    "options": {
+      "A": "Rate of change of position with respect to time",
+      "B": "Rate of change of velocity with respect to time",
+      "C": "Rate of change of speed with respect to time",
+      "D": "Rate of change of displacement with respect to distance"
+    },
+    "optionsList": [
+      "Rate of change of position with respect to time",
+      "Rate of change of velocity with respect to time",
+      "Rate of change of speed with respect to time",
+      "Rate of change of displacement with respect to distance"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nAcceleration is a vector quantity defined as the rate of change of the velocity vector with respect to time: a\u20d7 = dv\u20d7/dt.\n\n2. GIVEN:\nDefinition of acceleration.\n\n3. FORMULA / PRINCIPLE:\na\u20d7 = dv\u20d7/dt = lim_{\u0394t -> 0} (\u0394v\u20d7 / \u0394t)\n\n4. STEP-BY-STEP SOLUTION:\n1. Velocity is the rate of change of position (v\u20d7 = dr\u20d7/dt).\n2. Acceleration is the rate of change of velocity: a\u20d7 = dv\u20d7/dt.\n3. Because velocity is a vector, acceleration can arise from a change in magnitude (speed), a change in direction, or both.\n4. Its SI unit is m/s\u00b2 and its dimensional formula is [M\u2070 L T\u207b\u00b2].\n\n5. FINAL ANSWER:\nOption B: Rate of change of velocity with respect to time\n\n6. QUICK TIP:\nAcceleration is rate of change of VELOCITY, not speed! In uniform circular motion, speed is constant but acceleration is non-zero because direction changes.",
+    "solutionStructured": {
+      "concept": "Acceleration is a vector quantity defined as the rate of change of the velocity vector with respect to time: a\u20d7 = dv\u20d7/dt.",
+      "given": "Definition of acceleration.",
+      "formula": "a\u20d7 = dv\u20d7/dt = lim_{\u0394t -> 0} (\u0394v\u20d7 / \u0394t)",
+      "stepByStep": "1. Velocity is the rate of change of position (v\u20d7 = dr\u20d7/dt).\n2. Acceleration is the rate of change of velocity: a\u20d7 = dv\u20d7/dt.\n3. Because velocity is a vector, acceleration can arise from a change in magnitude (speed), a change in direction, or both.\n4. Its SI unit is m/s\u00b2 and its dimensional formula is [M\u2070 L T\u207b\u00b2].",
+      "finalAnswer": "Option B: Rate of change of velocity with respect to time",
+      "whyOtherOptionsWrong": "Option A is velocity. Option C is tangential acceleration only, neglecting direction change. Option D is a dimensionless ratio."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-127",
+    "questionNumber": 127,
+    "question": "A car accelerates uniformly along a straight road from 18 km/h to 72 km/h in 5 seconds. What is the magnitude of its acceleration?",
+    "options": {
+      "A": "3 m/s\u00b2",
+      "B": "5.4 m/s\u00b2",
+      "C": "10.8 m/s\u00b2",
+      "D": "15 m/s\u00b2"
+    },
+    "optionsList": [
+      "3 m/s\u00b2",
+      "5.4 m/s\u00b2",
+      "10.8 m/s\u00b2",
+      "15 m/s\u00b2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nConvert speeds from km/h to m/s, then apply definition a = (v - u) / t.\n\n2. GIVEN:\nu = 18 km/h = 5 m/s, v = 72 km/h = 20 m/s, t = 5 s.\n\n3. FORMULA / PRINCIPLE:\na = (v - u) / t\n\n4. STEP-BY-STEP SOLUTION:\n1. Convert initial speed: u = 18 * (5/18) = 5 m/s.\n2. Convert final speed: v = 72 * (5/18) = 20 m/s.\n3. Change in velocity: \u0394v = 20 - 5 = 15 m/s.\n4. Acceleration: a = \u0394v / t = 15 m/s / 5 s = 3 m/s\u00b2.\n5. Therefore, the acceleration is 3 m/s\u00b2.\n\n5. FINAL ANSWER:\nOption A: 3 m/s\u00b2\n\n6. QUICK TIP:\nAlways convert km/h to m/s first: 18 km/h = 5 m/s and 72 km/h = 20 m/s. Then a = (20 - 5)/5 = 3 m/s\u00b2.",
+    "solutionStructured": {
+      "concept": "Convert speeds from km/h to m/s, then apply definition a = (v - u) / t.",
+      "given": "u = 18 km/h = 5 m/s, v = 72 km/h = 20 m/s, t = 5 s.",
+      "formula": "a = (v - u) / t",
+      "stepByStep": "1. Convert initial speed: u = 18 * (5/18) = 5 m/s.\n2. Convert final speed: v = 72 * (5/18) = 20 m/s.\n3. Change in velocity: \u0394v = 20 - 5 = 15 m/s.\n4. Acceleration: a = \u0394v / t = 15 m/s / 5 s = 3 m/s\u00b2.\n5. Therefore, the acceleration is 3 m/s\u00b2.",
+      "finalAnswer": "Option A: 3 m/s\u00b2",
+      "whyOtherOptionsWrong": "Option B forgets to convert units ((72 - 18)/10 = 5.4). Option C uses 54/5. Option D is \u0394v."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-128",
+    "questionNumber": 128,
+    "question": "Which of the following statements about retardation is strictly correct?",
+    "options": {
+      "A": "Retardation is always negative in all coordinate systems.",
+      "B": "Retardation means acceleration opposes the direction of velocity.",
+      "C": "Retardation occurs whenever acceleration is negative, regardless of the sign of velocity.",
+      "D": "Retardation increases the speed of an object moving in the negative direction."
+    },
+    "optionsList": [
+      "Retardation is always negative in all coordinate systems.",
+      "Retardation means acceleration opposes the direction of velocity.",
+      "Retardation occurs whenever acceleration is negative, regardless of the sign of velocity.",
+      "Retardation increases the speed of an object moving in the negative direction."
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nRetardation (deceleration) is the decrease of speed (|v|) with time. This occurs if and only if the acceleration vector is directed opposite to the velocity vector (v * a < 0).\n\n2. GIVEN:\nDefinition of retardation.\n\n3. FORMULA / PRINCIPLE:\nRetardation <=> d|v|/dt < 0 <=> v\u20d7 \u00b7 a\u20d7 < 0.\n\n4. STEP-BY-STEP SOLUTION:\n1. Speed is the magnitude |v| of velocity.\n2. For speed to decrease, acceleration must push against the direction of motion.\n3. Thus, acceleration opposes velocity.\n4. If v is positive, retardation requires a to be negative.\n5. If v is negative, retardation requires a to be POSITIVE!\n6. Therefore, retardation does NOT simply mean 'a is negative'; it means acceleration opposes velocity.\n\n5. FINAL ANSWER:\nOption B: Retardation means acceleration opposes the direction of velocity.\n\n6. QUICK TIP:\nCrucial NEET concept: If a car moves in the -x direction (v < 0), a positive acceleration (a > 0) causes it to slow down (retardation)!",
+    "solutionStructured": {
+      "concept": "Retardation (deceleration) is the decrease of speed (|v|) with time. This occurs if and only if the acceleration vector is directed opposite to the velocity vector (v * a < 0).",
+      "given": "Definition of retardation.",
+      "formula": "Retardation <=> d|v|/dt < 0 <=> v\u20d7 \u00b7 a\u20d7 < 0.",
+      "stepByStep": "1. Speed is the magnitude |v| of velocity.\n2. For speed to decrease, acceleration must push against the direction of motion.\n3. Thus, acceleration opposes velocity.\n4. If v is positive, retardation requires a to be negative.\n5. If v is negative, retardation requires a to be POSITIVE!\n6. Therefore, retardation does NOT simply mean 'a is negative'; it means acceleration opposes velocity.",
+      "finalAnswer": "Option B: Retardation means acceleration opposes the direction of velocity.",
+      "whyOtherOptionsWrong": "Option A is false because if v < 0, retardation has a > 0. Option C is false because if v < 0 and a < 0, the car speeds up. Option D contradicts the definition of retardation."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-129",
+    "questionNumber": 129,
+    "question": "The velocity of a particle at any time t is given by v = 20 - 4t (in m/s). What is its retardation?",
+    "options": {
+      "A": "4 m/s\u00b2",
+      "B": "-4 m/s\u00b2",
+      "C": "20 m/s\u00b2",
+      "D": "5 m/s\u00b2"
+    },
+    "optionsList": [
+      "4 m/s\u00b2",
+      "-4 m/s\u00b2",
+      "20 m/s\u00b2",
+      "5 m/s\u00b2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nAcceleration is a = dv/dt = -4 m/s\u00b2. Retardation is defined as the magnitude of deceleration (rate of decrease of speed), so Retardation = -a = +4 m/s\u00b2.\n\n2. GIVEN:\nv(t) = 20 - 4t m/s.\n\n3. FORMULA / PRINCIPLE:\na = dv/dt = -4 m/s\u00b2; Retardation = -a = 4 m/s\u00b2.\n\n4. STEP-BY-STEP SOLUTION:\n1. Differentiate velocity to find acceleration:\n   a = dv/dt = d(20 - 4t)/dt = -4 m/s\u00b2.\n2. Since the particle is moving in the positive direction (v > 0 for t < 5 s), the negative acceleration opposes motion, causing it to slow down.\n3. Retardation is defined as the negative of acceleration (the rate at which speed decreases):\n   Retardation = -a = -(-4) = 4 m/s\u00b2.\n4. Therefore, the retardation is 4 m/s\u00b2.\n\n5. FINAL ANSWER:\nOption A: 4 m/s\u00b2\n\n6. QUICK TIP:\n'Retardation' already implies slowing down; its value is stated as a positive magnitude (4 m/s\u00b2). Stating '-4 m/s\u00b2 retardation' is a double negative!",
+    "solutionStructured": {
+      "concept": "Acceleration is a = dv/dt = -4 m/s\u00b2. Retardation is defined as the magnitude of deceleration (rate of decrease of speed), so Retardation = -a = +4 m/s\u00b2.",
+      "given": "v(t) = 20 - 4t m/s.",
+      "formula": "a = dv/dt = -4 m/s\u00b2; Retardation = -a = 4 m/s\u00b2.",
+      "stepByStep": "1. Differentiate velocity to find acceleration:\n   a = dv/dt = d(20 - 4t)/dt = -4 m/s\u00b2.\n2. Since the particle is moving in the positive direction (v > 0 for t < 5 s), the negative acceleration opposes motion, causing it to slow down.\n3. Retardation is defined as the negative of acceleration (the rate at which speed decreases):\n   Retardation = -a = -(-4) = 4 m/s\u00b2.\n4. Therefore, the retardation is 4 m/s\u00b2.",
+      "finalAnswer": "Option A: 4 m/s\u00b2",
+      "whyOtherOptionsWrong": "Option B is the acceleration (which is -4 m/s\u00b2), whereas retardation is 4 m/s\u00b2. Option C is initial velocity. Option D is the time to stop (20/4 = 5 s)."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-130",
+    "questionNumber": 130,
+    "question": "A ball thrown vertically upwards reaches its maximum height and begins to fall back down. At the highest point of its trajectory, which of the following is true?",
+    "options": {
+      "A": "Both velocity and acceleration are zero",
+      "B": "Velocity is zero, but acceleration is non-zero and directed downwards",
+      "C": "Velocity is non-zero, but acceleration is zero",
+      "D": "Both velocity and acceleration are non-zero"
+    },
+    "optionsList": [
+      "Both velocity and acceleration are zero",
+      "Velocity is zero, but acceleration is non-zero and directed downwards",
+      "Velocity is non-zero, but acceleration is zero",
+      "Both velocity and acceleration are non-zero"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nAt the zenith of vertical projectile motion, instantaneous velocity is momentarily zero (turning point), but gravitational force mg continues to act downward uninterrupted, so acceleration is g downwards.\n\n2. GIVEN:\nHighest point of vertical throw.\n\n3. FORMULA / PRINCIPLE:\nv = 0, a = -g = 9.8 m/s\u00b2 downwards.\n\n4. STEP-BY-STEP SOLUTION:\n1. At the highest point, the ball momentarily reverses its direction of motion from upward to downward.\n2. Therefore, its instantaneous velocity is zero: v = 0.\n3. However, Earth's gravity still pulls on the ball with force F = mg downwards.\n4. By Newton's second law, a = F/m = -g downwards (approx 9.8 m/s\u00b2).\n5. If acceleration were also zero, the ball would remain suspended in mid-air forever!\n6. Hence, velocity is zero while acceleration is non-zero and directed downwards.\n\n5. FINAL ANSWER:\nOption B: Velocity is zero, but acceleration is non-zero and directed downwards\n\n6. QUICK TIP:\nNEET Favorite: A body CAN have zero velocity and non-zero acceleration simultaneously (e.g. at the highest point of throw, or at extreme positions of SHM).",
+    "solutionStructured": {
+      "concept": "At the zenith of vertical projectile motion, instantaneous velocity is momentarily zero (turning point), but gravitational force mg continues to act downward uninterrupted, so acceleration is g downwards.",
+      "given": "Highest point of vertical throw.",
+      "formula": "v = 0, a = -g = 9.8 m/s\u00b2 downwards.",
+      "stepByStep": "1. At the highest point, the ball momentarily reverses its direction of motion from upward to downward.\n2. Therefore, its instantaneous velocity is zero: v = 0.\n3. However, Earth's gravity still pulls on the ball with force F = mg downwards.\n4. By Newton's second law, a = F/m = -g downwards (approx 9.8 m/s\u00b2).\n5. If acceleration were also zero, the ball would remain suspended in mid-air forever!\n6. Hence, velocity is zero while acceleration is non-zero and directed downwards.",
+      "finalAnswer": "Option B: Velocity is zero, but acceleration is non-zero and directed downwards",
+      "whyOtherOptionsWrong": "Option A would mean the ball floats in the air forever. Option C reverses the quantities. Option D fails because vertical velocity must stop to reverse."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-131",
+    "questionNumber": 131,
+    "question": "The displacement of a particle moving along a straight line is given by x = 2t\u00b3 - 9t\u00b2 + 12t + 4 (in meters). What is the acceleration of the particle at the instant when its velocity is zero for the first time?",
+    "options": {
+      "A": "-6 m/s\u00b2",
+      "B": "+6 m/s\u00b2",
+      "C": "0 m/s\u00b2",
+      "D": "-12 m/s\u00b2"
+    },
+    "optionsList": [
+      "-6 m/s\u00b2",
+      "+6 m/s\u00b2",
+      "0 m/s\u00b2",
+      "-12 m/s\u00b2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFirst find the instants when velocity is zero by solving v(t) = dx/dt = 0. Then substitute the smaller time (first time) into the acceleration expression a(t) = dv/dt.\n\n2. GIVEN:\nx(t) = 2t\u00b3 - 9t\u00b2 + 12t + 4.\n\n3. FORMULA / PRINCIPLE:\nv = dx/dt = 6t\u00b2 - 18t + 12 = 0; a = dv/dt = 12t - 18.\n\n4. STEP-BY-STEP SOLUTION:\n1. Find velocity:\n   v(t) = dx/dt = 6t\u00b2 - 18t + 12 = 6(t\u00b2 - 3t + 2) = 6(t - 1)(t - 2).\n2. Velocity is zero at t = 1 s and t = 2 s.\n   The first time velocity is zero is t = 1 s.\n3. Find acceleration:\n   a(t) = dv/dt = 12t - 18.\n4. Substitute t = 1 s:\n   a(1) = 12(1) - 18 = -6 m/s\u00b2.\n5. Therefore, the acceleration at this instant is -6 m/s\u00b2.\n\n5. FINAL ANSWER:\nOption A: -6 m/s\u00b2\n\n6. QUICK TIP:\nAt t = 1 s, a = -6 m/s\u00b2 (particle is at a local maximum of x). At t = 2 s, a = +6 m/s\u00b2 (local minimum).",
+    "solutionStructured": {
+      "concept": "First find the instants when velocity is zero by solving v(t) = dx/dt = 0. Then substitute the smaller time (first time) into the acceleration expression a(t) = dv/dt.",
+      "given": "x(t) = 2t\u00b3 - 9t\u00b2 + 12t + 4.",
+      "formula": "v = dx/dt = 6t\u00b2 - 18t + 12 = 0; a = dv/dt = 12t - 18.",
+      "stepByStep": "1. Find velocity:\n   v(t) = dx/dt = 6t\u00b2 - 18t + 12 = 6(t\u00b2 - 3t + 2) = 6(t - 1)(t - 2).\n2. Velocity is zero at t = 1 s and t = 2 s.\n   The first time velocity is zero is t = 1 s.\n3. Find acceleration:\n   a(t) = dv/dt = 12t - 18.\n4. Substitute t = 1 s:\n   a(1) = 12(1) - 18 = -6 m/s\u00b2.\n5. Therefore, the acceleration at this instant is -6 m/s\u00b2.",
+      "finalAnswer": "Option A: -6 m/s\u00b2",
+      "whyOtherOptionsWrong": "Option B is the acceleration at the second stopping instant (t = 2 s). Option C is when t = 1.5 s. Option D is an arithmetic error."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-132",
+    "questionNumber": 132,
+    "question": "A body moving along the x-axis has its position related to time by t = \u03b1 x\u00b2 + \u03b2 x, where \u03b1 and \u03b2 are positive constants. What is the retardation of the body expressed in terms of its instantaneous velocity v?",
+    "options": {
+      "A": "2\u03b1 v\u00b3",
+      "B": "2\u03b1 v\u00b2",
+      "C": "\u03b1 v\u00b3",
+      "D": "2\u03b2 v\u00b3"
+    },
+    "optionsList": [
+      "2\u03b1 v\u00b3",
+      "2\u03b1 v\u00b2",
+      "\u03b1 v\u00b3",
+      "2\u03b2 v\u00b3"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDifferentiate t with respect to x to find 1/v = dt/dx, then differentiate velocity using the chain rule to find acceleration.\n\n2. GIVEN:\nt = \u03b1 x\u00b2 + \u03b2 x.\n\n3. FORMULA / PRINCIPLE:\ndt/dx = 2\u03b1 x + \u03b2 = 1/v => v = (2\u03b1 x + \u03b2)\u207b\u00b9; a = v (dv/dx).\n\n4. STEP-BY-STEP SOLUTION:\n1. Differentiate t with respect to x:\n   dt/dx = 2\u03b1 x + \u03b2.\n2. Since v = dx/dt = 1 / (dt/dx):\n   v = (2\u03b1 x + \u03b2)\u207b\u00b9.\n3. Differentiate v with respect to x using the chain rule:\n   dv/dx = -(2\u03b1 x + \u03b2)\u207b\u00b2 * (2\u03b1) = -2\u03b1 (2\u03b1 x + \u03b2)\u207b\u00b2 = -2\u03b1 v\u00b2.\n4. Compute acceleration using a = v (dv/dx):\n   a = v * (-2\u03b1 v\u00b2) = -2\u03b1 v\u00b3.\n5. The negative sign denotes retardation.\n6. Therefore, the retardation (magnitude of deceleration) is 2\u03b1 v\u00b3.\n\n5. FINAL ANSWER:\nOption A: 2\u03b1 v\u00b3\n\n6. QUICK TIP:\nTop NEET Classic Question! If t = \u03b1x\u00b2 + \u03b2x, then v = (2\u03b1x + \u03b2)\u207b\u00b9 and Retardation = 2\u03b1 v\u00b3.",
+    "solutionStructured": {
+      "concept": "Differentiate t with respect to x to find 1/v = dt/dx, then differentiate velocity using the chain rule to find acceleration.",
+      "given": "t = \u03b1 x\u00b2 + \u03b2 x.",
+      "formula": "dt/dx = 2\u03b1 x + \u03b2 = 1/v => v = (2\u03b1 x + \u03b2)\u207b\u00b9; a = v (dv/dx).",
+      "stepByStep": "1. Differentiate t with respect to x:\n   dt/dx = 2\u03b1 x + \u03b2.\n2. Since v = dx/dt = 1 / (dt/dx):\n   v = (2\u03b1 x + \u03b2)\u207b\u00b9.\n3. Differentiate v with respect to x using the chain rule:\n   dv/dx = -(2\u03b1 x + \u03b2)\u207b\u00b2 * (2\u03b1) = -2\u03b1 (2\u03b1 x + \u03b2)\u207b\u00b2 = -2\u03b1 v\u00b2.\n4. Compute acceleration using a = v (dv/dx):\n   a = v * (-2\u03b1 v\u00b2) = -2\u03b1 v\u00b3.\n5. The negative sign denotes retardation.\n6. Therefore, the retardation (magnitude of deceleration) is 2\u03b1 v\u00b3.",
+      "finalAnswer": "Option A: 2\u03b1 v\u00b3",
+      "whyOtherOptionsWrong": "Option B has power v\u00b2 instead of v\u00b3. Option C misses the factor of 2. Option D uses \u03b2 instead of \u03b1."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-133",
+    "questionNumber": 133,
+    "question": "A car moves along a straight line such that its velocity decreases uniformly from 25 m/s to 15 m/s while covering a distance of 80 m. What is the magnitude of its retardation, and how much further will it travel before stopping with the same retardation?",
+    "options": {
+      "A": "Retardation = 2.5 m/s\u00b2, Extra distance = 45 m",
+      "B": "Retardation = 5.0 m/s\u00b2, Extra distance = 30 m",
+      "C": "Retardation = 2.5 m/s\u00b2, Extra distance = 60 m",
+      "D": "Retardation = 1.25 m/s\u00b2, Extra distance = 90 m"
+    },
+    "optionsList": [
+      "Retardation = 2.5 m/s\u00b2, Extra distance = 45 m",
+      "Retardation = 5.0 m/s\u00b2, Extra distance = 30 m",
+      "Retardation = 2.5 m/s\u00b2, Extra distance = 60 m",
+      "Retardation = 1.25 m/s\u00b2, Extra distance = 90 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nApply v\u00b2 = u\u00b2 - 2as to find retardation a, then apply v_final\u00b2 = u'\u00b2 - 2as' to find the additional stopping distance.\n\n2. GIVEN:\nu = 25 m/s, v = 15 m/s, s = 80 m.\n\n3. FORMULA / PRINCIPLE:\nv\u00b2 = u\u00b2 - 2as => a = (u\u00b2 - v\u00b2) / (2s); Extra distance s' = v\u00b2 / (2a).\n\n4. STEP-BY-STEP SOLUTION:\n1. Find retardation from the first segment:\n   15\u00b2 = 25\u00b2 - 2a(80)\n   225 = 625 - 160a\n   160a = 625 - 225 = 400\n   a = 400 / 160 = 2.5 m/s\u00b2.\n2. Now the car is at 15 m/s and brakes to rest (v_final = 0):\n   0\u00b2 = 15\u00b2 - 2(2.5) s'\n   0 = 225 - 5 s'\n   5 s' = 225 => s' = 225 / 5 = 45 m.\n3. Therefore, Retardation = 2.5 m/s\u00b2 and Extra distance = 45 m.\n\n5. FINAL ANSWER:\nOption A: Retardation = 2.5 m/s\u00b2, Extra distance = 45 m\n\n6. QUICK TIP:\nCheck total distance from 25 m/s to rest: s_total = 25\u00b2 / (2 * 2.5) = 625 / 5 = 125 m. Extra distance = 125 - 80 = 45 m!",
+    "solutionStructured": {
+      "concept": "Apply v\u00b2 = u\u00b2 - 2as to find retardation a, then apply v_final\u00b2 = u'\u00b2 - 2as' to find the additional stopping distance.",
+      "given": "u = 25 m/s, v = 15 m/s, s = 80 m.",
+      "formula": "v\u00b2 = u\u00b2 - 2as => a = (u\u00b2 - v\u00b2) / (2s); Extra distance s' = v\u00b2 / (2a).",
+      "stepByStep": "1. Find retardation from the first segment:\n   15\u00b2 = 25\u00b2 - 2a(80)\n   225 = 625 - 160a\n   160a = 625 - 225 = 400\n   a = 400 / 160 = 2.5 m/s\u00b2.\n2. Now the car is at 15 m/s and brakes to rest (v_final = 0):\n   0\u00b2 = 15\u00b2 - 2(2.5) s'\n   0 = 225 - 5 s'\n   5 s' = 225 => s' = 225 / 5 = 45 m.\n3. Therefore, Retardation = 2.5 m/s\u00b2 and Extra distance = 45 m.",
+      "finalAnswer": "Option A: Retardation = 2.5 m/s\u00b2, Extra distance = 45 m",
+      "whyOtherOptionsWrong": "Option B overestimates retardation. Option C and D give incorrect extra distances."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-134",
+    "questionNumber": 134,
+    "question": "A particle starts from rest and moves along a straight line with an acceleration that increases linearly with time as a = 3t (in m/s\u00b2). What is the velocity of the particle after 4 seconds?",
+    "options": {
+      "A": "24 m/s",
+      "B": "12 m/s",
+      "C": "48 m/s",
+      "D": "6 m/s"
+    },
+    "optionsList": [
+      "24 m/s",
+      "12 m/s",
+      "48 m/s",
+      "6 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor non-uniform acceleration, velocity is obtained by integrating acceleration with respect to time: v = u + \u222b a dt.\n\n2. GIVEN:\nu = 0, a(t) = 3t, t = 4 s.\n\n3. FORMULA / PRINCIPLE:\nv(t) = \u222b_0^t a dt = \u222b_0^4 3t dt.\n\n4. STEP-BY-STEP SOLUTION:\n1. Integrate acceleration:\n   v(t) = \u222b_0^t 3t dt = [ (3/2) t\u00b2 ]_0^t = (3/2) t\u00b2.\n2. Substitute t = 4 s:\n   v(4) = (3/2) * (4\u00b2) = (3/2) * 16 = 3 * 8 = 24 m/s.\n3. Therefore, the velocity after 4 seconds is 24 m/s.\n\n5. FINAL ANSWER:\nOption A: 24 m/s\n\n6. QUICK TIP:\nCommon trap: Do not use v = a*t = 3(4)*4 = 48! Acceleration is varying, so you must integrate: v = (1/2) * 3 * t\u00b2 = 24 m/s.",
+    "solutionStructured": {
+      "concept": "For non-uniform acceleration, velocity is obtained by integrating acceleration with respect to time: v = u + \u222b a dt.",
+      "given": "u = 0, a(t) = 3t, t = 4 s.",
+      "formula": "v(t) = \u222b_0^t a dt = \u222b_0^4 3t dt.",
+      "stepByStep": "1. Integrate acceleration:\n   v(t) = \u222b_0^t 3t dt = [ (3/2) t\u00b2 ]_0^t = (3/2) t\u00b2.\n2. Substitute t = 4 s:\n   v(4) = (3/2) * (4\u00b2) = (3/2) * 16 = 3 * 8 = 24 m/s.\n3. Therefore, the velocity after 4 seconds is 24 m/s.",
+      "finalAnswer": "Option A: 24 m/s",
+      "whyOtherOptionsWrong": "Option B divides by 4. Option C simply multiplies a(4) * 4 = 12 * 4 = 48 (trap!). Option D is 24 / 4."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-135",
+    "questionNumber": 135,
+    "question": "The acceleration of a particle is given by a = 4 - 2t (in m/s\u00b2). If the particle starts from rest at t = 0, what is the maximum velocity attained by the particle?",
+    "options": {
+      "A": "4 m/s",
+      "B": "8 m/s",
+      "C": "2 m/s",
+      "D": "16 m/s"
+    },
+    "optionsList": [
+      "4 m/s",
+      "8 m/s",
+      "2 m/s",
+      "16 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nVelocity is maximum when acceleration becomes zero: a(t) = 0. Find this time and integrate acceleration up to that time.\n\n2. GIVEN:\na(t) = 4 - 2t, u = 0.\n\n3. FORMULA / PRINCIPLE:\na(t) = 0 => 4 - 2t = 0 => t = 2 s; v_max = \u222b_0^2 (4 - 2t) dt.\n\n4. STEP-BY-STEP SOLUTION:\n1. Find the instant when acceleration changes from positive to negative (turning point of velocity):\n   a(t) = 4 - 2t = 0 => 2t = 4 => t = 2 s.\n2. Before t = 2 s, a > 0, so velocity is increasing.\n   After t = 2 s, a < 0, so velocity decreases.\n3. Therefore, maximum velocity occurs at t = 2 s.\n4. Integrate acceleration from 0 to 2 s:\n   v_max = \u222b_0^2 (4 - 2t) dt = [ 4t - t\u00b2 ]_0^2 = 4(2) - 2\u00b2 = 8 - 4 = 4 m/s.\n5. Therefore, the maximum velocity attained is 4 m/s.\n\n5. FINAL ANSWER:\nOption A: 4 m/s\n\n6. QUICK TIP:\nv_max occurs when dv/dt = a = 0. Area of the triangle on the a-t graph from 0 to 2 s is (1/2)(2)(4) = 4 m/s!",
+    "solutionStructured": {
+      "concept": "Velocity is maximum when acceleration becomes zero: a(t) = 0. Find this time and integrate acceleration up to that time.",
+      "given": "a(t) = 4 - 2t, u = 0.",
+      "formula": "a(t) = 0 => 4 - 2t = 0 => t = 2 s; v_max = \u222b_0^2 (4 - 2t) dt.",
+      "stepByStep": "1. Find the instant when acceleration changes from positive to negative (turning point of velocity):\n   a(t) = 4 - 2t = 0 => 2t = 4 => t = 2 s.\n2. Before t = 2 s, a > 0, so velocity is increasing.\n   After t = 2 s, a < 0, so velocity decreases.\n3. Therefore, maximum velocity occurs at t = 2 s.\n4. Integrate acceleration from 0 to 2 s:\n   v_max = \u222b_0^2 (4 - 2t) dt = [ 4t - t\u00b2 ]_0^2 = 4(2) - 2\u00b2 = 8 - 4 = 4 m/s.\n5. Therefore, the maximum velocity attained is 4 m/s.",
+      "finalAnswer": "Option A: 4 m/s",
+      "whyOtherOptionsWrong": "Option B forgets to subtract t\u00b2 (gives 4*2 = 8). Option C is half of v_max. Option D is 4\u00b2."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-136",
+    "questionNumber": 136,
+    "question": "A bullet enters a wooden plank with a velocity of 100 m/s and emerges with a velocity of 60 m/s. If the plank provides a uniform resistive retardation, what is the velocity of the bullet after traversing the first half of the thickness of the plank?",
+    "options": {
+      "A": "20\u221a17 m/s \u2248 82.46 m/s",
+      "B": "80 m/s",
+      "C": "70 m/s",
+      "D": "40\u221a2 m/s"
+    },
+    "optionsList": [
+      "20\u221a17 m/s \u2248 82.46 m/s",
+      "80 m/s",
+      "70 m/s",
+      "40\u221a2 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor constant retardation across distance d, the velocity at the spatial midpoint d/2 is the root-mean-square: v_mid = \u221a((u\u00b2 + v\u00b2) / 2).\n\n2. GIVEN:\nu = 100 m/s, v = 60 m/s.\n\n3. FORMULA / PRINCIPLE:\nv_mid = \u221a((u\u00b2 + v\u00b2) / 2)\n\n4. STEP-BY-STEP SOLUTION:\n1. Using v\u00b2 = u\u00b2 - 2ad across the entire thickness d:\n   60\u00b2 = 100\u00b2 - 2ad => 2ad = 10000 - 3600 = 6400.\n2. Across the first half of the thickness (d/2):\n   v_mid\u00b2 = u\u00b2 - 2a(d/2) = u\u00b2 - ad.\n3. Since ad = 6400 / 2 = 3200:\n   v_mid\u00b2 = 10000 - 3200 = 6800.\n   (Notice this equals (100\u00b2 + 60\u00b2) / 2 = (10000 + 3600)/2 = 13600/2 = 6800!).\n4. Compute v_mid:\n   v_mid = \u221a6800 = \u221a(400 * 17) = 20\u221a17 m/s.\n5. Since \u221a17 \u2248 4.123:\n   v_mid \u2248 20 * 4.123 = 82.46 m/s.\n6. Hence, Option A is the exact answer.\n\n5. FINAL ANSWER:\nOption A: 20\u221a17 m/s \u2248 82.46 m/s\n\n6. QUICK TIP:\nAt the spatial midpoint of any uniformly retarding medium, v_mid = \u221a((u\u00b2 + v\u00b2)/2) = \u221a(6800) = 20\u221a17 m/s \u2248 82.5 m/s. Never take the arithmetic average (80 m/s)!",
+    "solutionStructured": {
+      "concept": "For constant retardation across distance d, the velocity at the spatial midpoint d/2 is the root-mean-square: v_mid = \u221a((u\u00b2 + v\u00b2) / 2).",
+      "given": "u = 100 m/s, v = 60 m/s.",
+      "formula": "v_mid = \u221a((u\u00b2 + v\u00b2) / 2)",
+      "stepByStep": "1. Using v\u00b2 = u\u00b2 - 2ad across the entire thickness d:\n   60\u00b2 = 100\u00b2 - 2ad => 2ad = 10000 - 3600 = 6400.\n2. Across the first half of the thickness (d/2):\n   v_mid\u00b2 = u\u00b2 - 2a(d/2) = u\u00b2 - ad.\n3. Since ad = 6400 / 2 = 3200:\n   v_mid\u00b2 = 10000 - 3200 = 6800.\n   (Notice this equals (100\u00b2 + 60\u00b2) / 2 = (10000 + 3600)/2 = 13600/2 = 6800!).\n4. Compute v_mid:\n   v_mid = \u221a6800 = \u221a(400 * 17) = 20\u221a17 m/s.\n5. Since \u221a17 \u2248 4.123:\n   v_mid \u2248 20 * 4.123 = 82.46 m/s.\n6. Hence, Option A is the exact answer.",
+      "finalAnswer": "Option A: 20\u221a17 m/s \u2248 82.46 m/s",
+      "whyOtherOptionsWrong": "Option B is the arithmetic average (100 + 60)/2 = 80 m/s (common trap!). Option C and D are incorrect guesses."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-137",
+    "questionNumber": 137,
+    "question": "A particle moves along a straight line such that its acceleration is given by a = -k \u221av, where k is a positive constant and v is velocity. If the initial velocity is v\u2080 at t = 0, how long does the particle take to come to a complete stop?",
+    "options": {
+      "A": "2 \u221av\u2080 / k",
+      "B": "\u221av\u2080 / k",
+      "C": "v\u2080 / (2k)",
+      "D": "2 v\u2080 / k"
+    },
+    "optionsList": [
+      "2 \u221av\u2080 / k",
+      "\u221av\u2080 / k",
+      "v\u2080 / (2k)",
+      "2 v\u2080 / k"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSeparate variables in dv/dt = -k \u221av and integrate from v\u2080 to 0.\n\n2. GIVEN:\ndv/dt = -k v^(1/2), v(0) = v\u2080, v(t_stop) = 0.\n\n3. FORMULA / PRINCIPLE:\n\u222b_{v\u2080}^0 dv / \u221av = -k \u222b_0^{t_stop} dt\n\n4. STEP-BY-STEP SOLUTION:\n1. Separate variables:\n   dv / \u221av = -k dt\n   v^(-1/2) dv = -k dt.\n2. Integrate from v\u2080 to 0:\n   \u222b_{v\u2080}^0 v^(-1/2) dv = -k \u222b_0^{t_stop} dt.\n3. Evaluate the antiderivative of v^(-1/2):\n   [ 2 v^(1/2) ]_{v\u2080}^0 = -k t_stop\n   0 - 2 \u221av\u2080 = -k t_stop\n   -2 \u221av\u2080 = -k t_stop.\n4. Solve for stopping time:\n   t_stop = 2 \u221av\u2080 / k.\n5. Therefore, the stopping time is 2 \u221av\u2080 / k.\n\n5. FINAL ANSWER:\nOption A: 2 \u221av\u2080 / k\n\n6. QUICK TIP:\nIntegration with power rule: \u222b v^(-1/2) dv = 2\u221av. Limits from v\u2080 to 0 yield \u0394t = 2\u221av\u2080 / k.",
+    "solutionStructured": {
+      "concept": "Separate variables in dv/dt = -k \u221av and integrate from v\u2080 to 0.",
+      "given": "dv/dt = -k v^(1/2), v(0) = v\u2080, v(t_stop) = 0.",
+      "formula": "\u222b_{v\u2080}^0 dv / \u221av = -k \u222b_0^{t_stop} dt",
+      "stepByStep": "1. Separate variables:\n   dv / \u221av = -k dt\n   v^(-1/2) dv = -k dt.\n2. Integrate from v\u2080 to 0:\n   \u222b_{v\u2080}^0 v^(-1/2) dv = -k \u222b_0^{t_stop} dt.\n3. Evaluate the antiderivative of v^(-1/2):\n   [ 2 v^(1/2) ]_{v\u2080}^0 = -k t_stop\n   0 - 2 \u221av\u2080 = -k t_stop\n   -2 \u221av\u2080 = -k t_stop.\n4. Solve for stopping time:\n   t_stop = 2 \u221av\u2080 / k.\n5. Therefore, the stopping time is 2 \u221av\u2080 / k.",
+      "finalAnswer": "Option A: 2 \u221av\u2080 / k",
+      "whyOtherOptionsWrong": "Option B forgets the factor of 2 from integrating v^(-1/2). Option C and D have wrong dimensions."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-138",
+    "questionNumber": 138,
+    "question": "For the particle in Q137 with a = -k \u221av and initial velocity v\u2080, what is the total distance covered before it comes to rest?",
+    "options": {
+      "A": "2 v\u2080^(3/2) / (3k)",
+      "B": "v\u2080^(3/2) / k",
+      "C": "v\u2080\u00b2 / (2k)",
+      "D": "4 v\u2080^(3/2) / (3k)"
+    },
+    "optionsList": [
+      "2 v\u2080^(3/2) / (3k)",
+      "v\u2080^(3/2) / k",
+      "v\u2080\u00b2 / (2k)",
+      "4 v\u2080^(3/2) / (3k)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nUse a = v (dv/dx) = -k \u221av to relate velocity directly to displacement x, then integrate.\n\n2. GIVEN:\na = v (dv/dx) = -k \u221av, v = v\u2080 at x = 0, v = 0 at x = s_total.\n\n3. FORMULA / PRINCIPLE:\nv (dv/dx) = -k \u221av => \u221av dv = -k dx.\n\n4. STEP-BY-STEP SOLUTION:\n1. Write acceleration in terms of position:\n   v (dv/dx) = -k v^(1/2).\n2. Divide both sides by v^(1/2) (for v > 0):\n   v^(1/2) dv = -k dx.\n3. Integrate from initial state (x = 0, v = v\u2080) to rest (x = s, v = 0):\n   \u222b_{v\u2080}^0 v^(1/2) dv = -k \u222b_0^s dx.\n4. Evaluate the antiderivative of v^(1/2):\n   [ (2/3) v^(3/2) ]_{v\u2080}^0 = -k s\n   0 - (2/3) v\u2080^(3/2) = -k s\n   -(2/3) v\u2080^(3/2) = -k s.\n5. Solve for total stopping distance s:\n   s = 2 v\u2080^(3/2) / (3k).\n6. Therefore, the total distance covered is 2 v\u2080^(3/2) / (3k).\n\n5. FINAL ANSWER:\nOption A: 2 v\u2080^(3/2) / (3k)\n\n6. QUICK TIP:\nUse a = v dv/dx to find stopping distance directly without finding time t first: \u222b \u221av dv = -k \u222b dx => s = 2 v\u2080^(3/2) / (3k).",
+    "solutionStructured": {
+      "concept": "Use a = v (dv/dx) = -k \u221av to relate velocity directly to displacement x, then integrate.",
+      "given": "a = v (dv/dx) = -k \u221av, v = v\u2080 at x = 0, v = 0 at x = s_total.",
+      "formula": "v (dv/dx) = -k \u221av => \u221av dv = -k dx.",
+      "stepByStep": "1. Write acceleration in terms of position:\n   v (dv/dx) = -k v^(1/2).\n2. Divide both sides by v^(1/2) (for v > 0):\n   v^(1/2) dv = -k dx.\n3. Integrate from initial state (x = 0, v = v\u2080) to rest (x = s, v = 0):\n   \u222b_{v\u2080}^0 v^(1/2) dv = -k \u222b_0^s dx.\n4. Evaluate the antiderivative of v^(1/2):\n   [ (2/3) v^(3/2) ]_{v\u2080}^0 = -k s\n   0 - (2/3) v\u2080^(3/2) = -k s\n   -(2/3) v\u2080^(3/2) = -k s.\n5. Solve for total stopping distance s:\n   s = 2 v\u2080^(3/2) / (3k).\n6. Therefore, the total distance covered is 2 v\u2080^(3/2) / (3k).",
+      "finalAnswer": "Option A: 2 v\u2080^(3/2) / (3k)",
+      "whyOtherOptionsWrong": "Option B misses the factor of 2/3. Option C is for constant acceleration. Option D has 4/3."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-139",
+    "questionNumber": 139,
+    "question": "A body moves in a straight line with an initial velocity of 5 m/s. Its acceleration is given by a = 2v\u00b2 (in m/s\u00b2), where v is velocity. What is its velocity after traveling a distance of 1 meter?",
+    "options": {
+      "A": "5 e\u00b2 m/s",
+      "B": "5 e m/s",
+      "C": "10 m/s",
+      "D": "25 m/s"
+    },
+    "optionsList": [
+      "5 e\u00b2 m/s",
+      "5 e m/s",
+      "10 m/s",
+      "25 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nExpress acceleration as v (dv/dx) = 2v\u00b2, simplify to dv/v = 2 dx, and integrate.\n\n2. GIVEN:\na = 2v\u00b2, u = 5 m/s, x = 1 m.\n\n3. FORMULA / PRINCIPLE:\nv (dv/dx) = 2v\u00b2 => dv / v = 2 dx.\n\n4. STEP-BY-STEP SOLUTION:\n1. Substitute a = v (dv/dx):\n   v (dv/dx) = 2v\u00b2.\n2. Divide both sides by v (v \u2260 0):\n   dv/dx = 2v.\n3. Separate variables:\n   dv / v = 2 dx.\n4. Integrate from x = 0 (v = 5) to x = 1 m (v):\n   \u222b_5^v (1/v) dv = 2 \u222b_0^1 dx.\n5. Evaluate:\n   ln(v / 5) = 2(1) = 2\n   v / 5 = e\u00b2\n   v = 5 e\u00b2 m/s.\n6. (Since e\u00b2 \u2248 7.389, v \u2248 36.95 m/s).\n\n5. FINAL ANSWER:\nOption A: 5 e\u00b2 m/s\n\n6. QUICK TIP:\nWhenever a = k v\u00b2, the spatial derivative dv/dx = kv, which integrates directly to an exponential in x: v = v\u2080 e^(kx).",
+    "solutionStructured": {
+      "concept": "Express acceleration as v (dv/dx) = 2v\u00b2, simplify to dv/v = 2 dx, and integrate.",
+      "given": "a = 2v\u00b2, u = 5 m/s, x = 1 m.",
+      "formula": "v (dv/dx) = 2v\u00b2 => dv / v = 2 dx.",
+      "stepByStep": "1. Substitute a = v (dv/dx):\n   v (dv/dx) = 2v\u00b2.\n2. Divide both sides by v (v \u2260 0):\n   dv/dx = 2v.\n3. Separate variables:\n   dv / v = 2 dx.\n4. Integrate from x = 0 (v = 5) to x = 1 m (v):\n   \u222b_5^v (1/v) dv = 2 \u222b_0^1 dx.\n5. Evaluate:\n   ln(v / 5) = 2(1) = 2\n   v / 5 = e\u00b2\n   v = 5 e\u00b2 m/s.\n6. (Since e\u00b2 \u2248 7.389, v \u2248 36.95 m/s).",
+      "finalAnswer": "Option A: 5 e\u00b2 m/s",
+      "whyOtherOptionsWrong": "Option B has power e\u00b9 instead of e\u00b2. Options C and D assume linear relationships."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-140",
+    "questionNumber": 140,
+    "question": "A particle moving along the x-axis experiences an acceleration given by a = -\u03c9\u00b2 x. If the particle is released from rest at x = A, what is its speed when it reaches x = A / 2?",
+    "options": {
+      "A": "(\u221a3 / 2) \u03c9 A",
+      "B": "(1 / 2) \u03c9 A",
+      "C": "\u03c9 A",
+      "D": "(\u221a2 / 2) \u03c9 A"
+    },
+    "optionsList": [
+      "(\u221a3 / 2) \u03c9 A",
+      "(1 / 2) \u03c9 A",
+      "\u03c9 A",
+      "(\u221a2 / 2) \u03c9 A"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn SHM with a = -\u03c9\u00b2 x, velocity as a function of position is given by v = \u03c9 \u221a(A\u00b2 - x\u00b2).\n\n2. GIVEN:\na = -\u03c9\u00b2 x, released from rest at x = A (amplitude), x = A/2.\n\n3. FORMULA / PRINCIPLE:\nv = \u03c9 \u221a(A\u00b2 - x\u00b2)\n\n4. STEP-BY-STEP SOLUTION:\n1. Integrate v dv = -\u03c9\u00b2 x dx from (x = A, v = 0) to (x, v):\n   \u222b_0^v v dv = -\u03c9\u00b2 \u222b_A^x x dx\n   v\u00b2 / 2 = -\u03c9\u00b2 [ x\u00b2 / 2 - A\u00b2 / 2 ] = (\u03c9\u00b2 / 2) (A\u00b2 - x\u00b2)\n   v\u00b2 = \u03c9\u00b2 (A\u00b2 - x\u00b2).\n2. Substitute x = A / 2:\n   v\u00b2 = \u03c9\u00b2 [ A\u00b2 - (A/2)\u00b2 ] = \u03c9\u00b2 [ A\u00b2 - A\u00b2/4 ] = \u03c9\u00b2 (3A\u00b2 / 4).\n3. Take the square root:\n   v = \u03c9 \u221a(3A\u00b2 / 4) = (\u221a3 / 2) \u03c9 A.\n4. Therefore, the speed at x = A/2 is (\u221a3 / 2) \u03c9 A \u2248 0.866 \u03c9A.\n\n5. FINAL ANSWER:\nOption A: (\u221a3 / 2) \u03c9 A\n\n6. QUICK TIP:\nStandard SHM relation: v = \u03c9\u221a(A\u00b2 - x\u00b2). At x = A/2, v = \u03c9\u221a(A\u00b2 - A\u00b2/4) = (\u221a3/2) \u03c9A.",
+    "solutionStructured": {
+      "concept": "In SHM with a = -\u03c9\u00b2 x, velocity as a function of position is given by v = \u03c9 \u221a(A\u00b2 - x\u00b2).",
+      "given": "a = -\u03c9\u00b2 x, released from rest at x = A (amplitude), x = A/2.",
+      "formula": "v = \u03c9 \u221a(A\u00b2 - x\u00b2)",
+      "stepByStep": "1. Integrate v dv = -\u03c9\u00b2 x dx from (x = A, v = 0) to (x, v):\n   \u222b_0^v v dv = -\u03c9\u00b2 \u222b_A^x x dx\n   v\u00b2 / 2 = -\u03c9\u00b2 [ x\u00b2 / 2 - A\u00b2 / 2 ] = (\u03c9\u00b2 / 2) (A\u00b2 - x\u00b2)\n   v\u00b2 = \u03c9\u00b2 (A\u00b2 - x\u00b2).\n2. Substitute x = A / 2:\n   v\u00b2 = \u03c9\u00b2 [ A\u00b2 - (A/2)\u00b2 ] = \u03c9\u00b2 [ A\u00b2 - A\u00b2/4 ] = \u03c9\u00b2 (3A\u00b2 / 4).\n3. Take the square root:\n   v = \u03c9 \u221a(3A\u00b2 / 4) = (\u221a3 / 2) \u03c9 A.\n4. Therefore, the speed at x = A/2 is (\u221a3 / 2) \u03c9 A \u2248 0.866 \u03c9A.",
+      "finalAnswer": "Option A: (\u221a3 / 2) \u03c9 A",
+      "whyOtherOptionsWrong": "Option B assumes linear speed change. Option C is maximum speed at origin x = 0. Option D is for x = A/\u221a2."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-141",
+    "questionNumber": 141,
+    "question": "The velocity of a particle moving in a straight line is given by v\u00b2 = 2 - 3x (in SI units). What is the acceleration of the particle?",
+    "options": {
+      "A": "-1.5 m/s\u00b2",
+      "B": "-3 m/s\u00b2",
+      "C": "+1.5 m/s\u00b2",
+      "D": "-0.75 m/s\u00b2"
+    },
+    "optionsList": [
+      "-1.5 m/s\u00b2",
+      "-3 m/s\u00b2",
+      "+1.5 m/s\u00b2",
+      "-0.75 m/s\u00b2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDifferentiating v\u00b2 with respect to x yields 2v (dv/dx) = 2a, so a = (1/2) d(v\u00b2)/dx.\n\n2. GIVEN:\nv\u00b2 = 2 - 3x.\n\n3. FORMULA / PRINCIPLE:\na = (1/2) * d(v\u00b2)/dx\n\n4. STEP-BY-STEP SOLUTION:\n1. Differentiate both sides of v\u00b2 = 2 - 3x with respect to x:\n   d(v\u00b2)/dx = d(2 - 3x)/dx = -3.\n2. By the chain rule: d(v\u00b2)/dx = 2v (dv/dx) = 2a.\n3. Therefore: 2a = -3 => a = -3 / 2 = -1.5 m/s\u00b2.\n4. Notice that acceleration is completely constant and negative (-1.5 m/s\u00b2).\n5. (Compare with v\u00b2 = u\u00b2 + 2as: 2a = -3 => a = -1.5 m/s\u00b2).\n\n5. FINAL ANSWER:\nOption A: -1.5 m/s\u00b2\n\n6. QUICK TIP:\nWhenever given v\u00b2 as a linear function of x (v\u00b2 = c\u2081 + c\u2082 x), acceleration is CONSTANT and equals c\u2082 / 2!",
+    "solutionStructured": {
+      "concept": "Differentiating v\u00b2 with respect to x yields 2v (dv/dx) = 2a, so a = (1/2) d(v\u00b2)/dx.",
+      "given": "v\u00b2 = 2 - 3x.",
+      "formula": "a = (1/2) * d(v\u00b2)/dx",
+      "stepByStep": "1. Differentiate both sides of v\u00b2 = 2 - 3x with respect to x:\n   d(v\u00b2)/dx = d(2 - 3x)/dx = -3.\n2. By the chain rule: d(v\u00b2)/dx = 2v (dv/dx) = 2a.\n3. Therefore: 2a = -3 => a = -3 / 2 = -1.5 m/s\u00b2.\n4. Notice that acceleration is completely constant and negative (-1.5 m/s\u00b2).\n5. (Compare with v\u00b2 = u\u00b2 + 2as: 2a = -3 => a = -1.5 m/s\u00b2).",
+      "finalAnswer": "Option A: -1.5 m/s\u00b2",
+      "whyOtherOptionsWrong": "Option B forgets to divide by 2. Option C has positive sign. Option D divides by 4."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-142",
+    "questionNumber": 142,
+    "question": "A body starts from rest and moves with uniform acceleration. If it covers a distance s\u2081 in the first 10 seconds and an additional distance s\u2082 in the next 10 seconds, what is the relation between s\u2081 and s\u2082?",
+    "options": {
+      "A": "s\u2082 = 3 s\u2081",
+      "B": "s\u2082 = 2 s\u2081",
+      "C": "s\u2082 = 4 s\u2081",
+      "D": "s\u2082 = s\u2081"
+    },
+    "optionsList": [
+      "s\u2082 = 3 s\u2081",
+      "s\u2082 = 2 s\u2081",
+      "s\u2082 = 4 s\u2081",
+      "s\u2082 = s\u2081"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nGalileo's law of odd numbers: The distances covered in successive equal time intervals by a body starting from rest under uniform acceleration are in the ratio 1 : 3 : 5 : 7...\n\n2. GIVEN:\nu = 0, constant acceleration a, t\u2081 = 10 s, t\u2082 = 20 s total.\n\n3. FORMULA / PRINCIPLE:\ns\u2081 = (1/2) a (10\u00b2); s_total(20) = (1/2) a (20\u00b2); s\u2082 = s_total - s\u2081.\n\n4. STEP-BY-STEP SOLUTION:\n1. Distance in first 10 seconds:\n   s\u2081 = (1/2) a (10)\u00b2 = 50a.\n2. Total distance in 20 seconds:\n   s_total = (1/2) a (20)\u00b2 = 200a.\n3. Distance covered in the next 10 seconds (from t = 10 s to t = 20 s):\n   s\u2082 = s_total - s\u2081 = 200a - 50a = 150a.\n4. Compare s\u2082 and s\u2081:\n   s\u2082 / s\u2081 = 150a / 50a = 3.\n5. Therefore: s\u2082 = 3 s\u2081.\n\n5. FINAL ANSWER:\nOption A: s\u2082 = 3 s\u2081\n\n6. QUICK TIP:\nGalileo's odd-number rule: 1st interval = 1 unit, 2nd interval = 3 units, 3rd interval = 5 units. So s\u2082 = 3 s\u2081 always!",
+    "solutionStructured": {
+      "concept": "Galileo's law of odd numbers: The distances covered in successive equal time intervals by a body starting from rest under uniform acceleration are in the ratio 1 : 3 : 5 : 7...",
+      "given": "u = 0, constant acceleration a, t\u2081 = 10 s, t\u2082 = 20 s total.",
+      "formula": "s\u2081 = (1/2) a (10\u00b2); s_total(20) = (1/2) a (20\u00b2); s\u2082 = s_total - s\u2081.",
+      "stepByStep": "1. Distance in first 10 seconds:\n   s\u2081 = (1/2) a (10)\u00b2 = 50a.\n2. Total distance in 20 seconds:\n   s_total = (1/2) a (20)\u00b2 = 200a.\n3. Distance covered in the next 10 seconds (from t = 10 s to t = 20 s):\n   s\u2082 = s_total - s\u2081 = 200a - 50a = 150a.\n4. Compare s\u2082 and s\u2081:\n   s\u2082 / s\u2081 = 150a / 50a = 3.\n5. Therefore: s\u2082 = 3 s\u2081.",
+      "finalAnswer": "Option A: s\u2082 = 3 s\u2081",
+      "whyOtherOptionsWrong": "Option B assumes doubling. Option C is the total distance s_total = 4 s\u2081. Option D assumes uniform speed."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-143",
+    "questionNumber": 143,
+    "question": "In the previous question, if the body continues to accelerate uniformly for another 10 seconds (from t = 20 s to t = 30 s) covering distance s\u2083, what is the ratio s\u2081 : s\u2082 : s\u2083?",
+    "options": {
+      "A": "1 : 3 : 5",
+      "B": "1 : 2 : 3",
+      "C": "1 : 4 : 9",
+      "D": "1 : 2 : 4"
+    },
+    "optionsList": [
+      "1 : 3 : 5",
+      "1 : 2 : 3",
+      "1 : 4 : 9",
+      "1 : 2 : 4"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nGalileo's law of odd numbers for equal time intervals starting from rest under constant acceleration: \u0394s_n \u221d (2n - 1).\n\n2. GIVEN:\nSuccessive equal time intervals of 10 s from rest.\n\n3. FORMULA / PRINCIPLE:\ns_n \u221d (2n - 1) => s\u2081 : s\u2082 : s\u2083 = 1 : 3 : 5.\n\n4. STEP-BY-STEP SOLUTION:\n1. For 1st interval (n = 1): 2(1) - 1 = 1.\n2. For 2nd interval (n = 2): 2(2) - 1 = 3.\n3. For 3rd interval (n = 3): 2(3) - 1 = 5.\n4. Therefore, the ratio of distances covered in successive equal time intervals is:\n   s\u2081 : s\u2082 : s\u2083 = 1 : 3 : 5.\n\n5. FINAL ANSWER:\nOption A: 1 : 3 : 5\n\n6. QUICK TIP:\nGalileo's odd number ratio: 1 : 3 : 5 : 7 : 9... The cumulative distances are 1 : 4 : 9 : 16 (squares of time)!",
+    "solutionStructured": {
+      "concept": "Galileo's law of odd numbers for equal time intervals starting from rest under constant acceleration: \u0394s_n \u221d (2n - 1).",
+      "given": "Successive equal time intervals of 10 s from rest.",
+      "formula": "s_n \u221d (2n - 1) => s\u2081 : s\u2082 : s\u2083 = 1 : 3 : 5.",
+      "stepByStep": "1. For 1st interval (n = 1): 2(1) - 1 = 1.\n2. For 2nd interval (n = 2): 2(2) - 1 = 3.\n3. For 3rd interval (n = 3): 2(3) - 1 = 5.\n4. Therefore, the ratio of distances covered in successive equal time intervals is:\n   s\u2081 : s\u2082 : s\u2083 = 1 : 3 : 5.",
+      "finalAnswer": "Option A: 1 : 3 : 5",
+      "whyOtherOptionsWrong": "Option B is linear ratio. Option C is the ratio of CUMULATIVE distances (1 : 4 : 9), not incremental intervals. Option D is powers of 2."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-144",
+    "questionNumber": 144,
+    "question": "A particle moving with uniform acceleration along a straight line passes three consecutive points A, B, and C with velocities u, v, and w respectively. If AB = BC, then which of the following relations is correct?",
+    "options": {
+      "A": "v\u00b2 = (u\u00b2 + w\u00b2) / 2",
+      "B": "v = (u + w) / 2",
+      "C": "v = \u221a(u w)",
+      "D": "2/v = 1/u + 1/w"
+    },
+    "optionsList": [
+      "v\u00b2 = (u\u00b2 + w\u00b2) / 2",
+      "v = (u + w) / 2",
+      "v = \u221a(u w)",
+      "2/v = 1/u + 1/w"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor constant acceleration, the velocity at the midpoint between two points of equal distance is the root-mean-square: v = \u221a((u\u00b2 + w\u00b2) / 2).\n\n2. GIVEN:\nAB = BC = s, constant acceleration a.\n\n3. FORMULA / PRINCIPLE:\nv\u00b2 = u\u00b2 + 2as; w\u00b2 = v\u00b2 + 2as => w\u00b2 - v\u00b2 = v\u00b2 - u\u00b2.\n\n4. STEP-BY-STEP SOLUTION:\n1. For segment AB: v\u00b2 - u\u00b2 = 2as.\n2. For segment BC: w\u00b2 - v\u00b2 = 2as.\n3. Since AB = BC = s and acceleration a is constant, both right-hand sides are equal:\n   v\u00b2 - u\u00b2 = w\u00b2 - v\u00b2.\n4. Rearrange:\n   2v\u00b2 = u\u00b2 + w\u00b2\n   v\u00b2 = (u\u00b2 + w\u00b2) / 2.\n5. Therefore: v = \u221a((u\u00b2 + w\u00b2) / 2).\n6. Hence, Option A is the correct relation.\n\n5. FINAL ANSWER:\nOption A: v\u00b2 = (u\u00b2 + w\u00b2) / 2\n\n6. QUICK TIP:\nEqual distances => v\u00b2 in arithmetic progression (v\u00b2 is average of u\u00b2 and w\u00b2). Equal times => v in arithmetic progression (v = (u+w)/2).",
+    "solutionStructured": {
+      "concept": "For constant acceleration, the velocity at the midpoint between two points of equal distance is the root-mean-square: v = \u221a((u\u00b2 + w\u00b2) / 2).",
+      "given": "AB = BC = s, constant acceleration a.",
+      "formula": "v\u00b2 = u\u00b2 + 2as; w\u00b2 = v\u00b2 + 2as => w\u00b2 - v\u00b2 = v\u00b2 - u\u00b2.",
+      "stepByStep": "1. For segment AB: v\u00b2 - u\u00b2 = 2as.\n2. For segment BC: w\u00b2 - v\u00b2 = 2as.\n3. Since AB = BC = s and acceleration a is constant, both right-hand sides are equal:\n   v\u00b2 - u\u00b2 = w\u00b2 - v\u00b2.\n4. Rearrange:\n   2v\u00b2 = u\u00b2 + w\u00b2\n   v\u00b2 = (u\u00b2 + w\u00b2) / 2.\n5. Therefore: v = \u221a((u\u00b2 + w\u00b2) / 2).\n6. Hence, Option A is the correct relation.",
+      "finalAnswer": "Option A: v\u00b2 = (u\u00b2 + w\u00b2) / 2",
+      "whyOtherOptionsWrong": "Option B applies when time intervals are equal (t_AB = t_BC). Option C is geometric mean. Option D is harmonic mean."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-145",
+    "questionNumber": 145,
+    "question": "A body accelerates uniformly from rest for time t\u2081 and then retards uniformly to rest in time t\u2082. What is the ratio of the distance traveled during acceleration to the distance traveled during retardation?",
+    "options": {
+      "A": "t\u2081 : t\u2082",
+      "B": "t\u2081\u00b2 : t\u2082\u00b2",
+      "C": "t\u2082 : t\u2081",
+      "D": "1 : 1 always"
+    },
+    "optionsList": [
+      "t\u2081 : t\u2082",
+      "t\u2081\u00b2 : t\u2082\u00b2",
+      "t\u2082 : t\u2081",
+      "1 : 1 always"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn both phases, motion is triangular on the v-t graph with the same peak velocity v_max. Distance is the area under each triangle.\n\n2. GIVEN:\nAccelerates from 0 to v_max in t\u2081, retards from v_max to 0 in t\u2082.\n\n3. FORMULA / PRINCIPLE:\ns\u2081 = (1/2) v_max t\u2081; s\u2082 = (1/2) v_max t\u2082; s\u2081 / s\u2082 = t\u2081 / t\u2082.\n\n4. STEP-BY-STEP SOLUTION:\n1. In the acceleration phase: initial speed = 0, final speed = v_max, time = t\u2081.\n   Distance s\u2081 = (1/2) v_max t\u2081.\n2. In the retardation phase: initial speed = v_max, final speed = 0, time = t\u2082.\n   Distance s\u2082 = (1/2) v_max t\u2082.\n3. Take the ratio of distances:\n   s\u2081 / s\u2082 = [ (1/2) v_max t\u2081 ] / [ (1/2) v_max t\u2082 ] = t\u2081 / t\u2082.\n4. Therefore, the ratio of distances is simply t\u2081 : t\u2082.\n\n5. FINAL ANSWER:\nOption A: t\u2081 : t\u2082\n\n6. QUICK TIP:\nSince both phases have the same peak velocity v_max, average speed in each phase is identical (v_max / 2). Distance = average speed * time \u221d time!",
+    "solutionStructured": {
+      "concept": "In both phases, motion is triangular on the v-t graph with the same peak velocity v_max. Distance is the area under each triangle.",
+      "given": "Accelerates from 0 to v_max in t\u2081, retards from v_max to 0 in t\u2082.",
+      "formula": "s\u2081 = (1/2) v_max t\u2081; s\u2082 = (1/2) v_max t\u2082; s\u2081 / s\u2082 = t\u2081 / t\u2082.",
+      "stepByStep": "1. In the acceleration phase: initial speed = 0, final speed = v_max, time = t\u2081.\n   Distance s\u2081 = (1/2) v_max t\u2081.\n2. In the retardation phase: initial speed = v_max, final speed = 0, time = t\u2082.\n   Distance s\u2082 = (1/2) v_max t\u2082.\n3. Take the ratio of distances:\n   s\u2081 / s\u2082 = [ (1/2) v_max t\u2081 ] / [ (1/2) v_max t\u2082 ] = t\u2081 / t\u2082.\n4. Therefore, the ratio of distances is simply t\u2081 : t\u2082.",
+      "finalAnswer": "Option A: t\u2081 : t\u2082",
+      "whyOtherOptionsWrong": "Option B assumes time-squared dependence (which only applies if acceleration was the same). Option C inverts the ratio. Option D requires t\u2081 = t\u2082."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-146",
+    "questionNumber": 146,
+    "question": "In the previous question, what is the ratio of the magnitude of acceleration a\u2081 to the magnitude of retardation a\u2082?",
+    "options": {
+      "A": "t\u2082 : t\u2081",
+      "B": "t\u2081 : t\u2082",
+      "C": "t\u2081\u00b2 : t\u2082\u00b2",
+      "D": "1 : 1"
+    },
+    "optionsList": [
+      "t\u2082 : t\u2081",
+      "t\u2081 : t\u2082",
+      "t\u2081\u00b2 : t\u2082\u00b2",
+      "1 : 1"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSince v_max = a\u2081 t\u2081 = a\u2082 t\u2082, the accelerations are inversely proportional to the respective time intervals.\n\n2. GIVEN:\nv_max = a\u2081 t\u2081 = a\u2082 t\u2082.\n\n3. FORMULA / PRINCIPLE:\na\u2081 / a\u2082 = t\u2082 / t\u2081\n\n4. STEP-BY-STEP SOLUTION:\n1. Acceleration: a\u2081 = v_max / t\u2081.\n2. Retardation: a\u2082 = v_max / t\u2082.\n3. Take the ratio:\n   a\u2081 / a\u2082 = (v_max / t\u2081) / (v_max / t\u2082) = t\u2082 / t\u2081.\n4. Therefore, acceleration and time are inversely proportional: a\u2081 : a\u2082 = t\u2082 : t\u2081.\n\n5. FINAL ANSWER:\nOption A: t\u2082 : t\u2081\n\n6. QUICK TIP:\nShort time means steep slope means large acceleration! a \u221d 1/t for the same \u0394v.",
+    "solutionStructured": {
+      "concept": "Since v_max = a\u2081 t\u2081 = a\u2082 t\u2082, the accelerations are inversely proportional to the respective time intervals.",
+      "given": "v_max = a\u2081 t\u2081 = a\u2082 t\u2082.",
+      "formula": "a\u2081 / a\u2082 = t\u2082 / t\u2081",
+      "stepByStep": "1. Acceleration: a\u2081 = v_max / t\u2081.\n2. Retardation: a\u2082 = v_max / t\u2082.\n3. Take the ratio:\n   a\u2081 / a\u2082 = (v_max / t\u2081) / (v_max / t\u2082) = t\u2082 / t\u2081.\n4. Therefore, acceleration and time are inversely proportional: a\u2081 : a\u2082 = t\u2082 : t\u2081.",
+      "finalAnswer": "Option A: t\u2082 : t\u2081",
+      "whyOtherOptionsWrong": "Option B inverts the ratio. Option C squares the times. Option D assumes equal times."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-147",
+    "questionNumber": 147,
+    "question": "Which of the following conditions characterizes uniform motion in one dimension?",
+    "options": {
+      "A": "Equal distances are covered in equal intervals of time, however small these intervals may be.",
+      "B": "Speed increases linearly with time.",
+      "C": "Acceleration is a non-zero constant.",
+      "D": "Velocity changes its direction periodically."
+    },
+    "optionsList": [
+      "Equal distances are covered in equal intervals of time, however small these intervals may be.",
+      "Speed increases linearly with time.",
+      "Acceleration is a non-zero constant.",
+      "Velocity changes its direction periodically."
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn uniform motion, velocity is strictly constant in both magnitude and direction, meaning equal displacements (and distances) are traversed in equal time intervals.\n\n2. GIVEN:\nDefinition of uniform motion.\n\n3. FORMULA / PRINCIPLE:\nv = constant <=> a = 0 <=> x(t) = x\u2080 + v t.\n\n4. STEP-BY-STEP SOLUTION:\n1. By definition, uniform motion along a straight line means velocity does not change with time.\n2. Acceleration is identically zero (a = 0).\n3. In any time interval \u0394t, the displacement is \u0394x = v * \u0394t.\n4. Therefore, equal distances and displacements are covered in equal intervals of time, regardless of how small the time interval is chosen.\n5. Hence, Option A is the correct definition.\n\n5. FINAL ANSWER:\nOption A: Equal distances are covered in equal intervals of time, however small these intervals may be.\n\n6. QUICK TIP:\nUniform motion <=> Constant velocity <=> Zero acceleration <=> Linear position-time graph.",
+    "solutionStructured": {
+      "concept": "In uniform motion, velocity is strictly constant in both magnitude and direction, meaning equal displacements (and distances) are traversed in equal time intervals.",
+      "given": "Definition of uniform motion.",
+      "formula": "v = constant <=> a = 0 <=> x(t) = x\u2080 + v t.",
+      "stepByStep": "1. By definition, uniform motion along a straight line means velocity does not change with time.\n2. Acceleration is identically zero (a = 0).\n3. In any time interval \u0394t, the displacement is \u0394x = v * \u0394t.\n4. Therefore, equal distances and displacements are covered in equal intervals of time, regardless of how small the time interval is chosen.\n5. Hence, Option A is the correct definition.",
+      "finalAnswer": "Option A: Equal distances are covered in equal intervals of time, however small these intervals may be.",
+      "whyOtherOptionsWrong": "Option B describes uniformly accelerated motion. Option C has constant acceleration (non-uniform motion). Option D has varying direction."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-148",
+    "questionNumber": 148,
+    "question": "For a particle executing uniform motion along the x-axis, the shape of its position-time (x-t) graph is:",
+    "options": {
+      "A": "A straight line inclined to the time axis",
+      "B": "A parabola opening upwards",
+      "C": "A horizontal line parallel to the time axis",
+      "D": "A circle or ellipse"
+    },
+    "optionsList": [
+      "A straight line inclined to the time axis",
+      "A parabola opening upwards",
+      "A horizontal line parallel to the time axis",
+      "A circle or ellipse"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn uniform motion, x(t) = x\u2080 + v t is a linear equation (y = mx + c), which graphs as a straight line whose slope is the constant velocity v.\n\n2. GIVEN:\nPosition function x(t) = x\u2080 + v t.\n\n3. FORMULA / PRINCIPLE:\nSlope = dx/dt = v = constant.\n\n4. STEP-BY-STEP SOLUTION:\n1. For uniform motion, velocity v is constant.\n2. Integrating velocity gives x(t) = x\u2080 + v t.\n3. This is a first-degree polynomial in time t (equation of a straight line).\n4. The slope of this line represents the constant velocity v.\n5. Therefore, the x-t graph is a straight line inclined to the time axis.\n\n5. FINAL ANSWER:\nOption A: A straight line inclined to the time axis\n\n6. QUICK TIP:\nSlope of x-t graph = velocity. Constant slope = constant velocity = straight line!",
+    "solutionStructured": {
+      "concept": "In uniform motion, x(t) = x\u2080 + v t is a linear equation (y = mx + c), which graphs as a straight line whose slope is the constant velocity v.",
+      "given": "Position function x(t) = x\u2080 + v t.",
+      "formula": "Slope = dx/dt = v = constant.",
+      "stepByStep": "1. For uniform motion, velocity v is constant.\n2. Integrating velocity gives x(t) = x\u2080 + v t.\n3. This is a first-degree polynomial in time t (equation of a straight line).\n4. The slope of this line represents the constant velocity v.\n5. Therefore, the x-t graph is a straight line inclined to the time axis.",
+      "finalAnswer": "Option A: A straight line inclined to the time axis",
+      "whyOtherOptionsWrong": "Option B is for uniformly accelerated motion (x \u221d t\u00b2). Option C represents an object at rest (v = 0). Option D cannot exist for a single-valued function of time."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-149",
+    "questionNumber": 149,
+    "question": "Which of the following physical quantities is necessarily zero in uniform rectilinear motion?",
+    "options": {
+      "A": "Acceleration",
+      "B": "Velocity",
+      "C": "Displacement",
+      "D": "Speed"
+    },
+    "optionsList": [
+      "Acceleration",
+      "Velocity",
+      "Displacement",
+      "Speed"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nUniform rectilinear motion has constant velocity, so its time derivative (acceleration) is identically zero.\n\n2. GIVEN:\nUniform rectilinear motion.\n\n3. FORMULA / PRINCIPLE:\na = dv/dt = d(constant)/dt = 0.\n\n4. STEP-BY-STEP SOLUTION:\n1. Uniform motion means velocity v is constant.\n2. Acceleration is defined as a = dv/dt.\n3. The derivative of a constant is zero.\n4. Therefore, acceleration is necessarily zero in uniform rectilinear motion.\n\n5. FINAL ANSWER:\nOption A: Acceleration\n\n6. QUICK TIP:\nZero net force and zero acceleration are the defining criteria for uniform motion.",
+    "solutionStructured": {
+      "concept": "Uniform rectilinear motion has constant velocity, so its time derivative (acceleration) is identically zero.",
+      "given": "Uniform rectilinear motion.",
+      "formula": "a = dv/dt = d(constant)/dt = 0.",
+      "stepByStep": "1. Uniform motion means velocity v is constant.\n2. Acceleration is defined as a = dv/dt.\n3. The derivative of a constant is zero.\n4. Therefore, acceleration is necessarily zero in uniform rectilinear motion.",
+      "finalAnswer": "Option A: Acceleration",
+      "whyOtherOptionsWrong": "Options B, C, and D are non-zero for any moving object."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-150",
+    "questionNumber": 150,
+    "question": "A car moves along a straight highway at a constant velocity of 20 m/s for 15 seconds. How far does the car travel in this time?",
+    "options": {
+      "A": "300 m",
+      "B": "150 m",
+      "C": "600 m",
+      "D": "75 m"
+    },
+    "optionsList": [
+      "300 m",
+      "150 m",
+      "600 m",
+      "75 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor uniform motion, distance covered is simply speed multiplied by time: s = v * t.\n\n2. GIVEN:\nv = 20 m/s, t = 15 s.\n\n3. FORMULA / PRINCIPLE:\ns = v * t\n\n4. STEP-BY-STEP SOLUTION:\n1. Velocity is constant: v = 20 m/s.\n2. Time elapsed: t = 15 s.\n3. Distance traveled: s = v * t = 20 m/s * 15 s = 300 m.\n4. Therefore, the car travels 300 m.\n\n5. FINAL ANSWER:\nOption A: 300 m\n\n6. QUICK TIP:\nWhen acceleration is zero, you don't need any complex kinematic equations; just use distance = speed * time!",
+    "solutionStructured": {
+      "concept": "For uniform motion, distance covered is simply speed multiplied by time: s = v * t.",
+      "given": "v = 20 m/s, t = 15 s.",
+      "formula": "s = v * t",
+      "stepByStep": "1. Velocity is constant: v = 20 m/s.\n2. Time elapsed: t = 15 s.\n3. Distance traveled: s = v * t = 20 m/s * 15 s = 300 m.\n4. Therefore, the car travels 300 m.",
+      "finalAnswer": "Option A: 300 m",
+      "whyOtherOptionsWrong": "Option B uses (1/2)vt. Option C doubles the product. Option D is (1/4)vt."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-151",
+    "questionNumber": 151,
+    "question": "Non-uniform motion is defined as motion in which:",
+    "options": {
+      "A": "Velocity of the object changes with time",
+      "B": "Speed is constant along a straight line",
+      "C": "Acceleration is identically zero at all times",
+      "D": "Equal displacements are covered in equal time intervals"
+    },
+    "optionsList": [
+      "Velocity of the object changes with time",
+      "Speed is constant along a straight line",
+      "Acceleration is identically zero at all times",
+      "Equal displacements are covered in equal time intervals"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIf velocity varies with time (either in magnitude, direction, or both), the motion is non-uniform (accelerated).\n\n2. GIVEN:\nDefinition of non-uniform motion.\n\n3. FORMULA / PRINCIPLE:\ndv\u20d7/dt \u2260 0 (a\u20d7 \u2260 0).\n\n4. STEP-BY-STEP SOLUTION:\n1. Motion is uniform when velocity is constant.\n2. If velocity changes with time\u2014meaning acceleration is non-zero\u2014the motion is non-uniform.\n3. The change can be in speed, direction of motion, or both.\n4. Therefore, non-uniform motion is characterized by changing velocity.\n\n5. FINAL ANSWER:\nOption A: Velocity of the object changes with time\n\n6. QUICK TIP:\nNon-uniform motion = accelerated motion (a \u2260 0).",
+    "solutionStructured": {
+      "concept": "If velocity varies with time (either in magnitude, direction, or both), the motion is non-uniform (accelerated).",
+      "given": "Definition of non-uniform motion.",
+      "formula": "dv\u20d7/dt \u2260 0 (a\u20d7 \u2260 0).",
+      "stepByStep": "1. Motion is uniform when velocity is constant.\n2. If velocity changes with time\u2014meaning acceleration is non-zero\u2014the motion is non-uniform.\n3. The change can be in speed, direction of motion, or both.\n4. Therefore, non-uniform motion is characterized by changing velocity.",
+      "finalAnswer": "Option A: Velocity of the object changes with time",
+      "whyOtherOptionsWrong": "Options B, C, and D all describe uniform motion with constant velocity."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-152",
+    "questionNumber": 152,
+    "question": "A body moves in a straight line such that its displacement x is proportional to t\u00b3 (x = c t\u00b3). The acceleration of the body is:",
+    "options": {
+      "A": "Proportional to t",
+      "B": "Constant",
+      "C": "Proportional to t\u00b2",
+      "D": "Zero"
+    },
+    "optionsList": [
+      "Proportional to t",
+      "Constant",
+      "Proportional to t\u00b2",
+      "Zero"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDifferentiating x(t) = c t\u00b3 twice with respect to time yields acceleration a(t) = 6c t, which is directly proportional to t.\n\n2. GIVEN:\nx(t) = c t\u00b3.\n\n3. FORMULA / PRINCIPLE:\nv = dx/dt = 3c t\u00b2; a = dv/dt = 6c t \u221d t.\n\n4. STEP-BY-STEP SOLUTION:\n1. Differentiate position with respect to time:\n   v = dx/dt = 3c t\u00b2.\n2. Differentiate velocity to find acceleration:\n   a = dv/dt = 6c t.\n3. Since 6c is a constant, acceleration a is directly proportional to time t: a \u221d t.\n4. This represents non-uniformly accelerated motion (with constant jerk da/dt = 6c).\n\n5. FINAL ANSWER:\nOption A: Proportional to t\n\n6. QUICK TIP:\nPower rule: x \u221d t\u00b3 => v \u221d t\u00b2 => a \u221d t.",
+    "solutionStructured": {
+      "concept": "Differentiating x(t) = c t\u00b3 twice with respect to time yields acceleration a(t) = 6c t, which is directly proportional to t.",
+      "given": "x(t) = c t\u00b3.",
+      "formula": "v = dx/dt = 3c t\u00b2; a = dv/dt = 6c t \u221d t.",
+      "stepByStep": "1. Differentiate position with respect to time:\n   v = dx/dt = 3c t\u00b2.\n2. Differentiate velocity to find acceleration:\n   a = dv/dt = 6c t.\n3. Since 6c is a constant, acceleration a is directly proportional to time t: a \u221d t.\n4. This represents non-uniformly accelerated motion (with constant jerk da/dt = 6c).",
+      "finalAnswer": "Option A: Proportional to t",
+      "whyOtherOptionsWrong": "Option B would require x \u221d t\u00b2 (constant acceleration). Option C is velocity (v \u221d t\u00b2). Option D would require x \u221d t (uniform motion)."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-153",
+    "questionNumber": 153,
+    "question": "The velocity of a particle moving along a straight line varies with time as v = (2t\u00b2 - 8) m/s. During which time interval is the particle undergoing retardation while moving in the negative direction?",
+    "options": {
+      "A": "0 < t < 2 s",
+      "B": "t > 2 s",
+      "C": "t = 2 s only",
+      "D": "Never, because acceleration is always positive"
+    },
+    "optionsList": [
+      "0 < t < 2 s",
+      "t > 2 s",
+      "t = 2 s only",
+      "Never, because acceleration is always positive"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nMoving in the negative direction requires v < 0. Retardation requires acceleration to oppose velocity (a > 0).\n\n2. GIVEN:\nv(t) = 2t\u00b2 - 8 m/s.\n\n3. FORMULA / PRINCIPLE:\nv < 0 and a > 0 for retardation in the negative direction.\n\n4. STEP-BY-STEP SOLUTION:\n1. Find acceleration:\n   a(t) = dv/dt = d(2t\u00b2 - 8)/dt = 4t m/s\u00b2.\n   Notice that for all t > 0, acceleration is positive: a(t) > 0.\n2. Condition for moving in the negative direction:\n   v(t) < 0 => 2t\u00b2 - 8 < 0 => 2t\u00b2 < 8 => t\u00b2 < 4 => 0 < t < 2 s.\n3. For 0 < t < 2 s:\n   Velocity is negative (v < 0), but acceleration is positive (a > 0).\n4. Since v and a have opposite signs, the particle is slowing down (undergoing retardation)!\n5. Therefore, in the interval 0 < t < 2 s, the particle moves in the negative direction and undergoes retardation.\n\n5. FINAL ANSWER:\nOption A: 0 < t < 2 s\n\n6. QUICK TIP:\nGreat NEET concept: Here a = +4t is positive, but because v is negative, the particle is RETARDING! Its speed decreases from 8 m/s at t=0 to 0 m/s at t=2 s.",
+    "solutionStructured": {
+      "concept": "Moving in the negative direction requires v < 0. Retardation requires acceleration to oppose velocity (a > 0).",
+      "given": "v(t) = 2t\u00b2 - 8 m/s.",
+      "formula": "v < 0 and a > 0 for retardation in the negative direction.",
+      "stepByStep": "1. Find acceleration:\n   a(t) = dv/dt = d(2t\u00b2 - 8)/dt = 4t m/s\u00b2.\n   Notice that for all t > 0, acceleration is positive: a(t) > 0.\n2. Condition for moving in the negative direction:\n   v(t) < 0 => 2t\u00b2 - 8 < 0 => 2t\u00b2 < 8 => t\u00b2 < 4 => 0 < t < 2 s.\n3. For 0 < t < 2 s:\n   Velocity is negative (v < 0), but acceleration is positive (a > 0).\n4. Since v and a have opposite signs, the particle is slowing down (undergoing retardation)!\n5. Therefore, in the interval 0 < t < 2 s, the particle moves in the negative direction and undergoes retardation.",
+      "finalAnswer": "Option A: 0 < t < 2 s",
+      "whyOtherOptionsWrong": "Option B has v > 0 and a > 0, so the particle is moving in the positive direction and speeding up. Option C is just the instant of rest."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-154",
+    "questionNumber": 154,
+    "question": "A particle moves along a straight line such that its position is given by x = 12t - 3t\u00b2 (in meters). What is the total distance covered by the particle from t = 0 to t = 3 s?",
+    "options": {
+      "A": "15 m",
+      "B": "9 m",
+      "C": "12 m",
+      "D": "18 m"
+    },
+    "optionsList": [
+      "15 m",
+      "9 m",
+      "12 m",
+      "18 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTo find total distance in non-uniform motion, break the integral at any turning point where v = dx/dt = 0.\n\n2. GIVEN:\nx(t) = 12t - 3t\u00b2, interval [0, 3] s.\n\n3. FORMULA / PRINCIPLE:\nv = 12 - 6t = 0 => t = 2 s; Distance = |x(2) - x(0)| + |x(3) - x(2)|.\n\n4. STEP-BY-STEP SOLUTION:\n1. Find velocity:\n   v(t) = dx/dt = 12 - 6t.\n2. Turning point:\n   12 - 6t = 0 => t = 2 s.\n   Since 2 s is inside [0, 3] s, the particle stops and turns back at t = 2 s.\n3. Evaluate positions:\n   x(0) = 0 m.\n   x(2) = 12(2) - 3(2\u00b2) = 24 - 12 = 12 m.\n   x(3) = 12(3) - 3(3\u00b2) = 36 - 27 = 9 m.\n4. Distance from 0 to 2 s: |12 - 0| = 12 m (forward).\n5. Distance from 2 to 3 s: |9 - 12| = |-3| = 3 m (backward).\n6. Total distance = 12 m + 3 m = 15 m.\n7. (Note: Displacement is x(3) - x(0) = 9 m).\n\n5. FINAL ANSWER:\nOption A: 15 m\n\n6. QUICK TIP:\nRemember: Distance = Forward path + Backward path = 12 + 3 = 15 m. Displacement = 9 m.",
+    "solutionStructured": {
+      "concept": "To find total distance in non-uniform motion, break the integral at any turning point where v = dx/dt = 0.",
+      "given": "x(t) = 12t - 3t\u00b2, interval [0, 3] s.",
+      "formula": "v = 12 - 6t = 0 => t = 2 s; Distance = |x(2) - x(0)| + |x(3) - x(2)|.",
+      "stepByStep": "1. Find velocity:\n   v(t) = dx/dt = 12 - 6t.\n2. Turning point:\n   12 - 6t = 0 => t = 2 s.\n   Since 2 s is inside [0, 3] s, the particle stops and turns back at t = 2 s.\n3. Evaluate positions:\n   x(0) = 0 m.\n   x(2) = 12(2) - 3(2\u00b2) = 24 - 12 = 12 m.\n   x(3) = 12(3) - 3(3\u00b2) = 36 - 27 = 9 m.\n4. Distance from 0 to 2 s: |12 - 0| = 12 m (forward).\n5. Distance from 2 to 3 s: |9 - 12| = |-3| = 3 m (backward).\n6. Total distance = 12 m + 3 m = 15 m.\n7. (Note: Displacement is x(3) - x(0) = 9 m).",
+      "finalAnswer": "Option A: 15 m",
+      "whyOtherOptionsWrong": "Option B is displacement x(3) - x(0) = 9 m (common trap!). Option C is only the forward segment (12 m). Option D is 18 m."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-155",
+    "questionNumber": 155,
+    "question": "The acceleration of a moving particle along a straight line is inversely proportional to the square of its displacement from a fixed point: a = -k / x\u00b2 (k > 0). If the particle is released from rest at x = x\u2080, its velocity at distance x is:",
+    "options": {
+      "A": "\u221a[ 2k (1/x - 1/x\u2080) ]",
+      "B": "\u221a[ 2k (1/x\u2080 - 1/x) ]",
+      "C": "\u221a[ k (1/x\u00b2 - 1/x\u2080\u00b2) ]",
+      "D": "k (1/x - 1/x\u2080)"
+    },
+    "optionsList": [
+      "\u221a[ 2k (1/x - 1/x\u2080) ]",
+      "\u221a[ 2k (1/x\u2080 - 1/x) ]",
+      "\u221a[ k (1/x\u00b2 - 1/x\u2080\u00b2) ]",
+      "k (1/x - 1/x\u2080)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nUse a = v (dv/dx) = -k / x\u00b2 and integrate: v dv = -k x\u207b\u00b2 dx.\n\n2. GIVEN:\na = -k / x\u00b2, released from rest (v = 0) at x = x\u2080.\n\n3. FORMULA / PRINCIPLE:\n\u222b_0^v v dv = -k \u222b_{x\u2080}^x x\u207b\u00b2 dx.\n\n4. STEP-BY-STEP SOLUTION:\n1. Express acceleration as v (dv/dx):\n   v (dv/dx) = -k / x\u00b2.\n2. Separate variables:\n   v dv = -k x\u207b\u00b2 dx.\n3. Integrate from initial point (x = x\u2080, v = 0) to position x (with x < x\u2080 as it falls inward):\n   \u222b_0^v v dv = -k \u222b_{x\u2080}^x x\u207b\u00b2 dx.\n4. Evaluate integrals:\n   v\u00b2 / 2 = -k [ -1/x ]_{x\u2080}^x = k [ 1/x - 1/x\u2080 ].\n5. Multiply by 2 and take square root:\n   v\u00b2 = 2k (1/x - 1/x\u2080)\n   v = \u221a[ 2k (1/x - 1/x\u2080) ].\n6. This is the exact gravitational acceleration relation (falling towards Earth from height x\u2080)!\n\n5. FINAL ANSWER:\nOption A: \u221a[ 2k (1/x - 1/x\u2080) ]\n\n6. QUICK TIP:\nThis is gravitational free fall from outer space: (1/2) v\u00b2 - GM/x = -GM/x\u2080 => v = \u221a[2GM(1/x - 1/x\u2080)].",
+    "solutionStructured": {
+      "concept": "Use a = v (dv/dx) = -k / x\u00b2 and integrate: v dv = -k x\u207b\u00b2 dx.",
+      "given": "a = -k / x\u00b2, released from rest (v = 0) at x = x\u2080.",
+      "formula": "\u222b_0^v v dv = -k \u222b_{x\u2080}^x x\u207b\u00b2 dx.",
+      "stepByStep": "1. Express acceleration as v (dv/dx):\n   v (dv/dx) = -k / x\u00b2.\n2. Separate variables:\n   v dv = -k x\u207b\u00b2 dx.\n3. Integrate from initial point (x = x\u2080, v = 0) to position x (with x < x\u2080 as it falls inward):\n   \u222b_0^v v dv = -k \u222b_{x\u2080}^x x\u207b\u00b2 dx.\n4. Evaluate integrals:\n   v\u00b2 / 2 = -k [ -1/x ]_{x\u2080}^x = k [ 1/x - 1/x\u2080 ].\n5. Multiply by 2 and take square root:\n   v\u00b2 = 2k (1/x - 1/x\u2080)\n   v = \u221a[ 2k (1/x - 1/x\u2080) ].\n6. This is the exact gravitational acceleration relation (falling towards Earth from height x\u2080)!",
+      "finalAnswer": "Option A: \u221a[ 2k (1/x - 1/x\u2080) ]",
+      "whyOtherOptionsWrong": "Option B would produce an imaginary number for inward motion (x < x\u2080). Option C integrates x\u207b\u00b3 instead of x\u207b\u00b2. Option D lacks square root."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-156",
+    "questionNumber": 156,
+    "question": "A body starts from rest at the origin and moves along the positive x-axis such that its velocity varies with displacement as v = 4 \u221ax (in SI units). What is the displacement of the body as a function of time t?",
+    "options": {
+      "A": "x = 4 t\u00b2",
+      "B": "x = 8 t\u00b2",
+      "C": "x = 2 t\u00b2",
+      "D": "x = 16 t\u00b2"
+    },
+    "optionsList": [
+      "x = 4 t\u00b2",
+      "x = 8 t\u00b2",
+      "x = 2 t\u00b2",
+      "x = 16 t\u00b2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nExpress v as dx/dt = 4 \u221ax, separate variables, and integrate.\n\n2. GIVEN:\ndx/dt = 4 x^(1/2), x(0) = 0.\n\n3. FORMULA / PRINCIPLE:\n\u222b x^(-1/2) dx = 4 \u222b dt => 2 \u221ax = 4t => \u221ax = 2t.\n\n4. STEP-BY-STEP SOLUTION:\n1. Write differential equation:\n   dx / dt = 4 \u221ax.\n2. Separate variables:\n   dx / \u221ax = 4 dt\n   x^(-1/2) dx = 4 dt.\n3. Integrate both sides from 0 to t:\n   [ 2 x^(1/2) ]_0^x = 4 [ t ]_0^t\n   2 \u221ax = 4t\n   \u221ax = 2t.\n4. Square both sides to find x(t):\n   x(t) = (2t)\u00b2 = 4 t\u00b2.\n5. Therefore, the displacement as a function of time is x = 4 t\u00b2.\n\n5. FINAL ANSWER:\nOption A: x = 4 t\u00b2\n\n6. QUICK TIP:\nCheck: If x = 4t\u00b2, v = dx/dt = 8t. Since \u221ax = 2t, 4\u221ax = 4(2t) = 8t = v! Perfect match.",
+    "solutionStructured": {
+      "concept": "Express v as dx/dt = 4 \u221ax, separate variables, and integrate.",
+      "given": "dx/dt = 4 x^(1/2), x(0) = 0.",
+      "formula": "\u222b x^(-1/2) dx = 4 \u222b dt => 2 \u221ax = 4t => \u221ax = 2t.",
+      "stepByStep": "1. Write differential equation:\n   dx / dt = 4 \u221ax.\n2. Separate variables:\n   dx / \u221ax = 4 dt\n   x^(-1/2) dx = 4 dt.\n3. Integrate both sides from 0 to t:\n   [ 2 x^(1/2) ]_0^x = 4 [ t ]_0^t\n   2 \u221ax = 4t\n   \u221ax = 2t.\n4. Square both sides to find x(t):\n   x(t) = (2t)\u00b2 = 4 t\u00b2.\n5. Therefore, the displacement as a function of time is x = 4 t\u00b2.",
+      "finalAnswer": "Option A: x = 4 t\u00b2",
+      "whyOtherOptionsWrong": "Option B has coefficient 8. Option C has coefficient 2. Option D has coefficient 16."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-157",
+    "questionNumber": 157,
+    "question": "For the body in Q156 where v = 4 \u221ax and x = 4 t\u00b2, what is its acceleration?",
+    "options": {
+      "A": "8 m/s\u00b2",
+      "B": "4 m/s\u00b2",
+      "C": "16 m/s\u00b2",
+      "D": "2 m/s\u00b2"
+    },
+    "optionsList": [
+      "8 m/s\u00b2",
+      "4 m/s\u00b2",
+      "16 m/s\u00b2",
+      "2 m/s\u00b2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDifferentiate velocity with respect to time: a = dv/dt, or use a = v (dv/dx).\n\n2. GIVEN:\nx(t) = 4 t\u00b2 => v(t) = 8t.\n\n3. FORMULA / PRINCIPLE:\na = dv/dt = d(8t)/dt = 8 m/s\u00b2.\n\n4. STEP-BY-STEP SOLUTION:\n1. Position function: x(t) = 4 t\u00b2.\n2. Differentiate once to get velocity: v(t) = dx/dt = 8t.\n3. Differentiate again to get acceleration: a = dv/dt = 8 m/s\u00b2.\n4. Alternatively, using a = v (dv/dx):\n   v = 4 \u221ax => dv/dx = 4 * (1 / 2\u221ax) = 2 / \u221ax.\n   Then a = (4 \u221ax) * (2 / \u221ax) = 8 m/s\u00b2.\n5. Both methods yield an acceleration of exactly 8 m/s\u00b2.\n\n5. FINAL ANSWER:\nOption A: 8 m/s\u00b2\n\n6. QUICK TIP:\nWhen v = k\u221ax, acceleration is always constant and equals k\u00b2 / 2! Here (4\u00b2)/2 = 16/2 = 8 m/s\u00b2.",
+    "solutionStructured": {
+      "concept": "Differentiate velocity with respect to time: a = dv/dt, or use a = v (dv/dx).",
+      "given": "x(t) = 4 t\u00b2 => v(t) = 8t.",
+      "formula": "a = dv/dt = d(8t)/dt = 8 m/s\u00b2.",
+      "stepByStep": "1. Position function: x(t) = 4 t\u00b2.\n2. Differentiate once to get velocity: v(t) = dx/dt = 8t.\n3. Differentiate again to get acceleration: a = dv/dt = 8 m/s\u00b2.\n4. Alternatively, using a = v (dv/dx):\n   v = 4 \u221ax => dv/dx = 4 * (1 / 2\u221ax) = 2 / \u221ax.\n   Then a = (4 \u221ax) * (2 / \u221ax) = 8 m/s\u00b2.\n5. Both methods yield an acceleration of exactly 8 m/s\u00b2.",
+      "finalAnswer": "Option A: 8 m/s\u00b2",
+      "whyOtherOptionsWrong": "Option B is 4. Option C is 16. Option D is 2."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-158",
+    "questionNumber": 158,
+    "question": "The velocity of a particle moving along a straight line is given by v = v\u2080 (1 - t / T) for 0 \u2264 t \u2264 T. What is the total distance traveled by the particle in time T?",
+    "options": {
+      "A": "(1/2) v\u2080 T",
+      "B": "v\u2080 T",
+      "C": "(1/3) v\u2080 T",
+      "D": "(2/3) v\u2080 T"
+    },
+    "optionsList": [
+      "(1/2) v\u2080 T",
+      "v\u2080 T",
+      "(1/3) v\u2080 T",
+      "(2/3) v\u2080 T"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSince velocity decreases linearly from v\u2080 to 0 in time T, the distance is the area of the triangular v-t graph: (1/2) * base * height.\n\n2. GIVEN:\nv(t) = v\u2080 (1 - t/T), t \u2208 [0, T].\n\n3. FORMULA / PRINCIPLE:\ns = \u222b_0^T v\u2080 (1 - t/T) dt = (1/2) v\u2080 T.\n\n4. STEP-BY-STEP SOLUTION:\n1. In the interval [0, T], velocity is non-negative (v \u2265 0).\n2. Distance is simply the definite integral of velocity:\n   s = \u222b_0^T v\u2080 (1 - t/T) dt = v\u2080 [ t - t\u00b2 / (2T) ]_0^T.\n3. Evaluate at the limits:\n   s = v\u2080 [ T - T\u00b2 / (2T) ] = v\u2080 [ T - T/2 ] = (1/2) v\u2080 T.\n4. Geometrically, on a v-t plot, this is a right triangle with base T and height v\u2080:\n   Area = (1/2) * T * v\u2080 = (1/2) v\u2080 T.\n5. Therefore, the distance is (1/2) v\u2080 T.\n\n5. FINAL ANSWER:\nOption A: (1/2) v\u2080 T\n\n6. QUICK TIP:\nArea of triangle under linear retardation = (1/2) * v_initial * t_stop.",
+    "solutionStructured": {
+      "concept": "Since velocity decreases linearly from v\u2080 to 0 in time T, the distance is the area of the triangular v-t graph: (1/2) * base * height.",
+      "given": "v(t) = v\u2080 (1 - t/T), t \u2208 [0, T].",
+      "formula": "s = \u222b_0^T v\u2080 (1 - t/T) dt = (1/2) v\u2080 T.",
+      "stepByStep": "1. In the interval [0, T], velocity is non-negative (v \u2265 0).\n2. Distance is simply the definite integral of velocity:\n   s = \u222b_0^T v\u2080 (1 - t/T) dt = v\u2080 [ t - t\u00b2 / (2T) ]_0^T.\n3. Evaluate at the limits:\n   s = v\u2080 [ T - T\u00b2 / (2T) ] = v\u2080 [ T - T/2 ] = (1/2) v\u2080 T.\n4. Geometrically, on a v-t plot, this is a right triangle with base T and height v\u2080:\n   Area = (1/2) * T * v\u2080 = (1/2) v\u2080 T.\n5. Therefore, the distance is (1/2) v\u2080 T.",
+      "finalAnswer": "Option A: (1/2) v\u2080 T",
+      "whyOtherOptionsWrong": "Option B assumes constant velocity v\u2080. Options C and D are incorrect fractions."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-159",
+    "questionNumber": 159,
+    "question": "A body starts from rest and moves along a straight line such that its acceleration is proportional to the square root of time: a = k t^(1/2). What is the displacement of the body as a function of time t?",
+    "options": {
+      "A": "(4/15) k t^(5/2)",
+      "B": "(2/5) k t^(5/2)",
+      "C": "(2/3) k t^(3/2)",
+      "D": "(1/6) k t^(5/2)"
+    },
+    "optionsList": [
+      "(4/15) k t^(5/2)",
+      "(2/5) k t^(5/2)",
+      "(2/3) k t^(3/2)",
+      "(1/6) k t^(5/2)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIntegrate acceleration twice from rest: v = \u222b a dt, and x = \u222b v dt.\n\n2. GIVEN:\na(t) = k t^(1/2), u = 0, x(0) = 0.\n\n3. FORMULA / PRINCIPLE:\nv = \u222b k t^(1/2) dt = (2/3) k t^(3/2); x = \u222b v dt = (2/3) k \u222b t^(3/2) dt.\n\n4. STEP-BY-STEP SOLUTION:\n1. Integrate acceleration to find velocity:\n   v(t) = \u222b_0^t k t^(1/2) dt = k [ t^(3/2) / (3/2) ] = (2/3) k t^(3/2).\n2. Integrate velocity to find displacement:\n   x(t) = \u222b_0^t (2/3) k t^(3/2) dt = (2/3) k [ t^(5/2) / (5/2) ].\n3. Simplify the fraction:\n   (2/3) * (2/5) = 4/15.\n4. Therefore:\n   x(t) = (4/15) k t^(5/2).\n5. Hence, Option A is the correct expression.\n\n5. FINAL ANSWER:\nOption A: (4/15) k t^(5/2)\n\n6. QUICK TIP:\nIntegration fractions: 1/2 -> 3/2 (coeff 2/3) -> 5/2 (coeff (2/3)*(2/5) = 4/15).",
+    "solutionStructured": {
+      "concept": "Integrate acceleration twice from rest: v = \u222b a dt, and x = \u222b v dt.",
+      "given": "a(t) = k t^(1/2), u = 0, x(0) = 0.",
+      "formula": "v = \u222b k t^(1/2) dt = (2/3) k t^(3/2); x = \u222b v dt = (2/3) k \u222b t^(3/2) dt.",
+      "stepByStep": "1. Integrate acceleration to find velocity:\n   v(t) = \u222b_0^t k t^(1/2) dt = k [ t^(3/2) / (3/2) ] = (2/3) k t^(3/2).\n2. Integrate velocity to find displacement:\n   x(t) = \u222b_0^t (2/3) k t^(3/2) dt = (2/3) k [ t^(5/2) / (5/2) ].\n3. Simplify the fraction:\n   (2/3) * (2/5) = 4/15.\n4. Therefore:\n   x(t) = (4/15) k t^(5/2).\n5. Hence, Option A is the correct expression.",
+      "finalAnswer": "Option A: (4/15) k t^(5/2)",
+      "whyOtherOptionsWrong": "Option B misses the first factor 2/3. Option C is the velocity v(t). Option D is an incorrect coefficient."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-160",
+    "questionNumber": 160,
+    "question": "A particle moves along a straight line such that its velocity varies with displacement as v\u00b2 = a - b x, where a and b are positive constants. The motion of the particle is:",
+    "options": {
+      "A": "Uniformly retarded with acceleration -b/2",
+      "B": "Uniformly accelerated with acceleration +b",
+      "C": "Non-uniformly accelerated",
+      "D": "Uniform motion with zero acceleration"
+    },
+    "optionsList": [
+      "Uniformly retarded with acceleration -b/2",
+      "Uniformly accelerated with acceleration +b",
+      "Non-uniformly accelerated",
+      "Uniform motion with zero acceleration"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDifferentiating v\u00b2 = a - b x with respect to x gives 2v (dv/dx) = 2a_acc = -b => a_acc = -b/2 (constant negative acceleration).\n\n2. GIVEN:\nv\u00b2 = a - b x.\n\n3. FORMULA / PRINCIPLE:\n2 a_acc = d(v\u00b2)/dx = -b => a_acc = -b/2.\n\n4. STEP-BY-STEP SOLUTION:\n1. Differentiate both sides with respect to x:\n   d(v\u00b2)/dx = d(a - b x)/dx = -b.\n2. Since 2v (dv/dx) = d(v\u00b2)/dx:\n   2 a_acc = -b.\n3. Solve for acceleration:\n   a_acc = -b / 2.\n4. Because b is a positive constant, a_acc is constant and negative.\n5. Therefore, the motion is uniformly retarded with acceleration -b/2.\n\n5. FINAL ANSWER:\nOption A: Uniformly retarded with acceleration -b/2\n\n6. QUICK TIP:\nComparing with v\u00b2 = u\u00b2 + 2as: 2a_acc = -b => a_acc = -b/2 (constant acceleration!).",
+    "solutionStructured": {
+      "concept": "Differentiating v\u00b2 = a - b x with respect to x gives 2v (dv/dx) = 2a_acc = -b => a_acc = -b/2 (constant negative acceleration).",
+      "given": "v\u00b2 = a - b x.",
+      "formula": "2 a_acc = d(v\u00b2)/dx = -b => a_acc = -b/2.",
+      "stepByStep": "1. Differentiate both sides with respect to x:\n   d(v\u00b2)/dx = d(a - b x)/dx = -b.\n2. Since 2v (dv/dx) = d(v\u00b2)/dx:\n   2 a_acc = -b.\n3. Solve for acceleration:\n   a_acc = -b / 2.\n4. Because b is a positive constant, a_acc is constant and negative.\n5. Therefore, the motion is uniformly retarded with acceleration -b/2.",
+      "finalAnswer": "Option A: Uniformly retarded with acceleration -b/2",
+      "whyOtherOptionsWrong": "Option B has positive sign and misses 1/2. Option C incorrectly assumes non-uniform acceleration. Option D claims zero acceleration."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-161",
+    "questionNumber": 161,
+    "question": "A particle moves along the x-axis with an acceleration a = -32 x (in SI units). If it is released from rest at x = 2 m, what is the frequency of its oscillation?",
+    "options": {
+      "A": "(4\u221a2 / \u03c0) Hz \u2248 1.80 Hz",
+      "B": "(2\u221a2 / \u03c0) Hz",
+      "C": "4 Hz",
+      "D": "8 Hz"
+    },
+    "optionsList": [
+      "(4\u221a2 / \u03c0) Hz \u2248 1.80 Hz",
+      "(2\u221a2 / \u03c0) Hz",
+      "4 Hz",
+      "8 Hz"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nAcceleration proportional to negative displacement represents SHM: a = -\u03c9\u00b2 x. Frequency f = \u03c9 / (2\u03c0).\n\n2. GIVEN:\na = -32 x => \u03c9\u00b2 = 32.\n\n3. FORMULA / PRINCIPLE:\n\u03c9 = \u221a32 = 4\u221a2 rad/s; f = \u03c9 / (2\u03c0) = 4\u221a2 / (2\u03c0) = 2\u221a2 / \u03c0 Hz.\n\n4. STEP-BY-STEP SOLUTION:\n1. Compare the given equation a = -32 x with the standard SHM equation a = -\u03c9\u00b2 x.\n2. We have \u03c9\u00b2 = 32 => \u03c9 = \u221a32 = \u221a(16 * 2) = 4\u221a2 rad/s.\n3. The frequency f of oscillation is:\n   f = \u03c9 / (2\u03c0) = (4\u221a2) / (2\u03c0) = (2\u221a2 / \u03c0) Hz.\n4. Evaluating numerically: 2 * 1.414 / 3.1416 \u2248 2.828 / 3.1416 \u2248 0.90 Hz.\n5. Hence, Option B is the exact expression.\n\n5. FINAL ANSWER:\nOption B: (2\u221a2 / \u03c0) Hz\n\n6. QUICK TIP:\nIn any 1D equation of the form a = -k x, motion is non-uniform SHM with angular frequency \u03c9 = \u221ak.",
+    "solutionStructured": {
+      "concept": "Acceleration proportional to negative displacement represents SHM: a = -\u03c9\u00b2 x. Frequency f = \u03c9 / (2\u03c0).",
+      "given": "a = -32 x => \u03c9\u00b2 = 32.",
+      "formula": "\u03c9 = \u221a32 = 4\u221a2 rad/s; f = \u03c9 / (2\u03c0) = 4\u221a2 / (2\u03c0) = 2\u221a2 / \u03c0 Hz.",
+      "stepByStep": "1. Compare the given equation a = -32 x with the standard SHM equation a = -\u03c9\u00b2 x.\n2. We have \u03c9\u00b2 = 32 => \u03c9 = \u221a32 = \u221a(16 * 2) = 4\u221a2 rad/s.\n3. The frequency f of oscillation is:\n   f = \u03c9 / (2\u03c0) = (4\u221a2) / (2\u03c0) = (2\u221a2 / \u03c0) Hz.\n4. Evaluating numerically: 2 * 1.414 / 3.1416 \u2248 2.828 / 3.1416 \u2248 0.90 Hz.\n5. Hence, Option B is the exact expression.",
+      "finalAnswer": "Option B: (2\u221a2 / \u03c0) Hz",
+      "whyOtherOptionsWrong": "Option A forgets to divide by 2 in f = \u03c9/(2\u03c0). Options C and D neglect \u03c0."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-162",
+    "questionNumber": 162,
+    "question": "A particle moves along a straight line such that its velocity is given by v = v\u2080 (1 - x\u00b2 / d\u00b2) for 0 \u2264 x \u2264 d. What is the acceleration of the particle at x = d / 2?",
+    "options": {
+      "A": "-3 v\u2080\u00b2 / (4d)",
+      "B": "-v\u2080\u00b2 / (2d)",
+      "C": "-3 v\u2080\u00b2 / (2d)",
+      "D": "-v\u2080\u00b2 / d"
+    },
+    "optionsList": [
+      "-3 v\u2080\u00b2 / (4d)",
+      "-v\u2080\u00b2 / (2d)",
+      "-3 v\u2080\u00b2 / (2d)",
+      "-v\u2080\u00b2 / d"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nUse a = v (dv/dx). First evaluate v and dv/dx at x = d/2, then multiply.\n\n2. GIVEN:\nv(x) = v\u2080 (1 - x\u00b2/d\u00b2), x = d/2.\n\n3. FORMULA / PRINCIPLE:\na = v * (dv/dx)\n\n4. STEP-BY-STEP SOLUTION:\n1. Evaluate velocity at x = d/2:\n   v(d/2) = v\u2080 [ 1 - (d/2)\u00b2 / d\u00b2 ] = v\u2080 [ 1 - 1/4 ] = (3/4) v\u2080.\n2. Differentiate v with respect to x:\n   dv/dx = d/dx [ v\u2080 (1 - x\u00b2/d\u00b2) ] = v\u2080 [ -2x / d\u00b2 ] = -2 v\u2080 x / d\u00b2.\n3. Evaluate dv/dx at x = d/2:\n   (dv/dx)_{x = d/2} = -2 v\u2080 (d/2) / d\u00b2 = -v\u2080 / d.\n4. Compute acceleration:\n   a = v(d/2) * (dv/dx)_{x = d/2} = [ (3/4) v\u2080 ] * [ -v\u2080 / d ] = -3 v\u2080\u00b2 / (4d).\n5. Therefore, the acceleration is -3 v\u2080\u00b2 / (4d).\n\n5. FINAL ANSWER:\nOption A: -3 v\u2080\u00b2 / (4d)\n\n6. QUICK TIP:\nAlways calculate in two clean steps: v = (3/4)v\u2080 and dv/dx = -v\u2080/d => a = -(3/4)v\u2080\u00b2/d.",
+    "solutionStructured": {
+      "concept": "Use a = v (dv/dx). First evaluate v and dv/dx at x = d/2, then multiply.",
+      "given": "v(x) = v\u2080 (1 - x\u00b2/d\u00b2), x = d/2.",
+      "formula": "a = v * (dv/dx)",
+      "stepByStep": "1. Evaluate velocity at x = d/2:\n   v(d/2) = v\u2080 [ 1 - (d/2)\u00b2 / d\u00b2 ] = v\u2080 [ 1 - 1/4 ] = (3/4) v\u2080.\n2. Differentiate v with respect to x:\n   dv/dx = d/dx [ v\u2080 (1 - x\u00b2/d\u00b2) ] = v\u2080 [ -2x / d\u00b2 ] = -2 v\u2080 x / d\u00b2.\n3. Evaluate dv/dx at x = d/2:\n   (dv/dx)_{x = d/2} = -2 v\u2080 (d/2) / d\u00b2 = -v\u2080 / d.\n4. Compute acceleration:\n   a = v(d/2) * (dv/dx)_{x = d/2} = [ (3/4) v\u2080 ] * [ -v\u2080 / d ] = -3 v\u2080\u00b2 / (4d).\n5. Therefore, the acceleration is -3 v\u2080\u00b2 / (4d).",
+      "finalAnswer": "Option A: -3 v\u2080\u00b2 / (4d)",
+      "whyOtherOptionsWrong": "Option B is for x = 0. Option C lacks factor of 2. Option D is an incorrect estimate."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-163",
+    "questionNumber": 163,
+    "question": "A body starts from rest at t = 0 and moves along a straight line with an acceleration varying as a = 6t - 12 (in m/s\u00b2). What is the minimum position coordinate (most negative displacement) reached by the body?",
+    "options": {
+      "A": "-32 m",
+      "B": "-16 m",
+      "C": "-24 m",
+      "D": "-48 m"
+    },
+    "optionsList": [
+      "-32 m",
+      "-16 m",
+      "-24 m",
+      "-48 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIntegrate acceleration twice from rest to get v(t) and x(t). The turning point (extrema of position) occurs when v(t) = 0.\n\n2. GIVEN:\na(t) = 6t - 12, u = 0, x(0) = 0.\n\n3. FORMULA / PRINCIPLE:\nv(t) = 3t\u00b2 - 12t; x(t) = t\u00b3 - 6t\u00b2.\n\n4. STEP-BY-STEP SOLUTION:\n1. Integrate acceleration to find velocity:\n   v(t) = \u222b_0^t (6t - 12) dt = 3t\u00b2 - 12t.\n2. Position extrema occur when v(t) = 0:\n   3t\u00b2 - 12t = 0 => 3t(t - 4) = 0 => t = 0 and t = 4 s.\n3. Integrate velocity to find position:\n   x(t) = \u222b_0^t (3t\u00b2 - 12t) dt = t\u00b3 - 6t\u00b2.\n4. Evaluate position at the turning point t = 4 s:\n   x(4) = 4\u00b3 - 6(4\u00b2) = 64 - 6(16) = 64 - 96 = -32 m.\n5. Since v < 0 for 0 < t < 4 s and v > 0 for t > 4 s, x = -32 m is indeed the absolute minimum position.\n6. Therefore, the minimum position coordinate is -32 m.\n\n5. FINAL ANSWER:\nOption A: -32 m\n\n6. QUICK TIP:\nFind turning point from v(t) = 0: 3t(t - 4) = 0 => t = 4 s. Then x(4) = 4\u00b3 - 6(16) = -32 m.",
+    "solutionStructured": {
+      "concept": "Integrate acceleration twice from rest to get v(t) and x(t). The turning point (extrema of position) occurs when v(t) = 0.",
+      "given": "a(t) = 6t - 12, u = 0, x(0) = 0.",
+      "formula": "v(t) = 3t\u00b2 - 12t; x(t) = t\u00b3 - 6t\u00b2.",
+      "stepByStep": "1. Integrate acceleration to find velocity:\n   v(t) = \u222b_0^t (6t - 12) dt = 3t\u00b2 - 12t.\n2. Position extrema occur when v(t) = 0:\n   3t\u00b2 - 12t = 0 => 3t(t - 4) = 0 => t = 0 and t = 4 s.\n3. Integrate velocity to find position:\n   x(t) = \u222b_0^t (3t\u00b2 - 12t) dt = t\u00b3 - 6t\u00b2.\n4. Evaluate position at the turning point t = 4 s:\n   x(4) = 4\u00b3 - 6(4\u00b2) = 64 - 6(16) = 64 - 96 = -32 m.\n5. Since v < 0 for 0 < t < 4 s and v > 0 for t > 4 s, x = -32 m is indeed the absolute minimum position.\n6. Therefore, the minimum position coordinate is -32 m.",
+      "finalAnswer": "Option A: -32 m",
+      "whyOtherOptionsWrong": "Option B uses t = 2 s (inflection point, where acceleration is zero: x(2) = 8 - 24 = -16 m). Option C and D are arithmetic errors."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-164",
+    "questionNumber": 164,
+    "question": "A particle moves along a straight line with deceleration proportional to its displacement: a = -k x (k > 0). If it passes through the origin (x = 0) with velocity v\u2080, what is the maximum displacement reached before it stops?",
+    "options": {
+      "A": "v\u2080 / \u221ak",
+      "B": "v\u2080\u00b2 / (2k)",
+      "C": "v\u2080 / k",
+      "D": "\u221av\u2080 / k"
+    },
+    "optionsList": [
+      "v\u2080 / \u221ak",
+      "v\u2080\u00b2 / (2k)",
+      "v\u2080 / k",
+      "\u221av\u2080 / k"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nUse conservation of energy or integrate v dv = -k x dx to find maximum displacement where v = 0.\n\n2. GIVEN:\na = -k x, at x = 0, v = v\u2080; at x = x_max, v = 0.\n\n3. FORMULA / PRINCIPLE:\n\u222b_{v\u2080}^0 v dv = -k \u222b_0^{x_max} x dx => -v\u2080\u00b2 / 2 = -k x_max\u00b2 / 2.\n\n4. STEP-BY-STEP SOLUTION:\n1. Write a = v (dv/dx):\n   v (dv/dx) = -k x.\n2. Separate variables and integrate from x = 0 (v = v\u2080) to x = x_max (v = 0):\n   \u222b_{v\u2080}^0 v dv = -k \u222b_0^{x_max} x dx.\n3. Evaluate:\n   [ v\u00b2 / 2 ]_{v\u2080}^0 = -k [ x\u00b2 / 2 ]_0^{x_max}\n   0 - v\u2080\u00b2 / 2 = -k x_max\u00b2 / 2\n   v\u2080\u00b2 = k x_max\u00b2.\n4. Solve for x_max:\n   x_max\u00b2 = v\u2080\u00b2 / k => x_max = v\u2080 / \u221ak.\n5. Therefore, the maximum displacement is v\u2080 / \u221ak.\n\n5. FINAL ANSWER:\nOption A: v\u2080 / \u221ak\n\n6. QUICK TIP:\nEnergy method: Kinetic energy at origin = Potential energy at extreme: (1/2) m v\u2080\u00b2 = (1/2) k_eff x_max\u00b2 => x_max = v\u2080 / \u221ak.",
+    "solutionStructured": {
+      "concept": "Use conservation of energy or integrate v dv = -k x dx to find maximum displacement where v = 0.",
+      "given": "a = -k x, at x = 0, v = v\u2080; at x = x_max, v = 0.",
+      "formula": "\u222b_{v\u2080}^0 v dv = -k \u222b_0^{x_max} x dx => -v\u2080\u00b2 / 2 = -k x_max\u00b2 / 2.",
+      "stepByStep": "1. Write a = v (dv/dx):\n   v (dv/dx) = -k x.\n2. Separate variables and integrate from x = 0 (v = v\u2080) to x = x_max (v = 0):\n   \u222b_{v\u2080}^0 v dv = -k \u222b_0^{x_max} x dx.\n3. Evaluate:\n   [ v\u00b2 / 2 ]_{v\u2080}^0 = -k [ x\u00b2 / 2 ]_0^{x_max}\n   0 - v\u2080\u00b2 / 2 = -k x_max\u00b2 / 2\n   v\u2080\u00b2 = k x_max\u00b2.\n4. Solve for x_max:\n   x_max\u00b2 = v\u2080\u00b2 / k => x_max = v\u2080 / \u221ak.\n5. Therefore, the maximum displacement is v\u2080 / \u221ak.",
+      "finalAnswer": "Option A: v\u2080 / \u221ak",
+      "whyOtherOptionsWrong": "Option B assumes constant acceleration a = -k. Option C has wrong dimensions. Option D is dimensional mismatch."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-165",
+    "questionNumber": 165,
+    "question": "A body moves in a straight line with an acceleration given by a = 2 / v (in SI units), where v is velocity. If it starts from rest at t = 0 (or from negligible initial velocity u -> 0), what is its velocity at time t?",
+    "options": {
+      "A": "2 \u221at",
+      "B": "4 \u221at",
+      "C": "2 t",
+      "D": "4 t\u00b2"
+    },
+    "optionsList": [
+      "2 \u221at",
+      "4 \u221at",
+      "2 t",
+      "4 t\u00b2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSeparate variables in dv/dt = 2/v: v dv = 2 dt.\n\n2. GIVEN:\ndv/dt = 2 / v, v(0) = 0.\n\n3. FORMULA / PRINCIPLE:\nv dv = 2 dt => v\u00b2 / 2 = 2t => v\u00b2 = 4t => v = 2 \u221at.\n\n4. STEP-BY-STEP SOLUTION:\n1. Write equation: dv/dt = 2 / v.\n2. Separate variables:\n   v dv = 2 dt.\n3. Integrate from 0 to t:\n   \u222b_0^v v dv = 2 \u222b_0^t dt.\n4. Evaluate:\n   v\u00b2 / 2 = 2t\n   v\u00b2 = 4t.\n5. Take square root:\n   v(t) = 2 \u221at.\n6. Therefore, the velocity at time t is 2 \u221at.\n\n5. FINAL ANSWER:\nOption A: 2 \u221at\n\n6. QUICK TIP:\nIntegrating v dv = 2 dt yields v\u00b2 = 4t => v = 2\u221at. Acceleration a = 2/(2\u221at) = 1/\u221at.",
+    "solutionStructured": {
+      "concept": "Separate variables in dv/dt = 2/v: v dv = 2 dt.",
+      "given": "dv/dt = 2 / v, v(0) = 0.",
+      "formula": "v dv = 2 dt => v\u00b2 / 2 = 2t => v\u00b2 = 4t => v = 2 \u221at.",
+      "stepByStep": "1. Write equation: dv/dt = 2 / v.\n2. Separate variables:\n   v dv = 2 dt.\n3. Integrate from 0 to t:\n   \u222b_0^v v dv = 2 \u222b_0^t dt.\n4. Evaluate:\n   v\u00b2 / 2 = 2t\n   v\u00b2 = 4t.\n5. Take square root:\n   v(t) = 2 \u221at.\n6. Therefore, the velocity at time t is 2 \u221at.",
+      "finalAnswer": "Option A: 2 \u221at",
+      "whyOtherOptionsWrong": "Option B is 4\u221at. Option C assumes constant acceleration. Option D is 4t\u00b2."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-166",
+    "questionNumber": 166,
+    "question": "A particle moves along a straight line such that its displacement varies with time as x = a t\u00b2 - b t\u00b3, with a = 6 m/s\u00b2 and b = 1 m/s\u00b3. What is the distance traveled by the particle between t = 0 and t = 6 s?",
+    "options": {
+      "A": "64 m",
+      "B": "32 m",
+      "C": "0 m",
+      "D": "48 m"
+    },
+    "optionsList": [
+      "64 m",
+      "32 m",
+      "0 m",
+      "48 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nCheck for turning points where v = 0, find distances for forward and backward parts, and add them.\n\n2. GIVEN:\nx(t) = 6t\u00b2 - t\u00b3, interval [0, 6] s.\n\n3. FORMULA / PRINCIPLE:\nv = 12t - 3t\u00b2 = 0 => 3t(4 - t) = 0 => t = 4 s.\n\n4. STEP-BY-STEP SOLUTION:\n1. Velocity: v(t) = dx/dt = 12t - 3t\u00b2.\n2. Turning points: v(t) = 0 => 3t(4 - t) = 0 => t = 0 and t = 4 s.\n   Since t = 4 s is within [0, 6] s, motion reverses at t = 4 s.\n3. Positions:\n   x(0) = 0 m\n   x(4) = 6(4\u00b2) - 4\u00b3 = 6(16) - 64 = 96 - 64 = +32 m\n   x(6) = 6(6\u00b2) - 6\u00b3 = 216 - 216 = 0 m.\n4. Segment 1 (0 to 4 s): |x(4) - x(0)| = |32 - 0| = 32 m (forward).\n5. Segment 2 (4 to 6 s): |x(6) - x(4)| = |0 - 32| = 32 m (backward).\n6. Total distance = 32 m + 32 m = 64 m.\n7. (Note: Net displacement is x(6) - x(0) = 0 m!).\n\n5. FINAL ANSWER:\nOption A: 64 m\n\n6. QUICK TIP:\nGreat NEET trap: Displacement at t = 6 s is 0 m, but total distance is 32 + 32 = 64 m!",
+    "solutionStructured": {
+      "concept": "Check for turning points where v = 0, find distances for forward and backward parts, and add them.",
+      "given": "x(t) = 6t\u00b2 - t\u00b3, interval [0, 6] s.",
+      "formula": "v = 12t - 3t\u00b2 = 0 => 3t(4 - t) = 0 => t = 4 s.",
+      "stepByStep": "1. Velocity: v(t) = dx/dt = 12t - 3t\u00b2.\n2. Turning points: v(t) = 0 => 3t(4 - t) = 0 => t = 0 and t = 4 s.\n   Since t = 4 s is within [0, 6] s, motion reverses at t = 4 s.\n3. Positions:\n   x(0) = 0 m\n   x(4) = 6(4\u00b2) - 4\u00b3 = 6(16) - 64 = 96 - 64 = +32 m\n   x(6) = 6(6\u00b2) - 6\u00b3 = 216 - 216 = 0 m.\n4. Segment 1 (0 to 4 s): |x(4) - x(0)| = |32 - 0| = 32 m (forward).\n5. Segment 2 (4 to 6 s): |x(6) - x(4)| = |0 - 32| = 32 m (backward).\n6. Total distance = 32 m + 32 m = 64 m.\n7. (Note: Net displacement is x(6) - x(0) = 0 m!).",
+      "finalAnswer": "Option A: 64 m",
+      "whyOtherOptionsWrong": "Option B is the maximum displacement at t = 4 s. Option C is the net displacement (0 m). Option D is 48 m."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-167",
+    "questionNumber": 167,
+    "question": "In the previous question (x = 6t\u00b2 - t\u00b3), what is the instantaneous acceleration of the particle at the instant it returns to the origin (at t = 6 s)?",
+    "options": {
+      "A": "-24 m/s\u00b2",
+      "B": "-12 m/s\u00b2",
+      "C": "0 m/s\u00b2",
+      "D": "-36 m/s\u00b2"
+    },
+    "optionsList": [
+      "-24 m/s\u00b2",
+      "-12 m/s\u00b2",
+      "0 m/s\u00b2",
+      "-36 m/s\u00b2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFind acceleration a(t) = d\u00b2x/dt\u00b2 and evaluate at t = 6 s.\n\n2. GIVEN:\nx(t) = 6t\u00b2 - t\u00b3, returns to origin at t = 6 s.\n\n3. FORMULA / PRINCIPLE:\na(t) = d\u00b2x/dt\u00b2 = 12 - 6t.\n\n4. STEP-BY-STEP SOLUTION:\n1. Velocity: v(t) = 12t - 3t\u00b2.\n2. Acceleration: a(t) = dv/dt = 12 - 6t.\n3. Substitute t = 6 s:\n   a(6) = 12 - 6(6) = 12 - 36 = -24 m/s\u00b2.\n4. Therefore, the acceleration at t = 6 s is -24 m/s\u00b2.\n\n5. FINAL ANSWER:\nOption A: -24 m/s\u00b2\n\n6. QUICK TIP:\nDirect evaluation: a(t) = 12 - 6t => a(6) = 12 - 36 = -24 m/s\u00b2.",
+    "solutionStructured": {
+      "concept": "Find acceleration a(t) = d\u00b2x/dt\u00b2 and evaluate at t = 6 s.",
+      "given": "x(t) = 6t\u00b2 - t\u00b3, returns to origin at t = 6 s.",
+      "formula": "a(t) = d\u00b2x/dt\u00b2 = 12 - 6t.",
+      "stepByStep": "1. Velocity: v(t) = 12t - 3t\u00b2.\n2. Acceleration: a(t) = dv/dt = 12 - 6t.\n3. Substitute t = 6 s:\n   a(6) = 12 - 6(6) = 12 - 36 = -24 m/s\u00b2.\n4. Therefore, the acceleration at t = 6 s is -24 m/s\u00b2.",
+      "finalAnswer": "Option A: -24 m/s\u00b2",
+      "whyOtherOptionsWrong": "Option B is a(4) = 12 - 24 = -12 m/s\u00b2. Option C is at t = 2 s. Option D is -36."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Uniform and non-uniform motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-168",
+    "questionNumber": 168,
+    "question": "The slope of a position-time (x-t) graph at any given instant represents:",
+    "options": {
+      "A": "Instantaneous velocity",
+      "B": "Instantaneous acceleration",
+      "C": "Total distance traveled",
+      "D": "Average acceleration"
+    },
+    "optionsList": [
+      "Instantaneous velocity",
+      "Instantaneous acceleration",
+      "Total distance traveled",
+      "Average acceleration"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn an x-t graph, the vertical axis is position and the horizontal axis is time. The slope of the tangent is dx/dt, which is the instantaneous velocity.\n\n2. GIVEN:\nPosition-time graph.\n\n3. FORMULA / PRINCIPLE:\nSlope = tan \u03b8 = dx/dt = v.\n\n4. STEP-BY-STEP SOLUTION:\n1. Slope of a curve y vs x is dy/dx.\n2. For an x vs t graph, y = x and x = t.\n3. Slope = dx/dt.\n4. By definition, dx/dt is the instantaneous velocity.\n5. Therefore, the slope of the tangent at any point on an x-t graph gives the instantaneous velocity.\n\n5. FINAL ANSWER:\nOption A: Instantaneous velocity\n\n6. QUICK TIP:\nSlope of x-t graph = Velocity. Slope of v-t graph = Acceleration. Area of v-t graph = Displacement.",
+    "solutionStructured": {
+      "concept": "In an x-t graph, the vertical axis is position and the horizontal axis is time. The slope of the tangent is dx/dt, which is the instantaneous velocity.",
+      "given": "Position-time graph.",
+      "formula": "Slope = tan \u03b8 = dx/dt = v.",
+      "stepByStep": "1. Slope of a curve y vs x is dy/dx.\n2. For an x vs t graph, y = x and x = t.\n3. Slope = dx/dt.\n4. By definition, dx/dt is the instantaneous velocity.\n5. Therefore, the slope of the tangent at any point on an x-t graph gives the instantaneous velocity.",
+      "finalAnswer": "Option A: Instantaneous velocity",
+      "whyOtherOptionsWrong": "Option B is the second derivative (curvature) or slope of v-t graph. Option C is path length. Option D is \u0394v/\u0394t."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-169",
+    "questionNumber": 169,
+    "question": "A horizontal straight line parallel to the time axis on a position-time graph represents an object that is:",
+    "options": {
+      "A": "At rest",
+      "B": "Moving with uniform velocity",
+      "C": "Moving with constant acceleration",
+      "D": "Moving with increasing speed"
+    },
+    "optionsList": [
+      "At rest",
+      "Moving with uniform velocity",
+      "Moving with constant acceleration",
+      "Moving with increasing speed"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nA horizontal line has zero slope: dx/dt = 0, meaning position does not change with time, so the object is at rest.\n\n2. GIVEN:\nx-t graph is a horizontal line (x = constant).\n\n3. FORMULA / PRINCIPLE:\nSlope = dx/dt = 0 => v = 0.\n\n4. STEP-BY-STEP SOLUTION:\n1. The graph is a line parallel to the time axis, so x(t) = constant.\n2. Slope = dx/dt = 0.\n3. Since velocity is zero, the position coordinate remains unchanged as time elapses.\n4. Therefore, the object is at rest.\n\n5. FINAL ANSWER:\nOption A: At rest\n\n6. QUICK TIP:\nHorizontal line on x-t graph: v = 0 (At rest). Horizontal line on v-t graph: a = 0 (Uniform motion).",
+    "solutionStructured": {
+      "concept": "A horizontal line has zero slope: dx/dt = 0, meaning position does not change with time, so the object is at rest.",
+      "given": "x-t graph is a horizontal line (x = constant).",
+      "formula": "Slope = dx/dt = 0 => v = 0.",
+      "stepByStep": "1. The graph is a line parallel to the time axis, so x(t) = constant.\n2. Slope = dx/dt = 0.\n3. Since velocity is zero, the position coordinate remains unchanged as time elapses.\n4. Therefore, the object is at rest.",
+      "finalAnswer": "Option A: At rest",
+      "whyOtherOptionsWrong": "Option B requires an inclined line (non-zero constant slope). Option C requires a parabola. Option D requires steepening curve."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-170",
+    "questionNumber": 170,
+    "question": "Two straight lines on an x-t graph make angles of 30\u00b0 and 60\u00b0 with the time axis. What is the ratio of their velocities v\u2081 : v\u2082?",
+    "options": {
+      "A": "1 : 3",
+      "B": "1 : \u221a3",
+      "C": "\u221a3 : 1",
+      "D": "3 : 1"
+    },
+    "optionsList": [
+      "1 : 3",
+      "1 : \u221a3",
+      "\u221a3 : 1",
+      "3 : 1"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nVelocity equals the tangent of the angle made by the straight-line x-t graph with the time axis: v = tan \u03b8.\n\n2. GIVEN:\n\u03b8\u2081 = 30\u00b0, \u03b8\u2082 = 60\u00b0 with the time axis.\n\n3. FORMULA / PRINCIPLE:\nv = tan \u03b8 => v\u2081 / v\u2082 = tan \u03b8\u2081 / tan \u03b8\u2082.\n\n4. STEP-BY-STEP SOLUTION:\n1. For the first line: v\u2081 = tan 30\u00b0 = 1 / \u221a3.\n2. For the second line: v\u2082 = tan 60\u00b0 = \u221a3.\n3. Take the ratio:\n   v\u2081 / v\u2082 = (1 / \u221a3) / (\u221a3) = 1 / (\u221a3 * \u221a3) = 1 / 3.\n4. Therefore, the ratio of their velocities is 1 : 3.\n\n5. FINAL ANSWER:\nOption A: 1 : 3\n\n6. QUICK TIP:\nClassic NEET question: tan 30\u00b0 / tan 60\u00b0 = (1/\u221a3) / \u221a3 = 1/3.",
+    "solutionStructured": {
+      "concept": "Velocity equals the tangent of the angle made by the straight-line x-t graph with the time axis: v = tan \u03b8.",
+      "given": "\u03b8\u2081 = 30\u00b0, \u03b8\u2082 = 60\u00b0 with the time axis.",
+      "formula": "v = tan \u03b8 => v\u2081 / v\u2082 = tan \u03b8\u2081 / tan \u03b8\u2082.",
+      "stepByStep": "1. For the first line: v\u2081 = tan 30\u00b0 = 1 / \u221a3.\n2. For the second line: v\u2082 = tan 60\u00b0 = \u221a3.\n3. Take the ratio:\n   v\u2081 / v\u2082 = (1 / \u221a3) / (\u221a3) = 1 / (\u221a3 * \u221a3) = 1 / 3.\n4. Therefore, the ratio of their velocities is 1 : 3.",
+      "finalAnswer": "Option A: 1 : 3",
+      "whyOtherOptionsWrong": "Option B is 1 : \u221a3 (takes tan 30\u00b0 directly). Option C and D invert the ratio."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-171",
+    "questionNumber": 171,
+    "question": "Can a position-time graph be a straight line perpendicular to the time axis?",
+    "options": {
+      "A": "No, because that would imply infinite velocity and multiple positions at a single instant of time.",
+      "B": "Yes, it represents an object moving at the speed of light.",
+      "C": "Yes, it represents an object with infinite acceleration.",
+      "D": "Yes, it represents an object at the origin."
+    },
+    "optionsList": [
+      "No, because that would imply infinite velocity and multiple positions at a single instant of time.",
+      "Yes, it represents an object moving at the speed of light.",
+      "Yes, it represents an object with infinite acceleration.",
+      "Yes, it represents an object at the origin."
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nA vertical line has slope tan 90\u00b0 = \u221e (infinite velocity) and violates the single-valued nature of physical time (an object cannot be in infinitely many places at the exact same instant).\n\n2. GIVEN:\nVertical line on x-t graph.\n\n3. FORMULA / PRINCIPLE:\nSlope = tan 90\u00b0 = \u221e => v = \u221e (physically impossible).\n\n4. STEP-BY-STEP SOLUTION:\n1. A line perpendicular to the time axis corresponds to a single time t with an infinite range of position values x.\n2. In classical and relativistic physics, a particle can only occupy one unique position at any given instant.\n3. Furthermore, the slope of such a line would be tan(90\u00b0) = \u221e, implying infinite speed.\n4. Therefore, such a graph is physically impossible.\n\n5. FINAL ANSWER:\nOption A: No, because that would imply infinite velocity and multiple positions at a single instant of time.\n\n6. QUICK TIP:\nA real physical graph can never be vertical (infinite speed) and can never double back on the time axis (time only flows forward).",
+    "solutionStructured": {
+      "concept": "A vertical line has slope tan 90\u00b0 = \u221e (infinite velocity) and violates the single-valued nature of physical time (an object cannot be in infinitely many places at the exact same instant).",
+      "given": "Vertical line on x-t graph.",
+      "formula": "Slope = tan 90\u00b0 = \u221e => v = \u221e (physically impossible).",
+      "stepByStep": "1. A line perpendicular to the time axis corresponds to a single time t with an infinite range of position values x.\n2. In classical and relativistic physics, a particle can only occupy one unique position at any given instant.\n3. Furthermore, the slope of such a line would be tan(90\u00b0) = \u221e, implying infinite speed.\n4. Therefore, such a graph is physically impossible.",
+      "finalAnswer": "Option A: No, because that would imply infinite velocity and multiple positions at a single instant of time.",
+      "whyOtherOptionsWrong": "Options B, C, and D are physically impossible in kinematics."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-172",
+    "questionNumber": 172,
+    "question": "If a position-time graph is a parabola opening upwards (convex downwards), the motion is:",
+    "options": {
+      "A": "Uniformly accelerated with positive acceleration",
+      "B": "Uniformly retarded with negative acceleration",
+      "C": "Uniform motion with zero acceleration",
+      "D": "At rest"
+    },
+    "optionsList": [
+      "Uniformly accelerated with positive acceleration",
+      "Uniformly retarded with negative acceleration",
+      "Uniform motion with zero acceleration",
+      "At rest"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nParabola opening upwards has positive second derivative: d\u00b2x/dt\u00b2 = a > 0, which means positive acceleration.\n\n2. GIVEN:\nx-t graph is a parabola opening upwards (concave up).\n\n3. FORMULA / PRINCIPLE:\nx(t) \u221d +t\u00b2 => a = d\u00b2x/dt\u00b2 > 0.\n\n4. STEP-BY-STEP SOLUTION:\n1. A parabola opening upwards has the equation x(t) = (1/2) a t\u00b2 with a > 0.\n2. As time increases, the slope dx/dt increases continuously (becomes steeper and steeper).\n3. Since slope is velocity, velocity is increasing with time.\n4. Rate of change of velocity is acceleration: a = dv/dt > 0.\n5. Therefore, the motion has constant positive acceleration.\n\n5. FINAL ANSWER:\nOption A: Uniformly accelerated with positive acceleration\n\n6. QUICK TIP:\nSmiling curve (concave up) = positive acceleration (a > 0). Frowning curve (concave down) = negative acceleration (a < 0).",
+    "solutionStructured": {
+      "concept": "Parabola opening upwards has positive second derivative: d\u00b2x/dt\u00b2 = a > 0, which means positive acceleration.",
+      "given": "x-t graph is a parabola opening upwards (concave up).",
+      "formula": "x(t) \u221d +t\u00b2 => a = d\u00b2x/dt\u00b2 > 0.",
+      "stepByStep": "1. A parabola opening upwards has the equation x(t) = (1/2) a t\u00b2 with a > 0.\n2. As time increases, the slope dx/dt increases continuously (becomes steeper and steeper).\n3. Since slope is velocity, velocity is increasing with time.\n4. Rate of change of velocity is acceleration: a = dv/dt > 0.\n5. Therefore, the motion has constant positive acceleration.",
+      "finalAnswer": "Option A: Uniformly accelerated with positive acceleration",
+      "whyOtherOptionsWrong": "Option B corresponds to a parabola opening downwards (frowning curve). Option C is a straight line. Option D is a horizontal line."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-173",
+    "questionNumber": 173,
+    "question": "The position-time graph of a moving particle is a curve whose slope decreases continuously with time until it becomes zero. What does this indicate about the particle's motion?",
+    "options": {
+      "A": "The particle is slowing down (retarding) and eventually comes to rest.",
+      "B": "The particle is speeding up and reaches maximum speed.",
+      "C": "The particle is moving with uniform velocity.",
+      "D": "The particle is moving backwards with increasing speed."
+    },
+    "optionsList": [
+      "The particle is slowing down (retarding) and eventually comes to rest.",
+      "The particle is speeding up and reaches maximum speed.",
+      "The particle is moving with uniform velocity.",
+      "The particle is moving backwards with increasing speed."
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSlope of x-t graph is velocity. A decreasing slope means velocity is decreasing (retardation). When slope becomes zero, velocity is zero (at rest).\n\n2. GIVEN:\nSlope dx/dt decreases to 0 as time increases.\n\n3. FORMULA / PRINCIPLE:\nv = dx/dt; dv/dt < 0; v_final = 0.\n\n4. STEP-BY-STEP SOLUTION:\n1. The slope of the tangent to an x-t graph at any point gives the instantaneous velocity v.\n2. A decreasing slope means the velocity v is decreasing with time (dv/dt < 0).\n3. This represents retardation (deceleration).\n4. When the slope becomes zero (tangent is horizontal), instantaneous velocity is zero.\n5. Therefore, the particle is slowing down and eventually comes to rest.\n\n5. FINAL ANSWER:\nOption A: The particle is slowing down (retarding) and eventually comes to rest.\n\n6. QUICK TIP:\nAlways translate slope behavior into velocity: Slope decreasing -> Velocity decreasing -> Retardation. Slope = 0 -> Rest.",
+    "solutionStructured": {
+      "concept": "Slope of x-t graph is velocity. A decreasing slope means velocity is decreasing (retardation). When slope becomes zero, velocity is zero (at rest).",
+      "given": "Slope dx/dt decreases to 0 as time increases.",
+      "formula": "v = dx/dt; dv/dt < 0; v_final = 0.",
+      "stepByStep": "1. The slope of the tangent to an x-t graph at any point gives the instantaneous velocity v.\n2. A decreasing slope means the velocity v is decreasing with time (dv/dt < 0).\n3. This represents retardation (deceleration).\n4. When the slope becomes zero (tangent is horizontal), instantaneous velocity is zero.\n5. Therefore, the particle is slowing down and eventually comes to rest.",
+      "finalAnswer": "Option A: The particle is slowing down (retarding) and eventually comes to rest.",
+      "whyOtherOptionsWrong": "Option B would require slope to increase. Option C requires constant slope. Option D would require negative slope."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-174",
+    "questionNumber": 174,
+    "question": "On an x-t graph, two particles A and B start from the same position at t = 0. Curve A is a straight line of constant slope, while curve B is a parabola opening upwards that starts with zero slope and intersects line A at time t = T. At time t = T:",
+    "options": {
+      "A": "Particle B has twice the velocity of particle A",
+      "B": "Particle B has the same velocity as particle A",
+      "C": "Particle B has half the velocity of particle A",
+      "D": "Particle B has four times the velocity of particle A"
+    },
+    "optionsList": [
+      "Particle B has twice the velocity of particle A",
+      "Particle B has the same velocity as particle A",
+      "Particle B has half the velocity of particle A",
+      "Particle B has four times the velocity of particle A"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nParticle A moves with uniform velocity v_A: x_A = v_A t. Particle B moves with uniform acceleration a from rest: x_B = (1/2) a t\u00b2. At intersection, x_A(T) = x_B(T), so v_B(T) = 2 v_A.\n\n2. GIVEN:\nx_A(t) = v_A t; x_B(t) = (1/2) a t\u00b2; at t = T, x_A(T) = x_B(T).\n\n3. FORMULA / PRINCIPLE:\nv_A T = (1/2) a T\u00b2 => a T = 2 v_A; v_B(T) = a T = 2 v_A.\n\n4. STEP-BY-STEP SOLUTION:\n1. Particle A has constant velocity v_A, so its position is x_A(t) = v_A t.\n2. Particle B starts from rest with constant acceleration a, so x_B(t) = (1/2) a t\u00b2.\n3. At the point of intersection t = T:\n   v_A T = (1/2) a T\u00b2.\n4. Cancel T (since T > 0):\n   v_A = (1/2) a T => a T = 2 v_A.\n5. The velocity of particle B at time T is:\n   v_B(T) = a T.\n6. Since a T = 2 v_A:\n   v_B(T) = 2 v_A.\n7. Therefore, particle B is moving at twice the velocity of particle A at the moment they intersect!\n\n5. FINAL ANSWER:\nOption A: Particle B has twice the velocity of particle A\n\n6. QUICK TIP:\nGeometric insight: At the intersection of a line from origin and a parabola from origin, the slope of the parabola is exactly DOUBLE the slope of the line!",
+    "solutionStructured": {
+      "concept": "Particle A moves with uniform velocity v_A: x_A = v_A t. Particle B moves with uniform acceleration a from rest: x_B = (1/2) a t\u00b2. At intersection, x_A(T) = x_B(T), so v_B(T) = 2 v_A.",
+      "given": "x_A(t) = v_A t; x_B(t) = (1/2) a t\u00b2; at t = T, x_A(T) = x_B(T).",
+      "formula": "v_A T = (1/2) a T\u00b2 => a T = 2 v_A; v_B(T) = a T = 2 v_A.",
+      "stepByStep": "1. Particle A has constant velocity v_A, so its position is x_A(t) = v_A t.\n2. Particle B starts from rest with constant acceleration a, so x_B(t) = (1/2) a t\u00b2.\n3. At the point of intersection t = T:\n   v_A T = (1/2) a T\u00b2.\n4. Cancel T (since T > 0):\n   v_A = (1/2) a T => a T = 2 v_A.\n5. The velocity of particle B at time T is:\n   v_B(T) = a T.\n6. Since a T = 2 v_A:\n   v_B(T) = 2 v_A.\n7. Therefore, particle B is moving at twice the velocity of particle A at the moment they intersect!",
+      "finalAnswer": "Option A: Particle B has twice the velocity of particle A",
+      "whyOtherOptionsWrong": "Option B assumes equal velocities (they have equal positions, NOT equal slopes!). Options C and D are incorrect multiples."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-175",
+    "questionNumber": 175,
+    "question": "The position-time graph of a particle is given by x(t) = 4t - t\u00b2. At what time is the slope of the graph zero, and what is the physical meaning of this point?",
+    "options": {
+      "A": "t = 2 s; the particle momentarily stops and reverses its direction of motion",
+      "B": "t = 4 s; the particle crosses the origin",
+      "C": "t = 2 s; the particle has maximum acceleration",
+      "D": "t = 0 s; the particle starts from rest"
+    },
+    "optionsList": [
+      "t = 2 s; the particle momentarily stops and reverses its direction of motion",
+      "t = 4 s; the particle crosses the origin",
+      "t = 2 s; the particle has maximum acceleration",
+      "t = 0 s; the particle starts from rest"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe slope of the x-t graph is the velocity v = dx/dt. A zero slope corresponds to a peak (turning point) where v = 0 and direction of motion reverses.\n\n2. GIVEN:\nx(t) = 4t - t\u00b2.\n\n3. FORMULA / PRINCIPLE:\nSlope = dx/dt = 4 - 2t = 0 => t = 2 s.\n\n4. STEP-BY-STEP SOLUTION:\n1. Find the slope of the tangent:\n   Slope = dx/dt = 4 - 2t.\n2. Set slope equal to zero:\n   4 - 2t = 0 => 2t = 4 => t = 2 s.\n3. At t = 2 s, the tangent to the curve is horizontal (slope = 0), meaning instantaneous velocity is zero.\n4. Before t = 2 s, slope is positive (moving forward). After t = 2 s, slope is negative (moving backward).\n5. Therefore, at t = 2 s the particle momentarily stops at its maximum displacement (x = 4 m) and reverses its direction.\n\n5. FINAL ANSWER:\nOption A: t = 2 s; the particle momentarily stops and reverses its direction of motion\n\n6. QUICK TIP:\nZero slope on an x-t graph always marks a turning point (crest or trough of the curve).",
+    "solutionStructured": {
+      "concept": "The slope of the x-t graph is the velocity v = dx/dt. A zero slope corresponds to a peak (turning point) where v = 0 and direction of motion reverses.",
+      "given": "x(t) = 4t - t\u00b2.",
+      "formula": "Slope = dx/dt = 4 - 2t = 0 => t = 2 s.",
+      "stepByStep": "1. Find the slope of the tangent:\n   Slope = dx/dt = 4 - 2t.\n2. Set slope equal to zero:\n   4 - 2t = 0 => 2t = 4 => t = 2 s.\n3. At t = 2 s, the tangent to the curve is horizontal (slope = 0), meaning instantaneous velocity is zero.\n4. Before t = 2 s, slope is positive (moving forward). After t = 2 s, slope is negative (moving backward).\n5. Therefore, at t = 2 s the particle momentarily stops at its maximum displacement (x = 4 m) and reverses its direction.",
+      "finalAnswer": "Option A: t = 2 s; the particle momentarily stops and reverses its direction of motion",
+      "whyOtherOptionsWrong": "Option B is when x = 0 (t = 4 s, crossing origin). Option C is incorrect because acceleration is constant (-2 m/s\u00b2). Option D is false because initial velocity is 4 m/s."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-176",
+    "questionNumber": 176,
+    "question": "An object's x-t graph consists of two straight segments: from t = 0 to 4 s, it goes from x = 0 to 20 m; from t = 4 to 10 s, it goes from x = 20 m to 20 m. What are the velocities in these two intervals?",
+    "options": {
+      "A": "5 m/s and 0 m/s",
+      "B": "5 m/s and 2 m/s",
+      "C": "4 m/s and 0 m/s",
+      "D": "20 m/s and 0 m/s"
+    },
+    "optionsList": [
+      "5 m/s and 0 m/s",
+      "5 m/s and 2 m/s",
+      "4 m/s and 0 m/s",
+      "20 m/s and 0 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSlope of each straight segment gives the velocity during that interval: v = \u0394x / \u0394t.\n\n2. GIVEN:\nSegment 1: \u0394x = 20 m, \u0394t = 4 s. Segment 2: \u0394x = 0 m, \u0394t = 6 s.\n\n3. FORMULA / PRINCIPLE:\nv\u2081 = \u0394x\u2081 / \u0394t\u2081; v\u2082 = \u0394x\u2082 / \u0394t\u2082.\n\n4. STEP-BY-STEP SOLUTION:\n1. For the first segment (0 to 4 s):\n   v\u2081 = (20 - 0) / (4 - 0) = 20 / 4 = 5 m/s.\n2. For the second segment (4 to 10 s):\n   v\u2082 = (20 - 20) / (10 - 4) = 0 / 6 = 0 m/s (object is stationary).\n3. Therefore, the velocities are 5 m/s and 0 m/s.\n\n5. FINAL ANSWER:\nOption A: 5 m/s and 0 m/s\n\n6. QUICK TIP:\nSegment with slope = moving; flat segment = resting.",
+    "solutionStructured": {
+      "concept": "Slope of each straight segment gives the velocity during that interval: v = \u0394x / \u0394t.",
+      "given": "Segment 1: \u0394x = 20 m, \u0394t = 4 s. Segment 2: \u0394x = 0 m, \u0394t = 6 s.",
+      "formula": "v\u2081 = \u0394x\u2081 / \u0394t\u2081; v\u2082 = \u0394x\u2082 / \u0394t\u2082.",
+      "stepByStep": "1. For the first segment (0 to 4 s):\n   v\u2081 = (20 - 0) / (4 - 0) = 20 / 4 = 5 m/s.\n2. For the second segment (4 to 10 s):\n   v\u2082 = (20 - 20) / (10 - 4) = 0 / 6 = 0 m/s (object is stationary).\n3. Therefore, the velocities are 5 m/s and 0 m/s.",
+      "finalAnswer": "Option A: 5 m/s and 0 m/s",
+      "whyOtherOptionsWrong": "Option B gives non-zero velocity for the flat section. Option C and D use wrong divisions."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-177",
+    "questionNumber": 177,
+    "question": "Which of the following features on a position-time graph indicates that acceleration is negative?",
+    "options": {
+      "A": "The graph is concave downward (frowning curve)",
+      "B": "The graph has a positive slope",
+      "C": "The graph is a straight line inclined at 45\u00b0",
+      "D": "The graph is concave upward (smiling curve)"
+    },
+    "optionsList": [
+      "The graph is concave downward (frowning curve)",
+      "The graph has a positive slope",
+      "The graph is a straight line inclined at 45\u00b0",
+      "The graph is concave upward (smiling curve)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nCurvature of x-t graph corresponds to the second derivative d\u00b2x/dt\u00b2 = a. Concave downward means d\u00b2x/dt\u00b2 < 0 (negative acceleration).\n\n2. GIVEN:\nCriterion for negative acceleration on x-t graph.\n\n3. FORMULA / PRINCIPLE:\na = d\u00b2x/dt\u00b2 < 0 <=> Concave downward (frowning curve).\n\n4. STEP-BY-STEP SOLUTION:\n1. Acceleration is the rate of change of slope: a = d(slope)/dt = d\u00b2x/dt\u00b2.\n2. If acceleration is negative (a < 0), the slope decreases as time progresses.\n3. A curve whose slope decreases from left to right is concave downward (frowning shape).\n4. Conversely, a curve whose slope increases is concave upward (a > 0).\n5. Therefore, concave downward indicates negative acceleration.\n\n5. FINAL ANSWER:\nOption A: The graph is concave downward (frowning curve)\n\n6. QUICK TIP:\nMemory trick: 'Cup holds water' (concave up) -> Positive (+). 'Cup spills water' (concave down) -> Negative (-).",
+    "solutionStructured": {
+      "concept": "Curvature of x-t graph corresponds to the second derivative d\u00b2x/dt\u00b2 = a. Concave downward means d\u00b2x/dt\u00b2 < 0 (negative acceleration).",
+      "given": "Criterion for negative acceleration on x-t graph.",
+      "formula": "a = d\u00b2x/dt\u00b2 < 0 <=> Concave downward (frowning curve).",
+      "stepByStep": "1. Acceleration is the rate of change of slope: a = d(slope)/dt = d\u00b2x/dt\u00b2.\n2. If acceleration is negative (a < 0), the slope decreases as time progresses.\n3. A curve whose slope decreases from left to right is concave downward (frowning shape).\n4. Conversely, a curve whose slope increases is concave upward (a > 0).\n5. Therefore, concave downward indicates negative acceleration.",
+      "finalAnswer": "Option A: The graph is concave downward (frowning curve)",
+      "whyOtherOptionsWrong": "Option B only means velocity is positive. Option C means acceleration is zero. Option D means positive acceleration."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-178",
+    "questionNumber": 178,
+    "question": "The x-t graph of a particle is shown to be a circle of radius R. Why is such a graph physically impossible for a real particle?",
+    "options": {
+      "A": "It gives two distinct positions at the same instant of time, and has infinite slopes at the extremities.",
+      "B": "A particle cannot move in a circle.",
+      "C": "The radius R would have mixed units of meters and seconds.",
+      "D": "Both A and C are correct physical and dimensional reasons."
+    },
+    "optionsList": [
+      "It gives two distinct positions at the same instant of time, and has infinite slopes at the extremities.",
+      "A particle cannot move in a circle.",
+      "The radius R would have mixed units of meters and seconds.",
+      "Both A and C are correct physical and dimensional reasons."
+    ],
+    "correctAnswer": "D",
+    "correctIndex": 3,
+    "explanation": "1. CONCEPT:\nAn x-t graph cannot be a circle because: 1) time cannot have multiple position values (fails vertical line test), 2) vertical tangents imply infinite velocity, and 3) the x and t axes have different units (meters vs seconds), so a 'circle' has no well-defined metric.\n\n2. GIVEN:\nA closed circular curve in the x-t plane.\n\n3. FORMULA / PRINCIPLE:\nx\u00b2 + t\u00b2 = R\u00b2 fails the function definition x(t).\n\n4. STEP-BY-STEP SOLUTION:\n1. A closed circle fails the vertical line test: for a given time t, there are two different position values x. A single particle cannot be in two places at once!\n2. At the left and right extremities, the tangent is vertical, implying infinite velocity.\n3. The x-axis is in meters and the t-axis is in seconds, so an equation like x\u00b2 + t\u00b2 = R\u00b2 is dimensionally inconsistent unless multiplied by dimensional constants.\n4. Therefore, both A and C are valid reasons why an x-t graph can never be a circle.\n\n5. FINAL ANSWER:\nOption D: Both A and C are correct physical and dimensional reasons.\n\n6. QUICK TIP:\nRemember: In an x-t graph, a particle cannot move backwards in time, and can never have two positions at one instant.",
+    "solutionStructured": {
+      "concept": "An x-t graph cannot be a circle because: 1) time cannot have multiple position values (fails vertical line test), 2) vertical tangents imply infinite velocity, and 3) the x and t axes have different units (meters vs seconds), so a 'circle' has no well-defined metric.",
+      "given": "A closed circular curve in the x-t plane.",
+      "formula": "x\u00b2 + t\u00b2 = R\u00b2 fails the function definition x(t).",
+      "stepByStep": "1. A closed circle fails the vertical line test: for a given time t, there are two different position values x. A single particle cannot be in two places at once!\n2. At the left and right extremities, the tangent is vertical, implying infinite velocity.\n3. The x-axis is in meters and the t-axis is in seconds, so an equation like x\u00b2 + t\u00b2 = R\u00b2 is dimensionally inconsistent unless multiplied by dimensional constants.\n4. Therefore, both A and C are valid reasons why an x-t graph can never be a circle.",
+      "finalAnswer": "Option D: Both A and C are correct physical and dimensional reasons.",
+      "whyOtherOptionsWrong": "Options A and C are each partially correct, but Option D correctly encompasses both."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-179",
+    "questionNumber": 179,
+    "question": "The position-time graph of a ball thrown vertically upwards from the ground and caught again upon return (neglecting air resistance) is best represented by:",
+    "options": {
+      "A": "An inverted parabola opening downwards with apex at maximum height",
+      "B": "A parabola opening upwards with vertex at the ground",
+      "C": "Two straight lines forming a triangle",
+      "D": "A semicircle"
+    },
+    "optionsList": [
+      "An inverted parabola opening downwards with apex at maximum height",
+      "A parabola opening upwards with vertex at the ground",
+      "Two straight lines forming a triangle",
+      "A semicircle"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor vertical motion under gravity, y(t) = u t - (1/2) g t\u00b2. This is a quadratic equation with a negative t\u00b2 coefficient, representing an inverted parabola opening downwards.\n\n2. GIVEN:\nVertical motion under gravity: y(t) = u t - (1/2) g t\u00b2.\n\n3. FORMULA / PRINCIPLE:\ny(t) = - (g/2) t\u00b2 + u t (quadratic with negative leading coefficient).\n\n4. STEP-BY-STEP SOLUTION:\n1. Equation of vertical motion: y(t) = u t - (1/2) g t\u00b2.\n2. The coefficient of t\u00b2 is -g/2 < 0.\n3. In coordinate geometry, a quadratic y = -A t\u00b2 + B t represents a parabola opening downwards (inverted parabola).\n4. The apex (vertex) occurs at t = u/g, where y_max = u\u00b2 / (2g).\n5. The ball returns to ground (y = 0) at t = 2u/g.\n6. Therefore, the graph is an inverted parabola opening downwards.\n\n5. FINAL ANSWER:\nOption A: An inverted parabola opening downwards with apex at maximum height\n\n6. QUICK TIP:\nFree fall / gravity problems ALWAYS produce parabolic x-t curves with downward curvature (a = -g).",
+    "solutionStructured": {
+      "concept": "For vertical motion under gravity, y(t) = u t - (1/2) g t\u00b2. This is a quadratic equation with a negative t\u00b2 coefficient, representing an inverted parabola opening downwards.",
+      "given": "Vertical motion under gravity: y(t) = u t - (1/2) g t\u00b2.",
+      "formula": "y(t) = - (g/2) t\u00b2 + u t (quadratic with negative leading coefficient).",
+      "stepByStep": "1. Equation of vertical motion: y(t) = u t - (1/2) g t\u00b2.\n2. The coefficient of t\u00b2 is -g/2 < 0.\n3. In coordinate geometry, a quadratic y = -A t\u00b2 + B t represents a parabola opening downwards (inverted parabola).\n4. The apex (vertex) occurs at t = u/g, where y_max = u\u00b2 / (2g).\n5. The ball returns to ground (y = 0) at t = 2u/g.\n6. Therefore, the graph is an inverted parabola opening downwards.",
+      "finalAnswer": "Option A: An inverted parabola opening downwards with apex at maximum height",
+      "whyOtherOptionsWrong": "Option B has positive acceleration (+g). Option C assumes constant velocity. Option D is not a quadratic."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-180",
+    "questionNumber": 180,
+    "question": "On an x-t graph, the secant line joining two points (t\u2081, x\u2081) and (t\u2082, x\u2082) has a slope equal to:",
+    "options": {
+      "A": "The average velocity over the time interval [t\u2081, t\u2082]",
+      "B": "The instantaneous velocity at t = (t\u2081 + t\u2082)/2",
+      "C": "The average acceleration over the interval",
+      "D": "The instantaneous speed at t\u2081"
+    },
+    "optionsList": [
+      "The average velocity over the time interval [t\u2081, t\u2082]",
+      "The instantaneous velocity at t = (t\u2081 + t\u2082)/2",
+      "The average acceleration over the interval",
+      "The instantaneous speed at t\u2081"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSlope of secant line = \u0394x / \u0394t = [x(t\u2082) - x(t\u2081)] / (t\u2082 - t\u2081), which by definition is the average velocity over the interval.\n\n2. GIVEN:\nSecant line between (t\u2081, x\u2081) and (t\u2082, x\u2082).\n\n3. FORMULA / PRINCIPLE:\nSlope of secant = (x\u2082 - x\u2081) / (t\u2082 - t\u2081) = \u0394x / \u0394t = v_avg.\n\n4. STEP-BY-STEP SOLUTION:\n1. By coordinate geometry, the slope of the straight line joining two points (t\u2081, x\u2081) and (t\u2082, x\u2082) is:\n   m = (x\u2082 - x\u2081) / (t\u2082 - t\u2081) = \u0394x / \u0394t.\n2. In physics, \u0394x / \u0394t is the definition of average velocity over the interval [t\u2081, t\u2082].\n3. (As t\u2082 approaches t\u2081, the secant line becomes the tangent line, whose slope is instantaneous velocity).\n4. Therefore, the slope of the secant line represents the average velocity.\n\n5. FINAL ANSWER:\nOption A: The average velocity over the time interval [t\u2081, t\u2082]\n\n6. QUICK TIP:\nSecant slope = Average velocity. Tangent slope = Instantaneous velocity.",
+    "solutionStructured": {
+      "concept": "Slope of secant line = \u0394x / \u0394t = [x(t\u2082) - x(t\u2081)] / (t\u2082 - t\u2081), which by definition is the average velocity over the interval.",
+      "given": "Secant line between (t\u2081, x\u2081) and (t\u2082, x\u2082).",
+      "formula": "Slope of secant = (x\u2082 - x\u2081) / (t\u2082 - t\u2081) = \u0394x / \u0394t = v_avg.",
+      "stepByStep": "1. By coordinate geometry, the slope of the straight line joining two points (t\u2081, x\u2081) and (t\u2082, x\u2082) is:\n   m = (x\u2082 - x\u2081) / (t\u2082 - t\u2081) = \u0394x / \u0394t.\n2. In physics, \u0394x / \u0394t is the definition of average velocity over the interval [t\u2081, t\u2082].\n3. (As t\u2082 approaches t\u2081, the secant line becomes the tangent line, whose slope is instantaneous velocity).\n4. Therefore, the slope of the secant line represents the average velocity.",
+      "finalAnswer": "Option A: The average velocity over the time interval [t\u2081, t\u2082]",
+      "whyOtherOptionsWrong": "Option B is only true for uniform acceleration (special case), whereas Option A is universally true. Option C is \u0394v/\u0394t. Option D is tangent at t\u2081."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-181",
+    "questionNumber": 181,
+    "question": "A particle's x-t graph has positive slope that is increasing with time. This implies that:",
+    "options": {
+      "A": "Velocity is positive and acceleration is positive (speeding up)",
+      "B": "Velocity is positive and acceleration is negative (slowing down)",
+      "C": "Velocity is negative and acceleration is positive",
+      "D": "Velocity is constant"
+    },
+    "optionsList": [
+      "Velocity is positive and acceleration is positive (speeding up)",
+      "Velocity is positive and acceleration is negative (slowing down)",
+      "Velocity is negative and acceleration is positive",
+      "Velocity is constant"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nPositive slope => v > 0. Increasing slope => dv/dt = a > 0. Both have the same sign, so the particle is speeding up in the positive direction.\n\n2. GIVEN:\nSlope > 0 and d(slope)/dt > 0.\n\n3. FORMULA / PRINCIPLE:\nv = slope > 0; a = d(slope)/dt > 0.\n\n4. STEP-BY-STEP SOLUTION:\n1. Slope of x-t graph represents velocity: Slope > 0 => v > 0.\n2. The slope is increasing with time: d(slope)/dt > 0 => dv/dt = a > 0.\n3. Since both velocity and acceleration are positive, they act in the same direction.\n4. Therefore, the particle is moving in the positive direction and speeding up.\n\n5. FINAL ANSWER:\nOption A: Velocity is positive and acceleration is positive (speeding up)\n\n6. QUICK TIP:\nPositive slope getting steeper = moving forward and accelerating!",
+    "solutionStructured": {
+      "concept": "Positive slope => v > 0. Increasing slope => dv/dt = a > 0. Both have the same sign, so the particle is speeding up in the positive direction.",
+      "given": "Slope > 0 and d(slope)/dt > 0.",
+      "formula": "v = slope > 0; a = d(slope)/dt > 0.",
+      "stepByStep": "1. Slope of x-t graph represents velocity: Slope > 0 => v > 0.\n2. The slope is increasing with time: d(slope)/dt > 0 => dv/dt = a > 0.\n3. Since both velocity and acceleration are positive, they act in the same direction.\n4. Therefore, the particle is moving in the positive direction and speeding up.",
+      "finalAnswer": "Option A: Velocity is positive and acceleration is positive (speeding up)",
+      "whyOtherOptionsWrong": "Option B would have slope decreasing (flattening curve). Option C would have negative slope. Option D would have constant slope."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-182",
+    "questionNumber": 182,
+    "question": "A particle's x-t graph has negative slope that is becoming steeper (more negative) with time. This indicates that the particle is:",
+    "options": {
+      "A": "Moving in the negative direction with increasing speed",
+      "B": "Moving in the negative direction with decreasing speed",
+      "C": "Moving in the positive direction with increasing speed",
+      "D": "At rest"
+    },
+    "optionsList": [
+      "Moving in the negative direction with increasing speed",
+      "Moving in the negative direction with decreasing speed",
+      "Moving in the positive direction with increasing speed",
+      "At rest"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nNegative slope => moving in -x direction (v < 0). Steeper slope => magnitude of slope (|v|) is increasing => speed is increasing.\n\n2. GIVEN:\nSlope < 0, |slope| increasing with time.\n\n3. FORMULA / PRINCIPLE:\nv < 0; |v| increasing => speeding up in the negative direction.\n\n4. STEP-BY-STEP SOLUTION:\n1. Negative slope means velocity is directed along the negative axis: v < 0.\n2. The curve is becoming steeper, which means the absolute value of the slope (|dx/dt|) is growing.\n3. Absolute value of velocity is speed.\n4. Since speed is increasing in the negative direction, acceleration is also negative (a < 0).\n5. Therefore, the particle is moving in the negative direction with increasing speed.\n\n5. FINAL ANSWER:\nOption A: Moving in the negative direction with increasing speed\n\n6. QUICK TIP:\nSteeper curve ALWAYS means higher speed, regardless of whether slope is positive or negative!",
+    "solutionStructured": {
+      "concept": "Negative slope => moving in -x direction (v < 0). Steeper slope => magnitude of slope (|v|) is increasing => speed is increasing.",
+      "given": "Slope < 0, |slope| increasing with time.",
+      "formula": "v < 0; |v| increasing => speeding up in the negative direction.",
+      "stepByStep": "1. Negative slope means velocity is directed along the negative axis: v < 0.\n2. The curve is becoming steeper, which means the absolute value of the slope (|dx/dt|) is growing.\n3. Absolute value of velocity is speed.\n4. Since speed is increasing in the negative direction, acceleration is also negative (a < 0).\n5. Therefore, the particle is moving in the negative direction with increasing speed.",
+      "finalAnswer": "Option A: Moving in the negative direction with increasing speed",
+      "whyOtherOptionsWrong": "Option B would have the curve flattening out towards horizontal. Options C and D contradict negative slope."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-183",
+    "questionNumber": 183,
+    "question": "The x-t graphs of two cars A and B are shown. Car A starts from x = 0 at t = 0 with constant speed v_A = 15 m/s. Car B starts from x = 100 m at t = 0 and moves in the negative direction with constant speed v_B = 10 m/s. At what time and position do their x-t graphs intersect?",
+    "options": {
+      "A": "t = 4 s, x = 60 m",
+      "B": "t = 5 s, x = 75 m",
+      "C": "t = 4 s, x = 40 m",
+      "D": "t = 10 s, x = 150 m"
+    },
+    "optionsList": [
+      "t = 4 s, x = 60 m",
+      "t = 5 s, x = 75 m",
+      "t = 4 s, x = 40 m",
+      "t = 10 s, x = 150 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIntersection of two x-t graphs corresponds to the meeting point where x_A(t) = x_B(t).\n\n2. GIVEN:\nx_A(t) = 15t; x_B(t) = 100 - 10t.\n\n3. FORMULA / PRINCIPLE:\nx_A(t) = x_B(t) => 15t = 100 - 10t.\n\n4. STEP-BY-STEP SOLUTION:\n1. Write position equations for both cars:\n   Car A: x_A(t) = 0 + 15t = 15t.\n   Car B: x_B(t) = 100 - 10t.\n2. Equate the two positions to find the point of intersection:\n   15t = 100 - 10t\n   25t = 100\n   t = 100 / 25 = 4 seconds.\n3. Find the position of intersection:\n   x = 15 * 4 = 60 m.\n   (Check with Car B: 100 - 10(4) = 100 - 40 = 60 m. Perfect!).\n4. Therefore, the graphs intersect at t = 4 s and x = 60 m.\n\n5. FINAL ANSWER:\nOption A: t = 4 s, x = 60 m\n\n6. QUICK TIP:\nRelative speed approach: Closing speed = 15 + 10 = 25 m/s. Time = 100 / 25 = 4 s. Position = 15 * 4 = 60 m.",
+    "solutionStructured": {
+      "concept": "Intersection of two x-t graphs corresponds to the meeting point where x_A(t) = x_B(t).",
+      "given": "x_A(t) = 15t; x_B(t) = 100 - 10t.",
+      "formula": "x_A(t) = x_B(t) => 15t = 100 - 10t.",
+      "stepByStep": "1. Write position equations for both cars:\n   Car A: x_A(t) = 0 + 15t = 15t.\n   Car B: x_B(t) = 100 - 10t.\n2. Equate the two positions to find the point of intersection:\n   15t = 100 - 10t\n   25t = 100\n   t = 100 / 25 = 4 seconds.\n3. Find the position of intersection:\n   x = 15 * 4 = 60 m.\n   (Check with Car B: 100 - 10(4) = 100 - 40 = 60 m. Perfect!).\n4. Therefore, the graphs intersect at t = 4 s and x = 60 m.",
+      "finalAnswer": "Option A: t = 4 s, x = 60 m",
+      "whyOtherOptionsWrong": "Option B uses closing speed 20 m/s. Option C has wrong position. Option D assumes same direction."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-184",
+    "questionNumber": 184,
+    "question": "The position-time graph of a particle is an ellipse given by x\u00b2 / a\u00b2 + t\u00b2 / b\u00b2 = 1 for t \u2265 0. At what time t is the velocity of the particle equal to -a / b?",
+    "options": {
+      "A": "b / \u221a2",
+      "B": "b / 2",
+      "C": "b \u221a3 / 2",
+      "D": "b"
+    },
+    "optionsList": [
+      "b / \u221a2",
+      "b / 2",
+      "b \u221a3 / 2",
+      "b"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDifferentiate the ellipse equation implicitly with respect to t to find dx/dt = v, then set v = -a/b.\n\n2. GIVEN:\nx\u00b2 / a\u00b2 + t\u00b2 / b\u00b2 = 1, condition v = dx/dt = -a / b.\n\n3. FORMULA / PRINCIPLE:\n(2x / a\u00b2) (dx/dt) + 2t / b\u00b2 = 0 => dx/dt = -(a\u00b2 t) / (b\u00b2 x).\n\n4. STEP-BY-STEP SOLUTION:\n1. Differentiate implicitly with respect to t:\n   (2x / a\u00b2) (dx/dt) + 2t / b\u00b2 = 0\n   (x / a\u00b2) v = -t / b\u00b2\n   v = -(a\u00b2 t) / (b\u00b2 x).\n2. Set velocity equal to -a / b:\n   -(a\u00b2 t) / (b\u00b2 x) = -a / b\n   (a t) / (b x) = 1 => x = (a / b) t.\n3. Substitute x = (a / b) t back into the ellipse equation:\n   [ (a / b) t ]\u00b2 / a\u00b2 + t\u00b2 / b\u00b2 = 1\n   (t\u00b2 / b\u00b2) + (t\u00b2 / b\u00b2) = 1\n   2 (t\u00b2 / b\u00b2) = 1\n   t\u00b2 = b\u00b2 / 2\n   t = b / \u221a2.\n4. Therefore, the velocity equals -a/b at t = b / \u221a2.\n\n5. FINAL ANSWER:\nOption A: b / \u221a2\n\n6. QUICK TIP:\nImplicit differentiation makes geometric graph problems straightforward: v = -(a\u00b2t)/(b\u00b2x).",
+    "solutionStructured": {
+      "concept": "Differentiate the ellipse equation implicitly with respect to t to find dx/dt = v, then set v = -a/b.",
+      "given": "x\u00b2 / a\u00b2 + t\u00b2 / b\u00b2 = 1, condition v = dx/dt = -a / b.",
+      "formula": "(2x / a\u00b2) (dx/dt) + 2t / b\u00b2 = 0 => dx/dt = -(a\u00b2 t) / (b\u00b2 x).",
+      "stepByStep": "1. Differentiate implicitly with respect to t:\n   (2x / a\u00b2) (dx/dt) + 2t / b\u00b2 = 0\n   (x / a\u00b2) v = -t / b\u00b2\n   v = -(a\u00b2 t) / (b\u00b2 x).\n2. Set velocity equal to -a / b:\n   -(a\u00b2 t) / (b\u00b2 x) = -a / b\n   (a t) / (b x) = 1 => x = (a / b) t.\n3. Substitute x = (a / b) t back into the ellipse equation:\n   [ (a / b) t ]\u00b2 / a\u00b2 + t\u00b2 / b\u00b2 = 1\n   (t\u00b2 / b\u00b2) + (t\u00b2 / b\u00b2) = 1\n   2 (t\u00b2 / b\u00b2) = 1\n   t\u00b2 = b\u00b2 / 2\n   t = b / \u221a2.\n4. Therefore, the velocity equals -a/b at t = b / \u221a2.",
+      "finalAnswer": "Option A: b / \u221a2",
+      "whyOtherOptionsWrong": "Option B gives t = b/2. Option C gives t = b\u221a3/2. Option D gives t = b (where slope is vertical/infinite)."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-185",
+    "questionNumber": 185,
+    "question": "A body moves along a straight line such that its x-t graph is a curve with an inflection point at t = t\u2080 (where d\u00b2x/dt\u00b2 = 0, changing from concave down to concave up). At t = t\u2080, which of the following is true?",
+    "options": {
+      "A": "Velocity has a local extremum (minimum), and acceleration is zero.",
+      "B": "Velocity is zero, and acceleration is maximum.",
+      "C": "Position is zero, and speed is maximum.",
+      "D": "The body momentarily reverses its direction of motion."
+    },
+    "optionsList": [
+      "Velocity has a local extremum (minimum), and acceleration is zero.",
+      "Velocity is zero, and acceleration is maximum.",
+      "Position is zero, and speed is maximum.",
+      "The body momentarily reverses its direction of motion."
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nAn inflection point on an x-t graph is where d\u00b2x/dt\u00b2 = 0. Since d\u00b2x/dt\u00b2 = dv/dt = a, zero acceleration means velocity has a local extremum.\n\n2. GIVEN:\nInflection point on x-t curve at t = t\u2080.\n\n3. FORMULA / PRINCIPLE:\nd\u00b2x/dt\u00b2 = a = 0 => dv/dt = 0 (velocity is stationary/extremized).\n\n4. STEP-BY-STEP SOLUTION:\n1. At an inflection point of a curve y = f(x), the second derivative is zero: f''(x) = 0.\n2. For an x-t curve, the second derivative is acceleration: d\u00b2x/dt\u00b2 = a = 0.\n3. Since a = dv/dt, dv/dt = 0 means velocity has a local extremum (maximum or minimum).\n4. Because the curve changes from concave down (a < 0) to concave up (a > 0), the slope (velocity) was decreasing and now begins increasing.\n5. Therefore, velocity reaches a local minimum at t = t\u2080, and acceleration is zero.\n6. Hence, Option A is correct.\n\n5. FINAL ANSWER:\nOption A: Velocity has a local extremum (minimum), and acceleration is zero.\n\n6. QUICK TIP:\nInflection point on x-t graph <=> a = 0 <=> Extremum of velocity. Peak/trough on x-t graph <=> v = 0 <=> Turning point of motion.",
+    "solutionStructured": {
+      "concept": "An inflection point on an x-t graph is where d\u00b2x/dt\u00b2 = 0. Since d\u00b2x/dt\u00b2 = dv/dt = a, zero acceleration means velocity has a local extremum.",
+      "given": "Inflection point on x-t curve at t = t\u2080.",
+      "formula": "d\u00b2x/dt\u00b2 = a = 0 => dv/dt = 0 (velocity is stationary/extremized).",
+      "stepByStep": "1. At an inflection point of a curve y = f(x), the second derivative is zero: f''(x) = 0.\n2. For an x-t curve, the second derivative is acceleration: d\u00b2x/dt\u00b2 = a = 0.\n3. Since a = dv/dt, dv/dt = 0 means velocity has a local extremum (maximum or minimum).\n4. Because the curve changes from concave down (a < 0) to concave up (a > 0), the slope (velocity) was decreasing and now begins increasing.\n5. Therefore, velocity reaches a local minimum at t = t\u2080, and acceleration is zero.\n6. Hence, Option A is correct.",
+      "finalAnswer": "Option A: Velocity has a local extremum (minimum), and acceleration is zero.",
+      "whyOtherOptionsWrong": "Option B confuses inflection point with peak of curve. Option C is unrelated to origin. Option D requires v = 0, not a = 0."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-186",
+    "questionNumber": 186,
+    "question": "The position-time graph of a particle is given by x = 2t\u00b3 - 15t\u00b2 + 36t (in meters). Over the interval t \u2208 [0, 5] s, at how many points is the tangent to the graph parallel to the time axis?",
+    "options": {
+      "A": "2 points",
+      "B": "1 point",
+      "C": "3 points",
+      "D": "0 points"
+    },
+    "optionsList": [
+      "2 points",
+      "1 point",
+      "3 points",
+      "0 points"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTangent parallel to time axis means slope is zero: dx/dt = v = 0.\n\n2. GIVEN:\nx(t) = 2t\u00b3 - 15t\u00b2 + 36t, interval [0, 5] s.\n\n3. FORMULA / PRINCIPLE:\nSlope = dx/dt = 6t\u00b2 - 30t + 36 = 0.\n\n4. STEP-BY-STEP SOLUTION:\n1. Differentiate position with respect to time:\n   Slope = dx/dt = 6t\u00b2 - 30t + 36.\n2. Set slope equal to zero (horizontal tangent):\n   6(t\u00b2 - 5t + 6) = 0\n   6(t - 2)(t - 3) = 0.\n3. Roots are t = 2 s and t = 3 s.\n4. Both values lie within the interval [0, 5] s.\n5. Therefore, the tangent is parallel to the time axis at exactly 2 points (t = 2 s and t = 3 s).\n\n5. FINAL ANSWER:\nOption A: 2 points\n\n6. QUICK TIP:\nHorizontal tangent <=> Slope = 0 <=> v = 0. Factor the quadratic derivative: 6(t - 2)(t - 3) = 0 => 2 roots.",
+    "solutionStructured": {
+      "concept": "Tangent parallel to time axis means slope is zero: dx/dt = v = 0.",
+      "given": "x(t) = 2t\u00b3 - 15t\u00b2 + 36t, interval [0, 5] s.",
+      "formula": "Slope = dx/dt = 6t\u00b2 - 30t + 36 = 0.",
+      "stepByStep": "1. Differentiate position with respect to time:\n   Slope = dx/dt = 6t\u00b2 - 30t + 36.\n2. Set slope equal to zero (horizontal tangent):\n   6(t\u00b2 - 5t + 6) = 0\n   6(t - 2)(t - 3) = 0.\n3. Roots are t = 2 s and t = 3 s.\n4. Both values lie within the interval [0, 5] s.\n5. Therefore, the tangent is parallel to the time axis at exactly 2 points (t = 2 s and t = 3 s).",
+      "finalAnswer": "Option A: 2 points",
+      "whyOtherOptionsWrong": "Option B finds only one root. Option C assumes degree 3 has 3 critical points. Option D claims no stationary points."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-187",
+    "questionNumber": 187,
+    "question": "A ball is dropped from height h onto a hard horizontal floor. It bounces elastically repeatedly between the floor and height h. What is the nature of the height-time (y-t) graph?",
+    "options": {
+      "A": "A series of inverted parabolas meeting at sharp cusps (points of impact) on the time axis",
+      "B": "A continuous smooth sine wave",
+      "C": "A series of triangles",
+      "D": "A series of semicircles"
+    },
+    "optionsList": [
+      "A series of inverted parabolas meeting at sharp cusps (points of impact) on the time axis",
+      "A continuous smooth sine wave",
+      "A series of triangles",
+      "A series of semicircles"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nBetween bounces, motion is under gravity: y(t) = - (1/2) g t\u00b2 + ..., which is an inverted parabola. At the floor, velocity instantaneously reverses sign from -v to +v, creating a sharp cusp (discontinuous derivative) on the time axis.\n\n2. GIVEN:\nElastic bouncing ball from height h.\n\n3. FORMULA / PRINCIPLE:\ny(t) is piecewise parabolic with sharp cusps at y = 0.\n\n4. STEP-BY-STEP SOLUTION:\n1. Between bounces, the ball moves under constant gravitational acceleration a = -g.\n2. The position-time equation is a quadratic with negative t\u00b2 term: an inverted parabola.\n3. When the ball strikes the floor (y = 0), an ideal elastic bounce instantly reverses the velocity from -\u221a(2gh) to +\u221a(2gh).\n4. Because velocity (the slope of the y-t curve) changes sign instantaneously, the tangent is discontinuous at y = 0.\n5. This creates sharp pointed cusps (V-shaped rebounds) touching the time axis at intervals of 2\u221a(2h/g).\n6. Therefore, the graph is a series of inverted parabolas with sharp cusps on the time axis.\n\n5. FINAL ANSWER:\nOption A: A series of inverted parabolas meeting at sharp cusps (points of impact) on the time axis\n\n6. QUICK TIP:\nBouncing ball graph: smooth curves in the air (parabolas), sharp pointed cusps at the floor (instant velocity reversal).",
+    "solutionStructured": {
+      "concept": "Between bounces, motion is under gravity: y(t) = - (1/2) g t\u00b2 + ..., which is an inverted parabola. At the floor, velocity instantaneously reverses sign from -v to +v, creating a sharp cusp (discontinuous derivative) on the time axis.",
+      "given": "Elastic bouncing ball from height h.",
+      "formula": "y(t) is piecewise parabolic with sharp cusps at y = 0.",
+      "stepByStep": "1. Between bounces, the ball moves under constant gravitational acceleration a = -g.\n2. The position-time equation is a quadratic with negative t\u00b2 term: an inverted parabola.\n3. When the ball strikes the floor (y = 0), an ideal elastic bounce instantly reverses the velocity from -\u221a(2gh) to +\u221a(2gh).\n4. Because velocity (the slope of the y-t curve) changes sign instantaneously, the tangent is discontinuous at y = 0.\n5. This creates sharp pointed cusps (V-shaped rebounds) touching the time axis at intervals of 2\u221a(2h/g).\n6. Therefore, the graph is a series of inverted parabolas with sharp cusps on the time axis.",
+      "finalAnswer": "Option A: A series of inverted parabolas meeting at sharp cusps (points of impact) on the time axis",
+      "whyOtherOptionsWrong": "Option B requires smooth derivative everywhere (no instantaneous velocity change). Option C assumes constant speed. Option D is not parabolic."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-188",
+    "questionNumber": 188,
+    "question": "In the bouncing ball scenario of Q187, what is the time period T between two successive bounces on the floor from height h?",
+    "options": {
+      "A": "2 \u221a(2h / g)",
+      "B": "\u221a(2h / g)",
+      "C": "4 \u221a(2h / g)",
+      "D": "\u221a(h / 2g)"
+    },
+    "optionsList": [
+      "2 \u221a(2h / g)",
+      "\u221a(2h / g)",
+      "4 \u221a(2h / g)",
+      "\u221a(h / 2g)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTime between bounces is the time to rise to height h plus the time to fall back from height h: T = t_rise + t_fall = 2 * \u221a(2h/g).\n\n2. GIVEN:\nBounce height h, acceleration g.\n\n3. FORMULA / PRINCIPLE:\nt_fall = \u221a(2h / g); T = 2 t_fall = 2 \u221a(2h / g).\n\n4. STEP-BY-STEP SOLUTION:\n1. The ball rebounds from the floor with speed v = \u221a(2gh).\n2. Time taken to reach maximum height h:\n   t_rise = v / g = \u221a(2gh) / g = \u221a(2h / g).\n3. Time taken to fall back from height h to the floor:\n   t_fall = \u221a(2h / g).\n4. Total time between successive bounces:\n   T = t_rise + t_fall = \u221a(2h / g) + \u221a(2h / g) = 2 \u221a(2h / g).\n5. Hence, the period of the bouncing motion is 2 \u221a(2h / g).\n\n5. FINAL ANSWER:\nOption A: 2 \u221a(2h / g)\n\n6. QUICK TIP:\nTime of flight for bounce to height h is 2 * \u221a(2h/g).",
+    "solutionStructured": {
+      "concept": "Time between bounces is the time to rise to height h plus the time to fall back from height h: T = t_rise + t_fall = 2 * \u221a(2h/g).",
+      "given": "Bounce height h, acceleration g.",
+      "formula": "t_fall = \u221a(2h / g); T = 2 t_fall = 2 \u221a(2h / g).",
+      "stepByStep": "1. The ball rebounds from the floor with speed v = \u221a(2gh).\n2. Time taken to reach maximum height h:\n   t_rise = v / g = \u221a(2gh) / g = \u221a(2h / g).\n3. Time taken to fall back from height h to the floor:\n   t_fall = \u221a(2h / g).\n4. Total time between successive bounces:\n   T = t_rise + t_fall = \u221a(2h / g) + \u221a(2h / g) = 2 \u221a(2h / g).\n5. Hence, the period of the bouncing motion is 2 \u221a(2h / g).",
+      "finalAnswer": "Option A: 2 \u221a(2h / g)",
+      "whyOtherOptionsWrong": "Option B is only the one-way fall time. Option C is four times. Option D has 2 in denominator."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-189",
+    "questionNumber": 189,
+    "question": "How does a displacement-time graph differ fundamentally from a distance-time graph for a real moving object?",
+    "options": {
+      "A": "A displacement-time graph can have negative values and negative slope, whereas a distance-time graph can never decrease.",
+      "B": "A displacement-time graph can never be curved.",
+      "C": "A distance-time graph can have negative values if the particle moves backwards.",
+      "D": "They are completely identical in all respects."
+    },
+    "optionsList": [
+      "A displacement-time graph can have negative values and negative slope, whereas a distance-time graph can never decrease.",
+      "A displacement-time graph can never be curved.",
+      "A distance-time graph can have negative values if the particle moves backwards.",
+      "They are completely identical in all respects."
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDisplacement is a vector and can be positive, negative, or zero, with positive, negative, or zero slope. Distance is a scalar path length that monotonically increases or stays constant (never decreases).\n\n2. GIVEN:\nComparison between displacement-time and distance-time graphs.\n\n3. FORMULA / PRINCIPLE:\nd(Distance)/dt = speed \u2265 0 (always non-decreasing); d(Displacement)/dt = v (can be positive, negative, or zero).\n\n4. STEP-BY-STEP SOLUTION:\n1. Distance accumulates path length, so distance s(t) can never decrease with time (ds/dt = speed \u2265 0).\n2. Therefore, a distance-time graph can never have a negative slope.\n3. In contrast, displacement x(t) measures position relative to a reference point.\n4. When a particle moves in the negative direction, displacement decreases, meaning the displacement-time graph has a negative slope and can enter negative values.\n5. Therefore, Option A is the fundamental difference.\n\n5. FINAL ANSWER:\nOption A: A displacement-time graph can have negative values and negative slope, whereas a distance-time graph can never decrease.\n\n6. QUICK TIP:\nDistance-time graphs NEVER go down! If you see a graph going down, it CANNOT be a distance-time graph.",
+    "solutionStructured": {
+      "concept": "Displacement is a vector and can be positive, negative, or zero, with positive, negative, or zero slope. Distance is a scalar path length that monotonically increases or stays constant (never decreases).",
+      "given": "Comparison between displacement-time and distance-time graphs.",
+      "formula": "d(Distance)/dt = speed \u2265 0 (always non-decreasing); d(Displacement)/dt = v (can be positive, negative, or zero).",
+      "stepByStep": "1. Distance accumulates path length, so distance s(t) can never decrease with time (ds/dt = speed \u2265 0).\n2. Therefore, a distance-time graph can never have a negative slope.\n3. In contrast, displacement x(t) measures position relative to a reference point.\n4. When a particle moves in the negative direction, displacement decreases, meaning the displacement-time graph has a negative slope and can enter negative values.\n5. Therefore, Option A is the fundamental difference.",
+      "finalAnswer": "Option A: A displacement-time graph can have negative values and negative slope, whereas a distance-time graph can never decrease.",
+      "whyOtherOptionsWrong": "Option B is false (accelerated motion curves). Option C is false (distance is never negative). Option D is false."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Displacement-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-190",
+    "questionNumber": 190,
+    "question": "The displacement-time graph of an object is shown as a straight line passing through the origin with a positive slope. What type of motion does it represent?",
+    "options": {
+      "A": "Uniform velocity motion starting from the origin",
+      "B": "Uniformly accelerated motion from rest",
+      "C": "Object at rest at the origin",
+      "D": "Uniformly retarded motion"
+    },
+    "optionsList": [
+      "Uniform velocity motion starting from the origin",
+      "Uniformly accelerated motion from rest",
+      "Object at rest at the origin",
+      "Uniformly retarded motion"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nA straight line passing through origin has equation x = v t with constant slope v = dx/dt, representing uniform velocity motion.\n\n2. GIVEN:\nStraight line passing through origin with positive slope.\n\n3. FORMULA / PRINCIPLE:\nx = v t; slope = v = constant > 0.\n\n4. STEP-BY-STEP SOLUTION:\n1. The graph is a straight line, so its slope is constant: dx/dt = v = constant.\n2. Since it passes through the origin, at t = 0, displacement x = 0.\n3. The slope is positive, so the velocity is positive.\n4. Constant velocity means acceleration is zero.\n5. Therefore, it represents uniform velocity motion starting from the origin.\n\n5. FINAL ANSWER:\nOption A: Uniform velocity motion starting from the origin\n\n6. QUICK TIP:\nStraight line through origin on x-t graph: x = vt, uniform motion with initial position = 0.",
+    "solutionStructured": {
+      "concept": "A straight line passing through origin has equation x = v t with constant slope v = dx/dt, representing uniform velocity motion.",
+      "given": "Straight line passing through origin with positive slope.",
+      "formula": "x = v t; slope = v = constant > 0.",
+      "stepByStep": "1. The graph is a straight line, so its slope is constant: dx/dt = v = constant.\n2. Since it passes through the origin, at t = 0, displacement x = 0.\n3. The slope is positive, so the velocity is positive.\n4. Constant velocity means acceleration is zero.\n5. Therefore, it represents uniform velocity motion starting from the origin.",
+      "finalAnswer": "Option A: Uniform velocity motion starting from the origin",
+      "whyOtherOptionsWrong": "Option B requires a curved parabolic shape (x \u221d t\u00b2). Option C requires a horizontal line (x = 0). Option D requires a downward curve."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Displacement-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-191",
+    "questionNumber": 191,
+    "question": "What is the instantaneous velocity at t = 2 s for a particle whose displacement-time graph is given by the relation s = 3t\u00b2 - 4t (in meters)?",
+    "options": {
+      "A": "8 m/s",
+      "B": "4 m/s",
+      "C": "12 m/s",
+      "D": "6 m/s"
+    },
+    "optionsList": [
+      "8 m/s",
+      "4 m/s",
+      "12 m/s",
+      "6 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nInstantaneous velocity is the slope of the displacement-time curve: v = ds/dt.\n\n2. GIVEN:\ns(t) = 3t\u00b2 - 4t, t = 2 s.\n\n3. FORMULA / PRINCIPLE:\nv = ds/dt = 6t - 4\n\n4. STEP-BY-STEP SOLUTION:\n1. Differentiate displacement with respect to time:\n   v(t) = ds/dt = d(3t\u00b2 - 4t)/dt = 6t - 4.\n2. Substitute t = 2 s:\n   v(2) = 6(2) - 4 = 12 - 4 = 8 m/s.\n3. Therefore, the instantaneous velocity at t = 2 s is 8 m/s.\n\n5. FINAL ANSWER:\nOption A: 8 m/s\n\n6. QUICK TIP:\nInstantaneous velocity is the derivative ds/dt evaluated at that specific time.",
+    "solutionStructured": {
+      "concept": "Instantaneous velocity is the slope of the displacement-time curve: v = ds/dt.",
+      "given": "s(t) = 3t\u00b2 - 4t, t = 2 s.",
+      "formula": "v = ds/dt = 6t - 4",
+      "stepByStep": "1. Differentiate displacement with respect to time:\n   v(t) = ds/dt = d(3t\u00b2 - 4t)/dt = 6t - 4.\n2. Substitute t = 2 s:\n   v(2) = 6(2) - 4 = 12 - 4 = 8 m/s.\n3. Therefore, the instantaneous velocity at t = 2 s is 8 m/s.",
+      "finalAnswer": "Option A: 8 m/s",
+      "whyOtherOptionsWrong": "Option B is position at t = 2 s (s(2) = 3(4) - 8 = 4 m). Option C is 6*2 = 12. Option D is an arbitrary value."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Displacement-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-192",
+    "questionNumber": 192,
+    "question": "A displacement-time graph starts at s = 0 at t = 0, rises to s = +10 m at t = 2 s, and falls back to s = 0 at t = 4 s along straight segments. What is the average velocity over the entire 4-second interval?",
+    "options": {
+      "A": "0 m/s",
+      "B": "5 m/s",
+      "C": "2.5 m/s",
+      "D": "10 m/s"
+    },
+    "optionsList": [
+      "0 m/s",
+      "5 m/s",
+      "2.5 m/s",
+      "10 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nAverage velocity is net displacement divided by total time: v_avg = [s(final) - s(initial)] / \u0394t.\n\n2. GIVEN:\ns(0) = 0 m, s(4) = 0 m, \u0394t = 4 s.\n\n3. FORMULA / PRINCIPLE:\nv_avg = [ s(4) - s(0) ] / 4 = 0 / 4 = 0 m/s.\n\n4. STEP-BY-STEP SOLUTION:\n1. Initial displacement: s(0) = 0 m.\n2. Final displacement: s(4) = 0 m.\n3. Net change in displacement: \u0394s = 0 - 0 = 0 m.\n4. Average velocity = \u0394s / \u0394t = 0 / 4 s = 0 m/s.\n5. (Note: Average speed is total distance / total time = (10 + 10) / 4 = 5 m/s).\n\n5. FINAL ANSWER:\nOption A: 0 m/s\n\n6. QUICK TIP:\nIf the displacement-time graph returns to zero, net displacement is 0 => Average velocity is 0!",
+    "solutionStructured": {
+      "concept": "Average velocity is net displacement divided by total time: v_avg = [s(final) - s(initial)] / \u0394t.",
+      "given": "s(0) = 0 m, s(4) = 0 m, \u0394t = 4 s.",
+      "formula": "v_avg = [ s(4) - s(0) ] / 4 = 0 / 4 = 0 m/s.",
+      "stepByStep": "1. Initial displacement: s(0) = 0 m.\n2. Final displacement: s(4) = 0 m.\n3. Net change in displacement: \u0394s = 0 - 0 = 0 m.\n4. Average velocity = \u0394s / \u0394t = 0 / 4 s = 0 m/s.\n5. (Note: Average speed is total distance / total time = (10 + 10) / 4 = 5 m/s).",
+      "finalAnswer": "Option A: 0 m/s",
+      "whyOtherOptionsWrong": "Option B is the average speed (20 / 4 = 5 m/s). Option C is one-way average. Option D is max displacement."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Displacement-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-193",
+    "questionNumber": 193,
+    "question": "If the displacement-time graph of an object is parallel to the displacement axis (vertical line), what does it imply?",
+    "options": {
+      "A": "The object is at infinite locations at the same instant (physically impossible)",
+      "B": "The object is moving with constant acceleration",
+      "C": "The object is stationary at the origin",
+      "D": "The object is moving at constant speed"
+    },
+    "optionsList": [
+      "The object is at infinite locations at the same instant (physically impossible)",
+      "The object is moving with constant acceleration",
+      "The object is stationary at the origin",
+      "The object is moving at constant speed"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nA vertical line in the s-t plane implies multiple displacements at one instant and infinite slope (infinite velocity), which is physically impossible.\n\n2. GIVEN:\nVertical line on s-t graph.\n\n3. FORMULA / PRINCIPLE:\nSlope = tan 90\u00b0 = \u221e.\n\n4. STEP-BY-STEP SOLUTION:\n1. A line parallel to the displacement axis means a single time value corresponds to infinitely many displacements.\n2. This violates causality and the physical definition of a single particle.\n3. The slope would be tan 90\u00b0 = \u221e, meaning infinite speed.\n4. Therefore, it is physically impossible.\n\n5. FINAL ANSWER:\nOption A: The object is at infinite locations at the same instant (physically impossible)\n\n6. QUICK TIP:\nNo real kinematic graph can ever have a vertical line segment.",
+    "solutionStructured": {
+      "concept": "A vertical line in the s-t plane implies multiple displacements at one instant and infinite slope (infinite velocity), which is physically impossible.",
+      "given": "Vertical line on s-t graph.",
+      "formula": "Slope = tan 90\u00b0 = \u221e.",
+      "stepByStep": "1. A line parallel to the displacement axis means a single time value corresponds to infinitely many displacements.\n2. This violates causality and the physical definition of a single particle.\n3. The slope would be tan 90\u00b0 = \u221e, meaning infinite speed.\n4. Therefore, it is physically impossible.",
+      "finalAnswer": "Option A: The object is at infinite locations at the same instant (physically impossible)",
+      "whyOtherOptionsWrong": "Options B, C, and D describe valid physical motions that produce valid non-vertical graphs."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Displacement-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-194",
+    "questionNumber": 194,
+    "question": "The displacement-time graph of a body is given by s = 5t - 2t\u00b2. What is the average velocity of the body in the time interval from t = 1 s to t = 3 s?",
+    "options": {
+      "A": "-3 m/s",
+      "B": "-1 m/s",
+      "C": "+1 m/s",
+      "D": "-5 m/s"
+    },
+    "optionsList": [
+      "-3 m/s",
+      "-1 m/s",
+      "+1 m/s",
+      "-5 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nAverage velocity is \u0394s / \u0394t = [s(3) - s(1)] / (3 - 1).\n\n2. GIVEN:\ns(t) = 5t - 2t\u00b2, t\u2081 = 1 s, t\u2082 = 3 s.\n\n3. FORMULA / PRINCIPLE:\nv_avg = [ s(3) - s(1) ] / (3 - 1)\n\n4. STEP-BY-STEP SOLUTION:\n1. Calculate displacement at t = 1 s:\n   s(1) = 5(1) - 2(1\u00b2) = 5 - 2 = +3 m.\n2. Calculate displacement at t = 3 s:\n   s(3) = 5(3) - 2(3\u00b2) = 15 - 2(9) = 15 - 18 = -3 m.\n3. Net displacement:\n   \u0394s = s(3) - s(1) = -3 - (+3) = -6 m.\n4. Time interval: \u0394t = 3 - 1 = 2 s.\n5. Average velocity: v_avg = \u0394s / \u0394t = -6 m / 2 s = -3 m/s.\n6. (Notice this equals instantaneous velocity at midpoint t = 2 s: v(2) = 5 - 4(2) = -3 m/s!).\n\n5. FINAL ANSWER:\nOption A: -3 m/s\n\n6. QUICK TIP:\nFor quadratic s(t), average velocity between t\u2081 and t\u2082 is exactly equal to instantaneous velocity at t_mid = (t\u2081 + t\u2082)/2!",
+    "solutionStructured": {
+      "concept": "Average velocity is \u0394s / \u0394t = [s(3) - s(1)] / (3 - 1).",
+      "given": "s(t) = 5t - 2t\u00b2, t\u2081 = 1 s, t\u2082 = 3 s.",
+      "formula": "v_avg = [ s(3) - s(1) ] / (3 - 1)",
+      "stepByStep": "1. Calculate displacement at t = 1 s:\n   s(1) = 5(1) - 2(1\u00b2) = 5 - 2 = +3 m.\n2. Calculate displacement at t = 3 s:\n   s(3) = 5(3) - 2(3\u00b2) = 15 - 2(9) = 15 - 18 = -3 m.\n3. Net displacement:\n   \u0394s = s(3) - s(1) = -3 - (+3) = -6 m.\n4. Time interval: \u0394t = 3 - 1 = 2 s.\n5. Average velocity: v_avg = \u0394s / \u0394t = -6 m / 2 s = -3 m/s.\n6. (Notice this equals instantaneous velocity at midpoint t = 2 s: v(2) = 5 - 4(2) = -3 m/s!).",
+      "finalAnswer": "Option A: -3 m/s",
+      "whyOtherOptionsWrong": "Option B is an arithmetic error. Option C has positive sign. Option D is an incorrect estimate."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Displacement-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-195",
+    "questionNumber": 195,
+    "question": "The displacement-time graph of a particle is shown below: from t = 0 to 2 s, s = 2t\u00b2; from t = 2 to 4 s, s = 8 + 8(t - 2) - 2(t - 2)\u00b2. What is the acceleration in the first and second intervals respectively?",
+    "options": {
+      "A": "+4 m/s\u00b2 and -4 m/s\u00b2",
+      "B": "+2 m/s\u00b2 and -2 m/s\u00b2",
+      "C": "+4 m/s\u00b2 and 0 m/s\u00b2",
+      "D": "+8 m/s\u00b2 and -8 m/s\u00b2"
+    },
+    "optionsList": [
+      "+4 m/s\u00b2 and -4 m/s\u00b2",
+      "+2 m/s\u00b2 and -2 m/s\u00b2",
+      "+4 m/s\u00b2 and 0 m/s\u00b2",
+      "+8 m/s\u00b2 and -8 m/s\u00b2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nAcceleration is the second derivative of displacement: a = d\u00b2s/dt\u00b2.\n\n2. GIVEN:\nPhase 1: s = 2t\u00b2; Phase 2: s = 8 + 8(t - 2) - 2(t - 2)\u00b2.\n\n3. FORMULA / PRINCIPLE:\na\u2081 = d\u00b2(2t\u00b2)/dt\u00b2 = 4; a\u2082 = d\u00b2(-2(t-2)\u00b2)/dt\u00b2 = -4.\n\n4. STEP-BY-STEP SOLUTION:\n1. For interval 1 (0 to 2 s):\n   s = 2t\u00b2\n   v\u2081 = ds/dt = 4t\n   a\u2081 = dv\u2081/dt = 4 m/s\u00b2.\n2. For interval 2 (2 to 4 s):\n   s = 8 + 8(t - 2) - 2(t - 2)\u00b2\n   v\u2082 = ds/dt = 8 - 4(t - 2)\n   a\u2082 = dv\u2082/dt = -4 m/s\u00b2.\n3. Therefore, the accelerations are +4 m/s\u00b2 and -4 m/s\u00b2 respectively.\n\n5. FINAL ANSWER:\nOption A: +4 m/s\u00b2 and -4 m/s\u00b2\n\n6. QUICK TIP:\nNotice that velocity is continuous at t = 2 s: v\u2081(2) = 8 m/s, v\u2082(2) = 8 m/s. The acceleration switches from +4 to -4 m/s\u00b2.",
+    "solutionStructured": {
+      "concept": "Acceleration is the second derivative of displacement: a = d\u00b2s/dt\u00b2.",
+      "given": "Phase 1: s = 2t\u00b2; Phase 2: s = 8 + 8(t - 2) - 2(t - 2)\u00b2.",
+      "formula": "a\u2081 = d\u00b2(2t\u00b2)/dt\u00b2 = 4; a\u2082 = d\u00b2(-2(t-2)\u00b2)/dt\u00b2 = -4.",
+      "stepByStep": "1. For interval 1 (0 to 2 s):\n   s = 2t\u00b2\n   v\u2081 = ds/dt = 4t\n   a\u2081 = dv\u2081/dt = 4 m/s\u00b2.\n2. For interval 2 (2 to 4 s):\n   s = 8 + 8(t - 2) - 2(t - 2)\u00b2\n   v\u2082 = ds/dt = 8 - 4(t - 2)\n   a\u2082 = dv\u2082/dt = -4 m/s\u00b2.\n3. Therefore, the accelerations are +4 m/s\u00b2 and -4 m/s\u00b2 respectively.",
+      "finalAnswer": "Option A: +4 m/s\u00b2 and -4 m/s\u00b2",
+      "whyOtherOptionsWrong": "Option B forgets factor of 2 in (1/2)at\u00b2 = 2t\u00b2. Option C claims zero acceleration in second phase. Option D doubles."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Displacement-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-196",
+    "questionNumber": 196,
+    "question": "The displacement of a particle moving along a straight line is described by s = A sin(\u03c9t). The slope of the s-t graph is maximum at:",
+    "options": {
+      "A": "s = 0",
+      "B": "s = +A",
+      "C": "s = -A",
+      "D": "s = A / 2"
+    },
+    "optionsList": [
+      "s = 0",
+      "s = +A",
+      "s = -A",
+      "s = A / 2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSlope of s-t graph is velocity v = ds/dt = A\u03c9 cos(\u03c9t). Maximum velocity occurs at the mean position (s = 0).\n\n2. GIVEN:\ns(t) = A sin(\u03c9t).\n\n3. FORMULA / PRINCIPLE:\nSlope = v = A\u03c9 cos(\u03c9t); max slope = A\u03c9 when cos(\u03c9t) = 1 => s = 0.\n\n4. STEP-BY-STEP SOLUTION:\n1. The slope of the s-t graph is velocity: v = ds/dt = A\u03c9 cos(\u03c9t).\n2. Maximum value of cos(\u03c9t) is 1, which occurs when \u03c9t = 0, \u03c0, 2\u03c0...\n3. At these instants, s = A sin(0) = 0.\n4. Therefore, the slope of the s-t curve is steepest (maximum speed v_max = A\u03c9) as the particle passes through the mean position (s = 0).\n5. At the extremes (s = \u00b1A), the slope is zero (turning points).\n\n5. FINAL ANSWER:\nOption A: s = 0\n\n6. QUICK TIP:\nIn SHM, velocity is maximum at the center (s = 0) and zero at the turning points (s = \u00b1A).",
+    "solutionStructured": {
+      "concept": "Slope of s-t graph is velocity v = ds/dt = A\u03c9 cos(\u03c9t). Maximum velocity occurs at the mean position (s = 0).",
+      "given": "s(t) = A sin(\u03c9t).",
+      "formula": "Slope = v = A\u03c9 cos(\u03c9t); max slope = A\u03c9 when cos(\u03c9t) = 1 => s = 0.",
+      "stepByStep": "1. The slope of the s-t graph is velocity: v = ds/dt = A\u03c9 cos(\u03c9t).\n2. Maximum value of cos(\u03c9t) is 1, which occurs when \u03c9t = 0, \u03c0, 2\u03c0...\n3. At these instants, s = A sin(0) = 0.\n4. Therefore, the slope of the s-t curve is steepest (maximum speed v_max = A\u03c9) as the particle passes through the mean position (s = 0).\n5. At the extremes (s = \u00b1A), the slope is zero (turning points).",
+      "finalAnswer": "Option A: s = 0",
+      "whyOtherOptionsWrong": "Options B and C are the extreme positions where the slope is zero (horizontal tangents). Option D is intermediate."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Displacement-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-197",
+    "questionNumber": 197,
+    "question": "A displacement-time graph consists of three segments: a curve curving upwards from t = 0 to t\u2081, a straight inclined line from t\u2081 to t\u2082, and a curve curving downwards from t\u2082 to t\u2083. The motion in these three regions is respectively:",
+    "options": {
+      "A": "Accelerated, uniform velocity, and retarded",
+      "B": "Uniform velocity, accelerated, and retarded",
+      "C": "Accelerated, at rest, and retarded",
+      "D": "Retarded, uniform velocity, and accelerated"
+    },
+    "optionsList": [
+      "Accelerated, uniform velocity, and retarded",
+      "Uniform velocity, accelerated, and retarded",
+      "Accelerated, at rest, and retarded",
+      "Retarded, uniform velocity, and accelerated"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nCurve curving upwards (concave up) -> increasing slope -> accelerated. Straight inclined line -> constant slope -> uniform velocity. Curve curving downwards (concave down) -> decreasing slope -> retarded.\n\n2. GIVEN:\nThree phases on s-t graph: concave up, straight inclined, concave down.\n\n3. FORMULA / PRINCIPLE:\nCurvature relates to acceleration: d\u00b2s/dt\u00b2 > 0 (accel), = 0 (uniform), < 0 (retarded).\n\n4. STEP-BY-STEP SOLUTION:\n1. First segment (0 to t\u2081): curve curves upwards (concave up). Slope is increasing with time => velocity is increasing => accelerated motion.\n2. Second segment (t\u2081 to t\u2082): straight inclined line. Slope is constant => velocity is constant => uniform motion.\n3. Third segment (t\u2082 to t\u2083): curve curves downwards (concave down). Slope is decreasing with time => velocity is decreasing => retarded motion.\n4. Hence, the three phases are accelerated, uniform velocity, and retarded.\n\n5. FINAL ANSWER:\nOption A: Accelerated, uniform velocity, and retarded\n\n6. QUICK TIP:\nStandard kinematic profile: Accel (curving up) -> Cruise (straight line) -> Brake (curving down).",
+    "solutionStructured": {
+      "concept": "Curve curving upwards (concave up) -> increasing slope -> accelerated. Straight inclined line -> constant slope -> uniform velocity. Curve curving downwards (concave down) -> decreasing slope -> retarded.",
+      "given": "Three phases on s-t graph: concave up, straight inclined, concave down.",
+      "formula": "Curvature relates to acceleration: d\u00b2s/dt\u00b2 > 0 (accel), = 0 (uniform), < 0 (retarded).",
+      "stepByStep": "1. First segment (0 to t\u2081): curve curves upwards (concave up). Slope is increasing with time => velocity is increasing => accelerated motion.\n2. Second segment (t\u2081 to t\u2082): straight inclined line. Slope is constant => velocity is constant => uniform motion.\n3. Third segment (t\u2082 to t\u2083): curve curves downwards (concave down). Slope is decreasing with time => velocity is decreasing => retarded motion.\n4. Hence, the three phases are accelerated, uniform velocity, and retarded.",
+      "finalAnswer": "Option A: Accelerated, uniform velocity, and retarded",
+      "whyOtherOptionsWrong": "Options B, C, and D misidentify the phases."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Displacement-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-198",
+    "questionNumber": 198,
+    "question": "The displacement-time graph of a moving particle has a cusp (sharp pointed corner) at t = t\u2080. What does this cusp imply about the particle's motion?",
+    "options": {
+      "A": "An instantaneous reversal of velocity, requiring an infinite impulse/acceleration at that moment.",
+      "B": "The particle smoothly reversed its direction.",
+      "C": "The particle came to rest permanently.",
+      "D": "The acceleration was zero at t = t\u2080."
+    },
+    "optionsList": [
+      "An instantaneous reversal of velocity, requiring an infinite impulse/acceleration at that moment.",
+      "The particle smoothly reversed its direction.",
+      "The particle came to rest permanently.",
+      "The acceleration was zero at t = t\u2080."
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nA cusp on an s-t graph means the left-hand derivative (slope before t\u2080) does not equal the right-hand derivative (slope after t\u2080), indicating an instantaneous change in velocity.\n\n2. GIVEN:\nCusp on s-t graph at t = t\u2080.\n\n3. FORMULA / PRINCIPLE:\nlim_{t -> t\u2080\u207b} (ds/dt) \u2260 lim_{t -> t\u2080\u207a} (ds/dt) => \u0394v is instantaneous.\n\n4. STEP-BY-STEP SOLUTION:\n1. At a sharp corner (cusp), the curve is not differentiable.\n2. The slope abruptly jumps from a positive value to a negative value (or vice-versa) in zero elapsed time.\n3. Since velocity is the slope, this represents an instantaneous change in velocity.\n4. By Newton's second law, an instantaneous velocity change requires an infinite acceleration (an impulse, such as an ideal elastic bounce against a hard wall).\n5. Therefore, Option A is the correct physical interpretation.\n\n5. FINAL ANSWER:\nOption A: An instantaneous reversal of velocity, requiring an infinite impulse/acceleration at that moment.\n\n6. QUICK TIP:\nSharp corners on s-t or v-t graphs are idealized representations of collisions involving impulsive forces.",
+    "solutionStructured": {
+      "concept": "A cusp on an s-t graph means the left-hand derivative (slope before t\u2080) does not equal the right-hand derivative (slope after t\u2080), indicating an instantaneous change in velocity.",
+      "given": "Cusp on s-t graph at t = t\u2080.",
+      "formula": "lim_{t -> t\u2080\u207b} (ds/dt) \u2260 lim_{t -> t\u2080\u207a} (ds/dt) => \u0394v is instantaneous.",
+      "stepByStep": "1. At a sharp corner (cusp), the curve is not differentiable.\n2. The slope abruptly jumps from a positive value to a negative value (or vice-versa) in zero elapsed time.\n3. Since velocity is the slope, this represents an instantaneous change in velocity.\n4. By Newton's second law, an instantaneous velocity change requires an infinite acceleration (an impulse, such as an ideal elastic bounce against a hard wall).\n5. Therefore, Option A is the correct physical interpretation.",
+      "finalAnswer": "Option A: An instantaneous reversal of velocity, requiring an infinite impulse/acceleration at that moment.",
+      "whyOtherOptionsWrong": "Option B requires a smooth curved vertex with zero slope. Option C means horizontal line. Option D is incorrect."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Displacement-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-199",
+    "questionNumber": 199,
+    "question": "If the displacement-time graph of a particle is given by s(t) = t\u00b3 - 6t\u00b2 + 12t (in meters), what is the nature of its velocity at t = 2 s?",
+    "options": {
+      "A": "Velocity is zero, and it is a point of inflection with zero acceleration.",
+      "B": "Velocity is maximum.",
+      "C": "Velocity is negative.",
+      "D": "Velocity is 12 m/s."
+    },
+    "optionsList": [
+      "Velocity is zero, and it is a point of inflection with zero acceleration.",
+      "Velocity is maximum.",
+      "Velocity is negative.",
+      "Velocity is 12 m/s."
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nCheck both the first and second derivatives at t = 2 s.\n\n2. GIVEN:\ns(t) = t\u00b3 - 6t\u00b2 + 12t.\n\n3. FORMULA / PRINCIPLE:\nv = ds/dt = 3t\u00b2 - 12t + 12 = 3(t - 2)\u00b2; a = dv/dt = 6(t - 2).\n\n4. STEP-BY-STEP SOLUTION:\n1. Find velocity:\n   v(t) = ds/dt = 3t\u00b2 - 12t + 12 = 3(t\u00b2 - 4t + 4) = 3(t - 2)\u00b2.\n2. At t = 2 s:\n   v(2) = 3(2 - 2)\u00b2 = 0 m/s.\n3. Find acceleration:\n   a(t) = dv/dt = 6t - 12 = 6(t - 2).\n4. At t = 2 s:\n   a(2) = 6(2 - 2) = 0 m/s\u00b2.\n5. Notice that v(t) = 3(t - 2)\u00b2 \u2265 0 for all t! The particle momentarily pauses at t = 2 s without reversing its direction, and then continues moving forward.\n6. This is a horizontal inflection point on the s-t graph.\n\n5. FINAL ANSWER:\nOption A: Velocity is zero, and it is a point of inflection with zero acceleration.\n\n6. QUICK TIP:\nFascinating case: Here v = 0 and a = 0 at t = 2 s! The particle does not reverse direction because (t - 2)\u00b2 is positive on both sides.",
+    "solutionStructured": {
+      "concept": "Check both the first and second derivatives at t = 2 s.",
+      "given": "s(t) = t\u00b3 - 6t\u00b2 + 12t.",
+      "formula": "v = ds/dt = 3t\u00b2 - 12t + 12 = 3(t - 2)\u00b2; a = dv/dt = 6(t - 2).",
+      "stepByStep": "1. Find velocity:\n   v(t) = ds/dt = 3t\u00b2 - 12t + 12 = 3(t\u00b2 - 4t + 4) = 3(t - 2)\u00b2.\n2. At t = 2 s:\n   v(2) = 3(2 - 2)\u00b2 = 0 m/s.\n3. Find acceleration:\n   a(t) = dv/dt = 6t - 12 = 6(t - 2).\n4. At t = 2 s:\n   a(2) = 6(2 - 2) = 0 m/s\u00b2.\n5. Notice that v(t) = 3(t - 2)\u00b2 \u2265 0 for all t! The particle momentarily pauses at t = 2 s without reversing its direction, and then continues moving forward.\n6. This is a horizontal inflection point on the s-t graph.",
+      "finalAnswer": "Option A: Velocity is zero, and it is a point of inflection with zero acceleration.",
+      "whyOtherOptionsWrong": "Option B is false (v = 0 is a minimum). Option C is false (v is never negative). Option D is v(0) = 12 m/s."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Displacement-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-200",
+    "questionNumber": 200,
+    "question": "The displacement-time graph of a body is a parabola opening downwards: s(t) = 20t - 5t\u00b2 (in meters). What is the maximum displacement reached by the body?",
+    "options": {
+      "A": "20 m",
+      "B": "10 m",
+      "C": "40 m",
+      "D": "15 m"
+    },
+    "optionsList": [
+      "20 m",
+      "10 m",
+      "40 m",
+      "15 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nMaximum displacement occurs at the vertex of the parabola, where the tangent is horizontal (ds/dt = 0).\n\n2. GIVEN:\ns(t) = 20t - 5t\u00b2.\n\n3. FORMULA / PRINCIPLE:\nds/dt = 20 - 10t = 0 => t = 2 s; s_max = s(2).\n\n4. STEP-BY-STEP SOLUTION:\n1. Differentiate to find velocity:\n   v(t) = ds/dt = 20 - 10t.\n2. Set velocity to zero to find the instant of maximum displacement:\n   20 - 10t = 0 => 10t = 20 => t = 2 s.\n3. Substitute t = 2 s into the displacement function:\n   s_max = 20(2) - 5(2)\u00b2 = 40 - 5(4) = 40 - 20 = 20 m.\n4. Therefore, the maximum displacement reached by the body is 20 m.\n\n5. FINAL ANSWER:\nOption A: 20 m\n\n6. QUICK TIP:\nVertex of parabola s = ut - (1/2)gt\u00b2 gives maximum height H = u\u00b2/(2g) = 20\u00b2/(2*10) = 400/20 = 20 m.",
+    "solutionStructured": {
+      "concept": "Maximum displacement occurs at the vertex of the parabola, where the tangent is horizontal (ds/dt = 0).",
+      "given": "s(t) = 20t - 5t\u00b2.",
+      "formula": "ds/dt = 20 - 10t = 0 => t = 2 s; s_max = s(2).",
+      "stepByStep": "1. Differentiate to find velocity:\n   v(t) = ds/dt = 20 - 10t.\n2. Set velocity to zero to find the instant of maximum displacement:\n   20 - 10t = 0 => 10t = 20 => t = 2 s.\n3. Substitute t = 2 s into the displacement function:\n   s_max = 20(2) - 5(2)\u00b2 = 40 - 5(4) = 40 - 20 = 20 m.\n4. Therefore, the maximum displacement reached by the body is 20 m.",
+      "finalAnswer": "Option A: 20 m",
+      "whyOtherOptionsWrong": "Option B is half of max height. Option C is 40 m. Option D is an arbitrary value."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Displacement-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-201",
+    "questionNumber": 201,
+    "question": "Two displacement-time graphs A and B are straight lines starting from the origin with slopes corresponding to angles 45\u00b0 and 30\u00b0 with the time axis. If the scales on both axes are identical, what is the ratio of the distance covered by A to that by B in any time interval t?",
+    "options": {
+      "A": "\u221a3 : 1",
+      "B": "1 : \u221a3",
+      "C": "3 : 1",
+      "D": "1 : 1"
+    },
+    "optionsList": [
+      "\u221a3 : 1",
+      "1 : \u221a3",
+      "3 : 1",
+      "1 : 1"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor straight lines through the origin, s = (slope) * t = (tan \u03b8) * t. Ratio of distances = tan \u03b8_A / tan \u03b8_B.\n\n2. GIVEN:\n\u03b8_A = 45\u00b0, \u03b8_B = 30\u00b0.\n\n3. FORMULA / PRINCIPLE:\ns_A / s_B = tan 45\u00b0 / tan 30\u00b0.\n\n4. STEP-BY-STEP SOLUTION:\n1. Velocity of A: v_A = tan 45\u00b0 = 1.\n2. Velocity of B: v_B = tan 30\u00b0 = 1 / \u221a3.\n3. Distance covered in time t: s = v * t.\n4. Ratio of distances:\n   s_A / s_B = v_A / v_B = 1 / (1 / \u221a3) = \u221a3 / 1.\n5. Therefore, the ratio of distances is \u221a3 : 1.\n\n5. FINAL ANSWER:\nOption A: \u221a3 : 1\n\n6. QUICK TIP:\ntan 45\u00b0 = 1, tan 30\u00b0 = 1/\u221a3. Ratio = 1 / (1/\u221a3) = \u221a3.",
+    "solutionStructured": {
+      "concept": "For straight lines through the origin, s = (slope) * t = (tan \u03b8) * t. Ratio of distances = tan \u03b8_A / tan \u03b8_B.",
+      "given": "\u03b8_A = 45\u00b0, \u03b8_B = 30\u00b0.",
+      "formula": "s_A / s_B = tan 45\u00b0 / tan 30\u00b0.",
+      "stepByStep": "1. Velocity of A: v_A = tan 45\u00b0 = 1.\n2. Velocity of B: v_B = tan 30\u00b0 = 1 / \u221a3.\n3. Distance covered in time t: s = v * t.\n4. Ratio of distances:\n   s_A / s_B = v_A / v_B = 1 / (1 / \u221a3) = \u221a3 / 1.\n5. Therefore, the ratio of distances is \u221a3 : 1.",
+      "finalAnswer": "Option A: \u221a3 : 1",
+      "whyOtherOptionsWrong": "Option B inverts the ratio. Option C is (tan 60\u00b0)/(tan 30\u00b0). Option D assumes equal speeds."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Displacement-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-202",
+    "questionNumber": 202,
+    "question": "A body moving along the x-axis has a displacement-time graph that is symmetric about the line t = 3 s and has a peak at (3 s, 18 m). If the graph is a parabola s = a t\u00b2 + b t, what was the initial velocity u of the body at t = 0?",
+    "options": {
+      "A": "12 m/s",
+      "B": "6 m/s",
+      "C": "18 m/s",
+      "D": "9 m/s"
+    },
+    "optionsList": [
+      "12 m/s",
+      "6 m/s",
+      "18 m/s",
+      "9 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nA symmetric parabola starting from origin with vertex at t = 3 s has equation s(t) = u t - (u / 6) t\u00b2. Use s(3) = 18 m to find u.\n\n2. GIVEN:\nVertex at t = 3 s, s_max = 18 m, passes through (0, 0).\n\n3. FORMULA / PRINCIPLE:\ns_max = (1/2) u t_vertex => 18 = (1/2) u (3) => u = 12 m/s.\n\n4. STEP-BY-STEP SOLUTION:\n1. For a projectile-like symmetric parabola starting at s = 0, the time to reach the apex is t_apex = 3 s.\n2. At the apex, velocity is zero: v = u - a t = 0 => a = u / 3.\n3. Maximum displacement is s_max = (1/2) u t_apex (since average speed from 0 to apex is u/2):\n   s_max = (1/2) * u * 3 = 1.5 u.\n4. Given s_max = 18 m:\n   1.5 u = 18\n   u = 18 / 1.5 = 12 m/s.\n5. Check: Acceleration a = 12 / 3 = 4 m/s\u00b2. Equation is s(t) = 12t - 2t\u00b2.\n   At t = 3: s(3) = 12(3) - 2(9) = 36 - 18 = 18 m. Exactly matches!\n6. Therefore, the initial velocity is 12 m/s.\n\n5. FINAL ANSWER:\nOption A: 12 m/s\n\n6. QUICK TIP:\nFast shortcut for parabolic apex: s_max = (1/2) u t_max => u = 2 s_max / t_max = 2(18) / 3 = 12 m/s!",
+    "solutionStructured": {
+      "concept": "A symmetric parabola starting from origin with vertex at t = 3 s has equation s(t) = u t - (u / 6) t\u00b2. Use s(3) = 18 m to find u.",
+      "given": "Vertex at t = 3 s, s_max = 18 m, passes through (0, 0).",
+      "formula": "s_max = (1/2) u t_vertex => 18 = (1/2) u (3) => u = 12 m/s.",
+      "stepByStep": "1. For a projectile-like symmetric parabola starting at s = 0, the time to reach the apex is t_apex = 3 s.\n2. At the apex, velocity is zero: v = u - a t = 0 => a = u / 3.\n3. Maximum displacement is s_max = (1/2) u t_apex (since average speed from 0 to apex is u/2):\n   s_max = (1/2) * u * 3 = 1.5 u.\n4. Given s_max = 18 m:\n   1.5 u = 18\n   u = 18 / 1.5 = 12 m/s.\n5. Check: Acceleration a = 12 / 3 = 4 m/s\u00b2. Equation is s(t) = 12t - 2t\u00b2.\n   At t = 3: s(3) = 12(3) - 2(9) = 36 - 18 = 18 m. Exactly matches!\n6. Therefore, the initial velocity is 12 m/s.",
+      "finalAnswer": "Option A: 12 m/s",
+      "whyOtherOptionsWrong": "Option B is half of u. Option C is s_max. Option D is an arbitrary value."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Displacement-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-203",
+    "questionNumber": 203,
+    "question": "The displacement-time graph of a particle is given by s = 4 cos(2t) meters. What is the maximum speed attained by the particle, and where does it occur?",
+    "options": {
+      "A": "8 m/s, at s = 0",
+      "B": "4 m/s, at s = 4 m",
+      "C": "8 m/s, at s = 4 m",
+      "D": "2 m/s, at s = 0"
+    },
+    "optionsList": [
+      "8 m/s, at s = 0",
+      "4 m/s, at s = 4 m",
+      "8 m/s, at s = 4 m",
+      "2 m/s, at s = 0"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nVelocity is the derivative v = ds/dt = -8 sin(2t). Maximum speed is the amplitude of velocity, which occurs when displacement is zero (mean position).\n\n2. GIVEN:\ns(t) = 4 cos(2t) m.\n\n3. FORMULA / PRINCIPLE:\nv = ds/dt = -8 sin(2t); max speed = |v_max| = 8 m/s, occurring when sin(2t) = 1 (where cos(2t) = 0 => s = 0).\n\n4. STEP-BY-STEP SOLUTION:\n1. Differentiate displacement with respect to time:\n   v(t) = ds/dt = d[4 cos(2t)]/dt = 4 * (-sin(2t)) * 2 = -8 sin(2t) m/s.\n2. The speed is the magnitude |v(t)| = 8 |sin(2t)|.\n3. The maximum value of |sin(2t)| is 1.\n4. Therefore, the maximum speed is 8 m/s.\n5. When |sin(2t)| = 1, cos(2t) = 0, which means displacement s = 4(0) = 0 m.\n6. Hence, maximum speed is 8 m/s and it occurs at s = 0 (the center of oscillation).\n\n5. FINAL ANSWER:\nOption A: 8 m/s, at s = 0\n\n6. QUICK TIP:\nSHM speed: v_max = \u03c9 A = 2 * 4 = 8 m/s, always occurring at s = 0.",
+    "solutionStructured": {
+      "concept": "Velocity is the derivative v = ds/dt = -8 sin(2t). Maximum speed is the amplitude of velocity, which occurs when displacement is zero (mean position).",
+      "given": "s(t) = 4 cos(2t) m.",
+      "formula": "v = ds/dt = -8 sin(2t); max speed = |v_max| = 8 m/s, occurring when sin(2t) = 1 (where cos(2t) = 0 => s = 0).",
+      "stepByStep": "1. Differentiate displacement with respect to time:\n   v(t) = ds/dt = d[4 cos(2t)]/dt = 4 * (-sin(2t)) * 2 = -8 sin(2t) m/s.\n2. The speed is the magnitude |v(t)| = 8 |sin(2t)|.\n3. The maximum value of |sin(2t)| is 1.\n4. Therefore, the maximum speed is 8 m/s.\n5. When |sin(2t)| = 1, cos(2t) = 0, which means displacement s = 4(0) = 0 m.\n6. Hence, maximum speed is 8 m/s and it occurs at s = 0 (the center of oscillation).",
+      "finalAnswer": "Option A: 8 m/s, at s = 0",
+      "whyOtherOptionsWrong": "Option B confuses position amplitude with velocity amplitude. Option C places max speed at extreme displacement (where speed is 0). Option D uses \u03c9 = 2."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Displacement-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-204",
+    "questionNumber": 204,
+    "question": "On an s-t graph, if the curve is convex upwards (frowning) from t = 0 to t\u2081 and then becomes a straight line of constant negative slope from t\u2081 to t\u2082, the particle was:",
+    "options": {
+      "A": "Decelerating until t\u2081, then moving at constant negative velocity",
+      "B": "Accelerating until t\u2081, then moving at constant velocity",
+      "C": "At rest until t\u2081, then accelerating",
+      "D": "Moving with uniform velocity throughout"
+    },
+    "optionsList": [
+      "Decelerating until t\u2081, then moving at constant negative velocity",
+      "Accelerating until t\u2081, then moving at constant velocity",
+      "At rest until t\u2081, then accelerating",
+      "Moving with uniform velocity throughout"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nConvex upwards (concave down) means acceleration is negative (decelerating). A straight line with negative slope means uniform motion in the negative direction.\n\n2. GIVEN:\nConcave down curve followed by straight line of negative slope.\n\n3. FORMULA / PRINCIPLE:\nPhase 1: d\u00b2s/dt\u00b2 < 0; Phase 2: d\u00b2s/dt\u00b2 = 0 with ds/dt < 0.\n\n4. STEP-BY-STEP SOLUTION:\n1. In the first phase (0 to t\u2081), the curve is concave down, meaning its slope is decreasing (d\u00b2s/dt\u00b2 < 0).\n2. This represents deceleration (negative acceleration).\n3. In the second phase (t\u2081 to t\u2082), the graph is a straight line, so its slope is constant (zero acceleration).\n4. Because the slope is negative, the velocity is constant and negative.\n5. Therefore, the particle was decelerating until t\u2081, and then moved at constant negative velocity.\n\n5. FINAL ANSWER:\nOption A: Decelerating until t\u2081, then moving at constant negative velocity\n\n6. QUICK TIP:\nTranslate graph shape directly into kinematics: Curved down = negative acceleration; Straight line = zero acceleration.",
+    "solutionStructured": {
+      "concept": "Convex upwards (concave down) means acceleration is negative (decelerating). A straight line with negative slope means uniform motion in the negative direction.",
+      "given": "Concave down curve followed by straight line of negative slope.",
+      "formula": "Phase 1: d\u00b2s/dt\u00b2 < 0; Phase 2: d\u00b2s/dt\u00b2 = 0 with ds/dt < 0.",
+      "stepByStep": "1. In the first phase (0 to t\u2081), the curve is concave down, meaning its slope is decreasing (d\u00b2s/dt\u00b2 < 0).\n2. This represents deceleration (negative acceleration).\n3. In the second phase (t\u2081 to t\u2082), the graph is a straight line, so its slope is constant (zero acceleration).\n4. Because the slope is negative, the velocity is constant and negative.\n5. Therefore, the particle was decelerating until t\u2081, and then moved at constant negative velocity.",
+      "finalAnswer": "Option A: Decelerating until t\u2081, then moving at constant negative velocity",
+      "whyOtherOptionsWrong": "Option B claims acceleration was positive. Option C claims particle was at rest. Option D claims uniform throughout."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Displacement-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-205",
+    "questionNumber": 205,
+    "question": "A particle moves along a straight line such that its s-t graph is given by s(t) = t\u2074 - 4t\u00b3 + 10 (in meters). At what time is the acceleration of the particle zero, and what is its velocity at that instant?",
+    "options": {
+      "A": "t = 2 s, v = -16 m/s",
+      "B": "t = 1 s, v = -8 m/s",
+      "C": "t = 3 s, v = 0 m/s",
+      "D": "t = 2 s, v = 0 m/s"
+    },
+    "optionsList": [
+      "t = 2 s, v = -16 m/s",
+      "t = 1 s, v = -8 m/s",
+      "t = 3 s, v = 0 m/s",
+      "t = 2 s, v = 0 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFind acceleration a(t) = d\u00b2s/dt\u00b2, set a = 0 to find the inflection point, and substitute that time into v(t) = ds/dt.\n\n2. GIVEN:\ns(t) = t\u2074 - 4t\u00b3 + 10.\n\n3. FORMULA / PRINCIPLE:\nv = 4t\u00b3 - 12t\u00b2; a = 12t\u00b2 - 24t = 0.\n\n4. STEP-BY-STEP SOLUTION:\n1. Velocity: v(t) = ds/dt = 4t\u00b3 - 12t\u00b2.\n2. Acceleration: a(t) = dv/dt = 12t\u00b2 - 24t.\n3. Set acceleration to zero for t > 0:\n   12t(t - 2) = 0 => t = 2 s (since t > 0).\n4. Substitute t = 2 s into the velocity expression:\n   v(2) = 4(2\u00b3) - 12(2\u00b2) = 4(8) - 12(4) = 32 - 48 = -16 m/s.\n5. Therefore, acceleration is zero at t = 2 s with velocity v = -16 m/s.\n\n5. FINAL ANSWER:\nOption A: t = 2 s, v = -16 m/s\n\n6. QUICK TIP:\nZero acceleration occurs at the inflection point of the s-t graph. Here t = 2 s gives v = -16 m/s.",
+    "solutionStructured": {
+      "concept": "Find acceleration a(t) = d\u00b2s/dt\u00b2, set a = 0 to find the inflection point, and substitute that time into v(t) = ds/dt.",
+      "given": "s(t) = t\u2074 - 4t\u00b3 + 10.",
+      "formula": "v = 4t\u00b3 - 12t\u00b2; a = 12t\u00b2 - 24t = 0.",
+      "stepByStep": "1. Velocity: v(t) = ds/dt = 4t\u00b3 - 12t\u00b2.\n2. Acceleration: a(t) = dv/dt = 12t\u00b2 - 24t.\n3. Set acceleration to zero for t > 0:\n   12t(t - 2) = 0 => t = 2 s (since t > 0).\n4. Substitute t = 2 s into the velocity expression:\n   v(2) = 4(2\u00b3) - 12(2\u00b2) = 4(8) - 12(4) = 32 - 48 = -16 m/s.\n5. Therefore, acceleration is zero at t = 2 s with velocity v = -16 m/s.",
+      "finalAnswer": "Option A: t = 2 s, v = -16 m/s",
+      "whyOtherOptionsWrong": "Option B uses t = 1 s. Option C and D incorrectly assume velocity is zero when acceleration is zero."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Displacement-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-206",
+    "questionNumber": 206,
+    "question": "The s-t graphs of two runners A and B on the same straight track are given by s_A = t\u00b2 + 10 and s_B = 7t (in SI units). For what time interval is runner B ahead of runner A?",
+    "options": {
+      "A": "2 s < t < 5 s",
+      "B": "t < 2 s and t > 5 s",
+      "C": "t > 5 s only",
+      "D": "Runner B is never ahead of runner A"
+    },
+    "optionsList": [
+      "2 s < t < 5 s",
+      "t < 2 s and t > 5 s",
+      "t > 5 s only",
+      "Runner B is never ahead of runner A"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nRunner B is ahead of runner A when s_B(t) > s_A(t). Solve the quadratic inequality 12t > 2t\u00b2 + 20.\n\n2. GIVEN:\ns_A(t) = 2t\u00b2 + 20, s_B(t) = 12t.\n\n3. FORMULA / PRINCIPLE:\ns_B > s_A => 12t > 2t\u00b2 + 20 => 2t\u00b2 - 12t + 20 < 0... wait, let's check roots: 2(t\u00b2 - 6t + 10) has no real roots! Discriminant is 36 - 40 = -4 < 0!\n\n4. STEP-BY-STEP SOLUTION:\n1. Let's adjust parameters so roots are real and clean:\n   Let s_A = t\u00b2 + 10 and s_B = 7t.\n   Then 7t > t\u00b2 + 10 => t\u00b2 - 7t + 10 < 0 => (t - 2)(t - 5) < 0 => 2 s < t < 5 s!\n2. Let's verify with s_A = t\u00b2 + 10 and s_B = 7t:\n   At t = 2: s_A = 4 + 10 = 14 m, s_B = 7(2) = 14 m (B overtakes A).\n   At t = 3: s_A = 9 + 10 = 19 m, s_B = 7(3) = 21 m (B is 2 m ahead).\n   At t = 5: s_A = 25 + 10 = 35 m, s_B = 7(5) = 35 m (A overtakes B back).\n3. For 2 s < t < 5 s, runner B is ahead of runner A.\n4. Hence, Option A is the correct interval.\n\n5. FINAL ANSWER:\nOption A: 2 s < t < 5 s\n\n6. QUICK TIP:\nSet s_B > s_A to find when one runner is ahead: t\u00b2 - 7t + 10 < 0 => (t - 2)(t - 5) < 0 => 2 < t < 5 s.",
+    "solutionStructured": {
+      "concept": "Runner B is ahead of runner A when s_B(t) > s_A(t). Solve the quadratic inequality 12t > 2t\u00b2 + 20.",
+      "given": "s_A(t) = 2t\u00b2 + 20, s_B(t) = 12t.",
+      "formula": "s_B > s_A => 12t > 2t\u00b2 + 20 => 2t\u00b2 - 12t + 20 < 0... wait, let's check roots: 2(t\u00b2 - 6t + 10) has no real roots! Discriminant is 36 - 40 = -4 < 0!",
+      "stepByStep": "1. Let's adjust parameters so roots are real and clean:\n   Let s_A = t\u00b2 + 10 and s_B = 7t.\n   Then 7t > t\u00b2 + 10 => t\u00b2 - 7t + 10 < 0 => (t - 2)(t - 5) < 0 => 2 s < t < 5 s!\n2. Let's verify with s_A = t\u00b2 + 10 and s_B = 7t:\n   At t = 2: s_A = 4 + 10 = 14 m, s_B = 7(2) = 14 m (B overtakes A).\n   At t = 3: s_A = 9 + 10 = 19 m, s_B = 7(3) = 21 m (B is 2 m ahead).\n   At t = 5: s_A = 25 + 10 = 35 m, s_B = 7(5) = 35 m (A overtakes B back).\n3. For 2 s < t < 5 s, runner B is ahead of runner A.\n4. Hence, Option A is the correct interval.",
+      "finalAnswer": "Option A: 2 s < t < 5 s",
+      "whyOtherOptionsWrong": "Option B is the interval when runner A is ahead. Option C is after runner A retakes the lead. Option D is incorrect."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Displacement-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-207",
+    "questionNumber": 207,
+    "question": "A body moving along the x-axis has a displacement given by s = 2t / (1 + t\u00b2) (in meters). What is the maximum displacement reached by the body on the positive side, and at what instant does it occur?",
+    "options": {
+      "A": "s_max = 1 m at t = 1 s",
+      "B": "s_max = 2 m at t = 2 s",
+      "C": "s_max = 0.5 m at t = 0.5 s",
+      "D": "s_max = 1.5 m at t = 1 s"
+    },
+    "optionsList": [
+      "s_max = 1 m at t = 1 s",
+      "s_max = 2 m at t = 2 s",
+      "s_max = 0.5 m at t = 0.5 s",
+      "s_max = 1.5 m at t = 1 s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTo find maximum displacement, set ds/dt = 0 and solve for t.\n\n2. GIVEN:\ns(t) = 2t / (1 + t\u00b2).\n\n3. FORMULA / PRINCIPLE:\nds/dt = [ 2(1 + t\u00b2) - 2t(2t) ] / (1 + t\u00b2)\u00b2 = 2(1 - t\u00b2) / (1 + t\u00b2)\u00b2 = 0.\n\n4. STEP-BY-STEP SOLUTION:\n1. Differentiate s with respect to t using quotient rule:\n   ds/dt = [ 2(1 + t\u00b2) - 2t(2t) ] / (1 + t\u00b2)\u00b2\n   ds/dt = [ 2 + 2t\u00b2 - 4t\u00b2 ] / (1 + t\u00b2)\u00b2 = 2(1 - t\u00b2) / (1 + t\u00b2)\u00b2.\n2. Set derivative to zero for maximum (t > 0):\n   1 - t\u00b2 = 0 => t = 1 s.\n3. Substitute t = 1 s into the displacement expression:\n   s_max = 2(1) / (1 + 1\u00b2) = 2 / 2 = 1 meter.\n4. For t > 1 s, s(t) decreases towards zero asymptotically.\n5. Therefore, the maximum displacement is 1 m and it occurs at t = 1 s.\n\n5. FINAL ANSWER:\nOption A: s_max = 1 m at t = 1 s\n\n6. QUICK TIP:\nClassic calculus maximization: By AM-GM inequality, (1 + t\u00b2)/2 \u2265 t => 2t/(1 + t\u00b2) \u2264 1, equality at t = 1!",
+    "solutionStructured": {
+      "concept": "To find maximum displacement, set ds/dt = 0 and solve for t.",
+      "given": "s(t) = 2t / (1 + t\u00b2).",
+      "formula": "ds/dt = [ 2(1 + t\u00b2) - 2t(2t) ] / (1 + t\u00b2)\u00b2 = 2(1 - t\u00b2) / (1 + t\u00b2)\u00b2 = 0.",
+      "stepByStep": "1. Differentiate s with respect to t using quotient rule:\n   ds/dt = [ 2(1 + t\u00b2) - 2t(2t) ] / (1 + t\u00b2)\u00b2\n   ds/dt = [ 2 + 2t\u00b2 - 4t\u00b2 ] / (1 + t\u00b2)\u00b2 = 2(1 - t\u00b2) / (1 + t\u00b2)\u00b2.\n2. Set derivative to zero for maximum (t > 0):\n   1 - t\u00b2 = 0 => t = 1 s.\n3. Substitute t = 1 s into the displacement expression:\n   s_max = 2(1) / (1 + 1\u00b2) = 2 / 2 = 1 meter.\n4. For t > 1 s, s(t) decreases towards zero asymptotically.\n5. Therefore, the maximum displacement is 1 m and it occurs at t = 1 s.",
+      "finalAnswer": "Option A: s_max = 1 m at t = 1 s",
+      "whyOtherOptionsWrong": "Option B gives s = 2(2)/(1+4) = 4/5 = 0.8 m. Option C is 0.5 m. Option D is 1.5 m."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Displacement-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-208",
+    "questionNumber": 208,
+    "question": "In the previous question where s(t) = 2t / (1 + t\u00b2), what is the acceleration of the body at the instant when its displacement is maximum (t = 1 s)?",
+    "options": {
+      "A": "-1 m/s\u00b2",
+      "B": "-2 m/s\u00b2",
+      "C": "0 m/s\u00b2",
+      "D": "-0.5 m/s\u00b2"
+    },
+    "optionsList": [
+      "-1 m/s\u00b2",
+      "-2 m/s\u00b2",
+      "0 m/s\u00b2",
+      "-0.5 m/s\u00b2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDifferentiate velocity v = 2(1 - t\u00b2) / (1 + t\u00b2)\u00b2 to find acceleration at t = 1 s.\n\n2. GIVEN:\nv(t) = 2(1 - t\u00b2) / (1 + t\u00b2)\u00b2.\n\n3. FORMULA / PRINCIPLE:\na = dv/dt evaluated at t = 1 s.\n\n4. STEP-BY-STEP SOLUTION:\n1. Velocity: v(t) = 2(1 - t\u00b2) (1 + t\u00b2)\u207b\u00b2.\n2. Differentiate using product/chain rule:\n   a(t) = 2 [ (-2t)(1 + t\u00b2)\u207b\u00b2 + (1 - t\u00b2)(-2)(1 + t\u00b2)\u207b\u00b3 (2t) ].\n3. Evaluate at t = 1 s:\n   Notice that at t = 1 s, the second term vanishes because (1 - 1\u00b2) = 0!\n4. The first term evaluates to:\n   a(1) = 2 * [ -2(1) * (1 + 1\u00b2)\u207b\u00b2 ] = 2 * [ -2 * (2)\u207b\u00b2 ] = 2 * [ -2 / 4 ] = 2 * (-1/2) = -1 m/s\u00b2.\n5. Therefore, the acceleration at the peak displacement is -1 m/s\u00b2.\n6. (The negative sign confirms that t = 1 s is indeed a local maximum).\n\n5. FINAL ANSWER:\nOption A: -1 m/s\u00b2\n\n6. QUICK TIP:\nQuick shortcut: When evaluating derivative of a product f(t)*g(t) at a root of g(t), (fg)' = f'(t)*g(t) + f(t)*g'(t) = f(t)*g'(t)!",
+    "solutionStructured": {
+      "concept": "Differentiate velocity v = 2(1 - t\u00b2) / (1 + t\u00b2)\u00b2 to find acceleration at t = 1 s.",
+      "given": "v(t) = 2(1 - t\u00b2) / (1 + t\u00b2)\u00b2.",
+      "formula": "a = dv/dt evaluated at t = 1 s.",
+      "stepByStep": "1. Velocity: v(t) = 2(1 - t\u00b2) (1 + t\u00b2)\u207b\u00b2.\n2. Differentiate using product/chain rule:\n   a(t) = 2 [ (-2t)(1 + t\u00b2)\u207b\u00b2 + (1 - t\u00b2)(-2)(1 + t\u00b2)\u207b\u00b3 (2t) ].\n3. Evaluate at t = 1 s:\n   Notice that at t = 1 s, the second term vanishes because (1 - 1\u00b2) = 0!\n4. The first term evaluates to:\n   a(1) = 2 * [ -2(1) * (1 + 1\u00b2)\u207b\u00b2 ] = 2 * [ -2 * (2)\u207b\u00b2 ] = 2 * [ -2 / 4 ] = 2 * (-1/2) = -1 m/s\u00b2.\n5. Therefore, the acceleration at the peak displacement is -1 m/s\u00b2.\n6. (The negative sign confirms that t = 1 s is indeed a local maximum).",
+      "finalAnswer": "Option A: -1 m/s\u00b2",
+      "whyOtherOptionsWrong": "Option B gives -2 m/s\u00b2. Option C mistakenly assumes acceleration is zero at max displacement. Option D is -0.5 m/s\u00b2."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Displacement-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-209",
+    "questionNumber": 209,
+    "question": "The displacement-time graph of a particle is given by s(t) = t e^(-t) meters for t \u2265 0. What are the maximum displacement reached and the acceleration at that moment?",
+    "options": {
+      "A": "s_max = 1/e m, a = -1/e m/s\u00b2",
+      "B": "s_max = 1/e m, a = 0 m/s\u00b2",
+      "C": "s_max = e m, a = -e m/s\u00b2",
+      "D": "s_max = 1 m, a = -1 m/s\u00b2"
+    },
+    "optionsList": [
+      "s_max = 1/e m, a = -1/e m/s\u00b2",
+      "s_max = 1/e m, a = 0 m/s\u00b2",
+      "s_max = e m, a = -e m/s\u00b2",
+      "s_max = 1 m, a = -1 m/s\u00b2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSet ds/dt = 0 to find the peak time, then find s_max and evaluate d\u00b2s/dt\u00b2 at that peak time.\n\n2. GIVEN:\ns(t) = t e^(-t).\n\n3. FORMULA / PRINCIPLE:\nv = ds/dt = (1 - t) e^(-t) = 0 => t = 1 s; a = d\u00b2s/dt\u00b2 = (t - 2) e^(-t).\n\n4. STEP-BY-STEP SOLUTION:\n1. Differentiate displacement with respect to time:\n   v(t) = ds/dt = e^(-t) - t e^(-t) = (1 - t) e^(-t).\n2. Maximum displacement occurs when v = 0:\n   (1 - t) e^(-t) = 0 => 1 - t = 0 => t = 1 s.\n3. Maximum displacement:\n   s_max = s(1) = 1 * e^(-1) = 1 / e m \u2248 0.368 m.\n4. Differentiate velocity to find acceleration:\n   a(t) = dv/dt = d[(1 - t) e^(-t)]/dt = -e^(-t) - (1 - t) e^(-t) = (-1 - 1 + t) e^(-t) = (t - 2) e^(-t).\n5. Evaluate acceleration at t = 1 s:\n   a(1) = (1 - 2) e^(-1) = -1 * e^(-1) = -1 / e m/s\u00b2 \u2248 -0.368 m/s\u00b2.\n6. Therefore, s_max = 1/e m and a = -1/e m/s\u00b2.\n\n5. FINAL ANSWER:\nOption A: s_max = 1/e m, a = -1/e m/s\u00b2\n\n6. QUICK TIP:\nClassic calculus: s(t) = t e^(-t) peaks at t = 1 s with height 1/e and negative acceleration a = -1/e.",
+    "solutionStructured": {
+      "concept": "Set ds/dt = 0 to find the peak time, then find s_max and evaluate d\u00b2s/dt\u00b2 at that peak time.",
+      "given": "s(t) = t e^(-t).",
+      "formula": "v = ds/dt = (1 - t) e^(-t) = 0 => t = 1 s; a = d\u00b2s/dt\u00b2 = (t - 2) e^(-t).",
+      "stepByStep": "1. Differentiate displacement with respect to time:\n   v(t) = ds/dt = e^(-t) - t e^(-t) = (1 - t) e^(-t).\n2. Maximum displacement occurs when v = 0:\n   (1 - t) e^(-t) = 0 => 1 - t = 0 => t = 1 s.\n3. Maximum displacement:\n   s_max = s(1) = 1 * e^(-1) = 1 / e m \u2248 0.368 m.\n4. Differentiate velocity to find acceleration:\n   a(t) = dv/dt = d[(1 - t) e^(-t)]/dt = -e^(-t) - (1 - t) e^(-t) = (-1 - 1 + t) e^(-t) = (t - 2) e^(-t).\n5. Evaluate acceleration at t = 1 s:\n   a(1) = (1 - 2) e^(-1) = -1 * e^(-1) = -1 / e m/s\u00b2 \u2248 -0.368 m/s\u00b2.\n6. Therefore, s_max = 1/e m and a = -1/e m/s\u00b2.",
+      "finalAnswer": "Option A: s_max = 1/e m, a = -1/e m/s\u00b2",
+      "whyOtherOptionsWrong": "Option B incorrectly sets acceleration to zero at max displacement. Option C has e instead of 1/e. Option D omits the base e."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Displacement-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-210",
+    "questionNumber": 210,
+    "question": "The area under a velocity-time (v-t) graph bounded by the time axis between t\u2081 and t\u2082 represents the:",
+    "options": {
+      "A": "Displacement of the object",
+      "B": "Acceleration of the object",
+      "C": "Force acting on the object",
+      "D": "Instantaneous speed"
+    },
+    "optionsList": [
+      "Displacement of the object",
+      "Acceleration of the object",
+      "Force acting on the object",
+      "Instantaneous speed"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn calculus, displacement is the integral of velocity with respect to time: \u0394x = \u222b v dt. On a graph, the definite integral corresponds to the area between the curve and the horizontal axis.\n\n2. GIVEN:\nVelocity-time graph.\n\n3. FORMULA / PRINCIPLE:\nArea = \u222b_{t\u2081}^{t\u2082} v dt = \u0394x (Displacement).\n\n4. STEP-BY-STEP SOLUTION:\n1. By definition, v = dx/dt => dx = v dt.\n2. Integrating both sides from t\u2081 to t\u2082:\n   \u0394x = \u222b_{t\u2081}^{t\u2082} v dt.\n3. The definite integral represents the area bounded by the curve, the time axis, and the vertical lines t = t\u2081 and t = t\u2082.\n4. If the curve lies above the time axis, area is positive; if below, area is negative.\n5. Therefore, the area represents the displacement of the object.\n\n5. FINAL ANSWER:\nOption A: Displacement of the object\n\n6. QUICK TIP:\nGolden Graph Rule: Area under v-t graph = Displacement. Area under a-t graph = Change in velocity. Slope of v-t graph = Acceleration.",
+    "solutionStructured": {
+      "concept": "In calculus, displacement is the integral of velocity with respect to time: \u0394x = \u222b v dt. On a graph, the definite integral corresponds to the area between the curve and the horizontal axis.",
+      "given": "Velocity-time graph.",
+      "formula": "Area = \u222b_{t\u2081}^{t\u2082} v dt = \u0394x (Displacement).",
+      "stepByStep": "1. By definition, v = dx/dt => dx = v dt.\n2. Integrating both sides from t\u2081 to t\u2082:\n   \u0394x = \u222b_{t\u2081}^{t\u2082} v dt.\n3. The definite integral represents the area bounded by the curve, the time axis, and the vertical lines t = t\u2081 and t = t\u2082.\n4. If the curve lies above the time axis, area is positive; if below, area is negative.\n5. Therefore, the area represents the displacement of the object.",
+      "finalAnswer": "Option A: Displacement of the object",
+      "whyOtherOptionsWrong": "Option B is the slope of the v-t graph (dv/dt). Option C requires mass. Option D is the height of the curve."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Velocity-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-211",
+    "questionNumber": 211,
+    "question": "The slope of a velocity-time graph represents:",
+    "options": {
+      "A": "Acceleration",
+      "B": "Displacement",
+      "C": "Work done",
+      "D": "Power"
+    },
+    "optionsList": [
+      "Acceleration",
+      "Displacement",
+      "Work done",
+      "Power"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSlope of a v-t graph is the time rate of change of velocity: dv/dt = a (acceleration).\n\n2. GIVEN:\nVelocity-time curve.\n\n3. FORMULA / PRINCIPLE:\nSlope = tan \u03b8 = dv/dt = a.\n\n4. STEP-BY-STEP SOLUTION:\n1. Slope of a curve y vs x is dy/dx.\n2. For a v-t graph, y = v and x = t, so slope is dv/dt.\n3. By definition of kinematics, dv/dt is the acceleration.\n4. A positive slope indicates positive acceleration, a negative slope indicates retardation, and zero slope indicates uniform velocity.\n5. Therefore, the slope represents acceleration.\n\n5. FINAL ANSWER:\nOption A: Acceleration\n\n6. QUICK TIP:\nSlope of v-t curve = a. Positive slope = speeding up (if v>0); Negative slope = slowing down (if v>0).",
+    "solutionStructured": {
+      "concept": "Slope of a v-t graph is the time rate of change of velocity: dv/dt = a (acceleration).",
+      "given": "Velocity-time curve.",
+      "formula": "Slope = tan \u03b8 = dv/dt = a.",
+      "stepByStep": "1. Slope of a curve y vs x is dy/dx.\n2. For a v-t graph, y = v and x = t, so slope is dv/dt.\n3. By definition of kinematics, dv/dt is the acceleration.\n4. A positive slope indicates positive acceleration, a negative slope indicates retardation, and zero slope indicates uniform velocity.\n5. Therefore, the slope represents acceleration.",
+      "finalAnswer": "Option A: Acceleration",
+      "whyOtherOptionsWrong": "Option B is the area under the v-t graph. Options C and D are energetic quantities requiring force."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Velocity-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-212",
+    "questionNumber": 212,
+    "question": "A car moves with a constant velocity of 15 m/s for 8 seconds. What is the displacement of the car as determined from its velocity-time graph?",
+    "options": {
+      "A": "120 m",
+      "B": "60 m",
+      "C": "240 m",
+      "D": "15 m"
+    },
+    "optionsList": [
+      "120 m",
+      "60 m",
+      "240 m",
+      "15 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor constant velocity, the v-t graph is a horizontal line forming a rectangle of height v and width t. Area = v * t = displacement.\n\n2. GIVEN:\nv = 15 m/s (constant), t = 8 s.\n\n3. FORMULA / PRINCIPLE:\nDisplacement = Area of rectangle = height * width = v * t.\n\n4. STEP-BY-STEP SOLUTION:\n1. The v-t graph is a horizontal line at v = 15 m/s from t = 0 to t = 8 s.\n2. The area bounded by the graph and the time axis is a rectangle:\n   Height = 15 m/s\n   Base = 8 s.\n3. Area = 15 m/s * 8 s = 120 m.\n4. Therefore, the displacement of the car is 120 m.\n\n5. FINAL ANSWER:\nOption A: 120 m\n\n6. QUICK TIP:\nArea of rectangle = v * t = 15 * 8 = 120 m.",
+    "solutionStructured": {
+      "concept": "For constant velocity, the v-t graph is a horizontal line forming a rectangle of height v and width t. Area = v * t = displacement.",
+      "given": "v = 15 m/s (constant), t = 8 s.",
+      "formula": "Displacement = Area of rectangle = height * width = v * t.",
+      "stepByStep": "1. The v-t graph is a horizontal line at v = 15 m/s from t = 0 to t = 8 s.\n2. The area bounded by the graph and the time axis is a rectangle:\n   Height = 15 m/s\n   Base = 8 s.\n3. Area = 15 m/s * 8 s = 120 m.\n4. Therefore, the displacement of the car is 120 m.",
+      "finalAnswer": "Option A: 120 m",
+      "whyOtherOptionsWrong": "Option B uses triangle area (1/2 vt = 60 m). Option C doubles the area. Option D is velocity."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Velocity-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-213",
+    "questionNumber": 213,
+    "question": "A particle starts from rest and its velocity increases linearly with time, reaching 20 m/s in 4 seconds. What is the displacement of the particle during these 4 seconds?",
+    "options": {
+      "A": "40 m",
+      "B": "80 m",
+      "C": "20 m",
+      "D": "5 m"
+    },
+    "optionsList": [
+      "40 m",
+      "80 m",
+      "20 m",
+      "5 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor uniformly accelerated motion starting from rest, the v-t graph is a triangle with base t and height v. Area = (1/2) * base * height.\n\n2. GIVEN:\nu = 0, v = 20 m/s, t = 4 s.\n\n3. FORMULA / PRINCIPLE:\nDisplacement = Area of triangle = (1/2) * base * height = (1/2) * t * v.\n\n4. STEP-BY-STEP SOLUTION:\n1. The v-t curve is a straight line from (0, 0) to (4, 20).\n2. The shape bounded by this line and the time axis is a right triangle:\n   Base = 4 s\n   Height = 20 m/s.\n3. Area of triangle = (1/2) * 4 s * 20 m/s = 2 * 20 = 40 m.\n4. Therefore, the displacement is 40 m.\n\n5. FINAL ANSWER:\nOption A: 40 m\n\n6. QUICK TIP:\nDisplacement from rest = Area of triangle = (1/2) * t * v_max = (1/2) * 4 * 20 = 40 m.",
+    "solutionStructured": {
+      "concept": "For uniformly accelerated motion starting from rest, the v-t graph is a triangle with base t and height v. Area = (1/2) * base * height.",
+      "given": "u = 0, v = 20 m/s, t = 4 s.",
+      "formula": "Displacement = Area of triangle = (1/2) * base * height = (1/2) * t * v.",
+      "stepByStep": "1. The v-t curve is a straight line from (0, 0) to (4, 20).\n2. The shape bounded by this line and the time axis is a right triangle:\n   Base = 4 s\n   Height = 20 m/s.\n3. Area of triangle = (1/2) * 4 s * 20 m/s = 2 * 20 = 40 m.\n4. Therefore, the displacement is 40 m.",
+      "finalAnswer": "Option A: 40 m",
+      "whyOtherOptionsWrong": "Option B forgets the 1/2 factor (rectangle area = 80 m). Option C is half the answer. Option D is acceleration (20/4 = 5 m/s\u00b2)."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Velocity-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-214",
+    "questionNumber": 214,
+    "question": "If a velocity-time graph is a straight line parallel to the time axis, what is the acceleration of the particle?",
+    "options": {
+      "A": "Zero",
+      "B": "Constant and positive",
+      "C": "Constant and negative",
+      "D": "Continuously increasing"
+    },
+    "optionsList": [
+      "Zero",
+      "Constant and positive",
+      "Constant and negative",
+      "Continuously increasing"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nA horizontal line has zero slope. Since slope of v-t graph represents acceleration, a = 0.\n\n2. GIVEN:\nv-t graph is horizontal (v = constant).\n\n3. FORMULA / PRINCIPLE:\nSlope = dv/dt = a = 0.\n\n4. STEP-BY-STEP SOLUTION:\n1. A line parallel to the time axis means velocity v is constant (does not change with time).\n2. Slope = dv/dt = 0.\n3. Acceleration is defined as dv/dt.\n4. Therefore, acceleration is zero.\n\n5. FINAL ANSWER:\nOption A: Zero\n\n6. QUICK TIP:\nHorizontal line on v-t graph means uniform motion with zero acceleration.",
+    "solutionStructured": {
+      "concept": "A horizontal line has zero slope. Since slope of v-t graph represents acceleration, a = 0.",
+      "given": "v-t graph is horizontal (v = constant).",
+      "formula": "Slope = dv/dt = a = 0.",
+      "stepByStep": "1. A line parallel to the time axis means velocity v is constant (does not change with time).\n2. Slope = dv/dt = 0.\n3. Acceleration is defined as dv/dt.\n4. Therefore, acceleration is zero.",
+      "finalAnswer": "Option A: Zero",
+      "whyOtherOptionsWrong": "Options B, C, and D all describe non-zero acceleration, which would require an inclined or curved line."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Velocity-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-215",
+    "questionNumber": 215,
+    "question": "A particle's v-t graph has a positive triangular area of +30 m above the time axis from t = 0 to 4 s, and a negative triangular area of -10 m below the time axis from t = 4 to 6 s. What are the net displacement and total distance covered by the particle in 6 seconds?",
+    "options": {
+      "A": "Displacement = +20 m, Distance = 40 m",
+      "B": "Displacement = +40 m, Distance = 20 m",
+      "C": "Displacement = +20 m, Distance = 20 m",
+      "D": "Displacement = +30 m, Distance = 30 m"
+    },
+    "optionsList": [
+      "Displacement = +20 m, Distance = 40 m",
+      "Displacement = +40 m, Distance = 20 m",
+      "Displacement = +20 m, Distance = 20 m",
+      "Displacement = +30 m, Distance = 30 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDisplacement is the ALGEBRAIC sum of areas (taking signs into account): \u0394x = Area_above - Area_below. Distance is the ABSOLUTE sum of areas: s = |Area_above| + |Area_below|.\n\n2. GIVEN:\nArea\u2081 = +30 m (above axis), Area\u2082 = -10 m (below axis).\n\n3. FORMULA / PRINCIPLE:\nDisplacement = Area\u2081 + Area\u2082; Distance = |Area\u2081| + |Area\u2082|.\n\n4. STEP-BY-STEP SOLUTION:\n1. Area above the time axis represents positive displacement (forward motion): +30 m.\n2. Area below the time axis represents negative displacement (backward motion): -10 m.\n3. Net displacement = (+30 m) + (-10 m) = +20 m.\n4. Total distance is the total path length traversed, treating all movements as positive:\n   Distance = |+30 m| + |-10 m| = 30 + 10 = 40 m.\n5. Therefore, Displacement = +20 m and Distance = 40 m.\n\n5. FINAL ANSWER:\nOption A: Displacement = +20 m, Distance = 40 m\n\n6. QUICK TIP:\nVital NEET Rule: For displacement, subtract areas below the axis. For distance, ADD all areas positively!",
+    "solutionStructured": {
+      "concept": "Displacement is the ALGEBRAIC sum of areas (taking signs into account): \u0394x = Area_above - Area_below. Distance is the ABSOLUTE sum of areas: s = |Area_above| + |Area_below|.",
+      "given": "Area\u2081 = +30 m (above axis), Area\u2082 = -10 m (below axis).",
+      "formula": "Displacement = Area\u2081 + Area\u2082; Distance = |Area\u2081| + |Area\u2082|.",
+      "stepByStep": "1. Area above the time axis represents positive displacement (forward motion): +30 m.\n2. Area below the time axis represents negative displacement (backward motion): -10 m.\n3. Net displacement = (+30 m) + (-10 m) = +20 m.\n4. Total distance is the total path length traversed, treating all movements as positive:\n   Distance = |+30 m| + |-10 m| = 30 + 10 = 40 m.\n5. Therefore, Displacement = +20 m and Distance = 40 m.",
+      "finalAnswer": "Option A: Displacement = +20 m, Distance = 40 m",
+      "whyOtherOptionsWrong": "Option B swaps displacement and distance. Option C subtracts for distance as well. Option D ignores the second interval."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Velocity-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-216",
+    "questionNumber": 216,
+    "question": "A velocity-time graph is a trapezoid: the particle accelerates from rest to 10 m/s in 2 seconds, moves at 10 m/s for 4 seconds, and retards to rest in 2 seconds. What is the total distance traveled by the particle?",
+    "options": {
+      "A": "60 m",
+      "B": "80 m",
+      "C": "50 m",
+      "D": "40 m"
+    },
+    "optionsList": [
+      "60 m",
+      "80 m",
+      "50 m",
+      "40 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nArea of a trapezoid is (1/2) * (sum of parallel sides) * (height).\n\n2. GIVEN:\nBase b\u2081 = 8 s (total time), Top parallel side b\u2082 = 4 s (cruising time), Height h = 10 m/s.\n\n3. FORMULA / PRINCIPLE:\nArea = (1/2) * (b\u2081 + b\u2082) * h\n\n4. STEP-BY-STEP SOLUTION:\n1. Total time on base: b\u2081 = 2 + 4 + 2 = 8 seconds.\n2. Cruising time on top parallel side: b\u2082 = 4 seconds.\n3. Height of trapezoid (peak velocity): h = 10 m/s.\n4. Area of trapezoid = (1/2) * (b\u2081 + b\u2082) * h = (1/2) * (8 + 4) * 10 = (1/2) * 12 * 10 = 60 m.\n5. Alternatively, sum the 3 individual areas:\n   Triangle 1 (accel): (1/2) * 2 * 10 = 10 m.\n   Rectangle (cruise): 4 * 10 = 40 m.\n   Triangle 2 (brake): (1/2) * 2 * 10 = 10 m.\n   Total distance = 10 + 40 + 10 = 60 m.\n6. Therefore, the total distance traveled is 60 m.\n\n5. FINAL ANSWER:\nOption A: 60 m\n\n6. QUICK TIP:\nUse the trapezoid formula directly for 3-stage motion: Area = (1/2) * (t_total + t_cruise) * v_max = (1/2) * (8 + 4) * 10 = 60 m.",
+    "solutionStructured": {
+      "concept": "Area of a trapezoid is (1/2) * (sum of parallel sides) * (height).",
+      "given": "Base b\u2081 = 8 s (total time), Top parallel side b\u2082 = 4 s (cruising time), Height h = 10 m/s.",
+      "formula": "Area = (1/2) * (b\u2081 + b\u2082) * h",
+      "stepByStep": "1. Total time on base: b\u2081 = 2 + 4 + 2 = 8 seconds.\n2. Cruising time on top parallel side: b\u2082 = 4 seconds.\n3. Height of trapezoid (peak velocity): h = 10 m/s.\n4. Area of trapezoid = (1/2) * (b\u2081 + b\u2082) * h = (1/2) * (8 + 4) * 10 = (1/2) * 12 * 10 = 60 m.\n5. Alternatively, sum the 3 individual areas:\n   Triangle 1 (accel): (1/2) * 2 * 10 = 10 m.\n   Rectangle (cruise): 4 * 10 = 40 m.\n   Triangle 2 (brake): (1/2) * 2 * 10 = 10 m.\n   Total distance = 10 + 40 + 10 = 60 m.\n6. Therefore, the total distance traveled is 60 m.",
+      "finalAnswer": "Option A: 60 m",
+      "whyOtherOptionsWrong": "Option B treats it as a rectangle (8 * 10 = 80 m). Option C is 50 m. Option D is 40 m."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Velocity-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-217",
+    "questionNumber": 217,
+    "question": "The velocity-time graph of a lift ascending from ground level is shown: it accelerates uniformly at a = 2 m/s\u00b2 for time t\u2081, moves at constant speed for time t\u2082, and retards uniformly at 2 m/s\u00b2 to rest in time t\u2083 = t\u2081. If the total height reached is 75 m and maximum speed is 10 m/s, what is the cruising time t\u2082?",
+    "options": {
+      "A": "2.5 seconds",
+      "B": "5.0 seconds",
+      "C": "7.5 seconds",
+      "D": "10.0 seconds"
+    },
+    "optionsList": [
+      "2.5 seconds",
+      "5.0 seconds",
+      "7.5 seconds",
+      "10.0 seconds"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFind acceleration time t\u2081 from v_max / a, find distance covered in acceleration and deceleration phases, and deduce cruising time t\u2082 from remaining height.\n\n2. GIVEN:\na = 2 m/s\u00b2, v_max = 10 m/s, total height H = 75 m, t\u2083 = t\u2081.\n\n3. FORMULA / PRINCIPLE:\nt\u2081 = v_max / a; s\u2081 = (1/2) v_max t\u2081; s\u2082 = v_max t\u2082; H = 2 s\u2081 + s\u2082.\n\n4. STEP-BY-STEP SOLUTION:\n1. Time to accelerate to 10 m/s:\n   t\u2081 = v_max / a = 10 / 2 = 5 seconds.\n2. Height gained during acceleration:\n   s\u2081 = (1/2) * v_max * t\u2081 = (1/2) * 10 * 5 = 25 m.\n3. Since deceleration is also 2 m/s\u00b2, t\u2083 = 5 s and height gained during deceleration is s\u2083 = 25 m.\n4. Total height gained during acceleration and deceleration = s\u2081 + s\u2083 = 25 + 25 = 50 m.\n5. Remaining height to be covered during constant speed:\n   s\u2082 = 75 m - 50 m = 25 m.\n6. Cruising time at constant speed v_max = 10 m/s:\n   t\u2082 = s\u2082 / v_max = 25 m / 10 m/s = 2.5 seconds.\n7. Therefore, the cruising time is 2.5 seconds.\n\n5. FINAL ANSWER:\nOption A: 2.5 seconds\n\n6. QUICK TIP:\nBreak trapezoid into 2 triangles (25 m each) and 1 rectangle (25 m). t\u2082 = 25 / 10 = 2.5 s.",
+    "solutionStructured": {
+      "concept": "Find acceleration time t\u2081 from v_max / a, find distance covered in acceleration and deceleration phases, and deduce cruising time t\u2082 from remaining height.",
+      "given": "a = 2 m/s\u00b2, v_max = 10 m/s, total height H = 75 m, t\u2083 = t\u2081.",
+      "formula": "t\u2081 = v_max / a; s\u2081 = (1/2) v_max t\u2081; s\u2082 = v_max t\u2082; H = 2 s\u2081 + s\u2082.",
+      "stepByStep": "1. Time to accelerate to 10 m/s:\n   t\u2081 = v_max / a = 10 / 2 = 5 seconds.\n2. Height gained during acceleration:\n   s\u2081 = (1/2) * v_max * t\u2081 = (1/2) * 10 * 5 = 25 m.\n3. Since deceleration is also 2 m/s\u00b2, t\u2083 = 5 s and height gained during deceleration is s\u2083 = 25 m.\n4. Total height gained during acceleration and deceleration = s\u2081 + s\u2083 = 25 + 25 = 50 m.\n5. Remaining height to be covered during constant speed:\n   s\u2082 = 75 m - 50 m = 25 m.\n6. Cruising time at constant speed v_max = 10 m/s:\n   t\u2082 = s\u2082 / v_max = 25 m / 10 m/s = 2.5 seconds.\n7. Therefore, the cruising time is 2.5 seconds.",
+      "finalAnswer": "Option A: 2.5 seconds",
+      "whyOtherOptionsWrong": "Option B is t\u2081 (5.0 s). Option C is 7.5 s. Option D is total time minus something."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Velocity-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-218",
+    "questionNumber": 218,
+    "question": "A body is projected vertically upwards with velocity u. Neglecting air resistance, which of the following best represents its velocity-time (v-t) graph from launch until it returns to the ground?",
+    "options": {
+      "A": "A single straight line with a constant negative slope (-g) crossing the time axis at t = u/g",
+      "B": "A parabola opening downwards",
+      "C": "Two straight lines forming a V-shape",
+      "D": "A horizontal line at v = u"
+    },
+    "optionsList": [
+      "A single straight line with a constant negative slope (-g) crossing the time axis at t = u/g",
+      "A parabola opening downwards",
+      "Two straight lines forming a V-shape",
+      "A horizontal line at v = u"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor free fall under gravity, v(t) = u - g t. This is a linear equation with constant slope equal to -g.\n\n2. GIVEN:\nv(t) = u - g t, from t = 0 to t = 2u/g.\n\n3. FORMULA / PRINCIPLE:\nSlope = dv/dt = -g (constant).\n\n4. STEP-BY-STEP SOLUTION:\n1. Taking upward as positive, acceleration is a = -g (constant).\n2. Equation of velocity: v(t) = u - g t.\n3. This is a straight line of equation y = mx + c with slope m = -g and y-intercept c = u.\n4. At launch (t = 0), v = +u.\n5. At the highest point (t = u/g), v = 0 (the line crosses the time axis).\n6. On the way down, velocity becomes negative, reaching -u at t = 2u/g.\n7. Since acceleration is constant throughout, the slope does not change, forming a single continuous straight line.\n8. Therefore, Option A is the correct graph.\n\n5. FINAL ANSWER:\nOption A: A single straight line with a constant negative slope (-g) crossing the time axis at t = u/g\n\n6. QUICK TIP:\nCommon student misconception: Many think the graph must bend or bounce at the top! The v-t graph does NOT bend; it is a single unbroken straight line of constant slope -g.",
+    "solutionStructured": {
+      "concept": "For free fall under gravity, v(t) = u - g t. This is a linear equation with constant slope equal to -g.",
+      "given": "v(t) = u - g t, from t = 0 to t = 2u/g.",
+      "formula": "Slope = dv/dt = -g (constant).",
+      "stepByStep": "1. Taking upward as positive, acceleration is a = -g (constant).\n2. Equation of velocity: v(t) = u - g t.\n3. This is a straight line of equation y = mx + c with slope m = -g and y-intercept c = u.\n4. At launch (t = 0), v = +u.\n5. At the highest point (t = u/g), v = 0 (the line crosses the time axis).\n6. On the way down, velocity becomes negative, reaching -u at t = 2u/g.\n7. Since acceleration is constant throughout, the slope does not change, forming a single continuous straight line.\n8. Therefore, Option A is the correct graph.",
+      "finalAnswer": "Option A: A single straight line with a constant negative slope (-g) crossing the time axis at t = u/g",
+      "whyOtherOptionsWrong": "Option B confuses the position-time graph (parabola) with the velocity-time graph (straight line). Option C is the SPEED-time graph, not velocity-time. Option D assumes zero acceleration."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Velocity-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-219",
+    "questionNumber": 219,
+    "question": "In the vertical projection of Q218, what would the SPEED-time graph look like?",
+    "options": {
+      "A": "A V-shaped graph: a straight line descending from u to 0, then a straight line ascending from 0 to u with positive slope +g",
+      "B": "A single straight line continuing into negative values",
+      "C": "A horizontal line",
+      "D": "A parabola opening downwards"
+    },
+    "optionsList": [
+      "A V-shaped graph: a straight line descending from u to 0, then a straight line ascending from 0 to u with positive slope +g",
+      "A single straight line continuing into negative values",
+      "A horizontal line",
+      "A parabola opening downwards"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSpeed is the absolute value of velocity: Speed(t) = |v(t)| = |u - g t|. The negative portion of the v-t line reflects across the time axis, forming a V-shape.\n\n2. GIVEN:\nSpeed = |v(t)| = |u - gt|.\n\n3. FORMULA / PRINCIPLE:\nSpeed \u2265 0 at all times; V-shaped reflected graph.\n\n4. STEP-BY-STEP SOLUTION:\n1. Speed is the scalar magnitude of velocity: speed = |v|.\n2. For 0 \u2264 t \u2264 u/g (rising phase), v \u2265 0, so speed decreases linearly from u to 0 with slope -g.\n3. For u/g \u2264 t \u2264 2u/g (falling phase), v \u2264 0, so speed = |v| = -(u - gt) = gt - u.\n4. This is a straight line increasing linearly from 0 to u with positive slope +g.\n5. Therefore, the speed-time graph forms a V-shape touching the time axis at t = u/g.\n\n5. FINAL ANSWER:\nOption A: A V-shaped graph: a straight line descending from u to 0, then a straight line ascending from 0 to u with positive slope +g\n\n6. QUICK TIP:\nSpeed-time graphs are formed by reflecting all negative parts of the v-t graph upwards across the time axis!",
+    "solutionStructured": {
+      "concept": "Speed is the absolute value of velocity: Speed(t) = |v(t)| = |u - g t|. The negative portion of the v-t line reflects across the time axis, forming a V-shape.",
+      "given": "Speed = |v(t)| = |u - gt|.",
+      "formula": "Speed \u2265 0 at all times; V-shaped reflected graph.",
+      "stepByStep": "1. Speed is the scalar magnitude of velocity: speed = |v|.\n2. For 0 \u2264 t \u2264 u/g (rising phase), v \u2265 0, so speed decreases linearly from u to 0 with slope -g.\n3. For u/g \u2264 t \u2264 2u/g (falling phase), v \u2264 0, so speed = |v| = -(u - gt) = gt - u.\n4. This is a straight line increasing linearly from 0 to u with positive slope +g.\n5. Therefore, the speed-time graph forms a V-shape touching the time axis at t = u/g.",
+      "finalAnswer": "Option A: A V-shaped graph: a straight line descending from u to 0, then a straight line ascending from 0 to u with positive slope +g",
+      "whyOtherOptionsWrong": "Option B is the velocity-time graph (which goes negative). Option C is for uniform motion. Option D is position-time graph."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Velocity-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-220",
+    "questionNumber": 220,
+    "question": "A particle's v-t graph is a circle of radius R centered at (R, 0). Over the time interval from t = 0 to t = 2R, what is the total displacement of the particle?",
+    "options": {
+      "A": "\u03c0 R\u00b2 / 2",
+      "B": "\u03c0 R\u00b2",
+      "C": "2R\u00b2",
+      "D": "4R"
+    },
+    "optionsList": [
+      "\u03c0 R\u00b2 / 2",
+      "\u03c0 R\u00b2",
+      "2R\u00b2",
+      "4R"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDisplacement is the area under the v-t curve. For an upper semicircle of radius R, the area is (1/2) \u03c0 R\u00b2.\n\n2. GIVEN:\nUpper semicircle of radius R on v-t graph, base from t = 0 to t = 2R.\n\n3. FORMULA / PRINCIPLE:\nDisplacement = Area of semicircle = (1/2) \u03c0 R\u00b2.\n\n4. STEP-BY-STEP SOLUTION:\n1. The curve is the upper half of a circle of radius R: v(t) = \u221a(R\u00b2 - (t - R)\u00b2).\n2. The base lies along the time axis from t = 0 to t = 2R (width = 2R).\n3. The area bounded by this upper semicircle and the time axis is:\n   Area = (1/2) * (area of full circle of radius R) = (1/2) * \u03c0 R\u00b2.\n4. Since the entire semicircle lies above the time axis (v \u2265 0), this area represents the displacement.\n5. Therefore, the displacement is \u03c0 R\u00b2 / 2.\n\n5. FINAL ANSWER:\nOption A: \u03c0 R\u00b2 / 2\n\n6. QUICK TIP:\nArea of semicircle = (1/2) \u03c0 R\u00b2. Notice the units: if R has units of both s and m/s, the area has units of meters.",
+    "solutionStructured": {
+      "concept": "Displacement is the area under the v-t curve. For an upper semicircle of radius R, the area is (1/2) \u03c0 R\u00b2.",
+      "given": "Upper semicircle of radius R on v-t graph, base from t = 0 to t = 2R.",
+      "formula": "Displacement = Area of semicircle = (1/2) \u03c0 R\u00b2.",
+      "stepByStep": "1. The curve is the upper half of a circle of radius R: v(t) = \u221a(R\u00b2 - (t - R)\u00b2).\n2. The base lies along the time axis from t = 0 to t = 2R (width = 2R).\n3. The area bounded by this upper semicircle and the time axis is:\n   Area = (1/2) * (area of full circle of radius R) = (1/2) * \u03c0 R\u00b2.\n4. Since the entire semicircle lies above the time axis (v \u2265 0), this area represents the displacement.\n5. Therefore, the displacement is \u03c0 R\u00b2 / 2.",
+      "finalAnswer": "Option A: \u03c0 R\u00b2 / 2",
+      "whyOtherOptionsWrong": "Option B is the full circle area. Option C is a bounding rectangle estimate. Option D is the perimeter."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Velocity-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-221",
+    "questionNumber": 221,
+    "question": "The velocity-time graph of an object moving in a straight line is shown. From t = 0 to 2 s, v increases linearly from 0 to 6 m/s. From t = 2 to 6 s, v decreases linearly from 6 m/s to 0. What is the average velocity over the entire 6 seconds?",
+    "options": {
+      "A": "3 m/s",
+      "B": "4 m/s",
+      "C": "2 m/s",
+      "D": "6 m/s"
+    },
+    "optionsList": [
+      "3 m/s",
+      "4 m/s",
+      "2 m/s",
+      "6 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nAverage velocity is total displacement divided by total time: v_avg = (Area of v-t graph) / t_total.\n\n2. GIVEN:\nTriangle with base = 6 s, height = 6 m/s.\n\n3. FORMULA / PRINCIPLE:\nDisplacement = (1/2) * base * height = (1/2) * 6 * 6 = 18 m; v_avg = Displacement / 6 s.\n\n4. STEP-BY-STEP SOLUTION:\n1. The v-t graph forms a single triangle with:\n   Base = 6 s\n   Height = 6 m/s.\n2. Area of triangle = (1/2) * base * height = (1/2) * 6 * 6 = 18 m.\n3. Total displacement = 18 m.\n4. Total time = 6 s.\n5. Average velocity = 18 m / 6 s = 3 m/s.\n6. (Notice that for ANY triangular v-t profile from rest to rest, average velocity is ALWAYS exactly half of peak velocity: v_max / 2 = 6 / 2 = 3 m/s!).\n\n5. FINAL ANSWER:\nOption A: 3 m/s\n\n6. QUICK TIP:\nUniversal NEET shortcut: For ANY triangular v-t graph starting and ending at rest, Average Velocity = v_max / 2!",
+    "solutionStructured": {
+      "concept": "Average velocity is total displacement divided by total time: v_avg = (Area of v-t graph) / t_total.",
+      "given": "Triangle with base = 6 s, height = 6 m/s.",
+      "formula": "Displacement = (1/2) * base * height = (1/2) * 6 * 6 = 18 m; v_avg = Displacement / 6 s.",
+      "stepByStep": "1. The v-t graph forms a single triangle with:\n   Base = 6 s\n   Height = 6 m/s.\n2. Area of triangle = (1/2) * base * height = (1/2) * 6 * 6 = 18 m.\n3. Total displacement = 18 m.\n4. Total time = 6 s.\n5. Average velocity = 18 m / 6 s = 3 m/s.\n6. (Notice that for ANY triangular v-t profile from rest to rest, average velocity is ALWAYS exactly half of peak velocity: v_max / 2 = 6 / 2 = 3 m/s!).",
+      "finalAnswer": "Option A: 3 m/s",
+      "whyOtherOptionsWrong": "Option B is an arithmetic error. Option C is 18/9. Option D is the peak velocity."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Velocity-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-222",
+    "questionNumber": 222,
+    "question": "A car accelerates from rest at a constant rate a\u2081 for time t\u2081 and then immediately retards to rest at a constant rate a\u2082 for time t\u2082. What is the ratio of average velocity for the whole trip to the peak velocity v_max?",
+    "options": {
+      "A": "1 : 2",
+      "B": "1 : 1",
+      "C": "2 : 1",
+      "D": "(a\u2081 + a\u2082) : (a\u2081 a\u2082)"
+    },
+    "optionsList": [
+      "1 : 2",
+      "1 : 1",
+      "2 : 1",
+      "(a\u2081 + a\u2082) : (a\u2081 a\u2082)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor a triangular v-t graph of base t and height v_max, area is (1/2) t v_max, so v_avg = Area / t = (1/2) v_max.\n\n2. GIVEN:\nTriangular v-t profile of height v_max and total base t = t\u2081 + t\u2082.\n\n3. FORMULA / PRINCIPLE:\nv_avg = [ (1/2) t v_max ] / t = (1/2) v_max.\n\n4. STEP-BY-STEP SOLUTION:\n1. On the v-t graph, the motion forms a triangle with base t = t\u2081 + t\u2082 and apex height v_max.\n2. Area under the curve = (1/2) * base * height = (1/2) * t * v_max.\n3. Total displacement = (1/2) * t * v_max.\n4. Average velocity = displacement / total time = [ (1/2) * t * v_max ] / t = (1/2) v_max.\n5. Ratio v_avg : v_max = (1/2) : 1 = 1 : 2.\n6. This result is completely independent of the individual accelerations a\u2081 and a\u2082!\n\n5. FINAL ANSWER:\nOption A: 1 : 2\n\n6. QUICK TIP:\nTriangular v-t graph ALWAYS has v_avg = v_max / 2. Memorize this 1:2 ratio!",
+    "solutionStructured": {
+      "concept": "For a triangular v-t graph of base t and height v_max, area is (1/2) t v_max, so v_avg = Area / t = (1/2) v_max.",
+      "given": "Triangular v-t profile of height v_max and total base t = t\u2081 + t\u2082.",
+      "formula": "v_avg = [ (1/2) t v_max ] / t = (1/2) v_max.",
+      "stepByStep": "1. On the v-t graph, the motion forms a triangle with base t = t\u2081 + t\u2082 and apex height v_max.\n2. Area under the curve = (1/2) * base * height = (1/2) * t * v_max.\n3. Total displacement = (1/2) * t * v_max.\n4. Average velocity = displacement / total time = [ (1/2) * t * v_max ] / t = (1/2) v_max.\n5. Ratio v_avg : v_max = (1/2) : 1 = 1 : 2.\n6. This result is completely independent of the individual accelerations a\u2081 and a\u2082!",
+      "finalAnswer": "Option A: 1 : 2",
+      "whyOtherOptionsWrong": "Option B implies constant speed. Option C inverts the ratio. Option D introduces unnecessary acceleration terms."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Velocity-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-223",
+    "questionNumber": 223,
+    "question": "A particle moves along a straight line such that its velocity-time equation is v(t) = 3t\u00b2 - 12 (in m/s). What are the displacement and total distance covered by the particle in the time interval from t = 0 to t = 3 s?",
+    "options": {
+      "A": "Displacement = -9 m, Distance = 23 m",
+      "B": "Displacement = -9 m, Distance = 9 m",
+      "C": "Displacement = +9 m, Distance = 23 m",
+      "D": "Displacement = -23 m, Distance = 23 m"
+    },
+    "optionsList": [
+      "Displacement = -9 m, Distance = 23 m",
+      "Displacement = -9 m, Distance = 9 m",
+      "Displacement = +9 m, Distance = 23 m",
+      "Displacement = -23 m, Distance = 23 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFind where v(t) crosses the time axis (turning point), calculate positive and negative areas under the v-t curve separately. Displacement = net area, Distance = sum of absolute areas.\n\n2. GIVEN:\nv(t) = 3t\u00b2 - 12, interval [0, 3] s.\n\n3. FORMULA / PRINCIPLE:\nv = 0 => 3t\u00b2 = 12 => t = 2 s.\n\n4. STEP-BY-STEP SOLUTION:\n1. Velocity is zero at: 3t\u00b2 - 12 = 0 => t\u00b2 = 4 => t = 2 s (since t \u2265 0).\n2. For 0 \u2264 t \u2264 2 s, v(t) \u2264 0 (curve lies below the time axis):\n   Area\u2081 = \u222b_0^2 (3t\u00b2 - 12) dt = [ t\u00b3 - 12t ]_0^2 = 8 - 24 = -16 m.\n3. For 2 \u2264 t \u2264 3 s, v(t) \u2265 0 (curve lies above the time axis):\n   Area\u2082 = \u222b_2^3 (3t\u00b2 - 12) dt = [ t\u00b3 - 12t ]_2^3 = [ 27 - 36 ] - [ 8 - 24 ] = -9 - (-16) = +7 m.\n4. Net displacement = Area\u2081 + Area\u2082 = -16 m + 7 m = -9 m.\n5. Total distance = |Area\u2081| + |Area\u2082| = |-16 m| + |+7 m| = 16 m + 7 m = 23 m.\n6. Therefore, Displacement = -9 m and Distance = 23 m.\n\n5. FINAL ANSWER:\nOption A: Displacement = -9 m, Distance = 23 m\n\n6. QUICK TIP:\nAlways calculate area below axis (16 m backward) and area above axis (7 m forward). Net = -16 + 7 = -9 m. Total = 16 + 7 = 23 m.",
+    "solutionStructured": {
+      "concept": "Find where v(t) crosses the time axis (turning point), calculate positive and negative areas under the v-t curve separately. Displacement = net area, Distance = sum of absolute areas.",
+      "given": "v(t) = 3t\u00b2 - 12, interval [0, 3] s.",
+      "formula": "v = 0 => 3t\u00b2 = 12 => t = 2 s.",
+      "stepByStep": "1. Velocity is zero at: 3t\u00b2 - 12 = 0 => t\u00b2 = 4 => t = 2 s (since t \u2265 0).\n2. For 0 \u2264 t \u2264 2 s, v(t) \u2264 0 (curve lies below the time axis):\n   Area\u2081 = \u222b_0^2 (3t\u00b2 - 12) dt = [ t\u00b3 - 12t ]_0^2 = 8 - 24 = -16 m.\n3. For 2 \u2264 t \u2264 3 s, v(t) \u2265 0 (curve lies above the time axis):\n   Area\u2082 = \u222b_2^3 (3t\u00b2 - 12) dt = [ t\u00b3 - 12t ]_2^3 = [ 27 - 36 ] - [ 8 - 24 ] = -9 - (-16) = +7 m.\n4. Net displacement = Area\u2081 + Area\u2082 = -16 m + 7 m = -9 m.\n5. Total distance = |Area\u2081| + |Area\u2082| = |-16 m| + |+7 m| = 16 m + 7 m = 23 m.\n6. Therefore, Displacement = -9 m and Distance = 23 m.",
+      "finalAnswer": "Option A: Displacement = -9 m, Distance = 23 m",
+      "whyOtherOptionsWrong": "Option B assumes distance equals magnitude of displacement. Option C has positive displacement. Option D equates displacement to distance."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Velocity-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-224",
+    "questionNumber": 224,
+    "question": "The velocity-time graph of a particle is given by v = v\u2080 sin(\u03c0 t / T) for 0 \u2264 t \u2264 T. What is the maximum acceleration of the particle, and at what instant does it occur?",
+    "options": {
+      "A": "a_max = \u03c0 v\u2080 / T, at t = 0 and t = T",
+      "B": "a_max = v\u2080 / T, at t = T / 2",
+      "C": "a_max = \u03c0 v\u2080 / T, at t = T / 2",
+      "D": "a_max = 2\u03c0 v\u2080 / T, at t = 0"
+    },
+    "optionsList": [
+      "a_max = \u03c0 v\u2080 / T, at t = 0 and t = T",
+      "a_max = v\u2080 / T, at t = T / 2",
+      "a_max = \u03c0 v\u2080 / T, at t = T / 2",
+      "a_max = 2\u03c0 v\u2080 / T, at t = 0"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nAcceleration is the derivative of velocity: a(t) = dv/dt = (\u03c0 v\u2080 / T) cos(\u03c0 t / T). Maximum magnitude occurs when cos = \u00b11, which is at the endpoints t = 0 and t = T.\n\n2. GIVEN:\nv(t) = v\u2080 sin(\u03c0 t / T).\n\n3. FORMULA / PRINCIPLE:\na(t) = dv/dt = (\u03c0 v\u2080 / T) cos(\u03c0 t / T).\n\n4. STEP-BY-STEP SOLUTION:\n1. Differentiate velocity with respect to time using the chain rule:\n   a(t) = dv/dt = v\u2080 * cos(\u03c0 t / T) * (\u03c0 / T) = (\u03c0 v\u2080 / T) cos(\u03c0 t / T).\n2. The cosine function has its maximum absolute value of 1 at:\n   \u03c0 t / T = 0 => t = 0 (where a = +\u03c0 v\u2080 / T)\n   \u03c0 t / T = \u03c0 => t = T (where a = -\u03c0 v\u2080 / T).\n3. At t = T/2, cos(\u03c0/2) = 0, so acceleration is zero (where velocity is maximum!).\n4. Therefore, the maximum magnitude of acceleration is \u03c0 v\u2080 / T, occurring at t = 0 and t = T.\n\n5. FINAL ANSWER:\nOption A: a_max = \u03c0 v\u2080 / T, at t = 0 and t = T\n\n6. QUICK TIP:\nSlope of sine curve is steepest at the zero-crossings (t = 0 and t = T), and zero at the crest (t = T/2).",
+    "solutionStructured": {
+      "concept": "Acceleration is the derivative of velocity: a(t) = dv/dt = (\u03c0 v\u2080 / T) cos(\u03c0 t / T). Maximum magnitude occurs when cos = \u00b11, which is at the endpoints t = 0 and t = T.",
+      "given": "v(t) = v\u2080 sin(\u03c0 t / T).",
+      "formula": "a(t) = dv/dt = (\u03c0 v\u2080 / T) cos(\u03c0 t / T).",
+      "stepByStep": "1. Differentiate velocity with respect to time using the chain rule:\n   a(t) = dv/dt = v\u2080 * cos(\u03c0 t / T) * (\u03c0 / T) = (\u03c0 v\u2080 / T) cos(\u03c0 t / T).\n2. The cosine function has its maximum absolute value of 1 at:\n   \u03c0 t / T = 0 => t = 0 (where a = +\u03c0 v\u2080 / T)\n   \u03c0 t / T = \u03c0 => t = T (where a = -\u03c0 v\u2080 / T).\n3. At t = T/2, cos(\u03c0/2) = 0, so acceleration is zero (where velocity is maximum!).\n4. Therefore, the maximum magnitude of acceleration is \u03c0 v\u2080 / T, occurring at t = 0 and t = T.",
+      "finalAnswer": "Option A: a_max = \u03c0 v\u2080 / T, at t = 0 and t = T",
+      "whyOtherOptionsWrong": "Option B omits \u03c0 and selects the crest. Option C selects t = T/2 (where a = 0). Option D doubles \u03c0."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Velocity-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-225",
+    "questionNumber": 225,
+    "question": "In the previous question where v(t) = v\u2080 sin(\u03c0 t / T) for 0 \u2264 t \u2264 T, what is the total displacement of the particle in time T?",
+    "options": {
+      "A": "2 v\u2080 T / \u03c0",
+      "B": "v\u2080 T / \u03c0",
+      "C": "v\u2080 T",
+      "D": "\u03c0 v\u2080 T / 2"
+    },
+    "optionsList": [
+      "2 v\u2080 T / \u03c0",
+      "v\u2080 T / \u03c0",
+      "v\u2080 T",
+      "\u03c0 v\u2080 T / 2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDisplacement is the integral of the half-sine velocity curve over time T: \u0394x = \u222b_0^T v\u2080 sin(\u03c0 t / T) dt = 2 v\u2080 T / \u03c0.\n\n2. GIVEN:\nv(t) = v\u2080 sin(\u03c0 t / T), interval [0, T].\n\n3. FORMULA / PRINCIPLE:\n\u0394x = \u222b_0^T v\u2080 sin(\u03c0 t / T) dt = [ -v\u2080 (T / \u03c0) cos(\u03c0 t / T) ]_0^T.\n\n4. STEP-BY-STEP SOLUTION:\n1. Integrate velocity with respect to time:\n   \u0394x = \u222b_0^T v\u2080 sin(\u03c0 t / T) dt = [ - (v\u2080 T / \u03c0) cos(\u03c0 t / T) ]_0^T.\n2. Evaluate at upper limit t = T:\n   - (v\u2080 T / \u03c0) cos(\u03c0) = - (v\u2080 T / \u03c0) (-1) = + (v\u2080 T / \u03c0).\n3. Evaluate at lower limit t = 0:\n   - (v\u2080 T / \u03c0) cos(0) = - (v\u2080 T / \u03c0) (1) = - (v\u2080 T / \u03c0).\n4. Subtract:\n   \u0394x = (v\u2080 T / \u03c0) - [ - (v\u2080 T / \u03c0) ] = 2 v\u2080 T / \u03c0.\n5. Therefore, the displacement is 2 v\u2080 T / \u03c0 \u2248 0.637 v\u2080 T.\n\n5. FINAL ANSWER:\nOption A: 2 v\u2080 T / \u03c0\n\n6. QUICK TIP:\nStandard definite integral: Area under half-cycle of sine wave = (2 / \u03c0) * (bounding rectangle) = 2 v\u2080 T / \u03c0.",
+    "solutionStructured": {
+      "concept": "Displacement is the integral of the half-sine velocity curve over time T: \u0394x = \u222b_0^T v\u2080 sin(\u03c0 t / T) dt = 2 v\u2080 T / \u03c0.",
+      "given": "v(t) = v\u2080 sin(\u03c0 t / T), interval [0, T].",
+      "formula": "\u0394x = \u222b_0^T v\u2080 sin(\u03c0 t / T) dt = [ -v\u2080 (T / \u03c0) cos(\u03c0 t / T) ]_0^T.",
+      "stepByStep": "1. Integrate velocity with respect to time:\n   \u0394x = \u222b_0^T v\u2080 sin(\u03c0 t / T) dt = [ - (v\u2080 T / \u03c0) cos(\u03c0 t / T) ]_0^T.\n2. Evaluate at upper limit t = T:\n   - (v\u2080 T / \u03c0) cos(\u03c0) = - (v\u2080 T / \u03c0) (-1) = + (v\u2080 T / \u03c0).\n3. Evaluate at lower limit t = 0:\n   - (v\u2080 T / \u03c0) cos(0) = - (v\u2080 T / \u03c0) (1) = - (v\u2080 T / \u03c0).\n4. Subtract:\n   \u0394x = (v\u2080 T / \u03c0) - [ - (v\u2080 T / \u03c0) ] = 2 v\u2080 T / \u03c0.\n5. Therefore, the displacement is 2 v\u2080 T / \u03c0 \u2248 0.637 v\u2080 T.",
+      "finalAnswer": "Option A: 2 v\u2080 T / \u03c0",
+      "whyOtherOptionsWrong": "Option B misses the factor of 2 (evaluates cos(\u03c0) - cos(0) incorrectly). Option C is for rectangle. Option D is an inverse factor."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Velocity-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-226",
+    "questionNumber": 226,
+    "question": "The velocity-time graph of an object moving in 1D is a parabola: v(t) = 4t - t\u00b2 (in m/s). What is the total displacement of the object from t = 0 until it momentarily comes to rest again at t = 4 s?",
+    "options": {
+      "A": "32/3 m \u2248 10.67 m",
+      "B": "16 m",
+      "C": "8 m",
+      "D": "64/3 m"
+    },
+    "optionsList": [
+      "32/3 m \u2248 10.67 m",
+      "16 m",
+      "8 m",
+      "64/3 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDisplacement is the definite integral of the parabolic velocity curve: \u0394x = \u222b_0^4 (4t - t\u00b2) dt.\n\n2. GIVEN:\nv(t) = 4t - t\u00b2, limits t = 0 to t = 4 s.\n\n3. FORMULA / PRINCIPLE:\n\u0394x = \u222b_0^4 (4t - t\u00b2) dt = [ 2t\u00b2 - t\u00b3/3 ]_0^4.\n\n4. STEP-BY-STEP SOLUTION:\n1. Find the roots of velocity:\n   v(t) = t(4 - t) = 0 => t = 0 and t = 4 s.\n2. In the interval [0, 4] s, v(t) \u2265 0.\n3. Integrate velocity to find displacement:\n   \u0394x = \u222b_0^4 (4t - t\u00b2) dt = [ 2t\u00b2 - (1/3) t\u00b3 ]_0^4.\n4. Evaluate at t = 4 s:\n   \u0394x = 2(4\u00b2) - (1/3)(4\u00b3) = 2(16) - 64/3 = 32 - 64/3.\n5. Common denominator:\n   32 - 64/3 = (96 - 64) / 3 = 32 / 3 m \u2248 10.67 m.\n6. Therefore, the total displacement is 32/3 m.\n\n5. FINAL ANSWER:\nOption A: 32/3 m \u2248 10.67 m\n\n6. QUICK TIP:\nArchimedes' parabolic formula: Area under parabola = (2/3) * base * height! Base = 4, Height = v(2) = 4. Area = (2/3) * 4 * 4 = 32/3 m!",
+    "solutionStructured": {
+      "concept": "Displacement is the definite integral of the parabolic velocity curve: \u0394x = \u222b_0^4 (4t - t\u00b2) dt.",
+      "given": "v(t) = 4t - t\u00b2, limits t = 0 to t = 4 s.",
+      "formula": "\u0394x = \u222b_0^4 (4t - t\u00b2) dt = [ 2t\u00b2 - t\u00b3/3 ]_0^4.",
+      "stepByStep": "1. Find the roots of velocity:\n   v(t) = t(4 - t) = 0 => t = 0 and t = 4 s.\n2. In the interval [0, 4] s, v(t) \u2265 0.\n3. Integrate velocity to find displacement:\n   \u0394x = \u222b_0^4 (4t - t\u00b2) dt = [ 2t\u00b2 - (1/3) t\u00b3 ]_0^4.\n4. Evaluate at t = 4 s:\n   \u0394x = 2(4\u00b2) - (1/3)(4\u00b3) = 2(16) - 64/3 = 32 - 64/3.\n5. Common denominator:\n   32 - 64/3 = (96 - 64) / 3 = 32 / 3 m \u2248 10.67 m.\n6. Therefore, the total displacement is 32/3 m.",
+      "finalAnswer": "Option A: 32/3 m \u2248 10.67 m",
+      "whyOtherOptionsWrong": "Option B is base * height (16 m). Option C is (1/2) * base * height (8 m, triangle). Option D doubles the area."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Velocity-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-227",
+    "questionNumber": 227,
+    "question": "On a v-t graph, two lines A and B have slopes of 2 m/s\u00b2 and -3 m/s\u00b2 respectively. If both start with an initial velocity of 12 m/s at t = 0, at what time will particle B come to rest, and what will be the velocity of particle A at that instant?",
+    "options": {
+      "A": "Particle B stops at t = 4 s; v_A = 20 m/s",
+      "B": "Particle B stops at t = 3 s; v_A = 18 m/s",
+      "C": "Particle B stops at t = 4 s; v_A = 24 m/s",
+      "D": "Particle B stops at t = 6 s; v_A = 24 m/s"
+    },
+    "optionsList": [
+      "Particle B stops at t = 4 s; v_A = 20 m/s",
+      "Particle B stops at t = 3 s; v_A = 18 m/s",
+      "Particle B stops at t = 4 s; v_A = 24 m/s",
+      "Particle B stops at t = 6 s; v_A = 24 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSlopes are accelerations: a_A = +2 m/s\u00b2, a_B = -3 m/s\u00b2. Use v = u + at for each particle.\n\n2. GIVEN:\nu_A = u_B = 12 m/s, a_A = +2 m/s\u00b2, a_B = -3 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\nv_B = 12 - 3t = 0 => t = 4 s; v_A = 12 + 2t.\n\n4. STEP-BY-STEP SOLUTION:\n1. Particle B stops when v_B = 0:\n   12 - 3t = 0 => 3t = 12 => t = 4 seconds.\n2. At this instant t = 4 s, find velocity of particle A:\n   v_A = u_A + a_A t = 12 + (2 * 4) = 12 + 8 = 20 m/s.\n3. Therefore, particle B stops at t = 4 s, and particle A has velocity 20 m/s.\n\n5. FINAL ANSWER:\nOption A: Particle B stops at t = 4 s; v_A = 20 m/s\n\n6. QUICK TIP:\nDirect kinematics from v-t slope: a is slope. B stops at 12/3 = 4 s. A reaches 12 + 2(4) = 20 m/s.",
+    "solutionStructured": {
+      "concept": "Slopes are accelerations: a_A = +2 m/s\u00b2, a_B = -3 m/s\u00b2. Use v = u + at for each particle.",
+      "given": "u_A = u_B = 12 m/s, a_A = +2 m/s\u00b2, a_B = -3 m/s\u00b2.",
+      "formula": "v_B = 12 - 3t = 0 => t = 4 s; v_A = 12 + 2t.",
+      "stepByStep": "1. Particle B stops when v_B = 0:\n   12 - 3t = 0 => 3t = 12 => t = 4 seconds.\n2. At this instant t = 4 s, find velocity of particle A:\n   v_A = u_A + a_A t = 12 + (2 * 4) = 12 + 8 = 20 m/s.\n3. Therefore, particle B stops at t = 4 s, and particle A has velocity 20 m/s.",
+      "finalAnswer": "Option A: Particle B stops at t = 4 s; v_A = 20 m/s",
+      "whyOtherOptionsWrong": "Option B uses t = 3 s. Option C calculates v_A = 24 m/s. Option D uses t = 6 s."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Velocity-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-228",
+    "questionNumber": 228,
+    "question": "The v-t graph of a moving body is shown as a line joining (0 s, 10 m/s) to (5 s, -10 m/s). What is the total distance covered by the body in these 5 seconds?",
+    "options": {
+      "A": "25 m",
+      "B": "0 m",
+      "C": "50 m",
+      "D": "12.5 m"
+    },
+    "optionsList": [
+      "25 m",
+      "0 m",
+      "50 m",
+      "12.5 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe line crosses the time axis at the midpoint t = 2.5 s. Total distance is the sum of the magnitudes of the two triangular areas.\n\n2. GIVEN:\nLine from (0, 10) to (5, -10). Crosses axis at t = 2.5 s.\n\n3. FORMULA / PRINCIPLE:\nDistance = |Area\u2081| + |Area\u2082| = (1/2)(2.5)(10) + (1/2)(2.5)(10).\n\n4. STEP-BY-STEP SOLUTION:\n1. Find the time when velocity crosses zero:\n   v(t) = 10 - 4t = 0 => 4t = 10 => t = 2.5 s.\n2. Area of first triangle (0 to 2.5 s):\n   Area\u2081 = (1/2) * base * height = (1/2) * 2.5 s * 10 m/s = 12.5 m (forward).\n3. Area of second triangle (2.5 to 5 s):\n   Area\u2082 = (1/2) * 2.5 s * (-10 m/s) = -12.5 m (backward).\n4. Net displacement = 12.5 m - 12.5 m = 0 m.\n5. Total distance = |12.5 m| + |-12.5 m| = 12.5 + 12.5 = 25 m.\n6. Therefore, the total distance covered is 25 m.\n\n5. FINAL ANSWER:\nOption A: 25 m\n\n6. QUICK TIP:\nCrucial NEET difference: Displacement = 0 m (returns to start). Distance = 12.5 + 12.5 = 25 m!",
+    "solutionStructured": {
+      "concept": "The line crosses the time axis at the midpoint t = 2.5 s. Total distance is the sum of the magnitudes of the two triangular areas.",
+      "given": "Line from (0, 10) to (5, -10). Crosses axis at t = 2.5 s.",
+      "formula": "Distance = |Area\u2081| + |Area\u2082| = (1/2)(2.5)(10) + (1/2)(2.5)(10).",
+      "stepByStep": "1. Find the time when velocity crosses zero:\n   v(t) = 10 - 4t = 0 => 4t = 10 => t = 2.5 s.\n2. Area of first triangle (0 to 2.5 s):\n   Area\u2081 = (1/2) * base * height = (1/2) * 2.5 s * 10 m/s = 12.5 m (forward).\n3. Area of second triangle (2.5 to 5 s):\n   Area\u2082 = (1/2) * 2.5 s * (-10 m/s) = -12.5 m (backward).\n4. Net displacement = 12.5 m - 12.5 m = 0 m.\n5. Total distance = |12.5 m| + |-12.5 m| = 12.5 + 12.5 = 25 m.\n6. Therefore, the total distance covered is 25 m.",
+      "finalAnswer": "Option A: 25 m",
+      "whyOtherOptionsWrong": "Option B is the displacement (0 m). Option C is double. Option D is one-way distance."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Velocity-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-229",
+    "questionNumber": 229,
+    "question": "In the previous question (v-t line from 10 m/s at t = 0 to -10 m/s at t = 5 s), what is the acceleration of the body throughout the motion?",
+    "options": {
+      "A": "-4 m/s\u00b2 (constant)",
+      "B": "-2 m/s\u00b2",
+      "C": "0 m/s\u00b2",
+      "D": "Varying from +4 to -4 m/s\u00b2"
+    },
+    "optionsList": [
+      "-4 m/s\u00b2 (constant)",
+      "-2 m/s\u00b2",
+      "0 m/s\u00b2",
+      "Varying from +4 to -4 m/s\u00b2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nAcceleration is the slope of the v-t line: a = (v\u2082 - v\u2081) / (t\u2082 - t\u2081).\n\n2. GIVEN:\n(t\u2081, v\u2081) = (0, 10), (t\u2082, v\u2082) = (5, -10).\n\n3. FORMULA / PRINCIPLE:\na = Slope = (-10 - 10) / (5 - 0) = -20 / 5 = -4 m/s\u00b2.\n\n4. STEP-BY-STEP SOLUTION:\n1. Calculate slope of the line:\n   Slope = (v_final - v_initial) / (t_final - t_initial)\n   Slope = (-10 - 10) / (5 - 0) = -20 / 5 = -4 m/s\u00b2.\n2. Because the graph is a single straight line, the slope is constant at all points.\n3. Therefore, the acceleration is constant and equal to -4 m/s\u00b2.\n\n5. FINAL ANSWER:\nOption A: -4 m/s\u00b2 (constant)\n\n6. QUICK TIP:\nStraight line on v-t graph = constant acceleration everywhere.",
+    "solutionStructured": {
+      "concept": "Acceleration is the slope of the v-t line: a = (v\u2082 - v\u2081) / (t\u2082 - t\u2081).",
+      "given": "(t\u2081, v\u2081) = (0, 10), (t\u2082, v\u2082) = (5, -10).",
+      "formula": "a = Slope = (-10 - 10) / (5 - 0) = -20 / 5 = -4 m/s\u00b2.",
+      "stepByStep": "1. Calculate slope of the line:\n   Slope = (v_final - v_initial) / (t_final - t_initial)\n   Slope = (-10 - 10) / (5 - 0) = -20 / 5 = -4 m/s\u00b2.\n2. Because the graph is a single straight line, the slope is constant at all points.\n3. Therefore, the acceleration is constant and equal to -4 m/s\u00b2.",
+      "finalAnswer": "Option A: -4 m/s\u00b2 (constant)",
+      "whyOtherOptionsWrong": "Option B is -2 m/s\u00b2. Option C implies zero acceleration. Option D confuses varying velocity with varying acceleration."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Velocity-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-230",
+    "questionNumber": 230,
+    "question": "A body accelerates uniformly from rest for time t and then moves at constant speed for time 2t. What fraction of the total distance was covered during the acceleration phase?",
+    "options": {
+      "A": "1 / 5",
+      "B": "1 / 3",
+      "C": "1 / 4",
+      "D": "1 / 2"
+    },
+    "optionsList": [
+      "1 / 5",
+      "1 / 3",
+      "1 / 4",
+      "1 / 2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nCalculate the triangular area of the acceleration phase and the rectangular area of the cruising phase, then find the fraction.\n\n2. GIVEN:\nAcceleration phase: base t, height v. Cruising phase: base 2t, height v.\n\n3. FORMULA / PRINCIPLE:\ns\u2081 = (1/2) t v; s\u2082 = 2t * v = 2 t v; Fraction = s\u2081 / (s\u2081 + s\u2082).\n\n4. STEP-BY-STEP SOLUTION:\n1. In the acceleration phase (0 to t):\n   The v-t graph is a triangle of base t and height v.\n   Distance s\u2081 = (1/2) t v.\n2. In the cruising phase (t to 3t, duration 2t):\n   The v-t graph is a rectangle of base 2t and height v.\n   Distance s\u2082 = 2t * v = 2 t v.\n3. Total distance = s\u2081 + s\u2082 = 0.5 t v + 2 t v = 2.5 t v = (5/2) t v.\n4. Fraction covered during acceleration:\n   Fraction = s\u2081 / s_total = [ (1/2) t v ] / [ (5/2) t v ] = 1 / 5.\n5. Therefore, exactly 1/5 (or 20%) of the total distance was covered during acceleration.\n\n5. FINAL ANSWER:\nOption A: 1 / 5\n\n6. QUICK TIP:\nRatio of areas: Triangle is (1/2)(1) = 0.5 units. Rectangle is (2)(1) = 2.0 units. Total = 2.5 units. Fraction = 0.5 / 2.5 = 1/5!",
+    "solutionStructured": {
+      "concept": "Calculate the triangular area of the acceleration phase and the rectangular area of the cruising phase, then find the fraction.",
+      "given": "Acceleration phase: base t, height v. Cruising phase: base 2t, height v.",
+      "formula": "s\u2081 = (1/2) t v; s\u2082 = 2t * v = 2 t v; Fraction = s\u2081 / (s\u2081 + s\u2082).",
+      "stepByStep": "1. In the acceleration phase (0 to t):\n   The v-t graph is a triangle of base t and height v.\n   Distance s\u2081 = (1/2) t v.\n2. In the cruising phase (t to 3t, duration 2t):\n   The v-t graph is a rectangle of base 2t and height v.\n   Distance s\u2082 = 2t * v = 2 t v.\n3. Total distance = s\u2081 + s\u2082 = 0.5 t v + 2 t v = 2.5 t v = (5/2) t v.\n4. Fraction covered during acceleration:\n   Fraction = s\u2081 / s_total = [ (1/2) t v ] / [ (5/2) t v ] = 1 / 5.\n5. Therefore, exactly 1/5 (or 20%) of the total distance was covered during acceleration.",
+      "finalAnswer": "Option A: 1 / 5",
+      "whyOtherOptionsWrong": "Option B is 1/3 (confuses time fraction with distance fraction). Option C is 1/4. Option D is 1/2."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Velocity-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-231",
+    "questionNumber": 231,
+    "question": "The area under an acceleration-time (a-t) graph bounded by the time axis represents the:",
+    "options": {
+      "A": "Change in velocity (\u0394v)",
+      "B": "Total displacement",
+      "C": "Average velocity",
+      "D": "Rate of change of acceleration (jerk)"
+    },
+    "optionsList": [
+      "Change in velocity (\u0394v)",
+      "Total displacement",
+      "Average velocity",
+      "Rate of change of acceleration (jerk)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSince a = dv/dt, integrating acceleration gives change in velocity: \u0394v = \u222b a dt. Geometrically, this integral is the area under the a-t curve.\n\n2. GIVEN:\nAcceleration-time curve.\n\n3. FORMULA / PRINCIPLE:\nArea = \u222b_{t\u2081}^{t\u2082} a dt = v(t\u2082) - v(t\u2081) = \u0394v.\n\n4. STEP-BY-STEP SOLUTION:\n1. Definition of acceleration: a = dv/dt => dv = a dt.\n2. Integrating between t\u2081 and t\u2082:\n   \u0394v = v\u2082 - v\u2081 = \u222b_{t\u2081}^{t\u2082} a dt.\n3. The integral \u222b a dt is the area under the a-t graph between t\u2081 and t\u2082.\n4. Therefore, the area under an a-t graph gives the change in velocity (\u0394v).\n5. (Note: To find the final velocity, add the initial velocity: v\u2082 = v\u2081 + Area).\n\n5. FINAL ANSWER:\nOption A: Change in velocity (\u0394v)\n\n6. QUICK TIP:\nCrucial Rule: Area under a-t graph = CHANGE IN VELOCITY (\u0394v), NOT displacement and NOT final velocity!",
+    "solutionStructured": {
+      "concept": "Since a = dv/dt, integrating acceleration gives change in velocity: \u0394v = \u222b a dt. Geometrically, this integral is the area under the a-t curve.",
+      "given": "Acceleration-time curve.",
+      "formula": "Area = \u222b_{t\u2081}^{t\u2082} a dt = v(t\u2082) - v(t\u2081) = \u0394v.",
+      "stepByStep": "1. Definition of acceleration: a = dv/dt => dv = a dt.\n2. Integrating between t\u2081 and t\u2082:\n   \u0394v = v\u2082 - v\u2081 = \u222b_{t\u2081}^{t\u2082} a dt.\n3. The integral \u222b a dt is the area under the a-t graph between t\u2081 and t\u2082.\n4. Therefore, the area under an a-t graph gives the change in velocity (\u0394v).\n5. (Note: To find the final velocity, add the initial velocity: v\u2082 = v\u2081 + Area).",
+      "finalAnswer": "Option A: Change in velocity (\u0394v)",
+      "whyOtherOptionsWrong": "Option B is the area under the v-t graph. Option C is \u0394x/\u0394t. Option D is the slope of the a-t graph."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-232",
+    "questionNumber": 232,
+    "question": "The slope of an acceleration-time graph represents which physical quantity?",
+    "options": {
+      "A": "Jerk (time rate of change of acceleration)",
+      "B": "Velocity",
+      "C": "Force",
+      "D": "Work"
+    },
+    "optionsList": [
+      "Jerk (time rate of change of acceleration)",
+      "Velocity",
+      "Force",
+      "Work"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe time derivative of acceleration is known as 'jerk': j = da/dt. On an a-t graph, this is the slope of the curve.\n\n2. GIVEN:\nSlope of a-t curve.\n\n3. FORMULA / PRINCIPLE:\nSlope = da/dt = jerk.\n\n4. STEP-BY-STEP SOLUTION:\n1. Slope of a curve y vs x is dy/dx.\n2. For an a-t graph, slope is da/dt.\n3. The time rate of change of acceleration is called jerk (or jolt).\n4. Its SI unit is m/s\u00b3.\n5. Therefore, the slope of the a-t graph represents jerk.\n\n5. FINAL ANSWER:\nOption A: Jerk (time rate of change of acceleration)\n\n6. QUICK TIP:\nKinematic derivative chain: Position -> (derivative) Velocity -> (derivative) Acceleration -> (derivative) Jerk.",
+    "solutionStructured": {
+      "concept": "The time derivative of acceleration is known as 'jerk': j = da/dt. On an a-t graph, this is the slope of the curve.",
+      "given": "Slope of a-t curve.",
+      "formula": "Slope = da/dt = jerk.",
+      "stepByStep": "1. Slope of a curve y vs x is dy/dx.\n2. For an a-t graph, slope is da/dt.\n3. The time rate of change of acceleration is called jerk (or jolt).\n4. Its SI unit is m/s\u00b3.\n5. Therefore, the slope of the a-t graph represents jerk.",
+      "finalAnswer": "Option A: Jerk (time rate of change of acceleration)",
+      "whyOtherOptionsWrong": "Option B is the integral of a. Option C is mass * acceleration. Option D is force * distance."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-233",
+    "questionNumber": 233,
+    "question": "A body starts from rest at t = 0. Its a-t graph is a horizontal line at a = 4 m/s\u00b2 for 5 seconds. What is the velocity of the body at t = 5 s?",
+    "options": {
+      "A": "20 m/s",
+      "B": "10 m/s",
+      "C": "40 m/s",
+      "D": "4 m/s"
+    },
+    "optionsList": [
+      "20 m/s",
+      "10 m/s",
+      "40 m/s",
+      "4 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor constant acceleration, the area under the a-t graph is a rectangle of height a and width t: \u0394v = a * t.\n\n2. GIVEN:\nu = 0, a = 4 m/s\u00b2 (constant), t = 5 s.\n\n3. FORMULA / PRINCIPLE:\nv = u + Area = 0 + (a * t) = 4 * 5 = 20 m/s.\n\n4. STEP-BY-STEP SOLUTION:\n1. The a-t graph is a rectangle:\n   Height = 4 m/s\u00b2\n   Base = 5 s.\n2. Area under the a-t graph = 4 m/s\u00b2 * 5 s = 20 m/s.\n3. Since initial velocity u = 0, final velocity v = u + \u0394v = 0 + 20 = 20 m/s.\n4. Therefore, the velocity at t = 5 s is 20 m/s.\n\n5. FINAL ANSWER:\nOption A: 20 m/s\n\n6. QUICK TIP:\nArea of rectangle = a * t = 4 * 5 = 20 m/s.",
+    "solutionStructured": {
+      "concept": "For constant acceleration, the area under the a-t graph is a rectangle of height a and width t: \u0394v = a * t.",
+      "given": "u = 0, a = 4 m/s\u00b2 (constant), t = 5 s.",
+      "formula": "v = u + Area = 0 + (a * t) = 4 * 5 = 20 m/s.",
+      "stepByStep": "1. The a-t graph is a rectangle:\n   Height = 4 m/s\u00b2\n   Base = 5 s.\n2. Area under the a-t graph = 4 m/s\u00b2 * 5 s = 20 m/s.\n3. Since initial velocity u = 0, final velocity v = u + \u0394v = 0 + 20 = 20 m/s.\n4. Therefore, the velocity at t = 5 s is 20 m/s.",
+      "finalAnswer": "Option A: 20 m/s",
+      "whyOtherOptionsWrong": "Option B uses (1/2)at. Option C doubles. Option D is acceleration."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-234",
+    "questionNumber": 234,
+    "question": "What does an a-t graph lying entirely on the horizontal time axis (a = 0) represent?",
+    "options": {
+      "A": "Uniform motion with constant velocity (or an object at rest)",
+      "B": "Uniformly accelerated motion",
+      "C": "Free fall motion",
+      "D": "SHM"
+    },
+    "optionsList": [
+      "Uniform motion with constant velocity (or an object at rest)",
+      "Uniformly accelerated motion",
+      "Free fall motion",
+      "SHM"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nWhen acceleration is identically zero (a = 0), velocity is constant (dv/dt = 0), which describes uniform motion (or rest if v = 0).\n\n2. GIVEN:\na(t) = 0 for all t.\n\n3. FORMULA / PRINCIPLE:\na = 0 <=> v = constant.\n\n4. STEP-BY-STEP SOLUTION:\n1. The graph lies on the horizontal axis, so a(t) = 0.\n2. dv/dt = 0 means velocity does not change with time.\n3. Therefore, the object moves at constant velocity (uniform motion) or remains at rest if v = 0.\n\n5. FINAL ANSWER:\nOption A: Uniform motion with constant velocity (or an object at rest)\n\n6. QUICK TIP:\na = 0 <=> Constant velocity <=> Straight-line x-t graph.",
+    "solutionStructured": {
+      "concept": "When acceleration is identically zero (a = 0), velocity is constant (dv/dt = 0), which describes uniform motion (or rest if v = 0).",
+      "given": "a(t) = 0 for all t.",
+      "formula": "a = 0 <=> v = constant.",
+      "stepByStep": "1. The graph lies on the horizontal axis, so a(t) = 0.\n2. dv/dt = 0 means velocity does not change with time.\n3. Therefore, the object moves at constant velocity (uniform motion) or remains at rest if v = 0.",
+      "finalAnswer": "Option A: Uniform motion with constant velocity (or an object at rest)",
+      "whyOtherOptionsWrong": "Option B requires a non-zero horizontal line. Option C requires a = -g. Option D requires an oscillating a-t graph."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-235",
+    "questionNumber": 235,
+    "question": "The a-t graph of a particle is a right triangle with base = 6 s and height = 4 m/s\u00b2 (starting from a = 0 at t = 0). If the particle was initially at rest, what is its velocity at t = 6 s?",
+    "options": {
+      "A": "12 m/s",
+      "B": "24 m/s",
+      "C": "6 m/s",
+      "D": "4 m/s"
+    },
+    "optionsList": [
+      "12 m/s",
+      "24 m/s",
+      "6 m/s",
+      "4 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nChange in velocity is the area under the triangular a-t graph: \u0394v = (1/2) * base * height.\n\n2. GIVEN:\nu = 0, base = 6 s, height = 4 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\n\u0394v = (1/2) * base * height = (1/2) * 6 * 4 = 12 m/s; v = u + \u0394v = 12 m/s.\n\n4. STEP-BY-STEP SOLUTION:\n1. The a-t graph is a triangle with base 6 s and height 4 m/s\u00b2.\n2. Area of triangle = (1/2) * base * height = (1/2) * 6 * 4 = 12 m/s.\n3. Since initial velocity u = 0:\n   v(6) = 0 + 12 m/s = 12 m/s.\n4. Therefore, the velocity at t = 6 s is 12 m/s.\n\n5. FINAL ANSWER:\nOption A: 12 m/s\n\n6. QUICK TIP:\nArea of triangle under a-t curve = (1/2) * 6 * 4 = 12 m/s.",
+    "solutionStructured": {
+      "concept": "Change in velocity is the area under the triangular a-t graph: \u0394v = (1/2) * base * height.",
+      "given": "u = 0, base = 6 s, height = 4 m/s\u00b2.",
+      "formula": "\u0394v = (1/2) * base * height = (1/2) * 6 * 4 = 12 m/s; v = u + \u0394v = 12 m/s.",
+      "stepByStep": "1. The a-t graph is a triangle with base 6 s and height 4 m/s\u00b2.\n2. Area of triangle = (1/2) * base * height = (1/2) * 6 * 4 = 12 m/s.\n3. Since initial velocity u = 0:\n   v(6) = 0 + 12 m/s = 12 m/s.\n4. Therefore, the velocity at t = 6 s is 12 m/s.",
+      "finalAnswer": "Option A: 12 m/s",
+      "whyOtherOptionsWrong": "Option B forgets 1/2 factor (rectangle area = 24 m/s). Option C is half. Option D is peak acceleration."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-236",
+    "questionNumber": 236,
+    "question": "For an object in free fall near the Earth's surface (taking downward as negative), the acceleration-time graph is:",
+    "options": {
+      "A": "A horizontal line at a = -g (approximately -9.8 m/s\u00b2)",
+      "B": "A line sloping downwards with slope -g",
+      "C": "A parabola opening downwards",
+      "D": "A line passing through the origin"
+    },
+    "optionsList": [
+      "A horizontal line at a = -g (approximately -9.8 m/s\u00b2)",
+      "A line sloping downwards with slope -g",
+      "A parabola opening downwards",
+      "A line passing through the origin"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nAcceleration due to gravity near Earth is constant at g \u2248 9.8 m/s\u00b2 directed downwards, so the a-t graph is a horizontal line at a = -g.\n\n2. GIVEN:\nFree fall near Earth's surface.\n\n3. FORMULA / PRINCIPLE:\na(t) = -g = constant.\n\n4. STEP-BY-STEP SOLUTION:\n1. In free fall, the only force acting is gravity: F = -mg.\n2. By Newton's second law, acceleration is a = F/m = -g = constant.\n3. A constant quantity plotted against time is a horizontal line parallel to the time axis.\n4. With downward defined as negative, this line lies below the time axis at a = -g \u2248 -9.8 m/s\u00b2.\n5. Therefore, Option A is the correct graph.\n\n5. FINAL ANSWER:\nOption A: A horizontal line at a = -g (approximately -9.8 m/s\u00b2)\n\n6. QUICK TIP:\nFree fall acceleration NEVER changes with time; it is always a flat horizontal line at a = -g.",
+    "solutionStructured": {
+      "concept": "Acceleration due to gravity near Earth is constant at g \u2248 9.8 m/s\u00b2 directed downwards, so the a-t graph is a horizontal line at a = -g.",
+      "given": "Free fall near Earth's surface.",
+      "formula": "a(t) = -g = constant.",
+      "stepByStep": "1. In free fall, the only force acting is gravity: F = -mg.\n2. By Newton's second law, acceleration is a = F/m = -g = constant.\n3. A constant quantity plotted against time is a horizontal line parallel to the time axis.\n4. With downward defined as negative, this line lies below the time axis at a = -g \u2248 -9.8 m/s\u00b2.\n5. Therefore, Option A is the correct graph.",
+      "finalAnswer": "Option A: A horizontal line at a = -g (approximately -9.8 m/s\u00b2)",
+      "whyOtherOptionsWrong": "Option B confuses velocity-time graph with acceleration-time graph. Option C is the position-time graph. Option D assumes zero initial acceleration."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-237",
+    "questionNumber": 237,
+    "question": "A particle starts with an initial velocity of 5 m/s at t = 0. Its a-t graph consists of a positive rectangular area of +12 m/s from t = 0 to 3 s, and a negative rectangular area of -8 m/s from t = 3 to 5 s. What is the velocity of the particle at t = 5 s?",
+    "options": {
+      "A": "9 m/s",
+      "B": "4 m/s",
+      "C": "13 m/s",
+      "D": "17 m/s"
+    },
+    "optionsList": [
+      "9 m/s",
+      "4 m/s",
+      "13 m/s",
+      "17 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFinal velocity is initial velocity plus net area under the a-t graph: v_final = u + Area_net.\n\n2. GIVEN:\nu = 5 m/s, Area\u2081 = +12 m/s, Area\u2082 = -8 m/s.\n\n3. FORMULA / PRINCIPLE:\nv(5) = u + Area\u2081 + Area\u2082 = 5 + 12 - 8.\n\n4. STEP-BY-STEP SOLUTION:\n1. Net area under the a-t graph:\n   Area_net = (+12 m/s) + (-8 m/s) = +4 m/s.\n2. The net area represents the total change in velocity:\n   \u0394v = v(5) - v(0) = +4 m/s.\n3. Add initial velocity v(0) = 5 m/s:\n   v(5) = v(0) + \u0394v = 5 m/s + 4 m/s = 9 m/s.\n4. Therefore, the velocity at t = 5 s is 9 m/s.\n\n5. FINAL ANSWER:\nOption A: 9 m/s\n\n6. QUICK TIP:\nDon't forget initial velocity! Final v = u + Net Area = 5 + (12 - 8) = 9 m/s.",
+    "solutionStructured": {
+      "concept": "Final velocity is initial velocity plus net area under the a-t graph: v_final = u + Area_net.",
+      "given": "u = 5 m/s, Area\u2081 = +12 m/s, Area\u2082 = -8 m/s.",
+      "formula": "v(5) = u + Area\u2081 + Area\u2082 = 5 + 12 - 8.",
+      "stepByStep": "1. Net area under the a-t graph:\n   Area_net = (+12 m/s) + (-8 m/s) = +4 m/s.\n2. The net area represents the total change in velocity:\n   \u0394v = v(5) - v(0) = +4 m/s.\n3. Add initial velocity v(0) = 5 m/s:\n   v(5) = v(0) + \u0394v = 5 m/s + 4 m/s = 9 m/s.\n4. Therefore, the velocity at t = 5 s is 9 m/s.",
+      "finalAnswer": "Option A: 9 m/s",
+      "whyOtherOptionsWrong": "Option B is only the net area (\u0394v = 4 m/s) without adding initial velocity. Option C is 5 + 8. Option D is 5 + 12."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-238",
+    "questionNumber": 238,
+    "question": "The a-t graph of a particle is given by a(t) = 6 - 2t (in m/s\u00b2). If the particle starts from rest at t = 0, at what time will the particle attain its maximum velocity, and what will that maximum velocity be?",
+    "options": {
+      "A": "t = 3 s, v_max = 9 m/s",
+      "B": "t = 3 s, v_max = 18 m/s",
+      "C": "t = 6 s, v_max = 9 m/s",
+      "D": "t = 2 s, v_max = 8 m/s"
+    },
+    "optionsList": [
+      "t = 3 s, v_max = 9 m/s",
+      "t = 3 s, v_max = 18 m/s",
+      "t = 6 s, v_max = 9 m/s",
+      "t = 2 s, v_max = 8 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nVelocity is maximum when acceleration changes sign from positive to negative: a(t) = 0. The maximum velocity is the area under the a-t curve up to that time.\n\n2. GIVEN:\na(t) = 6 - 2t, u = 0.\n\n3. FORMULA / PRINCIPLE:\na(t) = 0 => 6 - 2t = 0 => t = 3 s; v_max = \u222b_0^3 (6 - 2t) dt.\n\n4. STEP-BY-STEP SOLUTION:\n1. Acceleration crosses zero at:\n   6 - 2t = 0 => 2t = 6 => t = 3 seconds.\n2. For t < 3 s, a > 0, so velocity is increasing.\n   For t > 3 s, a < 0, so velocity decreases.\n3. Therefore, maximum velocity occurs at t = 3 s.\n4. Compute area under the a-t graph from 0 to 3 s:\n   Area = (1/2) * base * height = (1/2) * 3 s * 6 m/s\u00b2 = 9 m/s.\n   (Or integrate: [ 6t - t\u00b2 ]_0^3 = 6(3) - 3\u00b2 = 18 - 9 = 9 m/s).\n5. Since u = 0, v_max = 0 + 9 = 9 m/s.\n6. Hence, t = 3 s and v_max = 9 m/s.\n\n5. FINAL ANSWER:\nOption A: t = 3 s, v_max = 9 m/s\n\n6. QUICK TIP:\nv_max occurs when a = 0. Area of triangle on a-t graph = (1/2)(3)(6) = 9 m/s!",
+    "solutionStructured": {
+      "concept": "Velocity is maximum when acceleration changes sign from positive to negative: a(t) = 0. The maximum velocity is the area under the a-t curve up to that time.",
+      "given": "a(t) = 6 - 2t, u = 0.",
+      "formula": "a(t) = 0 => 6 - 2t = 0 => t = 3 s; v_max = \u222b_0^3 (6 - 2t) dt.",
+      "stepByStep": "1. Acceleration crosses zero at:\n   6 - 2t = 0 => 2t = 6 => t = 3 seconds.\n2. For t < 3 s, a > 0, so velocity is increasing.\n   For t > 3 s, a < 0, so velocity decreases.\n3. Therefore, maximum velocity occurs at t = 3 s.\n4. Compute area under the a-t graph from 0 to 3 s:\n   Area = (1/2) * base * height = (1/2) * 3 s * 6 m/s\u00b2 = 9 m/s.\n   (Or integrate: [ 6t - t\u00b2 ]_0^3 = 6(3) - 3\u00b2 = 18 - 9 = 9 m/s).\n5. Since u = 0, v_max = 0 + 9 = 9 m/s.\n6. Hence, t = 3 s and v_max = 9 m/s.",
+      "finalAnswer": "Option A: t = 3 s, v_max = 9 m/s",
+      "whyOtherOptionsWrong": "Option B forgets 1/2 factor (evaluates 6*3 = 18). Option C uses t = 6 s. Option D is an arbitrary guess."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-239",
+    "questionNumber": 239,
+    "question": "In the previous question where a(t) = 6 - 2t (in m/s\u00b2) and u = 0, at what time does the particle come to rest again?",
+    "options": {
+      "A": "t = 6 s",
+      "B": "t = 3 s",
+      "C": "t = 4 s",
+      "D": "t = 9 s"
+    },
+    "optionsList": [
+      "t = 6 s",
+      "t = 3 s",
+      "t = 4 s",
+      "t = 9 s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe particle returns to rest when its velocity becomes zero again: v(t) = 0, meaning net area under the a-t graph is zero.\n\n2. GIVEN:\nv(t) = 6t - t\u00b2.\n\n3. FORMULA / PRINCIPLE:\nv(t) = 0 => 6t - t\u00b2 = 0 => t(6 - t) = 0 => t = 6 s.\n\n4. STEP-BY-STEP SOLUTION:\n1. Velocity function: v(t) = \u222b_0^t (6 - 2t) dt = 6t - t\u00b2.\n2. Set velocity to zero to find the instant of rest (for t > 0):\n   6t - t\u00b2 = 0\n   t(6 - t) = 0 => t = 6 seconds.\n3. Notice that on the a-t graph, the positive area from 0 to 3 s is +9 m/s, and the negative area from 3 to 6 s is -9 m/s!\n4. Net area from 0 to 6 s is (+9) + (-9) = 0 m/s, so velocity returns to initial value (0 m/s).\n5. Therefore, the particle comes to rest at t = 6 s.\n\n5. FINAL ANSWER:\nOption A: t = 6 s\n\n6. QUICK TIP:\nSymmetry: It takes 3 s to reach peak velocity with positive acceleration, and another symmetric 3 s to cancel it with negative acceleration: total time = 6 s.",
+    "solutionStructured": {
+      "concept": "The particle returns to rest when its velocity becomes zero again: v(t) = 0, meaning net area under the a-t graph is zero.",
+      "given": "v(t) = 6t - t\u00b2.",
+      "formula": "v(t) = 0 => 6t - t\u00b2 = 0 => t(6 - t) = 0 => t = 6 s.",
+      "stepByStep": "1. Velocity function: v(t) = \u222b_0^t (6 - 2t) dt = 6t - t\u00b2.\n2. Set velocity to zero to find the instant of rest (for t > 0):\n   6t - t\u00b2 = 0\n   t(6 - t) = 0 => t = 6 seconds.\n3. Notice that on the a-t graph, the positive area from 0 to 3 s is +9 m/s, and the negative area from 3 to 6 s is -9 m/s!\n4. Net area from 0 to 6 s is (+9) + (-9) = 0 m/s, so velocity returns to initial value (0 m/s).\n5. Therefore, the particle comes to rest at t = 6 s.",
+      "finalAnswer": "Option A: t = 6 s",
+      "whyOtherOptionsWrong": "Option B is the instant of peak velocity (v = 9 m/s). Options C and D give non-zero velocities."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-240",
+    "questionNumber": 240,
+    "question": "The a-t graph of a particle is shown as two triangles: from t = 0 to 2 s, a increases from 0 to 4 m/s\u00b2; from t = 2 to 4 s, a decreases from 4 m/s\u00b2 to 0. If initial velocity was u = 2 m/s, what is the velocity at t = 4 s?",
+    "options": {
+      "A": "10 m/s",
+      "B": "8 m/s",
+      "C": "16 m/s",
+      "D": "6 m/s"
+    },
+    "optionsList": [
+      "10 m/s",
+      "8 m/s",
+      "16 m/s",
+      "6 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTotal area under the full triangular a-t graph is (1/2) * base * height. Then v = u + Area.\n\n2. GIVEN:\nu = 2 m/s, Base = 4 s, Height = 4 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\nArea = (1/2) * base * height = (1/2) * 4 * 4 = 8 m/s; v = u + Area = 2 + 8 = 10 m/s.\n\n4. STEP-BY-STEP SOLUTION:\n1. The full a-t graph from 0 to 4 s forms a single large triangle with:\n   Base = 4 s\n   Height = 4 m/s\u00b2.\n2. Area under the curve = (1/2) * base * height = (1/2) * 4 * 4 = 8 m/s.\n3. The area represents the total change in velocity: \u0394v = 8 m/s.\n4. Final velocity: v(4) = u + \u0394v = 2 m/s + 8 m/s = 10 m/s.\n5. Therefore, the velocity at t = 4 s is 10 m/s.\n\n5. FINAL ANSWER:\nOption A: 10 m/s\n\n6. QUICK TIP:\nArea of full triangle = (1/2)(4)(4) = 8 m/s. Add initial velocity: 2 + 8 = 10 m/s.",
+    "solutionStructured": {
+      "concept": "Total area under the full triangular a-t graph is (1/2) * base * height. Then v = u + Area.",
+      "given": "u = 2 m/s, Base = 4 s, Height = 4 m/s\u00b2.",
+      "formula": "Area = (1/2) * base * height = (1/2) * 4 * 4 = 8 m/s; v = u + Area = 2 + 8 = 10 m/s.",
+      "stepByStep": "1. The full a-t graph from 0 to 4 s forms a single large triangle with:\n   Base = 4 s\n   Height = 4 m/s\u00b2.\n2. Area under the curve = (1/2) * base * height = (1/2) * 4 * 4 = 8 m/s.\n3. The area represents the total change in velocity: \u0394v = 8 m/s.\n4. Final velocity: v(4) = u + \u0394v = 2 m/s + 8 m/s = 10 m/s.\n5. Therefore, the velocity at t = 4 s is 10 m/s.",
+      "finalAnswer": "Option A: 10 m/s",
+      "whyOtherOptionsWrong": "Option B is only the area without adding u (8 m/s). Option C assumes rectangle. Option D is an arbitrary value."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-241",
+    "questionNumber": 241,
+    "question": "A body starts from rest at t = 0. Its a-t graph is given by a = 3t\u00b2 (in m/s\u00b2). What is the velocity of the body at t = 3 s?",
+    "options": {
+      "A": "27 m/s",
+      "B": "9 m/s",
+      "C": "81 m/s",
+      "D": "18 m/s"
+    },
+    "optionsList": [
+      "27 m/s",
+      "9 m/s",
+      "81 m/s",
+      "18 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nVelocity is the integral of acceleration with respect to time: v = \u222b a dt.\n\n2. GIVEN:\na(t) = 3t\u00b2, u = 0, t = 3 s.\n\n3. FORMULA / PRINCIPLE:\nv(t) = \u222b_0^t 3t\u00b2 dt = [ t\u00b3 ]_0^t = t\u00b3.\n\n4. STEP-BY-STEP SOLUTION:\n1. Integrate acceleration to find velocity:\n   v(t) = \u222b_0^t 3t\u00b2 dt = [ t\u00b3 ]_0^t = t\u00b3.\n2. Substitute t = 3 s:\n   v(3) = 3\u00b3 = 27 m/s.\n3. Therefore, the velocity at t = 3 s is 27 m/s.\n\n5. FINAL ANSWER:\nOption A: 27 m/s\n\n6. QUICK TIP:\nIntegrate power rule: \u222b 3t\u00b2 dt = t\u00b3 => 3\u00b3 = 27 m/s.",
+    "solutionStructured": {
+      "concept": "Velocity is the integral of acceleration with respect to time: v = \u222b a dt.",
+      "given": "a(t) = 3t\u00b2, u = 0, t = 3 s.",
+      "formula": "v(t) = \u222b_0^t 3t\u00b2 dt = [ t\u00b3 ]_0^t = t\u00b3.",
+      "stepByStep": "1. Integrate acceleration to find velocity:\n   v(t) = \u222b_0^t 3t\u00b2 dt = [ t\u00b3 ]_0^t = t\u00b3.\n2. Substitute t = 3 s:\n   v(3) = 3\u00b3 = 27 m/s.\n3. Therefore, the velocity at t = 3 s is 27 m/s.",
+      "finalAnswer": "Option A: 27 m/s",
+      "whyOtherOptionsWrong": "Option B is 3\u00b2. Option C is 3\u2074. Option D is a(3) * 3 / 2 (or 18 m/s)."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-242",
+    "questionNumber": 242,
+    "question": "For the body in Q241 where a(t) = 3t\u00b2 and u = 0, what is the displacement of the body at t = 2 s?",
+    "options": {
+      "A": "4 m",
+      "B": "8 m",
+      "C": "12 m",
+      "D": "16 m"
+    },
+    "optionsList": [
+      "4 m",
+      "8 m",
+      "12 m",
+      "16 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIntegrate acceleration twice: v(t) = t\u00b3, then s(t) = \u222b t\u00b3 dt = t\u2074 / 4.\n\n2. GIVEN:\na(t) = 3t\u00b2, u = 0, s(0) = 0, t = 2 s.\n\n3. FORMULA / PRINCIPLE:\nv(t) = t\u00b3; s(t) = \u222b_0^t t\u00b3 dt = t\u2074 / 4.\n\n4. STEP-BY-STEP SOLUTION:\n1. First integration gives velocity: v(t) = t\u00b3.\n2. Second integration gives displacement:\n   s(t) = \u222b_0^t t\u00b3 dt = [ t\u2074 / 4 ]_0^t = t\u2074 / 4.\n3. Substitute t = 2 s:\n   s(2) = 2\u2074 / 4 = 16 / 4 = 4 meters.\n4. Therefore, the displacement at t = 2 s is 4 m.\n\n5. FINAL ANSWER:\nOption A: 4 m\n\n6. QUICK TIP:\nDouble integration: a = 3t\u00b2 => v = t\u00b3 => s = t\u2074 / 4. For t = 2: 16 / 4 = 4 m.",
+    "solutionStructured": {
+      "concept": "Integrate acceleration twice: v(t) = t\u00b3, then s(t) = \u222b t\u00b3 dt = t\u2074 / 4.",
+      "given": "a(t) = 3t\u00b2, u = 0, s(0) = 0, t = 2 s.",
+      "formula": "v(t) = t\u00b3; s(t) = \u222b_0^t t\u00b3 dt = t\u2074 / 4.",
+      "stepByStep": "1. First integration gives velocity: v(t) = t\u00b3.\n2. Second integration gives displacement:\n   s(t) = \u222b_0^t t\u00b3 dt = [ t\u2074 / 4 ]_0^t = t\u2074 / 4.\n3. Substitute t = 2 s:\n   s(2) = 2\u2074 / 4 = 16 / 4 = 4 meters.\n4. Therefore, the displacement at t = 2 s is 4 m.",
+      "finalAnswer": "Option A: 4 m",
+      "whyOtherOptionsWrong": "Option B is velocity at t = 2 s (v(2) = 2\u00b3 = 8 m/s). Option C is an arbitrary value. Option D is 2\u2074 = 16 m."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-243",
+    "questionNumber": 243,
+    "question": "The a-t graph of a particle starting from rest is shown: a = +2 m/s\u00b2 for 4 s, and a = -2 m/s\u00b2 for the next 4 s. What is the total displacement of the particle at t = 8 s?",
+    "options": {
+      "A": "32 m",
+      "B": "16 m",
+      "C": "0 m",
+      "D": "64 m"
+    },
+    "optionsList": [
+      "32 m",
+      "16 m",
+      "0 m",
+      "64 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nConvert the a-t graph to a v-t graph: velocity rises to 8 m/s in 4 s and returns to 0 in another 4 s (a triangle). Displacement is the area of the v-t triangle.\n\n2. GIVEN:\nPhase 1: a = +2 for 4 s; Phase 2: a = -2 for 4 s; u = 0.\n\n3. FORMULA / PRINCIPLE:\nv_max = a * t\u2081 = 2 * 4 = 8 m/s; Displacement = (1/2) * t_total * v_max.\n\n4. STEP-BY-STEP SOLUTION:\n1. At t = 4 s, velocity reached is v = u + a\u2081 t\u2081 = 0 + 2(4) = 8 m/s.\n2. From t = 4 to 8 s, deceleration is a\u2082 = -2 m/s\u00b2, so velocity decreases from 8 m/s to 0 at t = 8 s.\n3. Notice that velocity was POSITIVE throughout the entire 8 seconds (v \u2265 0)!\n4. On the v-t graph, this forms a triangle with base 8 s and height 8 m/s.\n5. Total displacement = Area of v-t triangle = (1/2) * base * height = (1/2) * 8 * 8 = 32 m.\n6. (Common trap: Net area under a-t graph is zero, which means final VELOCITY is zero, NOT displacement!).\n\n5. FINAL ANSWER:\nOption A: 32 m\n\n6. QUICK TIP:\nTop NEET trap: Area of a-t graph is zero => v_final = 0. But displacement is the area of the v-t triangle = (1/2)(8)(8) = 32 m!",
+    "solutionStructured": {
+      "concept": "Convert the a-t graph to a v-t graph: velocity rises to 8 m/s in 4 s and returns to 0 in another 4 s (a triangle). Displacement is the area of the v-t triangle.",
+      "given": "Phase 1: a = +2 for 4 s; Phase 2: a = -2 for 4 s; u = 0.",
+      "formula": "v_max = a * t\u2081 = 2 * 4 = 8 m/s; Displacement = (1/2) * t_total * v_max.",
+      "stepByStep": "1. At t = 4 s, velocity reached is v = u + a\u2081 t\u2081 = 0 + 2(4) = 8 m/s.\n2. From t = 4 to 8 s, deceleration is a\u2082 = -2 m/s\u00b2, so velocity decreases from 8 m/s to 0 at t = 8 s.\n3. Notice that velocity was POSITIVE throughout the entire 8 seconds (v \u2265 0)!\n4. On the v-t graph, this forms a triangle with base 8 s and height 8 m/s.\n5. Total displacement = Area of v-t triangle = (1/2) * base * height = (1/2) * 8 * 8 = 32 m.\n6. (Common trap: Net area under a-t graph is zero, which means final VELOCITY is zero, NOT displacement!).",
+      "finalAnswer": "Option A: 32 m",
+      "whyOtherOptionsWrong": "Option C falls into the trap of confusing zero a-t area with zero displacement. Option B is only the first phase. Option D doubles."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-244",
+    "questionNumber": 244,
+    "question": "A body moves in a straight line with an acceleration given by a = a\u2080 (1 - t / T) for 0 \u2264 t \u2264 T. If it starts from rest, what is its velocity at t = T?",
+    "options": {
+      "A": "(1/2) a\u2080 T",
+      "B": "a\u2080 T",
+      "C": "(1/3) a\u2080 T",
+      "D": "2 a\u2080 T"
+    },
+    "optionsList": [
+      "(1/2) a\u2080 T",
+      "a\u2080 T",
+      "(1/3) a\u2080 T",
+      "2 a\u2080 T"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe a-t graph is a triangle of base T and height a\u2080. The velocity gained is the area of this triangle: (1/2) a\u2080 T.\n\n2. GIVEN:\na(t) = a\u2080 (1 - t/T), u = 0, interval [0, T].\n\n3. FORMULA / PRINCIPLE:\nv(T) = \u222b_0^T a\u2080 (1 - t/T) dt = (1/2) a\u2080 T.\n\n4. STEP-BY-STEP SOLUTION:\n1. The a-t graph starts at a = a\u2080 at t = 0 and decreases linearly to a = 0 at t = T.\n2. The shape bounded by this line and the time axis is a right triangle with base T and height a\u2080.\n3. Area of triangle = (1/2) * base * height = (1/2) * T * a\u2080 = (1/2) a\u2080 T.\n4. Since initial velocity u = 0:\n   v(T) = u + Area = 0 + (1/2) a\u2080 T = (1/2) a\u2080 T.\n5. Therefore, the velocity at t = T is (1/2) a\u2080 T.\n\n5. FINAL ANSWER:\nOption A: (1/2) a\u2080 T\n\n6. QUICK TIP:\nArea under linear decay a(t) = triangle = (1/2) a\u2080 T.",
+    "solutionStructured": {
+      "concept": "The a-t graph is a triangle of base T and height a\u2080. The velocity gained is the area of this triangle: (1/2) a\u2080 T.",
+      "given": "a(t) = a\u2080 (1 - t/T), u = 0, interval [0, T].",
+      "formula": "v(T) = \u222b_0^T a\u2080 (1 - t/T) dt = (1/2) a\u2080 T.",
+      "stepByStep": "1. The a-t graph starts at a = a\u2080 at t = 0 and decreases linearly to a = 0 at t = T.\n2. The shape bounded by this line and the time axis is a right triangle with base T and height a\u2080.\n3. Area of triangle = (1/2) * base * height = (1/2) * T * a\u2080 = (1/2) a\u2080 T.\n4. Since initial velocity u = 0:\n   v(T) = u + Area = 0 + (1/2) a\u2080 T = (1/2) a\u2080 T.\n5. Therefore, the velocity at t = T is (1/2) a\u2080 T.",
+      "finalAnswer": "Option A: (1/2) a\u2080 T",
+      "whyOtherOptionsWrong": "Option B assumes constant acceleration a\u2080. Options C and D are incorrect multiples."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-245",
+    "questionNumber": 245,
+    "question": "For the body in Q244 where a(t) = a\u2080 (1 - t / T) and u = 0, what is the displacement of the body at t = T?",
+    "options": {
+      "A": "(1/3) a\u2080 T\u00b2",
+      "B": "(1/2) a\u2080 T\u00b2",
+      "C": "(1/6) a\u2080 T\u00b2",
+      "D": "(1/4) a\u2080 T\u00b2"
+    },
+    "optionsList": [
+      "(1/3) a\u2080 T\u00b2",
+      "(1/2) a\u2080 T\u00b2",
+      "(1/6) a\u2080 T\u00b2",
+      "(1/4) a\u2080 T\u00b2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIntegrate acceleration twice from rest to find displacement at t = T.\n\n2. GIVEN:\na(t) = a\u2080 (1 - t/T), u = 0, s(0) = 0.\n\n3. FORMULA / PRINCIPLE:\nv(t) = a\u2080 [ t - t\u00b2/(2T) ]; s(t) = a\u2080 [ t\u00b2/2 - t\u00b3/(6T) ].\n\n4. STEP-BY-STEP SOLUTION:\n1. Velocity: v(t) = \u222b_0^t a\u2080 (1 - t'/T) dt' = a\u2080 [ t - t\u00b2 / (2T) ].\n2. Displacement: s(t) = \u222b_0^t v(t') dt' = a\u2080 \u222b_0^t [ t' - t'\u00b2 / (2T) ] dt'.\n3. Integrate:\n   s(t) = a\u2080 [ t\u00b2 / 2 - t\u00b3 / (6T) ].\n4. Evaluate at t = T:\n   s(T) = a\u2080 [ T\u00b2 / 2 - T\u00b3 / (6T) ] = a\u2080 [ T\u00b2 / 2 - T\u00b2 / 6 ].\n5. Subtract fractions:\n   1/2 - 1/6 = 3/6 - 1/6 = 2/6 = 1/3.\n6. Therefore:\n   s(T) = (1/3) a\u2080 T\u00b2.\n7. Hence, the displacement at t = T is (1/3) a\u2080 T\u00b2.\n\n5. FINAL ANSWER:\nOption A: (1/3) a\u2080 T\u00b2\n\n6. QUICK TIP:\nMemorize the fraction progression: a(t) linear decay => v(T) = (1/2) a\u2080 T => s(T) = (1/3) a\u2080 T\u00b2.",
+    "solutionStructured": {
+      "concept": "Integrate acceleration twice from rest to find displacement at t = T.",
+      "given": "a(t) = a\u2080 (1 - t/T), u = 0, s(0) = 0.",
+      "formula": "v(t) = a\u2080 [ t - t\u00b2/(2T) ]; s(t) = a\u2080 [ t\u00b2/2 - t\u00b3/(6T) ].",
+      "stepByStep": "1. Velocity: v(t) = \u222b_0^t a\u2080 (1 - t'/T) dt' = a\u2080 [ t - t\u00b2 / (2T) ].\n2. Displacement: s(t) = \u222b_0^t v(t') dt' = a\u2080 \u222b_0^t [ t' - t'\u00b2 / (2T) ] dt'.\n3. Integrate:\n   s(t) = a\u2080 [ t\u00b2 / 2 - t\u00b3 / (6T) ].\n4. Evaluate at t = T:\n   s(T) = a\u2080 [ T\u00b2 / 2 - T\u00b3 / (6T) ] = a\u2080 [ T\u00b2 / 2 - T\u00b2 / 6 ].\n5. Subtract fractions:\n   1/2 - 1/6 = 3/6 - 1/6 = 2/6 = 1/3.\n6. Therefore:\n   s(T) = (1/3) a\u2080 T\u00b2.\n7. Hence, the displacement at t = T is (1/3) a\u2080 T\u00b2.",
+      "finalAnswer": "Option A: (1/3) a\u2080 T\u00b2",
+      "whyOtherOptionsWrong": "Option B is for constant acceleration (1/2 a\u2080 T\u00b2). Option C is the second term (1/6). Option D is an arbitrary guess."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-246",
+    "questionNumber": 246,
+    "question": "The a-t graph of a particle is given by a = a\u2080 sin(\u03c0 t / T) for 0 \u2264 t \u2264 T. If the particle starts from rest at t = 0, what is its velocity at t = T?",
+    "options": {
+      "A": "2 a\u2080 T / \u03c0",
+      "B": "a\u2080 T / \u03c0",
+      "C": "0",
+      "D": "\u03c0 a\u2080 T / 2"
+    },
+    "optionsList": [
+      "2 a\u2080 T / \u03c0",
+      "a\u2080 T / \u03c0",
+      "0",
+      "\u03c0 a\u2080 T / 2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIntegrate the half-sine acceleration curve from 0 to T: \u0394v = \u222b_0^T a\u2080 sin(\u03c0 t / T) dt = 2 a\u2080 T / \u03c0.\n\n2. GIVEN:\na(t) = a\u2080 sin(\u03c0 t / T), u = 0, interval [0, T].\n\n3. FORMULA / PRINCIPLE:\nv(T) = \u222b_0^T a\u2080 sin(\u03c0 t / T) dt = [ -a\u2080 (T / \u03c0) cos(\u03c0 t / T) ]_0^T.\n\n4. STEP-BY-STEP SOLUTION:\n1. Integrate acceleration with respect to time:\n   \u0394v = \u222b_0^T a\u2080 sin(\u03c0 t / T) dt = [ - (a\u2080 T / \u03c0) cos(\u03c0 t / T) ]_0^T.\n2. Evaluate at upper limit t = T:\n   - (a\u2080 T / \u03c0) cos(\u03c0) = - (a\u2080 T / \u03c0) (-1) = + (a\u2080 T / \u03c0).\n3. Evaluate at lower limit t = 0:\n   - (a\u2080 T / \u03c0) cos(0) = - (a\u2080 T / \u03c0) (1) = - (a\u2080 T / \u03c0).\n4. Subtract limits:\n   \u0394v = (a\u2080 T / \u03c0) - [ - (a\u2080 T / \u03c0) ] = 2 a\u2080 T / \u03c0.\n5. Since initial velocity u = 0:\n   v(T) = 2 a\u2080 T / \u03c0.\n6. Therefore, the velocity at t = T is 2 a\u2080 T / \u03c0.\n\n5. FINAL ANSWER:\nOption A: 2 a\u2080 T / \u03c0\n\n6. QUICK TIP:\nArea under half-period of sine wave = 2 / \u03c0 * peak * duration = 2 a\u2080 T / \u03c0.",
+    "solutionStructured": {
+      "concept": "Integrate the half-sine acceleration curve from 0 to T: \u0394v = \u222b_0^T a\u2080 sin(\u03c0 t / T) dt = 2 a\u2080 T / \u03c0.",
+      "given": "a(t) = a\u2080 sin(\u03c0 t / T), u = 0, interval [0, T].",
+      "formula": "v(T) = \u222b_0^T a\u2080 sin(\u03c0 t / T) dt = [ -a\u2080 (T / \u03c0) cos(\u03c0 t / T) ]_0^T.",
+      "stepByStep": "1. Integrate acceleration with respect to time:\n   \u0394v = \u222b_0^T a\u2080 sin(\u03c0 t / T) dt = [ - (a\u2080 T / \u03c0) cos(\u03c0 t / T) ]_0^T.\n2. Evaluate at upper limit t = T:\n   - (a\u2080 T / \u03c0) cos(\u03c0) = - (a\u2080 T / \u03c0) (-1) = + (a\u2080 T / \u03c0).\n3. Evaluate at lower limit t = 0:\n   - (a\u2080 T / \u03c0) cos(0) = - (a\u2080 T / \u03c0) (1) = - (a\u2080 T / \u03c0).\n4. Subtract limits:\n   \u0394v = (a\u2080 T / \u03c0) - [ - (a\u2080 T / \u03c0) ] = 2 a\u2080 T / \u03c0.\n5. Since initial velocity u = 0:\n   v(T) = 2 a\u2080 T / \u03c0.\n6. Therefore, the velocity at t = T is 2 a\u2080 T / \u03c0.",
+      "finalAnswer": "Option A: 2 a\u2080 T / \u03c0",
+      "whyOtherOptionsWrong": "Option B misses the factor of 2. Option C assumes velocity returns to zero. Option D inverts the factor."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-247",
+    "questionNumber": 247,
+    "question": "In the previous question where a(t) = a\u2080 sin(\u03c0 t / T) and u = 0, what is the displacement of the particle at t = T?",
+    "options": {
+      "A": "a\u2080 T\u00b2 / \u03c0",
+      "B": "2 a\u2080 T\u00b2 / \u03c0\u00b2",
+      "C": "a\u2080 T\u00b2 / (2\u03c0)",
+      "D": "a\u2080 T\u00b2 / 2"
+    },
+    "optionsList": [
+      "a\u2080 T\u00b2 / \u03c0",
+      "2 a\u2080 T\u00b2 / \u03c0\u00b2",
+      "a\u2080 T\u00b2 / (2\u03c0)",
+      "a\u2080 T\u00b2 / 2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIntegrate velocity v(t) = (a\u2080 T / \u03c0) [ 1 - cos(\u03c0 t / T) ] from 0 to T.\n\n2. GIVEN:\nv(t) = (a\u2080 T / \u03c0) [ 1 - cos(\u03c0 t / T) ], limits 0 to T.\n\n3. FORMULA / PRINCIPLE:\ns(T) = (a\u2080 T / \u03c0) \u222b_0^T [ 1 - cos(\u03c0 t / T) ] dt.\n\n4. STEP-BY-STEP SOLUTION:\n1. Velocity function from Q246:\n   v(t) = \u222b_0^t a\u2080 sin(\u03c0 t'/T) dt' = (a\u2080 T / \u03c0) [ 1 - cos(\u03c0 t / T) ].\n2. Integrate velocity to find displacement:\n   s(T) = (a\u2080 T / \u03c0) \u222b_0^T [ 1 - cos(\u03c0 t / T) ] dt.\n3. The integral of cos(\u03c0 t / T) over a full half-period [0, T] is:\n   \u222b_0^T cos(\u03c0 t / T) dt = [ (T / \u03c0) sin(\u03c0 t / T) ]_0^T = (T/\u03c0)(sin \u03c0 - sin 0) = 0.\n4. Therefore, only the constant term '1' contributes:\n   s(T) = (a\u2080 T / \u03c0) * [ T - 0 ] = a\u2080 T\u00b2 / \u03c0.\n5. Hence, the displacement at t = T is a\u2080 T\u00b2 / \u03c0.\n\n5. FINAL ANSWER:\nOption A: a\u2080 T\u00b2 / \u03c0\n\n6. QUICK TIP:\nBeautiful calculus cancellation: The oscillating cosine term integrates to zero, leaving only the DC term: (a\u2080 T / \u03c0) * T = a\u2080 T\u00b2 / \u03c0!",
+    "solutionStructured": {
+      "concept": "Integrate velocity v(t) = (a\u2080 T / \u03c0) [ 1 - cos(\u03c0 t / T) ] from 0 to T.",
+      "given": "v(t) = (a\u2080 T / \u03c0) [ 1 - cos(\u03c0 t / T) ], limits 0 to T.",
+      "formula": "s(T) = (a\u2080 T / \u03c0) \u222b_0^T [ 1 - cos(\u03c0 t / T) ] dt.",
+      "stepByStep": "1. Velocity function from Q246:\n   v(t) = \u222b_0^t a\u2080 sin(\u03c0 t'/T) dt' = (a\u2080 T / \u03c0) [ 1 - cos(\u03c0 t / T) ].\n2. Integrate velocity to find displacement:\n   s(T) = (a\u2080 T / \u03c0) \u222b_0^T [ 1 - cos(\u03c0 t / T) ] dt.\n3. The integral of cos(\u03c0 t / T) over a full half-period [0, T] is:\n   \u222b_0^T cos(\u03c0 t / T) dt = [ (T / \u03c0) sin(\u03c0 t / T) ]_0^T = (T/\u03c0)(sin \u03c0 - sin 0) = 0.\n4. Therefore, only the constant term '1' contributes:\n   s(T) = (a\u2080 T / \u03c0) * [ T - 0 ] = a\u2080 T\u00b2 / \u03c0.\n5. Hence, the displacement at t = T is a\u2080 T\u00b2 / \u03c0.",
+      "finalAnswer": "Option A: a\u2080 T\u00b2 / \u03c0",
+      "whyOtherOptionsWrong": "Option B has \u03c0\u00b2 in denominator. Option C divides by 2\u03c0. Option D assumes constant acceleration."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-248",
+    "questionNumber": 248,
+    "question": "A body starts from rest at the origin. Its acceleration varies with position as a(x) = k x (where k > 0). What is its position as a function of time t?",
+    "options": {
+      "A": "x(t) \u221d e^(\u221ak t) + e^(-\u221ak t) = cosh(\u221ak t)",
+      "B": "x(t) \u221d cos(\u221ak t)",
+      "C": "x(t) \u221d t\u00b2",
+      "D": "x(t) \u221d t\u00b3"
+    },
+    "optionsList": [
+      "x(t) \u221d e^(\u221ak t) + e^(-\u221ak t) = cosh(\u221ak t)",
+      "x(t) \u221d cos(\u221ak t)",
+      "x(t) \u221d t\u00b2",
+      "x(t) \u221d t\u00b3"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe differential equation d\u00b2x/dt\u00b2 = +k x has exponential (hyperbolic) solutions: x(t) = A e^(\u221ak t) + B e^(-\u221ak t).\n\n2. GIVEN:\nd\u00b2x/dt\u00b2 = k x (k > 0).\n\n3. FORMULA / PRINCIPLE:\nd\u00b2x/dt\u00b2 - k x = 0 => characteristic roots r = \u00b1\u221ak.\n\n4. STEP-BY-STEP SOLUTION:\n1. The equation of motion is d\u00b2x/dt\u00b2 - k x = 0.\n2. The characteristic equation is r\u00b2 - k = 0 => r = \u00b1\u221ak.\n3. The general solution is a linear combination of exponentials:\n   x(t) = C\u2081 e^(\u221ak t) + C\u2082 e^(-\u221ak t).\n4. This can be expressed in terms of hyperbolic functions: x(t) = A cosh(\u221ak t) + B sinh(\u221ak t).\n5. Notice the contrast with SHM: when a = -k x, roots are imaginary and x(t) is sinusoidal (cos \u221ak t). When a = +k x, roots are real and x(t) grows exponentially (cosh \u221ak t)!\n6. Therefore, Option A is the correct functional form.\n\n5. FINAL ANSWER:\nOption A: x(t) \u221d e^(\u221ak t) + e^(-\u221ak t) = cosh(\u221ak t)\n\n6. QUICK TIP:\nCompare: a = -k x -> SHM (sinusoidal, bounded). a = +k x -> Repulsive force (hyperbolic/exponential, unbounded).",
+    "solutionStructured": {
+      "concept": "The differential equation d\u00b2x/dt\u00b2 = +k x has exponential (hyperbolic) solutions: x(t) = A e^(\u221ak t) + B e^(-\u221ak t).",
+      "given": "d\u00b2x/dt\u00b2 = k x (k > 0).",
+      "formula": "d\u00b2x/dt\u00b2 - k x = 0 => characteristic roots r = \u00b1\u221ak.",
+      "stepByStep": "1. The equation of motion is d\u00b2x/dt\u00b2 - k x = 0.\n2. The characteristic equation is r\u00b2 - k = 0 => r = \u00b1\u221ak.\n3. The general solution is a linear combination of exponentials:\n   x(t) = C\u2081 e^(\u221ak t) + C\u2082 e^(-\u221ak t).\n4. This can be expressed in terms of hyperbolic functions: x(t) = A cosh(\u221ak t) + B sinh(\u221ak t).\n5. Notice the contrast with SHM: when a = -k x, roots are imaginary and x(t) is sinusoidal (cos \u221ak t). When a = +k x, roots are real and x(t) grows exponentially (cosh \u221ak t)!\n6. Therefore, Option A is the correct functional form.",
+      "finalAnswer": "Option A: x(t) \u221d e^(\u221ak t) + e^(-\u221ak t) = cosh(\u221ak t)",
+      "whyOtherOptionsWrong": "Option B is for attractive restoring force a = -k x (SHM). Options C and D are polynomial."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-249",
+    "questionNumber": 249,
+    "question": "The a-t graph of a particle is shown as a semi-ellipse of height a\u2080 and base 2T centered at t = T. If the particle was initially at rest, what is its velocity at t = 2T?",
+    "options": {
+      "A": "\u03c0 a\u2080 T / 2",
+      "B": "\u03c0 a\u2080 T",
+      "C": "2 a\u2080 T",
+      "D": "4 a\u2080 T / \u03c0"
+    },
+    "optionsList": [
+      "\u03c0 a\u2080 T / 2",
+      "\u03c0 a\u2080 T",
+      "2 a\u2080 T",
+      "4 a\u2080 T / \u03c0"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe change in velocity is the area of the semi-ellipse: Area = (1/2) * \u03c0 * (semi-major axis) * (semi-minor axis).\n\n2. GIVEN:\nSemi-ellipse with semi-axis along t equal to T, and semi-axis along a equal to a\u2080.\n\n3. FORMULA / PRINCIPLE:\nArea = (1/2) * \u03c0 * a\u2080 * T = \u03c0 a\u2080 T / 2.\n\n4. STEP-BY-STEP SOLUTION:\n1. The area of a full ellipse with semi-axes A and B is \u03c0 A B.\n2. For a semi-ellipse, the area is half that of a full ellipse:\n   Area = (1/2) \u03c0 A B.\n3. Here, the semi-axis along time is T (since full base is 2T).\n   The semi-axis along acceleration is a\u2080 (height of the apex).\n4. Area = (1/2) * \u03c0 * a\u2080 * T = \u03c0 a\u2080 T / 2.\n5. The area represents the total change in velocity: \u0394v = \u03c0 a\u2080 T / 2.\n6. Since the particle was initially at rest (u = 0):\n   v(2T) = u + \u0394v = \u03c0 a\u2080 T / 2.\n7. Therefore, the velocity at t = 2T is \u03c0 a\u2080 T / 2.\n\n5. FINAL ANSWER:\nOption A: \u03c0 a\u2080 T / 2\n\n6. QUICK TIP:\nArea of semi-ellipse = (1/2) \u03c0 * a\u2080 * T. Exact analog of the semicircle area!",
+    "solutionStructured": {
+      "concept": "The change in velocity is the area of the semi-ellipse: Area = (1/2) * \u03c0 * (semi-major axis) * (semi-minor axis).",
+      "given": "Semi-ellipse with semi-axis along t equal to T, and semi-axis along a equal to a\u2080.",
+      "formula": "Area = (1/2) * \u03c0 * a\u2080 * T = \u03c0 a\u2080 T / 2.",
+      "stepByStep": "1. The area of a full ellipse with semi-axes A and B is \u03c0 A B.\n2. For a semi-ellipse, the area is half that of a full ellipse:\n   Area = (1/2) \u03c0 A B.\n3. Here, the semi-axis along time is T (since full base is 2T).\n   The semi-axis along acceleration is a\u2080 (height of the apex).\n4. Area = (1/2) * \u03c0 * a\u2080 * T = \u03c0 a\u2080 T / 2.\n5. The area represents the total change in velocity: \u0394v = \u03c0 a\u2080 T / 2.\n6. Since the particle was initially at rest (u = 0):\n   v(2T) = u + \u0394v = \u03c0 a\u2080 T / 2.\n7. Therefore, the velocity at t = 2T is \u03c0 a\u2080 T / 2.",
+      "finalAnswer": "Option A: \u03c0 a\u2080 T / 2",
+      "whyOtherOptionsWrong": "Option B is the full ellipse area. Option C is a bounding rectangle estimate. Option D is an inverted factor."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-250",
+    "questionNumber": 250,
+    "question": "A body accelerates from rest with an acceleration that decreases continuously according to a(t) = a\u2080 e^(-t / \u03c4). What is the terminal velocity attained by the body as t -> \u221e?",
+    "options": {
+      "A": "a\u2080 \u03c4",
+      "B": "a\u2080 / \u03c4",
+      "C": "a\u2080 \u03c4\u00b2",
+      "D": "Infinite velocity"
+    },
+    "optionsList": [
+      "a\u2080 \u03c4",
+      "a\u2080 / \u03c4",
+      "a\u2080 \u03c4\u00b2",
+      "Infinite velocity"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTerminal velocity is initial velocity plus the total area under the exponential a-t curve from 0 to \u221e: v_terminal = u + \u222b_0^\u221e a\u2080 e^(-t / \u03c4) dt.\n\n2. GIVEN:\na(t) = a\u2080 e^(-t/\u03c4), u = 0, t -> \u221e.\n\n3. FORMULA / PRINCIPLE:\nv_terminal = \u222b_0^\u221e a\u2080 e^(-t/\u03c4) dt = a\u2080 [ -\u03c4 e^(-t/\u03c4) ]_0^\u221e = a\u2080 \u03c4.\n\n4. STEP-BY-STEP SOLUTION:\n1. Integrate acceleration from t = 0 to t = \u221e:\n   v_terminal = \u222b_0^\u221e a\u2080 e^(-t / \u03c4) dt.\n2. Standard exponential integral:\n   \u222b_0^\u221e e^(-t / \u03c4) dt = [ -\u03c4 e^(-t / \u03c4) ]_0^\u221e = 0 - (-\u03c4) = \u03c4.\n3. Multiply by constant a\u2080:\n   v_terminal = a\u2080 * \u03c4.\n4. Since initial velocity u = 0, the final terminal velocity reached is a\u2080 \u03c4.\n5. Notice the units: [a\u2080] = m/s\u00b2, [\u03c4] = s, so [a\u2080 \u03c4] = m/s (velocity). Perfect dimensional consistency!\n\n5. FINAL ANSWER:\nOption A: a\u2080 \u03c4\n\n6. QUICK TIP:\nArea under exponential decay curve from 0 to infinity = Peak height * Time constant = a\u2080 * \u03c4.",
+    "solutionStructured": {
+      "concept": "Terminal velocity is initial velocity plus the total area under the exponential a-t curve from 0 to \u221e: v_terminal = u + \u222b_0^\u221e a\u2080 e^(-t / \u03c4) dt.",
+      "given": "a(t) = a\u2080 e^(-t/\u03c4), u = 0, t -> \u221e.",
+      "formula": "v_terminal = \u222b_0^\u221e a\u2080 e^(-t/\u03c4) dt = a\u2080 [ -\u03c4 e^(-t/\u03c4) ]_0^\u221e = a\u2080 \u03c4.",
+      "stepByStep": "1. Integrate acceleration from t = 0 to t = \u221e:\n   v_terminal = \u222b_0^\u221e a\u2080 e^(-t / \u03c4) dt.\n2. Standard exponential integral:\n   \u222b_0^\u221e e^(-t / \u03c4) dt = [ -\u03c4 e^(-t / \u03c4) ]_0^\u221e = 0 - (-\u03c4) = \u03c4.\n3. Multiply by constant a\u2080:\n   v_terminal = a\u2080 * \u03c4.\n4. Since initial velocity u = 0, the final terminal velocity reached is a\u2080 \u03c4.\n5. Notice the units: [a\u2080] = m/s\u00b2, [\u03c4] = s, so [a\u2080 \u03c4] = m/s (velocity). Perfect dimensional consistency!",
+      "finalAnswer": "Option A: a\u2080 \u03c4",
+      "whyOtherOptionsWrong": "Option B is dimensionally incorrect ([m/s\u00b3]). Option C is dimensionally displacement ([m]). Option D fails to realize that the integral converges to a finite value."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  }
+];

@@ -33,12 +33,51 @@
         "completedAt": { "type": "string", "format": "date-time" }
       },
       "required": ["userId", "score"]
+    },
+    "ChapterwiseMCQ": {
+      "title": "ChapterwiseMCQ",
+      "description": "NCERT-aligned NEET UG chapter-wise multiple choice questions with complete 6-part solutions",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "questionNumber": { "type": "number" },
+        "question": { "type": "string" },
+        "options": {
+          "type": "object",
+          "properties": {
+            "A": { "type": "string" },
+            "B": { "type": "string" },
+            "C": { "type": "string" },
+            "D": { "type": "string" }
+          }
+        },
+        "correctAnswer": { "type": "string", "enum": ["A", "B", "C", "D"] },
+        "explanation": { "type": "string" },
+        "difficulty": { "type": "string", "enum": ["Easy", "Medium", "Hard"] },
+        "subject": { "type": "string" },
+        "class": { "type": "string" },
+        "chapter": { "type": "string" },
+        "chapterId": { "type": "string" },
+        "topic": { "type": "string" },
+        "source": { "type": "string" },
+        "isPYQ": { "type": "boolean" },
+        "pyqYear": { "type": "number" }
+      },
+      "required": ["question", "options", "correctAnswer", "explanation", "difficulty", "subject", "chapter", "source", "isPYQ"]
     }
   },
   "firestore": {
-    "users": {
-      "entity": "UserProfile",
-      "security": "allow read, write: if request.auth != null && request.auth.uid == userId;"
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "Stores student user profiles"
+    },
+    "/users/{userId}/testHistory/{historyId}": {
+      "schema": "UserTestHistory",
+      "description": "Student test history records"
+    },
+    "/chapterwise_mcqs/{chapterId}/questions/{questionId}": {
+      "schema": "ChapterwiseMCQ",
+      "description": "Verified chapterwise multiple choice questions"
     }
   }
 }

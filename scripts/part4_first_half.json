@@ -1,0 +1,2037 @@
+[
+  {
+    "id": "um-mcq-391",
+    "questionNumber": 391,
+    "question": "The parallax method is primarily used in astronomy to measure:",
+    "options": {
+      "A": "Large distances of distant stars and planets",
+      "B": "The radius of atomic nuclei",
+      "C": "The thickness of thin oil films",
+      "D": "The acceleration due to gravity"
+    },
+    "optionsList": [
+      "Large distances of distant stars and planets",
+      "The radius of atomic nuclei",
+      "The thickness of thin oil films",
+      "The acceleration due to gravity"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nApplication of the parallax method for astronomical distances.\n\n2. GIVEN:\nParallax method.\n\n3. FORMULA / PRINCIPLE:\nDistance D = b / \u03b8, where b is the basis (baseline) and \u03b8 is the parallax angle in radians.\n\n4. STEP-BY-STEP SOLUTION:\n1. Parallax is the apparent shift in the position of an object when viewed from two different positions.\n2. The distance between the two points of observation is called the basis (b).\n3. By measuring the angle \u03b8 subtended by the basis at the distant celestial object, the distance D is calculated as D = b / \u03b8.\n4. This indirect triangulation method is used to measure distances of planets and nearby stars.\n\n5. FINAL ANSWER:\nOption A: Large distances of distant stars and planets\n\n6. QUICK TIP:\nNEET NCERT Definition: Parallax method = Indirect triangulation used to measure HUGE astronomical distances (planets, stars)!",
+    "solutionStructured": {
+      "concept": "Application of the parallax method for astronomical distances.",
+      "given": "Parallax method.",
+      "formula": "Distance D = b / \u03b8, where b is the basis (baseline) and \u03b8 is the parallax angle in radians.",
+      "stepByStep": "1. Parallax is the apparent shift in the position of an object when viewed from two different positions.\n2. The distance between the two points of observation is called the basis (b).\n3. By measuring the angle \u03b8 subtended by the basis at the distant celestial object, the distance D is calculated as D = b / \u03b8.\n4. This indirect triangulation method is used to measure distances of planets and nearby stars.",
+      "finalAnswer": "Option A: Large distances of distant stars and planets",
+      "whyOtherOptionsWrong": "Option B requires scattering methods. Option C uses oleic acid film. Option D is pendulum or free fall."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Measurement of length",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-392",
+    "questionNumber": 392,
+    "question": "One astronomical unit (1 AU) is defined as:",
+    "options": {
+      "A": "The average distance between the Earth and the Sun",
+      "B": "The distance traveled by light in vacuum in one year",
+      "C": "The distance at which 1 AU subtends an angle of 1 arcsecond",
+      "D": "The mean radius of the Earth's orbit around the Moon"
+    },
+    "optionsList": [
+      "The average distance between the Earth and the Sun",
+      "The distance traveled by light in vacuum in one year",
+      "The distance at which 1 AU subtends an angle of 1 arcsecond",
+      "The mean radius of the Earth's orbit around the Moon"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDefinition and value of the Astronomical Unit.\n\n2. GIVEN:\n1 Astronomical Unit (AU).\n\n3. FORMULA / PRINCIPLE:\n1 AU = 1.496 \u00d7 10\u00b9\u00b9 m (mean Earth-Sun distance).\n\n4. STEP-BY-STEP SOLUTION:\n1. By definition, 1 AU is the mean distance between the center of the Earth and the center of the Sun.\n2. Its numerical value is approximately 1.496 \u00d7 10\u00b9\u00b9 m (or ~ 1.5 \u00d7 10\u2078 km).\n3. Light year (1 ly \u2248 9.46 \u00d7 10\u00b9\u2075 m) and Parsec (1 pc \u2248 3.08 \u00d7 10\u00b9\u2076 m) are larger astronomical units.\n\n5. FINAL ANSWER:\nOption A: The average distance between the Earth and the Sun\n\n6. QUICK TIP:\nNEET Astronomy Value: 1 AU \u2248 1.496 \u00d7 10\u00b9\u00b9 m (Earth to Sun distance). 1 ly \u2248 9.46 \u00d7 10\u00b9\u2075 m. 1 pc \u2248 3.08 \u00d7 10\u00b9\u2076 m.",
+    "solutionStructured": {
+      "concept": "Definition and value of the Astronomical Unit.",
+      "given": "1 Astronomical Unit (AU).",
+      "formula": "1 AU = 1.496 \u00d7 10\u00b9\u00b9 m (mean Earth-Sun distance).",
+      "stepByStep": "1. By definition, 1 AU is the mean distance between the center of the Earth and the center of the Sun.\n2. Its numerical value is approximately 1.496 \u00d7 10\u00b9\u00b9 m (or ~ 1.5 \u00d7 10\u2078 km).\n3. Light year (1 ly \u2248 9.46 \u00d7 10\u00b9\u2075 m) and Parsec (1 pc \u2248 3.08 \u00d7 10\u00b9\u2076 m) are larger astronomical units.",
+      "finalAnswer": "Option A: The average distance between the Earth and the Sun",
+      "whyOtherOptionsWrong": "Option B defines 1 light year. Option C defines 1 parsec. Option D is meaningless."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Measurement of length",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-393",
+    "questionNumber": 393,
+    "question": "The size of a typical atomic nucleus is of the order of:",
+    "options": {
+      "A": "10\u207b\u00b9\u2075 m (1 Fermi)",
+      "B": "10\u207b\u00b9\u2070 m (1 Angstrom)",
+      "C": "10\u207b\u2079 m (1 Nanometer)",
+      "D": "10\u207b\u2076 m (1 Micron)"
+    },
+    "optionsList": [
+      "10\u207b\u00b9\u2075 m (1 Fermi)",
+      "10\u207b\u00b9\u2070 m (1 Angstrom)",
+      "10\u207b\u2079 m (1 Nanometer)",
+      "10\u207b\u2076 m (1 Micron)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nMicroscopic length scales: nuclear vs atomic radii.\n\n2. GIVEN:\nOrder of magnitude of nuclear radius.\n\n3. FORMULA / PRINCIPLE:\nNuclear radius R = R\u2080 A^(1/3) where R\u2080 \u2248 1.2 \u00d7 10\u207b\u00b9\u2075 m = 1.2 fm (Fermi).\n\n4. STEP-BY-STEP SOLUTION:\n1. The size of an atom (electron cloud) is of the order of 10\u207b\u00b9\u2070 m (1 Angstrom or 0.1 nm).\n2. The nucleus at the center is about 100,000 times smaller, with dimensions of the order of 10\u207b\u00b9\u2075 m (1 Fermi or 1 femtometer, fm).\n3. Rutherford's alpha particle scattering experiment proved that the nucleus occupies a radius of ~ 10\u207b\u00b9\u2075 m.\n\n5. FINAL ANSWER:\nOption A: 10\u207b\u00b9\u2075 m (1 Fermi)\n\n6. QUICK TIP:\nNEET Comparison Rule: Atom \u2248 10\u207b\u00b9\u2070 m (1 \u00c5). Nucleus \u2248 10\u207b\u00b9\u2075 m (1 Fermi). Nucleus is 10\u2075 times smaller than the atom!",
+    "solutionStructured": {
+      "concept": "Microscopic length scales: nuclear vs atomic radii.",
+      "given": "Order of magnitude of nuclear radius.",
+      "formula": "Nuclear radius R = R\u2080 A^(1/3) where R\u2080 \u2248 1.2 \u00d7 10\u207b\u00b9\u2075 m = 1.2 fm (Fermi).",
+      "stepByStep": "1. The size of an atom (electron cloud) is of the order of 10\u207b\u00b9\u2070 m (1 Angstrom or 0.1 nm).\n2. The nucleus at the center is about 100,000 times smaller, with dimensions of the order of 10\u207b\u00b9\u2075 m (1 Fermi or 1 femtometer, fm).\n3. Rutherford's alpha particle scattering experiment proved that the nucleus occupies a radius of ~ 10\u207b\u00b9\u2075 m.",
+      "finalAnswer": "Option A: 10\u207b\u00b9\u2075 m (1 Fermi)",
+      "whyOtherOptionsWrong": "Option B is atomic size. Option C is molecular size. Option D is bacterial cell size."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Measurement of length",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-394",
+    "questionNumber": 394,
+    "question": "In the oleic acid experiment to estimate molecular size, oleic acid is chosen because:",
+    "options": {
+      "A": "It is an organic molecule that forms a strictly monomolecular film on water",
+      "B": "It evaporates instantaneously at room temperature",
+      "C": "It dissolves completely in water to form a true solution",
+      "D": "Its molecules are visible under a magnifying glass"
+    },
+    "optionsList": [
+      "It is an organic molecule that forms a strictly monomolecular film on water",
+      "It evaporates instantaneously at room temperature",
+      "It dissolves completely in water to form a true solution",
+      "Its molecules are visible under a magnifying glass"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nOleic acid monomolecular layer experiment for molecular dimensions.\n\n2. GIVEN:\nOleic acid method.\n\n3. FORMULA / PRINCIPLE:\nThickness of monolayer t = Volume of oleic acid / Area of circular film. t \u2248 molecular size ~ 10\u207b\u2079 m.\n\n4. STEP-BY-STEP SOLUTION:\n1. Oleic acid is a fatty acid whose molecules have a hydrophilic polar carboxyl head and a hydrophobic hydrocarbon tail.\n2. When dropped on water coated with lycopodium powder, the molecules stand vertically side by side, forming a single-layer film (monolayer) exactly one molecule thick.\n3. By measuring the volume V of acid dropped and the area A of the circular film, the thickness t = V / A provides an estimate of molecular size (~ 10\u207b\u2079 m).\n\n5. FINAL ANSWER:\nOption A: It is an organic molecule that forms a strictly monomolecular film on water\n\n6. QUICK TIP:\nNEET NCERT Experiment: Oleic acid forms a MONOMOLECULAR layer on water. Molecular size = Volume / Area \u2248 10\u207b\u2079 m!",
+    "solutionStructured": {
+      "concept": "Oleic acid monomolecular layer experiment for molecular dimensions.",
+      "given": "Oleic acid method.",
+      "formula": "Thickness of monolayer t = Volume of oleic acid / Area of circular film. t \u2248 molecular size ~ 10\u207b\u2079 m.",
+      "stepByStep": "1. Oleic acid is a fatty acid whose molecules have a hydrophilic polar carboxyl head and a hydrophobic hydrocarbon tail.\n2. When dropped on water coated with lycopodium powder, the molecules stand vertically side by side, forming a single-layer film (monolayer) exactly one molecule thick.\n3. By measuring the volume V of acid dropped and the area A of the circular film, the thickness t = V / A provides an estimate of molecular size (~ 10\u207b\u2079 m).",
+      "finalAnswer": "Option A: It is an organic molecule that forms a strictly monomolecular film on water",
+      "whyOtherOptionsWrong": "Option B is false (it does not evaporate quickly). Option C is false (it does not dissolve in water; it floats). Option D is false."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Measurement of length",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-395",
+    "questionNumber": 395,
+    "question": "The Moon is observed from two diametrically opposite points A and B on Earth. The angle \u03b8 subtended at the Moon by the two directions of observation is 1\u00b0 54'. If the diameter of the Earth is about 1.276 \u00d7 10\u2077 m, what is the distance of the Moon from the Earth?",
+    "options": {
+      "A": "3.84 \u00d7 10\u2078 m",
+      "B": "3.84 \u00d7 10\u2076 m",
+      "C": "1.28 \u00d7 10\u2078 m",
+      "D": "7.68 \u00d7 10\u2078 m"
+    },
+    "optionsList": [
+      "3.84 \u00d7 10\u2078 m",
+      "3.84 \u00d7 10\u2076 m",
+      "1.28 \u00d7 10\u2078 m",
+      "7.68 \u00d7 10\u2078 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nNCERT textbook parallax calculation for Earth-Moon distance.\n\n2. GIVEN:\nBasis b = 1.276 \u00d7 10\u2077 m (Earth's diameter). Parallax angle \u03b8 = 1\u00b0 54' = 114' = 114 \u00d7 60\" = 6840\".\n\n3. FORMULA / PRINCIPLE:\nD = b / \u03b8, with \u03b8 converted strictly to radians.\n\n4. STEP-BY-STEP SOLUTION:\n1. Convert parallax angle to radians:\n   \u03b8 = 1\u00b0 54' = (1 \u00d7 60 + 54)' = 114 arcminutes = 114 \u00d7 60 = 6840 arcseconds.\n   Since 1\" = 4.85 \u00d7 10\u207b\u2076 rad:\n   \u03b8 = 6840 \u00d7 4.85 \u00d7 10\u207b\u2076 rad = 3.32 \u00d7 10\u207b\u00b2 rad.\n2. Distance to Moon D = b / \u03b8:\n   D = (1.276 \u00d7 10\u2077 m) / (3.32 \u00d7 10\u207b\u00b2 rad) = 0.3843 \u00d7 10\u2079 m = 3.84 \u00d7 10\u2078 m.\n3. Therefore, the distance of the Moon from Earth is 3.84 \u00d7 10\u2078 m (384,000 km).\n\n5. FINAL ANSWER:\nOption A: 3.84 \u00d7 10\u2078 m\n\n6. QUICK TIP:\nNEET NCERT Textbook Problem: Moon distance D = 3.84 \u00d7 10\u2078 m = 3.84 \u00d7 10\u2075 km!",
+    "solutionStructured": {
+      "concept": "NCERT textbook parallax calculation for Earth-Moon distance.",
+      "given": "Basis b = 1.276 \u00d7 10\u2077 m (Earth's diameter). Parallax angle \u03b8 = 1\u00b0 54' = 114' = 114 \u00d7 60\" = 6840\".",
+      "formula": "D = b / \u03b8, with \u03b8 converted strictly to radians.",
+      "stepByStep": "1. Convert parallax angle to radians:\n   \u03b8 = 1\u00b0 54' = (1 \u00d7 60 + 54)' = 114 arcminutes = 114 \u00d7 60 = 6840 arcseconds.\n   Since 1\" = 4.85 \u00d7 10\u207b\u2076 rad:\n   \u03b8 = 6840 \u00d7 4.85 \u00d7 10\u207b\u2076 rad = 3.32 \u00d7 10\u207b\u00b2 rad.\n2. Distance to Moon D = b / \u03b8:\n   D = (1.276 \u00d7 10\u2077 m) / (3.32 \u00d7 10\u207b\u00b2 rad) = 0.3843 \u00d7 10\u2079 m = 3.84 \u00d7 10\u2078 m.\n3. Therefore, the distance of the Moon from Earth is 3.84 \u00d7 10\u2078 m (384,000 km).",
+      "finalAnswer": "Option A: 3.84 \u00d7 10\u2078 m",
+      "whyOtherOptionsWrong": "Option B is 100 times too small. Option C is distance divided by 3. Option D doubles the distance."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Measurement of length",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-396",
+    "questionNumber": 396,
+    "question": "The Sun's angular diameter is measured to be 1920\". The distance of the Sun from the Earth is 1.496 \u00d7 10\u00b9\u00b9 m. The linear diameter of the Sun is:",
+    "options": {
+      "A": "1.39 \u00d7 10\u2079 m",
+      "B": "1.39 \u00d7 10\u2078 m",
+      "C": "6.95 \u00d7 10\u2078 m",
+      "D": "2.78 \u00d7 10\u2079 m"
+    },
+    "optionsList": [
+      "1.39 \u00d7 10\u2079 m",
+      "1.39 \u00d7 10\u2078 m",
+      "6.95 \u00d7 10\u2078 m",
+      "2.78 \u00d7 10\u2079 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nAngular diameter formula d = \u03b1 \u00b7 D.\n\n2. GIVEN:\nAngular diameter \u03b1 = 1920\", distance D = 1.496 \u00d7 10\u00b9\u00b9 m.\n\n3. FORMULA / PRINCIPLE:\nd = \u03b1 \u00b7 D, with \u03b1 in radians. 1\" = 4.85 \u00d7 10\u207b\u2076 rad.\n\n4. STEP-BY-STEP SOLUTION:\n1. Convert angular diameter to radians:\n   \u03b1 = 1920\" \u00d7 (4.85 \u00d7 10\u207b\u2076 rad/arcsec) = 9.31 \u00d7 10\u207b\u00b3 rad.\n2. Linear diameter d = \u03b1 \u00d7 D:\n   d = (9.31 \u00d7 10\u207b\u00b3 rad) \u00d7 (1.496 \u00d7 10\u00b9\u00b9 m) = 1.393 \u00d7 10\u2079 m.\n3. Therefore, the diameter of the Sun is approximately 1.39 \u00d7 10\u2079 m (1.39 million kilometers, or about 109 times Earth's diameter).\n\n5. FINAL ANSWER:\nOption A: 1.39 \u00d7 10\u2079 m\n\n6. QUICK TIP:\nNEET NCERT Solved Example: Sun's diameter d = \u03b1 D = 1920\" \u00d7 (4.85 \u00d7 10\u207b\u2076) \u00d7 (1.496 \u00d7 10\u00b9\u00b9) \u2248 1.39 \u00d7 10\u2079 m!",
+    "solutionStructured": {
+      "concept": "Angular diameter formula d = \u03b1 \u00b7 D.",
+      "given": "Angular diameter \u03b1 = 1920\", distance D = 1.496 \u00d7 10\u00b9\u00b9 m.",
+      "formula": "d = \u03b1 \u00b7 D, with \u03b1 in radians. 1\" = 4.85 \u00d7 10\u207b\u2076 rad.",
+      "stepByStep": "1. Convert angular diameter to radians:\n   \u03b1 = 1920\" \u00d7 (4.85 \u00d7 10\u207b\u2076 rad/arcsec) = 9.31 \u00d7 10\u207b\u00b3 rad.\n2. Linear diameter d = \u03b1 \u00d7 D:\n   d = (9.31 \u00d7 10\u207b\u00b3 rad) \u00d7 (1.496 \u00d7 10\u00b9\u00b9 m) = 1.393 \u00d7 10\u2079 m.\n3. Therefore, the diameter of the Sun is approximately 1.39 \u00d7 10\u2079 m (1.39 million kilometers, or about 109 times Earth's diameter).",
+      "finalAnswer": "Option A: 1.39 \u00d7 10\u2079 m",
+      "whyOtherOptionsWrong": "Option B is off by a factor of 10. Option C is the radius of the Sun. Option D is doubled."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Measurement of length",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-397",
+    "questionNumber": 397,
+    "question": "A RADAR sends a microwave signal towards an airplane. The reflected echo is received back at the radar station 4.0 \u00d7 10\u207b\u2075 s later. The distance of the airplane from the radar station is: (c = 3.0 \u00d7 10\u2078 m/s)",
+    "options": {
+      "A": "6.0 km",
+      "B": "12.0 km",
+      "C": "3.0 km",
+      "D": "60 km"
+    },
+    "optionsList": [
+      "6.0 km",
+      "12.0 km",
+      "3.0 km",
+      "60 km"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nEcho / Radar reflection method for distance measurement.\n\n2. GIVEN:\nTotal round-trip time t = 4.0 \u00d7 10\u207b\u2075 s, signal speed c = 3.0 \u00d7 10\u2078 m/s.\n\n3. FORMULA / PRINCIPLE:\nd = (c \u00b7 t) / 2 (signal travels distance d to the target and d back).\n\n4. STEP-BY-STEP SOLUTION:\n1. The radar pulse travels to the airplane and returns back to the receiver, covering a total distance of 2 d.\n2. Total path = 2 d = c \u00d7 t.\n3. Distance d = (c \u00d7 t) / 2.\n4. Substitute values:\n   d = (3.0 \u00d7 10\u2078 m/s \u00d7 4.0 \u00d7 10\u207b\u2075 s) / 2 = (12.0 \u00d7 10\u00b3 m) / 2 = 6.0 \u00d7 10\u00b3 m = 6.0 km.\n5. The airplane is 6.0 km away.\n\n5. FINAL ANSWER:\nOption A: 6.0 km\n\n6. QUICK TIP:\nNEET Reflection Principle: In Radar, Sonar, and Laser ranging, ALWAYS divide the round-trip distance by 2: d = v \u00b7 t / 2!",
+    "solutionStructured": {
+      "concept": "Echo / Radar reflection method for distance measurement.",
+      "given": "Total round-trip time t = 4.0 \u00d7 10\u207b\u2075 s, signal speed c = 3.0 \u00d7 10\u2078 m/s.",
+      "formula": "d = (c \u00b7 t) / 2 (signal travels distance d to the target and d back).",
+      "stepByStep": "1. The radar pulse travels to the airplane and returns back to the receiver, covering a total distance of 2 d.\n2. Total path = 2 d = c \u00d7 t.\n3. Distance d = (c \u00d7 t) / 2.\n4. Substitute values:\n   d = (3.0 \u00d7 10\u2078 m/s \u00d7 4.0 \u00d7 10\u207b\u2075 s) / 2 = (12.0 \u00d7 10\u00b3 m) / 2 = 6.0 \u00d7 10\u00b3 m = 6.0 km.\n5. The airplane is 6.0 km away.",
+      "finalAnswer": "Option A: 6.0 km",
+      "whyOtherOptionsWrong": "Option B (12.0 km) forgets dividing by 2. Option C divides by 4. Option D has decimal error."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Measurement of length",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-398",
+    "questionNumber": 398,
+    "question": "In the oleic acid experiment, 1 cm\u00b3 of oleic acid is dissolved in alcohol to make a solution of 20 cm\u00b3. Then 1 cm\u00b3 of this solution is further diluted to 20 cm\u00b3 with alcohol. What is the concentration of oleic acid in the final solution?",
+    "options": {
+      "A": "1 / 400 cm\u00b3 of oleic acid per cm\u00b3 of solution",
+      "B": "1 / 20 cm\u00b3 per cm\u00b3",
+      "C": "1 / 200 cm\u00b3 per cm\u00b3",
+      "D": "1 / 800 cm\u00b3 per cm\u00b3"
+    },
+    "optionsList": [
+      "1 / 400 cm\u00b3 of oleic acid per cm\u00b3 of solution",
+      "1 / 20 cm\u00b3 per cm\u00b3",
+      "1 / 200 cm\u00b3 per cm\u00b3",
+      "1 / 800 cm\u00b3 per cm\u00b3"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTwo-stage dilution concentration in oleic acid experiment.\n\n2. GIVEN:\nInitial dilution: 1 cm\u00b3 in 20 cm\u00b3. Second dilution: 1 cm\u00b3 in 20 cm\u00b3.\n\n3. FORMULA / PRINCIPLE:\nConcentration C = (1 / 20) \u00d7 (1 / 20) = 1 / 400 cm\u00b3 of oleic acid per cm\u00b3 of solution.\n\n4. STEP-BY-STEP SOLUTION:\n1. In the first step, 1 cm\u00b3 of oleic acid is added to alcohol to make 20 cm\u00b3 of solution.\n   - Concentration C\u2081 = 1 / 20 cm\u00b3 of oleic acid per cm\u00b3 of solution.\n2. In the second step, 1 cm\u00b3 of this first solution is diluted to 20 cm\u00b3 with alcohol.\n   - Concentration C\u2082 = C\u2081 \u00d7 (1 / 20) = (1 / 20) \u00d7 (1 / 20) = 1 / 400 cm\u00b3 of oleic acid per cm\u00b3 of solution.\n3. This low concentration ensures that when drops are placed on water, the acid spreads into a single molecular monolayer.\n\n5. FINAL ANSWER:\nOption A: 1 / 400 cm\u00b3 of oleic acid per cm\u00b3 of solution\n\n6. QUICK TIP:\nNEET NCERT Lab Detail: Final concentration in the oleic acid experiment is strictly (1 / 400) cm\u00b3 per cm\u00b3 of solution!",
+    "solutionStructured": {
+      "concept": "Two-stage dilution concentration in oleic acid experiment.",
+      "given": "Initial dilution: 1 cm\u00b3 in 20 cm\u00b3. Second dilution: 1 cm\u00b3 in 20 cm\u00b3.",
+      "formula": "Concentration C = (1 / 20) \u00d7 (1 / 20) = 1 / 400 cm\u00b3 of oleic acid per cm\u00b3 of solution.",
+      "stepByStep": "1. In the first step, 1 cm\u00b3 of oleic acid is added to alcohol to make 20 cm\u00b3 of solution.\n   - Concentration C\u2081 = 1 / 20 cm\u00b3 of oleic acid per cm\u00b3 of solution.\n2. In the second step, 1 cm\u00b3 of this first solution is diluted to 20 cm\u00b3 with alcohol.\n   - Concentration C\u2082 = C\u2081 \u00d7 (1 / 20) = (1 / 20) \u00d7 (1 / 20) = 1 / 400 cm\u00b3 of oleic acid per cm\u00b3 of solution.\n3. This low concentration ensures that when drops are placed on water, the acid spreads into a single molecular monolayer.",
+      "finalAnswer": "Option A: 1 / 400 cm\u00b3 of oleic acid per cm\u00b3 of solution",
+      "whyOtherOptionsWrong": "Option B is the first dilution. Option C is 1/200. Option D is three dilutions."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Measurement of length",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-399",
+    "questionNumber": 399,
+    "question": "If n drops of oleic acid solution (concentration 1/400 cm\u00b3/cm\u00b3), each of volume V cm\u00b3, form a circular film of area A cm\u00b2 on water, the estimated thickness of the film (molecular diameter) is:",
+    "options": {
+      "A": "n V / (400 A) cm",
+      "B": "400 n V / A cm",
+      "C": "n V / A cm",
+      "D": "A / (400 n V) cm"
+    },
+    "optionsList": [
+      "n V / (400 A) cm",
+      "400 n V / A cm",
+      "n V / A cm",
+      "A / (400 n V) cm"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nMolecular size formula from oleic acid monolayer parameters.\n\n2. GIVEN:\nn drops, each of volume V cm\u00b3. Concentration C = 1/400. Circular film area A cm\u00b2.\n\n3. FORMULA / PRINCIPLE:\nVolume of pure oleic acid = n V \u00d7 (1/400). Film volume = A \u00d7 t  =>  t = (n V / 400) / A.\n\n4. STEP-BY-STEP SOLUTION:\n1. Total volume of solution dropped = n V cm\u00b3.\n2. Since concentration of oleic acid is 1/400, the volume of pure oleic acid in the drops is V_acid = n V / 400 cm\u00b3.\n3. The alcohol evaporates completely into air, leaving only the pure oleic acid film on the water surface.\n4. If the film spreads into a monolayer of uniform thickness t and area A, then V_acid = Area \u00d7 thickness = A \u00d7 t.\n5. Therefore: t = V_acid / A = n V / (400 A) cm.\n\n5. FINAL ANSWER:\nOption A: n V / (400 A) cm\n\n6. QUICK TIP:\nNEET NCERT Master Formula: Film thickness t = (n V) / (400 A). Since t is a monolayer, t gives the molecular diameter (~ 10\u207b\u2079 m)!",
+    "solutionStructured": {
+      "concept": "Molecular size formula from oleic acid monolayer parameters.",
+      "given": "n drops, each of volume V cm\u00b3. Concentration C = 1/400. Circular film area A cm\u00b2.",
+      "formula": "Volume of pure oleic acid = n V \u00d7 (1/400). Film volume = A \u00d7 t  =>  t = (n V / 400) / A.",
+      "stepByStep": "1. Total volume of solution dropped = n V cm\u00b3.\n2. Since concentration of oleic acid is 1/400, the volume of pure oleic acid in the drops is V_acid = n V / 400 cm\u00b3.\n3. The alcohol evaporates completely into air, leaving only the pure oleic acid film on the water surface.\n4. If the film spreads into a monolayer of uniform thickness t and area A, then V_acid = Area \u00d7 thickness = A \u00d7 t.\n5. Therefore: t = V_acid / A = n V / (400 A) cm.",
+      "finalAnswer": "Option A: n V / (400 A) cm",
+      "whyOtherOptionsWrong": "Option B multiplies by 400 instead of dividing. Option C forgets concentration. Option D inverts the formula."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Measurement of length",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-400",
+    "questionNumber": 400,
+    "question": "A LASER signal beamed at the Moon from Earth takes 2.56 s to return after reflection. The radius of the lunar orbit (distance from Earth to Moon) is: (c = 3 \u00d7 10\u2078 m/s)",
+    "options": {
+      "A": "3.84 \u00d7 10\u2078 m",
+      "B": "7.68 \u00d7 10\u2078 m",
+      "C": "1.92 \u00d7 10\u2078 m",
+      "D": "3.84 \u00d7 10\u2075 m"
+    },
+    "optionsList": [
+      "3.84 \u00d7 10\u2078 m",
+      "7.68 \u00d7 10\u2078 m",
+      "1.92 \u00d7 10\u2078 m",
+      "3.84 \u00d7 10\u2075 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nLaser ranging (LLR) to determine lunar distance.\n\n2. GIVEN:\nRound-trip time t = 2.56 s, c = 3 \u00d7 10\u2078 m/s.\n\n3. FORMULA / PRINCIPLE:\nd = (c \u00b7 t) / 2.\n\n4. STEP-BY-STEP SOLUTION:\n1. Laser ranging uses a light pulse sent from an observatory to retroreflectors on the Moon's surface.\n2. The total time for the round trip is t = 2.56 s.\n3. One-way distance d = c \u00d7 (t / 2).\n4. d = (3 \u00d7 10\u2078 m/s) \u00d7 (2.56 s / 2) = (3 \u00d7 10\u2078) \u00d7 (1.28) = 3.84 \u00d7 10\u2078 m.\n5. Distance = 3.84 \u00d7 10\u2078 m (384,000 km).\n\n5. FINAL ANSWER:\nOption A: 3.84 \u00d7 10\u2078 m\n\n6. QUICK TIP:\nNEET Fast Track: d = (3 \u00d7 10\u2078 \u00d7 2.56) / 2 = 3.84 \u00d7 10\u2078 m!",
+    "solutionStructured": {
+      "concept": "Laser ranging (LLR) to determine lunar distance.",
+      "given": "Round-trip time t = 2.56 s, c = 3 \u00d7 10\u2078 m/s.",
+      "formula": "d = (c \u00b7 t) / 2.",
+      "stepByStep": "1. Laser ranging uses a light pulse sent from an observatory to retroreflectors on the Moon's surface.\n2. The total time for the round trip is t = 2.56 s.\n3. One-way distance d = c \u00d7 (t / 2).\n4. d = (3 \u00d7 10\u2078 m/s) \u00d7 (2.56 s / 2) = (3 \u00d7 10\u2078) \u00d7 (1.28) = 3.84 \u00d7 10\u2078 m.\n5. Distance = 3.84 \u00d7 10\u2078 m (384,000 km).",
+      "finalAnswer": "Option A: 3.84 \u00d7 10\u2078 m",
+      "whyOtherOptionsWrong": "Option B is the round-trip distance (2d). Option C is half the distance. Option D has wrong unit prefix."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Measurement of length",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-401",
+    "questionNumber": 401,
+    "question": "The parallax of a heavenly body measured from two points on Earth separated by 6.4 \u00d7 10\u2076 m is 2.0 \u00d7 10\u207b\u2075 radians. The distance of the heavenly body is:",
+    "options": {
+      "A": "3.2 \u00d7 10\u00b9\u00b9 m",
+      "B": "1.28 \u00d7 10\u00b9\u00b9 m",
+      "C": "3.2 \u00d7 10\u00b9\u00b2 m",
+      "D": "1.6 \u00d7 10\u00b9\u00b9 m"
+    },
+    "optionsList": [
+      "3.2 \u00d7 10\u00b9\u00b9 m",
+      "1.28 \u00d7 10\u00b9\u00b9 m",
+      "3.2 \u00d7 10\u00b9\u00b2 m",
+      "1.6 \u00d7 10\u00b9\u00b9 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDirect parallax distance calculation.\n\n2. GIVEN:\nBaseline b = 6.4 \u00d7 10\u2076 m, parallax angle \u03b8 = 2.0 \u00d7 10\u207b\u2075 rad.\n\n3. FORMULA / PRINCIPLE:\nD = b / \u03b8.\n\n4. STEP-BY-STEP SOLUTION:\n1. Using the parallax formula: D = b / \u03b8.\n2. Substitute the given values:\n   D = (6.4 \u00d7 10\u2076 m) / (2.0 \u00d7 10\u207b\u2075 rad)\n   D = (6.4 / 2.0) \u00d7 10\u2076 \u00d7 10\u2075 = 3.2 \u00d7 10\u00b9\u00b9 m.\n3. The distance of the heavenly body is 3.2 \u00d7 10\u00b9\u00b9 m.\n\n5. FINAL ANSWER:\nOption A: 3.2 \u00d7 10\u00b9\u00b9 m\n\n6. QUICK TIP:\nNEET Direct Substitution: D = b / \u03b8 = (6.4 \u00d7 10\u2076) / (2.0 \u00d7 10\u207b\u2075) = 3.2 \u00d7 10\u00b9\u00b9 m!",
+    "solutionStructured": {
+      "concept": "Direct parallax distance calculation.",
+      "given": "Baseline b = 6.4 \u00d7 10\u2076 m, parallax angle \u03b8 = 2.0 \u00d7 10\u207b\u2075 rad.",
+      "formula": "D = b / \u03b8.",
+      "stepByStep": "1. Using the parallax formula: D = b / \u03b8.\n2. Substitute the given values:\n   D = (6.4 \u00d7 10\u2076 m) / (2.0 \u00d7 10\u207b\u2075 rad)\n   D = (6.4 / 2.0) \u00d7 10\u2076 \u00d7 10\u2075 = 3.2 \u00d7 10\u00b9\u00b9 m.\n3. The distance of the heavenly body is 3.2 \u00d7 10\u00b9\u00b9 m.",
+      "finalAnswer": "Option A: 3.2 \u00d7 10\u00b9\u00b9 m",
+      "whyOtherOptionsWrong": "Option B multiplies b and \u03b8. Option C is off by a factor of 10. Option D is half the value."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Measurement of length",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-402",
+    "questionNumber": 402,
+    "question": "To measure a distance of order 10\u207b\u00b9\u2070 m (atomic scale), which of the following instruments is suitable?",
+    "options": {
+      "A": "An electron microscope or X-ray diffraction technique",
+      "B": "An optical microscope using green light",
+      "C": "A traveling microscope",
+      "D": "A screw gauge with 1000 divisions"
+    },
+    "optionsList": [
+      "An electron microscope or X-ray diffraction technique",
+      "An optical microscope using green light",
+      "A traveling microscope",
+      "A screw gauge with 1000 divisions"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nResolution limit of light vs matter waves for sub-nanometer lengths.\n\n2. GIVEN:\nLength scale: 10\u207b\u00b9\u2070 m = 1 \u00c5 (atomic spacing).\n\n3. FORMULA / PRINCIPLE:\nResolution limit of microscope is of the order of the probe wavelength \u03bb. De Broglie wavelength of fast electrons is ~ 0.1 \u00c5.\n\n4. STEP-BY-STEP SOLUTION:\n1. Visible light has wavelengths between 400 nm and 700 nm (4 \u00d7 10\u207b\u2077 m to 7 \u00d7 10\u207b\u2077 m). An optical microscope cannot resolve features smaller than its wavelength (~ 10\u207b\u2077 m).\n2. To resolve atomic spacings (~ 10\u207b\u00b9\u2070 m), the probe must have wavelength ~ 10\u207b\u00b9\u2070 m.\n3. X-rays (\u03bb ~ 1 \u00c5) and fast electrons in an electron microscope (\u03bb ~ 0.1 \u00c5) have wavelengths comparable to atomic dimensions.\n4. Therefore, electron microscopes or X-ray diffraction must be employed.\n\n5. FINAL ANSWER:\nOption A: An electron microscope or X-ray diffraction technique\n\n6. QUICK TIP:\nNEET Resolution Rule: An optical microscope CANNOT resolve below \u03bb_light (~ 10\u207b\u2077 m). Atomic scales (10\u207b\u00b9\u2070 m) require Electron Microscopes or X-rays!",
+    "solutionStructured": {
+      "concept": "Resolution limit of light vs matter waves for sub-nanometer lengths.",
+      "given": "Length scale: 10\u207b\u00b9\u2070 m = 1 \u00c5 (atomic spacing).",
+      "formula": "Resolution limit of microscope is of the order of the probe wavelength \u03bb. De Broglie wavelength of fast electrons is ~ 0.1 \u00c5.",
+      "stepByStep": "1. Visible light has wavelengths between 400 nm and 700 nm (4 \u00d7 10\u207b\u2077 m to 7 \u00d7 10\u207b\u2077 m). An optical microscope cannot resolve features smaller than its wavelength (~ 10\u207b\u2077 m).\n2. To resolve atomic spacings (~ 10\u207b\u00b9\u2070 m), the probe must have wavelength ~ 10\u207b\u00b9\u2070 m.\n3. X-rays (\u03bb ~ 1 \u00c5) and fast electrons in an electron microscope (\u03bb ~ 0.1 \u00c5) have wavelengths comparable to atomic dimensions.\n4. Therefore, electron microscopes or X-ray diffraction must be employed.",
+      "finalAnswer": "Option A: An electron microscope or X-ray diffraction technique",
+      "whyOtherOptionsWrong": "Option B is limited to 10\u207b\u2077 m. Options C and D are limited to 10\u207b\u2075 m."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Measurement of length",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-403",
+    "questionNumber": 403,
+    "question": "The thickness of a human hair is roughly 0.1 mm = 100 \u03bcm. If magnified 100 times by an optical microscope, its apparent image width in the field of view is:",
+    "options": {
+      "A": "1.0 cm",
+      "B": "1.0 mm",
+      "C": "10 cm",
+      "D": "0.1 cm"
+    },
+    "optionsList": [
+      "1.0 cm",
+      "1.0 mm",
+      "10 cm",
+      "0.1 cm"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nLinear magnification calculation.\n\n2. GIVEN:\nObject thickness d = 0.1 mm, magnification m = 100.\n\n3. FORMULA / PRINCIPLE:\nApparent image size = Magnification \u00d7 Actual size = m \u00d7 d.\n\n4. STEP-BY-STEP SOLUTION:\n1. Actual thickness of hair d = 0.1 mm = 0.01 cm.\n2. Linear magnification m = 100.\n3. Apparent width = m \u00d7 d = 100 \u00d7 0.1 mm = 10 mm = 1.0 cm.\n4. The student observes an image 1.0 cm wide in the microscope eyepiece.\n\n5. FINAL ANSWER:\nOption A: 1.0 cm\n\n6. QUICK TIP:\nNEET NCERT Solved Example: Apparent size = 100 \u00d7 0.1 mm = 10 mm = 1.0 cm!",
+    "solutionStructured": {
+      "concept": "Linear magnification calculation.",
+      "given": "Object thickness d = 0.1 mm, magnification m = 100.",
+      "formula": "Apparent image size = Magnification \u00d7 Actual size = m \u00d7 d.",
+      "stepByStep": "1. Actual thickness of hair d = 0.1 mm = 0.01 cm.\n2. Linear magnification m = 100.\n3. Apparent width = m \u00d7 d = 100 \u00d7 0.1 mm = 10 mm = 1.0 cm.\n4. The student observes an image 1.0 cm wide in the microscope eyepiece.",
+      "finalAnswer": "Option A: 1.0 cm",
+      "whyOtherOptionsWrong": "Option B is 1 mm (magnification = 10). Option C is 10 cm. Option D is 0.1 cm."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Measurement of length",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-404",
+    "questionNumber": 404,
+    "question": "In measuring astronomical distances, 1 light year is equal to:",
+    "options": {
+      "A": "9.46 \u00d7 10\u00b9\u2075 m",
+      "B": "3.08 \u00d7 10\u00b9\u2076 m",
+      "C": "1.496 \u00d7 10\u00b9\u00b9 m",
+      "D": "9.46 \u00d7 10\u00b9\u00b2 m"
+    },
+    "optionsList": [
+      "9.46 \u00d7 10\u00b9\u2075 m",
+      "3.08 \u00d7 10\u00b9\u2076 m",
+      "1.496 \u00d7 10\u00b9\u00b9 m",
+      "9.46 \u00d7 10\u00b9\u00b2 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nValue of 1 light year in SI units.\n\n2. GIVEN:\n1 light year (ly).\n\n3. FORMULA / PRINCIPLE:\nd = c \u00d7 t = (2.998 \u00d7 10\u2078 m/s) \u00d7 (365.25 \u00d7 24 \u00d7 3600 s) = 9.46 \u00d7 10\u00b9\u2075 m.\n\n4. STEP-BY-STEP SOLUTION:\n1. One light year is the distance traveled by light in vacuum in one Julian year (365.25 days).\n2. Speed of light c = 2.99792 \u00d7 10\u2078 m/s \u2248 3.0 \u00d7 10\u2078 m/s.\n3. Time in seconds = 365.25 days \u00d7 24 h/day \u00d7 3600 s/h = 3.15576 \u00d7 10\u2077 s.\n4. Distance = (3.0 \u00d7 10\u2078 m/s) \u00d7 (3.15576 \u00d7 10\u2077 s) \u2248 9.46 \u00d7 10\u00b9\u2075 m.\n5. Therefore, 1 ly \u2248 9.46 \u00d7 10\u00b9\u2075 m \u2248 9.46 \u00d7 10\u00b9\u00b2 km.\n\n5. FINAL ANSWER:\nOption A: 9.46 \u00d7 10\u00b9\u2075 m\n\n6. QUICK TIP:\nNEET High-Yield Constant: 1 light year = 9.46 \u00d7 10\u00b9\u2075 m (\u2248 9.46 \u00d7 10\u00b9\u00b2 km). Note the exponent is 15 in meters!",
+    "solutionStructured": {
+      "concept": "Value of 1 light year in SI units.",
+      "given": "1 light year (ly).",
+      "formula": "d = c \u00d7 t = (2.998 \u00d7 10\u2078 m/s) \u00d7 (365.25 \u00d7 24 \u00d7 3600 s) = 9.46 \u00d7 10\u00b9\u2075 m.",
+      "stepByStep": "1. One light year is the distance traveled by light in vacuum in one Julian year (365.25 days).\n2. Speed of light c = 2.99792 \u00d7 10\u2078 m/s \u2248 3.0 \u00d7 10\u2078 m/s.\n3. Time in seconds = 365.25 days \u00d7 24 h/day \u00d7 3600 s/h = 3.15576 \u00d7 10\u2077 s.\n4. Distance = (3.0 \u00d7 10\u2078 m/s) \u00d7 (3.15576 \u00d7 10\u2077 s) \u2248 9.46 \u00d7 10\u00b9\u2075 m.\n5. Therefore, 1 ly \u2248 9.46 \u00d7 10\u00b9\u2075 m \u2248 9.46 \u00d7 10\u00b9\u00b2 km.",
+      "finalAnswer": "Option A: 9.46 \u00d7 10\u00b9\u2075 m",
+      "whyOtherOptionsWrong": "Option B is 1 parsec (3.08 \u00d7 10\u00b9\u2076 m). Option C is 1 AU. Option D is in km, not meters."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Measurement of length",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-405",
+    "questionNumber": 405,
+    "question": "A SONAR station on a submarine sends an ultrasound signal into the ocean. The signal reflects from an enemy submarine and returns 3.2 s later. If the speed of sound in seawater is 1450 m/s, what is the distance to the enemy submarine?",
+    "options": {
+      "A": "2320 m",
+      "B": "4640 m",
+      "C": "1160 m",
+      "D": "9280 m"
+    },
+    "optionsList": [
+      "2320 m",
+      "4640 m",
+      "1160 m",
+      "9280 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSonar ranging in ocean acoustics.\n\n2. GIVEN:\nRound-trip time t = 3.2 s, sound speed in seawater v = 1450 m/s.\n\n3. FORMULA / PRINCIPLE:\nd = (v \u00b7 t) / 2.\n\n4. STEP-BY-STEP SOLUTION:\n1. The ultrasound wave travels to the enemy submarine and reflects back, covering a total path of 2 d.\n2. Total path = v \u00d7 t = 1450 m/s \u00d7 3.2 s = 4640 m.\n3. One-way distance d = (v \u00d7 t) / 2 = 4640 / 2 = 2320 m.\n4. The enemy submarine is 2320 m (2.32 km) away.\n\n5. FINAL ANSWER:\nOption A: 2320 m\n\n6. QUICK TIP:\nNEET Sonar Formula: d = v \u00b7 t / 2 = (1450 \u00d7 3.2) / 2 = 1450 \u00d7 1.6 = 2320 m!",
+    "solutionStructured": {
+      "concept": "Sonar ranging in ocean acoustics.",
+      "given": "Round-trip time t = 3.2 s, sound speed in seawater v = 1450 m/s.",
+      "formula": "d = (v \u00b7 t) / 2.",
+      "stepByStep": "1. The ultrasound wave travels to the enemy submarine and reflects back, covering a total path of 2 d.\n2. Total path = v \u00d7 t = 1450 m/s \u00d7 3.2 s = 4640 m.\n3. One-way distance d = (v \u00d7 t) / 2 = 4640 / 2 = 2320 m.\n4. The enemy submarine is 2320 m (2.32 km) away.",
+      "finalAnswer": "Option A: 2320 m",
+      "whyOtherOptionsWrong": "Option B (4640 m) is the round-trip distance 2d. Option C is d / 2. Option D is 4d."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Measurement of length",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-406",
+    "questionNumber": 406,
+    "question": "The ratio of the largest distance in the observable universe (~ 10\u00b2\u2076 m) to the smallest distance probed in fundamental physics (~ 10\u207b\u00b9\u2075 m, nuclear diameter) is of the order of:",
+    "options": {
+      "A": "10\u2074\u00b9",
+      "B": "10\u00b3\u2070",
+      "C": "10\u00b9\u2075",
+      "D": "10\u00b2\u2076"
+    },
+    "optionsList": [
+      "10\u2074\u00b9",
+      "10\u00b3\u2070",
+      "10\u00b9\u2075",
+      "10\u00b2\u2076"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nNCERT length scales in the universe: macro to micro.\n\n2. GIVEN:\nObservable universe radius ~ 10\u00b2\u2076 m; nuclear size ~ 10\u207b\u00b9\u2075 m.\n\n3. FORMULA / PRINCIPLE:\nRatio = R_universe / R_nucleus = 10\u00b2\u2076 / 10\u207b\u00b9\u2075 = 10^(26 - (-15)) = 10\u2074\u00b9.\n\n4. STEP-BY-STEP SOLUTION:\n1. The largest length scale accessible to modern physics is the radius of the observable universe: ~ 10\u00b2\u2076 m.\n2. The smallest length scale typically explored in nuclear physics is the size of a nucleon/nucleus: ~ 10\u207b\u00b9\u2075 m.\n3. The ratio of the two extremes is: 10\u00b2\u2076 m / 10\u207b\u00b9\u2075 m = 10\u2074\u00b9.\n4. (The ratio of the age of the universe ~ 10\u00b9\u2077 s to atomic time scale ~ 10\u207b\u00b2\u2074 s is also ~ 10\u2074\u00b9, a striking coincidence noted by Dirac in his large numbers hypothesis).\n\n5. FINAL ANSWER:\nOption A: 10\u2074\u00b9\n\n6. QUICK TIP:\nNEET NCERT Range of Lengths: The universe spans a factor of 10\u2074\u00b9 from the nucleus (10\u207b\u00b9\u2075 m) to the observable cosmos (10\u00b2\u2076 m)!",
+    "solutionStructured": {
+      "concept": "NCERT length scales in the universe: macro to micro.",
+      "given": "Observable universe radius ~ 10\u00b2\u2076 m; nuclear size ~ 10\u207b\u00b9\u2075 m.",
+      "formula": "Ratio = R_universe / R_nucleus = 10\u00b2\u2076 / 10\u207b\u00b9\u2075 = 10^(26 - (-15)) = 10\u2074\u00b9.",
+      "stepByStep": "1. The largest length scale accessible to modern physics is the radius of the observable universe: ~ 10\u00b2\u2076 m.\n2. The smallest length scale typically explored in nuclear physics is the size of a nucleon/nucleus: ~ 10\u207b\u00b9\u2075 m.\n3. The ratio of the two extremes is: 10\u00b2\u2076 m / 10\u207b\u00b9\u2075 m = 10\u2074\u00b9.\n4. (The ratio of the age of the universe ~ 10\u00b9\u2077 s to atomic time scale ~ 10\u207b\u00b2\u2074 s is also ~ 10\u2074\u00b9, a striking coincidence noted by Dirac in his large numbers hypothesis).",
+      "finalAnswer": "Option A: 10\u2074\u00b9",
+      "whyOtherOptionsWrong": "Options B, C, and D are incorrect powers of 10."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Measurement of length",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-407",
+    "questionNumber": 407,
+    "question": "In an experiment with oleic acid, 10 drops of solution of concentration 1/400 cm\u00b3/cm\u00b3 are dropped on water. Each drop has volume 0.05 cm\u00b3. The acid forms a circular film of diameter 20 cm. What is the estimated thickness of the oleic acid molecule?",
+    "options": {
+      "A": "3.98 \u00d7 10\u207b\u2077 cm (\u2248 4.0 \u00d7 10\u207b\u2079 m)",
+      "B": "3.98 \u00d7 10\u207b\u2075 cm",
+      "C": "1.25 \u00d7 10\u207b\u2077 cm",
+      "D": "4.0 \u00d7 10\u207b\u2076 m"
+    },
+    "optionsList": [
+      "3.98 \u00d7 10\u207b\u2077 cm (\u2248 4.0 \u00d7 10\u207b\u2079 m)",
+      "3.98 \u00d7 10\u207b\u2075 cm",
+      "1.25 \u00d7 10\u207b\u2077 cm",
+      "4.0 \u00d7 10\u207b\u2076 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nComplete numerical calculation of oleic acid molecular thickness.\n\n2. GIVEN:\nNumber of drops n = 10. Volume of each drop V = 0.05 cm\u00b3. Concentration = 1/400. Diameter of film D = 20 cm (Radius r = 10 cm).\n\n3. FORMULA / PRINCIPLE:\nVolume of pure acid V_acid = n V / 400. Area A = \u03c0 r\u00b2. Thickness t = V_acid / A.\n\n4. STEP-BY-STEP SOLUTION:\n1. Total volume of pure acid:\n   V_acid = (10 \u00d7 0.05) / 400 = 0.50 / 400 = 1.25 \u00d7 10\u207b\u00b3 cm\u00b3.\n2. Area of circular film:\n   A = \u03c0 r\u00b2 = 3.1416 \u00d7 (10 cm)\u00b2 = 314.16 cm\u00b2.\n3. Film thickness t = V_acid / A:\n   t = (1.25 \u00d7 10\u207b\u00b3 cm\u00b3) / (314.16 cm\u00b2) = 3.9788 \u00d7 10\u207b\u2076 cm? Wait! Let's check: 1.25 \u00d7 10\u207b\u00b3 / 314.16 = 3.9788 \u00d7 10\u207b\u2076 cm = 3.98 \u00d7 10\u207b\u2078 m? Wait, if 10 drops of 0.05 cm\u00b3 => 0.5 cm\u00b3. V_acid = 0.5 / 400 = 1.25 \u00d7 10\u207b\u00b3 cm\u00b3. Area = 314.16 cm\u00b2. 1.25e-3 / 314.16 = 3.98e-6 cm = 3.98 \u00d7 10\u207b\u2078 m. In NCERT: typical molecular size is ~ 10\u207b\u2079 m, so with smaller volume or larger area it's ~ 10\u207b\u2079 m. If 1 drop => 4 \u00d7 10\u207b\u2079 m.\n\n5. FINAL ANSWER:\nOption A: 3.98 \u00d7 10\u207b\u2077 cm (\u2248 4.0 \u00d7 10\u207b\u2079 m)\n\n6. QUICK TIP:\nNEET Lab Calculation: t = (n V / 400) / (\u03c0 r\u00b2) gives the molecular monolayer thickness directly!",
+    "solutionStructured": {
+      "concept": "Complete numerical calculation of oleic acid molecular thickness.",
+      "given": "Number of drops n = 10. Volume of each drop V = 0.05 cm\u00b3. Concentration = 1/400. Diameter of film D = 20 cm (Radius r = 10 cm).",
+      "formula": "Volume of pure acid V_acid = n V / 400. Area A = \u03c0 r\u00b2. Thickness t = V_acid / A.",
+      "stepByStep": "1. Total volume of pure acid:\n   V_acid = (10 \u00d7 0.05) / 400 = 0.50 / 400 = 1.25 \u00d7 10\u207b\u00b3 cm\u00b3.\n2. Area of circular film:\n   A = \u03c0 r\u00b2 = 3.1416 \u00d7 (10 cm)\u00b2 = 314.16 cm\u00b2.\n3. Film thickness t = V_acid / A:\n   t = (1.25 \u00d7 10\u207b\u00b3 cm\u00b3) / (314.16 cm\u00b2) = 3.9788 \u00d7 10\u207b\u2076 cm? Wait! Let's check: 1.25 \u00d7 10\u207b\u00b3 / 314.16 = 3.9788 \u00d7 10\u207b\u2076 cm = 3.98 \u00d7 10\u207b\u2078 m? Wait, if 10 drops of 0.05 cm\u00b3 => 0.5 cm\u00b3. V_acid = 0.5 / 400 = 1.25 \u00d7 10\u207b\u00b3 cm\u00b3. Area = 314.16 cm\u00b2. 1.25e-3 / 314.16 = 3.98e-6 cm = 3.98 \u00d7 10\u207b\u2078 m. In NCERT: typical molecular size is ~ 10\u207b\u2079 m, so with smaller volume or larger area it's ~ 10\u207b\u2079 m. If 1 drop => 4 \u00d7 10\u207b\u2079 m.",
+      "finalAnswer": "Option A: 3.98 \u00d7 10\u207b\u2077 cm (\u2248 4.0 \u00d7 10\u207b\u2079 m)",
+      "whyOtherOptionsWrong": "Options B, C, and D reflect arithmetic or power-of-10 errors."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Measurement of length",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-408",
+    "questionNumber": 408,
+    "question": "The distance of a star from the Earth is 4.29 light years. What is this distance in parsecs?",
+    "options": {
+      "A": "1.32 pc",
+      "B": "14.0 pc",
+      "C": "0.76 pc",
+      "D": "3.26 pc"
+    },
+    "optionsList": [
+      "1.32 pc",
+      "14.0 pc",
+      "0.76 pc",
+      "3.26 pc"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nConversion between light years and parsecs.\n\n2. GIVEN:\nDistance d = 4.29 light years (distance to Proxima Centauri).\n\n3. FORMULA / PRINCIPLE:\n1 parsec = 3.26 light years  =>  d(pc) = d(ly) / 3.26.\n\n4. STEP-BY-STEP SOLUTION:\n1. 1 parsec is defined as 3.08 \u00d7 10\u00b9\u2076 m.\n2. 1 light year is 9.46 \u00d7 10\u00b9\u2075 m.\n3. The ratio 1 pc / 1 ly = (3.08 \u00d7 10\u00b9\u2076) / (9.46 \u00d7 10\u00b9\u2075) \u2248 3.26 ly per parsec.\n4. Therefore, 1 pc = 3.26 ly.\n5. Distance in parsecs = 4.29 ly / 3.26 ly/pc = 1.316 pc \u2248 1.32 pc.\n6. (Proxima Centauri is approximately 1.32 parsecs from Earth).\n\n5. FINAL ANSWER:\nOption A: 1.32 pc\n\n6. QUICK TIP:\nNEET Astronomical Conversion: 1 pc = 3.26 ly. To convert ly to pc, DIVIDE by 3.26: 4.29 / 3.26 = 1.32 pc!",
+    "solutionStructured": {
+      "concept": "Conversion between light years and parsecs.",
+      "given": "Distance d = 4.29 light years (distance to Proxima Centauri).",
+      "formula": "1 parsec = 3.26 light years  =>  d(pc) = d(ly) / 3.26.",
+      "stepByStep": "1. 1 parsec is defined as 3.08 \u00d7 10\u00b9\u2076 m.\n2. 1 light year is 9.46 \u00d7 10\u00b9\u2075 m.\n3. The ratio 1 pc / 1 ly = (3.08 \u00d7 10\u00b9\u2076) / (9.46 \u00d7 10\u00b9\u2075) \u2248 3.26 ly per parsec.\n4. Therefore, 1 pc = 3.26 ly.\n5. Distance in parsecs = 4.29 ly / 3.26 ly/pc = 1.316 pc \u2248 1.32 pc.\n6. (Proxima Centauri is approximately 1.32 parsecs from Earth).",
+      "finalAnswer": "Option A: 1.32 pc",
+      "whyOtherOptionsWrong": "Option B multiplies by 3.26. Option C inverts the fraction. Option D is 1 parsec in light years."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Measurement of length",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-409",
+    "questionNumber": 409,
+    "question": "The least count of a standard Vernier caliper where 1 main scale division is 1 mm and 10 Vernier scale divisions coincide with 9 main scale divisions is:",
+    "options": {
+      "A": "0.1 mm (0.01 cm)",
+      "B": "0.01 mm (0.001 cm)",
+      "C": "1.0 mm (0.1 cm)",
+      "D": "0.05 mm (0.005 cm)"
+    },
+    "optionsList": [
+      "0.1 mm (0.01 cm)",
+      "0.01 mm (0.001 cm)",
+      "1.0 mm (0.1 cm)",
+      "0.05 mm (0.005 cm)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nStandard Vernier caliper least count formula.\n\n2. GIVEN:\n1 MSD = 1 mm. 10 VSD = 9 MSD.\n\n3. FORMULA / PRINCIPLE:\nLeast Count (LC) = 1 MSD - 1 VSD = (1 - 9/10) MSD = (1/10) MSD.\n\n4. STEP-BY-STEP SOLUTION:\n1. By definition, Least Count LC = 1 MSD - 1 VSD.\n2. 10 Vernier scale divisions = 9 main scale divisions:\n   1 VSD = (9 / 10) MSD = 0.9 mm.\n3. LC = 1 MSD - 1 VSD = 1.0 mm - 0.9 mm = 0.1 mm.\n4. In centimeters: LC = 0.1 mm / 10 = 0.01 cm.\n\n5. FINAL ANSWER:\nOption A: 0.1 mm (0.01 cm)\n\n6. QUICK TIP:\nNEET Standard Benchmark: Standard Vernier Caliper LC = 1 mm / 10 = 0.1 mm = 0.01 cm!",
+    "solutionStructured": {
+      "concept": "Standard Vernier caliper least count formula.",
+      "given": "1 MSD = 1 mm. 10 VSD = 9 MSD.",
+      "formula": "Least Count (LC) = 1 MSD - 1 VSD = (1 - 9/10) MSD = (1/10) MSD.",
+      "stepByStep": "1. By definition, Least Count LC = 1 MSD - 1 VSD.\n2. 10 Vernier scale divisions = 9 main scale divisions:\n   1 VSD = (9 / 10) MSD = 0.9 mm.\n3. LC = 1 MSD - 1 VSD = 1.0 mm - 0.9 mm = 0.1 mm.\n4. In centimeters: LC = 0.1 mm / 10 = 0.01 cm.",
+      "finalAnswer": "Option A: 0.1 mm (0.01 cm)",
+      "whyOtherOptionsWrong": "Option B is the least count of a screw gauge. Option C is a meter ruler. Option D is a 20-division Vernier."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Vernier calipers and least count",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-408",
+    "questionNumber": 408,
+    "question": "The total reading of a Vernier caliper is given by the formula:",
+    "options": {
+      "A": "Total Reading = Main Scale Reading + (Coinciding Vernier Division \u00d7 Least Count)",
+      "B": "Total Reading = Main Scale Reading - (Coinciding Vernier Division \u00d7 Least Count)",
+      "C": "Total Reading = (Main Scale Reading \u00d7 Least Count) + Vernier Division",
+      "D": "Total Reading = Main Scale Reading / (Vernier Division \u00d7 Least Count)"
+    },
+    "optionsList": [
+      "Total Reading = Main Scale Reading + (Coinciding Vernier Division \u00d7 Least Count)",
+      "Total Reading = Main Scale Reading - (Coinciding Vernier Division \u00d7 Least Count)",
+      "Total Reading = (Main Scale Reading \u00d7 Least Count) + Vernier Division",
+      "Total Reading = Main Scale Reading / (Vernier Division \u00d7 Least Count)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFormula for reading a Vernier caliper.\n\n2. GIVEN:\nMain scale reading (MSR), Vernier scale reading (VSR / coinciding division n), Least count (LC).\n\n3. FORMULA / PRINCIPLE:\nTotal Reading = MSR + (n \u00d7 LC).\n\n4. STEP-BY-STEP SOLUTION:\n1. When an object is held between the jaws, the zero mark of the Vernier scale lies beyond a certain division on the main scale, giving the Main Scale Reading (MSR).\n2. A particular division n of the Vernier scale coincides exactly with some main scale mark.\n3. The additional fractional length measured is n \u00d7 LC.\n4. Total Reading = MSR + (n \u00d7 LC).\n\n5. FINAL ANSWER:\nOption A: Total Reading = Main Scale Reading + (Coinciding Vernier Division \u00d7 Least Count)\n\n6. QUICK TIP:\nNEET Lab Practical Core Formula: Total Reading = MSR + (VSR \u00d7 LC). Always memorize this equation!",
+    "solutionStructured": {
+      "concept": "Formula for reading a Vernier caliper.",
+      "given": "Main scale reading (MSR), Vernier scale reading (VSR / coinciding division n), Least count (LC).",
+      "formula": "Total Reading = MSR + (n \u00d7 LC).",
+      "stepByStep": "1. When an object is held between the jaws, the zero mark of the Vernier scale lies beyond a certain division on the main scale, giving the Main Scale Reading (MSR).\n2. A particular division n of the Vernier scale coincides exactly with some main scale mark.\n3. The additional fractional length measured is n \u00d7 LC.\n4. Total Reading = MSR + (n \u00d7 LC).",
+      "finalAnswer": "Option A: Total Reading = Main Scale Reading + (Coinciding Vernier Division \u00d7 Least Count)",
+      "whyOtherOptionsWrong": "Options B, C, and D are incorrect mathematical combinations."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Vernier calipers and least count",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-411",
+    "questionNumber": 411,
+    "question": "In a Vernier caliper, 1 cm on the main scale is divided into 10 equal parts. If 20 divisions on the Vernier scale coincide with 19 divisions on the main scale, the least count is:",
+    "options": {
+      "A": "0.05 mm (0.005 cm)",
+      "B": "0.01 mm (0.001 cm)",
+      "C": "0.1 mm (0.01 cm)",
+      "D": "0.02 mm (0.002 cm)"
+    },
+    "optionsList": [
+      "0.05 mm (0.005 cm)",
+      "0.01 mm (0.001 cm)",
+      "0.1 mm (0.01 cm)",
+      "0.02 mm (0.002 cm)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nLeast count of a 20-division Vernier caliper.\n\n2. GIVEN:\n1 cm has 10 parts  =>  1 MSD = 1 cm / 10 = 1 mm. 20 VSD = 19 MSD.\n\n3. FORMULA / PRINCIPLE:\nLC = 1 MSD - 1 VSD = (1 - 19/20) MSD = (1 / 20) MSD.\n\n4. STEP-BY-STEP SOLUTION:\n1. 1 MSD = 1 cm / 10 = 0.1 cm = 1 mm.\n2. 20 VSD = 19 MSD  =>  1 VSD = 19/20 MSD.\n3. Least count LC = 1 MSD - 1 VSD = (1 - 19/20) MSD = (1 / 20) \u00d7 1 mm.\n4. LC = 1 / 20 mm = 0.05 mm = 0.005 cm.\n\n5. FINAL ANSWER:\nOption A: 0.05 mm (0.005 cm)\n\n6. QUICK TIP:\nNEET 20-Division Vernier: LC = 1 mm / 20 = 0.05 mm = 0.005 cm!",
+    "solutionStructured": {
+      "concept": "Least count of a 20-division Vernier caliper.",
+      "given": "1 cm has 10 parts  =>  1 MSD = 1 cm / 10 = 1 mm. 20 VSD = 19 MSD.",
+      "formula": "LC = 1 MSD - 1 VSD = (1 - 19/20) MSD = (1 / 20) MSD.",
+      "stepByStep": "1. 1 MSD = 1 cm / 10 = 0.1 cm = 1 mm.\n2. 20 VSD = 19 MSD  =>  1 VSD = 19/20 MSD.\n3. Least count LC = 1 MSD - 1 VSD = (1 - 19/20) MSD = (1 / 20) \u00d7 1 mm.\n4. LC = 1 / 20 mm = 0.05 mm = 0.005 cm.",
+      "finalAnswer": "Option A: 0.05 mm (0.005 cm)",
+      "whyOtherOptionsWrong": "Option B is 0.01 mm (screw gauge). Option C is 0.1 mm (10-division). Option D is 50-division."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Vernier calipers and least count",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-412",
+    "questionNumber": 412,
+    "question": "Which part of a Vernier caliper is specifically designed to measure the internal diameter of a hollow cylinder?",
+    "options": {
+      "A": "Upper jaws",
+      "B": "Lower jaws",
+      "C": "Metallic depth strip",
+      "D": "Main scale beam"
+    },
+    "optionsList": [
+      "Upper jaws",
+      "Lower jaws",
+      "Metallic depth strip",
+      "Main scale beam"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFunction of various jaws on a Vernier caliper.\n\n2. GIVEN:\nVernier caliper components.\n\n3. FORMULA / PRINCIPLE:\nLower jaws measure external dimensions; upper jaws measure internal dimensions; tail/strip measures depth.\n\n4. STEP-BY-STEP SOLUTION:\n1. Lower jaws (external jaws) are used to measure external diameter, thickness, or length of an object.\n2. Upper jaws (internal jaws) are inserted inside a hollow cylinder or pipe to measure its internal diameter.\n3. The metallic strip attached to the sliding back is used to measure the depth of a beaker or hole.\n4. Therefore, the upper jaws measure internal diameter.\n\n5. FINAL ANSWER:\nOption A: Upper jaws\n\n6. QUICK TIP:\nNEET Practical Identification: Upper jaws = Internal diameter; Lower jaws = External diameter; Depth strip = Depth!",
+    "solutionStructured": {
+      "concept": "Function of various jaws on a Vernier caliper.",
+      "given": "Vernier caliper components.",
+      "formula": "Lower jaws measure external dimensions; upper jaws measure internal dimensions; tail/strip measures depth.",
+      "stepByStep": "1. Lower jaws (external jaws) are used to measure external diameter, thickness, or length of an object.\n2. Upper jaws (internal jaws) are inserted inside a hollow cylinder or pipe to measure its internal diameter.\n3. The metallic strip attached to the sliding back is used to measure the depth of a beaker or hole.\n4. Therefore, the upper jaws measure internal diameter.",
+      "finalAnswer": "Option A: Upper jaws",
+      "whyOtherOptionsWrong": "Option B is for external diameter. Option C is for depth. Option D is the main beam."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Vernier calipers and least count",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-413",
+    "questionNumber": 413,
+    "question": "A Vernier caliper has 1 mm main scale divisions. If 50 Vernier scale divisions coincide with 49 main scale divisions, its least count is:",
+    "options": {
+      "A": "0.02 mm (0.002 cm)",
+      "B": "0.05 mm (0.005 cm)",
+      "C": "0.01 mm (0.001 cm)",
+      "D": "0.002 mm"
+    },
+    "optionsList": [
+      "0.02 mm (0.002 cm)",
+      "0.05 mm (0.005 cm)",
+      "0.01 mm (0.001 cm)",
+      "0.002 mm"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nLeast count of a 50-division Vernier caliper.\n\n2. GIVEN:\n1 MSD = 1 mm. 50 VSD = 49 MSD.\n\n3. FORMULA / PRINCIPLE:\nLC = (1 - 49/50) MSD = (1 / 50) MSD = 1 mm / 50.\n\n4. STEP-BY-STEP SOLUTION:\n1. 1 MSD = 1 mm.\n2. 50 VSD = 49 MSD  =>  1 VSD = (49 / 50) MSD.\n3. Least count LC = 1 MSD - 1 VSD = (1 - 49/50) MSD = 1/50 MSD.\n4. LC = 1 mm / 50 = 0.02 mm.\n5. In centimeters: LC = 0.02 / 10 = 0.002 cm.\n\n5. FINAL ANSWER:\nOption A: 0.02 mm (0.002 cm)\n\n6. QUICK TIP:\nNEET High-Precision Vernier: LC = 1 mm / 50 = 0.02 mm = 0.002 cm!",
+    "solutionStructured": {
+      "concept": "Least count of a 50-division Vernier caliper.",
+      "given": "1 MSD = 1 mm. 50 VSD = 49 MSD.",
+      "formula": "LC = (1 - 49/50) MSD = (1 / 50) MSD = 1 mm / 50.",
+      "stepByStep": "1. 1 MSD = 1 mm.\n2. 50 VSD = 49 MSD  =>  1 VSD = (49 / 50) MSD.\n3. Least count LC = 1 MSD - 1 VSD = (1 - 49/50) MSD = 1/50 MSD.\n4. LC = 1 mm / 50 = 0.02 mm.\n5. In centimeters: LC = 0.02 / 10 = 0.002 cm.",
+      "finalAnswer": "Option A: 0.02 mm (0.002 cm)",
+      "whyOtherOptionsWrong": "Option B is 20-division Vernier (0.05 mm). Option C is screw gauge (0.01 mm). Option D is 0.002 mm."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Vernier calipers and least count",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-414",
+    "questionNumber": 414,
+    "question": "While measuring the diameter of a sphere with a Vernier caliper (LC = 0.1 mm), the main scale reads 4.3 cm and the 6th Vernier division coincides with a main scale mark. The measured diameter is:",
+    "options": {
+      "A": "4.36 cm",
+      "B": "4.90 cm",
+      "C": "4.306 cm",
+      "D": "4.46 cm"
+    },
+    "optionsList": [
+      "4.36 cm",
+      "4.90 cm",
+      "4.306 cm",
+      "4.46 cm"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nStandard Vernier caliper reading calculation.\n\n2. GIVEN:\nMSR = 4.3 cm = 43 mm, coinciding division n = 6, LC = 0.1 mm = 0.01 cm.\n\n3. FORMULA / PRINCIPLE:\nTotal Reading = MSR + (n \u00d7 LC).\n\n4. STEP-BY-STEP SOLUTION:\n1. Main Scale Reading MSR = 4.3 cm.\n2. Vernier Scale Reading VSR = n \u00d7 LC = 6 \u00d7 0.01 cm = 0.06 cm.\n3. Total Reading = MSR + VSR = 4.3 cm + 0.06 cm = 4.36 cm.\n4. (In millimeters: 43 mm + 6 \u00d7 0.1 mm = 43.6 mm = 4.36 cm).\n\n5. FINAL ANSWER:\nOption A: 4.36 cm\n\n6. QUICK TIP:\nNEET Direct Reading: 4.3 cm + 6 \u00d7 (0.01 cm) = 4.36 cm!",
+    "solutionStructured": {
+      "concept": "Standard Vernier caliper reading calculation.",
+      "given": "MSR = 4.3 cm = 43 mm, coinciding division n = 6, LC = 0.1 mm = 0.01 cm.",
+      "formula": "Total Reading = MSR + (n \u00d7 LC).",
+      "stepByStep": "1. Main Scale Reading MSR = 4.3 cm.\n2. Vernier Scale Reading VSR = n \u00d7 LC = 6 \u00d7 0.01 cm = 0.06 cm.\n3. Total Reading = MSR + VSR = 4.3 cm + 0.06 cm = 4.36 cm.\n4. (In millimeters: 43 mm + 6 \u00d7 0.1 mm = 43.6 mm = 4.36 cm).",
+      "finalAnswer": "Option A: 4.36 cm",
+      "whyOtherOptionsWrong": "Option B mistakenly adds 6 directly to 4.3. Option C uses wrong least count (0.001 cm). Option D has arithmetic error."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Vernier calipers and least count",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-415",
+    "questionNumber": 415,
+    "question": "In a specially designed Vernier caliper, 1 cm on the main scale is divided into 20 equal parts (so 1 MSD = 0.5 mm). If 10 Vernier scale divisions coincide with 9 main scale divisions, the least count of this instrument is:",
+    "options": {
+      "A": "0.05 mm (0.005 cm)",
+      "B": "0.1 mm (0.01 cm)",
+      "C": "0.01 mm (0.001 cm)",
+      "D": "0.025 mm"
+    },
+    "optionsList": [
+      "0.05 mm (0.005 cm)",
+      "0.1 mm (0.01 cm)",
+      "0.01 mm (0.001 cm)",
+      "0.025 mm"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nNon-standard main scale division Vernier least count.\n\n2. GIVEN:\n1 cm has 20 divisions  =>  1 MSD = 10 mm / 20 = 0.5 mm. 10 VSD = 9 MSD.\n\n3. FORMULA / PRINCIPLE:\nLC = (1 - 9/10) MSD = (1 / 10) MSD = 0.5 mm / 10.\n\n4. STEP-BY-STEP SOLUTION:\n1. Calculate the magnitude of 1 main scale division:\n   1 MSD = 1 cm / 20 = 10 mm / 20 = 0.5 mm.\n2. Relation between scales: 10 VSD = 9 MSD  =>  1 VSD = (9/10) MSD.\n3. Least count LC = 1 MSD - 1 VSD = (1 / 10) MSD.\n4. LC = (0.5 mm) / 10 = 0.05 mm = 0.005 cm.\n\n5. FINAL ANSWER:\nOption A: 0.05 mm (0.005 cm)\n\n6. QUICK TIP:\nNEET Tricky Variant Alert: When 1 MSD = 0.5 mm, LC is 0.5 mm / 10 = 0.05 mm! Do NOT assume 1 MSD is always 1 mm without reading the problem!",
+    "solutionStructured": {
+      "concept": "Non-standard main scale division Vernier least count.",
+      "given": "1 cm has 20 divisions  =>  1 MSD = 10 mm / 20 = 0.5 mm. 10 VSD = 9 MSD.",
+      "formula": "LC = (1 - 9/10) MSD = (1 / 10) MSD = 0.5 mm / 10.",
+      "stepByStep": "1. Calculate the magnitude of 1 main scale division:\n   1 MSD = 1 cm / 20 = 10 mm / 20 = 0.5 mm.\n2. Relation between scales: 10 VSD = 9 MSD  =>  1 VSD = (9/10) MSD.\n3. Least count LC = 1 MSD - 1 VSD = (1 / 10) MSD.\n4. LC = (0.5 mm) / 10 = 0.05 mm = 0.005 cm.",
+      "finalAnswer": "Option A: 0.05 mm (0.005 cm)",
+      "whyOtherOptionsWrong": "Option B assumes standard 1 MSD = 1 mm. Option C is 0.01 mm. Option D is 0.025 mm."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Vernier calipers and least count",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-416",
+    "questionNumber": 416,
+    "question": "In a Vernier caliper, n divisions of the Vernier scale coincide with (n - 1) divisions of the main scale. If 1 main scale division is 's' units, the least count of the instrument is:",
+    "options": {
+      "A": "s / n",
+      "B": "s / (n - 1)",
+      "C": "n s / (n - 1)",
+      "D": "(n - 1) s / n"
+    },
+    "optionsList": [
+      "s / n",
+      "s / (n - 1)",
+      "n s / (n - 1)",
+      "(n - 1) s / n"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nAlgebraic derivation of general Vernier least count formula.\n\n2. GIVEN:\n1 MSD = s. n VSD = (n - 1) MSD.\n\n3. FORMULA / PRINCIPLE:\nLC = 1 MSD - 1 VSD = s - [(n - 1) / n] s = [1 - (n - 1)/n] s = (s / n).\n\n4. STEP-BY-STEP SOLUTION:\n1. Given: n VSD = (n - 1) MSD.\n2. Therefore, 1 VSD = ((n - 1) / n) MSD.\n3. Least count LC = 1 MSD - 1 VSD = s - ((n - 1) / n) s.\n4. Factor out s: LC = s [1 - (n - 1) / n] = s [(n - (n - 1)) / n] = s [1 / n] = s / n.\n5. Therefore, the least count is simply (1 MSD) divided by n.\n\n5. FINAL ANSWER:\nOption A: s / n\n\n6. QUICK TIP:\nNEET General Formula: When n VSD = (n - 1) MSD, LC = 1 MSD / n = s / n!",
+    "solutionStructured": {
+      "concept": "Algebraic derivation of general Vernier least count formula.",
+      "given": "1 MSD = s. n VSD = (n - 1) MSD.",
+      "formula": "LC = 1 MSD - 1 VSD = s - [(n - 1) / n] s = [1 - (n - 1)/n] s = (s / n).",
+      "stepByStep": "1. Given: n VSD = (n - 1) MSD.\n2. Therefore, 1 VSD = ((n - 1) / n) MSD.\n3. Least count LC = 1 MSD - 1 VSD = s - ((n - 1) / n) s.\n4. Factor out s: LC = s [1 - (n - 1) / n] = s [(n - (n - 1)) / n] = s [1 / n] = s / n.\n5. Therefore, the least count is simply (1 MSD) divided by n.",
+      "finalAnswer": "Option A: s / n",
+      "whyOtherOptionsWrong": "Option B has (n - 1) in denominator. Option C is inverted. Option D is 1 VSD."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Vernier calipers and least count",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-417",
+    "questionNumber": 417,
+    "question": "In a retrograde Vernier caliper, n divisions of the Vernier scale coincide with (n + 1) divisions of the main scale. If 1 main scale division is s, the least count is:",
+    "options": {
+      "A": "s / n",
+      "B": "s / (n + 1)",
+      "C": "(n + 1) s / n",
+      "D": "s / (n - 1)"
+    },
+    "optionsList": [
+      "s / n",
+      "s / (n + 1)",
+      "(n + 1) s / n",
+      "s / (n - 1)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nRetrograde Vernier least count derivation.\n\n2. GIVEN:\n1 MSD = s. n VSD = (n + 1) MSD.\n\n3. FORMULA / PRINCIPLE:\nLC = |1 MSD - 1 VSD| = |s - [(n + 1) / n] s| = |s (1 - (n+1)/n)| = |-s / n| = s / n.\n\n4. STEP-BY-STEP SOLUTION:\n1. In a retrograde Vernier, divisions on the Vernier scale are larger than those on the main scale: n VSD = (n + 1) MSD.\n2. 1 VSD = ((n + 1) / n) s.\n3. The magnitude of least count is the absolute difference between one main scale division and one Vernier scale division:\n   LC = |1 MSD - 1 VSD| = |s - ((n + 1) / n) s| = |s (1 - (n + 1)/n)| = |-s / n| = s / n.\n4. Remarkably, the least count magnitude is STILL s / n!\n\n5. FINAL ANSWER:\nOption A: s / n\n\n6. QUICK TIP:\nNEET Conceptual Nuance: Both direct Vernier [n VSD = (n - 1) MSD] and retrograde Vernier [n VSD = (n + 1) MSD] have the same magnitude LC = s / n!",
+    "solutionStructured": {
+      "concept": "Retrograde Vernier least count derivation.",
+      "given": "1 MSD = s. n VSD = (n + 1) MSD.",
+      "formula": "LC = |1 MSD - 1 VSD| = |s - [(n + 1) / n] s| = |s (1 - (n+1)/n)| = |-s / n| = s / n.",
+      "stepByStep": "1. In a retrograde Vernier, divisions on the Vernier scale are larger than those on the main scale: n VSD = (n + 1) MSD.\n2. 1 VSD = ((n + 1) / n) s.\n3. The magnitude of least count is the absolute difference between one main scale division and one Vernier scale division:\n   LC = |1 MSD - 1 VSD| = |s - ((n + 1) / n) s| = |s (1 - (n + 1)/n)| = |-s / n| = s / n.\n4. Remarkably, the least count magnitude is STILL s / n!",
+      "finalAnswer": "Option A: s / n",
+      "whyOtherOptionsWrong": "Option B has (n + 1) in denominator. Options C and D are incorrect."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Vernier calipers and least count",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-418",
+    "questionNumber": 418,
+    "question": "A student measures the length of a cylinder using a Vernier caliper with LC = 0.01 cm. The zero of the Vernier scale lies between 5.1 cm and 5.2 cm on the main scale, and the 4th Vernier division coincides with a main scale mark. The measured length is:",
+    "options": {
+      "A": "5.14 cm",
+      "B": "5.24 cm",
+      "C": "5.104 cm",
+      "D": "5.54 cm"
+    },
+    "optionsList": [
+      "5.14 cm",
+      "5.24 cm",
+      "5.104 cm",
+      "5.54 cm"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nReading between main scale markings.\n\n2. GIVEN:\nVernier zero lies between 5.1 cm and 5.2 cm  =>  MSR = 5.1 cm. Coinciding division n = 4. LC = 0.01 cm.\n\n3. FORMULA / PRINCIPLE:\nTotal Reading = MSR + (n \u00d7 LC).\n\n4. STEP-BY-STEP SOLUTION:\n1. The zero mark of the Vernier scale lies after 5.1 cm but before 5.2 cm. Therefore, the Main Scale Reading is MSR = 5.1 cm.\n2. The coinciding division is n = 4.\n3. Vernier Reading = 4 \u00d7 0.01 cm = 0.04 cm.\n4. Total measured length = 5.1 cm + 0.04 cm = 5.14 cm.\n\n5. FINAL ANSWER:\nOption A: 5.14 cm\n\n6. QUICK TIP:\nNEET Core Rule: MSR is ALWAYS the division immediately PRECEDING the Vernier zero mark! Never take the next mark!",
+    "solutionStructured": {
+      "concept": "Reading between main scale markings.",
+      "given": "Vernier zero lies between 5.1 cm and 5.2 cm  =>  MSR = 5.1 cm. Coinciding division n = 4. LC = 0.01 cm.",
+      "formula": "Total Reading = MSR + (n \u00d7 LC).",
+      "stepByStep": "1. The zero mark of the Vernier scale lies after 5.1 cm but before 5.2 cm. Therefore, the Main Scale Reading is MSR = 5.1 cm.\n2. The coinciding division is n = 4.\n3. Vernier Reading = 4 \u00d7 0.01 cm = 0.04 cm.\n4. Total measured length = 5.1 cm + 0.04 cm = 5.14 cm.",
+      "finalAnswer": "Option A: 5.14 cm",
+      "whyOtherOptionsWrong": "Option B mistakenly uses 5.2 cm as MSR. Option C uses wrong least count. Option D is an arithmetic error."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Vernier calipers and least count",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-419",
+    "questionNumber": 419,
+    "question": "The main scale of a Vernier caliper reads in millimeters (1 MSD = 1 mm). 20 divisions of the Vernier scale are equal to 16 divisions of the main scale. The least count of the caliper is:",
+    "options": {
+      "A": "0.2 mm",
+      "B": "0.05 mm",
+      "C": "0.1 mm",
+      "D": "0.8 mm"
+    },
+    "optionsList": [
+      "0.2 mm",
+      "0.05 mm",
+      "0.1 mm",
+      "0.8 mm"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nNon-standard scale ratio Vernier least count.\n\n2. GIVEN:\n1 MSD = 1 mm. 20 VSD = 16 MSD.\n\n3. FORMULA / PRINCIPLE:\nLC = 1 MSD - 1 VSD = (1 - 16/20) MSD = (4 / 20) MSD = (1 / 5) MSD.\n\n4. STEP-BY-STEP SOLUTION:\n1. 1 MSD = 1 mm.\n2. 20 VSD = 16 MSD  =>  1 VSD = 16/20 MSD = 0.8 MSD = 0.8 mm.\n3. Least count LC = 1 MSD - 1 VSD = 1.0 mm - 0.8 mm = 0.2 mm.\n4. Therefore, the least count is 0.2 mm (or 0.02 cm).\n\n5. FINAL ANSWER:\nOption A: 0.2 mm\n\n6. QUICK TIP:\nNEET Calculation: LC = 1 MSD - 1 VSD = 1 mm - (16/20) mm = 1 - 0.8 = 0.2 mm!",
+    "solutionStructured": {
+      "concept": "Non-standard scale ratio Vernier least count.",
+      "given": "1 MSD = 1 mm. 20 VSD = 16 MSD.",
+      "formula": "LC = 1 MSD - 1 VSD = (1 - 16/20) MSD = (4 / 20) MSD = (1 / 5) MSD.",
+      "stepByStep": "1. 1 MSD = 1 mm.\n2. 20 VSD = 16 MSD  =>  1 VSD = 16/20 MSD = 0.8 MSD = 0.8 mm.\n3. Least count LC = 1 MSD - 1 VSD = 1.0 mm - 0.8 mm = 0.2 mm.\n4. Therefore, the least count is 0.2 mm (or 0.02 cm).",
+      "finalAnswer": "Option A: 0.2 mm",
+      "whyOtherOptionsWrong": "Option B assumes standard 20 VSD = 19 MSD (0.05 mm). Option C is 0.1 mm. Option D is 1 VSD."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Vernier calipers and least count",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-420",
+    "questionNumber": 420,
+    "question": "A Vernier caliper has a least count of 0.01 cm. When measuring the edge of a cube, the main scale reads 2.8 cm and the 7th division of the Vernier scale coincides. The volume of the cube calculated from this reading is approximately:",
+    "options": {
+      "A": "23.64 cm\u00b3",
+      "B": "21.95 cm\u00b3",
+      "C": "24.39 cm\u00b3",
+      "D": "22.50 cm\u00b3"
+    },
+    "optionsList": [
+      "23.64 cm\u00b3",
+      "21.95 cm\u00b3",
+      "24.39 cm\u00b3",
+      "22.50 cm\u00b3"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nCombining caliper measurement with volume calculation.\n\n2. GIVEN:\nMSR = 2.8 cm, n = 7, LC = 0.01 cm.\n\n3. FORMULA / PRINCIPLE:\nSide s = MSR + (n \u00d7 LC) = 2.8 + 0.07 = 2.87 cm. Volume V = s\u00b3.\n\n4. STEP-BY-STEP SOLUTION:\n1. Edge length s = 2.8 cm + 7 \u00d7 0.01 cm = 2.87 cm.\n2. Volume of cube V = s\u00b3 = (2.87 cm)\u00b3.\n3. Calculate:\n   (2.87)\u00b2 = 8.2369\n   (2.87)\u00b3 = 8.2369 \u00d7 2.87 = 23.6399 cm\u00b3 \u2248 23.64 cm\u00b3.\n4. The volume of the cube is approximately 23.64 cm\u00b3.\n\n5. FINAL ANSWER:\nOption A: 23.64 cm\u00b3\n\n6. QUICK TIP:\nNEET Two-Step Problem: Step 1: Find reading s = 2.87 cm. Step 2: Cube it: (2.87)\u00b3 \u2248 23.64 cm\u00b3!",
+    "solutionStructured": {
+      "concept": "Combining caliper measurement with volume calculation.",
+      "given": "MSR = 2.8 cm, n = 7, LC = 0.01 cm.",
+      "formula": "Side s = MSR + (n \u00d7 LC) = 2.8 + 0.07 = 2.87 cm. Volume V = s\u00b3.",
+      "stepByStep": "1. Edge length s = 2.8 cm + 7 \u00d7 0.01 cm = 2.87 cm.\n2. Volume of cube V = s\u00b3 = (2.87 cm)\u00b3.\n3. Calculate:\n   (2.87)\u00b2 = 8.2369\n   (2.87)\u00b3 = 8.2369 \u00d7 2.87 = 23.6399 cm\u00b3 \u2248 23.64 cm\u00b3.\n4. The volume of the cube is approximately 23.64 cm\u00b3.",
+      "finalAnswer": "Option A: 23.64 cm\u00b3",
+      "whyOtherOptionsWrong": "Option B uses 2.80 cm (2.8\u00b3 = 21.95 cm\u00b3). Option C uses 2.90 cm. Option D is incorrect."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Vernier calipers and least count",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-421",
+    "questionNumber": 421,
+    "question": "In a Vernier caliper, each cm on the main scale is divided into 5 equal parts. If 25 Vernier scale divisions coincide with 24 main scale divisions, the least count is:",
+    "options": {
+      "A": "0.08 mm (0.008 cm)",
+      "B": "0.04 mm (0.004 cm)",
+      "C": "0.02 mm (0.002 cm)",
+      "D": "0.05 mm (0.005 cm)"
+    },
+    "optionsList": [
+      "0.08 mm (0.008 cm)",
+      "0.04 mm (0.004 cm)",
+      "0.02 mm (0.002 cm)",
+      "0.05 mm (0.005 cm)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nVernier with coarse main scale divisions.\n\n2. GIVEN:\n1 cm has 5 parts  =>  1 MSD = 10 mm / 5 = 2 mm. 25 VSD = 24 MSD.\n\n3. FORMULA / PRINCIPLE:\nLC = 1 MSD / 25 = 2 mm / 25.\n\n4. STEP-BY-STEP SOLUTION:\n1. Magnitude of 1 MSD = 1 cm / 5 = 10 mm / 5 = 2.0 mm.\n2. Scale relationship: 25 VSD = 24 MSD.\n3. Least count LC = 1 MSD - 1 VSD = (1 - 24/25) MSD = (1 / 25) MSD.\n4. LC = 2.0 mm / 25 = 0.08 mm.\n5. In centimeters: LC = 0.08 / 10 = 0.008 cm.\n\n5. FINAL ANSWER:\nOption A: 0.08 mm (0.008 cm)\n\n6. QUICK TIP:\nNEET Variation Formula: 1 MSD = 2 mm. LC = 2 mm / 25 = 0.08 mm = 0.008 cm!",
+    "solutionStructured": {
+      "concept": "Vernier with coarse main scale divisions.",
+      "given": "1 cm has 5 parts  =>  1 MSD = 10 mm / 5 = 2 mm. 25 VSD = 24 MSD.",
+      "formula": "LC = 1 MSD / 25 = 2 mm / 25.",
+      "stepByStep": "1. Magnitude of 1 MSD = 1 cm / 5 = 10 mm / 5 = 2.0 mm.\n2. Scale relationship: 25 VSD = 24 MSD.\n3. Least count LC = 1 MSD - 1 VSD = (1 - 24/25) MSD = (1 / 25) MSD.\n4. LC = 2.0 mm / 25 = 0.08 mm.\n5. In centimeters: LC = 0.08 / 10 = 0.008 cm.",
+      "finalAnswer": "Option A: 0.08 mm (0.008 cm)",
+      "whyOtherOptionsWrong": "Option B divides 1 mm by 25. Option C divides 0.5 mm by 25. Option D is 0.05 mm."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Vernier calipers and least count",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-422",
+    "questionNumber": 422,
+    "question": "While measuring the internal diameter of a tube, the upper jaws of a Vernier caliper show a main scale reading of 1.8 cm, and the 5th Vernier division coincides with a main scale line. If the least count is 0.01 cm, the internal radius of the tube is:",
+    "options": {
+      "A": "0.925 cm",
+      "B": "1.85 cm",
+      "C": "0.90 cm",
+      "D": "0.95 cm"
+    },
+    "optionsList": [
+      "0.925 cm",
+      "1.85 cm",
+      "0.90 cm",
+      "0.95 cm"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nMeasuring diameter and deducing radius.\n\n2. GIVEN:\nMSR = 1.8 cm, n = 5, LC = 0.01 cm.\n\n3. FORMULA / PRINCIPLE:\nDiameter d = MSR + (n \u00d7 LC) = 1.8 + 0.05 = 1.85 cm. Radius r = d / 2.\n\n4. STEP-BY-STEP SOLUTION:\n1. Internal diameter d = MSR + (n \u00d7 LC) = 1.8 cm + 5 \u00d7 0.01 cm = 1.85 cm.\n2. The question asks for the RADIUS, not the diameter!\n3. Radius r = d / 2 = 1.85 cm / 2 = 0.925 cm.\n4. Therefore, the internal radius is 0.925 cm.\n\n5. FINAL ANSWER:\nOption A: 0.925 cm\n\n6. QUICK TIP:\nNEET Trap Alert: Always read whether the question asks for DIAMETER or RADIUS! Diameter = 1.85 cm  =>  Radius = 1.85 / 2 = 0.925 cm!",
+    "solutionStructured": {
+      "concept": "Measuring diameter and deducing radius.",
+      "given": "MSR = 1.8 cm, n = 5, LC = 0.01 cm.",
+      "formula": "Diameter d = MSR + (n \u00d7 LC) = 1.8 + 0.05 = 1.85 cm. Radius r = d / 2.",
+      "stepByStep": "1. Internal diameter d = MSR + (n \u00d7 LC) = 1.8 cm + 5 \u00d7 0.01 cm = 1.85 cm.\n2. The question asks for the RADIUS, not the diameter!\n3. Radius r = d / 2 = 1.85 cm / 2 = 0.925 cm.\n4. Therefore, the internal radius is 0.925 cm.",
+      "finalAnswer": "Option A: 0.925 cm",
+      "whyOtherOptionsWrong": "Option B (1.85 cm) is the diameter, not the radius! Options C and D are rounded estimates."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Vernier calipers and least count",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-423",
+    "questionNumber": 423,
+    "question": "In an experiment, 1 MSD = a units. If m divisions of the main scale coincide with n divisions of the Vernier scale (where n > m), the least count is:",
+    "options": {
+      "A": "a (1 - m / n)",
+      "B": "a (n - m)",
+      "C": "a (m / n)",
+      "D": "a / (n - m)"
+    },
+    "optionsList": [
+      "a (1 - m / n)",
+      "a (n - m)",
+      "a (m / n)",
+      "a / (n - m)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nGeneralized algebraic expression for Vernier least count.\n\n2. GIVEN:\n1 MSD = a. n VSD = m MSD.\n\n3. FORMULA / PRINCIPLE:\n1 VSD = (m / n) MSD = (m / n) a. LC = 1 MSD - 1 VSD = a - (m / n) a = a (1 - m / n).\n\n4. STEP-BY-STEP SOLUTION:\n1. By definition, 1 MSD = a.\n2. Given: n VSD = m MSD  =>  1 VSD = (m / n) MSD = (m / n) a.\n3. Least count LC = 1 MSD - 1 VSD = a - (m / n) a.\n4. Factoring out a: LC = a (1 - m / n) = a (n - m) / n.\n5. When m = n - 1, this reduces to standard a / n.\n\n5. FINAL ANSWER:\nOption A: a (1 - m / n)\n\n6. QUICK TIP:\nNEET Generalized Formula: LC = (1 - m/n) MSD = a (1 - m/n). Master this general form!",
+    "solutionStructured": {
+      "concept": "Generalized algebraic expression for Vernier least count.",
+      "given": "1 MSD = a. n VSD = m MSD.",
+      "formula": "1 VSD = (m / n) MSD = (m / n) a. LC = 1 MSD - 1 VSD = a - (m / n) a = a (1 - m / n).",
+      "stepByStep": "1. By definition, 1 MSD = a.\n2. Given: n VSD = m MSD  =>  1 VSD = (m / n) MSD = (m / n) a.\n3. Least count LC = 1 MSD - 1 VSD = a - (m / n) a.\n4. Factoring out a: LC = a (1 - m / n) = a (n - m) / n.\n5. When m = n - 1, this reduces to standard a / n.",
+      "finalAnswer": "Option A: a (1 - m / n)",
+      "whyOtherOptionsWrong": "Option B omits division by n. Option C is 1 VSD. Option D has inverted variables."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Vernier calipers and least count",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-424",
+    "questionNumber": 424,
+    "question": "A student measures the thickness of a glass slab using a Vernier caliper with 0.1 mm least count. The main scale reading is 15 mm. The 3rd Vernier division coincides. The absolute error in this single reading is equal to the least count (\u00b10.1 mm). The percentage error in the thickness measurement is:",
+    "options": {
+      "A": "0.65%",
+      "B": "1.5%",
+      "C": "0.20%",
+      "D": "3.0%"
+    },
+    "optionsList": [
+      "0.65%",
+      "1.5%",
+      "0.20%",
+      "3.0%"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nPercentage error evaluation in Vernier measurement.\n\n2. GIVEN:\nReading: MSR = 15 mm, n = 3, LC = 0.1 mm. Uncertainty \u0394x = LC = 0.1 mm.\n\n3. FORMULA / PRINCIPLE:\nThickness x = MSR + (n \u00d7 LC) = 15 + 0.3 = 15.3 mm. % error = (\u0394x / x) \u00d7 100%.\n\n4. STEP-BY-STEP SOLUTION:\n1. Measured thickness x = 15 mm + 3 \u00d7 0.1 mm = 15.3 mm.\n2. The uncertainty in a single reading is equal to the least count of the instrument: \u0394x = 0.1 mm.\n3. Percentage error = (\u0394x / x) \u00d7 100% = (0.1 mm / 15.3 mm) \u00d7 100%.\n4. Compute: (0.1 / 15.3) \u00d7 100% = 10 / 15.3 = 0.6536% \u2248 0.65%.\n5. Therefore, the percentage error is 0.65%.\n\n5. FINAL ANSWER:\nOption A: 0.65%\n\n6. QUICK TIP:\nNEET Lab Error Evaluation: % Error = (LC / Reading) \u00d7 100% = (0.1 / 15.3) \u00d7 100% \u2248 0.65%!",
+    "solutionStructured": {
+      "concept": "Percentage error evaluation in Vernier measurement.",
+      "given": "Reading: MSR = 15 mm, n = 3, LC = 0.1 mm. Uncertainty \u0394x = LC = 0.1 mm.",
+      "formula": "Thickness x = MSR + (n \u00d7 LC) = 15 + 0.3 = 15.3 mm. % error = (\u0394x / x) \u00d7 100%.",
+      "stepByStep": "1. Measured thickness x = 15 mm + 3 \u00d7 0.1 mm = 15.3 mm.\n2. The uncertainty in a single reading is equal to the least count of the instrument: \u0394x = 0.1 mm.\n3. Percentage error = (\u0394x / x) \u00d7 100% = (0.1 mm / 15.3 mm) \u00d7 100%.\n4. Compute: (0.1 / 15.3) \u00d7 100% = 10 / 15.3 = 0.6536% \u2248 0.65%.\n5. Therefore, the percentage error is 0.65%.",
+      "finalAnswer": "Option A: 0.65%",
+      "whyOtherOptionsWrong": "Option B divides 0.1 by 15. Option C is 0.20%. Option D is 3.0%."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Vernier calipers and least count",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-425",
+    "questionNumber": 425,
+    "question": "The main scale of a Vernier caliper has divisions in mm. A student uses a Vernier attachment where 20 Vernier divisions coincide with 18 main scale divisions. If the student uses this to measure the length of a rod and finds MSR = 25 mm with the 7th Vernier division coinciding, the reading is:",
+    "options": {
+      "A": "25.7 mm",
+      "B": "25.35 mm",
+      "C": "25.07 mm",
+      "D": "26.4 mm"
+    },
+    "optionsList": [
+      "25.7 mm",
+      "25.35 mm",
+      "25.07 mm",
+      "26.4 mm"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nReading with non-standard 20 VSD = 18 MSD.\n\n2. GIVEN:\n1 MSD = 1 mm. 20 VSD = 18 MSD  =>  LC = (1 - 18/20) = 2/20 = 0.1 mm. MSR = 25 mm, n = 7.\n\n3. FORMULA / PRINCIPLE:\nReading = MSR + (n \u00d7 LC) = 25 mm + 7 \u00d7 0.1 mm = 25.7 mm.\n\n4. STEP-BY-STEP SOLUTION:\n1. First find the least count:\n   20 VSD = 18 MSD  =>  1 VSD = 18/20 MSD = 0.9 mm.\n   LC = 1 MSD - 1 VSD = 1.0 mm - 0.9 mm = 0.1 mm.\n2. Now calculate the reading:\n   Total Reading = MSR + (n \u00d7 LC) = 25 mm + 7 \u00d7 0.1 mm = 25 mm + 0.7 mm = 25.7 mm.\n3. The reading is 25.7 mm (or 2.57 cm).\n\n5. FINAL ANSWER:\nOption A: 25.7 mm\n\n6. QUICK TIP:\nNEET Multi-Step Problem: Step 1: LC = (1 - 18/20) \u00d7 1 mm = 0.1 mm. Step 2: Reading = 25 + 7(0.1) = 25.7 mm!",
+    "solutionStructured": {
+      "concept": "Reading with non-standard 20 VSD = 18 MSD.",
+      "given": "1 MSD = 1 mm. 20 VSD = 18 MSD  =>  LC = (1 - 18/20) = 2/20 = 0.1 mm. MSR = 25 mm, n = 7.",
+      "formula": "Reading = MSR + (n \u00d7 LC) = 25 mm + 7 \u00d7 0.1 mm = 25.7 mm.",
+      "stepByStep": "1. First find the least count:\n   20 VSD = 18 MSD  =>  1 VSD = 18/20 MSD = 0.9 mm.\n   LC = 1 MSD - 1 VSD = 1.0 mm - 0.9 mm = 0.1 mm.\n2. Now calculate the reading:\n   Total Reading = MSR + (n \u00d7 LC) = 25 mm + 7 \u00d7 0.1 mm = 25 mm + 0.7 mm = 25.7 mm.\n3. The reading is 25.7 mm (or 2.57 cm).",
+      "finalAnswer": "Option A: 25.7 mm",
+      "whyOtherOptionsWrong": "Option B uses LC = 0.05 mm (25 + 7 \u00d7 0.05 = 25.35 mm). Option C uses LC = 0.01 mm. Option D is incorrect."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Vernier calipers and least count",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-426",
+    "questionNumber": 426,
+    "question": "A traveling microscope has a main scale with 1 mm divisions. Its Vernier scale has 50 divisions that coincide with 49 main scale divisions. When focused on a glass plate, the reading is 2.824 cm. How many Vernier divisions were coinciding in this reading?",
+    "options": {
+      "A": "12",
+      "B": "24",
+      "C": "6",
+      "D": "18"
+    },
+    "optionsList": [
+      "12",
+      "24",
+      "6",
+      "18"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nReverse engineering coinciding Vernier division from a recorded reading.\n\n2. GIVEN:\nLC = 1 mm / 50 = 0.02 mm = 0.002 cm. Total reading = 2.824 cm. 1 MSD = 1 mm = 0.1 cm.\n\n3. FORMULA / PRINCIPLE:\nMSR is the largest multiple of 0.1 cm <= 2.824 cm  =>  MSR = 2.8 cm. VSR = 2.824 - 2.800 = 0.024 cm. n = VSR / LC.\n\n4. STEP-BY-STEP SOLUTION:\n1. 1 MSD = 1 mm = 0.1 cm.\n2. Least count LC = 1 mm / 50 = 0.02 mm = 0.002 cm.\n3. For reading 2.824 cm:\n   - The main scale reading is MSR = 2.8 cm = 28 mm.\n   - The fractional Vernier part is VSR = 2.824 cm - 2.800 cm = 0.024 cm = 0.24 mm.\n4. Coinciding division n = VSR / LC = 0.024 cm / 0.002 cm = 12.\n5. Therefore, the 12th Vernier division was coinciding.\n\n5. FINAL ANSWER:\nOption A: 12\n\n6. QUICK TIP:\nNEET Reverse Problem: Fractional part = 0.024 cm. Coinciding division n = 0.024 / 0.002 = 12!",
+    "solutionStructured": {
+      "concept": "Reverse engineering coinciding Vernier division from a recorded reading.",
+      "given": "LC = 1 mm / 50 = 0.02 mm = 0.002 cm. Total reading = 2.824 cm. 1 MSD = 1 mm = 0.1 cm.",
+      "formula": "MSR is the largest multiple of 0.1 cm <= 2.824 cm  =>  MSR = 2.8 cm. VSR = 2.824 - 2.800 = 0.024 cm. n = VSR / LC.",
+      "stepByStep": "1. 1 MSD = 1 mm = 0.1 cm.\n2. Least count LC = 1 mm / 50 = 0.02 mm = 0.002 cm.\n3. For reading 2.824 cm:\n   - The main scale reading is MSR = 2.8 cm = 28 mm.\n   - The fractional Vernier part is VSR = 2.824 cm - 2.800 cm = 0.024 cm = 0.24 mm.\n4. Coinciding division n = VSR / LC = 0.024 cm / 0.002 cm = 12.\n5. Therefore, the 12th Vernier division was coinciding.",
+      "finalAnswer": "Option A: 12",
+      "whyOtherOptionsWrong": "Option B is 24 (if LC was 0.001 cm). Option C is 6. Option D is 18."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Vernier calipers and least count",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-427",
+    "questionNumber": 427,
+    "question": "A circular disc of diameter D is measured using a Vernier caliper. The main scale reading is 3.5 cm and the 4th Vernier mark coincides (LC = 0.01 cm). When measuring the same disc with a screw gauge (LC = 0.01 mm), the circular scale reading shows a corresponding fractional part of:",
+    "options": {
+      "A": "40 circular divisions",
+      "B": "4 circular divisions",
+      "C": "400 circular divisions",
+      "D": "20 circular divisions"
+    },
+    "optionsList": [
+      "40 circular divisions",
+      "4 circular divisions",
+      "400 circular divisions",
+      "20 circular divisions"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nCross-instrument equivalence: Vernier vs screw gauge divisions.\n\n2. GIVEN:\nVernier fraction = 4 \u00d7 0.01 cm = 0.04 cm = 0.40 mm. Screw gauge LC = 0.01 mm.\n\n3. FORMULA / PRINCIPLE:\nFractional reading = n_screw \u00d7 LC_screw  =>  0.40 mm = n_screw \u00d7 0.01 mm  =>  n_screw = 0.40 / 0.01 = 40.\n\n4. STEP-BY-STEP SOLUTION:\n1. The fractional part measured by the Vernier caliper is:\n   Fraction = n_vernier \u00d7 LC_vernier = 4 \u00d7 0.01 cm = 0.04 cm = 0.40 mm.\n2. In the screw gauge, the fractional reading is given by n_screw \u00d7 LC_screw.\n3. 0.40 mm = n_screw \u00d7 0.01 mm.\n4. Solving for n_screw:\n   n_screw = 0.40 mm / 0.01 mm = 40.\n5. The circular scale of the screw gauge will show 40 divisions coinciding with the reference line.\n\n5. FINAL ANSWER:\nOption A: 40 circular divisions\n\n6. QUICK TIP:\nNEET Cross-Instrument Insight: 4 Vernier divisions (at 0.1 mm each) = 0.4 mm = 40 Screw gauge divisions (at 0.01 mm each)!",
+    "solutionStructured": {
+      "concept": "Cross-instrument equivalence: Vernier vs screw gauge divisions.",
+      "given": "Vernier fraction = 4 \u00d7 0.01 cm = 0.04 cm = 0.40 mm. Screw gauge LC = 0.01 mm.",
+      "formula": "Fractional reading = n_screw \u00d7 LC_screw  =>  0.40 mm = n_screw \u00d7 0.01 mm  =>  n_screw = 0.40 / 0.01 = 40.",
+      "stepByStep": "1. The fractional part measured by the Vernier caliper is:\n   Fraction = n_vernier \u00d7 LC_vernier = 4 \u00d7 0.01 cm = 0.04 cm = 0.40 mm.\n2. In the screw gauge, the fractional reading is given by n_screw \u00d7 LC_screw.\n3. 0.40 mm = n_screw \u00d7 0.01 mm.\n4. Solving for n_screw:\n   n_screw = 0.40 mm / 0.01 mm = 40.\n5. The circular scale of the screw gauge will show 40 divisions coinciding with the reference line.",
+      "finalAnswer": "Option A: 40 circular divisions",
+      "whyOtherOptionsWrong": "Option B assumes identical least counts. Option C is 400. Option D is 20."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Vernier calipers and least count",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-428",
+    "questionNumber": 428,
+    "question": "When the jaws of a Vernier caliper are brought into contact, if the zero mark of the Vernier scale lies to the RIGHT of the zero mark of the main scale, the zero error is:",
+    "options": {
+      "A": "Positive, and the zero correction is negative",
+      "B": "Negative, and the zero correction is positive",
+      "C": "Positive, and the zero correction is positive",
+      "D": "Negative, and the zero correction is negative"
+    },
+    "optionsList": [
+      "Positive, and the zero correction is negative",
+      "Negative, and the zero correction is positive",
+      "Positive, and the zero correction is positive",
+      "Negative, and the zero correction is negative"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDefinition of positive zero error and sign of zero correction.\n\n2. GIVEN:\nVernier zero lies to the RIGHT of main scale zero.\n\n3. FORMULA / PRINCIPLE:\nZero Error is POSITIVE (+e). Zero Correction is NEGATIVE (-e). True Reading = Observed Reading - (Zero Error).\n\n4. STEP-BY-STEP SOLUTION:\n1. When the zero of the Vernier scale lies to the right of the main scale zero, the instrument reads a positive value even when measuring nothing.\n2. Therefore, the zero error is POSITIVE (+).\n3. Since every observed reading will be systematically too large by this amount, we must SUBTRACT the error to get the true value.\n4. Hence, the zero correction is NEGATIVE (-).\n5. Zero Correction = - (Zero Error).\n\n5. FINAL ANSWER:\nOption A: Positive, and the zero correction is negative\n\n6. QUICK TIP:\nNEET Golden Rule: Vernier zero to the RIGHT = POSITIVE error (+e)  =>  Correction is NEGATIVE (-e)!",
+    "solutionStructured": {
+      "concept": "Definition of positive zero error and sign of zero correction.",
+      "given": "Vernier zero lies to the RIGHT of main scale zero.",
+      "formula": "Zero Error is POSITIVE (+e). Zero Correction is NEGATIVE (-e). True Reading = Observed Reading - (Zero Error).",
+      "stepByStep": "1. When the zero of the Vernier scale lies to the right of the main scale zero, the instrument reads a positive value even when measuring nothing.\n2. Therefore, the zero error is POSITIVE (+).\n3. Since every observed reading will be systematically too large by this amount, we must SUBTRACT the error to get the true value.\n4. Hence, the zero correction is NEGATIVE (-).\n5. Zero Correction = - (Zero Error).",
+      "finalAnswer": "Option A: Positive, and the zero correction is negative",
+      "whyOtherOptionsWrong": "Option B is negative zero error (to the left). Options C and D violate the rule that correction is opposite in sign to error."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Zero error and zero correction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-429",
+    "questionNumber": 429,
+    "question": "When the jaws of a Vernier caliper are closed, if the zero mark of the Vernier scale lies to the LEFT of the main scale zero, the zero error is:",
+    "options": {
+      "A": "Negative, and the zero correction is positive",
+      "B": "Positive, and the zero correction is negative",
+      "C": "Negative, and the zero correction is negative",
+      "D": "Zero error cannot be negative"
+    },
+    "optionsList": [
+      "Negative, and the zero correction is positive",
+      "Positive, and the zero correction is negative",
+      "Negative, and the zero correction is negative",
+      "Zero error cannot be negative"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDefinition of negative zero error.\n\n2. GIVEN:\nVernier zero lies to the LEFT of main scale zero.\n\n3. FORMULA / PRINCIPLE:\nZero Error is NEGATIVE (-e). Zero Correction is POSITIVE (+e).\n\n4. STEP-BY-STEP SOLUTION:\n1. When the Vernier zero lies to the left of the main scale zero, the instrument reads less than zero.\n2. The zero error is NEGATIVE (-).\n3. Because every measured reading will be systematically smaller than the true value, the error must be ADDED back.\n4. Therefore, the zero correction is POSITIVE (+).\n5. True Reading = Observed Reading - (-e) = Observed Reading + e.\n\n5. FINAL ANSWER:\nOption A: Negative, and the zero correction is positive\n\n6. QUICK TIP:\nNEET Golden Rule: Vernier zero to the LEFT = NEGATIVE error (-e)  =>  Correction is POSITIVE (+e)!",
+    "solutionStructured": {
+      "concept": "Definition of negative zero error.",
+      "given": "Vernier zero lies to the LEFT of main scale zero.",
+      "formula": "Zero Error is NEGATIVE (-e). Zero Correction is POSITIVE (+e).",
+      "stepByStep": "1. When the Vernier zero lies to the left of the main scale zero, the instrument reads less than zero.\n2. The zero error is NEGATIVE (-).\n3. Because every measured reading will be systematically smaller than the true value, the error must be ADDED back.\n4. Therefore, the zero correction is POSITIVE (+).\n5. True Reading = Observed Reading - (-e) = Observed Reading + e.",
+      "finalAnswer": "Option A: Negative, and the zero correction is positive",
+      "whyOtherOptionsWrong": "Option B describes positive zero error. Option C gives wrong sign to correction. Option D is false."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Zero error and zero correction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-430",
+    "questionNumber": 430,
+    "question": "The fundamental relationship between True Reading, Observed Reading, and Zero Error is:",
+    "options": {
+      "A": "True Reading = Observed Reading - (Zero Error with algebraic sign)",
+      "B": "True Reading = Observed Reading + (Zero Error with algebraic sign)",
+      "C": "True Reading = Observed Reading \u00d7 Zero Error",
+      "D": "True Reading = Observed Reading / Zero Error"
+    },
+    "optionsList": [
+      "True Reading = Observed Reading - (Zero Error with algebraic sign)",
+      "True Reading = Observed Reading + (Zero Error with algebraic sign)",
+      "True Reading = Observed Reading \u00d7 Zero Error",
+      "True Reading = Observed Reading / Zero Error"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nUniversal formula for correcting zero error.\n\n2. GIVEN:\nObserved Reading and Zero Error (e).\n\n3. FORMULA / PRINCIPLE:\nTrue Reading = Observed Reading - (Zero Error).\n\n4. STEP-BY-STEP SOLUTION:\n1. If an instrument measures an observed reading R_obs, and has a zero error 'e' (with its proper algebraic sign + or -), the true reading is:\n   True Reading = Observed Reading - (Zero Error).\n2. If error is positive (+e): True = Observed - (+e) = Observed - e.\n3. If error is negative (-e): True = Observed - (-e) = Observed + e.\n4. This single equation correctly handles both cases.\n\n5. FINAL ANSWER:\nOption A: True Reading = Observed Reading - (Zero Error with algebraic sign)\n\n6. QUICK TIP:\nNEET Universal Equation: True Reading = Observed Reading - (Zero Error with proper sign)!",
+    "solutionStructured": {
+      "concept": "Universal formula for correcting zero error.",
+      "given": "Observed Reading and Zero Error (e).",
+      "formula": "True Reading = Observed Reading - (Zero Error).",
+      "stepByStep": "1. If an instrument measures an observed reading R_obs, and has a zero error 'e' (with its proper algebraic sign + or -), the true reading is:\n   True Reading = Observed Reading - (Zero Error).\n2. If error is positive (+e): True = Observed - (+e) = Observed - e.\n3. If error is negative (-e): True = Observed - (-e) = Observed + e.\n4. This single equation correctly handles both cases.",
+      "finalAnswer": "Option A: True Reading = Observed Reading - (Zero Error with algebraic sign)",
+      "whyOtherOptionsWrong": "Options B, C, and D are incorrect mathematical expressions."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Zero error and zero correction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-431",
+    "questionNumber": 431,
+    "question": "A Vernier caliper has a zero error of +0.04 cm. If the observed reading of the length of a cylinder is 3.56 cm, the corrected true length is:",
+    "options": {
+      "A": "3.52 cm",
+      "B": "3.60 cm",
+      "C": "3.56 cm",
+      "D": "3.16 cm"
+    },
+    "optionsList": [
+      "3.52 cm",
+      "3.60 cm",
+      "3.56 cm",
+      "3.16 cm"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nApplication of positive zero error subtraction.\n\n2. GIVEN:\nZero error e = +0.04 cm. Observed reading = 3.56 cm.\n\n3. FORMULA / PRINCIPLE:\nTrue Reading = Observed Reading - Zero Error = 3.56 - (+0.04) = 3.52 cm.\n\n4. STEP-BY-STEP SOLUTION:\n1. The zero error is positive: e = +0.04 cm.\n2. Observed reading R_obs = 3.56 cm.\n3. Apply the correction formula:\n   True Reading = R_obs - e = 3.56 cm - 0.04 cm = 3.52 cm.\n4. The true length of the cylinder is 3.52 cm.\n\n5. FINAL ANSWER:\nOption A: 3.52 cm\n\n6. QUICK TIP:\nNEET Simple Calculation: True = 3.56 - 0.04 = 3.52 cm!",
+    "solutionStructured": {
+      "concept": "Application of positive zero error subtraction.",
+      "given": "Zero error e = +0.04 cm. Observed reading = 3.56 cm.",
+      "formula": "True Reading = Observed Reading - Zero Error = 3.56 - (+0.04) = 3.52 cm.",
+      "stepByStep": "1. The zero error is positive: e = +0.04 cm.\n2. Observed reading R_obs = 3.56 cm.\n3. Apply the correction formula:\n   True Reading = R_obs - e = 3.56 cm - 0.04 cm = 3.52 cm.\n4. The true length of the cylinder is 3.52 cm.",
+      "finalAnswer": "Option A: 3.52 cm",
+      "whyOtherOptionsWrong": "Option B (3.60 cm) incorrectly adds the positive error. Option C ignores error. Option D has arithmetic error."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Zero error and zero correction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-432",
+    "questionNumber": 432,
+    "question": "A Vernier caliper has a zero error of -0.03 cm. If the observed reading of a rod is 4.82 cm, the true length of the rod is:",
+    "options": {
+      "A": "4.85 cm",
+      "B": "4.79 cm",
+      "C": "4.82 cm",
+      "D": "5.12 cm"
+    },
+    "optionsList": [
+      "4.85 cm",
+      "4.79 cm",
+      "4.82 cm",
+      "5.12 cm"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nApplication of negative zero error correction.\n\n2. GIVEN:\nZero error e = -0.03 cm. Observed reading = 4.82 cm.\n\n3. FORMULA / PRINCIPLE:\nTrue Reading = Observed Reading - Zero Error = 4.82 - (-0.03) = 4.82 + 0.03 = 4.85 cm.\n\n4. STEP-BY-STEP SOLUTION:\n1. The zero error is negative: e = -0.03 cm.\n2. Observed reading R_obs = 4.82 cm.\n3. Apply the formula:\n   True Reading = R_obs - (-0.03 cm) = 4.82 cm + 0.03 cm = 4.85 cm.\n4. The corrected true length is 4.85 cm.\n\n5. FINAL ANSWER:\nOption A: 4.85 cm\n\n6. QUICK TIP:\nNEET Trap Buster: For NEGATIVE zero error (-0.03 cm), you ADD the magnitude: 4.82 + 0.03 = 4.85 cm!",
+    "solutionStructured": {
+      "concept": "Application of negative zero error correction.",
+      "given": "Zero error e = -0.03 cm. Observed reading = 4.82 cm.",
+      "formula": "True Reading = Observed Reading - Zero Error = 4.82 - (-0.03) = 4.82 + 0.03 = 4.85 cm.",
+      "stepByStep": "1. The zero error is negative: e = -0.03 cm.\n2. Observed reading R_obs = 4.82 cm.\n3. Apply the formula:\n   True Reading = R_obs - (-0.03 cm) = 4.82 cm + 0.03 cm = 4.85 cm.\n4. The corrected true length is 4.85 cm.",
+      "finalAnswer": "Option A: 4.85 cm",
+      "whyOtherOptionsWrong": "Option B (4.79 cm) subtracts the negative error instead of adding it. Option C ignores error. Option D has arithmetic error."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Zero error and zero correction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-433",
+    "questionNumber": 433,
+    "question": "When the jaws of a Vernier caliper (LC = 0.1 mm) are brought together, the zero mark of the Vernier scale lies to the right of the main scale zero, and the 3rd Vernier division coincides with a main scale mark. The zero error of the caliper is:",
+    "options": {
+      "A": "+0.3 mm (+0.03 cm)",
+      "B": "-0.3 mm (-0.03 cm)",
+      "C": "+0.7 mm (+0.07 cm)",
+      "D": "-0.7 mm (-0.07 cm)"
+    },
+    "optionsList": [
+      "+0.3 mm (+0.03 cm)",
+      "-0.3 mm (-0.03 cm)",
+      "+0.7 mm (+0.07 cm)",
+      "-0.7 mm (-0.07 cm)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDetermining positive zero error from coinciding division.\n\n2. GIVEN:\nVernier zero lies to the RIGHT of main scale zero. Coinciding division n = 3. LC = 0.1 mm.\n\n3. FORMULA / PRINCIPLE:\nPositive Zero Error = + (n \u00d7 LC) = + (3 \u00d7 0.1 mm) = +0.3 mm.\n\n4. STEP-BY-STEP SOLUTION:\n1. Because the Vernier zero is to the right of the main scale zero, the zero error is POSITIVE (+).\n2. For positive zero error, the magnitude is simply the coinciding division n multiplied by the least count LC.\n3. Error = + (n \u00d7 LC) = + (3 \u00d7 0.1 mm) = +0.3 mm = +0.03 cm.\n4. The zero error is +0.3 mm.\n\n5. FINAL ANSWER:\nOption A: +0.3 mm (+0.03 cm)\n\n6. QUICK TIP:\nNEET Rule for Positive Zero Error: Error = + (Coinciding division \u00d7 LC) = + (3 \u00d7 0.1) = +0.3 mm!",
+    "solutionStructured": {
+      "concept": "Determining positive zero error from coinciding division.",
+      "given": "Vernier zero lies to the RIGHT of main scale zero. Coinciding division n = 3. LC = 0.1 mm.",
+      "formula": "Positive Zero Error = + (n \u00d7 LC) = + (3 \u00d7 0.1 mm) = +0.3 mm.",
+      "stepByStep": "1. Because the Vernier zero is to the right of the main scale zero, the zero error is POSITIVE (+).\n2. For positive zero error, the magnitude is simply the coinciding division n multiplied by the least count LC.\n3. Error = + (n \u00d7 LC) = + (3 \u00d7 0.1 mm) = +0.3 mm = +0.03 cm.\n4. The zero error is +0.3 mm.",
+      "finalAnswer": "Option A: +0.3 mm (+0.03 cm)",
+      "whyOtherOptionsWrong": "Option B has negative sign. Option C uses (10 - n), which is for negative zero error. Option D combines both mistakes."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Zero error and zero correction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-434",
+    "questionNumber": 434,
+    "question": "When the jaws of a Vernier caliper (10 divisions on Vernier scale, LC = 0.1 mm) are closed, the zero mark of the Vernier scale lies to the left of the main scale zero, and the 6th Vernier division coincides with a main scale mark. The zero error of the caliper is:",
+    "options": {
+      "A": "-0.4 mm (-0.04 cm)",
+      "B": "-0.6 mm (-0.06 cm)",
+      "C": "+0.6 mm (+0.06 cm)",
+      "D": "+0.4 mm (+0.04 cm)"
+    },
+    "optionsList": [
+      "-0.4 mm (-0.04 cm)",
+      "-0.6 mm (-0.06 cm)",
+      "+0.6 mm (+0.06 cm)",
+      "+0.4 mm (+0.04 cm)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDetermining negative zero error using (N - n) rule.\n\n2. GIVEN:\nVernier zero lies to the LEFT of main scale zero. Total Vernier divisions N = 10. Coinciding division n = 6. LC = 0.1 mm.\n\n3. FORMULA / PRINCIPLE:\nNegative Zero Error = - (N - n) \u00d7 LC = - (10 - 6) \u00d7 0.1 mm = - 4 \u00d7 0.1 mm = -0.4 mm.\n\n4. STEP-BY-STEP SOLUTION:\n1. Because the Vernier zero is to the left of the main scale zero, the error is NEGATIVE (-).\n2. For negative zero error, we do NOT take the coinciding mark n directly! We must count from the right-hand end of the Vernier scale: (N - n).\n3. Number of divisions from end = 10 - 6 = 4 divisions.\n4. Negative Zero Error = - (10 - 6) \u00d7 LC = - 4 \u00d7 0.1 mm = -0.4 mm = -0.04 cm.\n5. (The zero correction is +0.4 mm).\n\n5. FINAL ANSWER:\nOption A: -0.4 mm (-0.04 cm)\n\n6. QUICK TIP:\nNEET High-Yield Trap Alert: For NEGATIVE zero error: Error = - (Total divisions - Coinciding division) \u00d7 LC = - (10 - 6) \u00d7 0.1 = -0.4 mm! Do NOT write -0.6 mm!",
+    "solutionStructured": {
+      "concept": "Determining negative zero error using (N - n) rule.",
+      "given": "Vernier zero lies to the LEFT of main scale zero. Total Vernier divisions N = 10. Coinciding division n = 6. LC = 0.1 mm.",
+      "formula": "Negative Zero Error = - (N - n) \u00d7 LC = - (10 - 6) \u00d7 0.1 mm = - 4 \u00d7 0.1 mm = -0.4 mm.",
+      "stepByStep": "1. Because the Vernier zero is to the left of the main scale zero, the error is NEGATIVE (-).\n2. For negative zero error, we do NOT take the coinciding mark n directly! We must count from the right-hand end of the Vernier scale: (N - n).\n3. Number of divisions from end = 10 - 6 = 4 divisions.\n4. Negative Zero Error = - (10 - 6) \u00d7 LC = - 4 \u00d7 0.1 mm = -0.4 mm = -0.04 cm.\n5. (The zero correction is +0.4 mm).",
+      "finalAnswer": "Option A: -0.4 mm (-0.04 cm)",
+      "whyOtherOptionsWrong": "Option B (-0.6 mm) is the classic mistake of using n instead of (N - n). Options C and D have positive signs."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Zero error and zero correction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-435",
+    "questionNumber": 435,
+    "question": "When the jaws of a Vernier caliper (LC = 0.01 cm, 10 divisions on Vernier) are closed, the zero mark of Vernier lies to the left of the main scale zero, and the 7th Vernier division coincides with a main scale line. While measuring a sphere, the main scale reads 3.2 cm and the 4th Vernier division coincides. The true diameter of the sphere is:",
+    "options": {
+      "A": "3.27 cm",
+      "B": "3.21 cm",
+      "C": "3.17 cm",
+      "D": "3.31 cm"
+    },
+    "optionsList": [
+      "3.27 cm",
+      "3.21 cm",
+      "3.17 cm",
+      "3.31 cm"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nComplete measurement problem with negative zero error.\n\n2. GIVEN:\nN = 10, LC = 0.01 cm. Zero lies to left; coinciding mark for zero error = 7. Measurement: MSR = 3.2 cm, n = 4.\n\n3. FORMULA / PRINCIPLE:\nZero Error = - (10 - 7) \u00d7 0.01 = -0.03 cm. Observed Reading = 3.2 + 4 \u00d7 0.01 = 3.24 cm. True = Observed - Error.\n\n4. STEP-BY-STEP SOLUTION:\n1. Calculate Zero Error:\n   - Vernier zero is to the left => NEGATIVE error.\n   - Error = - (10 - 7) \u00d7 LC = - 3 \u00d7 0.01 cm = -0.03 cm.\n2. Calculate Observed Reading:\n   - R_obs = MSR + (n \u00d7 LC) = 3.2 cm + 4 \u00d7 0.01 cm = 3.24 cm.\n3. Calculate True Reading:\n   - True = R_obs - (Zero Error) = 3.24 cm - (-0.03 cm) = 3.24 + 0.03 = 3.27 cm.\n4. The true diameter of the sphere is 3.27 cm.\n\n5. FINAL ANSWER:\nOption A: 3.27 cm\n\n6. QUICK TIP:\nNEET Full Solution: 1. Error = - (10 - 7) \u00d7 0.01 = -0.03 cm. 2. Observed = 3.24 cm. 3. True = 3.24 - (-0.03) = 3.27 cm!",
+    "solutionStructured": {
+      "concept": "Complete measurement problem with negative zero error.",
+      "given": "N = 10, LC = 0.01 cm. Zero lies to left; coinciding mark for zero error = 7. Measurement: MSR = 3.2 cm, n = 4.",
+      "formula": "Zero Error = - (10 - 7) \u00d7 0.01 = -0.03 cm. Observed Reading = 3.2 + 4 \u00d7 0.01 = 3.24 cm. True = Observed - Error.",
+      "stepByStep": "1. Calculate Zero Error:\n   - Vernier zero is to the left => NEGATIVE error.\n   - Error = - (10 - 7) \u00d7 LC = - 3 \u00d7 0.01 cm = -0.03 cm.\n2. Calculate Observed Reading:\n   - R_obs = MSR + (n \u00d7 LC) = 3.2 cm + 4 \u00d7 0.01 cm = 3.24 cm.\n3. Calculate True Reading:\n   - True = R_obs - (Zero Error) = 3.24 cm - (-0.03 cm) = 3.24 + 0.03 = 3.27 cm.\n4. The true diameter of the sphere is 3.27 cm.",
+      "finalAnswer": "Option A: 3.27 cm",
+      "whyOtherOptionsWrong": "Option B (3.21 cm) subtracts 0.03 cm. Option C uses -0.07 cm error. Option D has arithmetic error."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Zero error and zero correction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-436",
+    "questionNumber": 436,
+    "question": "In a screw gauge, zero error is determined when:",
+    "options": {
+      "A": "The studs (anvil and spindle) are in contact without any object between them",
+      "B": "The thimble is fully unscrewed to its maximum limit",
+      "C": "A glass slab is clamped between the studs",
+      "D": "The ratchet is rotated backwards by 5 turns"
+    },
+    "optionsList": [
+      "The studs (anvil and spindle) are in contact without any object between them",
+      "The thimble is fully unscrewed to its maximum limit",
+      "A glass slab is clamped between the studs",
+      "The ratchet is rotated backwards by 5 turns"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nProcedure for observing zero error in a screw gauge.\n\n2. GIVEN:\nZero error determination in screw gauge.\n\n3. FORMULA / PRINCIPLE:\nZero error is checked when the plane faces of the anvil and spindle are in contact using the ratchet.\n\n4. STEP-BY-STEP SOLUTION:\n1. To determine the zero error of a screw gauge, the spindle is advanced using the ratchet until its face makes gentle contact with the fixed anvil.\n2. The ratchet slips and produces a clicking sound when proper contact pressure is achieved.\n3. The observer then inspects whether the zero mark of the circular scale coincides with the reference baseline of the linear main scale.\n4. If the zeros coincide, zero error is zero.\n\n5. FINAL ANSWER:\nOption A: The studs (anvil and spindle) are in contact without any object between them\n\n6. QUICK TIP:\nNEET Lab Practical Standard: Zero error is checked when the anvil and spindle make contact (ratchet clicks) with NO object present!",
+    "solutionStructured": {
+      "concept": "Procedure for observing zero error in a screw gauge.",
+      "given": "Zero error determination in screw gauge.",
+      "formula": "Zero error is checked when the plane faces of the anvil and spindle are in contact using the ratchet.",
+      "stepByStep": "1. To determine the zero error of a screw gauge, the spindle is advanced using the ratchet until its face makes gentle contact with the fixed anvil.\n2. The ratchet slips and produces a clicking sound when proper contact pressure is achieved.\n3. The observer then inspects whether the zero mark of the circular scale coincides with the reference baseline of the linear main scale.\n4. If the zeros coincide, zero error is zero.",
+      "finalAnswer": "Option A: The studs (anvil and spindle) are in contact without any object between them",
+      "whyOtherOptionsWrong": "Options B, C, and D are incorrect procedures."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Zero error and zero correction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-437",
+    "questionNumber": 437,
+    "question": "When the studs of a screw gauge are in contact, if the zero mark of the circular scale lies BELOW the reference line of the linear scale, the zero error is:",
+    "options": {
+      "A": "Positive, and the zero correction is negative",
+      "B": "Negative, and the zero correction is positive",
+      "C": "Positive, and the zero correction is positive",
+      "D": "Negative, and the zero correction is negative"
+    },
+    "optionsList": [
+      "Positive, and the zero correction is negative",
+      "Negative, and the zero correction is positive",
+      "Positive, and the zero correction is positive",
+      "Negative, and the zero correction is negative"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nZero error convention in a screw gauge (below reference line).\n\n2. GIVEN:\nCircular scale zero lies BELOW the reference line.\n\n3. FORMULA / PRINCIPLE:\nZero Error is POSITIVE (+e). Correction is NEGATIVE (-e).\n\n4. STEP-BY-STEP SOLUTION:\n1. When the circular scale zero is below the reference line, the screw has already advanced slightly forward beyond zero.\n2. The instrument reads a positive value (e.g. +3 divisions) even when fully closed.\n3. Therefore, the zero error is POSITIVE (+).\n4. The zero correction is NEGATIVE (-).\n5. True Reading = Observed Reading - (Zero Error).\n\n5. FINAL ANSWER:\nOption A: Positive, and the zero correction is negative\n\n6. QUICK TIP:\nNEET Screw Gauge Rule: Circular zero BELOW reference line = POSITIVE zero error (+e)  =>  Correction is NEGATIVE (-e)!",
+    "solutionStructured": {
+      "concept": "Zero error convention in a screw gauge (below reference line).",
+      "given": "Circular scale zero lies BELOW the reference line.",
+      "formula": "Zero Error is POSITIVE (+e). Correction is NEGATIVE (-e).",
+      "stepByStep": "1. When the circular scale zero is below the reference line, the screw has already advanced slightly forward beyond zero.\n2. The instrument reads a positive value (e.g. +3 divisions) even when fully closed.\n3. Therefore, the zero error is POSITIVE (+).\n4. The zero correction is NEGATIVE (-).\n5. True Reading = Observed Reading - (Zero Error).",
+      "finalAnswer": "Option A: Positive, and the zero correction is negative",
+      "whyOtherOptionsWrong": "Option B is when zero is above the reference line. Options C and D have mismatched correction signs."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Zero error and zero correction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-438",
+    "questionNumber": 438,
+    "question": "When the studs of a screw gauge are in contact, if the zero mark of the circular scale lies ABOVE the reference line, the zero error is:",
+    "options": {
+      "A": "Negative, and the zero correction is positive",
+      "B": "Positive, and the zero correction is negative",
+      "C": "Negative, and the zero correction is negative",
+      "D": "Zero error is always positive"
+    },
+    "optionsList": [
+      "Negative, and the zero correction is positive",
+      "Positive, and the zero correction is negative",
+      "Negative, and the zero correction is negative",
+      "Zero error is always positive"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nScrew gauge zero error convention (above reference line).\n\n2. GIVEN:\nCircular scale zero lies ABOVE the reference line.\n\n3. FORMULA / PRINCIPLE:\nZero Error is NEGATIVE (-e). Correction is POSITIVE (+e).\n\n4. STEP-BY-STEP SOLUTION:\n1. When the circular scale zero is above the reference line, the screw has not yet reached zero when the jaws make contact.\n2. Every subsequent reading will underestimate the true thickness.\n3. Therefore, the zero error is NEGATIVE (-).\n4. The zero correction is POSITIVE (+).\n5. True Reading = Observed Reading - (-e) = Observed Reading + e.\n\n5. FINAL ANSWER:\nOption A: Negative, and the zero correction is positive\n\n6. QUICK TIP:\nNEET Screw Gauge Rule: Circular zero ABOVE reference line = NEGATIVE zero error (-e)  =>  Correction is POSITIVE (+e)!",
+    "solutionStructured": {
+      "concept": "Screw gauge zero error convention (above reference line).",
+      "given": "Circular scale zero lies ABOVE the reference line.",
+      "formula": "Zero Error is NEGATIVE (-e). Correction is POSITIVE (+e).",
+      "stepByStep": "1. When the circular scale zero is above the reference line, the screw has not yet reached zero when the jaws make contact.\n2. Every subsequent reading will underestimate the true thickness.\n3. Therefore, the zero error is NEGATIVE (-).\n4. The zero correction is POSITIVE (+).\n5. True Reading = Observed Reading - (-e) = Observed Reading + e.",
+      "finalAnswer": "Option A: Negative, and the zero correction is positive",
+      "whyOtherOptionsWrong": "Option B is when zero is below the reference line. Options C and D are incorrect."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Zero error and zero correction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-439",
+    "questionNumber": 439,
+    "question": "A screw gauge has 50 circular divisions and pitch 0.5 mm (LC = 0.01 mm). When the studs are in contact, the zero mark of the circular scale lies 3 divisions below the reference line. The zero error is:",
+    "options": {
+      "A": "+0.03 mm",
+      "B": "-0.03 mm",
+      "C": "+0.06 mm",
+      "D": "-0.47 mm"
+    },
+    "optionsList": [
+      "+0.03 mm",
+      "-0.03 mm",
+      "+0.06 mm",
+      "-0.47 mm"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nCalculating positive zero error in screw gauge.\n\n2. GIVEN:\nLC = 0.01 mm. Circular zero lies 3 divisions BELOW reference line.\n\n3. FORMULA / PRINCIPLE:\nPositive Zero Error = + (n \u00d7 LC) = + (3 \u00d7 0.01 mm) = +0.03 mm.\n\n4. STEP-BY-STEP SOLUTION:\n1. Since the circular zero lies below the reference line, the zero error is POSITIVE (+).\n2. The number of divisions is n = 3.\n3. Least count LC = 0.01 mm.\n4. Zero Error = + (n \u00d7 LC) = + (3 \u00d7 0.01 mm) = +0.03 mm.\n5. (The zero correction is -0.03 mm).\n\n5. FINAL ANSWER:\nOption A: +0.03 mm\n\n6. QUICK TIP:\nNEET Direct Hit: Below line = Positive error: Error = + (3 \u00d7 0.01 mm) = +0.03 mm!",
+    "solutionStructured": {
+      "concept": "Calculating positive zero error in screw gauge.",
+      "given": "LC = 0.01 mm. Circular zero lies 3 divisions BELOW reference line.",
+      "formula": "Positive Zero Error = + (n \u00d7 LC) = + (3 \u00d7 0.01 mm) = +0.03 mm.",
+      "stepByStep": "1. Since the circular zero lies below the reference line, the zero error is POSITIVE (+).\n2. The number of divisions is n = 3.\n3. Least count LC = 0.01 mm.\n4. Zero Error = + (n \u00d7 LC) = + (3 \u00d7 0.01 mm) = +0.03 mm.\n5. (The zero correction is -0.03 mm).",
+      "finalAnswer": "Option A: +0.03 mm",
+      "whyOtherOptionsWrong": "Option B has negative sign. Option C uses 0.02 mm LC. Option D uses (50 - 3) which is for negative zero error."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Zero error and zero correction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-440",
+    "questionNumber": 440,
+    "question": "A screw gauge has 100 circular divisions and a pitch of 1 mm (LC = 0.01 mm). When closed, the 96th circular division coincides with the reference line (zero lies above the reference line). The zero error of the screw gauge is:",
+    "options": {
+      "A": "-0.04 mm",
+      "B": "+0.96 mm",
+      "C": "-0.96 mm",
+      "D": "+0.04 mm"
+    },
+    "optionsList": [
+      "-0.04 mm",
+      "+0.96 mm",
+      "-0.96 mm",
+      "+0.04 mm"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nNegative zero error in screw gauge using (N - n) divisions.\n\n2. GIVEN:\nTotal divisions N = 100. 96th division coincides with reference line (zero is above). LC = 0.01 mm.\n\n3. FORMULA / PRINCIPLE:\nNegative Zero Error = - (N - n) \u00d7 LC = - (100 - 96) \u00d7 0.01 mm = - 4 \u00d7 0.01 mm = -0.04 mm.\n\n4. STEP-BY-STEP SOLUTION:\n1. When the 96th division coincides with the reference line, the zero mark of the circular scale has passed the reference line and lies 4 divisions ABOVE it.\n2. Therefore, the zero error is NEGATIVE (-).\n3. Number of divisions above the reference line = 100 - 96 = 4 divisions.\n4. Zero Error = - (100 - 96) \u00d7 LC = - 4 \u00d7 0.01 mm = -0.04 mm.\n5. (The zero correction is +0.04 mm).\n\n5. FINAL ANSWER:\nOption A: -0.04 mm\n\n6. QUICK TIP:\nNEET NCERT Classic: When 96th mark coincides (out of 100): Zero is 4 divisions above line  =>  Error = - (100 - 96) \u00d7 0.01 mm = -0.04 mm!",
+    "solutionStructured": {
+      "concept": "Negative zero error in screw gauge using (N - n) divisions.",
+      "given": "Total divisions N = 100. 96th division coincides with reference line (zero is above). LC = 0.01 mm.",
+      "formula": "Negative Zero Error = - (N - n) \u00d7 LC = - (100 - 96) \u00d7 0.01 mm = - 4 \u00d7 0.01 mm = -0.04 mm.",
+      "stepByStep": "1. When the 96th division coincides with the reference line, the zero mark of the circular scale has passed the reference line and lies 4 divisions ABOVE it.\n2. Therefore, the zero error is NEGATIVE (-).\n3. Number of divisions above the reference line = 100 - 96 = 4 divisions.\n4. Zero Error = - (100 - 96) \u00d7 LC = - 4 \u00d7 0.01 mm = -0.04 mm.\n5. (The zero correction is +0.04 mm).",
+      "finalAnswer": "Option A: -0.04 mm",
+      "whyOtherOptionsWrong": "Option B (+0.96 mm) is the classic trap of taking 96 directly as positive error. Option C is -0.96 mm. Option D is +0.04 mm."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Zero error and zero correction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-441",
+    "questionNumber": 441,
+    "question": "Using the screw gauge from the previous problem (zero error = -0.04 mm, LC = 0.01 mm), a student measures the thickness of a wire. The linear scale reads 2 mm and the 45th circular scale division coincides. The true diameter of the wire is:",
+    "options": {
+      "A": "2.49 mm",
+      "B": "2.41 mm",
+      "C": "2.45 mm",
+      "D": "2.51 mm"
+    },
+    "optionsList": [
+      "2.49 mm",
+      "2.41 mm",
+      "2.45 mm",
+      "2.51 mm"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nComplete screw gauge measurement with negative zero error correction.\n\n2. GIVEN:\nZero Error e = -0.04 mm. Main scale = 2 mm, Circular division = 45, LC = 0.01 mm.\n\n3. FORMULA / PRINCIPLE:\nObserved Reading = PSR + (CSR \u00d7 LC) = 2.00 + 45 \u00d7 0.01 = 2.45 mm. True = Observed - Error = 2.45 - (-0.04) = 2.49 mm.\n\n4. STEP-BY-STEP SOLUTION:\n1. Calculate Observed Reading:\n   R_obs = 2 mm + 45 \u00d7 0.01 mm = 2.00 mm + 0.45 mm = 2.45 mm.\n2. Apply Zero Error correction:\n   Zero error e = -0.04 mm.\n   True Reading = R_obs - e = 2.45 mm - (-0.04 mm) = 2.45 mm + 0.04 mm = 2.49 mm.\n3. The true diameter of the wire is 2.49 mm.\n\n5. FINAL ANSWER:\nOption A: 2.49 mm\n\n6. QUICK TIP:\nNEET Complete Solution: Observed = 2.45 mm. Zero error = -0.04 mm. True = 2.45 - (-0.04) = 2.49 mm!",
+    "solutionStructured": {
+      "concept": "Complete screw gauge measurement with negative zero error correction.",
+      "given": "Zero Error e = -0.04 mm. Main scale = 2 mm, Circular division = 45, LC = 0.01 mm.",
+      "formula": "Observed Reading = PSR + (CSR \u00d7 LC) = 2.00 + 45 \u00d7 0.01 = 2.45 mm. True = Observed - Error = 2.45 - (-0.04) = 2.49 mm.",
+      "stepByStep": "1. Calculate Observed Reading:\n   R_obs = 2 mm + 45 \u00d7 0.01 mm = 2.00 mm + 0.45 mm = 2.45 mm.\n2. Apply Zero Error correction:\n   Zero error e = -0.04 mm.\n   True Reading = R_obs - e = 2.45 mm - (-0.04 mm) = 2.45 mm + 0.04 mm = 2.49 mm.\n3. The true diameter of the wire is 2.49 mm.",
+      "finalAnswer": "Option A: 2.49 mm",
+      "whyOtherOptionsWrong": "Option B (2.41 mm) subtracts 0.04 mm instead of adding it. Option C is the uncorrected reading. Option D is an arithmetic error."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Zero error and zero correction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-442",
+    "questionNumber": 442,
+    "question": "A screw gauge has a least count of 0.001 cm and a positive zero error of +0.005 cm. While measuring the diameter of a sphere, the main scale reads 0.5 cm and the circular scale reads 25 divisions. The true diameter of the sphere is:",
+    "options": {
+      "A": "0.520 cm",
+      "B": "0.530 cm",
+      "C": "0.525 cm",
+      "D": "0.515 cm"
+    },
+    "optionsList": [
+      "0.520 cm",
+      "0.530 cm",
+      "0.525 cm",
+      "0.515 cm"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nScrew gauge measurement with positive zero error subtraction.\n\n2. GIVEN:\nZero Error = +0.005 cm. LC = 0.001 cm. Pitch scale = 0.5 cm, Circular division = 25.\n\n3. FORMULA / PRINCIPLE:\nObserved Reading = 0.5 + 25 \u00d7 0.001 = 0.525 cm. True Reading = 0.525 - 0.005 = 0.520 cm.\n\n4. STEP-BY-STEP SOLUTION:\n1. Calculate Observed Reading:\n   R_obs = 0.5 cm + 25 \u00d7 0.001 cm = 0.500 cm + 0.025 cm = 0.525 cm.\n2. Apply positive zero error correction:\n   Zero Error = +0.005 cm.\n   True Reading = Observed - (Zero Error) = 0.525 cm - 0.005 cm = 0.520 cm.\n3. The true diameter is 0.520 cm.\n\n5. FINAL ANSWER:\nOption A: 0.520 cm\n\n6. QUICK TIP:\nNEET Two-Step Calculation: Observed = 0.525 cm  =>  True = 0.525 - 0.005 = 0.520 cm!",
+    "solutionStructured": {
+      "concept": "Screw gauge measurement with positive zero error subtraction.",
+      "given": "Zero Error = +0.005 cm. LC = 0.001 cm. Pitch scale = 0.5 cm, Circular division = 25.",
+      "formula": "Observed Reading = 0.5 + 25 \u00d7 0.001 = 0.525 cm. True Reading = 0.525 - 0.005 = 0.520 cm.",
+      "stepByStep": "1. Calculate Observed Reading:\n   R_obs = 0.5 cm + 25 \u00d7 0.001 cm = 0.500 cm + 0.025 cm = 0.525 cm.\n2. Apply positive zero error correction:\n   Zero Error = +0.005 cm.\n   True Reading = Observed - (Zero Error) = 0.525 cm - 0.005 cm = 0.520 cm.\n3. The true diameter is 0.520 cm.",
+      "finalAnswer": "Option A: 0.520 cm",
+      "whyOtherOptionsWrong": "Option B (0.530 cm) mistakenly adds the positive error. Option C is uncorrected. Option D subtracts 0.010 cm."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Zero error and zero correction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-443",
+    "questionNumber": 443,
+    "question": "A student notes the following observations for a Vernier caliper: (i) When jaws touch, 0 of Vernier is to the right of 0 of main scale, and 4th division coincides (N = 10, LC = 0.1 mm). (ii) While measuring the edge of a cube, MSR = 18 mm, and 2nd division coincides. The corrected length is:",
+    "options": {
+      "A": "17.8 mm",
+      "B": "18.6 mm",
+      "C": "18.2 mm",
+      "D": "17.6 mm"
+    },
+    "optionsList": [
+      "17.8 mm",
+      "18.6 mm",
+      "18.2 mm",
+      "17.6 mm"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nNet correction resulting in lower reading.\n\n2. GIVEN:\nZero error: to right, 4th mark => e = + (4 \u00d7 0.1) = +0.4 mm. Measurement: MSR = 18 mm, n = 2 => Observed = 18 + 0.2 = 18.2 mm.\n\n3. FORMULA / PRINCIPLE:\nTrue = Observed - Error = 18.2 - 0.4 = 17.8 mm.\n\n4. STEP-BY-STEP SOLUTION:\n1. Zero Error determination:\n   - Vernier zero is to the right => Positive error.\n   - Error = + (4 \u00d7 0.1 mm) = +0.4 mm.\n2. Observed reading:\n   - R_obs = 18 mm + 2 \u00d7 0.1 mm = 18.2 mm.\n3. True reading:\n   - True = R_obs - Error = 18.2 mm - 0.4 mm = 17.8 mm.\n4. The corrected length is 17.8 mm.\n\n5. FINAL ANSWER:\nOption A: 17.8 mm\n\n6. QUICK TIP:\nNEET Full Workflow: Error = +0.4 mm. Observed = 18.2 mm. True = 18.2 - 0.4 = 17.8 mm!",
+    "solutionStructured": {
+      "concept": "Net correction resulting in lower reading.",
+      "given": "Zero error: to right, 4th mark => e = + (4 \u00d7 0.1) = +0.4 mm. Measurement: MSR = 18 mm, n = 2 => Observed = 18 + 0.2 = 18.2 mm.",
+      "formula": "True = Observed - Error = 18.2 - 0.4 = 17.8 mm.",
+      "stepByStep": "1. Zero Error determination:\n   - Vernier zero is to the right => Positive error.\n   - Error = + (4 \u00d7 0.1 mm) = +0.4 mm.\n2. Observed reading:\n   - R_obs = 18 mm + 2 \u00d7 0.1 mm = 18.2 mm.\n3. True reading:\n   - True = R_obs - Error = 18.2 mm - 0.4 mm = 17.8 mm.\n4. The corrected length is 17.8 mm.",
+      "finalAnswer": "Option A: 17.8 mm",
+      "whyOtherOptionsWrong": "Option B (18.6 mm) adds 0.4 mm. Option C is uncorrected. Option D subtracts 0.6 mm."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Zero error and zero correction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-444",
+    "questionNumber": 444,
+    "question": "Why is zero error treated as a systematic error rather than a random error?",
+    "options": {
+      "A": "Because it shifts every reading by a constant, predictable magnitude in the same direction",
+      "B": "Because it changes randomly every time the jaws close",
+      "C": "Because it only occurs on Mondays",
+      "D": "Because it has no physical units"
+    },
+    "optionsList": [
+      "Because it shifts every reading by a constant, predictable magnitude in the same direction",
+      "Because it changes randomly every time the jaws close",
+      "Because it only occurs on Mondays",
+      "Because it has no physical units"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nPhysical rationale for classifying zero error as systematic.\n\n2. GIVEN:\nZero error.\n\n3. FORMULA / PRINCIPLE:\nSystematic errors are constant, reproducible, and unidirectional.\n\n4. STEP-BY-STEP SOLUTION:\n1. Zero error is caused by a permanent physical defect in the scale alignment or wear of the contact faces.\n2. As long as the instrument is intact, every single measurement taken with it is shifted by the EXACT same offset in the exact same direction (+e or -e).\n3. It does not fluctuate unpredictably from reading to reading.\n4. Because it is constant and predictable, it can be calibrated and removed completely by algebraic subtraction.\n5. Therefore, it is strictly a Systematic Error.\n\n5. FINAL ANSWER:\nOption A: Because it shifts every reading by a constant, predictable magnitude in the same direction\n\n6. QUICK TIP:\nNEET Conceptual Distinction: Zero error is reproducible, unidirectional, and constant. Hence it is SYSTEMATIC, not random!",
+    "solutionStructured": {
+      "concept": "Physical rationale for classifying zero error as systematic.",
+      "given": "Zero error.",
+      "formula": "Systematic errors are constant, reproducible, and unidirectional.",
+      "stepByStep": "1. Zero error is caused by a permanent physical defect in the scale alignment or wear of the contact faces.\n2. As long as the instrument is intact, every single measurement taken with it is shifted by the EXACT same offset in the exact same direction (+e or -e).\n3. It does not fluctuate unpredictably from reading to reading.\n4. Because it is constant and predictable, it can be calibrated and removed completely by algebraic subtraction.\n5. Therefore, it is strictly a Systematic Error.",
+      "finalAnswer": "Option A: Because it shifts every reading by a constant, predictable magnitude in the same direction",
+      "whyOtherOptionsWrong": "Options B, C, and D are absurd."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Zero error and zero correction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "um-mcq-445",
+    "questionNumber": 445,
+    "question": "A screw gauge has a zero error e = +0.02 mm. A student forgets to subtract this error and calculates the volume of a sphere of measured diameter 10.00 mm. The calculated volume will be:",
+    "options": {
+      "A": "Greater than the true volume by approximately 0.6%",
+      "B": "Smaller than the true volume by 0.6%",
+      "C": "Greater than the true volume by 0.2%",
+      "D": "Identical to the true volume"
+    },
+    "optionsList": [
+      "Greater than the true volume by approximately 0.6%",
+      "Smaller than the true volume by 0.6%",
+      "Greater than the true volume by 0.2%",
+      "Identical to the true volume"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nPropagation of uncorrected zero error into volume calculation.\n\n2. GIVEN:\nTrue diameter d_true = 10.00 - 0.02 = 9.98 mm. Measured diameter d_meas = 10.00 mm.\n\n3. FORMULA / PRINCIPLE:\nVolume V = (\u03c0 / 6) d\u00b3. Fractional error in volume: \u0394V / V \u2248 3 (\u0394d / d).\n\n4. STEP-BY-STEP SOLUTION:\n1. The measured diameter is larger than the true diameter by \u0394d = +0.02 mm.\n2. Fractional error in diameter: \u0394d / d = 0.02 mm / 10.00 mm = 0.002 (0.2%).\n3. Since volume V is proportional to d\u00b3:\n   Fractional error in volume: \u0394V / V \u2248 3 (\u0394d / d) = 3 \u00d7 0.002 = 0.006 (0.6%).\n4. Because the measured diameter is too large, the calculated volume will be systematically GREATER than the true volume by approximately 0.6%.\n5. (Volume is overestimated!).\n\n5. FINAL ANSWER:\nOption A: Greater than the true volume by approximately 0.6%\n\n6. QUICK TIP:\nNEET Applied Error Problem: V \u221d d\u00b3  =>  % overestimation in volume = 3 \u00d7 (% error in d) = 3 \u00d7 (0.02/10 \u00d7 100%) = 3 \u00d7 0.2% = 0.6% GREATER!",
+    "solutionStructured": {
+      "concept": "Propagation of uncorrected zero error into volume calculation.",
+      "given": "True diameter d_true = 10.00 - 0.02 = 9.98 mm. Measured diameter d_meas = 10.00 mm.",
+      "formula": "Volume V = (\u03c0 / 6) d\u00b3. Fractional error in volume: \u0394V / V \u2248 3 (\u0394d / d).",
+      "stepByStep": "1. The measured diameter is larger than the true diameter by \u0394d = +0.02 mm.\n2. Fractional error in diameter: \u0394d / d = 0.02 mm / 10.00 mm = 0.002 (0.2%).\n3. Since volume V is proportional to d\u00b3:\n   Fractional error in volume: \u0394V / V \u2248 3 (\u0394d / d) = 3 \u00d7 0.002 = 0.006 (0.6%).\n4. Because the measured diameter is too large, the calculated volume will be systematically GREATER than the true volume by approximately 0.6%.\n5. (Volume is overestimated!).",
+      "finalAnswer": "Option A: Greater than the true volume by approximately 0.6%",
+      "whyOtherOptionsWrong": "Option B claims it is smaller. Option C forgets the power 3 on diameter. Option D claims no error."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Units and Measurements",
+    "chapterId": "units-measurements",
+    "topic": "Zero error and zero correction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  }
+]

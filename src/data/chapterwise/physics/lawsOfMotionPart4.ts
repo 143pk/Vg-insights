@@ -1,0 +1,4513 @@
+// Auto-generated verified NEET UG Question Bank
+// Chapter: Laws of Motion | Physics | Class 11 | Part 4
+import { ChapterwiseMCQ } from "../../../types/chapterwiseMcq";
+
+export const LAWS_OF_MOTION_PART4_MCQS: ChapterwiseMCQ[] = [
+  {
+    "id": "lom-mcq-376",
+    "questionNumber": 376,
+    "question": "Two blocks A and B of masses $3m$ and $m$ respectively are connected by a massless and inextensible string. The whole system is suspended by a light spring of stiffness $k$ from a rigid ceiling. The magnitudes of acceleration of A and B immediately after the string is cut are respectively:",
+    "options": {
+      "A": "$g/3$, $g$",
+      "B": "$g$, $g$",
+      "C": "$3g$, $g$",
+      "D": "$g/3$, $g/3$"
+    },
+    "optionsList": [
+      "$g/3$, $g$",
+      "$g$, $g$",
+      "$3g$, $g$",
+      "$g/3$, $g/3$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nBefore cutting, the spring supports both blocks, so spring tension is $F_s = (3m + m)g = 4mg$. The string tension is $T = mg$. Immediately after cutting the string, the string tension drops instantly to zero ($T = 0$), but the spring cannot change its elongation instantaneously, so $F_s$ remains $4mg$. Block B is under gravity alone ($a_B = g$ downward). For block A, net upward force is $F_s - 3mg = 4mg - 3mg = mg$, giving upward acceleration $a_A = \\frac{mg}{3m} = \\frac{g}{3}$.\n\n2. GIVEN:\nBlock A mass $3m$, Block B mass $m$, spring stiffness $k$, string cut.\n\n3. FORMULA / PRINCIPLE:\nSpring force $F_s = 4mg$ (remains constant immediately after cut); $a_A = \\frac{F_s - 3mg}{3m} = \\frac{g}{3}$; $a_B = g$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Before cutting the string, the entire system is in static equilibrium:\n   - Tension in the string supporting B: $T = mg$.\n   - Tension in the spring supporting both A and B: $F_s = (3m + m)g = 4mg$.\n2. Immediately after the string is cut:\n   - Tension in the string vanishes instantly: $T = 0$.\n   - The spring, being elastic, cannot change its length or tension in zero time, so $F_s = 4mg$ remains unchanged.\n3. Acceleration of block B:\n   - The only force on B is downward gravity $mg$.\n   - Newton's second law on B: $mg = m a_B \\implies a_B = g$ (downward).\n4. Acceleration of block A:\n   - Upward force: spring force $F_s = 4mg$.\n   - Downward force: its own weight $3mg$.\n   - Net upward force on A: $F_{\\text{net}} = 4mg - 3mg = mg$.\n   - Applying Newton's second law on A: $F_{\\text{net}} = (3m) a_A \\implies a_A = \\frac{mg}{3m} = \\frac{g}{3}$ (upward).\n5. Therefore, the magnitudes are $g/3$ and $g$.\n\n5. FINAL ANSWER:\nOption A: $g/3$, $g$\n\n6. QUICK TIP:\nGolden Rule of Cut-String Systems: String tension changes INSTANTANEOUSLY to 0, but spring force CANNOT change instantaneously!",
+    "solutionStructured": {
+      "concept": "Before cutting, the spring supports both blocks, so spring tension is $F_s = (3m + m)g = 4mg$. The string tension is $T = mg$. Immediately after cutting the string, the string tension drops instantly to zero ($T = 0$), but the spring cannot change its elongation instantaneously, so $F_s$ remains $4mg$. Block B is under gravity alone ($a_B = g$ downward). For block A, net upward force is $F_s - 3mg = 4mg - 3mg = mg$, giving upward acceleration $a_A = \\frac{mg}{3m} = \\frac{g}{3}$.",
+      "given": "Block A mass $3m$, Block B mass $m$, spring stiffness $k$, string cut.",
+      "formula": "Spring force $F_s = 4mg$ (remains constant immediately after cut); $a_A = \\frac{F_s - 3mg}{3m} = \\frac{g}{3}$; $a_B = g$.",
+      "stepByStep": "1. Before cutting the string, the entire system is in static equilibrium:\n   - Tension in the string supporting B: $T = mg$.\n   - Tension in the spring supporting both A and B: $F_s = (3m + m)g = 4mg$.\n2. Immediately after the string is cut:\n   - Tension in the string vanishes instantly: $T = 0$.\n   - The spring, being elastic, cannot change its length or tension in zero time, so $F_s = 4mg$ remains unchanged.\n3. Acceleration of block B:\n   - The only force on B is downward gravity $mg$.\n   - Newton's second law on B: $mg = m a_B \\implies a_B = g$ (downward).\n4. Acceleration of block A:\n   - Upward force: spring force $F_s = 4mg$.\n   - Downward force: its own weight $3mg$.\n   - Net upward force on A: $F_{\\text{net}} = 4mg - 3mg = mg$.\n   - Applying Newton's second law on A: $F_{\\text{net}} = (3m) a_A \\implies a_A = \\frac{mg}{3m} = \\frac{g}{3}$ (upward).\n5. Therefore, the magnitudes are $g/3$ and $g$.",
+      "finalAnswer": "Option A: $g/3$, $g$",
+      "whyOtherOptionsWrong": "Option B assumes spring force adjusts instantly. Option C divides by wrong mass. Option D assumes both accelerate equally."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Connected bodies and pulley systems",
+    "source": "NEET UG 2017",
+    "isPYQ": true,
+    "pyqYear": 2017
+  },
+  {
+    "id": "lom-mcq-377",
+    "questionNumber": 377,
+    "question": "In an ideal Atwood machine, two masses $m_1$ and $m_2$ ($m_1 > m_2$) are connected by a light inextensible string passing over a light frictionless pulley. The acceleration of the system is:",
+    "options": {
+      "A": "$\\frac{m_1 - m_2}{m_1 + m_2} g$",
+      "B": "$\\frac{m_1 + m_2}{m_1 - m_2} g$",
+      "C": "$\\frac{2 m_1 m_2}{m_1 + m_2} g$",
+      "D": "$\\frac{m_1 m_2}{m_1 + m_2} g$"
+    },
+    "optionsList": [
+      "$\\frac{m_1 - m_2}{m_1 + m_2} g$",
+      "$\\frac{m_1 + m_2}{m_1 - m_2} g$",
+      "$\\frac{2 m_1 m_2}{m_1 + m_2} g$",
+      "$\\frac{m_1 m_2}{m_1 + m_2} g$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor an ideal Atwood machine, net pulling force is $(m_1 - m_2)g$. Total mass being accelerated is $(m_1 + m_2)$. Acceleration is $a = \\frac{\\text{Net pulling force}}{\\text{Total mass}} = \\frac{m_1 - m_2}{m_1 + m_2} g$.\n\n2. GIVEN:\nTwo masses $m_1 > m_2$, light inextensible string, frictionless pulley.\n\n3. FORMULA / PRINCIPLE:\n$a = \\frac{m_1 - m_2}{m_1 + m_2} g$.\n\n4. STEP-BY-STEP SOLUTION:\n1. FBD of $m_1$: $m_1 g - T = m_1 a$.\n2. FBD of $m_2$: $T - m_2 g = m_2 a$.\n3. Add the two equations to eliminate tension $T$:\n   $m_1 g - m_2 g = (m_1 + m_2) a$.\n4. Solving for acceleration $a$: $a = \\frac{m_1 - m_2}{m_1 + m_2} g$.\n\n5. FINAL ANSWER:\nOption A: $\\frac{m_1 - m_2}{m_1 + m_2} g$\n\n6. QUICK TIP:\nAtwood Acceleration: $a = \\frac{m_1 - m_2}{m_1 + m_2} g$. If $m_1 = m_2$, $a = 0$. If $m_2 = 0$, $a = g$.",
+    "solutionStructured": {
+      "concept": "For an ideal Atwood machine, net pulling force is $(m_1 - m_2)g$. Total mass being accelerated is $(m_1 + m_2)$. Acceleration is $a = \\frac{\\text{Net pulling force}}{\\text{Total mass}} = \\frac{m_1 - m_2}{m_1 + m_2} g$.",
+      "given": "Two masses $m_1 > m_2$, light inextensible string, frictionless pulley.",
+      "formula": "$a = \\frac{m_1 - m_2}{m_1 + m_2} g$.",
+      "stepByStep": "1. FBD of $m_1$: $m_1 g - T = m_1 a$.\n2. FBD of $m_2$: $T - m_2 g = m_2 a$.\n3. Add the two equations to eliminate tension $T$:\n   $m_1 g - m_2 g = (m_1 + m_2) a$.\n4. Solving for acceleration $a$: $a = \\frac{m_1 - m_2}{m_1 + m_2} g$.",
+      "finalAnswer": "Option A: $\\frac{m_1 - m_2}{m_1 + m_2} g$",
+      "whyOtherOptionsWrong": "Option B inverts numerator and denominator. Option C is the formula for tension (without the mass dimensions). Option D has wrong dimensions."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Connected bodies and pulley systems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-378",
+    "questionNumber": 378,
+    "question": "In the ideal Atwood machine described above, the tension $T$ in the string is:",
+    "options": {
+      "A": "$\\frac{2 m_1 m_2}{m_1 + m_2} g$",
+      "B": "$\\frac{m_1 m_2}{m_1 + m_2} g$",
+      "C": "$\\frac{m_1 - m_2}{m_1 + m_2} g$",
+      "D": "$(m_1 + m_2) g$"
+    },
+    "optionsList": [
+      "$\\frac{2 m_1 m_2}{m_1 + m_2} g$",
+      "$\\frac{m_1 m_2}{m_1 + m_2} g$",
+      "$\\frac{m_1 - m_2}{m_1 + m_2} g$",
+      "$(m_1 + m_2) g$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSubstitute acceleration $a = \\frac{m_1 - m_2}{m_1 + m_2} g$ into $T = m_2(g + a)$ to obtain $T = \\frac{2 m_1 m_2}{m_1 + m_2} g$.\n\n2. GIVEN:\nAtwood machine with masses $m_1$ and $m_2$.\n\n3. FORMULA / PRINCIPLE:\n$T = \\frac{2 m_1 m_2}{m_1 + m_2} g$.\n\n4. STEP-BY-STEP SOLUTION:\n1. From the equation of motion for $m_2$: $T - m_2 g = m_2 a \\implies T = m_2(g + a)$.\n2. Substitute $a = \\frac{m_1 - m_2}{m_1 + m_2} g$:\n   $T = m_2 \\left(g + \\frac{m_1 - m_2}{m_1 + m_2} g\\right) = m_2 g \\left(1 + \\frac{m_1 - m_2}{m_1 + m_2}\\right)$.\n3. Simplify the bracket:\n   $1 + \\frac{m_1 - m_2}{m_1 + m_2} = \\frac{m_1 + m_2 + m_1 - m_2}{m_1 + m_2} = \\frac{2 m_1}{m_1 + m_2}$.\n4. Therefore, $T = \\frac{2 m_1 m_2}{m_1 + m_2} g$.\n\n5. FINAL ANSWER:\nOption A: $\\frac{2 m_1 m_2}{m_1 + m_2} g$\n\n6. QUICK TIP:\nTension is proportional to the harmonic mean of the two masses: $T = 2 \\mu g$ where $\\mu = \\frac{m_1 m_2}{m_1 + m_2}$ is the reduced mass!",
+    "solutionStructured": {
+      "concept": "Substitute acceleration $a = \\frac{m_1 - m_2}{m_1 + m_2} g$ into $T = m_2(g + a)$ to obtain $T = \\frac{2 m_1 m_2}{m_1 + m_2} g$.",
+      "given": "Atwood machine with masses $m_1$ and $m_2$.",
+      "formula": "$T = \\frac{2 m_1 m_2}{m_1 + m_2} g$.",
+      "stepByStep": "1. From the equation of motion for $m_2$: $T - m_2 g = m_2 a \\implies T = m_2(g + a)$.\n2. Substitute $a = \\frac{m_1 - m_2}{m_1 + m_2} g$:\n   $T = m_2 \\left(g + \\frac{m_1 - m_2}{m_1 + m_2} g\\right) = m_2 g \\left(1 + \\frac{m_1 - m_2}{m_1 + m_2}\\right)$.\n3. Simplify the bracket:\n   $1 + \\frac{m_1 - m_2}{m_1 + m_2} = \\frac{m_1 + m_2 + m_1 - m_2}{m_1 + m_2} = \\frac{2 m_1}{m_1 + m_2}$.\n4. Therefore, $T = \\frac{2 m_1 m_2}{m_1 + m_2} g$.",
+      "finalAnswer": "Option A: $\\frac{2 m_1 m_2}{m_1 + m_2} g$",
+      "whyOtherOptionsWrong": "Option B misses the factor of 2. Option C is the acceleration expression. Option D is the total weight."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Connected bodies and pulley systems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-379",
+    "questionNumber": 379,
+    "question": "A block of mass $m_1 = 3\\text{ kg}$ lies on a smooth horizontal table and is connected by a light string over a frictionless pulley to a hanging mass $m_2 = 2\\text{ kg}$. Taking $g = 10\\text{ m/s}^2$, what is the acceleration of the system?",
+    "options": {
+      "A": "$4\\text{ m/s}^2$",
+      "B": "$6\\text{ m/s}^2$",
+      "C": "$10\\text{ m/s}^2$",
+      "D": "$2\\text{ m/s}^2$"
+    },
+    "optionsList": [
+      "$4\\text{ m/s}^2$",
+      "$6\\text{ m/s}^2$",
+      "$10\\text{ m/s}^2$",
+      "$2\\text{ m/s}^2$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor a table-pulley system on a smooth table, the sole driving force is the weight of the hanging mass: $F_{\\text{pull}} = m_2 g$. The total mass accelerated is $(m_1 + m_2)$. Acceleration is $a = \\frac{m_2 g}{m_1 + m_2}$.\n\n2. GIVEN:\n$m_1 = 3\\text{ kg}$ (table), $m_2 = 2\\text{ kg}$ (hanging), smooth table, $g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$a = \\frac{m_2 g}{m_1 + m_2}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. FBD of hanging mass $m_2$: $m_2 g - T = m_2 a$.\n2. FBD of block on table $m_1$: $T = m_1 a$.\n3. Add both equations: $m_2 g = (m_1 + m_2) a$.\n4. Acceleration: $a = \\frac{m_2 g}{m_1 + m_2} = \\frac{2 \\times 10}{3 + 2} = \\frac{20}{5} = 4\\text{ m/s}^2$.\n\n5. FINAL ANSWER:\nOption A: $4\\text{ m/s}^2$\n\n6. QUICK TIP:\nTable Pulley System: $a = \\frac{m_{\\text{hanging}}}{m_{\\text{total}}} g$! Simple, fast formula.",
+    "solutionStructured": {
+      "concept": "For a table-pulley system on a smooth table, the sole driving force is the weight of the hanging mass: $F_{\\text{pull}} = m_2 g$. The total mass accelerated is $(m_1 + m_2)$. Acceleration is $a = \\frac{m_2 g}{m_1 + m_2}$.",
+      "given": "$m_1 = 3\\text{ kg}$ (table), $m_2 = 2\\text{ kg}$ (hanging), smooth table, $g = 10\\text{ m/s}^2$.",
+      "formula": "$a = \\frac{m_2 g}{m_1 + m_2}$.",
+      "stepByStep": "1. FBD of hanging mass $m_2$: $m_2 g - T = m_2 a$.\n2. FBD of block on table $m_1$: $T = m_1 a$.\n3. Add both equations: $m_2 g = (m_1 + m_2) a$.\n4. Acceleration: $a = \\frac{m_2 g}{m_1 + m_2} = \\frac{2 \\times 10}{3 + 2} = \\frac{20}{5} = 4\\text{ m/s}^2$.",
+      "finalAnswer": "Option A: $4\\text{ m/s}^2$",
+      "whyOtherOptionsWrong": "Option B ($6\\text{ m/s}^2$) is $\\frac{m_1}{m_1+m_2}g$. Option C is $g$. Option D is $(m_1 - m_2)$."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Connected bodies and pulley systems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-380",
+    "questionNumber": 380,
+    "question": "In the previous table-pulley setup ($m_1 = 3\\text{ kg}$, $m_2 = 2\\text{ kg}$), what is the tension in the connecting string?",
+    "options": {
+      "A": "12 N",
+      "B": "20 N",
+      "C": "8 N",
+      "D": "15 N"
+    },
+    "optionsList": [
+      "12 N",
+      "20 N",
+      "8 N",
+      "15 N"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTension accelerates the block on the smooth table: $T = m_1 a$. With $a = 4\\text{ m/s}^2$ and $m_1 = 3\\text{ kg}$, $T = 3 \\times 4 = 12\\text{ N}$.\n\n2. GIVEN:\n$m_1 = 3\\text{ kg}$, $a = 4\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$T = m_1 a = \\frac{m_1 m_2}{m_1 + m_2} g$.\n\n4. STEP-BY-STEP SOLUTION:\n1. The block on the smooth table has no friction opposing it.\n2. The only horizontal force acting on $m_1$ is the string tension $T$.\n3. Newton's second law on $m_1$: $T = m_1 a$.\n4. Substituting values: $T = 3\\text{ kg} \\times 4\\text{ m/s}^2 = 12\\text{ N}$.\n5. Double check using hanging mass: $T = m_2(g - a) = 2(10 - 4) = 2(6) = 12\\text{ N}$. Matches perfectly!\n\n5. FINAL ANSWER:\nOption A: 12 N\n\n6. QUICK TIP:\nFormula for table-pulley tension: $T = \\frac{m_1 m_2}{m_1 + m_2} g = \\frac{3 \\times 2}{5} \\times 10 = 12\\text{ N}$!",
+    "solutionStructured": {
+      "concept": "Tension accelerates the block on the smooth table: $T = m_1 a$. With $a = 4\\text{ m/s}^2$ and $m_1 = 3\\text{ kg}$, $T = 3 \\times 4 = 12\\text{ N}$.",
+      "given": "$m_1 = 3\\text{ kg}$, $a = 4\\text{ m/s}^2$.",
+      "formula": "$T = m_1 a = \\frac{m_1 m_2}{m_1 + m_2} g$.",
+      "stepByStep": "1. The block on the smooth table has no friction opposing it.\n2. The only horizontal force acting on $m_1$ is the string tension $T$.\n3. Newton's second law on $m_1$: $T = m_1 a$.\n4. Substituting values: $T = 3\\text{ kg} \\times 4\\text{ m/s}^2 = 12\\text{ N}$.\n5. Double check using hanging mass: $T = m_2(g - a) = 2(10 - 4) = 2(6) = 12\\text{ N}$. Matches perfectly!",
+      "finalAnswer": "Option A: 12 N",
+      "whyOtherOptionsWrong": "Option B (20 N) is the weight of the hanging mass. Option C (8 N) is $m_2 a$. Option D is $15\\text{ N}$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Connected bodies and pulley systems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-381",
+    "questionNumber": 381,
+    "question": "In the table-pulley system, what is the magnitude of the force exerted by the string on the pulley?",
+    "options": {
+      "A": "$12\\sqrt{2} \\approx 16.97\\text{ N}$",
+      "B": "24 N",
+      "C": "12 N",
+      "D": "0 N"
+    },
+    "optionsList": [
+      "$12\\sqrt{2} \\approx 16.97\\text{ N}$",
+      "24 N",
+      "12 N",
+      "0 N"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTwo segments of the string leave the pulley at right angles ($90^\\circ$): one horizontal with tension $T = 12\\text{ N}$ and one vertical with tension $T = 12\\text{ N}$. The resultant force on the pulley is the vector sum: $F_{\\text{pulley}} = \\sqrt{T^2 + T^2} = T\\sqrt{2}$.\n\n2. GIVEN:\n$T = 12\\text{ N}$, angle between string segments is $90^\\circ$.\n\n3. FORMULA / PRINCIPLE:\n$F_{\\text{pulley}} = \\sqrt{T_x^2 + T_y^2} = T\\sqrt{2}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. The string segment going to the table pulls the pulley horizontally with force $T = 12\\text{ N}$.\n2. The string segment going to the hanging mass pulls the pulley vertically downward with force $T = 12\\text{ N}$.\n3. Because the two tension vectors are perpendicular to each other, their resultant force is:\n   $F = \\sqrt{T^2 + T^2} = T\\sqrt{2}$.\n4. Substituting $T = 12\\text{ N}$: $F = 12\\sqrt{2} \\approx 16.97\\text{ N}$ directed at $45^\\circ$ to the horizontal.\n\n5. FINAL ANSWER:\nOption A: $12\\sqrt{2} \\approx 16.97\\text{ N}$\n\n6. QUICK TIP:\nForce on pulley in Atwood machine: $2T$ (strings parallel). Force on pulley in corner table: $T\\sqrt{2}$ (strings at $90^\\circ$)!",
+    "solutionStructured": {
+      "concept": "Two segments of the string leave the pulley at right angles ($90^\\circ$): one horizontal with tension $T = 12\\text{ N}$ and one vertical with tension $T = 12\\text{ N}$. The resultant force on the pulley is the vector sum: $F_{\\text{pulley}} = \\sqrt{T^2 + T^2} = T\\sqrt{2}$.",
+      "given": "$T = 12\\text{ N}$, angle between string segments is $90^\\circ$.",
+      "formula": "$F_{\\text{pulley}} = \\sqrt{T_x^2 + T_y^2} = T\\sqrt{2}$.",
+      "stepByStep": "1. The string segment going to the table pulls the pulley horizontally with force $T = 12\\text{ N}$.\n2. The string segment going to the hanging mass pulls the pulley vertically downward with force $T = 12\\text{ N}$.\n3. Because the two tension vectors are perpendicular to each other, their resultant force is:\n   $F = \\sqrt{T^2 + T^2} = T\\sqrt{2}$.\n4. Substituting $T = 12\\text{ N}$: $F = 12\\sqrt{2} \\approx 16.97\\text{ N}$ directed at $45^\\circ$ to the horizontal.",
+      "finalAnswer": "Option A: $12\\sqrt{2} \\approx 16.97\\text{ N}$",
+      "whyOtherOptionsWrong": "Option B (24 N) adds the forces scalar-wise ($12 + 12$). Option C is just one string tension. Option D is zero."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Connected bodies and pulley systems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-382",
+    "questionNumber": 382,
+    "question": "Two masses $m_1 = 6\\text{ kg}$ and $m_2 = 4\\text{ kg}$ are connected by a light string over a frictionless pulley hung from a ceiling. What is the total force exerted by the pulley clamp on the ceiling (take $g = 10\\text{ m/s}^2$)?",
+    "options": {
+      "A": "96 N",
+      "B": "100 N",
+      "C": "48 N",
+      "D": "20 N"
+    },
+    "optionsList": [
+      "96 N",
+      "100 N",
+      "48 N",
+      "20 N"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTwo downward strings pull on the pulley, each with tension $T = \\frac{2 m_1 m_2}{m_1 + m_2} g$. For the massless pulley in equilibrium, the upward clamp reaction must balance both tensions: $F_{\\text{clamp}} = 2T$.\n\n2. GIVEN:\n$m_1 = 6\\text{ kg}$, $m_2 = 4\\text{ kg}$, $g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$T = \\frac{2 m_1 m_2}{m_1 + m_2} g$; $F_{\\text{clamp}} = 2T = \\frac{4 m_1 m_2}{m_1 + m_2} g$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Calculate the string tension $T$:\n   $T = \\frac{2 m_1 m_2}{m_1 + m_2} g = \\frac{2(6)(4)}{6 + 4} \\times 10 = \\frac{48}{10} \\times 10 = 48\\text{ N}$.\n2. The pulley is suspended from the ceiling.\n3. The string wraps around the pulley, pulling downwards on both sides with tension $T$.\n4. For equilibrium of the massless pulley: $F_{\\text{clamp}} = 2T$.\n5. Therefore, $F_{\\text{clamp}} = 2 \\times 48 = 96\\text{ N}$.\n\n5. FINAL ANSWER:\nOption A: 96 N\n\n6. QUICK TIP:\nNEET Trap Alert: Clamp force is $2T = 96\\text{ N}$, NOT the total static weight $(m_1 + m_2)g = 100\\text{ N}$! Because the system accelerates, the support force is LESS than the total weight.",
+    "solutionStructured": {
+      "concept": "Two downward strings pull on the pulley, each with tension $T = \\frac{2 m_1 m_2}{m_1 + m_2} g$. For the massless pulley in equilibrium, the upward clamp reaction must balance both tensions: $F_{\\text{clamp}} = 2T$.",
+      "given": "$m_1 = 6\\text{ kg}$, $m_2 = 4\\text{ kg}$, $g = 10\\text{ m/s}^2$.",
+      "formula": "$T = \\frac{2 m_1 m_2}{m_1 + m_2} g$; $F_{\\text{clamp}} = 2T = \\frac{4 m_1 m_2}{m_1 + m_2} g$.",
+      "stepByStep": "1. Calculate the string tension $T$:\n   $T = \\frac{2 m_1 m_2}{m_1 + m_2} g = \\frac{2(6)(4)}{6 + 4} \\times 10 = \\frac{48}{10} \\times 10 = 48\\text{ N}$.\n2. The pulley is suspended from the ceiling.\n3. The string wraps around the pulley, pulling downwards on both sides with tension $T$.\n4. For equilibrium of the massless pulley: $F_{\\text{clamp}} = 2T$.\n5. Therefore, $F_{\\text{clamp}} = 2 \\times 48 = 96\\text{ N}$.",
+      "finalAnswer": "Option A: 96 N",
+      "whyOtherOptionsWrong": "Option B (100 N) is the static weight $(m_1 + m_2)g$. Option C (48 N) is just a single string tension $T$. Option D is $(m_1 - m_2)g$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Connected bodies and pulley systems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-383",
+    "questionNumber": 383,
+    "question": "In the previous Atwood machine ($m_1 = 6\\text{ kg}$, $m_2 = 4\\text{ kg}$), if the system is released from rest, what is the speed of either mass after $2\\text{ seconds}$ (take $g = 10\\text{ m/s}^2$)?",
+    "options": {
+      "A": "$4\\text{ m/s}$",
+      "B": "$2\\text{ m/s}$",
+      "C": "$8\\text{ m/s}$",
+      "D": "$10\\text{ m/s}$"
+    },
+    "optionsList": [
+      "$4\\text{ m/s}$",
+      "$2\\text{ m/s}$",
+      "$8\\text{ m/s}$",
+      "$10\\text{ m/s}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nCalculate acceleration $a = \\frac{m_1 - m_2}{m_1 + m_2} g$. Then use $v = u + at$ with $u = 0$.\n\n2. GIVEN:\n$m_1 = 6\\text{ kg}$, $m_2 = 4\\text{ kg}$, $t = 2\\text{ s}$, $u = 0$, $g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$a = \\frac{m_1 - m_2}{m_1 + m_2} g = \\frac{6 - 4}{10} \\times 10 = 2\\text{ m/s}^2$; $v = at$.\n\n4. STEP-BY-STEP SOLUTION:\n1. System acceleration:\n   $a = \\frac{m_1 - m_2}{m_1 + m_2} g = \\frac{6 - 4}{6 + 4} \\times 10 = \\frac{2}{10} \\times 10 = 2\\text{ m/s}^2$.\n2. Both masses start from rest ($u = 0$).\n3. Speed after time $t = 2\\text{ s}$:\n   $v = u + at = 0 + (2\\text{ m/s}^2)(2\\text{ s}) = 4\\text{ m/s}$.\n\n5. FINAL ANSWER:\nOption A: $4\\text{ m/s}$\n\n6. QUICK TIP:\nAtwood acceleration $a = 2\\text{ m/s}^2$. Speed after 2 seconds is simply $v = at = 4\\text{ m/s}$!",
+    "solutionStructured": {
+      "concept": "Calculate acceleration $a = \\frac{m_1 - m_2}{m_1 + m_2} g$. Then use $v = u + at$ with $u = 0$.",
+      "given": "$m_1 = 6\\text{ kg}$, $m_2 = 4\\text{ kg}$, $t = 2\\text{ s}$, $u = 0$, $g = 10\\text{ m/s}^2$.",
+      "formula": "$a = \\frac{m_1 - m_2}{m_1 + m_2} g = \\frac{6 - 4}{10} \\times 10 = 2\\text{ m/s}^2$; $v = at$.",
+      "stepByStep": "1. System acceleration:\n   $a = \\frac{m_1 - m_2}{m_1 + m_2} g = \\frac{6 - 4}{6 + 4} \\times 10 = \\frac{2}{10} \\times 10 = 2\\text{ m/s}^2$.\n2. Both masses start from rest ($u = 0$).\n3. Speed after time $t = 2\\text{ s}$:\n   $v = u + at = 0 + (2\\text{ m/s}^2)(2\\text{ s}) = 4\\text{ m/s}$.",
+      "finalAnswer": "Option A: $4\\text{ m/s}$",
+      "whyOtherOptionsWrong": "Option B ($2\\text{ m/s}$) is the acceleration, not the speed. Option C is $v = 4t$. Option D is $gt$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Connected bodies and pulley systems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-384",
+    "questionNumber": 384,
+    "question": "In the Atwood machine above, what is the acceleration of the center of mass of the two-mass system?",
+    "options": {
+      "A": "$0.4\\text{ m/s}^2$ downwards",
+      "B": "$2.0\\text{ m/s}^2$ downwards",
+      "C": "Zero",
+      "D": "$1.0\\text{ m/s}^2$ downwards"
+    },
+    "optionsList": [
+      "$0.4\\text{ m/s}^2$ downwards",
+      "$2.0\\text{ m/s}^2$ downwards",
+      "Zero",
+      "$1.0\\text{ m/s}^2$ downwards"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe heavier mass $m_1$ accelerates downwards with $a$, and $m_2$ accelerates upwards with $a$. The acceleration of the center of mass is $a_{\\text{cm}} = \\frac{m_1(-a) + m_2(+a)}{m_1 + m_2} = -\\left(\\frac{m_1 - m_2}{m_1 + m_2}\\right) a = -\\left(\\frac{m_1 - m_2}{m_1 + m_2}\\right)^2 g$.\n\n2. GIVEN:\n$m_1 = 6\\text{ kg}$, $m_2 = 4\\text{ kg}$, $a = 2\\text{ m/s}^2$, $g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$a_{\\text{cm}} = \\left(\\frac{m_1 - m_2}{m_1 + m_2}\\right)^2 g$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Let downward be the positive direction.\n2. Acceleration of $m_1$: $a_1 = +a = +2\\text{ m/s}^2$.\n3. Acceleration of $m_2$: $a_2 = -a = -2\\text{ m/s}^2$ (moving upwards).\n4. Acceleration of center of mass:\n   $a_{\\text{cm}} = \\frac{m_1 a_1 + m_2 a_2}{m_1 + m_2} = \\frac{6(+2) + 4(-2)}{6 + 4} = \\frac{12 - 8}{10} = \\frac{4}{10} = 0.4\\text{ m/s}^2$ downwards.\n5. General formula: $a_{\\text{cm}} = \\left(\\frac{m_1 - m_2}{m_1 + m_2}\\right)^2 g = \\left(\\frac{2}{10}\\right)^2 \\times 10 = 0.04 \\times 10 = 0.4\\text{ m/s}^2$.\n\n5. FINAL ANSWER:\nOption A: $0.4\\text{ m/s}^2$ downwards\n\n6. QUICK TIP:\nHigh-Yield Formula: Acceleration of center of mass of an Atwood machine is $a_{\\text{cm}} = \\left(\\frac{m_1 - m_2}{m_1 + m_2}\\right)^2 g$ downwards!",
+    "solutionStructured": {
+      "concept": "The heavier mass $m_1$ accelerates downwards with $a$, and $m_2$ accelerates upwards with $a$. The acceleration of the center of mass is $a_{\\text{cm}} = \\frac{m_1(-a) + m_2(+a)}{m_1 + m_2} = -\\left(\\frac{m_1 - m_2}{m_1 + m_2}\\right) a = -\\left(\\frac{m_1 - m_2}{m_1 + m_2}\\right)^2 g$.",
+      "given": "$m_1 = 6\\text{ kg}$, $m_2 = 4\\text{ kg}$, $a = 2\\text{ m/s}^2$, $g = 10\\text{ m/s}^2$.",
+      "formula": "$a_{\\text{cm}} = \\left(\\frac{m_1 - m_2}{m_1 + m_2}\\right)^2 g$.",
+      "stepByStep": "1. Let downward be the positive direction.\n2. Acceleration of $m_1$: $a_1 = +a = +2\\text{ m/s}^2$.\n3. Acceleration of $m_2$: $a_2 = -a = -2\\text{ m/s}^2$ (moving upwards).\n4. Acceleration of center of mass:\n   $a_{\\text{cm}} = \\frac{m_1 a_1 + m_2 a_2}{m_1 + m_2} = \\frac{6(+2) + 4(-2)}{6 + 4} = \\frac{12 - 8}{10} = \\frac{4}{10} = 0.4\\text{ m/s}^2$ downwards.\n5. General formula: $a_{\\text{cm}} = \\left(\\frac{m_1 - m_2}{m_1 + m_2}\\right)^2 g = \\left(\\frac{2}{10}\\right)^2 \\times 10 = 0.04 \\times 10 = 0.4\\text{ m/s}^2$.",
+      "finalAnswer": "Option A: $0.4\\text{ m/s}^2$ downwards",
+      "whyOtherOptionsWrong": "Option B ($2.0\\text{ m/s}^2$) is the acceleration of each individual block. Option C assumes center of mass is stationary. Option D is $(m_1-m_2)/(m_1+m_2) \\times g/2$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Connected bodies and pulley systems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-385",
+    "questionNumber": 385,
+    "question": "A block of mass $m_1 = 4\\text{ kg}$ is on a rough horizontal table with $\\mu_k = 0.2$. It is connected by a light string over a frictionless pulley to a hanging mass $m_2 = 2\\text{ kg}$. What is the acceleration of the system (take $g = 10\\text{ m/s}^2$)?",
+    "options": {
+      "A": "$2\\text{ m/s}^2$",
+      "B": "$3.33\\text{ m/s}^2$",
+      "C": "$1\\text{ m/s}^2$",
+      "D": "$4\\text{ m/s}^2$"
+    },
+    "optionsList": [
+      "$2\\text{ m/s}^2$",
+      "$3.33\\text{ m/s}^2$",
+      "$1\\text{ m/s}^2$",
+      "$4\\text{ m/s}^2$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDriving force is hanging weight $m_2 g = 20\\text{ N}$. Opposing kinetic friction on table is $f_k = \\mu_k m_1 g = 0.2 \\times 40 = 8\\text{ N}$. Net accelerating force is $m_2 g - f_k = 20 - 8 = 12\\text{ N}$. Total mass is $m_1 + m_2 = 6\\text{ kg}$. Acceleration is $a = \\frac{12}{6} = 2\\text{ m/s}^2$.\n\n2. GIVEN:\n$m_1 = 4\\text{ kg}$, $m_2 = 2\\text{ kg}$, $\\mu_k = 0.2$, $g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$a = \\frac{m_2 g - \\mu_k m_1 g}{m_1 + m_2}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. FBD of hanging block $m_2$: $m_2 g - T = m_2 a$.\n2. FBD of table block $m_1$: $T - f_k = m_1 a$.\n3. Normal force on table: $N = m_1 g = 40\\text{ N}$.\n4. Kinetic friction: $f_k = \\mu_k N = 0.2 \\times 40 = 8\\text{ N}$.\n5. Add the two motion equations: $m_2 g - f_k = (m_1 + m_2) a$.\n6. Substitute values: $20 - 8 = (4 + 2) a \\implies 12 = 6 a$.\n7. Acceleration: $a = \\frac{12}{6} = 2\\text{ m/s}^2$.\n\n5. FINAL ANSWER:\nOption A: $2\\text{ m/s}^2$\n\n6. QUICK TIP:\nTable Pulley with Friction: $a = \\frac{m_2 - \\mu_k m_1}{m_1 + m_2} g = \\frac{2 - 0.2(4)}{6} \\times 10 = \\frac{1.2}{6} \\times 10 = 2\\text{ m/s}^2$!",
+    "solutionStructured": {
+      "concept": "Driving force is hanging weight $m_2 g = 20\\text{ N}$. Opposing kinetic friction on table is $f_k = \\mu_k m_1 g = 0.2 \\times 40 = 8\\text{ N}$. Net accelerating force is $m_2 g - f_k = 20 - 8 = 12\\text{ N}$. Total mass is $m_1 + m_2 = 6\\text{ kg}$. Acceleration is $a = \\frac{12}{6} = 2\\text{ m/s}^2$.",
+      "given": "$m_1 = 4\\text{ kg}$, $m_2 = 2\\text{ kg}$, $\\mu_k = 0.2$, $g = 10\\text{ m/s}^2$.",
+      "formula": "$a = \\frac{m_2 g - \\mu_k m_1 g}{m_1 + m_2}$.",
+      "stepByStep": "1. FBD of hanging block $m_2$: $m_2 g - T = m_2 a$.\n2. FBD of table block $m_1$: $T - f_k = m_1 a$.\n3. Normal force on table: $N = m_1 g = 40\\text{ N}$.\n4. Kinetic friction: $f_k = \\mu_k N = 0.2 \\times 40 = 8\\text{ N}$.\n5. Add the two motion equations: $m_2 g - f_k = (m_1 + m_2) a$.\n6. Substitute values: $20 - 8 = (4 + 2) a \\implies 12 = 6 a$.\n7. Acceleration: $a = \\frac{12}{6} = 2\\text{ m/s}^2$.",
+      "finalAnswer": "Option A: $2\\text{ m/s}^2$",
+      "whyOtherOptionsWrong": "Option B ($3.33\\text{ m/s}^2$) ignores friction ($20/6$). Option C is $6/6$. Option D is $(20 - 4)/4$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Connected bodies and pulley systems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-386",
+    "questionNumber": 386,
+    "question": "In the previous rough-table pulley system ($m_1 = 4\\text{ kg}$, $m_2 = 2\\text{ kg}$, $\\mu_k = 0.2$), what is the tension in the string?",
+    "options": {
+      "A": "16 N",
+      "B": "20 N",
+      "C": "12 N",
+      "D": "8 N"
+    },
+    "optionsList": [
+      "16 N",
+      "20 N",
+      "12 N",
+      "8 N"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nUsing the equation for the hanging mass: $m_2 g - T = m_2 a \\implies T = m_2(g - a) = 2(10 - 2) = 16\\text{ N}$.\n\n2. GIVEN:\n$m_2 = 2\\text{ kg}$, $a = 2\\text{ m/s}^2$, $g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$T = m_2(g - a) = m_1 a + f_k$.\n\n4. STEP-BY-STEP SOLUTION:\n1. From the hanging mass equation: $m_2 g - T = m_2 a$.\n2. $T = m_2(g - a) = 2(10 - 2) = 2(8) = 16\\text{ N}$.\n3. Verification using the block on table: $T = m_1 a + f_k = 4(2) + 8 = 8 + 8 = 16\\text{ N}$.\n4. Both equations give identical tension $16\\text{ N}$.\n\n5. FINAL ANSWER:\nOption A: 16 N\n\n6. QUICK TIP:\nAlways verify $T$ on BOTH bodies: $T = m_2(g-a) = m_1 a + f_k$. Instant self-check!",
+    "solutionStructured": {
+      "concept": "Using the equation for the hanging mass: $m_2 g - T = m_2 a \\implies T = m_2(g - a) = 2(10 - 2) = 16\\text{ N}$.",
+      "given": "$m_2 = 2\\text{ kg}$, $a = 2\\text{ m/s}^2$, $g = 10\\text{ m/s}^2$.",
+      "formula": "$T = m_2(g - a) = m_1 a + f_k$.",
+      "stepByStep": "1. From the hanging mass equation: $m_2 g - T = m_2 a$.\n2. $T = m_2(g - a) = 2(10 - 2) = 2(8) = 16\\text{ N}$.\n3. Verification using the block on table: $T = m_1 a + f_k = 4(2) + 8 = 8 + 8 = 16\\text{ N}$.\n4. Both equations give identical tension $16\\text{ N}$.",
+      "finalAnswer": "Option A: 16 N",
+      "whyOtherOptionsWrong": "Option B (20 N) is the weight $m_2 g$. Option C (12 N) is $m_2 g - f_k$. Option D (8 N) is just the friction force."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Connected bodies and pulley systems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-387",
+    "questionNumber": 387,
+    "question": "Two blocks of masses $m_1 = 5\\text{ kg}$ and $m_2 = 3\\text{ kg}$ are connected by a light string over a frictionless double-inclined wedge with angles $\\theta_1 = 30^\\circ$ and $\\theta_2 = 30^\\circ$ on smooth faces. The acceleration of the system is (take $g = 10\\text{ m/s}^2$):",
+    "options": {
+      "A": "$1.25\\text{ m/s}^2$",
+      "B": "$2.50\\text{ m/s}^2$",
+      "C": "$5.00\\text{ m/s}^2$",
+      "D": "$0.625\\text{ m/s}^2$"
+    },
+    "optionsList": [
+      "$1.25\\text{ m/s}^2$",
+      "$2.50\\text{ m/s}^2$",
+      "$5.00\\text{ m/s}^2$",
+      "$0.625\\text{ m/s}^2$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDown-plane gravity on $m_1$ is $m_1 g\\sin 30^\\circ = 5 \\times 10 \\times 0.5 = 25\\text{ N}$. Down-plane gravity on $m_2$ is $m_2 g\\sin 30^\\circ = 3 \\times 10 \\times 0.5 = 15\\text{ N}$. Net driving force is $25 - 15 = 10\\text{ N}$. Total mass is $5 + 3 = 8\\text{ kg}$. Acceleration is $a = \\frac{10}{8} = 1.25\\text{ m/s}^2$.\n\n2. GIVEN:\n$m_1 = 5\\text{ kg}$, $m_2 = 3\\text{ kg}$, $\\theta_1 = \\theta_2 = 30^\\circ$, smooth surfaces, $g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$a = \\frac{m_1 g\\sin\\theta_1 - m_2 g\\sin\\theta_2}{m_1 + m_2}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Pull on the left incline: $F_1 = m_1 g\\sin 30^\\circ = 5(10)(0.5) = 25\\text{ N}$.\n2. Pull on the right incline: $F_2 = m_2 g\\sin 30^\\circ = 3(10)(0.5) = 15\\text{ N}$.\n3. Since $F_1 > F_2$, block 1 accelerates down its incline and block 2 moves up its incline.\n4. Net pulling force: $F_{\\text{net}} = F_1 - F_2 = 25 - 15 = 10\\text{ N}$.\n5. Total mass of the system: $M = m_1 + m_2 = 5 + 3 = 8\\text{ kg}$.\n6. Acceleration: $a = \\frac{F_{\\text{net}}}{M} = \\frac{10\\text{ N}}{8\\text{ kg}} = 1.25\\text{ m/s}^2$.\n\n5. FINAL ANSWER:\nOption A: $1.25\\text{ m/s}^2$\n\n6. QUICK TIP:\nDouble Incline Formula: $a = \\frac{m_1\\sin\\theta_1 - m_2\\sin\\theta_2}{m_1 + m_2} g$!",
+    "solutionStructured": {
+      "concept": "Down-plane gravity on $m_1$ is $m_1 g\\sin 30^\\circ = 5 \\times 10 \\times 0.5 = 25\\text{ N}$. Down-plane gravity on $m_2$ is $m_2 g\\sin 30^\\circ = 3 \\times 10 \\times 0.5 = 15\\text{ N}$. Net driving force is $25 - 15 = 10\\text{ N}$. Total mass is $5 + 3 = 8\\text{ kg}$. Acceleration is $a = \\frac{10}{8} = 1.25\\text{ m/s}^2$.",
+      "given": "$m_1 = 5\\text{ kg}$, $m_2 = 3\\text{ kg}$, $\\theta_1 = \\theta_2 = 30^\\circ$, smooth surfaces, $g = 10\\text{ m/s}^2$.",
+      "formula": "$a = \\frac{m_1 g\\sin\\theta_1 - m_2 g\\sin\\theta_2}{m_1 + m_2}$.",
+      "stepByStep": "1. Pull on the left incline: $F_1 = m_1 g\\sin 30^\\circ = 5(10)(0.5) = 25\\text{ N}$.\n2. Pull on the right incline: $F_2 = m_2 g\\sin 30^\\circ = 3(10)(0.5) = 15\\text{ N}$.\n3. Since $F_1 > F_2$, block 1 accelerates down its incline and block 2 moves up its incline.\n4. Net pulling force: $F_{\\text{net}} = F_1 - F_2 = 25 - 15 = 10\\text{ N}$.\n5. Total mass of the system: $M = m_1 + m_2 = 5 + 3 = 8\\text{ kg}$.\n6. Acceleration: $a = \\frac{F_{\\text{net}}}{M} = \\frac{10\\text{ N}}{8\\text{ kg}} = 1.25\\text{ m/s}^2$.",
+      "finalAnswer": "Option A: $1.25\\text{ m/s}^2$",
+      "whyOtherOptionsWrong": "Option B ($2.5\\text{ m/s}^2$) forgets the mass of $m_1+m_2 = 8$ and divides by 4. Option C is $g/2$. Option D is $1.25/2$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Connected bodies and pulley systems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-388",
+    "questionNumber": 388,
+    "question": "In a movable pulley system, block A of mass $m_A = 2\\text{ kg}$ is suspended from a movable pulley, and block B of mass $m_B = 3\\text{ kg}$ is connected to the free end of the string passing over a fixed pulley. What is the relation between the acceleration of block A ($a_A$) and block B ($a_B$)?",
+    "options": {
+      "A": "$a_B = 2 a_A$",
+      "B": "$a_A = 2 a_B$",
+      "C": "$a_A = a_B$",
+      "D": "$a_B = 4 a_A$"
+    },
+    "optionsList": [
+      "$a_B = 2 a_A$",
+      "$a_A = 2 a_B$",
+      "$a_A = a_B$",
+      "$a_B = 4 a_A$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nString constraint equation: Let $x_A$ be the displacement of the movable pulley and $x_B$ be the displacement of the free mass. The total length of the string is $2x_A + x_B = \\text{constant}$. Differentiating twice with respect to time gives $2a_A + a_B = 0 \\implies |a_B| = 2|a_A|$.\n\n2. GIVEN:\nBlock A on movable pulley, Block B on free string.\n\n3. FORMULA / PRINCIPLE:\n$2x_A + x_B = L \\implies 2a_A + a_B = 0 \\implies a_B = 2a_A$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Consider the string loop around the movable pulley carrying block A.\n2. When block A moves down by a distance $x_A$, both sides of the string supporting the movable pulley must lengthen by $x_A$, releasing a total string length of $2x_A$.\n3. This entire released length must be taken up by block B: $x_B = 2x_A$.\n4. Differentiating twice with respect to time:\n   $v_B = 2v_A$ and $a_B = 2a_A$.\n5. Therefore, block B accelerates twice as fast as block A.\n\n5. FINAL ANSWER:\nOption A: $a_B = 2 a_A$\n\n6. QUICK TIP:\nMovable Pulley Constraint Rule: If block A is supported by 2 string segments, its displacement is HALVED ($x_A = x_B / 2$) and its tension is DOUBLED ($2T$)!",
+    "solutionStructured": {
+      "concept": "String constraint equation: Let $x_A$ be the displacement of the movable pulley and $x_B$ be the displacement of the free mass. The total length of the string is $2x_A + x_B = \\text{constant}$. Differentiating twice with respect to time gives $2a_A + a_B = 0 \\implies |a_B| = 2|a_A|$.",
+      "given": "Block A on movable pulley, Block B on free string.",
+      "formula": "$2x_A + x_B = L \\implies 2a_A + a_B = 0 \\implies a_B = 2a_A$.",
+      "stepByStep": "1. Consider the string loop around the movable pulley carrying block A.\n2. When block A moves down by a distance $x_A$, both sides of the string supporting the movable pulley must lengthen by $x_A$, releasing a total string length of $2x_A$.\n3. This entire released length must be taken up by block B: $x_B = 2x_A$.\n4. Differentiating twice with respect to time:\n   $v_B = 2v_A$ and $a_B = 2a_A$.\n5. Therefore, block B accelerates twice as fast as block A.",
+      "finalAnswer": "Option A: $a_B = 2 a_A$",
+      "whyOtherOptionsWrong": "Option B inverts the mechanical advantage. Option C assumes a simple 1:1 fixed pulley. Option D squares the mechanical advantage."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Connected bodies and pulley systems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-389",
+    "questionNumber": 389,
+    "question": "In the movable pulley setup above ($m_A = 2\\text{ kg}$, $m_B = 3\\text{ kg}$, with $a_B = 2a_A$), taking $g = 10\\text{ m/s}^2$, what is the downward acceleration of block B?",
+    "options": {
+      "A": "$2.86\\text{ m/s}^2$",
+      "B": "$1.43\\text{ m/s}^2$",
+      "C": "$5.00\\text{ m/s}^2$",
+      "D": "$4.00\\text{ m/s}^2$"
+    },
+    "optionsList": [
+      "$2.86\\text{ m/s}^2$",
+      "$1.43\\text{ m/s}^2$",
+      "$5.00\\text{ m/s}^2$",
+      "$4.00\\text{ m/s}^2$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nEquations of motion: For block B moving downwards: $m_B g - T = m_B a_B = m_B (2a_A)$. For block A moving upwards: $2T - m_A g = m_A a_A$. Multiply B's equation by 2 and add to eliminate $T$: $2m_B g - m_A g = (4m_B + m_A) a_A \\implies a_A = \\frac{2m_B - m_A}{4m_B + m_A} g$. Then $a_B = 2a_A = \\frac{2(2m_B - m_A)}{4m_B + m_A} g$.\n\n2. GIVEN:\n$m_A = 2\\text{ kg}$, $m_B = 3\\text{ kg}$, $a_B = 2a_A$, $g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$a_A = \\frac{2m_B - m_A}{4m_B + m_A} g$; $a_B = 2a_A = \\frac{2(6 - 2)}{12 + 2} \\times 10 = \\frac{8}{14} \\times 10 = \\frac{40}{14} \\approx 2.86\\text{ m/s}^2$.\n\n4. STEP-BY-STEP SOLUTION:\n1. FBD of B (moves down): $m_B g - T = m_B a_B = m_B(2a_A) \\implies 30 - T = 6 a_A \\implies 2T = 60 - 12 a_A$.\n2. FBD of A (moves up): $2T - m_A g = m_A a_A \\implies 2T - 20 = 2 a_A$.\n3. Substitute $2T$ into equation 2:\n   $(60 - 12 a_A) - 20 = 2 a_A$.\n4. $40 = 14 a_A \\implies a_A = \\frac{40}{14} = \\frac{20}{7} \\approx 1.43\\text{ m/s}^2$.\n5. Acceleration of block B is $a_B = 2a_A = 2 \\times \\frac{20}{7} = \\frac{40}{7} \\approx 2.86\\text{ m/s}^2$.\n\n5. FINAL ANSWER:\nOption A: $2.86\\text{ m/s}^2$\n\n6. QUICK TIP:\nVirtual Work Method for Pulleys: $\\sum \\vec{T} \\cdot \\vec{a} = 0 \\implies 2T a_A - T a_B = 0 \\implies a_B = 2a_A$!",
+    "solutionStructured": {
+      "concept": "Equations of motion: For block B moving downwards: $m_B g - T = m_B a_B = m_B (2a_A)$. For block A moving upwards: $2T - m_A g = m_A a_A$. Multiply B's equation by 2 and add to eliminate $T$: $2m_B g - m_A g = (4m_B + m_A) a_A \\implies a_A = \\frac{2m_B - m_A}{4m_B + m_A} g$. Then $a_B = 2a_A = \\frac{2(2m_B - m_A)}{4m_B + m_A} g$.",
+      "given": "$m_A = 2\\text{ kg}$, $m_B = 3\\text{ kg}$, $a_B = 2a_A$, $g = 10\\text{ m/s}^2$.",
+      "formula": "$a_A = \\frac{2m_B - m_A}{4m_B + m_A} g$; $a_B = 2a_A = \\frac{2(6 - 2)}{12 + 2} \\times 10 = \\frac{8}{14} \\times 10 = \\frac{40}{14} \\approx 2.86\\text{ m/s}^2$.",
+      "stepByStep": "1. FBD of B (moves down): $m_B g - T = m_B a_B = m_B(2a_A) \\implies 30 - T = 6 a_A \\implies 2T = 60 - 12 a_A$.\n2. FBD of A (moves up): $2T - m_A g = m_A a_A \\implies 2T - 20 = 2 a_A$.\n3. Substitute $2T$ into equation 2:\n   $(60 - 12 a_A) - 20 = 2 a_A$.\n4. $40 = 14 a_A \\implies a_A = \\frac{40}{14} = \\frac{20}{7} \\approx 1.43\\text{ m/s}^2$.\n5. Acceleration of block B is $a_B = 2a_A = 2 \\times \\frac{20}{7} = \\frac{40}{7} \\approx 2.86\\text{ m/s}^2$.",
+      "finalAnswer": "Option A: $2.86\\text{ m/s}^2$",
+      "whyOtherOptionsWrong": "Option B ($1.43\\text{ m/s}^2$) is $a_A$, the acceleration of block A. Option C is $g/2$. Option D is an arbitrary estimate."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Connected bodies and pulley systems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-390",
+    "questionNumber": 390,
+    "question": "Two blocks of masses $m_1 = 3\\text{ kg}$ and $m_2 = 1\\text{ kg}$ are connected by a spring of spring constant $k = 100\\text{ N/m}$. Block $m_1$ rests on a table, and $m_2$ is placed on top of it. What minimum downward displacement must be given to $m_2$ and released so that when it rebounds, block $m_1$ just lifts off the table (take $g = 10\\text{ m/s}^2$)?",
+    "options": {
+      "A": "0.4 m",
+      "B": "0.3 m",
+      "C": "0.2 m",
+      "D": "0.1 m"
+    },
+    "optionsList": [
+      "0.4 m",
+      "0.3 m",
+      "0.2 m",
+      "0.1 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor $m_1$ to just lift off the table, the spring must be stretched by $x_1$ such that upward spring force balances $m_1$'s weight: $k x_1 = m_1 g \\implies x_1 = \\frac{m_1 g}{k} = \\frac{30}{100} = 0.3\\text{ m}$. In static equilibrium, $m_2$ compresses the spring by $x_0 = \\frac{m_2 g}{k} = \\frac{10}{100} = 0.1\\text{ m}$. The amplitude of oscillation about equilibrium must be $A = x_0 + x_1 = 0.1 + 0.3 = 0.4\\text{ m}$.\n\n2. GIVEN:\n$m_1 = 3\\text{ kg}$, $m_2 = 1\\text{ kg}$, $k = 100\\text{ N/m}$, $g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$x_1 = \\frac{m_1 g}{k}$; $x_0 = \\frac{m_2 g}{k}$; $x_{\\text{down}} = x_1 + 2x_0$ from natural length, or $A = x_1 + x_0 = 0.4\\text{ m}$ from equilibrium.\n\n4. STEP-BY-STEP SOLUTION:\n1. Equilibrium position of $m_2$: The spring is compressed by $x_0 = \\frac{m_2 g}{k} = \\frac{1 \\times 10}{100} = 0.1\\text{ m}$.\n2. Condition for $m_1$ to lift off: The spring must be EXTENDED upward by $x_1$ such that $k x_1 = m_1 g \\implies x_1 = \\frac{3 \\times 10}{100} = 0.3\\text{ m}$.\n3. The total upward displacement of $m_2$ from its equilibrium position must reach $x_1 + x_0 = 0.3 + 0.1 = 0.4\\text{ m}$.\n4. For symmetric simple harmonic motion about the equilibrium position, the downward amplitude from equilibrium must equal the upward amplitude: $A = 0.4\\text{ m}$.\n5. Therefore, the downward displacement from the equilibrium position must be $0.4\\text{ m}$.\n\n5. FINAL ANSWER:\nOption A: 0.4 m\n\n6. QUICK TIP:\nLift-off condition: Extension $x_{\\text{ext}} = \\frac{m_1 g}{k}$. Amplitude from equilibrium $A = \\frac{(m_1 + m_2)g}{k}$!",
+    "solutionStructured": {
+      "concept": "For $m_1$ to just lift off the table, the spring must be stretched by $x_1$ such that upward spring force balances $m_1$'s weight: $k x_1 = m_1 g \\implies x_1 = \\frac{m_1 g}{k} = \\frac{30}{100} = 0.3\\text{ m}$. In static equilibrium, $m_2$ compresses the spring by $x_0 = \\frac{m_2 g}{k} = \\frac{10}{100} = 0.1\\text{ m}$. The amplitude of oscillation about equilibrium must be $A = x_0 + x_1 = 0.1 + 0.3 = 0.4\\text{ m}$.",
+      "given": "$m_1 = 3\\text{ kg}$, $m_2 = 1\\text{ kg}$, $k = 100\\text{ N/m}$, $g = 10\\text{ m/s}^2$.",
+      "formula": "$x_1 = \\frac{m_1 g}{k}$; $x_0 = \\frac{m_2 g}{k}$; $x_{\\text{down}} = x_1 + 2x_0$ from natural length, or $A = x_1 + x_0 = 0.4\\text{ m}$ from equilibrium.",
+      "stepByStep": "1. Equilibrium position of $m_2$: The spring is compressed by $x_0 = \\frac{m_2 g}{k} = \\frac{1 \\times 10}{100} = 0.1\\text{ m}$.\n2. Condition for $m_1$ to lift off: The spring must be EXTENDED upward by $x_1$ such that $k x_1 = m_1 g \\implies x_1 = \\frac{3 \\times 10}{100} = 0.3\\text{ m}$.\n3. The total upward displacement of $m_2$ from its equilibrium position must reach $x_1 + x_0 = 0.3 + 0.1 = 0.4\\text{ m}$.\n4. For symmetric simple harmonic motion about the equilibrium position, the downward amplitude from equilibrium must equal the upward amplitude: $A = 0.4\\text{ m}$.\n5. Therefore, the downward displacement from the equilibrium position must be $0.4\\text{ m}$.",
+      "finalAnswer": "Option A: 0.4 m",
+      "whyOtherOptionsWrong": "Option B (0.3 m) is only the extension required to lift $m_1$. Option C (0.2 m) is $0.3 - 0.1$. Option D (0.1 m) is just the static compression."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Connected bodies and pulley systems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-391",
+    "questionNumber": 391,
+    "question": "A heavy uniform chain of mass $m$ and length $L$ hangs over a smooth small peg with length $L/3$ on one side and $2L/3$ on the other side. When released from rest, the acceleration of the chain at this instant is:",
+    "options": {
+      "A": "$\\frac{g}{3}$",
+      "B": "$\\frac{g}{2}$",
+      "C": "$\\frac{2g}{3}$",
+      "D": "$g$"
+    },
+    "optionsList": [
+      "$\\frac{g}{3}$",
+      "$\\frac{g}{2}$",
+      "$\\frac{2g}{3}$",
+      "$g$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nMass of the longer side is $m_1 = \\frac{2}{3}m$, and mass of the shorter side is $m_2 = \\frac{1}{3}m$. The net unbalanced pulling force is $(m_1 - m_2)g = \\left(\\frac{2}{3}m - \\frac{1}{3}m\\right)g = \\frac{1}{3}mg$. The total mass of the chain being accelerated is $m$. By Newton's second law: $a = \\frac{F_{\\text{net}}}{m} = \\frac{mg/3}{m} = \\frac{g}{3}$.\n\n2. GIVEN:\nChain mass $m$, length $L$, segments $L/3$ and $2L/3$, smooth peg.\n\n3. FORMULA / PRINCIPLE:\n$a = \\frac{m_1 - m_2}{m} g = \\frac{2/3 - 1/3}{1} g = \\frac{g}{3}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Length of longer side: $L_1 = \\frac{2}{3}L$. Its mass is $m_1 = \\frac{2}{3}m$.\n2. Length of shorter side: $L_2 = \\frac{1}{3}L$. Its mass is $m_2 = \\frac{1}{3}m$.\n3. Unbalanced driving force over the smooth peg:\n   $F_{\\text{net}} = m_1 g - m_2 g = \\left(\\frac{2}{3}m - \\frac{1}{3}m\\right)g = \\frac{1}{3}mg$.\n4. Total inertia of the moving chain is its entire mass $m$.\n5. Applying Newton's second law to the whole chain:\n   $a = \\frac{F_{\\text{net}}}{m_{\\text{total}}} = \\frac{\\frac{1}{3}mg}{m} = \\frac{g}{3}$.\n\n5. FINAL ANSWER:\nOption A: $\\frac{g}{3}$\n\n6. QUICK TIP:\nChain Over Peg Formula: $a = \\frac{y_1 - y_2}{L} g$. Here $\\frac{2/3L - 1/3L}{L} g = \\frac{g}{3}$!",
+    "solutionStructured": {
+      "concept": "Mass of the longer side is $m_1 = \\frac{2}{3}m$, and mass of the shorter side is $m_2 = \\frac{1}{3}m$. The net unbalanced pulling force is $(m_1 - m_2)g = \\left(\\frac{2}{3}m - \\frac{1}{3}m\\right)g = \\frac{1}{3}mg$. The total mass of the chain being accelerated is $m$. By Newton's second law: $a = \\frac{F_{\\text{net}}}{m} = \\frac{mg/3}{m} = \\frac{g}{3}$.",
+      "given": "Chain mass $m$, length $L$, segments $L/3$ and $2L/3$, smooth peg.",
+      "formula": "$a = \\frac{m_1 - m_2}{m} g = \\frac{2/3 - 1/3}{1} g = \\frac{g}{3}$.",
+      "stepByStep": "1. Length of longer side: $L_1 = \\frac{2}{3}L$. Its mass is $m_1 = \\frac{2}{3}m$.\n2. Length of shorter side: $L_2 = \\frac{1}{3}L$. Its mass is $m_2 = \\frac{1}{3}m$.\n3. Unbalanced driving force over the smooth peg:\n   $F_{\\text{net}} = m_1 g - m_2 g = \\left(\\frac{2}{3}m - \\frac{1}{3}m\\right)g = \\frac{1}{3}mg$.\n4. Total inertia of the moving chain is its entire mass $m$.\n5. Applying Newton's second law to the whole chain:\n   $a = \\frac{F_{\\text{net}}}{m_{\\text{total}}} = \\frac{\\frac{1}{3}mg}{m} = \\frac{g}{3}$.",
+      "finalAnswer": "Option A: $\\frac{g}{3}$",
+      "whyOtherOptionsWrong": "Option B ($g/2$) is $(2/3 - 1/3) / (2/3)$. Option C is $2g/3$. Option D is free fall."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Connected bodies and pulley systems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-392",
+    "questionNumber": 392,
+    "question": "Two blocks of masses $m_1$ and $m_2$ ($m_1 > m_2$) are placed in contact on a frictionless horizontal floor. A horizontal force $F$ is applied pushing on $m_1$ towards $m_2$. The contact force between the blocks is:",
+    "options": {
+      "A": "$\\frac{m_2}{m_1 + m_2} F$",
+      "B": "$\\frac{m_1}{m_1 + m_2} F$",
+      "C": "$F$",
+      "D": "$\\frac{m_1 - m_2}{m_1 + m_2} F$"
+    },
+    "optionsList": [
+      "$\\frac{m_2}{m_1 + m_2} F$",
+      "$\\frac{m_1}{m_1 + m_2} F$",
+      "$F$",
+      "$\\frac{m_1 - m_2}{m_1 + m_2} F$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe contact force $N$ between the blocks acts to accelerate only the front block $m_2$. Since common acceleration is $a = \\frac{F}{m_1 + m_2}$, the contact force is $N = m_2 a = \\frac{m_2}{m_1 + m_2} F$.\n\n2. GIVEN:\nBlocks $m_1, m_2$ in contact, force on $m_1$, smooth surface.\n\n3. FORMULA / PRINCIPLE:\n$a = \\frac{F}{m_1 + m_2}$; $N = m_2 a = \\frac{m_2}{m_1 + m_2} F$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Total mass of system is $(m_1 + m_2)$.\n2. Acceleration of system: $a = \\frac{F}{m_1 + m_2}$.\n3. FBD of $m_2$: The normal force $N$ from $m_1$ is the only horizontal force acting on $m_2$.\n4. Newton's second law on $m_2$: $N = m_2 a = m_2 \\left(\\frac{F}{m_1 + m_2}\\right) = \\frac{m_2}{m_1 + m_2} F$.\n\n5. FINAL ANSWER:\nOption A: $\\frac{m_2}{m_1 + m_2} F$\n\n6. QUICK TIP:\nContact force pushes only what is in FRONT of it! Pushing $m_1 \\implies N = \\frac{m_2}{m_1 + m_2} F$.",
+    "solutionStructured": {
+      "concept": "The contact force $N$ between the blocks acts to accelerate only the front block $m_2$. Since common acceleration is $a = \\frac{F}{m_1 + m_2}$, the contact force is $N = m_2 a = \\frac{m_2}{m_1 + m_2} F$.",
+      "given": "Blocks $m_1, m_2$ in contact, force on $m_1$, smooth surface.",
+      "formula": "$a = \\frac{F}{m_1 + m_2}$; $N = m_2 a = \\frac{m_2}{m_1 + m_2} F$.",
+      "stepByStep": "1. Total mass of system is $(m_1 + m_2)$.\n2. Acceleration of system: $a = \\frac{F}{m_1 + m_2}$.\n3. FBD of $m_2$: The normal force $N$ from $m_1$ is the only horizontal force acting on $m_2$.\n4. Newton's second law on $m_2$: $N = m_2 a = m_2 \\left(\\frac{F}{m_1 + m_2}\\right) = \\frac{m_2}{m_1 + m_2} F$.",
+      "finalAnswer": "Option A: $\\frac{m_2}{m_1 + m_2} F$",
+      "whyOtherOptionsWrong": "Option B is the contact force if $F$ was applied pushing on $m_2$. Option C is the external force. Option D is incorrect."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Blocks in contact",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-393",
+    "questionNumber": 393,
+    "question": "If the applied force $F$ in the previous problem is applied to $m_2$ pushing towards $m_1$ instead, the contact force between the blocks will:",
+    "options": {
+      "A": "Increase, because $m_1 > m_2$",
+      "B": "Decrease, because $m_1 > m_2$",
+      "C": "Remain the same by Newton's third law",
+      "D": "Become zero"
+    },
+    "optionsList": [
+      "Increase, because $m_1 > m_2$",
+      "Decrease, because $m_1 > m_2$",
+      "Remain the same by Newton's third law",
+      "Become zero"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nWhen pushing on $m_2$, the contact force must accelerate the larger mass $m_1$: $N' = \\frac{m_1}{m_1 + m_2} F$. Since $m_1 > m_2$, $N' > N$.\n\n2. GIVEN:\n$m_1 > m_2$, force $F$ pushes on $m_2$ instead of $m_1$.\n\n3. FORMULA / PRINCIPLE:\n$N' = \\frac{m_1}{m_1 + m_2} F > \\frac{m_2}{m_1 + m_2} F = N$.\n\n4. STEP-BY-STEP SOLUTION:\n1. When $F$ is pushed on $m_2$, the contact force accelerates mass $m_1$.\n2. $N' = m_1 a = \\frac{m_1}{m_1 + m_2} F$.\n3. Since given $m_1 > m_2$, the ratio $\\frac{m_1}{m_1 + m_2} > \\frac{m_2}{m_1 + m_2}$.\n4. Therefore, $N' > N$, so the contact force increases.\n\n5. FINAL ANSWER:\nOption A: Increase, because $m_1 > m_2$\n\n6. QUICK TIP:\nNEET Trap: Newton's third law says the action and reaction forces at the contact point are equal in any single scenario, but CHANGING the point of application changes the magnitude of the contact force!",
+    "solutionStructured": {
+      "concept": "When pushing on $m_2$, the contact force must accelerate the larger mass $m_1$: $N' = \\frac{m_1}{m_1 + m_2} F$. Since $m_1 > m_2$, $N' > N$.",
+      "given": "$m_1 > m_2$, force $F$ pushes on $m_2$ instead of $m_1$.",
+      "formula": "$N' = \\frac{m_1}{m_1 + m_2} F > \\frac{m_2}{m_1 + m_2} F = N$.",
+      "stepByStep": "1. When $F$ is pushed on $m_2$, the contact force accelerates mass $m_1$.\n2. $N' = m_1 a = \\frac{m_1}{m_1 + m_2} F$.\n3. Since given $m_1 > m_2$, the ratio $\\frac{m_1}{m_1 + m_2} > \\frac{m_2}{m_1 + m_2}$.\n4. Therefore, $N' > N$, so the contact force increases.",
+      "finalAnswer": "Option A: Increase, because $m_1 > m_2$",
+      "whyOtherOptionsWrong": "Option B is the opposite. Option C misapplies Newton's third law to two completely different physical setups."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Blocks in contact",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-394",
+    "questionNumber": 394,
+    "question": "Three blocks of masses $2\\text{ kg}$, $3\\text{ kg}$, and $5\\text{ kg}$ are in contact on a frictionless table. A force of $20\\text{ N}$ pushes the $2\\text{ kg}$ block. The acceleration of the system is:",
+    "options": {
+      "A": "$2\\text{ m/s}^2$",
+      "B": "$4\\text{ m/s}^2$",
+      "C": "$1\\text{ m/s}^2$",
+      "D": "$10\\text{ m/s}^2$"
+    },
+    "optionsList": [
+      "$2\\text{ m/s}^2$",
+      "$4\\text{ m/s}^2$",
+      "$1\\text{ m/s}^2$",
+      "$10\\text{ m/s}^2$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTotal mass is $M = 2 + 3 + 5 = 10\\text{ kg}$. Acceleration is $a = F / M = 20 / 10 = 2\\text{ m/s}^2$.\n\n2. GIVEN:\nMasses $2\\text{ kg}, 3\\text{ kg}, 5\\text{ kg}$, $F = 20\\text{ N}$.\n\n3. FORMULA / PRINCIPLE:\n$a = \\frac{F}{m_1 + m_2 + m_3}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Total mass $M = 2 + 3 + 5 = 10\\text{ kg}$.\n2. External force $F = 20\\text{ N}$.\n3. Common acceleration $a = \\frac{F}{M} = \\frac{20}{10} = 2\\text{ m/s}^2$.\n\n5. FINAL ANSWER:\nOption A: $2\\text{ m/s}^2$\n\n6. QUICK TIP:\nCommon acceleration is simply total external force divided by total system mass!",
+    "solutionStructured": {
+      "concept": "Total mass is $M = 2 + 3 + 5 = 10\\text{ kg}$. Acceleration is $a = F / M = 20 / 10 = 2\\text{ m/s}^2$.",
+      "given": "Masses $2\\text{ kg}, 3\\text{ kg}, 5\\text{ kg}$, $F = 20\\text{ N}$.",
+      "formula": "$a = \\frac{F}{m_1 + m_2 + m_3}$.",
+      "stepByStep": "1. Total mass $M = 2 + 3 + 5 = 10\\text{ kg}$.\n2. External force $F = 20\\text{ N}$.\n3. Common acceleration $a = \\frac{F}{M} = \\frac{20}{10} = 2\\text{ m/s}^2$.",
+      "finalAnswer": "Option A: $2\\text{ m/s}^2$",
+      "whyOtherOptionsWrong": "Option B ($4\\text{ m/s}^2$) divides by $5\\text{ kg}$. Option C divides by 20. Option D divides by 2."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Blocks in contact",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-395",
+    "questionNumber": 395,
+    "question": "In the three-block system above ($2\\text{ kg}$, $3\\text{ kg}$, $5\\text{ kg}$, $F = 20\\text{ N}$), the contact force between the $3\\text{ kg}$ block and the $5\\text{ kg}$ block is:",
+    "options": {
+      "A": "10 N",
+      "B": "16 N",
+      "C": "6 N",
+      "D": "4 N"
+    },
+    "optionsList": [
+      "10 N",
+      "16 N",
+      "6 N",
+      "4 N"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe contact force between the 3 kg block and the 5 kg block accelerates only the 5 kg block: $N = m_3 a = 5 \\times 2 = 10\\text{ N}$.\n\n2. GIVEN:\n$m_3 = 5\\text{ kg}$, $a = 2\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$N_{23} = m_3 a = 5 \\times 2 = 10\\text{ N}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. The 5 kg block is at the very front of the line.\n2. The only horizontal force acting on it is the contact push from the 3 kg block.\n3. Newton's second law on the 5 kg block: $N = m_3 a = 5\\text{ kg} \\times 2\\text{ m/s}^2 = 10\\text{ N}$.\n\n5. FINAL ANSWER:\nOption A: 10 N\n\n6. QUICK TIP:\nForce on front block $= m_{\\text{front}} \\times a = 5 \\times 2 = 10\\text{ N}$!",
+    "solutionStructured": {
+      "concept": "The contact force between the 3 kg block and the 5 kg block accelerates only the 5 kg block: $N = m_3 a = 5 \\times 2 = 10\\text{ N}$.",
+      "given": "$m_3 = 5\\text{ kg}$, $a = 2\\text{ m/s}^2$.",
+      "formula": "$N_{23} = m_3 a = 5 \\times 2 = 10\\text{ N}$.",
+      "stepByStep": "1. The 5 kg block is at the very front of the line.\n2. The only horizontal force acting on it is the contact push from the 3 kg block.\n3. Newton's second law on the 5 kg block: $N = m_3 a = 5\\text{ kg} \\times 2\\text{ m/s}^2 = 10\\text{ N}$.",
+      "finalAnswer": "Option A: 10 N",
+      "whyOtherOptionsWrong": "Option B (16 N) is the contact force between the 2 kg and 3 kg blocks ($(3+5) \\times 2 = 16\\text{ N}$). Option C is $3 \\times 2$. Option D is $2 \\times 2$."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Blocks in contact",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-396",
+    "questionNumber": 396,
+    "question": "A block A of mass $2\\text{ kg}$ is placed on top of block B of mass $4\\text{ kg}$, which rests on a smooth horizontal table. The coefficient of static friction between block A and block B is $\\mu_s = 0.4$. What is the maximum horizontal force that can be applied to block B without block A slipping off (take $g = 10\\text{ m/s}^2$)?",
+    "options": {
+      "A": "24 N",
+      "B": "8 N",
+      "C": "16 N",
+      "D": "12 N"
+    },
+    "optionsList": [
+      "24 N",
+      "8 N",
+      "16 N",
+      "12 N"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe upper block A is accelerated by static friction from B: $f_s = m_A a$. The maximum static friction available is $f_{\\text{lim}} = \\mu_s m_A g = 0.4 \\times 2 \\times 10 = 8\\text{ N}$. The maximum common acceleration without slipping is $a_{\\text{max}} = \\frac{f_{\\text{lim}}}{m_A} = \\mu_s g = 4\\text{ m/s}^2$. The maximum force applied to block B is $F_{\\text{max}} = (m_A + m_B) a_{\\text{max}} = (2 + 4) \\times 4 = 24\\text{ N}$.\n\n2. GIVEN:\n$m_A = 2\\text{ kg}$, $m_B = 4\\text{ kg}$, $\\mu_s = 0.4$, smooth table, $g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$a_{\\text{max}} = \\mu_s g$; $F_{\\text{max}} = (m_A + m_B) a_{\\text{max}} = \\mu_s(m_A + m_B)g$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Upper block A has no external force applied directly to it; it is carried along purely by static friction from B.\n2. Normal force between A and B: $N_{AB} = m_A g = 2 \\times 10 = 20\\text{ N}$.\n3. Maximum static friction between A and B: $f_{\\text{lim}} = \\mu_s N_{AB} = 0.4 \\times 20 = 8\\text{ N}$.\n4. Maximum acceleration of A without slipping:\n   $a_{\\text{max}} = \\frac{f_{\\text{lim}}}{m_A} = \\frac{8}{2} = 4\\text{ m/s}^2 = \\mu_s g$.\n5. For both blocks to move together at $a_{\\text{max}}$, the force on B must accelerate total mass $(m_A + m_B) = 6\\text{ kg}$:\n   $F_{\\text{max}} = (m_A + m_B) a_{\\text{max}} = (2 + 4) \\times 4 = 24\\text{ N}$.\n\n5. FINAL ANSWER:\nOption A: 24 N\n\n6. QUICK TIP:\nWhen pulling the bottom block on a smooth table, $F_{\\text{max}} = (m_A + m_B) \\mu_s g = 6 \\times 0.4 \\times 10 = 24\\text{ N}$!",
+    "solutionStructured": {
+      "concept": "The upper block A is accelerated by static friction from B: $f_s = m_A a$. The maximum static friction available is $f_{\\text{lim}} = \\mu_s m_A g = 0.4 \\times 2 \\times 10 = 8\\text{ N}$. The maximum common acceleration without slipping is $a_{\\text{max}} = \\frac{f_{\\text{lim}}}{m_A} = \\mu_s g = 4\\text{ m/s}^2$. The maximum force applied to block B is $F_{\\text{max}} = (m_A + m_B) a_{\\text{max}} = (2 + 4) \\times 4 = 24\\text{ N}$.",
+      "given": "$m_A = 2\\text{ kg}$, $m_B = 4\\text{ kg}$, $\\mu_s = 0.4$, smooth table, $g = 10\\text{ m/s}^2$.",
+      "formula": "$a_{\\text{max}} = \\mu_s g$; $F_{\\text{max}} = (m_A + m_B) a_{\\text{max}} = \\mu_s(m_A + m_B)g$.",
+      "stepByStep": "1. Upper block A has no external force applied directly to it; it is carried along purely by static friction from B.\n2. Normal force between A and B: $N_{AB} = m_A g = 2 \\times 10 = 20\\text{ N}$.\n3. Maximum static friction between A and B: $f_{\\text{lim}} = \\mu_s N_{AB} = 0.4 \\times 20 = 8\\text{ N}$.\n4. Maximum acceleration of A without slipping:\n   $a_{\\text{max}} = \\frac{f_{\\text{lim}}}{m_A} = \\frac{8}{2} = 4\\text{ m/s}^2 = \\mu_s g$.\n5. For both blocks to move together at $a_{\\text{max}}$, the force on B must accelerate total mass $(m_A + m_B) = 6\\text{ kg}$:\n   $F_{\\text{max}} = (m_A + m_B) a_{\\text{max}} = (2 + 4) \\times 4 = 24\\text{ N}$.",
+      "finalAnswer": "Option A: 24 N",
+      "whyOtherOptionsWrong": "Option B (8 N) is the friction force between the blocks. Option C (16 N) is $m_B a_{\\text{max}}$. Option D is $12\\text{ N}$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Blocks in contact",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-397",
+    "questionNumber": 397,
+    "question": "In the previous setup ($m_A = 2\\text{ kg}$ on $m_B = 4\\text{ kg}$), if the horizontal force $F = 30\\text{ N}$ is applied to block B, and the coefficient of kinetic friction between A and B is $\\mu_k = 0.3$, what is the acceleration of block A?",
+    "options": {
+      "A": "$3\\text{ m/s}^2$",
+      "B": "$4\\text{ m/s}^2$",
+      "C": "$6\\text{ m/s}^2$",
+      "D": "$5\\text{ m/s}^2$"
+    },
+    "optionsList": [
+      "$3\\text{ m/s}^2$",
+      "$4\\text{ m/s}^2$",
+      "$6\\text{ m/s}^2$",
+      "$5\\text{ m/s}^2$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSince $F = 30\\text{ N} > F_{\\text{max}} = 24\\text{ N}$, slipping occurs! Once slipping occurs, kinetic friction acts on block A: $f_k = \\mu_k m_A g = 0.3 \\times 2 \\times 10 = 6\\text{ N}$. The acceleration of block A is $a_A = f_k / m_A = \\mu_k g = 0.3 \\times 10 = 3\\text{ m/s}^2$.\n\n2. GIVEN:\n$F = 30\\text{ N} > 24\\text{ N}$ (slipping), $\\mu_k = 0.3$, $m_A = 2\\text{ kg}$, $g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$a_A = \\frac{f_k}{m_A} = \\mu_k g = 0.3 \\times 10 = 3\\text{ m/s}^2$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Because applied force $30\\text{ N}$ exceeds the threshold for no slip ($24\\text{ N}$), the blocks slip relative to each other.\n2. The friction between the blocks transitions from static to kinetic friction.\n3. The kinetic friction acting on block A: $f_k = \\mu_k m_A g = 0.3 \\times 2 \\times 10 = 6\\text{ N}$ directed forward.\n4. By Newton's second law on block A: $f_k = m_A a_A \\implies a_A = \\frac{6\\text{ N}}{2\\text{ kg}} = 3\\text{ m/s}^2 = \\mu_k g$.\n\n5. FINAL ANSWER:\nOption A: $3\\text{ m/s}^2$\n\n6. QUICK TIP:\nOnce slipping occurs, the top block accelerates with $a_{\\text{top}} = \\mu_k g$!",
+    "solutionStructured": {
+      "concept": "Since $F = 30\\text{ N} > F_{\\text{max}} = 24\\text{ N}$, slipping occurs! Once slipping occurs, kinetic friction acts on block A: $f_k = \\mu_k m_A g = 0.3 \\times 2 \\times 10 = 6\\text{ N}$. The acceleration of block A is $a_A = f_k / m_A = \\mu_k g = 0.3 \\times 10 = 3\\text{ m/s}^2$.",
+      "given": "$F = 30\\text{ N} > 24\\text{ N}$ (slipping), $\\mu_k = 0.3$, $m_A = 2\\text{ kg}$, $g = 10\\text{ m/s}^2$.",
+      "formula": "$a_A = \\frac{f_k}{m_A} = \\mu_k g = 0.3 \\times 10 = 3\\text{ m/s}^2$.",
+      "stepByStep": "1. Because applied force $30\\text{ N}$ exceeds the threshold for no slip ($24\\text{ N}$), the blocks slip relative to each other.\n2. The friction between the blocks transitions from static to kinetic friction.\n3. The kinetic friction acting on block A: $f_k = \\mu_k m_A g = 0.3 \\times 2 \\times 10 = 6\\text{ N}$ directed forward.\n4. By Newton's second law on block A: $f_k = m_A a_A \\implies a_A = \\frac{6\\text{ N}}{2\\text{ kg}} = 3\\text{ m/s}^2 = \\mu_k g$.",
+      "finalAnswer": "Option A: $3\\text{ m/s}^2$",
+      "whyOtherOptionsWrong": "Option B ($4\\text{ m/s}^2$) is $\\mu_s g$ (static limit). Option C ($6\\text{ m/s}^2$) is the acceleration of block B. Option D is $30/6$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Blocks in contact",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-398",
+    "questionNumber": 398,
+    "question": "In the same setup ($F = 30\\text{ N}$ on $m_B = 4\\text{ kg}$, $f_k = 6\\text{ N}$), what is the acceleration of block B?",
+    "options": {
+      "A": "$6\\text{ m/s}^2$",
+      "B": "$3\\text{ m/s}^2$",
+      "C": "$7.5\\text{ m/s}^2$",
+      "D": "$5\\text{ m/s}^2$"
+    },
+    "optionsList": [
+      "$6\\text{ m/s}^2$",
+      "$3\\text{ m/s}^2$",
+      "$7.5\\text{ m/s}^2$",
+      "$5\\text{ m/s}^2$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor block B, the forward applied force is $F = 30\\text{ N}$, and the backward kinetic friction from block A is $f_k = 6\\text{ N}$. Net force on B is $F - f_k = 30 - 6 = 24\\text{ N}$. Acceleration is $a_B = \\frac{24\\text{ N}}{4\\text{ kg}} = 6\\text{ m/s}^2$.\n\n2. GIVEN:\n$F = 30\\text{ N}$, $f_k = 6\\text{ N}$, $m_B = 4\\text{ kg}$.\n\n3. FORMULA / PRINCIPLE:\n$a_B = \\frac{F - f_k}{m_B} = \\frac{30 - 6}{4} = 6\\text{ m/s}^2$.\n\n4. STEP-BY-STEP SOLUTION:\n1. FBD of block B:\n   - Applied force $F = 30\\text{ N}$ to the right.\n   - Kinetic friction $f_k = 6\\text{ N}$ from block A to the left (by Newton's third law).\n   - Table is smooth, so zero friction from the table.\n2. Net force on block B: $F_{\\text{net}} = 30 - 6 = 24\\text{ N}$.\n3. Acceleration of block B: $a_B = \\frac{24\\text{ N}}{4\\text{ kg}} = 6\\text{ m/s}^2$.\n\n5. FINAL ANSWER:\nOption A: $6\\text{ m/s}^2$\n\n6. QUICK TIP:\nNotice that $a_B = 6\\text{ m/s}^2 > a_A = 3\\text{ m/s}^2$, confirming that B slips out from underneath A with relative acceleration $a_{\\text{rel}} = 3\\text{ m/s}^2$!",
+    "solutionStructured": {
+      "concept": "For block B, the forward applied force is $F = 30\\text{ N}$, and the backward kinetic friction from block A is $f_k = 6\\text{ N}$. Net force on B is $F - f_k = 30 - 6 = 24\\text{ N}$. Acceleration is $a_B = \\frac{24\\text{ N}}{4\\text{ kg}} = 6\\text{ m/s}^2$.",
+      "given": "$F = 30\\text{ N}$, $f_k = 6\\text{ N}$, $m_B = 4\\text{ kg}$.",
+      "formula": "$a_B = \\frac{F - f_k}{m_B} = \\frac{30 - 6}{4} = 6\\text{ m/s}^2$.",
+      "stepByStep": "1. FBD of block B:\n   - Applied force $F = 30\\text{ N}$ to the right.\n   - Kinetic friction $f_k = 6\\text{ N}$ from block A to the left (by Newton's third law).\n   - Table is smooth, so zero friction from the table.\n2. Net force on block B: $F_{\\text{net}} = 30 - 6 = 24\\text{ N}$.\n3. Acceleration of block B: $a_B = \\frac{24\\text{ N}}{4\\text{ kg}} = 6\\text{ m/s}^2$.",
+      "finalAnswer": "Option A: $6\\text{ m/s}^2$",
+      "whyOtherOptionsWrong": "Option B ($3\\text{ m/s}^2$) is the acceleration of block A. Option C ($7.5\\text{ m/s}^2$) is $30/4$ without friction. Option D is $30/6$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Blocks in contact",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-399",
+    "questionNumber": 399,
+    "question": "Two blocks of masses $m_1 = 3\\text{ kg}$ and $m_2 = 2\\text{ kg}$ are in contact on a rough horizontal surface with identical coefficient of kinetic friction $\\mu_k = 0.1$ for both blocks. A horizontal force $F = 20\\text{ N}$ pushes $m_1$ towards $m_2$. Taking $g = 10\\text{ m/s}^2$, what is the contact force between the blocks?",
+    "options": {
+      "A": "8 N",
+      "B": "6 N",
+      "C": "10 N",
+      "D": "4 N"
+    },
+    "optionsList": [
+      "8 N",
+      "6 N",
+      "10 N",
+      "4 N"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nWhen all blocks have the same coefficient of friction $\\mu_k$, the contact force between them is identical to that on a smooth floor: $N = \\frac{m_2}{m_1 + m_2} F$. Here $N = \\frac{2}{5} \\times 20 = 8\\text{ N}$.\n\n2. GIVEN:\n$m_1 = 3\\text{ kg}$, $m_2 = 2\\text{ kg}$, $\\mu_k = 0.1$, $F = 20\\text{ N}$, $g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$N = \\frac{m_2}{m_1 + m_2} F = \\frac{2}{5} \\times 20 = 8\\text{ N}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Total friction on the system: $f_{\\text{total}} = \\mu_k(m_1 + m_2)g = 0.1(5)(10) = 5\\text{ N}$.\n2. Net force accelerating the system: $F_{\\text{net}} = 20 - 5 = 15\\text{ N}$.\n3. Common acceleration: $a = \\frac{15}{5} = 3\\text{ m/s}^2$.\n4. FBD of block $m_2$: Forward normal contact force $N$, backward friction $f_2 = \\mu_k m_2 g = 0.1(2)(10) = 2\\text{ N}$.\n5. Equation of motion for $m_2$: $N - f_2 = m_2 a \\implies N - 2 = 2(3) = 6$.\n6. Therefore, $N = 6 + 2 = 8\\text{ N}$.\n\n5. FINAL ANSWER:\nOption A: 8 N\n\n6. QUICK TIP:\nGolden Theorem: When all contacting blocks share the SAME friction coefficient, the internal contact forces are completely INDEPENDENT of friction!",
+    "solutionStructured": {
+      "concept": "When all blocks have the same coefficient of friction $\\mu_k$, the contact force between them is identical to that on a smooth floor: $N = \\frac{m_2}{m_1 + m_2} F$. Here $N = \\frac{2}{5} \\times 20 = 8\\text{ N}$.",
+      "given": "$m_1 = 3\\text{ kg}$, $m_2 = 2\\text{ kg}$, $\\mu_k = 0.1$, $F = 20\\text{ N}$, $g = 10\\text{ m/s}^2$.",
+      "formula": "$N = \\frac{m_2}{m_1 + m_2} F = \\frac{2}{5} \\times 20 = 8\\text{ N}$.",
+      "stepByStep": "1. Total friction on the system: $f_{\\text{total}} = \\mu_k(m_1 + m_2)g = 0.1(5)(10) = 5\\text{ N}$.\n2. Net force accelerating the system: $F_{\\text{net}} = 20 - 5 = 15\\text{ N}$.\n3. Common acceleration: $a = \\frac{15}{5} = 3\\text{ m/s}^2$.\n4. FBD of block $m_2$: Forward normal contact force $N$, backward friction $f_2 = \\mu_k m_2 g = 0.1(2)(10) = 2\\text{ N}$.\n5. Equation of motion for $m_2$: $N - f_2 = m_2 a \\implies N - 2 = 2(3) = 6$.\n6. Therefore, $N = 6 + 2 = 8\\text{ N}$.",
+      "finalAnswer": "Option A: 8 N",
+      "whyOtherOptionsWrong": "Option B (6 N) is $m_2 a$. Option C (10 N) is $F/2$. Option D is $2 \\times 2$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Blocks in contact",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-400",
+    "questionNumber": 400,
+    "question": "Three blocks A, B, and C of masses $m_A = 1\\text{ kg}$, $m_B = 2\\text{ kg}$, and $m_C = 3\\text{ kg}$ are in contact on a smooth horizontal floor. A force $F_1 = 30\\text{ N}$ pushes from the left on A, and an opposing force $F_2 = 12\\text{ N}$ pushes from the right on C. What is the contact force between block A and block B?",
+    "options": {
+      "A": "27 N",
+      "B": "18 N",
+      "C": "15 N",
+      "D": "12 N"
+    },
+    "optionsList": [
+      "27 N",
+      "18 N",
+      "15 N",
+      "12 N"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTotal mass is $6\\text{ kg}$. Net force is $F_1 - F_2 = 30 - 12 = 18\\text{ N}$ to the right. Acceleration is $a = 18/6 = 3\\text{ m/s}^2$. For block A: $F_1 - N_{AB} = m_A a \\implies N_{AB} = F_1 - m_A a = 30 - 1(3) = 27\\text{ N}$.\n\n2. GIVEN:\n$m_A = 1\\text{ kg}, m_B = 2\\text{ kg}, m_C = 3\\text{ kg}$, $F_1 = 30\\text{ N}, F_2 = 12\\text{ N}$.\n\n3. FORMULA / PRINCIPLE:\n$a = \\frac{F_1 - F_2}{M}$; $N_{AB} = F_1 - m_A a$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Total mass $M = 1 + 2 + 3 = 6\\text{ kg}$.\n2. Net force to the right: $F_{\\text{net}} = 30 - 12 = 18\\text{ N}$.\n3. Common acceleration: $a = \\frac{18}{6} = 3\\text{ m/s}^2$ to the right.\n4. Write Newton's second law for block A:\n   $F_1 - N_{AB} = m_A a$.\n5. $30 - N_{AB} = 1 \\times 3 = 3\\text{ N}$.\n6. Therefore, $N_{AB} = 30 - 3 = 27\\text{ N}$.\n\n5. FINAL ANSWER:\nOption A: 27 N\n\n6. QUICK TIP:\nFBD check: On (B + C), $N_{AB} - F_2 = (m_B + m_C) a \\implies 27 - 12 = 5(3) = 15\\text{ N}$. Exact match!",
+    "solutionStructured": {
+      "concept": "Total mass is $6\\text{ kg}$. Net force is $F_1 - F_2 = 30 - 12 = 18\\text{ N}$ to the right. Acceleration is $a = 18/6 = 3\\text{ m/s}^2$. For block A: $F_1 - N_{AB} = m_A a \\implies N_{AB} = F_1 - m_A a = 30 - 1(3) = 27\\text{ N}$.",
+      "given": "$m_A = 1\\text{ kg}, m_B = 2\\text{ kg}, m_C = 3\\text{ kg}$, $F_1 = 30\\text{ N}, F_2 = 12\\text{ N}$.",
+      "formula": "$a = \\frac{F_1 - F_2}{M}$; $N_{AB} = F_1 - m_A a$.",
+      "stepByStep": "1. Total mass $M = 1 + 2 + 3 = 6\\text{ kg}$.\n2. Net force to the right: $F_{\\text{net}} = 30 - 12 = 18\\text{ N}$.\n3. Common acceleration: $a = \\frac{18}{6} = 3\\text{ m/s}^2$ to the right.\n4. Write Newton's second law for block A:\n   $F_1 - N_{AB} = m_A a$.\n5. $30 - N_{AB} = 1 \\times 3 = 3\\text{ N}$.\n6. Therefore, $N_{AB} = 30 - 3 = 27\\text{ N}$.",
+      "finalAnswer": "Option A: 27 N",
+      "whyOtherOptionsWrong": "Option B (18 N) is the net force $F_1 - F_2$. Option C is $(m_B+m_C)a$. Option D is $F_2$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Blocks in contact",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-401",
+    "questionNumber": 401,
+    "question": "In the previous setup ($m_A = 1\\text{ kg}, m_B = 2\\text{ kg}, m_C = 3\\text{ kg}, F_1 = 30\\text{ N}, F_2 = 12\\text{ N}$), what is the contact force between block B and block C?",
+    "options": {
+      "A": "21 N",
+      "B": "9 N",
+      "C": "12 N",
+      "D": "15 N"
+    },
+    "optionsList": [
+      "21 N",
+      "9 N",
+      "12 N",
+      "15 N"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor block C: Contact force $N_{BC}$ acts to the right, external force $F_2 = 12\\text{ N}$ acts to the left. $N_{BC} - F_2 = m_C a \\implies N_{BC} = F_2 + m_C a = 12 + 3(3) = 21\\text{ N}$.\n\n2. GIVEN:\n$m_C = 3\\text{ kg}, F_2 = 12\\text{ N}, a = 3\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$N_{BC} - F_2 = m_C a \\implies N_{BC} = F_2 + m_C a$.\n\n4. STEP-BY-STEP SOLUTION:\n1. FBD of block C:\n   - Contact force $N_{BC}$ from block B acting to the right.\n   - External force $F_2 = 12\\text{ N}$ acting to the left.\n   - Acceleration is $a = 3\\text{ m/s}^2$ to the right.\n2. Applying Newton's second law on C:\n   $N_{BC} - F_2 = m_C a$.\n3. $N_{BC} - 12 = 3 \\times 3 = 9\\text{ N}$.\n4. Therefore, $N_{BC} = 12 + 9 = 21\\text{ N}$.\n\n5. FINAL ANSWER:\nOption A: 21 N\n\n6. QUICK TIP:\nCheck on block B: $N_{AB} - N_{BC} = m_B a \\implies 27 - 21 = 6 = 2(3)$. Fully verified!",
+    "solutionStructured": {
+      "concept": "For block C: Contact force $N_{BC}$ acts to the right, external force $F_2 = 12\\text{ N}$ acts to the left. $N_{BC} - F_2 = m_C a \\implies N_{BC} = F_2 + m_C a = 12 + 3(3) = 21\\text{ N}$.",
+      "given": "$m_C = 3\\text{ kg}, F_2 = 12\\text{ N}, a = 3\\text{ m/s}^2$.",
+      "formula": "$N_{BC} - F_2 = m_C a \\implies N_{BC} = F_2 + m_C a$.",
+      "stepByStep": "1. FBD of block C:\n   - Contact force $N_{BC}$ from block B acting to the right.\n   - External force $F_2 = 12\\text{ N}$ acting to the left.\n   - Acceleration is $a = 3\\text{ m/s}^2$ to the right.\n2. Applying Newton's second law on C:\n   $N_{BC} - F_2 = m_C a$.\n3. $N_{BC} - 12 = 3 \\times 3 = 9\\text{ N}$.\n4. Therefore, $N_{BC} = 12 + 9 = 21\\text{ N}$.",
+      "finalAnswer": "Option A: 21 N",
+      "whyOtherOptionsWrong": "Option B (9 N) is $m_C a$. Option C is $F_2$. Option D is $(m_B+m_C)a$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Blocks in contact",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-402",
+    "questionNumber": 402,
+    "question": "A block of mass $m$ is placed on an inclined plane of wedge angle $\theta$. The wedge accelerates horizontally with acceleration $a$. If the block remains stationary relative to the wedge, what is the normal contact force exerted by the wedge on the block?",
+    "options": {
+      "A": "$m(g \\cos\\theta + a \\sin\\theta)$",
+      "B": "$mg \\cos\\theta$",
+      "C": "$ma \\cos\\theta$",
+      "D": "$m(g \\cos\\theta - a \\sin\\theta)$"
+    },
+    "optionsList": [
+      "$m(g \\cos\\theta + a \\sin\\theta)$",
+      "$mg \\cos\\theta$",
+      "$ma \\cos\\theta$",
+      "$m(g \\cos\\theta - a \\sin\\theta)$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn the accelerating frame of the wedge (accelerating horizontally to the left with $a$), the pseudo force $ma$ acts horizontally to the right. Its component perpendicular to the incline into the surface is $ma\\sin\\theta$. The gravity component perpendicular into the surface is $mg\\cos\\theta$. Normal force balances both: $N = mg\\cos\\theta + ma\\sin\\theta$.\n\n2. GIVEN:\nWedge accelerates with $a$, block stationary on incline $\\theta$.\n\n3. FORMULA / PRINCIPLE:\n$N = m(g\\cos\\theta + a\\sin\\theta)$.\n\n4. STEP-BY-STEP SOLUTION:\n1. In the frame of the wedge, the block experiences:\n   - Downward gravity $mg$, giving perpendicular component $mg\\cos\\theta$ into the wedge.\n   - Horizontal pseudo force $ma$, giving perpendicular component $ma\\sin\\theta$ into the wedge.\n2. Both components press the block into the inclined face.\n3. The normal reaction $N$ opposes both components.\n4. Equating perpendicular forces: $N = mg\\cos\\theta + ma\\sin\\theta = m(g\\cos\\theta + a\\sin\\theta)$.\n\n5. FINAL ANSWER:\nOption A: $m(g \\cos\\theta + a \\sin\\theta)$\n\n6. QUICK TIP:\nNormal force on accelerated wedge increases: $N = m(g\\cos\\theta + a\\sin\\theta)$. For $a = g\\tan\\theta$, this simplifies to $N = \\frac{mg}{\\cos\\theta}$!",
+    "solutionStructured": {
+      "concept": "In the accelerating frame of the wedge (accelerating horizontally to the left with $a$), the pseudo force $ma$ acts horizontally to the right. Its component perpendicular to the incline into the surface is $ma\\sin\\theta$. The gravity component perpendicular into the surface is $mg\\cos\\theta$. Normal force balances both: $N = mg\\cos\\theta + ma\\sin\\theta$.",
+      "given": "Wedge accelerates with $a$, block stationary on incline $\\theta$.",
+      "formula": "$N = m(g\\cos\\theta + a\\sin\\theta)$.",
+      "stepByStep": "1. In the frame of the wedge, the block experiences:\n   - Downward gravity $mg$, giving perpendicular component $mg\\cos\\theta$ into the wedge.\n   - Horizontal pseudo force $ma$, giving perpendicular component $ma\\sin\\theta$ into the wedge.\n2. Both components press the block into the inclined face.\n3. The normal reaction $N$ opposes both components.\n4. Equating perpendicular forces: $N = mg\\cos\\theta + ma\\sin\\theta = m(g\\cos\\theta + a\\sin\\theta)$.",
+      "finalAnswer": "Option A: $m(g \\cos\\theta + a \\sin\\theta)$",
+      "whyOtherOptionsWrong": "Option B assumes the wedge is stationary ($a = 0$). Option C only considers pseudo force. Option D subtracts instead of adding."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Blocks in contact",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-403",
+    "questionNumber": 403,
+    "question": "In the previous setup, if $a = g\\tan\\theta$ (the condition for zero friction required), the normal force $N$ simplifies to:",
+    "options": {
+      "A": "$\\frac{mg}{\\cos\\theta}$",
+      "B": "$mg \\cos\\theta$",
+      "C": "$mg \\sin\\theta$",
+      "D": "$mg$"
+    },
+    "optionsList": [
+      "$\\frac{mg}{\\cos\\theta}$",
+      "$mg \\cos\\theta$",
+      "$mg \\sin\\theta$",
+      "$mg$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSubstitute $a = g\\tan\\theta = g\\frac{\\sin\\theta}{\\cos\\theta}$ into $N = m(g\\cos\\theta + a\\sin\\theta)$: $N = mg\\left(\\cos\\theta + \\frac{\\sin^2\\theta}{\\cos\\theta}\\right) = mg\\left(\\frac{\\cos^2\\theta + \\sin^2\\theta}{\\cos\\theta}\\right) = \\frac{mg}{\\cos\\theta}$.\n\n2. GIVEN:\n$a = g\\tan\\theta$.\n\n3. FORMULA / PRINCIPLE:\n$N = mg\\left(\\cos\\theta + \\frac{\\sin^2\\theta}{\\cos\\theta}\\right) = \\frac{mg}{\\cos\\theta}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Start from $N = m(g\\cos\\theta + a\\sin\\theta)$.\n2. Substitute $a = g\\tan\\theta = g \\frac{\\sin\\theta}{\\cos\\theta}$:\n   $N = mg\\cos\\theta + m\\left(g\\frac{\\sin\\theta}{\\cos\\theta}\\right)\\sin\\theta = mg \\left(\\cos\\theta + \\frac{\\sin^2\\theta}{\\cos\\theta}\\right)$.\n3. Take common denominator $\\cos\\theta$:\n   $N = mg \\left(\\frac{\\cos^2\\theta + \\sin^2\\theta}{\\cos\\theta}\\right)$.\n4. Using identity $\\cos^2\\theta + \\sin^2\\theta = 1$:\n   $N = \\frac{mg}{\\cos\\theta}$.\n\n5. FINAL ANSWER:\nOption A: $\\frac{mg}{\\cos\\theta}$\n\n6. QUICK TIP:\nSuper Formula: On an accelerating smooth wedge at $a = g\\tan\\theta$, the normal force is $N = \\frac{mg}{\\cos\\theta} > mg$!",
+    "solutionStructured": {
+      "concept": "Substitute $a = g\\tan\\theta = g\\frac{\\sin\\theta}{\\cos\\theta}$ into $N = m(g\\cos\\theta + a\\sin\\theta)$: $N = mg\\left(\\cos\\theta + \\frac{\\sin^2\\theta}{\\cos\\theta}\\right) = mg\\left(\\frac{\\cos^2\\theta + \\sin^2\\theta}{\\cos\\theta}\\right) = \\frac{mg}{\\cos\\theta}$.",
+      "given": "$a = g\\tan\\theta$.",
+      "formula": "$N = mg\\left(\\cos\\theta + \\frac{\\sin^2\\theta}{\\cos\\theta}\\right) = \\frac{mg}{\\cos\\theta}$.",
+      "stepByStep": "1. Start from $N = m(g\\cos\\theta + a\\sin\\theta)$.\n2. Substitute $a = g\\tan\\theta = g \\frac{\\sin\\theta}{\\cos\\theta}$:\n   $N = mg\\cos\\theta + m\\left(g\\frac{\\sin\\theta}{\\cos\\theta}\\right)\\sin\\theta = mg \\left(\\cos\\theta + \\frac{\\sin^2\\theta}{\\cos\\theta}\\right)$.\n3. Take common denominator $\\cos\\theta$:\n   $N = mg \\left(\\frac{\\cos^2\\theta + \\sin^2\\theta}{\\cos\\theta}\\right)$.\n4. Using identity $\\cos^2\\theta + \\sin^2\\theta = 1$:\n   $N = \\frac{mg}{\\cos\\theta}$.",
+      "finalAnswer": "Option A: $\\frac{mg}{\\cos\\theta}$",
+      "whyOtherOptionsWrong": "Option B ($mg\\cos\\theta$) is for a fixed wedge. Option C is the parallel component. Option D is flat horizontal."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Blocks in contact",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-404",
+    "questionNumber": 404,
+    "question": "A block of mass $m_1 = 5\\text{ kg}$ is placed on top of block $m_2 = 10\\text{ kg}$, which rests on a rough horizontal floor with coefficient of friction $\\mu_2 = 0.1$. The coefficient of static friction between the two blocks is $\\mu_1 = 0.4$. What is the minimum horizontal force $F$ applied to block $m_2$ to start moving the combined system (take $g = 10\\text{ m/s}^2$)?",
+    "options": {
+      "A": "15 N",
+      "B": "20 N",
+      "C": "60 N",
+      "D": "10 N"
+    },
+    "optionsList": [
+      "15 N",
+      "20 N",
+      "60 N",
+      "10 N"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTo start moving the entire two-block system along the floor, the external force $F$ applied to $m_2$ must overcome the limiting friction between $m_2$ and the floor: $f_{\\text{floor, lim}} = \\mu_2 N_{\\text{floor}} = \\mu_2 (m_1 + m_2)g = 0.1(5 + 10)(10) = 15\\text{ N}$.\n\n2. GIVEN:\n$m_1 = 5\\text{ kg}, m_2 = 10\\text{ kg}$, floor $\\mu_2 = 0.1$, between blocks $\\mu_1 = 0.4$, $g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$N_{\\text{floor}} = (m_1 + m_2)g$; $F_{\\text{start}} = \\mu_2 (m_1 + m_2)g$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Total mass supported by the floor is $M = m_1 + m_2 = 5 + 10 = 15\\text{ kg}$.\n2. The normal reaction from the floor is $N_{\\text{floor}} = 15 \\times 10 = 150\\text{ N}$.\n3. The limiting static friction between the floor and block $m_2$ is:\n   $f_{\\text{floor, lim}} = \\mu_2 N_{\\text{floor}} = 0.1 \\times 150 = 15\\text{ N}$.\n4. For any $F > 15\\text{ N}$, the system starts moving.\n5. (Between the blocks, limiting friction is $0.4 \\times 50 = 20\\text{ N}$, which is higher than what is needed to accelerate $m_1$ initially, so they move together without relative slipping).\n6. Therefore, the minimum force to start motion is $15\\text{ N}$.\n\n5. FINAL ANSWER:\nOption A: 15 N\n\n6. QUICK TIP:\nAlways identify the boundary being overcome! To move along the floor, overcome floor friction $= \\mu_{\\text{floor}} M_{\\text{total}} g = 15\\text{ N}$.",
+    "solutionStructured": {
+      "concept": "To start moving the entire two-block system along the floor, the external force $F$ applied to $m_2$ must overcome the limiting friction between $m_2$ and the floor: $f_{\\text{floor, lim}} = \\mu_2 N_{\\text{floor}} = \\mu_2 (m_1 + m_2)g = 0.1(5 + 10)(10) = 15\\text{ N}$.",
+      "given": "$m_1 = 5\\text{ kg}, m_2 = 10\\text{ kg}$, floor $\\mu_2 = 0.1$, between blocks $\\mu_1 = 0.4$, $g = 10\\text{ m/s}^2$.",
+      "formula": "$N_{\\text{floor}} = (m_1 + m_2)g$; $F_{\\text{start}} = \\mu_2 (m_1 + m_2)g$.",
+      "stepByStep": "1. Total mass supported by the floor is $M = m_1 + m_2 = 5 + 10 = 15\\text{ kg}$.\n2. The normal reaction from the floor is $N_{\\text{floor}} = 15 \\times 10 = 150\\text{ N}$.\n3. The limiting static friction between the floor and block $m_2$ is:\n   $f_{\\text{floor, lim}} = \\mu_2 N_{\\text{floor}} = 0.1 \\times 150 = 15\\text{ N}$.\n4. For any $F > 15\\text{ N}$, the system starts moving.\n5. (Between the blocks, limiting friction is $0.4 \\times 50 = 20\\text{ N}$, which is higher than what is needed to accelerate $m_1$ initially, so they move together without relative slipping).\n6. Therefore, the minimum force to start motion is $15\\text{ N}$.",
+      "finalAnswer": "Option A: 15 N",
+      "whyOtherOptionsWrong": "Option B (20 N) is the limiting friction between the two blocks ($0.4 \\times 50$). Option C (60 N) is the force at which slipping between the blocks begins ($15 + (15 \\times 4)$). Option D is $10\\text{ N}$."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Blocks in contact",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-405",
+    "questionNumber": 405,
+    "question": "In the previous setup ($m_1 = 5\\text{ kg}$ on $m_2 = 10\\text{ kg}$, $\\mu_1 = 0.4$, $\\mu_2 = 0.1$), what is the maximum force $F$ applied to $m_2$ such that block $m_1$ does NOT slip on $m_2$?",
+    "options": {
+      "A": "75 N",
+      "B": "60 N",
+      "C": "45 N",
+      "D": "80 N"
+    },
+    "optionsList": [
+      "75 N",
+      "60 N",
+      "45 N",
+      "80 N"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nUpper block $m_1$ accelerates via friction from $m_2$: $a_{\\text{max}} = \\mu_1 g = 0.4 \\times 10 = 4\\text{ m/s}^2$. The net force on the whole system is $F - f_{\\text{floor}} = (m_1 + m_2) a$. Here $f_{\\text{floor}} = \\mu_2(m_1 + m_2)g = 0.1(15)(10) = 15\\text{ N}$. Setting $a = a_{\\text{max}} = 4\\text{ m/s}^2$: $F - 15 = 15 \\times 4 = 60 \\implies F_{\\text{max}} = 60 + 15 = 75\\text{ N}$.\n\n2. GIVEN:\n$m_1 = 5\\text{ kg}, m_2 = 10\\text{ kg}, \\mu_1 = 0.4, \\mu_2 = 0.1, g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$a_{\\text{max}} = \\mu_1 g$; $F_{\\text{max}} = f_{\\text{floor}} + (m_1 + m_2) a_{\\text{max}}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Maximum acceleration of upper block $m_1$ without slipping:\n   $a_{\\text{max}} = \\frac{\\mu_1 m_1 g}{m_1} = \\mu_1 g = 0.4 \\times 10 = 4\\text{ m/s}^2$.\n2. Kinetic friction opposing the entire system at the floor:\n   $f_{\\text{floor}} = \\mu_2(m_1 + m_2)g = 0.1 \\times 15 \\times 10 = 15\\text{ N}$.\n3. Equation of motion for the combined system moving together at $a_{\\text{max}}$:\n   $F_{\\text{max}} - f_{\\text{floor}} = (m_1 + m_2) a_{\\text{max}}$.\n4. $F_{\\text{max}} - 15 = 15 \\times 4 = 60\\text{ N}$.\n5. Therefore, $F_{\\text{max}} = 60 + 15 = 75\\text{ N}$.\n\n5. FINAL ANSWER:\nOption A: 75 N\n\n6. QUICK TIP:\nBlock-on-Block Master Formula with Floor Friction: $F_{\\text{max}} = \\mu_{\\text{floor}}(m_1 + m_2)g + (m_1 + m_2)\\mu_{\\text{contact}}g$!",
+    "solutionStructured": {
+      "concept": "Upper block $m_1$ accelerates via friction from $m_2$: $a_{\\text{max}} = \\mu_1 g = 0.4 \\times 10 = 4\\text{ m/s}^2$. The net force on the whole system is $F - f_{\\text{floor}} = (m_1 + m_2) a$. Here $f_{\\text{floor}} = \\mu_2(m_1 + m_2)g = 0.1(15)(10) = 15\\text{ N}$. Setting $a = a_{\\text{max}} = 4\\text{ m/s}^2$: $F - 15 = 15 \\times 4 = 60 \\implies F_{\\text{max}} = 60 + 15 = 75\\text{ N}$.",
+      "given": "$m_1 = 5\\text{ kg}, m_2 = 10\\text{ kg}, \\mu_1 = 0.4, \\mu_2 = 0.1, g = 10\\text{ m/s}^2$.",
+      "formula": "$a_{\\text{max}} = \\mu_1 g$; $F_{\\text{max}} = f_{\\text{floor}} + (m_1 + m_2) a_{\\text{max}}$.",
+      "stepByStep": "1. Maximum acceleration of upper block $m_1$ without slipping:\n   $a_{\\text{max}} = \\frac{\\mu_1 m_1 g}{m_1} = \\mu_1 g = 0.4 \\times 10 = 4\\text{ m/s}^2$.\n2. Kinetic friction opposing the entire system at the floor:\n   $f_{\\text{floor}} = \\mu_2(m_1 + m_2)g = 0.1 \\times 15 \\times 10 = 15\\text{ N}$.\n3. Equation of motion for the combined system moving together at $a_{\\text{max}}$:\n   $F_{\\text{max}} - f_{\\text{floor}} = (m_1 + m_2) a_{\\text{max}}$.\n4. $F_{\\text{max}} - 15 = 15 \\times 4 = 60\\text{ N}$.\n5. Therefore, $F_{\\text{max}} = 60 + 15 = 75\\text{ N}$.",
+      "finalAnswer": "Option A: 75 N",
+      "whyOtherOptionsWrong": "Option B (60 N) forgets to add floor friction ($15\\text{ N}$). Option C (45 N) uses incorrect mass. Option D is $80\\text{ N}$."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Blocks in contact",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-406",
+    "questionNumber": 406,
+    "question": "Two blocks A and B of masses $m_A = 2\\text{ kg}$ and $m_B = 3\\text{ kg}$ are connected by a spring and placed on a smooth table. A force $F = 10\\text{ N}$ acts on A to the right. At an instant when block A has acceleration $a_A = 2\\text{ m/s}^2$, what is the force exerted by the spring on block B?",
+    "options": {
+      "A": "6 N",
+      "B": "4 N",
+      "C": "10 N",
+      "D": "2 N"
+    },
+    "optionsList": [
+      "6 N",
+      "4 N",
+      "10 N",
+      "2 N"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nWrite Newton's second law for block A: $F - F_s = m_A a_A \\implies F_s = F - m_A a_A = 10 - 2(2) = 6\\text{ N}$. By Newton's third law, the spring exerts an equal force $F_s = 6\\text{ N}$ on block B.\n\n2. GIVEN:\n$m_A = 2\\text{ kg}, F = 10\\text{ N}, a_A = 2\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$F - F_s = m_A a_A \\implies F_s = F - m_A a_A$.\n\n4. STEP-BY-STEP SOLUTION:\n1. FBD of block A: External force $F = 10\\text{ N}$ acts to the right, spring force $F_s$ acts to the left.\n2. Equation of motion for A: $F - F_s = m_A a_A$.\n3. Substitute given values: $10 - F_s = 2\\text{ kg} \\times 2\\text{ m/s}^2 = 4\\text{ N}$.\n4. Therefore, the tension force in the spring is $F_s = 10 - 4 = 6\\text{ N}$.\n5. By Newton's third law, the spring pulls block B to the right with this same force $F_s = 6\\text{ N}$.\n\n5. FINAL ANSWER:\nOption A: 6 N\n\n6. QUICK TIP:\nInstantaneous spring force is found directly from the known body's FBD: $F_s = F - m_A a_A$!",
+    "solutionStructured": {
+      "concept": "Write Newton's second law for block A: $F - F_s = m_A a_A \\implies F_s = F - m_A a_A = 10 - 2(2) = 6\\text{ N}$. By Newton's third law, the spring exerts an equal force $F_s = 6\\text{ N}$ on block B.",
+      "given": "$m_A = 2\\text{ kg}, F = 10\\text{ N}, a_A = 2\\text{ m/s}^2$.",
+      "formula": "$F - F_s = m_A a_A \\implies F_s = F - m_A a_A$.",
+      "stepByStep": "1. FBD of block A: External force $F = 10\\text{ N}$ acts to the right, spring force $F_s$ acts to the left.\n2. Equation of motion for A: $F - F_s = m_A a_A$.\n3. Substitute given values: $10 - F_s = 2\\text{ kg} \\times 2\\text{ m/s}^2 = 4\\text{ N}$.\n4. Therefore, the tension force in the spring is $F_s = 10 - 4 = 6\\text{ N}$.\n5. By Newton's third law, the spring pulls block B to the right with this same force $F_s = 6\\text{ N}$.",
+      "finalAnswer": "Option A: 6 N",
+      "whyOtherOptionsWrong": "Option B (4 N) is $m_A a_A$. Option C is the total force $F$. Option D is $(10 - 6) / 2$."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Blocks in contact",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-407",
+    "questionNumber": 407,
+    "question": "In the previous spring-connected setup, what is the instantaneous acceleration of block B?",
+    "options": {
+      "A": "$2\\text{ m/s}^2$",
+      "B": "$3\\text{ m/s}^2$",
+      "C": "$1\\text{ m/s}^2$",
+      "D": "$4\\text{ m/s}^2$"
+    },
+    "optionsList": [
+      "$2\\text{ m/s}^2$",
+      "$3\\text{ m/s}^2$",
+      "$1\\text{ m/s}^2$",
+      "$4\\text{ m/s}^2$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe only horizontal force acting on block B is the spring force $F_s = 6\\text{ N}$. Newton's second law on B gives $a_B = F_s / m_B = 6 / 3 = 2\\text{ m/s}^2$.\n\n2. GIVEN:\n$F_s = 6\\text{ N}, m_B = 3\\text{ kg}$.\n\n3. FORMULA / PRINCIPLE:\n$a_B = \\frac{F_s}{m_B} = \\frac{6\\text{ N}}{3\\text{ kg}} = 2\\text{ m/s}^2$.\n\n4. STEP-BY-STEP SOLUTION:\n1. The spring force acting on block B is $F_s = 6\\text{ N}$.\n2. The table is frictionless, so no other horizontal force acts on B.\n3. Applying Newton's second law to block B:\n   $F_s = m_B a_B$.\n4. $6\\text{ N} = 3\\text{ kg} \\times a_B \\implies a_B = \\frac{6}{3} = 2\\text{ m/s}^2$.\n\n5. FINAL ANSWER:\nOption A: $2\\text{ m/s}^2$\n\n6. QUICK TIP:\nNotice that $a_{\\text{cm}} = \\frac{F}{m_A + m_B} = \\frac{10}{5} = 2\\text{ m/s}^2$. Since $a_A = 2\\text{ m/s}^2$ and $a_B = 2\\text{ m/s}^2$, $a_{\\text{cm}} = 2\\text{ m/s}^2$ is completely consistent!",
+    "solutionStructured": {
+      "concept": "The only horizontal force acting on block B is the spring force $F_s = 6\\text{ N}$. Newton's second law on B gives $a_B = F_s / m_B = 6 / 3 = 2\\text{ m/s}^2$.",
+      "given": "$F_s = 6\\text{ N}, m_B = 3\\text{ kg}$.",
+      "formula": "$a_B = \\frac{F_s}{m_B} = \\frac{6\\text{ N}}{3\\text{ kg}} = 2\\text{ m/s}^2$.",
+      "stepByStep": "1. The spring force acting on block B is $F_s = 6\\text{ N}$.\n2. The table is frictionless, so no other horizontal force acts on B.\n3. Applying Newton's second law to block B:\n   $F_s = m_B a_B$.\n4. $6\\text{ N} = 3\\text{ kg} \\times a_B \\implies a_B = \\frac{6}{3} = 2\\text{ m/s}^2$.",
+      "finalAnswer": "Option A: $2\\text{ m/s}^2$",
+      "whyOtherOptionsWrong": "Option B ($3\\text{ m/s}^2$) is $6/2$. Option C ($1\\text{ m/s}^2$) is $(10-6)/4$. Option D is $F/m_B$."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Blocks in contact",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-408",
+    "questionNumber": 408,
+    "question": "A block of mass $m$ is placed on a smooth inclined wedge of inclination $\\theta$. The wedge is given an acceleration $a$ towards the right (along the base). The relation between $a$ and $\\theta$ for the block to remain stationary on the wedge is:",
+    "options": {
+      "A": "$a = g \\tan\\theta$",
+      "B": "$a = \\frac{g}{\\tan\\theta}$",
+      "C": "$a = g \\sin\\theta$",
+      "D": "$a = g \\cos\\theta$"
+    },
+    "optionsList": [
+      "$a = g \\tan\\theta$",
+      "$a = \\frac{g}{\\tan\\theta}$",
+      "$a = g \\sin\\theta$",
+      "$a = g \\cos\\theta$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn the accelerating frame of the wedge (accelerating to the right with acceleration $a$), a pseudo force $m a$ acts horizontally to the left on the block. The component of the pseudo force up the inclined plane is $m a \\cos\\theta$. The component of gravity acting down the inclined plane is $m g \\sin\\theta$. For the block to remain stationary relative to the wedge, these two opposing components along the incline must balance: $m a \\cos\\theta = m g \\sin\\theta \\implies a = g \\tan\\theta$.\n\n2. GIVEN:\nBlock mass $m$, smooth wedge angle $\\theta$, horizontal acceleration $a$.\n\n3. FORMULA / PRINCIPLE:\n$m a \\cos\\theta = m g \\sin\\theta \\implies a = g \\tan\\theta$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Choose the non-inertial frame of reference of the accelerating wedge.\n2. In this frame, the wedge is stationary, but every object of mass $m$ experiences a fictitious (pseudo) force $\\vec{F}_p = -m\\vec{a}$, directed horizontally to the left.\n3. Resolve forces parallel to the inclined plane:\n   - Downward component of gravity: $F_{g\\parallel} = mg\\sin\\theta$ (down the plane).\n   - Upward component of pseudo force: $F_{p\\parallel} = ma\\cos\\theta$ (up the plane).\n4. For the block to remain stationary on the smooth incline without sliding:\n   $ma\\cos\\theta = mg\\sin\\theta$.\n5. Cancelling mass $m$ and dividing by $\\cos\\theta$:\n   $a = g \\frac{\\sin\\theta}{\\cos\\theta} = g\\tan\\theta$.\n\n5. FINAL ANSWER:\nOption A: $a = g \\tan\\theta$\n\n6. QUICK TIP:\nUniversal NEET Result: To keep a block stationary on a smooth wedge, the wedge must accelerate towards the incline base with $a = g\\tan\\theta$!",
+    "solutionStructured": {
+      "concept": "In the accelerating frame of the wedge (accelerating to the right with acceleration $a$), a pseudo force $m a$ acts horizontally to the left on the block. The component of the pseudo force up the inclined plane is $m a \\cos\\theta$. The component of gravity acting down the inclined plane is $m g \\sin\\theta$. For the block to remain stationary relative to the wedge, these two opposing components along the incline must balance: $m a \\cos\\theta = m g \\sin\\theta \\implies a = g \\tan\\theta$.",
+      "given": "Block mass $m$, smooth wedge angle $\\theta$, horizontal acceleration $a$.",
+      "formula": "$m a \\cos\\theta = m g \\sin\\theta \\implies a = g \\tan\\theta$.",
+      "stepByStep": "1. Choose the non-inertial frame of reference of the accelerating wedge.\n2. In this frame, the wedge is stationary, but every object of mass $m$ experiences a fictitious (pseudo) force $\\vec{F}_p = -m\\vec{a}$, directed horizontally to the left.\n3. Resolve forces parallel to the inclined plane:\n   - Downward component of gravity: $F_{g\\parallel} = mg\\sin\\theta$ (down the plane).\n   - Upward component of pseudo force: $F_{p\\parallel} = ma\\cos\\theta$ (up the plane).\n4. For the block to remain stationary on the smooth incline without sliding:\n   $ma\\cos\\theta = mg\\sin\\theta$.\n5. Cancelling mass $m$ and dividing by $\\cos\\theta$:\n   $a = g \\frac{\\sin\\theta}{\\cos\\theta} = g\\tan\\theta$.",
+      "finalAnswer": "Option A: $a = g \\tan\\theta$",
+      "whyOtherOptionsWrong": "Option B inverts the tangent. Option C and D use single trigonometric projections without accounting for the inclined axis."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Pseudo force and accelerating frames",
+    "source": "NEET UG 2018",
+    "isPYQ": true,
+    "pyqYear": 2018
+  },
+  {
+    "id": "lom-mcq-409",
+    "questionNumber": 409,
+    "question": "A block of mass $m$ is in contact with the vertical front face of a cart C. The coefficient of static friction between the block and the cart is $\\mu$. The minimum acceleration $a$ of the cart that will prevent the block from falling is:",
+    "options": {
+      "A": "$\\frac{g}{\\mu}$",
+      "B": "$\\mu g$",
+      "C": "$\\frac{g}{\\mu^2}$",
+      "D": "$\\frac{\\mu}{g}$"
+    },
+    "optionsList": [
+      "$\\frac{g}{\\mu}$",
+      "$\\mu g$",
+      "$\\frac{g}{\\mu^2}$",
+      "$\\frac{\\mu}{g}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn the accelerating frame of the cart, a pseudo force $m a$ presses the block against the vertical wall of the cart, providing a normal reaction $N = m a$. The maximum available upward static friction is $f_{\\text{lim}} = \\mu N = \\mu m a$. To prevent the block from falling under its downward weight $m g$, friction must satisfy $f_{\\text{lim}} \\ge m g \\implies \\mu m a \\ge m g \\implies a \\ge \\frac{g}{\\mu}$.\n\n2. GIVEN:\nBlock mass $m$, vertical wall, static friction coefficient $\\mu$, cart acceleration $a$.\n\n3. FORMULA / PRINCIPLE:\n$N = ma$; $f_{\\text{lim}} = \\mu ma \\ge mg \\implies a_{\\text{min}} = \\frac{g}{\\mu}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Consider the non-inertial frame of reference of the cart accelerating horizontally with $a$.\n2. A pseudo force $ma$ acts horizontally on the block, pressing it against the vertical wall.\n3. By horizontal equilibrium: $N = ma$.\n4. The maximum static friction directed vertically upward is $f_{\\text{lim}} = \\mu N = \\mu ma$.\n5. The downward force tending to cause slipping is the weight $mg$.\n6. To prevent falling: $f_{\\text{lim}} \\ge mg \\implies \\mu ma \\ge mg$.\n7. Dividing both sides by $\\mu m$ gives $a \\ge \\frac{g}{\\mu}$.\n8. Therefore, the minimum acceleration is $a_{\\text{min}} = \\frac{g}{\\mu}$.\n\n5. FINAL ANSWER:\nOption A: $\\frac{g}{\\mu}$\n\n6. QUICK TIP:\nBlock on vertical front of an accelerating cart: $a_{\\text{min}} = \\frac{g}{\\mu}$. High yield NEET question!",
+    "solutionStructured": {
+      "concept": "In the accelerating frame of the cart, a pseudo force $m a$ presses the block against the vertical wall of the cart, providing a normal reaction $N = m a$. The maximum available upward static friction is $f_{\\text{lim}} = \\mu N = \\mu m a$. To prevent the block from falling under its downward weight $m g$, friction must satisfy $f_{\\text{lim}} \\ge m g \\implies \\mu m a \\ge m g \\implies a \\ge \\frac{g}{\\mu}$.",
+      "given": "Block mass $m$, vertical wall, static friction coefficient $\\mu$, cart acceleration $a$.",
+      "formula": "$N = ma$; $f_{\\text{lim}} = \\mu ma \\ge mg \\implies a_{\\text{min}} = \\frac{g}{\\mu}$.",
+      "stepByStep": "1. Consider the non-inertial frame of reference of the cart accelerating horizontally with $a$.\n2. A pseudo force $ma$ acts horizontally on the block, pressing it against the vertical wall.\n3. By horizontal equilibrium: $N = ma$.\n4. The maximum static friction directed vertically upward is $f_{\\text{lim}} = \\mu N = \\mu ma$.\n5. The downward force tending to cause slipping is the weight $mg$.\n6. To prevent falling: $f_{\\text{lim}} \\ge mg \\implies \\mu ma \\ge mg$.\n7. Dividing both sides by $\\mu m$ gives $a \\ge \\frac{g}{\\mu}$.\n8. Therefore, the minimum acceleration is $a_{\\text{min}} = \\frac{g}{\\mu}$.",
+      "finalAnswer": "Option A: $\\frac{g}{\\mu}$",
+      "whyOtherOptionsWrong": "Option B ($\\mu g$) is the acceleration of a box on a flat bed truck, not a vertical wall. Option C and D have wrong dimensions."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Pseudo force and accelerating frames",
+    "source": "NEET UG 2021",
+    "isPYQ": true,
+    "pyqYear": 2021
+  },
+  {
+    "id": "lom-mcq-410",
+    "questionNumber": 410,
+    "question": "A pseudo force (fictitious force) must be introduced when applying Newton's second law in which type of reference frame?",
+    "options": {
+      "A": "A non-inertial (accelerating) reference frame",
+      "B": "An inertial reference frame moving with constant velocity",
+      "C": "A stationary reference frame fixed to distant stars",
+      "D": "Any reference frame whatsoever"
+    },
+    "optionsList": [
+      "A non-inertial (accelerating) reference frame",
+      "An inertial reference frame moving with constant velocity",
+      "A stationary reference frame fixed to distant stars",
+      "Any reference frame whatsoever"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nNewton's laws of motion are valid directly only in inertial reference frames. In a non-inertial (accelerating or rotating) frame, Newton's second law can only be applied by adding a fictitious pseudo force $\\vec{F}_p = -m\\vec{a}_0$ to account for the frame's acceleration $\\vec{a}_0$.\n\n2. GIVEN:\nApplication of Newton's laws in different frames.\n\n3. FORMULA / PRINCIPLE:\n$\\vec{F}_{\\text{net}} - m\\vec{a}_0 = m\\vec{a}_{\\text{rel}}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. An inertial frame is one that is stationary or moving with constant velocity (zero acceleration).\n2. In an inertial frame, real physical forces alone explain acceleration: $\\sum \\vec{F} = m\\vec{a}$.\n3. A non-inertial frame is an accelerating reference frame.\n4. Observers inside an accelerating frame observe apparent accelerations not caused by physical interactions.\n5. To use $\\vec{F} = m\\vec{a}$ in such frames, we must include a pseudo force $\\vec{F}_{\\text{pseudo}} = -m\\vec{a}_{\\text{frame}}$.\n\n5. FINAL ANSWER:\nOption A: A non-inertial (accelerating) reference frame\n\n6. QUICK TIP:\nPseudo forces are required ONLY in non-inertial (accelerating) frames, and they always act OPPOSITE to the frame's acceleration!",
+    "solutionStructured": {
+      "concept": "Newton's laws of motion are valid directly only in inertial reference frames. In a non-inertial (accelerating or rotating) frame, Newton's second law can only be applied by adding a fictitious pseudo force $\\vec{F}_p = -m\\vec{a}_0$ to account for the frame's acceleration $\\vec{a}_0$.",
+      "given": "Application of Newton's laws in different frames.",
+      "formula": "$\\vec{F}_{\\text{net}} - m\\vec{a}_0 = m\\vec{a}_{\\text{rel}}$.",
+      "stepByStep": "1. An inertial frame is one that is stationary or moving with constant velocity (zero acceleration).\n2. In an inertial frame, real physical forces alone explain acceleration: $\\sum \\vec{F} = m\\vec{a}$.\n3. A non-inertial frame is an accelerating reference frame.\n4. Observers inside an accelerating frame observe apparent accelerations not caused by physical interactions.\n5. To use $\\vec{F} = m\\vec{a}$ in such frames, we must include a pseudo force $\\vec{F}_{\\text{pseudo}} = -m\\vec{a}_{\\text{frame}}$.",
+      "finalAnswer": "Option A: A non-inertial (accelerating) reference frame",
+      "whyOtherOptionsWrong": "Options B and C describe inertial frames where pseudo forces are zero. Option D is incorrect because inertial frames need no pseudo forces."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Pseudo force and accelerating frames",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-411",
+    "questionNumber": 411,
+    "question": "The direction of the pseudo force acting on an object of mass $m$ observed from a reference frame accelerating with acceleration $\\vec{a}_0$ is:",
+    "options": {
+      "A": "Opposite to the direction of $\\vec{a}_0$",
+      "B": "In the same direction as $\\vec{a}_0$",
+      "C": "Perpendicular to $\\vec{a}_0$",
+      "D": "Always directed vertically downward"
+    },
+    "optionsList": [
+      "Opposite to the direction of $\\vec{a}_0$",
+      "In the same direction as $\\vec{a}_0$",
+      "Perpendicular to $\\vec{a}_0$",
+      "Always directed vertically downward"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe pseudo force is defined as $\\vec{F}_{\\text{pseudo}} = -m \\vec{a}_0$. The negative sign indicates that it always acts in the direction strictly opposite to the frame's acceleration vector.\n\n2. GIVEN:\nFrame acceleration $\\vec{a}_0$, mass $m$.\n\n3. FORMULA / PRINCIPLE:\n$\\vec{F}_{\\text{pseudo}} = -m \\vec{a}_0$.\n\n4. STEP-BY-STEP SOLUTION:\n1. By definition, the fictitious inertial force compensates for the acceleration of the observer's coordinate axes.\n2. In vector notation: $\\vec{F}_p = -m\\vec{a}_0$.\n3. The scalar mass $m$ is always positive.\n4. Therefore, the vector $\\vec{F}_p$ points in the exact opposite direction of $\\vec{a}_0$.\n\n5. FINAL ANSWER:\nOption A: Opposite to the direction of $\\vec{a}_0$\n\n6. QUICK TIP:\nIf a car accelerates forward, pseudo force is backward! If an elevator accelerates upward, pseudo force is downward.",
+    "solutionStructured": {
+      "concept": "The pseudo force is defined as $\\vec{F}_{\\text{pseudo}} = -m \\vec{a}_0$. The negative sign indicates that it always acts in the direction strictly opposite to the frame's acceleration vector.",
+      "given": "Frame acceleration $\\vec{a}_0$, mass $m$.",
+      "formula": "$\\vec{F}_{\\text{pseudo}} = -m \\vec{a}_0$.",
+      "stepByStep": "1. By definition, the fictitious inertial force compensates for the acceleration of the observer's coordinate axes.\n2. In vector notation: $\\vec{F}_p = -m\\vec{a}_0$.\n3. The scalar mass $m$ is always positive.\n4. Therefore, the vector $\\vec{F}_p$ points in the exact opposite direction of $\\vec{a}_0$.",
+      "finalAnswer": "Option A: Opposite to the direction of $\\vec{a}_0$",
+      "whyOtherOptionsWrong": "Option B forgets the negative sign. Option C and D describe incorrect geometries."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Pseudo force and accelerating frames",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-412",
+    "questionNumber": 412,
+    "question": "A simple pendulum of mass $m$ is suspended from the roof of a car accelerating horizontally with a constant acceleration $a$. In equilibrium relative to the car, the string makes an angle $\\theta$ with the vertical given by:",
+    "options": {
+      "A": "$\\tan\\theta = \\frac{a}{g}$",
+      "B": "$\\sin\\theta = \\frac{a}{g}$",
+      "C": "$\\cos\\theta = \\frac{a}{g}$",
+      "D": "$\\tan\\theta = \\frac{g}{a}$"
+    },
+    "optionsList": [
+      "$\\tan\\theta = \\frac{a}{g}$",
+      "$\\sin\\theta = \\frac{a}{g}$",
+      "$\\cos\\theta = \\frac{a}{g}$",
+      "$\\tan\\theta = \\frac{g}{a}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn the frame of the car, the pendulum bob experiences downward gravity $mg$ and backward pseudo force $ma$. Tension $T$ in the deflected string has vertical component $T\\cos\\theta = mg$ and horizontal component $T\\sin\\theta = ma$. Dividing gives $\\tan\\theta = a / g$.\n\n2. GIVEN:\nCar accelerating with $a$, pendulum deflected by $\\theta$ from vertical.\n\n3. FORMULA / PRINCIPLE:\n$T\\sin\\theta = ma$; $T\\cos\\theta = mg \\implies \\tan\\theta = \\frac{a}{g}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. In the car's frame, the bob is at rest at deflection angle $\\theta$.\n2. Forces on the bob:\n   - Downward weight $mg$.\n   - Backward horizontal pseudo force $ma$.\n   - Tension $T$ along the string at angle $\\theta$ to the vertical.\n3. Vertical equilibrium: $T\\cos\\theta = mg$.\n4. Horizontal equilibrium: $T\\sin\\theta = ma$.\n5. Dividing the two equations: $\\frac{T\\sin\\theta}{T\\cos\\theta} = \\frac{ma}{mg} \\implies \\tan\\theta = \\frac{a}{g}$.\n\n5. FINAL ANSWER:\nOption A: $\\tan\\theta = \\frac{a}{g}$\n\n6. QUICK TIP:\nDeflection of pendulum in accelerating vehicle: $\\tan\\theta = \\frac{a}{g}$. Apparent gravity is $g_{\\text{eff}} = \\sqrt{g^2 + a^2}$!",
+    "solutionStructured": {
+      "concept": "In the frame of the car, the pendulum bob experiences downward gravity $mg$ and backward pseudo force $ma$. Tension $T$ in the deflected string has vertical component $T\\cos\\theta = mg$ and horizontal component $T\\sin\\theta = ma$. Dividing gives $\\tan\\theta = a / g$.",
+      "given": "Car accelerating with $a$, pendulum deflected by $\\theta$ from vertical.",
+      "formula": "$T\\sin\\theta = ma$; $T\\cos\\theta = mg \\implies \\tan\\theta = \\frac{a}{g}$.",
+      "stepByStep": "1. In the car's frame, the bob is at rest at deflection angle $\\theta$.\n2. Forces on the bob:\n   - Downward weight $mg$.\n   - Backward horizontal pseudo force $ma$.\n   - Tension $T$ along the string at angle $\\theta$ to the vertical.\n3. Vertical equilibrium: $T\\cos\\theta = mg$.\n4. Horizontal equilibrium: $T\\sin\\theta = ma$.\n5. Dividing the two equations: $\\frac{T\\sin\\theta}{T\\cos\\theta} = \\frac{ma}{mg} \\implies \\tan\\theta = \\frac{a}{g}$.",
+      "finalAnswer": "Option A: $\\tan\\theta = \\frac{a}{g}$",
+      "whyOtherOptionsWrong": "Option B and C use incorrect trigonometric functions. Option D inverts the ratio."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Pseudo force and accelerating frames",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-413",
+    "questionNumber": 413,
+    "question": "In the previous accelerating car problem, what is the tension $T$ in the pendulum string?",
+    "options": {
+      "A": "$m \\sqrt{g^2 + a^2}$",
+      "B": "$m(g + a)$",
+      "C": "$m(g - a)$",
+      "D": "$m \\sqrt{g^2 - a^2}$"
+    },
+    "optionsList": [
+      "$m \\sqrt{g^2 + a^2}$",
+      "$m(g + a)$",
+      "$m(g - a)$",
+      "$m \\sqrt{g^2 - a^2}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe tension must balance the vector resultant of gravity $mg$ and pseudo force $ma$. Since they are perpendicular ($90^\\circ$), $T = \\sqrt{(mg)^2 + (ma)^2} = m\\sqrt{g^2 + a^2}$.\n\n2. GIVEN:\n$T\\cos\\theta = mg$, $T\\sin\\theta = ma$.\n\n3. FORMULA / PRINCIPLE:\n$T = \\sqrt{(T\\cos\\theta)^2 + (T\\sin\\theta)^2} = m\\sqrt{g^2 + a^2}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Square and add the equilibrium equations:\n   $(T\\sin\\theta)^2 + (T\\cos\\theta)^2 = (ma)^2 + (mg)^2$.\n2. $T^2(\\sin^2\\theta + \\cos^2\\theta) = m^2(a^2 + g^2)$.\n3. Since $\\sin^2\\theta + \\cos^2\\theta = 1$:\n   $T^2 = m^2(g^2 + a^2) \\implies T = m\\sqrt{g^2 + a^2}$.\n\n5. FINAL ANSWER:\nOption A: $m \\sqrt{g^2 + a^2}$\n\n6. QUICK TIP:\nTension in string of accelerating vehicle is $T = m g_{\\text{eff}} = m\\sqrt{g^2 + a^2}$!",
+    "solutionStructured": {
+      "concept": "The tension must balance the vector resultant of gravity $mg$ and pseudo force $ma$. Since they are perpendicular ($90^\\circ$), $T = \\sqrt{(mg)^2 + (ma)^2} = m\\sqrt{g^2 + a^2}$.",
+      "given": "$T\\cos\\theta = mg$, $T\\sin\\theta = ma$.",
+      "formula": "$T = \\sqrt{(T\\cos\\theta)^2 + (T\\sin\\theta)^2} = m\\sqrt{g^2 + a^2}$.",
+      "stepByStep": "1. Square and add the equilibrium equations:\n   $(T\\sin\\theta)^2 + (T\\cos\\theta)^2 = (ma)^2 + (mg)^2$.\n2. $T^2(\\sin^2\\theta + \\cos^2\\theta) = m^2(a^2 + g^2)$.\n3. Since $\\sin^2\\theta + \\cos^2\\theta = 1$:\n   $T^2 = m^2(g^2 + a^2) \\implies T = m\\sqrt{g^2 + a^2}$.",
+      "finalAnswer": "Option A: $m \\sqrt{g^2 + a^2}$",
+      "whyOtherOptionsWrong": "Option B simply adds scalar-wise. Option C subtracts. Option D has a minus sign inside the radical."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Pseudo force and accelerating frames",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-414",
+    "questionNumber": 414,
+    "question": "A plumb line hangs from the ceiling of a train compartment. If the train accelerates at $a = 5.77\\text{ m/s}^2$ (take $g = 10\\text{ m/s}^2$), what is the angle of deflection of the plumb line with the vertical?",
+    "options": {
+      "A": "$30^\\circ$",
+      "B": "$45^\\circ$",
+      "C": "$60^\\circ$",
+      "D": "$15^\\circ$"
+    },
+    "optionsList": [
+      "$30^\\circ$",
+      "$45^\\circ$",
+      "$60^\\circ$",
+      "$15^\\circ$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nUse $\\tan\\theta = a / g$. For $a = 5.77\\text{ m/s}^2$ and $g = 10\\text{ m/s}^2$, $\\tan\\theta = 0.577 = \\frac{1}{\\sqrt{3}}$, which corresponds to $\\theta = 30^\\circ$.\n\n2. GIVEN:\n$a = 5.77\\text{ m/s}^2$, $g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$\\tan\\theta = \\frac{a}{g} = \\frac{5.77}{10} = 0.577 = \\frac{1}{\\sqrt{3}} \\implies \\theta = 30^\\circ$.\n\n4. STEP-BY-STEP SOLUTION:\n1. The deflection angle satisfies $\\tan\\theta = \\frac{a}{g}$.\n2. Substitute values: $\\tan\\theta = \\frac{5.77}{10} = 0.577$.\n3. Since $\\frac{1}{\\sqrt{3}} = \\frac{1}{1.732} \\approx 0.5773$, we have $\\tan\\theta = \\frac{1}{\\sqrt{3}}$.\n4. Therefore, $\\theta = 30^\\circ$.\n\n5. FINAL ANSWER:\nOption A: $30^\\circ$\n\n6. QUICK TIP:\n$\\tan 30^\\circ = 1/\\sqrt{3} \\approx 0.577$; $\\tan 45^\\circ = 1$; $\\tan 60^\\circ = \\sqrt{3} \\approx 1.732$. Recognizable NEET values!",
+    "solutionStructured": {
+      "concept": "Use $\\tan\\theta = a / g$. For $a = 5.77\\text{ m/s}^2$ and $g = 10\\text{ m/s}^2$, $\\tan\\theta = 0.577 = \\frac{1}{\\sqrt{3}}$, which corresponds to $\\theta = 30^\\circ$.",
+      "given": "$a = 5.77\\text{ m/s}^2$, $g = 10\\text{ m/s}^2$.",
+      "formula": "$\\tan\\theta = \\frac{a}{g} = \\frac{5.77}{10} = 0.577 = \\frac{1}{\\sqrt{3}} \\implies \\theta = 30^\\circ$.",
+      "stepByStep": "1. The deflection angle satisfies $\\tan\\theta = \\frac{a}{g}$.\n2. Substitute values: $\\tan\\theta = \\frac{5.77}{10} = 0.577$.\n3. Since $\\frac{1}{\\sqrt{3}} = \\frac{1}{1.732} \\approx 0.5773$, we have $\\tan\\theta = \\frac{1}{\\sqrt{3}}$.\n4. Therefore, $\\theta = 30^\\circ$.",
+      "finalAnswer": "Option A: $30^\\circ$",
+      "whyOtherOptionsWrong": "Option B ($45^\\circ$) requires $a = g = 10\\text{ m/s}^2$. Option C ($60^\\circ$) requires $a = 17.32\\text{ m/s}^2$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Pseudo force and accelerating frames",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-415",
+    "questionNumber": 415,
+    "question": "A container filled with water accelerates horizontally with acceleration $a$ to the right. The angle $\\theta$ that the free surface of the water makes with the horizontal is given by:",
+    "options": {
+      "A": "$\\tan\\theta = \\frac{a}{g}$, with the surface tilted higher at the rear",
+      "B": "$\\tan\\theta = \\frac{a}{g}$, with the surface tilted higher at the front",
+      "C": "$\\tan\\theta = \\frac{g}{a}$, with the surface tilted higher at the rear",
+      "D": "The water surface remains horizontal"
+    },
+    "optionsList": [
+      "$\\tan\\theta = \\frac{a}{g}$, with the surface tilted higher at the rear",
+      "$\\tan\\theta = \\frac{a}{g}$, with the surface tilted higher at the front",
+      "$\\tan\\theta = \\frac{g}{a}$, with the surface tilted higher at the rear",
+      "The water surface remains horizontal"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn the accelerating frame, effective gravity $\\vec{g}_{\\text{eff}} = \\vec{g} - \\vec{a}$ is tilted backward at angle $\\theta$ to the vertical with $\\tan\\theta = a/g$. The free surface of any stationary fluid is always perpendicular to $\\vec{g}_{\\text{eff}}$, so it tilts up at the back by angle $\\theta = \\tan^{-1}(a/g)$ to the horizontal.\n\n2. GIVEN:\nWater container accelerating horizontally to the right.\n\n3. FORMULA / PRINCIPLE:\n$\\tan\\theta = \\frac{a}{g}$, tilted upwards at the rear.\n\n4. STEP-BY-STEP SOLUTION:\n1. In the frame of the accelerating container, water experiences downward gravity $\\vec{g}$ and backward pseudo acceleration $-\\vec{a}$.\n2. The net effective gravity vector is $\\vec{g}_{\\text{eff}} = \\vec{g} - \\vec{a}$, pointing downward and backward.\n3. The free liquid surface must align perpendicular to $\\vec{g}_{\\text{eff}}$ so that no tangential force acts on surface molecules.\n4. Therefore, the liquid surface tilts so it is perpendicular to $\\vec{g}_{\\text{eff}}$.\n5. From geometry, the angle of the surface with the horizontal is $\\theta = \\tan^{-1}\\left(\\frac{a}{g}\\right)$, rising higher at the rear end of the container.\n\n5. FINAL ANSWER:\nOption A: $\\tan\\theta = \\frac{a}{g}$, with the surface tilted higher at the rear\n\n6. QUICK TIP:\nAccelerating fluid surface tilts up at the rear with slope $\\tan\\theta = \\frac{a}{g}$! Always perpendicular to $g_{\\text{eff}}$.",
+    "solutionStructured": {
+      "concept": "In the accelerating frame, effective gravity $\\vec{g}_{\\text{eff}} = \\vec{g} - \\vec{a}$ is tilted backward at angle $\\theta$ to the vertical with $\\tan\\theta = a/g$. The free surface of any stationary fluid is always perpendicular to $\\vec{g}_{\\text{eff}}$, so it tilts up at the back by angle $\\theta = \\tan^{-1}(a/g)$ to the horizontal.",
+      "given": "Water container accelerating horizontally to the right.",
+      "formula": "$\\tan\\theta = \\frac{a}{g}$, tilted upwards at the rear.",
+      "stepByStep": "1. In the frame of the accelerating container, water experiences downward gravity $\\vec{g}$ and backward pseudo acceleration $-\\vec{a}$.\n2. The net effective gravity vector is $\\vec{g}_{\\text{eff}} = \\vec{g} - \\vec{a}$, pointing downward and backward.\n3. The free liquid surface must align perpendicular to $\\vec{g}_{\\text{eff}}$ so that no tangential force acts on surface molecules.\n4. Therefore, the liquid surface tilts so it is perpendicular to $\\vec{g}_{\\text{eff}}$.\n5. From geometry, the angle of the surface with the horizontal is $\\theta = \\tan^{-1}\\left(\\frac{a}{g}\\right)$, rising higher at the rear end of the container.",
+      "finalAnswer": "Option A: $\\tan\\theta = \\frac{a}{g}$, with the surface tilted higher at the rear",
+      "whyOtherOptionsWrong": "Option B tilts the wrong way. Option C inverts the ratio. Option D ignores frame acceleration."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Pseudo force and accelerating frames",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-416",
+    "questionNumber": 416,
+    "question": "A block of mass $m$ is suspended inside an elevator by a vertical string. If the elevator accelerates vertically downwards with an acceleration $a < g$, the tension in the string is:",
+    "options": {
+      "A": "$m(g - a)$",
+      "B": "$m(g + a)$",
+      "C": "$mg$",
+      "D": "$ma$"
+    },
+    "optionsList": [
+      "$m(g - a)$",
+      "$m(g + a)$",
+      "$mg$",
+      "$ma$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nWhen an elevator accelerates downwards, the pseudo force on the block points vertically upward with magnitude $ma$. Equilibrium in the elevator frame gives $T + ma = mg \\implies T = m(g - a)$.\n\n2. GIVEN:\nElevator accelerating downwards with $a < g$.\n\n3. FORMULA / PRINCIPLE:\n$T = m(g - a)$.\n\n4. STEP-BY-STEP SOLUTION:\n1. In the elevator's downward-accelerating frame, every mass experiences an upward pseudo force $F_p = ma$.\n2. Downward real force: gravity $mg$.\n3. Upward forces: tension $T$ and pseudo force $ma$.\n4. For equilibrium in the elevator frame: $T + ma = mg$.\n5. Solving for tension: $T = m(g - a)$.\n\n5. FINAL ANSWER:\nOption A: $m(g - a)$\n\n6. QUICK TIP:\nElevator going down with acceleration $a$: $T = m(g - a)$. Apparent weight decreases!",
+    "solutionStructured": {
+      "concept": "When an elevator accelerates downwards, the pseudo force on the block points vertically upward with magnitude $ma$. Equilibrium in the elevator frame gives $T + ma = mg \\implies T = m(g - a)$.",
+      "given": "Elevator accelerating downwards with $a < g$.",
+      "formula": "$T = m(g - a)$.",
+      "stepByStep": "1. In the elevator's downward-accelerating frame, every mass experiences an upward pseudo force $F_p = ma$.\n2. Downward real force: gravity $mg$.\n3. Upward forces: tension $T$ and pseudo force $ma$.\n4. For equilibrium in the elevator frame: $T + ma = mg$.\n5. Solving for tension: $T = m(g - a)$.",
+      "finalAnswer": "Option A: $m(g - a)$",
+      "whyOtherOptionsWrong": "Option B ($m(g+a)$) is for upward acceleration. Option C is for zero acceleration. Option D ignores gravity."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Pseudo force and accelerating frames",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-417",
+    "questionNumber": 417,
+    "question": "In the previous elevator problem, if the cable breaks so the elevator falls freely ($a = g$), what is the tension in the string?",
+    "options": {
+      "A": "Zero",
+      "B": "$mg$",
+      "C": "$2mg$",
+      "D": "Infinite"
+    },
+    "optionsList": [
+      "Zero",
+      "$mg$",
+      "$2mg$",
+      "Infinite"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDuring free fall, $a = g$. The tension becomes $T = m(g - g) = 0$. The block is in a state of apparent weightlessness.\n\n2. GIVEN:\nFree fall $a = g$.\n\n3. FORMULA / PRINCIPLE:\n$T = m(g - a) = m(g - g) = 0$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Substitute $a = g$ into the apparent weight formula: $T = m(g - a)$.\n2. $T = m(g - g) = 0$.\n3. Both the elevator and the block fall at identical accelerations ($g$).\n4. The string does not stretch and exerts zero tension.\n\n5. FINAL ANSWER:\nOption A: Zero\n\n6. QUICK TIP:\nFree fall $\\implies$ Weightlessness $\\implies T = 0$!",
+    "solutionStructured": {
+      "concept": "During free fall, $a = g$. The tension becomes $T = m(g - g) = 0$. The block is in a state of apparent weightlessness.",
+      "given": "Free fall $a = g$.",
+      "formula": "$T = m(g - a) = m(g - g) = 0$.",
+      "stepByStep": "1. Substitute $a = g$ into the apparent weight formula: $T = m(g - a)$.\n2. $T = m(g - g) = 0$.\n3. Both the elevator and the block fall at identical accelerations ($g$).\n4. The string does not stretch and exerts zero tension.",
+      "finalAnswer": "Option A: Zero",
+      "whyOtherOptionsWrong": "Options B, C, and D are incorrect."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Pseudo force and accelerating frames",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-418",
+    "questionNumber": 418,
+    "question": "A ball of mass $m$ is placed on the smooth horizontal floor of an elevator. If the elevator accelerates horizontally with acceleration $a$, what is the acceleration of the ball relative to the elevator?",
+    "options": {
+      "A": "$a$ in the backward direction",
+      "B": "$a$ in the forward direction",
+      "C": "Zero",
+      "D": "$\\sqrt{a^2 + g^2}$"
+    },
+    "optionsList": [
+      "$a$ in the backward direction",
+      "$a$ in the forward direction",
+      "Zero",
+      "$\\sqrt{a^2 + g^2}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn the ground frame, the floor is perfectly smooth, so zero horizontal force acts on the ball. The ball remains stationary relative to the ground. Because the elevator moves forward with acceleration $a$, an observer inside the elevator sees the ball accelerating backwards with acceleration $a$ (due to pseudo force $ma$).\n\n2. GIVEN:\nSmooth floor, elevator accelerates horizontally with $a$.\n\n3. FORMULA / PRINCIPLE:\n$F_{\\text{pseudo}} = ma$ (backward); $a_{\\text{rel}} = a$ backward.\n\n4. STEP-BY-STEP SOLUTION:\n1. In the inertial ground frame, no horizontal force acts on the ball (floor is frictionless).\n2. By Newton's first law, the ball stays at rest relative to the ground ($a_{\\text{ground}} = 0$).\n3. The elevator moves forward with acceleration $a$.\n4. Relative acceleration of ball with respect to elevator:\n   $\\vec{a}_{\\text{rel}} = \\vec{a}_{\\text{ball}} - \\vec{a}_{\\text{elevator}} = 0 - a = -a$ (backward).\n5. From the non-inertial frame perspective, the pseudo force $-ma$ produces backward acceleration $a$.\n\n5. FINAL ANSWER:\nOption A: $a$ in the backward direction\n\n6. QUICK TIP:\nFrictionless floor means the ball stays put in the ground frame, so it slides backwards relative to the accelerating car with $a$!",
+    "solutionStructured": {
+      "concept": "In the ground frame, the floor is perfectly smooth, so zero horizontal force acts on the ball. The ball remains stationary relative to the ground. Because the elevator moves forward with acceleration $a$, an observer inside the elevator sees the ball accelerating backwards with acceleration $a$ (due to pseudo force $ma$).",
+      "given": "Smooth floor, elevator accelerates horizontally with $a$.",
+      "formula": "$F_{\\text{pseudo}} = ma$ (backward); $a_{\\text{rel}} = a$ backward.",
+      "stepByStep": "1. In the inertial ground frame, no horizontal force acts on the ball (floor is frictionless).\n2. By Newton's first law, the ball stays at rest relative to the ground ($a_{\\text{ground}} = 0$).\n3. The elevator moves forward with acceleration $a$.\n4. Relative acceleration of ball with respect to elevator:\n   $\\vec{a}_{\\text{rel}} = \\vec{a}_{\\text{ball}} - \\vec{a}_{\\text{elevator}} = 0 - a = -a$ (backward).\n5. From the non-inertial frame perspective, the pseudo force $-ma$ produces backward acceleration $a$.",
+      "finalAnswer": "Option A: $a$ in the backward direction",
+      "whyOtherOptionsWrong": "Option B moves in the wrong direction. Option C would require friction. Option D includes vertical gravity."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Pseudo force and accelerating frames",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-419",
+    "questionNumber": 419,
+    "question": "A block of mass $m$ is placed on a rough wedge of inclination $\\theta$ which is accelerating horizontally with acceleration $a$. If the coefficient of static friction is $\\mu_s$, what is the condition for the block to not slide UP the incline?",
+    "options": {
+      "A": "$a \\le g \\frac{\\sin\\theta + \\mu_s\\cos\\theta}{\\cos\\theta - \\mu_s\\sin\\theta}$",
+      "B": "$a \\ge g \\frac{\\sin\\theta - \\mu_s\\cos\\theta}{\\cos\\theta + \\mu_s\\sin\\theta}$",
+      "C": "$a \\le g \\tan\\theta$",
+      "D": "$a \\ge g \\tan\\theta$"
+    },
+    "optionsList": [
+      "$a \\le g \\frac{\\sin\\theta + \\mu_s\\cos\\theta}{\\cos\\theta - \\mu_s\\sin\\theta}$",
+      "$a \\ge g \\frac{\\sin\\theta - \\mu_s\\cos\\theta}{\\cos\\theta + \\mu_s\\sin\\theta}$",
+      "$a \\le g \\tan\\theta$",
+      "$a \\ge g \\tan\\theta$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nWhen the wedge accelerates with high acceleration $a$, the pseudo force $ma\\cos\\theta$ pushes the block UP the incline. Friction opposes this upward tendency and acts DOWN the incline: $f_{\\text{lim}} = \\mu_s N = \\mu_s(mg\\cos\\theta + ma\\sin\\theta)$. At the threshold of sliding up: $ma\\cos\\theta = mg\\sin\\theta + \\mu_s(mg\\cos\\theta + ma\\sin\\theta) \\implies a(\\cos\\theta - \\mu_s\\sin\\theta) = g(\\sin\\theta + \\mu_s\\cos\\theta) \\implies a_{\\text{max}} = g \\frac{\\sin\\theta + \\mu_s\\cos\\theta}{\\cos\\theta - \\mu_s\\sin\\theta}$.\n\n2. GIVEN:\nRough wedge $\\theta$, static friction $\\mu_s$, horizontal acceleration $a$.\n\n3. FORMULA / PRINCIPLE:\n$a_{\\text{max}} = g \\frac{\\sin\\theta + \\mu_s\\cos\\theta}{\\cos\\theta - \\mu_s\\sin\\theta} = g \\tan(\\theta + \\lambda)$.\n\n4. STEP-BY-STEP SOLUTION:\n1. In the frame of the accelerating wedge, forces along the incline pointing UP: $ma\\cos\\theta$.\n2. Forces along the incline pointing DOWN: gravity component $mg\\sin\\theta$ and limiting friction $f_{\\text{lim}}$.\n3. Normal force: $N = mg\\cos\\theta + ma\\sin\\theta$.\n4. Limiting friction acting down the plane: $f_{\\text{lim}} = \\mu_s N = \\mu_s(mg\\cos\\theta + ma\\sin\\theta)$.\n5. Condition to prevent sliding up: $ma\\cos\\theta \\le mg\\sin\\theta + \\mu_s(mg\\cos\\theta + ma\\sin\\theta)$.\n6. Grouping terms with $a$: $ma(\\cos\\theta - \\mu_s\\sin\\theta) \\le mg(\\sin\\theta + \\mu_s\\cos\\theta)$.\n7. Dividing by $m(\\cos\\theta - \\mu_s\\sin\\theta)$:\n   $a \\le g \\frac{\\sin\\theta + \\mu_s\\cos\\theta}{\\cos\\theta - \\mu_s\\sin\\theta}$.\n\n5. FINAL ANSWER:\nOption A: $a \\le g \\frac{\\sin\\theta + \\mu_s\\cos\\theta}{\\cos\\theta - \\mu_s\\sin\\theta}$\n\n6. QUICK TIP:\nRange of safe acceleration on a rough wedge: $g\\tan(\\theta - \\lambda) \\le a \\le g\\tan(\\theta + \\lambda)$ where $\\lambda$ is the angle of friction!",
+    "solutionStructured": {
+      "concept": "When the wedge accelerates with high acceleration $a$, the pseudo force $ma\\cos\\theta$ pushes the block UP the incline. Friction opposes this upward tendency and acts DOWN the incline: $f_{\\text{lim}} = \\mu_s N = \\mu_s(mg\\cos\\theta + ma\\sin\\theta)$. At the threshold of sliding up: $ma\\cos\\theta = mg\\sin\\theta + \\mu_s(mg\\cos\\theta + ma\\sin\\theta) \\implies a(\\cos\\theta - \\mu_s\\sin\\theta) = g(\\sin\\theta + \\mu_s\\cos\\theta) \\implies a_{\\text{max}} = g \\frac{\\sin\\theta + \\mu_s\\cos\\theta}{\\cos\\theta - \\mu_s\\sin\\theta}$.",
+      "given": "Rough wedge $\\theta$, static friction $\\mu_s$, horizontal acceleration $a$.",
+      "formula": "$a_{\\text{max}} = g \\frac{\\sin\\theta + \\mu_s\\cos\\theta}{\\cos\\theta - \\mu_s\\sin\\theta} = g \\tan(\\theta + \\lambda)$.",
+      "stepByStep": "1. In the frame of the accelerating wedge, forces along the incline pointing UP: $ma\\cos\\theta$.\n2. Forces along the incline pointing DOWN: gravity component $mg\\sin\\theta$ and limiting friction $f_{\\text{lim}}$.\n3. Normal force: $N = mg\\cos\\theta + ma\\sin\\theta$.\n4. Limiting friction acting down the plane: $f_{\\text{lim}} = \\mu_s N = \\mu_s(mg\\cos\\theta + ma\\sin\\theta)$.\n5. Condition to prevent sliding up: $ma\\cos\\theta \\le mg\\sin\\theta + \\mu_s(mg\\cos\\theta + ma\\sin\\theta)$.\n6. Grouping terms with $a$: $ma(\\cos\\theta - \\mu_s\\sin\\theta) \\le mg(\\sin\\theta + \\mu_s\\cos\\theta)$.\n7. Dividing by $m(\\cos\\theta - \\mu_s\\sin\\theta)$:\n   $a \\le g \\frac{\\sin\\theta + \\mu_s\\cos\\theta}{\\cos\\theta - \\mu_s\\sin\\theta}$.",
+      "finalAnswer": "Option A: $a \\le g \\frac{\\sin\\theta + \\mu_s\\cos\\theta}{\\cos\\theta - \\mu_s\\sin\\theta}$",
+      "whyOtherOptionsWrong": "Option B is the condition to not slide DOWN. Option C and D apply only to smooth frictionless wedges."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Pseudo force and accelerating frames",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-420",
+    "questionNumber": 420,
+    "question": "In the previous setup, what is the minimum acceleration $a_{\\text{min}}$ of the wedge required to prevent the block from sliding DOWN the incline (assuming $\\tan\\theta > \\mu_s$)?",
+    "options": {
+      "A": "$g \\frac{\\sin\\theta - \\mu_s\\cos\\theta}{\\cos\\theta + \\mu_s\\sin\\theta}$",
+      "B": "$g \\frac{\\sin\\theta + \\mu_s\\cos\\theta}{\\cos\\theta - \\mu_s\\sin\\theta}$",
+      "C": "$g \\tan\\theta$",
+      "D": "$g (\\sin\\theta - \\mu_s\\cos\\theta)$"
+    },
+    "optionsList": [
+      "$g \\frac{\\sin\\theta - \\mu_s\\cos\\theta}{\\cos\\theta + \\mu_s\\sin\\theta}$",
+      "$g \\frac{\\sin\\theta + \\mu_s\\cos\\theta}{\\cos\\theta - \\mu_s\\sin\\theta}$",
+      "$g \\tan\\theta$",
+      "$g (\\sin\\theta - \\mu_s\\cos\\theta)$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTo prevent downward sliding, friction acts UP the incline. Equilibrium gives $ma\\cos\\theta + \\mu_s N = mg\\sin\\theta \\implies a_{\\text{min}} = g \\frac{\\sin\\theta - \\mu_s\\cos\\theta}{\\cos\\theta + \\mu_s\\sin\\theta} = g\\tan(\\theta - \\lambda)$.\n\n2. GIVEN:\nRough wedge $\\theta > \\theta_r$, impending downward slide.\n\n3. FORMULA / PRINCIPLE:\n$a_{\\text{min}} = g \\frac{\\sin\\theta - \\mu_s\\cos\\theta}{\\cos\\theta + \\mu_s\\sin\\theta} = g \\tan(\\theta - \\lambda)$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Tendency of motion is DOWN the incline, so static friction acts UP the incline.\n2. Total upward force along incline: $ma\\cos\\theta + f_{\\text{lim}}$.\n3. Downward force along incline: $mg\\sin\\theta$.\n4. Limiting friction: $f_{\\text{lim}} = \\mu_s N = \\mu_s(mg\\cos\\theta + ma\\sin\\theta)$.\n5. Condition for equilibrium: $ma\\cos\\theta + \\mu_s(mg\\cos\\theta + ma\\sin\\theta) \\ge mg\\sin\\theta$.\n6. $ma(\\cos\\theta + \\mu_s\\sin\\theta) \\ge mg(\\sin\\theta - \\mu_s\\cos\\theta)$.\n7. Solving for $a$: $a_{\\text{min}} = g \\frac{\\sin\\theta - \\mu_s\\cos\\theta}{\\cos\\theta + \\mu_s\\sin\\theta}$.\n\n5. FINAL ANSWER:\nOption A: $g \\frac{\\sin\\theta - \\mu_s\\cos\\theta}{\\cos\\theta + \\mu_s\\sin\\theta}$\n\n6. QUICK TIP:\nMemorize the twin limits: $a_{\\text{min}} = g\\tan(\\theta - \\lambda)$ and $a_{\\text{max}} = g\\tan(\\theta + \\lambda)$!",
+    "solutionStructured": {
+      "concept": "To prevent downward sliding, friction acts UP the incline. Equilibrium gives $ma\\cos\\theta + \\mu_s N = mg\\sin\\theta \\implies a_{\\text{min}} = g \\frac{\\sin\\theta - \\mu_s\\cos\\theta}{\\cos\\theta + \\mu_s\\sin\\theta} = g\\tan(\\theta - \\lambda)$.",
+      "given": "Rough wedge $\\theta > \\theta_r$, impending downward slide.",
+      "formula": "$a_{\\text{min}} = g \\frac{\\sin\\theta - \\mu_s\\cos\\theta}{\\cos\\theta + \\mu_s\\sin\\theta} = g \\tan(\\theta - \\lambda)$.",
+      "stepByStep": "1. Tendency of motion is DOWN the incline, so static friction acts UP the incline.\n2. Total upward force along incline: $ma\\cos\\theta + f_{\\text{lim}}$.\n3. Downward force along incline: $mg\\sin\\theta$.\n4. Limiting friction: $f_{\\text{lim}} = \\mu_s N = \\mu_s(mg\\cos\\theta + ma\\sin\\theta)$.\n5. Condition for equilibrium: $ma\\cos\\theta + \\mu_s(mg\\cos\\theta + ma\\sin\\theta) \\ge mg\\sin\\theta$.\n6. $ma(\\cos\\theta + \\mu_s\\sin\\theta) \\ge mg(\\sin\\theta - \\mu_s\\cos\\theta)$.\n7. Solving for $a$: $a_{\\text{min}} = g \\frac{\\sin\\theta - \\mu_s\\cos\\theta}{\\cos\\theta + \\mu_s\\sin\\theta}$.",
+      "finalAnswer": "Option A: $g \\frac{\\sin\\theta - \\mu_s\\cos\\theta}{\\cos\\theta + \\mu_s\\sin\\theta}$",
+      "whyOtherOptionsWrong": "Option B is $a_{\\text{max}}$. Option C is for zero friction. Option D misses the normal force denominator."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Pseudo force and accelerating frames",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-421",
+    "questionNumber": 421,
+    "question": "An open elevator of mass $M$ is moving upwards with an acceleration $a$. A person inside the elevator throws a ball vertically upwards with a velocity $u$ relative to the elevator. The time after which the ball returns to the person's hand is:",
+    "options": {
+      "A": "$\\frac{2u}{g + a}$",
+      "B": "$\\frac{2u}{g - a}$",
+      "C": "$\\frac{2u}{g}$",
+      "D": "$\\frac{u}{g + a}$"
+    },
+    "optionsList": [
+      "$\\frac{2u}{g + a}$",
+      "$\\frac{2u}{g - a}$",
+      "$\\frac{2u}{g}$",
+      "$\\frac{u}{g + a}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn the non-inertial frame of the elevator accelerating upward with $a$, the effective gravitational acceleration is $g_{\\text{eff}} = g + a$. The time of flight of a ball thrown vertically with initial relative speed $u$ is $T = \\frac{2u}{g_{\\text{eff}}} = \\frac{2u}{g + a}$.\n\n2. GIVEN:\nUpward acceleration $a$, relative launch speed $u$.\n\n3. FORMULA / PRINCIPLE:\n$g_{\\text{eff}} = g + a$; $T = \\frac{2u}{g_{\\text{eff}}} = \\frac{2u}{g + a}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. In the frame of reference of the upwardly accelerating elevator, every free body experiences an additional downward pseudo acceleration $a$.\n2. The total downward acceleration relative to the elevator is $g_{\\text{eff}} = g + a$.\n3. In this frame, the person and the elevator floor are stationary.\n4. The ball is projected with speed $u$ and returns to the same height ($s_{\\text{rel}} = 0$).\n5. Using $s_{\\text{rel}} = u t - \\frac{1}{2}g_{\\text{eff}}t^2 = 0$ gives $t = \\frac{2u}{g_{\\text{eff}}} = \\frac{2u}{g + a}$.\n\n5. FINAL ANSWER:\nOption A: $\\frac{2u}{g + a}$\n\n6. QUICK TIP:\nRelative motion in accelerating lift: Always replace $g$ with $g_{\\text{eff}} = g \\pm a$!",
+    "solutionStructured": {
+      "concept": "In the non-inertial frame of the elevator accelerating upward with $a$, the effective gravitational acceleration is $g_{\\text{eff}} = g + a$. The time of flight of a ball thrown vertically with initial relative speed $u$ is $T = \\frac{2u}{g_{\\text{eff}}} = \\frac{2u}{g + a}$.",
+      "given": "Upward acceleration $a$, relative launch speed $u$.",
+      "formula": "$g_{\\text{eff}} = g + a$; $T = \\frac{2u}{g_{\\text{eff}}} = \\frac{2u}{g + a}$.",
+      "stepByStep": "1. In the frame of reference of the upwardly accelerating elevator, every free body experiences an additional downward pseudo acceleration $a$.\n2. The total downward acceleration relative to the elevator is $g_{\\text{eff}} = g + a$.\n3. In this frame, the person and the elevator floor are stationary.\n4. The ball is projected with speed $u$ and returns to the same height ($s_{\\text{rel}} = 0$).\n5. Using $s_{\\text{rel}} = u t - \\frac{1}{2}g_{\\text{eff}}t^2 = 0$ gives $t = \\frac{2u}{g_{\\text{eff}}} = \\frac{2u}{g + a}$.",
+      "finalAnswer": "Option A: $\\frac{2u}{g + a}$",
+      "whyOtherOptionsWrong": "Option B ($g - a$) is for downward acceleration. Option C assumes zero acceleration. Option D is the time to reach maximum height."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Pseudo force and accelerating frames",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-422",
+    "questionNumber": 422,
+    "question": "A pendulum bob of mass $m$ is hung inside a car traveling around a horizontal circular track of radius $R$ at a constant speed $v$. In equilibrium relative to the car, the angle $\\theta$ the string makes with the vertical and the tension $T$ in the string are:",
+    "options": {
+      "A": "$\\tan\\theta = \\frac{v^2}{Rg}$, $T = m \\sqrt{g^2 + \\left(\\frac{v^2}{R}\\right)^2}$",
+      "B": "$\\tan\\theta = \\frac{Rg}{v^2}$, $T = mg$",
+      "C": "$\\sin\\theta = \\frac{v^2}{Rg}$, $T = m(g + v^2/R)$",
+      "D": "$\\tan\\theta = \\frac{v}{Rg}$, $T = m\\sqrt{g^2 + v^2}$"
+    },
+    "optionsList": [
+      "$\\tan\\theta = \\frac{v^2}{Rg}$, $T = m \\sqrt{g^2 + \\left(\\frac{v^2}{R}\\right)^2}$",
+      "$\\tan\\theta = \\frac{Rg}{v^2}$, $T = mg$",
+      "$\\sin\\theta = \\frac{v^2}{Rg}$, $T = m(g + v^2/R)$",
+      "$\\tan\\theta = \\frac{v}{Rg}$, $T = m\\sqrt{g^2 + v^2}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn the rotating car's frame, the car has centripetal acceleration $a_c = v^2/R$ towards the center. The bob experiences an outward centrifugal (pseudo) force $F_c = m v^2/R$ and downward gravity $mg$. Deflection angle satisfies $\\tan\\theta = \\frac{F_c}{mg} = \\frac{v^2}{Rg}$. Tension balances the vector sum: $T = \\sqrt{(mg)^2 + (m v^2/R)^2} = m\\sqrt{g^2 + (v^2/R)^2}$.\n\n2. GIVEN:\nCircular path radius $R$, speed $v$, mass $m$.\n\n3. FORMULA / PRINCIPLE:\n$\\tan\\theta = \\frac{v^2}{Rg}$; $T = m\\sqrt{g^2 + (v^2/R)^2}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. In the car's frame, the horizontal acceleration is $a = \\frac{v^2}{R}$ directed towards the center of curvature.\n2. The centrifugal pseudo force on the bob points radially outwards: $F_{\\text{centrifugal}} = m\\frac{v^2}{R}$.\n3. Vertical force is gravity: $W = mg$.\n4. Equilibrium of the string at angle $\\theta$ with the vertical:\n   - $T\\sin\\theta = m\\frac{v^2}{R}$\n   - $T\\cos\\theta = mg$\n5. Dividing: $\\tan\\theta = \\frac{v^2}{Rg}$.\n6. Squaring and adding: $T = \\sqrt{(mg)^2 + \\left(m\\frac{v^2}{R}\\right)^2} = m\\sqrt{g^2 + \\left(\\frac{v^2}{R}\\right)^2}$.\n\n5. FINAL ANSWER:\nOption A: $\\tan\\theta = \\frac{v^2}{Rg}$, $T = m \\sqrt{g^2 + \\left(\\frac{v^2}{R}\\right)^2}$\n\n6. QUICK TIP:\nCentrifugal Deflection: $\\tan\\theta = \\frac{v^2}{Rg}$, exactly analogous to linear acceleration with $a = \\frac{v^2}{R}$!",
+    "solutionStructured": {
+      "concept": "In the rotating car's frame, the car has centripetal acceleration $a_c = v^2/R$ towards the center. The bob experiences an outward centrifugal (pseudo) force $F_c = m v^2/R$ and downward gravity $mg$. Deflection angle satisfies $\\tan\\theta = \\frac{F_c}{mg} = \\frac{v^2}{Rg}$. Tension balances the vector sum: $T = \\sqrt{(mg)^2 + (m v^2/R)^2} = m\\sqrt{g^2 + (v^2/R)^2}$.",
+      "given": "Circular path radius $R$, speed $v$, mass $m$.",
+      "formula": "$\\tan\\theta = \\frac{v^2}{Rg}$; $T = m\\sqrt{g^2 + (v^2/R)^2}$.",
+      "stepByStep": "1. In the car's frame, the horizontal acceleration is $a = \\frac{v^2}{R}$ directed towards the center of curvature.\n2. The centrifugal pseudo force on the bob points radially outwards: $F_{\\text{centrifugal}} = m\\frac{v^2}{R}$.\n3. Vertical force is gravity: $W = mg$.\n4. Equilibrium of the string at angle $\\theta$ with the vertical:\n   - $T\\sin\\theta = m\\frac{v^2}{R}$\n   - $T\\cos\\theta = mg$\n5. Dividing: $\\tan\\theta = \\frac{v^2}{Rg}$.\n6. Squaring and adding: $T = \\sqrt{(mg)^2 + \\left(m\\frac{v^2}{R}\\right)^2} = m\\sqrt{g^2 + \\left(\\frac{v^2}{R}\\right)^2}$.",
+      "finalAnswer": "Option A: $\\tan\\theta = \\frac{v^2}{Rg}$, $T = m \\sqrt{g^2 + \\left(\\frac{v^2}{R}\\right)^2}$",
+      "whyOtherOptionsWrong": "Option B inverts the ratio. Option C uses sine instead of tangent. Option D misses the square on $v$."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Pseudo force and accelerating frames",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-423",
+    "questionNumber": 423,
+    "question": "One end of a string of length $L$ is connected to a particle of mass $m$ and the other to a small peg on a smooth horizontal table. If the particle moves in a circle with speed $v$, the net force on the particle (directed towards the centre) is: ($T$ is the tension in the string)",
+    "options": {
+      "A": "$T$",
+      "B": "$T - \\frac{mv^2}{L}$",
+      "C": "$T + \\frac{mv^2}{L}$",
+      "D": "0"
+    },
+    "optionsList": [
+      "$T$",
+      "$T - \\frac{mv^2}{L}$",
+      "$T + \\frac{mv^2}{L}$",
+      "0"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nCentripetal force is not an additional physical force; it is the name given to the net inward radial force that causes centripetal acceleration. Here, the only physical horizontal force acting on the particle is the tension $T$ in the string. Therefore, the net inward force IS the tension $T$, which equals $\\frac{mv^2}{L}$.\n\n2. GIVEN:\nParticle mass $m$, string length $L$, speed $v$, smooth horizontal table, tension $T$.\n\n3. FORMULA / PRINCIPLE:\nNet radial force $F_{\\text{net}} = T = \\frac{mv^2}{L}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Draw the horizontal free-body diagram of the particle on the smooth table:\n   - The only horizontal force acting on the particle is the tension $T$ exerted by the string directed towards the peg (center of the circle).\n   - There is no friction because the table is smooth.\n2. By Newton's second law, the net force towards the center is simply the vector sum of real horizontal forces.\n3. Since tension $T$ is the only force along the radial direction, the net force directed towards the center is $T$.\n4. (This net force provides the required centripetal acceleration: $T = \\frac{mv^2}{L}$).\n\n5. FINAL ANSWER:\nOption A: $T$\n\n6. QUICK TIP:\nNEET Classic Concept: Centripetal force is NEVER a separate force to be added or subtracted! The net inward force is simply $T$.",
+    "solutionStructured": {
+      "concept": "Centripetal force is not an additional physical force; it is the name given to the net inward radial force that causes centripetal acceleration. Here, the only physical horizontal force acting on the particle is the tension $T$ in the string. Therefore, the net inward force IS the tension $T$, which equals $\\frac{mv^2}{L}$.",
+      "given": "Particle mass $m$, string length $L$, speed $v$, smooth horizontal table, tension $T$.",
+      "formula": "Net radial force $F_{\\text{net}} = T = \\frac{mv^2}{L}$.",
+      "stepByStep": "1. Draw the horizontal free-body diagram of the particle on the smooth table:\n   - The only horizontal force acting on the particle is the tension $T$ exerted by the string directed towards the peg (center of the circle).\n   - There is no friction because the table is smooth.\n2. By Newton's second law, the net force towards the center is simply the vector sum of real horizontal forces.\n3. Since tension $T$ is the only force along the radial direction, the net force directed towards the center is $T$.\n4. (This net force provides the required centripetal acceleration: $T = \\frac{mv^2}{L}$).",
+      "finalAnswer": "Option A: $T$",
+      "whyOtherOptionsWrong": "Option B and C treat centripetal force as an independent force in an inertial frame, which is a fundamental error. Option D confuses an inertial frame with an equilibrium frame."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Circular motion and centripetal force",
+    "source": "NEET UG 2017",
+    "isPYQ": true,
+    "pyqYear": 2017
+  },
+  {
+    "id": "lom-mcq-424",
+    "questionNumber": 424,
+    "question": "A block of mass $10\\text{ kg}$ is in contact against the inner wall of a hollow cylindrical drum of radius $1\\text{ m}$. The coefficient of friction between the block and the inner wall of the cylinder is $0.1$. The minimum angular velocity needed for the cylinder which is vertical to keep the block stationary is (take $g = 10\\text{ m/s}^2$):",
+    "options": {
+      "A": "$10\\text{ rad/s}$",
+      "B": "$10\\pi\\text{ rad/s}$",
+      "C": "$1\\text{ rad/s}$",
+      "D": "$100\\text{ rad/s}$"
+    },
+    "optionsList": [
+      "$10\\text{ rad/s}$",
+      "$10\\pi\\text{ rad/s}$",
+      "$1\\text{ rad/s}$",
+      "$100\\text{ rad/s}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn a vertical rotor (cylindrical drum), the normal reaction from the wall provides the required centripetal acceleration: $N = m \\omega^2 R$. Static friction acts vertically upward to balance the downward weight: $f_s = mg$. For no downward slipping: $f_s \\le \\mu_s N \\implies mg \\le \\mu_s (m \\omega^2 R) \\implies \\omega \\ge \\sqrt{\\frac{g}{\\mu_s R}}$.\n\n2. GIVEN:\n$m = 10\\text{ kg}$, $R = 1\\text{ m}$, $\\mu = 0.1$, $g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$\\omega_{\\text{min}} = \\sqrt{\\frac{g}{\\mu R}}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. The wall exerts an inward normal force on the block: $N = m \\omega^2 R$.\n2. The upward limiting static friction is: $f_{\\text{lim}} = \\mu N = \\mu m \\omega^2 R$.\n3. The downward gravity force is: $W = mg$.\n4. To prevent the block from slipping down the wall, we require:\n   $f_{\\text{lim}} \\ge mg \\implies \\mu m \\omega^2 R \\ge mg$.\n5. Dividing by $m$:\n   $\\mu \\omega^2 R \\ge g \\implies \\omega^2 \\ge \\frac{g}{\\mu R}$.\n6. Substitute values: $\\omega^2 \\ge \\frac{10}{0.1 \\times 1} = \\frac{10}{0.1} = 100$.\n7. Taking the square root: $\\omega_{\\text{min}} = \\sqrt{100} = 10\\text{ rad/s}$.\n\n5. FINAL ANSWER:\nOption A: $10\\text{ rad/s}$\n\n6. QUICK TIP:\nRotor Formula: $\\omega_{\\text{min}} = \\sqrt{\\frac{g}{\\mu R}}$. Mass of the block cancels out completely!",
+    "solutionStructured": {
+      "concept": "In a vertical rotor (cylindrical drum), the normal reaction from the wall provides the required centripetal acceleration: $N = m \\omega^2 R$. Static friction acts vertically upward to balance the downward weight: $f_s = mg$. For no downward slipping: $f_s \\le \\mu_s N \\implies mg \\le \\mu_s (m \\omega^2 R) \\implies \\omega \\ge \\sqrt{\\frac{g}{\\mu_s R}}$.",
+      "given": "$m = 10\\text{ kg}$, $R = 1\\text{ m}$, $\\mu = 0.1$, $g = 10\\text{ m/s}^2$.",
+      "formula": "$\\omega_{\\text{min}} = \\sqrt{\\frac{g}{\\mu R}}$.",
+      "stepByStep": "1. The wall exerts an inward normal force on the block: $N = m \\omega^2 R$.\n2. The upward limiting static friction is: $f_{\\text{lim}} = \\mu N = \\mu m \\omega^2 R$.\n3. The downward gravity force is: $W = mg$.\n4. To prevent the block from slipping down the wall, we require:\n   $f_{\\text{lim}} \\ge mg \\implies \\mu m \\omega^2 R \\ge mg$.\n5. Dividing by $m$:\n   $\\mu \\omega^2 R \\ge g \\implies \\omega^2 \\ge \\frac{g}{\\mu R}$.\n6. Substitute values: $\\omega^2 \\ge \\frac{10}{0.1 \\times 1} = \\frac{10}{0.1} = 100$.\n7. Taking the square root: $\\omega_{\\text{min}} = \\sqrt{100} = 10\\text{ rad/s}$.",
+      "finalAnswer": "Option A: $10\\text{ rad/s}$",
+      "whyOtherOptionsWrong": "Option B incorrectly multiplies by $\\pi$. Option C is $\\sqrt{1}$. Option D is $\\omega^2$ before taking the square root."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Circular motion and centripetal force",
+    "source": "NEET UG 2019",
+    "isPYQ": true,
+    "pyqYear": 2019
+  },
+  {
+    "id": "lom-mcq-425",
+    "questionNumber": 425,
+    "question": "In uniform circular motion of a particle with constant speed $v$ along a circle of radius $r$, the acceleration of the particle:",
+    "options": {
+      "A": "Has constant magnitude $\\frac{v^2}{r}$ but continuously changes direction",
+      "B": "Is zero because the speed is constant",
+      "C": "Has constant magnitude and constant direction",
+      "D": "Points tangentially in the direction of velocity"
+    },
+    "optionsList": [
+      "Has constant magnitude $\\frac{v^2}{r}$ but continuously changes direction",
+      "Is zero because the speed is constant",
+      "Has constant magnitude and constant direction",
+      "Points tangentially in the direction of velocity"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn uniform circular motion, speed is constant, so tangential acceleration is zero. However, the direction of velocity continuously changes, giving rise to centripetal acceleration $a_c = \\frac{v^2}{r}$ pointing towards the center. Because the center is in a different direction relative to the particle at each instant, the acceleration vector continuously changes direction.\n\n2. GIVEN:\nUniform circular motion with constant speed $v$ and radius $r$.\n\n3. FORMULA / PRINCIPLE:\n$a_c = \\frac{v^2}{r}$ directed radially inward.\n\n4. STEP-BY-STEP SOLUTION:\n1. Magnitude of centripetal acceleration: $a = \\frac{v^2}{r} = \\text{constant}$.\n2. Direction: Always directed towards the instantaneous center of the circle.\n3. As the particle travels around the circle, this radial direction continuously rotates in space.\n4. Therefore, the acceleration vector is NOT constant; only its magnitude is constant.\n\n5. FINAL ANSWER:\nOption A: Has constant magnitude $\\frac{v^2}{r}$ but continuously changes direction\n\n6. QUICK TIP:\nUniform circular motion: Speed is constant, kinetic energy is constant, acceleration MAGNITUDE is constant, but velocity and acceleration VECTORS continuously change!",
+    "solutionStructured": {
+      "concept": "In uniform circular motion, speed is constant, so tangential acceleration is zero. However, the direction of velocity continuously changes, giving rise to centripetal acceleration $a_c = \\frac{v^2}{r}$ pointing towards the center. Because the center is in a different direction relative to the particle at each instant, the acceleration vector continuously changes direction.",
+      "given": "Uniform circular motion with constant speed $v$ and radius $r$.",
+      "formula": "$a_c = \\frac{v^2}{r}$ directed radially inward.",
+      "stepByStep": "1. Magnitude of centripetal acceleration: $a = \\frac{v^2}{r} = \\text{constant}$.\n2. Direction: Always directed towards the instantaneous center of the circle.\n3. As the particle travels around the circle, this radial direction continuously rotates in space.\n4. Therefore, the acceleration vector is NOT constant; only its magnitude is constant.",
+      "finalAnswer": "Option A: Has constant magnitude $\\frac{v^2}{r}$ but continuously changes direction",
+      "whyOtherOptionsWrong": "Option B forgets directional change. Option C claims constant direction. Option D describes tangential acceleration."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Circular motion and centripetal force",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-426",
+    "questionNumber": 426,
+    "question": "The work done by the centripetal force on a particle undergoing uniform circular motion over any time interval is:",
+    "options": {
+      "A": "Zero",
+      "B": "$\\frac{mv^2}{r} \\times 2\\pi r$",
+      "C": "$\\frac{1}{2}mv^2$",
+      "D": "$mv^2$"
+    },
+    "optionsList": [
+      "Zero",
+      "$\\frac{mv^2}{r} \\times 2\\pi r$",
+      "$\\frac{1}{2}mv^2$",
+      "$mv^2$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nCentripetal force is always perpendicular to the instantaneous velocity (and instantaneous displacement): $\\vec{F}_c \\perp d\\vec{r}$ (angle $90^\\circ$). Therefore, instantaneous power and work done are identically zero: $dW = \\vec{F}_c \\cdot d\\vec{r} = F_c dr \\cos 90^\\circ = 0$.\n\n2. GIVEN:\nCentripetal force in uniform circular motion.\n\n3. FORMULA / PRINCIPLE:\n$W = \\int \\vec{F}_c \\cdot d\\vec{r} = \\int F_c dr \\cos 90^\\circ = 0$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Centripetal force points radially inward towards the center.\n2. The displacement vector at every instant is along the tangent to the circle.\n3. Radius is perpendicular to tangent, so the angle between force and displacement is always $\\theta = 90^\\circ$.\n4. Work done is $W = F d\\cos 90^\\circ = 0$.\n5. By the work-energy theorem, since work done is zero, kinetic energy remains constant.\n\n5. FINAL ANSWER:\nOption A: Zero\n\n6. QUICK TIP:\nCentripetal force NEVER does any work! It changes the direction of motion, never the speed or kinetic energy.",
+    "solutionStructured": {
+      "concept": "Centripetal force is always perpendicular to the instantaneous velocity (and instantaneous displacement): $\\vec{F}_c \\perp d\\vec{r}$ (angle $90^\\circ$). Therefore, instantaneous power and work done are identically zero: $dW = \\vec{F}_c \\cdot d\\vec{r} = F_c dr \\cos 90^\\circ = 0$.",
+      "given": "Centripetal force in uniform circular motion.",
+      "formula": "$W = \\int \\vec{F}_c \\cdot d\\vec{r} = \\int F_c dr \\cos 90^\\circ = 0$.",
+      "stepByStep": "1. Centripetal force points radially inward towards the center.\n2. The displacement vector at every instant is along the tangent to the circle.\n3. Radius is perpendicular to tangent, so the angle between force and displacement is always $\\theta = 90^\\circ$.\n4. Work done is $W = F d\\cos 90^\\circ = 0$.\n5. By the work-energy theorem, since work done is zero, kinetic energy remains constant.",
+      "finalAnswer": "Option A: Zero",
+      "whyOtherOptionsWrong": "Option B multiplies force by circumference without accounting for the $90^\\circ$ dot product. Option C is the kinetic energy."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Circular motion and centripetal force",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-427",
+    "questionNumber": 427,
+    "question": "A body of mass $m = 0.5\\text{ kg}$ is rotated in a horizontal circle of radius $r = 2\\text{ m}$ by a string. If the maximum tension the string can withstand without breaking is $T_{\\text{max}} = 100\\text{ N}$, what is the maximum speed with which the body can be rotated?",
+    "options": {
+      "A": "$20\\text{ m/s}$",
+      "B": "$10\\text{ m/s}$",
+      "C": "$14.14\\text{ m/s}$",
+      "D": "$40\\text{ m/s}$"
+    },
+    "optionsList": [
+      "$20\\text{ m/s}$",
+      "$10\\text{ m/s}$",
+      "$14.14\\text{ m/s}$",
+      "$40\\text{ m/s}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTension provides the centripetal force: $T = \\frac{mv^2}{r}$. Setting $T = T_{\\text{max}}$ gives $v_{\\text{max}} = \\sqrt{\\frac{T_{\\text{max}} r}{m}}$.\n\n2. GIVEN:\n$m = 0.5\\text{ kg}, r = 2\\text{ m}, T_{\\text{max}} = 100\\text{ N}$.\n\n3. FORMULA / PRINCIPLE:\n$v_{\\text{max}} = \\sqrt{\\frac{T_{\\text{max}} r}{m}}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Tension provides centripetal force: $T = \\frac{mv^2}{r}$.\n2. For the string not to break: $T \\le T_{\\text{max}} = 100\\text{ N}$.\n3. $\\frac{m v^2}{r} \\le 100 \\implies v^2 \\le \\frac{100 r}{m}$.\n4. Substitute values: $v^2 \\le \\frac{100 \\times 2}{0.5} = \\frac{200}{0.5} = 400$.\n5. Taking square root: $v_{\\text{max}} = \\sqrt{400} = 20\\text{ m/s}$.\n\n5. FINAL ANSWER:\nOption A: $20\\text{ m/s}$\n\n6. QUICK TIP:\nBreaking speed: $v_{\\text{max}} = \\sqrt{\\frac{T_{\\text{break}} r}{m}}$. Check that $0.5 \\times 400 / 2 = 100\\text{ N}$!",
+    "solutionStructured": {
+      "concept": "Tension provides the centripetal force: $T = \\frac{mv^2}{r}$. Setting $T = T_{\\text{max}}$ gives $v_{\\text{max}} = \\sqrt{\\frac{T_{\\text{max}} r}{m}}$.",
+      "given": "$m = 0.5\\text{ kg}, r = 2\\text{ m}, T_{\\text{max}} = 100\\text{ N}$.",
+      "formula": "$v_{\\text{max}} = \\sqrt{\\frac{T_{\\text{max}} r}{m}}$.",
+      "stepByStep": "1. Tension provides centripetal force: $T = \\frac{mv^2}{r}$.\n2. For the string not to break: $T \\le T_{\\text{max}} = 100\\text{ N}$.\n3. $\\frac{m v^2}{r} \\le 100 \\implies v^2 \\le \\frac{100 r}{m}$.\n4. Substitute values: $v^2 \\le \\frac{100 \\times 2}{0.5} = \\frac{200}{0.5} = 400$.\n5. Taking square root: $v_{\\text{max}} = \\sqrt{400} = 20\\text{ m/s}$.",
+      "finalAnswer": "Option A: $20\\text{ m/s}$",
+      "whyOtherOptionsWrong": "Option B ($10\\text{ m/s}$) gives $T = 25\\text{ N}$. Option C is $\\sqrt{200}$. Option D is $40\\text{ m/s}$ (gives $T = 400\\text{ N}$)."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Circular motion and centripetal force",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-428",
+    "questionNumber": 428,
+    "question": "In a conical pendulum, a bob of mass $m$ moves in a horizontal circle of radius $r$ at the end of a string of length $L$. If the string makes an angle $\\theta$ with the vertical, what is the tension in the string?",
+    "options": {
+      "A": "$\\frac{mg}{\\cos\\theta}$",
+      "B": "$mg \\cos\\theta$",
+      "C": "$\\frac{mg}{\\sin\\theta}$",
+      "D": "$mg \\tan\\theta$"
+    },
+    "optionsList": [
+      "$\\frac{mg}{\\cos\\theta}$",
+      "$mg \\cos\\theta$",
+      "$\\frac{mg}{\\sin\\theta}$",
+      "$mg \\tan\\theta$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn a conical pendulum, the bob has zero vertical acceleration. The vertical component of tension balances the downward weight: $T\\cos\\theta = mg \\implies T = \\frac{mg}{\\cos\\theta}$. The horizontal component provides the centripetal force: $T\\sin\\theta = \\frac{mv^2}{r}$.\n\n2. GIVEN:\nConical pendulum, string angle $\\theta$ with vertical, mass $m$.\n\n3. FORMULA / PRINCIPLE:\n$T\\cos\\theta = mg \\implies T = \\frac{mg}{\\cos\\theta}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Resolve tension $T$ along vertical and horizontal axes:\n   - Vertical component: $T\\cos\\theta$ pointing upward.\n   - Horizontal radial component: $T\\sin\\theta$ pointing toward the center of the horizontal circle.\n2. Since the bob moves in a strictly horizontal circle, its vertical acceleration is zero: $a_y = 0$.\n3. Balancing vertical forces: $T\\cos\\theta - mg = 0$.\n4. Therefore, $T = \\frac{mg}{\\cos\\theta}$.\n\n5. FINAL ANSWER:\nOption A: $\\frac{mg}{\\cos\\theta}$\n\n6. QUICK TIP:\nConical Pendulum Tension: $T = \\frac{mg}{\\cos\\theta} > mg$. As $\\theta \\to 90^\\circ$, required tension approaches infinity!",
+    "solutionStructured": {
+      "concept": "In a conical pendulum, the bob has zero vertical acceleration. The vertical component of tension balances the downward weight: $T\\cos\\theta = mg \\implies T = \\frac{mg}{\\cos\\theta}$. The horizontal component provides the centripetal force: $T\\sin\\theta = \\frac{mv^2}{r}$.",
+      "given": "Conical pendulum, string angle $\\theta$ with vertical, mass $m$.",
+      "formula": "$T\\cos\\theta = mg \\implies T = \\frac{mg}{\\cos\\theta}$.",
+      "stepByStep": "1. Resolve tension $T$ along vertical and horizontal axes:\n   - Vertical component: $T\\cos\\theta$ pointing upward.\n   - Horizontal radial component: $T\\sin\\theta$ pointing toward the center of the horizontal circle.\n2. Since the bob moves in a strictly horizontal circle, its vertical acceleration is zero: $a_y = 0$.\n3. Balancing vertical forces: $T\\cos\\theta - mg = 0$.\n4. Therefore, $T = \\frac{mg}{\\cos\\theta}$.",
+      "finalAnswer": "Option A: $\\frac{mg}{\\cos\\theta}$",
+      "whyOtherOptionsWrong": "Option B ($mg\\cos\\theta$) is the component of gravity on an inclined plane. Option C uses sine. Option D is $T\\sin\\theta$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Circular motion and centripetal force",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-429",
+    "questionNumber": 429,
+    "question": "In the conical pendulum above, the period of revolution $T_{\\text{period}}$ of the bob is:",
+    "options": {
+      "A": "$2\\pi \\sqrt{\\frac{L\\cos\\theta}{g}}$",
+      "B": "$2\\pi \\sqrt{\\frac{L}{g}}$",
+      "C": "$2\\pi \\sqrt{\\frac{L\\sin\\theta}{g}}$",
+      "D": "$2\\pi \\sqrt{\\frac{g}{L\\cos\\theta}}$"
+    },
+    "optionsList": [
+      "$2\\pi \\sqrt{\\frac{L\\cos\\theta}{g}}$",
+      "$2\\pi \\sqrt{\\frac{L}{g}}$",
+      "$2\\pi \\sqrt{\\frac{L\\sin\\theta}{g}}$",
+      "$2\\pi \\sqrt{\\frac{g}{L\\cos\\theta}}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFrom $T\\sin\\theta = m\\omega^2 r$ and $T\\cos\\theta = mg$, divide to get $\\tan\\theta = \\frac{\\omega^2 r}{g}$. Since $r = L\\sin\\theta$, we have $\\frac{\\sin\\theta}{\\cos\\theta} = \\frac{\\omega^2 L\\sin\\theta}{g} \\implies \\omega = \\sqrt{\\frac{g}{L\\cos\\theta}}$. Period is $T_{\\text{period}} = \\frac{2\\pi}{\\omega} = 2\\pi\\sqrt{\\frac{L\\cos\\theta}{g}}$.\n\n2. GIVEN:\nString length $L$, angle with vertical $\\theta$.\n\n3. FORMULA / PRINCIPLE:\n$T = 2\\pi \\sqrt{\\frac{h}{g}} = 2\\pi \\sqrt{\\frac{L\\cos\\theta}{g}}$ where $h = L\\cos\\theta$ is the vertical height.\n\n4. STEP-BY-STEP SOLUTION:\n1. Radius of circular path: $r = L\\sin\\theta$.\n2. Centripetal equation: $T\\sin\\theta = m \\omega^2 r = m \\omega^2 L\\sin\\theta$.\n3. Vertical equation: $T\\cos\\theta = mg$.\n4. From equation 2: $T = m\\omega^2 L$.\n5. Substitute into equation 3: $(m\\omega^2 L)\\cos\\theta = mg \\implies \\omega^2 = \\frac{g}{L\\cos\\theta}$.\n6. Angular frequency: $\\omega = \\sqrt{\\frac{g}{L\\cos\\theta}}$.\n7. Period of revolution: $T_{\\text{period}} = \\frac{2\\pi}{\\omega} = 2\\pi \\sqrt{\\frac{L\\cos\\theta}{g}}$.\n\n5. FINAL ANSWER:\nOption A: $2\\pi \\sqrt{\\frac{L\\cos\\theta}{g}}$\n\n6. QUICK TIP:\nConical Pendulum Time Period: $T = 2\\pi\\sqrt{\\frac{h}{g}} = 2\\pi\\sqrt{\\frac{L\\cos\\theta}{g}}$ where $h$ is the vertical distance from suspension to the circle!",
+    "solutionStructured": {
+      "concept": "From $T\\sin\\theta = m\\omega^2 r$ and $T\\cos\\theta = mg$, divide to get $\\tan\\theta = \\frac{\\omega^2 r}{g}$. Since $r = L\\sin\\theta$, we have $\\frac{\\sin\\theta}{\\cos\\theta} = \\frac{\\omega^2 L\\sin\\theta}{g} \\implies \\omega = \\sqrt{\\frac{g}{L\\cos\\theta}}$. Period is $T_{\\text{period}} = \\frac{2\\pi}{\\omega} = 2\\pi\\sqrt{\\frac{L\\cos\\theta}{g}}$.",
+      "given": "String length $L$, angle with vertical $\\theta$.",
+      "formula": "$T = 2\\pi \\sqrt{\\frac{h}{g}} = 2\\pi \\sqrt{\\frac{L\\cos\\theta}{g}}$ where $h = L\\cos\\theta$ is the vertical height.",
+      "stepByStep": "1. Radius of circular path: $r = L\\sin\\theta$.\n2. Centripetal equation: $T\\sin\\theta = m \\omega^2 r = m \\omega^2 L\\sin\\theta$.\n3. Vertical equation: $T\\cos\\theta = mg$.\n4. From equation 2: $T = m\\omega^2 L$.\n5. Substitute into equation 3: $(m\\omega^2 L)\\cos\\theta = mg \\implies \\omega^2 = \\frac{g}{L\\cos\\theta}$.\n6. Angular frequency: $\\omega = \\sqrt{\\frac{g}{L\\cos\\theta}}$.\n7. Period of revolution: $T_{\\text{period}} = \\frac{2\\pi}{\\omega} = 2\\pi \\sqrt{\\frac{L\\cos\\theta}{g}}$.",
+      "finalAnswer": "Option A: $2\\pi \\sqrt{\\frac{L\\cos\\theta}{g}}$",
+      "whyOtherOptionsWrong": "Option B is the period of a simple planar pendulum. Option C uses sine. Option D inverts the radical."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Circular motion and centripetal force",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-430",
+    "questionNumber": 430,
+    "question": "A coin placed on a rotating horizontal turntable at a distance of $9\\text{ cm}$ from the center just slips when the angular speed of the turntable is $10\\text{ rad/s}$. If the angular speed is doubled to $20\\text{ rad/s}$, at what distance from the center will the coin just slip?",
+    "options": {
+      "A": "2.25 cm",
+      "B": "4.5 cm",
+      "C": "18 cm",
+      "D": "36 cm"
+    },
+    "optionsList": [
+      "2.25 cm",
+      "4.5 cm",
+      "18 cm",
+      "36 cm"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor slipping on a turntable: $m \\omega^2 r = \\mu_s mg \\implies \\omega^2 r = \\mu_s g = \\text{constant}$. Therefore, $\\omega_1^2 r_1 = \\omega_2^2 r_2 \\implies r_2 = r_1 \\left(\\frac{\\omega_1}{\\omega_2}\\right)^2$.\n\n2. GIVEN:\n$r_1 = 9\\text{ cm}$, $\\omega_1 = 10\\text{ rad/s}$, $\\omega_2 = 20\\text{ rad/s}$.\n\n3. FORMULA / PRINCIPLE:\n$\\omega^2 r = \\text{constant} \\implies r_2 = r_1 \\left(\\frac{\\omega_1}{\\omega_2}\\right)^2$.\n\n4. STEP-BY-STEP SOLUTION:\n1. The limiting condition for slipping is $m\\omega^2 r = \\mu_s mg$.\n2. Cancelling mass $m$: $\\omega^2 r = \\mu_s g$.\n3. Since $\\mu_s$ and $g$ are constant, the product $\\omega^2 r$ is constant.\n4. Therefore: $\\omega_1^2 r_1 = \\omega_2^2 r_2$.\n5. Given $\\omega_2 = 2\\omega_1$, we have: $(\\omega_1)^2 (9) = (2\\omega_1)^2 r_2 = 4\\omega_1^2 r_2$.\n6. $9 = 4 r_2 \\implies r_2 = \\frac{9}{4} = 2.25\\text{ cm}$.\n\n5. FINAL ANSWER:\nOption A: 2.25 cm\n\n6. QUICK TIP:\nInverse Square Relation: $r \\propto 1/\\omega^2$! Doubling angular speed means the safe distance is divided by 4.",
+    "solutionStructured": {
+      "concept": "For slipping on a turntable: $m \\omega^2 r = \\mu_s mg \\implies \\omega^2 r = \\mu_s g = \\text{constant}$. Therefore, $\\omega_1^2 r_1 = \\omega_2^2 r_2 \\implies r_2 = r_1 \\left(\\frac{\\omega_1}{\\omega_2}\\right)^2$.",
+      "given": "$r_1 = 9\\text{ cm}$, $\\omega_1 = 10\\text{ rad/s}$, $\\omega_2 = 20\\text{ rad/s}$.",
+      "formula": "$\\omega^2 r = \\text{constant} \\implies r_2 = r_1 \\left(\\frac{\\omega_1}{\\omega_2}\\right)^2$.",
+      "stepByStep": "1. The limiting condition for slipping is $m\\omega^2 r = \\mu_s mg$.\n2. Cancelling mass $m$: $\\omega^2 r = \\mu_s g$.\n3. Since $\\mu_s$ and $g$ are constant, the product $\\omega^2 r$ is constant.\n4. Therefore: $\\omega_1^2 r_1 = \\omega_2^2 r_2$.\n5. Given $\\omega_2 = 2\\omega_1$, we have: $(\\omega_1)^2 (9) = (2\\omega_1)^2 r_2 = 4\\omega_1^2 r_2$.\n6. $9 = 4 r_2 \\implies r_2 = \\frac{9}{4} = 2.25\\text{ cm}$.",
+      "finalAnswer": "Option A: 2.25 cm",
+      "whyOtherOptionsWrong": "Option B (4.5 cm) assumes $r \\propto 1/\\omega$ (linear). Option C and D increase distance instead of decreasing."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Circular motion and centripetal force",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-431",
+    "questionNumber": 431,
+    "question": "In a 'Well of Death' (cylinder of radius $R = 4\\text{ m}$), a stunt motorcyclist rides horizontally around the vertical wall. The coefficient of friction between the tires and the wall is $\\mu_s = 0.4$. Taking $g = 10\\text{ m/s}^2$, what is the minimum linear speed $v$ the motorcyclist must maintain to avoid slipping down?",
+    "options": {
+      "A": "$10\\text{ m/s}$",
+      "B": "$5\\text{ m/s}$",
+      "C": "$20\\text{ m/s}$",
+      "D": "$4\\text{ m/s}$"
+    },
+    "optionsList": [
+      "$10\\text{ m/s}$",
+      "$5\\text{ m/s}$",
+      "$20\\text{ m/s}$",
+      "$4\\text{ m/s}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nNormal force from the wall provides the centripetal acceleration: $N = \\frac{mv^2}{R}$. Upward static friction balances weight: $f_s = mg$. Condition for no slip: $f_{\\text{lim}} = \\mu_s N \\ge mg \\implies \\mu_s \\frac{mv^2}{R} \\ge mg \\implies v \\ge \\sqrt{\\frac{Rg}{\\mu_s}}$.\n\n2. GIVEN:\n$R = 4\\text{ m}, \\mu_s = 0.4, g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$v_{\\text{min}} = \\sqrt{\\frac{Rg}{\\mu_s}}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Normal force from the vertical wall: $N = \\frac{mv^2}{R}$.\n2. Maximum upward static friction: $f_{\\text{lim}} = \\mu_s N = \\mu_s \\frac{mv^2}{R}$.\n3. Downward weight: $W = mg$.\n4. For vertical equilibrium without slipping: $f_{\\text{lim}} \\ge mg \\implies \\mu_s \\frac{mv^2}{R} \\ge mg$.\n5. Cancelling $m$: $v^2 \\ge \\frac{Rg}{\\mu_s}$.\n6. Substitute values: $v^2 \\ge \\frac{4 \\times 10}{0.4} = \\frac{40}{0.4} = 100$.\n7. Therefore, $v_{\\text{min}} = \\sqrt{100} = 10\\text{ m/s}$.\n\n5. FINAL ANSWER:\nOption A: $10\\text{ m/s}$\n\n6. QUICK TIP:\nWell of Death Minimum Speed: $v_{\\text{min}} = \\sqrt{\\frac{Rg}{\\mu_s}}$. Independent of rider and motorcycle mass!",
+    "solutionStructured": {
+      "concept": "Normal force from the wall provides the centripetal acceleration: $N = \\frac{mv^2}{R}$. Upward static friction balances weight: $f_s = mg$. Condition for no slip: $f_{\\text{lim}} = \\mu_s N \\ge mg \\implies \\mu_s \\frac{mv^2}{R} \\ge mg \\implies v \\ge \\sqrt{\\frac{Rg}{\\mu_s}}$.",
+      "given": "$R = 4\\text{ m}, \\mu_s = 0.4, g = 10\\text{ m/s}^2$.",
+      "formula": "$v_{\\text{min}} = \\sqrt{\\frac{Rg}{\\mu_s}}$.",
+      "stepByStep": "1. Normal force from the vertical wall: $N = \\frac{mv^2}{R}$.\n2. Maximum upward static friction: $f_{\\text{lim}} = \\mu_s N = \\mu_s \\frac{mv^2}{R}$.\n3. Downward weight: $W = mg$.\n4. For vertical equilibrium without slipping: $f_{\\text{lim}} \\ge mg \\implies \\mu_s \\frac{mv^2}{R} \\ge mg$.\n5. Cancelling $m$: $v^2 \\ge \\frac{Rg}{\\mu_s}$.\n6. Substitute values: $v^2 \\ge \\frac{4 \\times 10}{0.4} = \\frac{40}{0.4} = 100$.\n7. Therefore, $v_{\\text{min}} = \\sqrt{100} = 10\\text{ m/s}$.",
+      "finalAnswer": "Option A: $10\\text{ m/s}$",
+      "whyOtherOptionsWrong": "Option B ($5\\text{ m/s}$) is $\\sqrt{25}$. Option C is $20\\text{ m/s}$. Option D is $4\\text{ m/s}$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Circular motion and centripetal force",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-432",
+    "questionNumber": 432,
+    "question": "A pilot of mass $m$ loops the loop in a vertical circle of radius $R$ with constant speed $v$. What is the normal force exerted by the seat on the pilot at the lowest point of the loop?",
+    "options": {
+      "A": "$m\\left(g + \\frac{v^2}{R}\\right)$",
+      "B": "$m\\left(\\frac{v^2}{R} - g\\right)$",
+      "C": "$\\frac{mv^2}{R}$",
+      "D": "$mg$"
+    },
+    "optionsList": [
+      "$m\\left(g + \\frac{v^2}{R}\\right)$",
+      "$m\\left(\\frac{v^2}{R} - g\\right)$",
+      "$\\frac{mv^2}{R}$",
+      "$mg$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nAt the bottom of a vertical circle, the net force towards the center (upward) is $N - mg = \\frac{mv^2}{R}$. Therefore, the normal force exerted by the seat is $N = m\\left(g + \\frac{v^2}{R}\\right)$.\n\n2. GIVEN:\nVertical loop radius $R$, speed $v$, mass $m$, lowest point.\n\n3. FORMULA / PRINCIPLE:\n$N - mg = \\frac{mv^2}{R} \\implies N = m\\left(g + \\frac{v^2}{R}\\right)$.\n\n4. STEP-BY-STEP SOLUTION:\n1. At the lowest point, the center of the circle is directly overhead (upwards).\n2. Forces on the pilot:\n   - Upward normal reaction $N$ from the seat.\n   - Downward gravitational weight $mg$.\n3. The net inward radial force must provide the centripetal acceleration $\\frac{v^2}{R}$ upwards:\n   $N - mg = \\frac{mv^2}{R}$.\n4. Solving for $N$: $N = mg + \\frac{mv^2}{R} = m\\left(g + \\frac{v^2}{R}\\right)$.\n\n5. FINAL ANSWER:\nOption A: $m\\left(g + \\frac{v^2}{R}\\right)$\n\n6. QUICK TIP:\nAt the BOTTOM of a vertical loop, normal force is MAXIMUM: $N = m(g + v^2/R)$. The pilot feels heavier!",
+    "solutionStructured": {
+      "concept": "At the bottom of a vertical circle, the net force towards the center (upward) is $N - mg = \\frac{mv^2}{R}$. Therefore, the normal force exerted by the seat is $N = m\\left(g + \\frac{v^2}{R}\\right)$.",
+      "given": "Vertical loop radius $R$, speed $v$, mass $m$, lowest point.",
+      "formula": "$N - mg = \\frac{mv^2}{R} \\implies N = m\\left(g + \\frac{v^2}{R}\\right)$.",
+      "stepByStep": "1. At the lowest point, the center of the circle is directly overhead (upwards).\n2. Forces on the pilot:\n   - Upward normal reaction $N$ from the seat.\n   - Downward gravitational weight $mg$.\n3. The net inward radial force must provide the centripetal acceleration $\\frac{v^2}{R}$ upwards:\n   $N - mg = \\frac{mv^2}{R}$.\n4. Solving for $N$: $N = mg + \\frac{mv^2}{R} = m\\left(g + \\frac{v^2}{R}\\right)$.",
+      "finalAnswer": "Option A: $m\\left(g + \\frac{v^2}{R}\\right)$",
+      "whyOtherOptionsWrong": "Option B is the normal force at the TOP of the loop. Option C ignores gravity. Option D is flat level ground."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Circular motion and centripetal force",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-433",
+    "questionNumber": 433,
+    "question": "In the vertical loop above, what is the normal force exerted by the seat on the pilot at the HIGHEST point of the loop?",
+    "options": {
+      "A": "$m\\left(\\frac{v^2}{R} - g\\right)$",
+      "B": "$m\\left(\\frac{v^2}{R} + g\\right)$",
+      "C": "$\\frac{mv^2}{R}$",
+      "D": "Zero"
+    },
+    "optionsList": [
+      "$m\\left(\\frac{v^2}{R} - g\\right)$",
+      "$m\\left(\\frac{v^2}{R} + g\\right)$",
+      "$\\frac{mv^2}{R}$",
+      "Zero"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nAt the top of the loop, both the normal force $N$ (from seat downwards) and gravity $mg$ act downwards towards the center: $N + mg = \\frac{mv^2}{R} \\implies N = m\\left(\\frac{v^2}{R} - g\\right)$.\n\n2. GIVEN:\nHighest point of vertical loop of radius $R$, speed $v$.\n\n3. FORMULA / PRINCIPLE:\n$N + mg = \\frac{mv^2}{R} \\implies N = m\\left(\\frac{v^2}{R} - g\\right)$.\n\n4. STEP-BY-STEP SOLUTION:\n1. At the highest point of the loop, the center of the circle is directly below.\n2. Both normal reaction $N$ (pushing down from the seat above) and gravity $mg$ point downwards towards the center.\n3. Newton's second law along the inward radial axis:\n   $N + mg = \\frac{mv^2}{R}$.\n4. Solving for normal force: $N = \\frac{mv^2}{R} - mg = m\\left(\\frac{v^2}{R} - g\\right)$.\n\n5. FINAL ANSWER:\nOption A: $m\\left(\\frac{v^2}{R} - g\\right)$\n\n6. QUICK TIP:\nAt the TOP of a vertical loop, $N = m(v^2/R - g)$. The minimum speed to not fall off is when $N = 0 \\implies v_{\\text{top}} = \\sqrt{gR}$!",
+    "solutionStructured": {
+      "concept": "At the top of the loop, both the normal force $N$ (from seat downwards) and gravity $mg$ act downwards towards the center: $N + mg = \\frac{mv^2}{R} \\implies N = m\\left(\\frac{v^2}{R} - g\\right)$.",
+      "given": "Highest point of vertical loop of radius $R$, speed $v$.",
+      "formula": "$N + mg = \\frac{mv^2}{R} \\implies N = m\\left(\\frac{v^2}{R} - g\\right)$.",
+      "stepByStep": "1. At the highest point of the loop, the center of the circle is directly below.\n2. Both normal reaction $N$ (pushing down from the seat above) and gravity $mg$ point downwards towards the center.\n3. Newton's second law along the inward radial axis:\n   $N + mg = \\frac{mv^2}{R}$.\n4. Solving for normal force: $N = \\frac{mv^2}{R} - mg = m\\left(\\frac{v^2}{R} - g\\right)$.",
+      "finalAnswer": "Option A: $m\\left(\\frac{v^2}{R} - g\\right)$",
+      "whyOtherOptionsWrong": "Option B is the normal force at the bottom. Option C ignores gravity. Option D only occurs at the critical minimum speed."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Circular motion and centripetal force",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-434",
+    "questionNumber": 434,
+    "question": "A small block of mass $m$ is resting on a smooth hemispherical dome of radius $R$. It is given an infinitesimal nudge from the top. At what height $h$ from the base of the dome will the block lose contact with the surface?",
+    "options": {
+      "A": "$\\frac{2}{3} R$",
+      "B": "$\\frac{1}{2} R$",
+      "C": "$\\frac{3}{4} R$",
+      "D": "$\\frac{1}{3} R$"
+    },
+    "optionsList": [
+      "$\\frac{2}{3} R$",
+      "$\\frac{1}{2} R$",
+      "$\\frac{3}{4} R$",
+      "$\\frac{1}{3} R$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nLet $\\theta$ be the angle with the vertical. Conservation of mechanical energy gives $\\frac{1}{2}mv^2 = mgR(1 - \\cos\\theta) \\implies v^2 = 2gR(1 - \\cos\\theta)$. Radial force equation: $mg\\cos\\theta - N = \\frac{mv^2}{R}$. At the point of losing contact, $N = 0 \\implies mg\\cos\\theta = \\frac{m(2gR(1 - \\cos\\theta))}{R} = 2mg(1 - \\cos\\theta) \\implies \\cos\\theta = 2 - 2\\cos\\theta \\implies 3\\cos\\theta = 2 \\implies \\cos\\theta = \\frac{2}{3}$. The height from the base is $h = R\\cos\\theta = \\frac{2}{3}R$.\n\n2. GIVEN:\nSmooth dome radius $R$, released from top, loses contact at $N = 0$.\n\n3. FORMULA / PRINCIPLE:\n$\\cos\\theta = \\frac{2}{3}$; $h = R\\cos\\theta = \\frac{2}{3}R$.\n\n4. STEP-BY-STEP SOLUTION:\n1. As the block slides down an angular distance $\\theta$ from the apex, vertical drop is $\\Delta y = R(1 - \\cos\\theta)$.\n2. By conservation of mechanical energy: $\\frac{1}{2}mv^2 = mg R(1 - \\cos\\theta) \\implies v^2 = 2gR(1 - \\cos\\theta)$.\n3. Forces along the radial direction towards the center of the sphere:\n   - Component of gravity inward: $mg\\cos\\theta$.\n   - Normal force outward: $N$.\n4. Centripetal equation: $mg\\cos\\theta - N = \\frac{mv^2}{R}$.\n5. Contact is lost when $N = 0$:\n   $mg\\cos\\theta = \\frac{mv^2}{R} = \\frac{m}{R}[2gR(1 - \\cos\\theta)] = 2mg(1 - \\cos\\theta)$.\n6. Dividing by $mg$: $\\cos\\theta = 2(1 - \\cos\\theta) = 2 - 2\\cos\\theta$.\n7. $3\\cos\\theta = 2 \\implies \\cos\\theta = \\frac{2}{3}$.\n8. Height above the horizontal base: $h = R\\cos\\theta = \\frac{2}{3}R$.\n\n5. FINAL ANSWER:\nOption A: $\\frac{2}{3} R$\n\n6. QUICK TIP:\nMaster NEET Result: On a smooth sphere, contact is lost at $\\cos\\theta = 2/3$, height $h = \\frac{2}{3}R$, and speed $v = \\sqrt{\\frac{2}{3}gR}$!",
+    "solutionStructured": {
+      "concept": "Let $\\theta$ be the angle with the vertical. Conservation of mechanical energy gives $\\frac{1}{2}mv^2 = mgR(1 - \\cos\\theta) \\implies v^2 = 2gR(1 - \\cos\\theta)$. Radial force equation: $mg\\cos\\theta - N = \\frac{mv^2}{R}$. At the point of losing contact, $N = 0 \\implies mg\\cos\\theta = \\frac{m(2gR(1 - \\cos\\theta))}{R} = 2mg(1 - \\cos\\theta) \\implies \\cos\\theta = 2 - 2\\cos\\theta \\implies 3\\cos\\theta = 2 \\implies \\cos\\theta = \\frac{2}{3}$. The height from the base is $h = R\\cos\\theta = \\frac{2}{3}R$.",
+      "given": "Smooth dome radius $R$, released from top, loses contact at $N = 0$.",
+      "formula": "$\\cos\\theta = \\frac{2}{3}$; $h = R\\cos\\theta = \\frac{2}{3}R$.",
+      "stepByStep": "1. As the block slides down an angular distance $\\theta$ from the apex, vertical drop is $\\Delta y = R(1 - \\cos\\theta)$.\n2. By conservation of mechanical energy: $\\frac{1}{2}mv^2 = mg R(1 - \\cos\\theta) \\implies v^2 = 2gR(1 - \\cos\\theta)$.\n3. Forces along the radial direction towards the center of the sphere:\n   - Component of gravity inward: $mg\\cos\\theta$.\n   - Normal force outward: $N$.\n4. Centripetal equation: $mg\\cos\\theta - N = \\frac{mv^2}{R}$.\n5. Contact is lost when $N = 0$:\n   $mg\\cos\\theta = \\frac{mv^2}{R} = \\frac{m}{R}[2gR(1 - \\cos\\theta)] = 2mg(1 - \\cos\\theta)$.\n6. Dividing by $mg$: $\\cos\\theta = 2(1 - \\cos\\theta) = 2 - 2\\cos\\theta$.\n7. $3\\cos\\theta = 2 \\implies \\cos\\theta = \\frac{2}{3}$.\n8. Height above the horizontal base: $h = R\\cos\\theta = \\frac{2}{3}R$.",
+      "finalAnswer": "Option A: $\\frac{2}{3} R$",
+      "whyOtherOptionsWrong": "Option B ($R/2$) is for $\\theta = 60^\\circ$. Option C ($3R/4$) uses wrong energy balance. Option D is $R - 2R/3$ (the vertical drop)."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Circular motion and centripetal force",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-435",
+    "questionNumber": 435,
+    "question": "In the previous dome problem, what is the speed of the block at the instant it leaves the dome?",
+    "options": {
+      "A": "$\\sqrt{\\frac{2}{3} g R}$",
+      "B": "$\\sqrt{g R}$",
+      "C": "$\\sqrt{2 g R}$",
+      "D": "$\\sqrt{\\frac{1}{3} g R}$"
+    },
+    "optionsList": [
+      "$\\sqrt{\\frac{2}{3} g R}$",
+      "$\\sqrt{g R}$",
+      "$\\sqrt{2 g R}$",
+      "$\\sqrt{\\frac{1}{3} g R}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSubstitute $\\cos\\theta = 2/3$ into $v^2 = 2gR(1 - \\cos\\theta) = 2gR(1 - 2/3) = 2gR(1/3) = \\frac{2}{3}gR \\implies v = \\sqrt{\\frac{2}{3}gR}$.\n\n2. GIVEN:\n$\\cos\\theta = 2/3$ at separation point.\n\n3. FORMULA / PRINCIPLE:\n$v = \\sqrt{2gR(1 - \\cos\\theta)} = \\sqrt{\\frac{2}{3}gR}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. From energy conservation: $v^2 = 2gR(1 - \\cos\\theta)$.\n2. At separation: $\\cos\\theta = \\frac{2}{3}$.\n3. $v^2 = 2gR\\left(1 - \\frac{2}{3}\\right) = 2gR\\left(\\frac{1}{3}\\right) = \\frac{2}{3}gR$.\n4. Therefore, $v = \\sqrt{\\frac{2}{3}gR}$.\n\n5. FINAL ANSWER:\nOption A: $\\sqrt{\\frac{2}{3} g R}$\n\n6. QUICK TIP:\nAlternative Check: At $N = 0$, $mg\\cos\\theta = \\frac{mv^2}{R} \\implies v^2 = gR\\cos\\theta = gR(2/3) \\implies v = \\sqrt{\\frac{2}{3}gR}$! Instantly verified.",
+    "solutionStructured": {
+      "concept": "Substitute $\\cos\\theta = 2/3$ into $v^2 = 2gR(1 - \\cos\\theta) = 2gR(1 - 2/3) = 2gR(1/3) = \\frac{2}{3}gR \\implies v = \\sqrt{\\frac{2}{3}gR}$.",
+      "given": "$\\cos\\theta = 2/3$ at separation point.",
+      "formula": "$v = \\sqrt{2gR(1 - \\cos\\theta)} = \\sqrt{\\frac{2}{3}gR}$.",
+      "stepByStep": "1. From energy conservation: $v^2 = 2gR(1 - \\cos\\theta)$.\n2. At separation: $\\cos\\theta = \\frac{2}{3}$.\n3. $v^2 = 2gR\\left(1 - \\frac{2}{3}\\right) = 2gR\\left(\\frac{1}{3}\\right) = \\frac{2}{3}gR$.\n4. Therefore, $v = \\sqrt{\\frac{2}{3}gR}$.",
+      "finalAnswer": "Option A: $\\sqrt{\\frac{2}{3} g R}$",
+      "whyOtherOptionsWrong": "Option B ($\\sqrt{gR}$) is the critical speed at the top of a loop. Option C ($\\sqrt{2gR}$) is free fall from height $R$. Option D is $\\sqrt{gR/3}$."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Circular motion and centripetal force",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-436",
+    "questionNumber": 436,
+    "question": "A particle of mass $m$ is tied to a string of length $L$ and whirled in a vertical circle. What is the minimum speed $v_{\\text{bottom}}$ that must be imparted to the particle at the lowest point so that it completes a full vertical circle?",
+    "options": {
+      "A": "$\\sqrt{5 g L}$",
+      "B": "$\\sqrt{4 g L}$",
+      "C": "$\\sqrt{3 g L}$",
+      "D": "$\\sqrt{g L}$"
+    },
+    "optionsList": [
+      "$\\sqrt{5 g L}$",
+      "$\\sqrt{4 g L}$",
+      "$\\sqrt{3 g L}$",
+      "$\\sqrt{g L}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nAt the highest point, the minimum speed to maintain string tautness ($T \\ge 0$) is $v_{\\text{top}} = \\sqrt{gL}$. By conservation of mechanical energy between bottom and top: $\\frac{1}{2}m v_{\\text{bottom}}^2 = \\frac{1}{2}m v_{\\text{top}}^2 + mg(2L) = \\frac{1}{2}m(gL) + 2mgL = \\frac{5}{2}mgL \\implies v_{\\text{bottom}} = \\sqrt{5gL}$.\n\n2. GIVEN:\nVertical circle with string length $L$, mass $m$.\n\n3. FORMULA / PRINCIPLE:\n$v_{\\text{top}} = \\sqrt{gL}$; $v_{\\text{bottom}} = \\sqrt{v_{\\text{top}}^2 + 4gL} = \\sqrt{5gL}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. At the top of the circle, tension must be non-negative: $T_{\\text{top}} = \\frac{mv_{\\text{top}}^2}{L} - mg \\ge 0 \\implies v_{\\text{top}} \\ge \\sqrt{gL}$.\n2. Conservation of mechanical energy between lowest point and highest point:\n   $K_{\\text{bottom}} = K_{\\text{top}} + U_{\\text{top}}$.\n3. $\\frac{1}{2}mv_{\\text{bottom}}^2 = \\frac{1}{2}mv_{\\text{top}}^2 + mg(2L)$.\n4. Setting $v_{\\text{top}} = \\sqrt{gL}$:\n   $\\frac{1}{2}mv_{\\text{bottom}}^2 = \\frac{1}{2}m(gL) + 2mgL = \\frac{5}{2}mgL$.\n5. Multiply by $2/m$: $v_{\\text{bottom}}^2 = 5gL \\implies v_{\\text{bottom}} = \\sqrt{5gL}$.\n\n5. FINAL ANSWER:\nOption A: $\\sqrt{5 g L}$\n\n6. QUICK TIP:\nCrucial NEET Benchmarks for Vertical Circle (String):\n- Minimum speed at bottom: $\\sqrt{5gL}$\n- Minimum speed at horizontal: $\\sqrt{3gL}$\n- Minimum speed at top: $\\sqrt{gL}$",
+    "solutionStructured": {
+      "concept": "At the highest point, the minimum speed to maintain string tautness ($T \\ge 0$) is $v_{\\text{top}} = \\sqrt{gL}$. By conservation of mechanical energy between bottom and top: $\\frac{1}{2}m v_{\\text{bottom}}^2 = \\frac{1}{2}m v_{\\text{top}}^2 + mg(2L) = \\frac{1}{2}m(gL) + 2mgL = \\frac{5}{2}mgL \\implies v_{\\text{bottom}} = \\sqrt{5gL}$.",
+      "given": "Vertical circle with string length $L$, mass $m$.",
+      "formula": "$v_{\\text{top}} = \\sqrt{gL}$; $v_{\\text{bottom}} = \\sqrt{v_{\\text{top}}^2 + 4gL} = \\sqrt{5gL}$.",
+      "stepByStep": "1. At the top of the circle, tension must be non-negative: $T_{\\text{top}} = \\frac{mv_{\\text{top}}^2}{L} - mg \\ge 0 \\implies v_{\\text{top}} \\ge \\sqrt{gL}$.\n2. Conservation of mechanical energy between lowest point and highest point:\n   $K_{\\text{bottom}} = K_{\\text{top}} + U_{\\text{top}}$.\n3. $\\frac{1}{2}mv_{\\text{bottom}}^2 = \\frac{1}{2}mv_{\\text{top}}^2 + mg(2L)$.\n4. Setting $v_{\\text{top}} = \\sqrt{gL}$:\n   $\\frac{1}{2}mv_{\\text{bottom}}^2 = \\frac{1}{2}m(gL) + 2mgL = \\frac{5}{2}mgL$.\n5. Multiply by $2/m$: $v_{\\text{bottom}}^2 = 5gL \\implies v_{\\text{bottom}} = \\sqrt{5gL}$.",
+      "finalAnswer": "Option A: $\\sqrt{5 g L}$",
+      "whyOtherOptionsWrong": "Option B ($\\sqrt{4gL}$) is for a rigid rod (where top speed can reach 0). Option C is the minimum speed at the horizontal position. Option D is the minimum speed at the top."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Circular motion and centripetal force",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-437",
+    "questionNumber": 437,
+    "question": "In the vertical circle completed with a light string (with $v_{\\text{bottom}} = \\sqrt{5gL}$), what is the difference between the string tension at the lowest point ($T_{\\text{bottom}}$) and at the highest point ($T_{\\text{top}}$)?",
+    "options": {
+      "A": "$6 mg$",
+      "B": "$4 mg$",
+      "C": "$2 mg$",
+      "D": "$5 mg$"
+    },
+    "optionsList": [
+      "$6 mg$",
+      "$4 mg$",
+      "$2 mg$",
+      "$5 mg$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nAt the bottom: $T_{\\text{bottom}} = mg + \\frac{mv_{\\text{bottom}}^2}{L}$. At the top: $T_{\\text{top}} = \\frac{mv_{\\text{top}}^2}{L} - mg$. By energy conservation, $v_{\\text{bottom}}^2 - v_{\\text{top}}^2 = 4gL$. Thus, $T_{\\text{bottom}} - T_{\\text{top}} = 2mg + \\frac{m(4gL)}{L} = 2mg + 4mg = 6mg$.\n\n2. GIVEN:\nVertical circle with string length $L$.\n\n3. FORMULA / PRINCIPLE:\n$T_{\\text{bottom}} - T_{\\text{top}} = 6 mg$ (universal for ANY vertical circular motion in gravity).\n\n4. STEP-BY-STEP SOLUTION:\n1. At the lowest point: $T_B - mg = \\frac{m v_B^2}{L} \\implies T_B = mg + \\frac{m v_B^2}{L}$.\n2. At the highest point: $T_T + mg = \\frac{m v_T^2}{L} \\implies T_T = \\frac{m v_T^2}{L} - mg$.\n3. Difference in tension:\n   $T_B - T_T = 2mg + \\frac{m}{L}(v_B^2 - v_T^2)$.\n4. From mechanical energy conservation: $\\frac{1}{2}mv_B^2 - \\frac{1}{2}mv_T^2 = mg(2L) \\implies v_B^2 - v_T^2 = 4gL$.\n5. Substitute into the tension difference:\n   $T_B - T_T = 2mg + \\frac{m}{L}(4gL) = 2mg + 4mg = 6mg$.\n\n5. FINAL ANSWER:\nOption A: $6 mg$\n\n6. QUICK TIP:\nUniversal Invariant: $T_{\\text{bottom}} - T_{\\text{top}} = 6 mg$ ALWAYS, regardless of the initial launch speed!",
+    "solutionStructured": {
+      "concept": "At the bottom: $T_{\\text{bottom}} = mg + \\frac{mv_{\\text{bottom}}^2}{L}$. At the top: $T_{\\text{top}} = \\frac{mv_{\\text{top}}^2}{L} - mg$. By energy conservation, $v_{\\text{bottom}}^2 - v_{\\text{top}}^2 = 4gL$. Thus, $T_{\\text{bottom}} - T_{\\text{top}} = 2mg + \\frac{m(4gL)}{L} = 2mg + 4mg = 6mg$.",
+      "given": "Vertical circle with string length $L$.",
+      "formula": "$T_{\\text{bottom}} - T_{\\text{top}} = 6 mg$ (universal for ANY vertical circular motion in gravity).",
+      "stepByStep": "1. At the lowest point: $T_B - mg = \\frac{m v_B^2}{L} \\implies T_B = mg + \\frac{m v_B^2}{L}$.\n2. At the highest point: $T_T + mg = \\frac{m v_T^2}{L} \\implies T_T = \\frac{m v_T^2}{L} - mg$.\n3. Difference in tension:\n   $T_B - T_T = 2mg + \\frac{m}{L}(v_B^2 - v_T^2)$.\n4. From mechanical energy conservation: $\\frac{1}{2}mv_B^2 - \\frac{1}{2}mv_T^2 = mg(2L) \\implies v_B^2 - v_T^2 = 4gL$.\n5. Substitute into the tension difference:\n   $T_B - T_T = 2mg + \\frac{m}{L}(4gL) = 2mg + 4mg = 6mg$.",
+      "finalAnswer": "Option A: $6 mg$",
+      "whyOtherOptionsWrong": "Option B (4 mg) is just the energy term without the $2mg$ gravity component. Option C is $2mg$. Option D is $5mg$."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Circular motion and centripetal force",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-438",
+    "questionNumber": 438,
+    "question": "If a light rigid rod is used instead of a string to whirl a particle of mass $m$ in a vertical circle of radius $L$, what is the minimum speed required at the lowest point to complete the vertical circle?",
+    "options": {
+      "A": "$\\sqrt{4 g L} = 2\\sqrt{gL}$",
+      "B": "$\\sqrt{5 g L}$",
+      "C": "$\\sqrt{3 g L}$",
+      "D": "$\\sqrt{2 g L}$"
+    },
+    "optionsList": [
+      "$\\sqrt{4 g L} = 2\\sqrt{gL}$",
+      "$\\sqrt{5 g L}$",
+      "$\\sqrt{3 g L}$",
+      "$\\sqrt{2 g L}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nUnlike a flexible string which slacks if $T < 0$, a rigid rod can support compressive thrust ($T \\le 0$). Therefore, the particle only needs to reach the top with zero velocity ($v_{\\text{top}} = 0$). By energy conservation: $\\frac{1}{2}m v_{\\text{bottom}}^2 = mg(2L) \\implies v_{\\text{bottom}} = \\sqrt{4gL} = 2\\sqrt{gL}$.\n\n2. GIVEN:\nLight rigid rod of length $L$, mass $m$.\n\n3. FORMULA / PRINCIPLE:\n$v_{\\text{top}} = 0$; $v_{\\text{bottom}} = \\sqrt{4gL} = 2\\sqrt{gL}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. A string requires $v_{\\text{top}} \\ge \\sqrt{gL}$ because it cannot withstand compression (it slacks).\n2. A rigid rod can provide upward thrust, so it does not collapse even if speed at the top is zero.\n3. The minimum speed at the top to complete the loop is simply $v_{\\text{top}} = 0$.\n4. By conservation of mechanical energy:\n   $\\frac{1}{2}mv_{\\text{bottom}}^2 = 0 + mg(2L) = 2mgL$.\n5. Multiply by $2/m$: $v_{\\text{bottom}}^2 = 4gL \\implies v_{\\text{bottom}} = \\sqrt{4gL} = 2\\sqrt{gL}$.\n\n5. FINAL ANSWER:\nOption A: $\\sqrt{4 g L} = 2\\sqrt{gL}$\n\n6. QUICK TIP:\nString vs Rod Contrast:\n- String requires $v_{\\text{bottom}} = \\sqrt{5gL}$\n- Rigid Rod requires $v_{\\text{bottom}} = \\sqrt{4gL} = 2\\sqrt{gL}$\nEssential distinction tested repeatedly in NEET!",
+    "solutionStructured": {
+      "concept": "Unlike a flexible string which slacks if $T < 0$, a rigid rod can support compressive thrust ($T \\le 0$). Therefore, the particle only needs to reach the top with zero velocity ($v_{\\text{top}} = 0$). By energy conservation: $\\frac{1}{2}m v_{\\text{bottom}}^2 = mg(2L) \\implies v_{\\text{bottom}} = \\sqrt{4gL} = 2\\sqrt{gL}$.",
+      "given": "Light rigid rod of length $L$, mass $m$.",
+      "formula": "$v_{\\text{top}} = 0$; $v_{\\text{bottom}} = \\sqrt{4gL} = 2\\sqrt{gL}$.",
+      "stepByStep": "1. A string requires $v_{\\text{top}} \\ge \\sqrt{gL}$ because it cannot withstand compression (it slacks).\n2. A rigid rod can provide upward thrust, so it does not collapse even if speed at the top is zero.\n3. The minimum speed at the top to complete the loop is simply $v_{\\text{top}} = 0$.\n4. By conservation of mechanical energy:\n   $\\frac{1}{2}mv_{\\text{bottom}}^2 = 0 + mg(2L) = 2mgL$.\n5. Multiply by $2/m$: $v_{\\text{bottom}}^2 = 4gL \\implies v_{\\text{bottom}} = \\sqrt{4gL} = 2\\sqrt{gL}$.",
+      "finalAnswer": "Option A: $\\sqrt{4 g L} = 2\\sqrt{gL}$",
+      "whyOtherOptionsWrong": "Option B ($\\sqrt{5gL}$) is for a string. Option C ($\\sqrt{3gL}$) is speed at horizontal. Option D is $\\sqrt{2gL}$."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Circular motion and centripetal force",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-439",
+    "questionNumber": 439,
+    "question": "The optimum speed $v_0$ with which a vehicle can negotiate a curve of radius $r$ on a road banked at an angle $\\theta$ without relying on friction is:",
+    "options": {
+      "A": "$v_0 = \\sqrt{rg \\tan\\theta}$",
+      "B": "$v_0 = rg \\sin\\theta$",
+      "C": "$v_0 = \\sqrt{\\frac{rg}{\\tan\\theta}}$",
+      "D": "$v_0 = \\sqrt{rg \\cos\\theta}$"
+    },
+    "optionsList": [
+      "$v_0 = \\sqrt{rg \\tan\\theta}$",
+      "$v_0 = rg \\sin\\theta$",
+      "$v_0 = \\sqrt{\\frac{rg}{\\tan\\theta}}$",
+      "$v_0 = \\sqrt{rg \\cos\\theta}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nOn a banked curve without friction, the horizontal component of the normal reaction provides the centripetal force ($N\\sin\\theta = \\frac{mv^2}{r}$), while the vertical component balances the vehicle's weight ($N\\cos\\theta = mg$). Dividing these two equations gives $\\tan\\theta = \\frac{v^2}{rg} \\implies v_0 = \\sqrt{rg\\tan\\theta}$.\n\n2. GIVEN:\nRadius $r$, banking angle $\\theta$, acceleration due to gravity $g$, zero friction.\n\n3. FORMULA / PRINCIPLE:\n$N\\sin\\theta = \\frac{mv^2}{r}$; $N\\cos\\theta = mg \\implies \\tan\\theta = \\frac{v^2}{rg} \\implies v_0 = \\sqrt{rg\\tan\\theta}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Draw the free-body diagram of the vehicle on the friction-free banked road:\n   - Downward gravitational weight $mg$.\n   - Normal reaction $N$ perpendicular to the banked surface, tilted at angle $\\theta$ to the vertical.\n2. Resolve the normal reaction into components:\n   - Vertical component: $N\\cos\\theta$ pointing upwards.\n   - Horizontal radial component: $N\\sin\\theta$ pointing towards the center of curvature.\n3. Vertical equilibrium (no vertical acceleration): $N\\cos\\theta = mg$.\n4. Horizontal equation of motion (centripetal force): $N\\sin\\theta = \\frac{mv^2}{r}$.\n5. Divide horizontal equation by vertical equation:\n   $\\frac{N\\sin\\theta}{N\\cos\\theta} = \\frac{mv^2/r}{mg} \\implies \\tan\\theta = \\frac{v^2}{rg}$.\n6. Solving for speed: $v_0 = \\sqrt{rg\\tan\\theta}$.\n\n5. FINAL ANSWER:\nOption A: $v_0 = \\sqrt{rg \\tan\\theta}$\n\n6. QUICK TIP:\nAt the optimum speed $v_0 = \\sqrt{rg\\tan\\theta}$, there is zero lateral friction on the tires, minimizing tire wear and tear!",
+    "solutionStructured": {
+      "concept": "On a banked curve without friction, the horizontal component of the normal reaction provides the centripetal force ($N\\sin\\theta = \\frac{mv^2}{r}$), while the vertical component balances the vehicle's weight ($N\\cos\\theta = mg$). Dividing these two equations gives $\\tan\\theta = \\frac{v^2}{rg} \\implies v_0 = \\sqrt{rg\\tan\\theta}$.",
+      "given": "Radius $r$, banking angle $\\theta$, acceleration due to gravity $g$, zero friction.",
+      "formula": "$N\\sin\\theta = \\frac{mv^2}{r}$; $N\\cos\\theta = mg \\implies \\tan\\theta = \\frac{v^2}{rg} \\implies v_0 = \\sqrt{rg\\tan\\theta}$.",
+      "stepByStep": "1. Draw the free-body diagram of the vehicle on the friction-free banked road:\n   - Downward gravitational weight $mg$.\n   - Normal reaction $N$ perpendicular to the banked surface, tilted at angle $\\theta$ to the vertical.\n2. Resolve the normal reaction into components:\n   - Vertical component: $N\\cos\\theta$ pointing upwards.\n   - Horizontal radial component: $N\\sin\\theta$ pointing towards the center of curvature.\n3. Vertical equilibrium (no vertical acceleration): $N\\cos\\theta = mg$.\n4. Horizontal equation of motion (centripetal force): $N\\sin\\theta = \\frac{mv^2}{r}$.\n5. Divide horizontal equation by vertical equation:\n   $\\frac{N\\sin\\theta}{N\\cos\\theta} = \\frac{mv^2/r}{mg} \\implies \\tan\\theta = \\frac{v^2}{rg}$.\n6. Solving for speed: $v_0 = \\sqrt{rg\\tan\\theta}$.",
+      "finalAnswer": "Option A: $v_0 = \\sqrt{rg \\tan\\theta}$",
+      "whyOtherOptionsWrong": "Option B has wrong dimensions ($L^2 T^{-2}$ instead of $L T^{-1}$). Option C inverts the tangent. Option D uses cosine."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Banking of roads and related applications",
+    "source": "NEET UG 2024",
+    "isPYQ": true,
+    "pyqYear": 2024
+  },
+  {
+    "id": "lom-mcq-440",
+    "questionNumber": 440,
+    "question": "A circular track of radius $400\\text{ m}$ is banked at an angle of $45^\\circ$. If the coefficient of friction between the wheels of a vehicle and the road surface is $0.2$, what is the optimum speed of the vehicle to avoid wear and tear of tires (take $g = 10\\text{ m/s}^2$)?",
+    "options": {
+      "A": "$40\\text{ m/s}$",
+      "B": "$63.2\\text{ m/s}$",
+      "C": "$80\\text{ m/s}$",
+      "D": "$20\\text{ m/s}$"
+    },
+    "optionsList": [
+      "$40\\text{ m/s}$",
+      "$63.2\\text{ m/s}$",
+      "$80\\text{ m/s}$",
+      "$20\\text{ m/s}$"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nThe optimum speed to avoid wear and tear of tires is the speed at which no frictional force is needed to negotiate the banked turn. This optimum speed depends purely on radius and banking angle, not on friction: $v_0 = \\sqrt{rg\\tan\\theta}$. For $r = 400\\text{ m}, \\theta = 45^\\circ, g = 10\\text{ m/s}^2$, $v_0 = \\sqrt{400 \\times 10 \\times \\tan 45^\\circ} = \\sqrt{4000} \\approx 63.2\\text{ m/s}$.\n\n2. GIVEN:\n$r = 400\\text{ m}, \\theta = 45^\\circ, \\mu = 0.2, g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$v_0 = \\sqrt{rg\\tan\\theta}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. The question asks for the 'optimum speed to avoid wear and tear of tires'.\n2. Wear and tear is avoided when the frictional force between the tires and the road is ZERO.\n3. At zero friction, the required speed is given by the ideal banking formula: $v_0 = \\sqrt{rg\\tan\\theta}$.\n4. Given $\\tan 45^\\circ = 1$, $r = 400\\text{ m}$, $g = 10\\text{ m/s}^2$.\n5. Substitute values: $v_0 = \\sqrt{400 \\times 10 \\times 1} = \\sqrt{4000}\\text{ m/s}$.\n6. Since $\\sqrt{4000} = 20\\sqrt{10} \\approx 20 \\times 3.162 = 63.24\\text{ m/s} \\approx 63.2\\text{ m/s}$.\n\n5. FINAL ANSWER:\nOption B: $63.2\\text{ m/s}$\n\n6. QUICK TIP:\nNEET Trap: The friction coefficient $\\mu = 0.2$ is extra distractor information! 'Optimum speed to avoid wear' means $f = 0$, so $\\mu$ is NOT used.",
+    "solutionStructured": {
+      "concept": "The optimum speed to avoid wear and tear of tires is the speed at which no frictional force is needed to negotiate the banked turn. This optimum speed depends purely on radius and banking angle, not on friction: $v_0 = \\sqrt{rg\\tan\\theta}$. For $r = 400\\text{ m}, \\theta = 45^\\circ, g = 10\\text{ m/s}^2$, $v_0 = \\sqrt{400 \\times 10 \\times \\tan 45^\\circ} = \\sqrt{4000} \\approx 63.2\\text{ m/s}$.",
+      "given": "$r = 400\\text{ m}, \\theta = 45^\\circ, \\mu = 0.2, g = 10\\text{ m/s}^2$.",
+      "formula": "$v_0 = \\sqrt{rg\\tan\\theta}$.",
+      "stepByStep": "1. The question asks for the 'optimum speed to avoid wear and tear of tires'.\n2. Wear and tear is avoided when the frictional force between the tires and the road is ZERO.\n3. At zero friction, the required speed is given by the ideal banking formula: $v_0 = \\sqrt{rg\\tan\\theta}$.\n4. Given $\\tan 45^\\circ = 1$, $r = 400\\text{ m}$, $g = 10\\text{ m/s}^2$.\n5. Substitute values: $v_0 = \\sqrt{400 \\times 10 \\times 1} = \\sqrt{4000}\\text{ m/s}$.\n6. Since $\\sqrt{4000} = 20\\sqrt{10} \\approx 20 \\times 3.162 = 63.24\\text{ m/s} \\approx 63.2\\text{ m/s}$.",
+      "finalAnswer": "Option B: $63.2\\text{ m/s}$",
+      "whyOtherOptionsWrong": "Option A ($40\\text{ m/s}$) is $\\sqrt{1600}$. Option C ($80\\text{ m/s}$) is double 40. Option D is 20."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Banking of roads and related applications",
+    "source": "NEET UG 2025",
+    "isPYQ": true,
+    "pyqYear": 2025
+  },
+  {
+    "id": "lom-mcq-441",
+    "questionNumber": 441,
+    "question": "Why are outer rails elevated (banked) above inner rails on curved railway tracks?",
+    "options": {
+      "A": "To provide the necessary centripetal force from the horizontal component of the normal reaction, reducing wear on the wheel flanges",
+      "B": "To increase the gravitational pull on the train",
+      "C": "To allow the train to stop more quickly",
+      "D": "To prevent air resistance from overturning the train"
+    },
+    "optionsList": [
+      "To provide the necessary centripetal force from the horizontal component of the normal reaction, reducing wear on the wheel flanges",
+      "To increase the gravitational pull on the train",
+      "To allow the train to stop more quickly",
+      "To prevent air resistance from overturning the train"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nWhen a railway track is curved, the train needs a centripetal force towards the center of curvature. On a flat track, this force is provided by the lateral thrust of the wheel flanges against the inner side of the rail, causing severe wear. Raising the outer rail (super-elevation) tilts the track by angle $\\theta$ so that the normal reaction's horizontal component $N\\sin\\theta$ provides the centripetal force.\n\n2. GIVEN:\nBanking of railway tracks (super-elevation).\n\n3. FORMULA / PRINCIPLE:\n$\\tan\\theta = \\frac{v^2}{rg} = \\frac{h}{d}$, where $h$ is super-elevation and $d$ is gauge width.\n\n4. STEP-BY-STEP SOLUTION:\n1. A train negotiating a curve requires centripetal acceleration $a_c = v^2/r$.\n2. Without banking, the normal reaction is strictly vertical, so only the mechanical flange of the wheel pushing horizontally against the rail provides this force, causing massive friction and risk of derailment.\n3. By raising the outer rail by height $h$ (super-elevation), the track is tilted at angle $\\theta$.\n4. The normal reaction tilts inward, and its horizontal component $N\\sin\\theta$ naturally provides the required centripetal force.\n\n5. FINAL ANSWER:\nOption A: To provide the necessary centripetal force from the horizontal component of the normal reaction, reducing wear on the wheel flanges\n\n6. QUICK TIP:\nSuper-elevation in railways: $h = \\frac{v^2 d}{rg}$ where $d$ is the gauge width (distance between rails)!",
+    "solutionStructured": {
+      "concept": "When a railway track is curved, the train needs a centripetal force towards the center of curvature. On a flat track, this force is provided by the lateral thrust of the wheel flanges against the inner side of the rail, causing severe wear. Raising the outer rail (super-elevation) tilts the track by angle $\\theta$ so that the normal reaction's horizontal component $N\\sin\\theta$ provides the centripetal force.",
+      "given": "Banking of railway tracks (super-elevation).",
+      "formula": "$\\tan\\theta = \\frac{v^2}{rg} = \\frac{h}{d}$, where $h$ is super-elevation and $d$ is gauge width.",
+      "stepByStep": "1. A train negotiating a curve requires centripetal acceleration $a_c = v^2/r$.\n2. Without banking, the normal reaction is strictly vertical, so only the mechanical flange of the wheel pushing horizontally against the rail provides this force, causing massive friction and risk of derailment.\n3. By raising the outer rail by height $h$ (super-elevation), the track is tilted at angle $\\theta$.\n4. The normal reaction tilts inward, and its horizontal component $N\\sin\\theta$ naturally provides the required centripetal force.",
+      "finalAnswer": "Option A: To provide the necessary centripetal force from the horizontal component of the normal reaction, reducing wear on the wheel flanges",
+      "whyOtherOptionsWrong": "Options B, C, and D are absurd physical explanations."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Banking of roads and related applications",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-442",
+    "questionNumber": 442,
+    "question": "A cyclist negotiating a sharp unbanked circular curve of radius $r$ at speed $v$ leans inward by an angle $\\theta$ with the vertical. The angle $\\theta$ is given by:",
+    "options": {
+      "A": "$\\tan\\theta = \\frac{v^2}{rg}$",
+      "B": "$\\sin\\theta = \\frac{v^2}{rg}$",
+      "C": "$\\tan\\theta = \\frac{rg}{v^2}$",
+      "D": "$\\cos\\theta = \\frac{v^2}{rg}$"
+    },
+    "optionsList": [
+      "$\\tan\\theta = \\frac{v^2}{rg}$",
+      "$\\sin\\theta = \\frac{v^2}{rg}$",
+      "$\\tan\\theta = \\frac{rg}{v^2}$",
+      "$\\cos\\theta = \\frac{v^2}{rg}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTo avoid toppling over due to the outward overturning torque of inertia (or friction about the center of mass), the cyclist leans inward so that the resultant contact force from the ground passes directly through the center of mass. This requires $\\tan\\theta = \\frac{v^2}{rg}$.\n\n2. GIVEN:\nCyclist on circular curve, speed $v$, radius $r$, lean angle $\\theta$ with vertical.\n\n3. FORMULA / PRINCIPLE:\n$\\tan\\theta = \\frac{v^2}{rg}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Ground exerts upward normal force $N = mg$ and inward static friction $f_s = \\frac{mv^2}{r}$.\n2. The resultant contact force $\\vec{R}$ makes an angle $\\theta$ with the vertical.\n3. For rotational equilibrium (no toppling), the line of action of $\\vec{R}$ must pass straight through the cyclist's center of mass.\n4. Therefore: $\\tan\\theta = \\frac{\\text{horizontal component}}{\\text{vertical component}} = \\frac{f_s}{N} = \\frac{mv^2/r}{mg} = \\frac{v^2}{rg}$.\n\n5. FINAL ANSWER:\nOption A: $\\tan\\theta = \\frac{v^2}{rg}$\n\n6. QUICK TIP:\nBending of a Cyclist: $\\tan\\theta = \\frac{v^2}{rg}$ measured with the VERTICAL!",
+    "solutionStructured": {
+      "concept": "To avoid toppling over due to the outward overturning torque of inertia (or friction about the center of mass), the cyclist leans inward so that the resultant contact force from the ground passes directly through the center of mass. This requires $\\tan\\theta = \\frac{v^2}{rg}$.",
+      "given": "Cyclist on circular curve, speed $v$, radius $r$, lean angle $\\theta$ with vertical.",
+      "formula": "$\\tan\\theta = \\frac{v^2}{rg}$.",
+      "stepByStep": "1. Ground exerts upward normal force $N = mg$ and inward static friction $f_s = \\frac{mv^2}{r}$.\n2. The resultant contact force $\\vec{R}$ makes an angle $\\theta$ with the vertical.\n3. For rotational equilibrium (no toppling), the line of action of $\\vec{R}$ must pass straight through the cyclist's center of mass.\n4. Therefore: $\\tan\\theta = \\frac{\\text{horizontal component}}{\\text{vertical component}} = \\frac{f_s}{N} = \\frac{mv^2/r}{mg} = \\frac{v^2}{rg}$.",
+      "finalAnswer": "Option A: $\\tan\\theta = \\frac{v^2}{rg}$",
+      "whyOtherOptionsWrong": "Option B and D use incorrect trigonometric functions. Option C inverts the ratio."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Banking of roads and related applications",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-443",
+    "questionNumber": 443,
+    "question": "A road of radius $r = 50\\text{ m}$ is banked at an angle $\\theta = 45^\\circ$. What is the ideal speed for a car to take this curve without any friction (take $g = 10\\text{ m/s}^2$)?",
+    "options": {
+      "A": "$22.36\\text{ m/s}$",
+      "B": "$15.81\\text{ m/s}$",
+      "C": "$50.0\\text{ m/s}$",
+      "D": "$10.0\\text{ m/s}$"
+    },
+    "optionsList": [
+      "$22.36\\text{ m/s}$",
+      "$15.81\\text{ m/s}$",
+      "$50.0\\text{ m/s}$",
+      "$10.0\\text{ m/s}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIdeal speed is $v_0 = \\sqrt{rg\\tan\\theta}$. For $r = 50\\text{ m}, \\theta = 45^\\circ, g = 10\\text{ m/s}^2$, $v_0 = \\sqrt{50 \\times 10 \\times 1} = \\sqrt{500} \\approx 22.36\\text{ m/s}$.\n\n2. GIVEN:\n$r = 50\\text{ m}, \\theta = 45^\\circ, g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$v_0 = \\sqrt{rg\\tan 45^\\circ} = \\sqrt{500} \\approx 22.36\\text{ m/s}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Formula for ideal banking speed: $v_0 = \\sqrt{rg\\tan\\theta}$.\n2. Given $\\tan 45^\\circ = 1$.\n3. Substitute values: $v_0 = \\sqrt{50 \\times 10 \\times 1} = \\sqrt{500}$.\n4. $\\sqrt{500} = 10\\sqrt{5} \\approx 10 \\times 2.236 = 22.36\\text{ m/s}$.\n\n5. FINAL ANSWER:\nOption A: $22.36\\text{ m/s}$\n\n6. QUICK TIP:\nIn km/h, this is $22.36 \\times 3.6 \\approx 80.5\\text{ km/h}$!",
+    "solutionStructured": {
+      "concept": "Ideal speed is $v_0 = \\sqrt{rg\\tan\\theta}$. For $r = 50\\text{ m}, \\theta = 45^\\circ, g = 10\\text{ m/s}^2$, $v_0 = \\sqrt{50 \\times 10 \\times 1} = \\sqrt{500} \\approx 22.36\\text{ m/s}$.",
+      "given": "$r = 50\\text{ m}, \\theta = 45^\\circ, g = 10\\text{ m/s}^2$.",
+      "formula": "$v_0 = \\sqrt{rg\\tan 45^\\circ} = \\sqrt{500} \\approx 22.36\\text{ m/s}$.",
+      "stepByStep": "1. Formula for ideal banking speed: $v_0 = \\sqrt{rg\\tan\\theta}$.\n2. Given $\\tan 45^\\circ = 1$.\n3. Substitute values: $v_0 = \\sqrt{50 \\times 10 \\times 1} = \\sqrt{500}$.\n4. $\\sqrt{500} = 10\\sqrt{5} \\approx 10 \\times 2.236 = 22.36\\text{ m/s}$.",
+      "finalAnswer": "Option A: $22.36\\text{ m/s}$",
+      "whyOtherOptionsWrong": "Option B ($15.81\\text{ m/s}$) is $\\sqrt{250}$. Option C is $50\\text{ m/s}$. Option D is $10\\text{ m/s}$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Banking of roads and related applications",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-444",
+    "questionNumber": 444,
+    "question": "A railway track has a gauge width $d = 1.0\\text{ m}$ and a radius of curvature $r = 200\\text{ m}$. If the train is designed to negotiate the curve at a speed of $v = 10\\text{ m/s}$ without lateral thrust on the wheel flanges, what must be the super-elevation $h$ of the outer rail (take $g = 10\\text{ m/s}^2$)?",
+    "options": {
+      "A": "0.05 m (5 cm)",
+      "B": "0.10 m (10 cm)",
+      "C": "0.02 m (2 cm)",
+      "D": "0.20 m (20 cm)"
+    },
+    "optionsList": [
+      "0.05 m (5 cm)",
+      "0.10 m (10 cm)",
+      "0.02 m (2 cm)",
+      "0.20 m (20 cm)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor small banking angle $\\theta$, $\\tan\\theta \\approx \\sin\\theta = \\frac{h}{d}$. The banking condition is $\\tan\\theta = \\frac{v^2}{rg} \\implies \\frac{h}{d} = \\frac{v^2}{rg} \\implies h = \\frac{v^2 d}{rg}$.\n\n2. GIVEN:\n$d = 1.0\\text{ m}, r = 200\\text{ m}, v = 10\\text{ m/s}, g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$h = \\frac{v^2 d}{rg}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Banking formula: $\\tan\\theta = \\frac{v^2}{rg}$.\n2. For small angles, $\\tan\\theta \\approx \\frac{h}{d}$ where $h$ is elevation and $d$ is track gauge.\n3. Equating: $\\frac{h}{d} = \\frac{v^2}{rg} \\implies h = \\frac{v^2 d}{rg}$.\n4. Substitute values:\n   $h = \\frac{(10)^2 \\times 1.0}{200 \\times 10} = \\frac{100}{2000} = \\frac{1}{20} = 0.05\\text{ m} = 5\\text{ cm}$.\n\n5. FINAL ANSWER:\nOption A: 0.05 m (5 cm)\n\n6. QUICK TIP:\nSuper-elevation formula: $h = \\frac{v^2 d}{rg}$. Direct formula application in NEET!",
+    "solutionStructured": {
+      "concept": "For small banking angle $\\theta$, $\\tan\\theta \\approx \\sin\\theta = \\frac{h}{d}$. The banking condition is $\\tan\\theta = \\frac{v^2}{rg} \\implies \\frac{h}{d} = \\frac{v^2}{rg} \\implies h = \\frac{v^2 d}{rg}$.",
+      "given": "$d = 1.0\\text{ m}, r = 200\\text{ m}, v = 10\\text{ m/s}, g = 10\\text{ m/s}^2$.",
+      "formula": "$h = \\frac{v^2 d}{rg}$.",
+      "stepByStep": "1. Banking formula: $\\tan\\theta = \\frac{v^2}{rg}$.\n2. For small angles, $\\tan\\theta \\approx \\frac{h}{d}$ where $h$ is elevation and $d$ is track gauge.\n3. Equating: $\\frac{h}{d} = \\frac{v^2}{rg} \\implies h = \\frac{v^2 d}{rg}$.\n4. Substitute values:\n   $h = \\frac{(10)^2 \\times 1.0}{200 \\times 10} = \\frac{100}{2000} = \\frac{1}{20} = 0.05\\text{ m} = 5\\text{ cm}$.",
+      "finalAnswer": "Option A: 0.05 m (5 cm)",
+      "whyOtherOptionsWrong": "Option B (0.10 m) uses $d = 2$. Option C (0.02 m) divides by 5000. Option D (0.20 m) is $4 \\times 0.05$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Banking of roads and related applications",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-445",
+    "questionNumber": 445,
+    "question": "On a banked road of angle $\\theta$ and radius $r$, if a vehicle travels at a speed $v > v_0$ (where $v_0 = \\sqrt{rg\\tan\\theta}$), in which direction does the frictional force on the tires act?",
+    "options": {
+      "A": "Downwards along the inclined surface of the road",
+      "B": "Upwards along the inclined surface of the road",
+      "C": "Horizontally towards the center",
+      "D": "Vertically upwards"
+    },
+    "optionsList": [
+      "Downwards along the inclined surface of the road",
+      "Upwards along the inclined surface of the road",
+      "Horizontally towards the center",
+      "Vertically upwards"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nWhen $v > v_0$, the inward component of normal force $N\\sin\\theta$ is insufficient to provide the larger required centripetal force $\\frac{mv^2}{r}$. The car tends to skid outwards and UP the banked incline. To oppose this upward slip, friction acts DOWNWARDS along the incline.\n\n2. GIVEN:\nBanked road, vehicle speed $v > v_0$.\n\n3. FORMULA / PRINCIPLE:\nWhen $v > v_0$, tendency to slide is up the incline, so friction $f$ acts down the incline.\n\n4. STEP-BY-STEP SOLUTION:\n1. At the ideal speed $v_0$, $N\\sin\\theta = \\frac{mv_0^2}{r}$ and friction is zero.\n2. When $v > v_0$, the required centripetal force $\\frac{mv^2}{r} > N\\sin\\theta$.\n3. The vehicle tends to drift outwards away from the center, which means sliding UP the banked plane.\n4. Friction always opposes the tendency of relative motion.\n5. Therefore, static friction acts DOWNWARDS along the banked inclined surface to provide the additional inward force.\n\n5. FINAL ANSWER:\nOption A: Downwards along the inclined surface of the road\n\n6. QUICK TIP:\nDirection of Friction on Banked Road:\n- $v > v_0$: Friction acts DOWN the incline!\n- $v < v_0$: Friction acts UP the incline!\n- $v = v_0$: Friction is ZERO!",
+    "solutionStructured": {
+      "concept": "When $v > v_0$, the inward component of normal force $N\\sin\\theta$ is insufficient to provide the larger required centripetal force $\\frac{mv^2}{r}$. The car tends to skid outwards and UP the banked incline. To oppose this upward slip, friction acts DOWNWARDS along the incline.",
+      "given": "Banked road, vehicle speed $v > v_0$.",
+      "formula": "When $v > v_0$, tendency to slide is up the incline, so friction $f$ acts down the incline.",
+      "stepByStep": "1. At the ideal speed $v_0$, $N\\sin\\theta = \\frac{mv_0^2}{r}$ and friction is zero.\n2. When $v > v_0$, the required centripetal force $\\frac{mv^2}{r} > N\\sin\\theta$.\n3. The vehicle tends to drift outwards away from the center, which means sliding UP the banked plane.\n4. Friction always opposes the tendency of relative motion.\n5. Therefore, static friction acts DOWNWARDS along the banked inclined surface to provide the additional inward force.",
+      "finalAnswer": "Option A: Downwards along the inclined surface of the road",
+      "whyOtherOptionsWrong": "Option B occurs when $v < v_0$. Option C is the direction of centripetal force, not friction. Option D is incorrect."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Banking of roads and related applications",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-446",
+    "questionNumber": 446,
+    "question": "Conversely, if a vehicle travels at a speed $v < v_0$ on a banked road of angle $\\theta$ and radius $r$, the frictional force on the tires acts:",
+    "options": {
+      "A": "Upwards along the inclined surface of the road",
+      "B": "Downwards along the inclined surface of the road",
+      "C": "Zero",
+      "D": "Radially outward horizontally"
+    },
+    "optionsList": [
+      "Upwards along the inclined surface of the road",
+      "Downwards along the inclined surface of the road",
+      "Zero",
+      "Radially outward horizontally"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nWhen $v < v_0$, the inward component of normal force $N\\sin\\theta$ exceeds the required centripetal force $\\frac{mv^2}{r}$. The car tends to slip downwards into the center of curvature. To prevent this downward slip, static friction acts UPWARDS along the incline.\n\n2. GIVEN:\nBanked road, vehicle speed $v < v_0$.\n\n3. FORMULA / PRINCIPLE:\nWhen $v < v_0$, tendency to slide is down the incline, so friction $f$ acts up the incline.\n\n4. STEP-BY-STEP SOLUTION:\n1. At speed $v < v_0$, the horizontal component of normal force $N\\sin\\theta$ is greater than $\\frac{mv^2}{r}$.\n2. The car tends to slip down the banked incline towards the inside of the curve.\n3. Friction opposes this downward sliding tendency.\n4. Therefore, static friction acts UPWARDS along the inclined surface.\n\n5. FINAL ANSWER:\nOption A: Upwards along the inclined surface of the road\n\n6. QUICK TIP:\nRemember: $v < v_0 \\implies$ friction acts UP the incline to prevent the car from sliding down!",
+    "solutionStructured": {
+      "concept": "When $v < v_0$, the inward component of normal force $N\\sin\\theta$ exceeds the required centripetal force $\\frac{mv^2}{r}$. The car tends to slip downwards into the center of curvature. To prevent this downward slip, static friction acts UPWARDS along the incline.",
+      "given": "Banked road, vehicle speed $v < v_0$.",
+      "formula": "When $v < v_0$, tendency to slide is down the incline, so friction $f$ acts up the incline.",
+      "stepByStep": "1. At speed $v < v_0$, the horizontal component of normal force $N\\sin\\theta$ is greater than $\\frac{mv^2}{r}$.\n2. The car tends to slip down the banked incline towards the inside of the curve.\n3. Friction opposes this downward sliding tendency.\n4. Therefore, static friction acts UPWARDS along the inclined surface.",
+      "finalAnswer": "Option A: Upwards along the inclined surface of the road",
+      "whyOtherOptionsWrong": "Option B occurs when $v > v_0$. Option C only occurs at $v = v_0$. Option D is not parallel to the surface."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Banking of roads and related applications",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-447",
+    "questionNumber": 447,
+    "question": "The maximum safe speed $v_{\\text{max}}$ on a curved road of radius $r$ banked at an angle $\\theta$ with coefficient of static friction $\\mu_s$ is given by:",
+    "options": {
+      "A": "$\\sqrt{rg \\left(\\frac{\\tan\\theta + \\mu_s}{1 - \\mu_s\\tan\\theta}\\right)}$",
+      "B": "$\\sqrt{rg \\left(\\frac{\\tan\\theta - \\mu_s}{1 + \\mu_s\\tan\\theta}\\right)}$",
+      "C": "$\\sqrt{rg (\\tan\\theta + \\mu_s)}$",
+      "D": "$\\sqrt{rg \\tan\\theta}$"
+    },
+    "optionsList": [
+      "$\\sqrt{rg \\left(\\frac{\\tan\\theta + \\mu_s}{1 - \\mu_s\\tan\\theta}\\right)}$",
+      "$\\sqrt{rg \\left(\\frac{\\tan\\theta - \\mu_s}{1 + \\mu_s\\tan\\theta}\\right)}$",
+      "$\\sqrt{rg (\\tan\\theta + \\mu_s)}$",
+      "$\\sqrt{rg \\tan\\theta}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nAt maximum speed, friction acts down the incline at limiting value $f = \\mu_s N$. Force balance along radial and vertical directions gives $N\\sin\\theta + f\\cos\\theta = \\frac{mv^2}{r}$ and $N\\cos\\theta - f\\sin\\theta = mg$. Dividing gives $v_{\\text{max}} = \\sqrt{rg \\left(\\frac{\\tan\\theta + \\mu_s}{1 - \\mu_s\\tan\\theta}\\right)}$.\n\n2. GIVEN:\nBanked road with friction $\\mu_s$, radius $r$, angle $\\theta$.\n\n3. FORMULA / PRINCIPLE:\n$v_{\\text{max}} = \\sqrt{rg \\left(\\frac{\\tan\\theta + \\mu_s}{1 - \\mu_s\\tan\\theta}\\right)}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. At maximum speed, the car is on the verge of skidding outwards and up the incline.\n2. Limiting friction $f_L = \\mu_s N$ acts down the incline.\n3. Horizontal forces towards center:\n   $N\\sin\\theta + f_L\\cos\\theta = \\frac{mv^2}{r} \\implies N(\\sin\\theta + \\mu_s\\cos\\theta) = \\frac{mv^2}{r}$.\n4. Vertical forces in equilibrium:\n   $N\\cos\\theta - f_L\\sin\\theta = mg \\implies N(\\cos\\theta - \\mu_s\\sin\\theta) = mg$.\n5. Dividing the two equations:\n   $\\frac{\\sin\\theta + \\mu_s\\cos\\theta}{\\cos\\theta - \\mu_s\\sin\\theta} = \\frac{v^2}{rg}$.\n6. Dividing numerator and denominator by $\\cos\\theta$:\n   $\\frac{\\tan\\theta + \\mu_s}{1 - \\mu_s\\tan\\theta} = \\frac{v^2}{rg} \\implies v_{\\text{max}} = \\sqrt{rg \\left(\\frac{\\tan\\theta + \\mu_s}{1 - \\mu_s\\tan\\theta}\\right)}$.\n\n5. FINAL ANSWER:\nOption A: $\\sqrt{rg \\left(\\frac{\\tan\\theta + \\mu_s}{1 - \\mu_s\\tan\\theta}\\right)}$\n\n6. QUICK TIP:\nMaster Formula for Banked Roads:\n$v_{\\text{max}} = \\sqrt{rg \\frac{\\tan\\theta + \\mu_s}{1 - \\mu_s\\tan\\theta}}$\n$v_{\\text{min}} = \\sqrt{rg \\frac{\\tan\\theta - \\mu_s}{1 + \\mu_s\\tan\\theta}}$!",
+    "solutionStructured": {
+      "concept": "At maximum speed, friction acts down the incline at limiting value $f = \\mu_s N$. Force balance along radial and vertical directions gives $N\\sin\\theta + f\\cos\\theta = \\frac{mv^2}{r}$ and $N\\cos\\theta - f\\sin\\theta = mg$. Dividing gives $v_{\\text{max}} = \\sqrt{rg \\left(\\frac{\\tan\\theta + \\mu_s}{1 - \\mu_s\\tan\\theta}\\right)}$.",
+      "given": "Banked road with friction $\\mu_s$, radius $r$, angle $\\theta$.",
+      "formula": "$v_{\\text{max}} = \\sqrt{rg \\left(\\frac{\\tan\\theta + \\mu_s}{1 - \\mu_s\\tan\\theta}\\right)}$.",
+      "stepByStep": "1. At maximum speed, the car is on the verge of skidding outwards and up the incline.\n2. Limiting friction $f_L = \\mu_s N$ acts down the incline.\n3. Horizontal forces towards center:\n   $N\\sin\\theta + f_L\\cos\\theta = \\frac{mv^2}{r} \\implies N(\\sin\\theta + \\mu_s\\cos\\theta) = \\frac{mv^2}{r}$.\n4. Vertical forces in equilibrium:\n   $N\\cos\\theta - f_L\\sin\\theta = mg \\implies N(\\cos\\theta - \\mu_s\\sin\\theta) = mg$.\n5. Dividing the two equations:\n   $\\frac{\\sin\\theta + \\mu_s\\cos\\theta}{\\cos\\theta - \\mu_s\\sin\\theta} = \\frac{v^2}{rg}$.\n6. Dividing numerator and denominator by $\\cos\\theta$:\n   $\\frac{\\tan\\theta + \\mu_s}{1 - \\mu_s\\tan\\theta} = \\frac{v^2}{rg} \\implies v_{\\text{max}} = \\sqrt{rg \\left(\\frac{\\tan\\theta + \\mu_s}{1 - \\mu_s\\tan\\theta}\\right)}$.",
+      "finalAnswer": "Option A: $\\sqrt{rg \\left(\\frac{\\tan\\theta + \\mu_s}{1 - \\mu_s\\tan\\theta}\\right)}$",
+      "whyOtherOptionsWrong": "Option B gives the minimum speed $v_{\\text{min}}$. Option C ignores the denominator. Option D is for zero friction."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Banking of roads and related applications",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-448",
+    "questionNumber": 448,
+    "question": "The minimum safe speed $v_{\\text{min}}$ below which a vehicle will slide down a banked road of inclination $\\theta > \\theta_r$ (where $\\theta_r = \\tan^{-1}\\mu_s$) is:",
+    "options": {
+      "A": "$\\sqrt{rg \\left(\\frac{\\tan\\theta - \\mu_s}{1 + \\mu_s\\tan\\theta}\\right)}$",
+      "B": "$\\sqrt{rg \\left(\\frac{\\tan\\theta + \\mu_s}{1 - \\mu_s\\tan\\theta}\\right)}$",
+      "C": "Zero, vehicles can always stop on any banked road",
+      "D": "$\\sqrt{rg \\tan\\theta}$"
+    },
+    "optionsList": [
+      "$\\sqrt{rg \\left(\\frac{\\tan\\theta - \\mu_s}{1 + \\mu_s\\tan\\theta}\\right)}$",
+      "$\\sqrt{rg \\left(\\frac{\\tan\\theta + \\mu_s}{1 - \\mu_s\\tan\\theta}\\right)}$",
+      "Zero, vehicles can always stop on any banked road",
+      "$\\sqrt{rg \\tan\\theta}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nWhen $\\theta > \\theta_r$, a stationary car would slide down into the ditch. To prevent sliding down, friction acts UP the incline. At the minimum speed, limiting friction is reached, giving $v_{\\text{min}} = \\sqrt{rg \\left(\\frac{\\tan\\theta - \\mu_s}{1 + \\mu_s\\tan\\theta}\\right)}$.\n\n2. GIVEN:\nBanked road $\\theta > \\tan^{-1}\\mu_s$, radius $r$, static friction $\\mu_s$.\n\n3. FORMULA / PRINCIPLE:\n$v_{\\text{min}} = \\sqrt{rg \\left(\\frac{\\tan\\theta - \\mu_s}{1 + \\mu_s\\tan\\theta}\\right)}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. At the lower speed limit, the vehicle is on the verge of sliding DOWN the incline.\n2. Limiting friction $f_L = \\mu_s N$ acts UP the incline.\n3. Horizontal equation: $N\\sin\\theta - f_L\\cos\\theta = \\frac{mv^2}{r} \\implies N(\\sin\\theta - \\mu_s\\cos\\theta) = \\frac{mv^2}{r}$.\n4. Vertical equation: $N\\cos\\theta + f_L\\sin\\theta = mg \\implies N(\\cos\\theta + \\mu_s\\sin\\theta) = mg$.\n5. Dividing the two equations:\n   $\\frac{\\sin\\theta - \\mu_s\\cos\\theta}{\\cos\\theta + \\mu_s\\sin\\theta} = \\frac{v^2}{rg} \\implies \\frac{\\tan\\theta - \\mu_s}{1 + \\mu_s\\tan\\theta} = \\frac{v^2}{rg}$.\n6. Therefore, $v_{\\text{min}} = \\sqrt{rg \\left(\\frac{\\tan\\theta - \\mu_s}{1 + \\mu_s\\tan\\theta}\\right)}$.\n\n5. FINAL ANSWER:\nOption A: $\\sqrt{rg \\left(\\frac{\\tan\\theta - \\mu_s}{1 + \\mu_s\\tan\\theta}\\right)}$\n\n6. QUICK TIP:\nIf $\\tan\\theta \\le \\mu_s$, then $v_{\\text{min}} = 0$ (the car can safely park on the slope without slipping down)!",
+    "solutionStructured": {
+      "concept": "When $\\theta > \\theta_r$, a stationary car would slide down into the ditch. To prevent sliding down, friction acts UP the incline. At the minimum speed, limiting friction is reached, giving $v_{\\text{min}} = \\sqrt{rg \\left(\\frac{\\tan\\theta - \\mu_s}{1 + \\mu_s\\tan\\theta}\\right)}$.",
+      "given": "Banked road $\\theta > \\tan^{-1}\\mu_s$, radius $r$, static friction $\\mu_s$.",
+      "formula": "$v_{\\text{min}} = \\sqrt{rg \\left(\\frac{\\tan\\theta - \\mu_s}{1 + \\mu_s\\tan\\theta}\\right)}$.",
+      "stepByStep": "1. At the lower speed limit, the vehicle is on the verge of sliding DOWN the incline.\n2. Limiting friction $f_L = \\mu_s N$ acts UP the incline.\n3. Horizontal equation: $N\\sin\\theta - f_L\\cos\\theta = \\frac{mv^2}{r} \\implies N(\\sin\\theta - \\mu_s\\cos\\theta) = \\frac{mv^2}{r}$.\n4. Vertical equation: $N\\cos\\theta + f_L\\sin\\theta = mg \\implies N(\\cos\\theta + \\mu_s\\sin\\theta) = mg$.\n5. Dividing the two equations:\n   $\\frac{\\sin\\theta - \\mu_s\\cos\\theta}{\\cos\\theta + \\mu_s\\sin\\theta} = \\frac{v^2}{rg} \\implies \\frac{\\tan\\theta - \\mu_s}{1 + \\mu_s\\tan\\theta} = \\frac{v^2}{rg}$.\n6. Therefore, $v_{\\text{min}} = \\sqrt{rg \\left(\\frac{\\tan\\theta - \\mu_s}{1 + \\mu_s\\tan\\theta}\\right)}$.",
+      "finalAnswer": "Option A: $\\sqrt{rg \\left(\\frac{\\tan\\theta - \\mu_s}{1 + \\mu_s\\tan\\theta}\\right)}$",
+      "whyOtherOptionsWrong": "Option B gives $v_{\\text{max}}$. Option C is only true if $\\tan\\theta \\le \\mu_s$. Option D is the zero-friction speed."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Banking of roads and related applications",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-449",
+    "questionNumber": 449,
+    "question": "An aircraft executes a horizontal turn of radius $R$ at speed $v$ by banking its wings at angle $\\theta$ to the horizontal. The lift force $L$ provided by the wings is related to the aircraft's weight $mg$ and speed by:",
+    "options": {
+      "A": "$L\\cos\\theta = mg$ and $L\\sin\\theta = \\frac{mv^2}{R}$, so $\\tan\\theta = \\frac{v^2}{Rg}$",
+      "B": "$L = mg$ and $L = \\frac{mv^2}{R}$",
+      "C": "$L\\sin\\theta = mg$ and $L\\cos\\theta = \\frac{mv^2}{R}$",
+      "D": "$L = \\frac{mv^2}{R} - mg$"
+    },
+    "optionsList": [
+      "$L\\cos\\theta = mg$ and $L\\sin\\theta = \\frac{mv^2}{R}$, so $\\tan\\theta = \\frac{v^2}{Rg}$",
+      "$L = mg$ and $L = \\frac{mv^2}{R}$",
+      "$L\\sin\\theta = mg$ and $L\\cos\\theta = \\frac{mv^2}{R}$",
+      "$L = \\frac{mv^2}{R} - mg$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nAn aircraft turns by banking its wings. The aerodynamic lift force $L$ is perpendicular to the wing surface. Its vertical component $L\\cos\\theta$ balances gravity ($mg$), while its horizontal component $L\\sin\\theta$ provides the centripetal force ($\\frac{mv^2}{R}$). Dividing yields $\\tan\\theta = \\frac{v^2}{Rg}$.\n\n2. GIVEN:\nAircraft in horizontal turn radius $R$, speed $v$, bank angle $\\theta$.\n\n3. FORMULA / PRINCIPLE:\n$L\\cos\\theta = mg$; $L\\sin\\theta = \\frac{mv^2}{R} \\implies \\tan\\theta = \\frac{v^2}{Rg}$; $L = \\frac{mg}{\\cos\\theta}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. In coordinated flight, aerodynamic lift $L$ is perpendicular to the wings.\n2. When the plane banks at angle $\\theta$ to the horizontal, lift tilts inward by angle $\\theta$ to the vertical.\n3. Vertical balance: $L\\cos\\theta = mg$.\n4. Centripetal horizontal force: $L\\sin\\theta = \\frac{mv^2}{R}$.\n5. Dividing gives $\\tan\\theta = \\frac{v^2}{Rg}$.\n6. The total lift required is $L = \\frac{mg}{\\cos\\theta} > mg$ (the pilot experiences a load factor $n = 1/\\cos\\theta$).\n\n5. FINAL ANSWER:\nOption A: $L\\cos\\theta = mg$ and $L\\sin\\theta = \\frac{mv^2}{R}$, so $\\tan\\theta = \\frac{v^2}{Rg}$\n\n6. QUICK TIP:\nAircraft banking is mathematically identical to a conical pendulum and a frictionless banked road: $\\tan\\theta = \\frac{v^2}{Rg}$!",
+    "solutionStructured": {
+      "concept": "An aircraft turns by banking its wings. The aerodynamic lift force $L$ is perpendicular to the wing surface. Its vertical component $L\\cos\\theta$ balances gravity ($mg$), while its horizontal component $L\\sin\\theta$ provides the centripetal force ($\\frac{mv^2}{R}$). Dividing yields $\\tan\\theta = \\frac{v^2}{Rg}$.",
+      "given": "Aircraft in horizontal turn radius $R$, speed $v$, bank angle $\\theta$.",
+      "formula": "$L\\cos\\theta = mg$; $L\\sin\\theta = \\frac{mv^2}{R} \\implies \\tan\\theta = \\frac{v^2}{Rg}$; $L = \\frac{mg}{\\cos\\theta}$.",
+      "stepByStep": "1. In coordinated flight, aerodynamic lift $L$ is perpendicular to the wings.\n2. When the plane banks at angle $\\theta$ to the horizontal, lift tilts inward by angle $\\theta$ to the vertical.\n3. Vertical balance: $L\\cos\\theta = mg$.\n4. Centripetal horizontal force: $L\\sin\\theta = \\frac{mv^2}{R}$.\n5. Dividing gives $\\tan\\theta = \\frac{v^2}{Rg}$.\n6. The total lift required is $L = \\frac{mg}{\\cos\\theta} > mg$ (the pilot experiences a load factor $n = 1/\\cos\\theta$).",
+      "finalAnswer": "Option A: $L\\cos\\theta = mg$ and $L\\sin\\theta = \\frac{mv^2}{R}$, so $\\tan\\theta = \\frac{v^2}{Rg}$",
+      "whyOtherOptionsWrong": "Option B ignores vector components. Option C swaps vertical and horizontal components. Option D subtracts forces."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Banking of roads and related applications",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-450",
+    "questionNumber": 450,
+    "question": "A jet fighter flies in a horizontal circle of radius $R = 1000\\text{ m}$ at speed $v = 100\\text{ m/s}$. What is the required bank angle $\\theta$ (take $g = 10\\text{ m/s}^2$)?",
+    "options": {
+      "A": "$45^\\circ$",
+      "B": "$30^\\circ$",
+      "C": "$60^\\circ$",
+      "D": "$15^\\circ$"
+    },
+    "optionsList": [
+      "$45^\\circ$",
+      "$30^\\circ$",
+      "$60^\\circ$",
+      "$15^\\circ$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nUse $\\tan\\theta = \\frac{v^2}{Rg}$. Here $v = 100\\text{ m/s}$, $R = 1000\\text{ m}$, $g = 10\\text{ m/s}^2$. $\\tan\\theta = \\frac{100^2}{1000 \\times 10} = \\frac{10000}{10000} = 1 \\implies \\theta = 45^\\circ$.\n\n2. GIVEN:\n$R = 1000\\text{ m}, v = 100\\text{ m/s}, g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$\\tan\\theta = \\frac{v^2}{Rg} = \\frac{10000}{10000} = 1 \\implies \\theta = 45^\\circ$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Formula for banking angle: $\\tan\\theta = \\frac{v^2}{Rg}$.\n2. Substitute values: $\\tan\\theta = \\frac{(100)^2}{1000 \\times 10} = \\frac{10000}{10000} = 1$.\n3. $\\tan\\theta = 1 \\implies \\theta = 45^\\circ$.\n\n5. FINAL ANSWER:\nOption A: $45^\\circ$\n\n6. QUICK TIP:\nWhen $v^2 = Rg$, the banking angle is ALWAYS $45^\\circ$!",
+    "solutionStructured": {
+      "concept": "Use $\\tan\\theta = \\frac{v^2}{Rg}$. Here $v = 100\\text{ m/s}$, $R = 1000\\text{ m}$, $g = 10\\text{ m/s}^2$. $\\tan\\theta = \\frac{100^2}{1000 \\times 10} = \\frac{10000}{10000} = 1 \\implies \\theta = 45^\\circ$.",
+      "given": "$R = 1000\\text{ m}, v = 100\\text{ m/s}, g = 10\\text{ m/s}^2$.",
+      "formula": "$\\tan\\theta = \\frac{v^2}{Rg} = \\frac{10000}{10000} = 1 \\implies \\theta = 45^\\circ$.",
+      "stepByStep": "1. Formula for banking angle: $\\tan\\theta = \\frac{v^2}{Rg}$.\n2. Substitute values: $\\tan\\theta = \\frac{(100)^2}{1000 \\times 10} = \\frac{10000}{10000} = 1$.\n3. $\\tan\\theta = 1 \\implies \\theta = 45^\\circ$.",
+      "finalAnswer": "Option A: $45^\\circ$",
+      "whyOtherOptionsWrong": "Option B ($30^\\circ$) requires $\\tan\\theta = 0.577$. Option C ($60^\\circ$) requires $\\tan\\theta = 1.732$. Option D is $15^\\circ$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Banking of roads and related applications",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-451",
+    "questionNumber": 451,
+    "question": "A curved road of radius $R = 100\\text{ m}$ is banked at angle $\\theta = 45^\\circ$. The coefficient of static friction is $\\mu_s = 0.5$. Taking $g = 10\\text{ m/s}^2$, what is the maximum speed $v_{\\text{max}}$ with which a car can take the curve without skidding?",
+    "options": {
+      "A": "$54.77\\text{ m/s}$ (approx. $197\\text{ km/h}$)",
+      "B": "$31.62\\text{ m/s}$",
+      "C": "$40.00\\text{ m/s}$",
+      "D": "$22.36\\text{ m/s}$"
+    },
+    "optionsList": [
+      "$54.77\\text{ m/s}$ (approx. $197\\text{ km/h}$)",
+      "$31.62\\text{ m/s}$",
+      "$40.00\\text{ m/s}$",
+      "$22.36\\text{ m/s}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSubstitute into maximum speed formula: $v_{\\text{max}} = \\sqrt{Rg \\left(\\frac{\\tan\\theta + \\mu_s}{1 - \\mu_s\\tan\\theta}\\right)}$. With $\\theta = 45^\\circ$ ($\\tan 45^\\circ = 1$), $\\frac{1 + 0.5}{1 - 0.5} = \\frac{1.5}{0.5} = 3$. $v_{\\text{max}} = \\sqrt{100 \\times 10 \\times 3} = \\sqrt{3000} \\approx 54.77\\text{ m/s}$.\n\n2. GIVEN:\n$R = 100\\text{ m}, \\theta = 45^\\circ, \\mu_s = 0.5, g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$v_{\\text{max}} = \\sqrt{Rg \\left(\\frac{\\tan 45^\\circ + \\mu_s}{1 - \\mu_s\\tan 45^\\circ}\\right)} = \\sqrt{1000 \\times 3} = \\sqrt{3000} \\approx 54.77\\text{ m/s}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Use the full banked road formula for maximum speed:\n   $v_{\\text{max}} = \\sqrt{Rg \\left(\\frac{\\tan\\theta + \\mu_s}{1 - \\mu_s\\tan\\theta}\\right)}$.\n2. Here $\\tan 45^\\circ = 1$ and $\\mu_s = 0.5$.\n3. The bracket term simplifies to:\n   $\\frac{1 + 0.5}{1 - (0.5)(1)} = \\frac{1.5}{0.5} = 3$.\n4. Calculate inside the radical:\n   $Rg \\times 3 = 100 \\times 10 \\times 3 = 3000\\text{ m}^2/\\text{s}^2$.\n5. Taking square root:\n   $v_{\\text{max}} = \\sqrt{3000} = 10\\sqrt{30} \\approx 10 \\times 5.477 = 54.77\\text{ m/s}$.\n\n5. FINAL ANSWER:\nOption A: $54.77\\text{ m/s}$ (approx. $197\\text{ km/h}$)\n\n6. QUICK TIP:\nAt $\\theta = 45^\\circ$, the friction multiplier is $\\frac{1 + \\mu}{1 - \\mu}$! For $\\mu = 0.5$, this is $1.5/0.5 = 3$.",
+    "solutionStructured": {
+      "concept": "Substitute into maximum speed formula: $v_{\\text{max}} = \\sqrt{Rg \\left(\\frac{\\tan\\theta + \\mu_s}{1 - \\mu_s\\tan\\theta}\\right)}$. With $\\theta = 45^\\circ$ ($\\tan 45^\\circ = 1$), $\\frac{1 + 0.5}{1 - 0.5} = \\frac{1.5}{0.5} = 3$. $v_{\\text{max}} = \\sqrt{100 \\times 10 \\times 3} = \\sqrt{3000} \\approx 54.77\\text{ m/s}$.",
+      "given": "$R = 100\\text{ m}, \\theta = 45^\\circ, \\mu_s = 0.5, g = 10\\text{ m/s}^2$.",
+      "formula": "$v_{\\text{max}} = \\sqrt{Rg \\left(\\frac{\\tan 45^\\circ + \\mu_s}{1 - \\mu_s\\tan 45^\\circ}\\right)} = \\sqrt{1000 \\times 3} = \\sqrt{3000} \\approx 54.77\\text{ m/s}$.",
+      "stepByStep": "1. Use the full banked road formula for maximum speed:\n   $v_{\\text{max}} = \\sqrt{Rg \\left(\\frac{\\tan\\theta + \\mu_s}{1 - \\mu_s\\tan\\theta}\\right)}$.\n2. Here $\\tan 45^\\circ = 1$ and $\\mu_s = 0.5$.\n3. The bracket term simplifies to:\n   $\\frac{1 + 0.5}{1 - (0.5)(1)} = \\frac{1.5}{0.5} = 3$.\n4. Calculate inside the radical:\n   $Rg \\times 3 = 100 \\times 10 \\times 3 = 3000\\text{ m}^2/\\text{s}^2$.\n5. Taking square root:\n   $v_{\\text{max}} = \\sqrt{3000} = 10\\sqrt{30} \\approx 10 \\times 5.477 = 54.77\\text{ m/s}$.",
+      "finalAnswer": "Option A: $54.77\\text{ m/s}$ (approx. $197\\text{ km/h}$)",
+      "whyOtherOptionsWrong": "Option B ($31.62\\text{ m/s}$) is the zero-friction speed $\\sqrt{1000}$. Option C is $40\\text{ m/s}$. Option D is $22.36\\text{ m/s}$."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Banking of roads and related applications",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-452",
+    "questionNumber": 452,
+    "question": "In the previous setup ($R = 100\\text{ m}, \\theta = 45^\\circ, \\mu_s = 0.5, g = 10\\text{ m/s}^2$), what is the minimum speed $v_{\\text{min}}$ below which the car will slide down the banked road?",
+    "options": {
+      "A": "$18.26\\text{ m/s}$ (approx. $65.7\\text{ km/h}$)",
+      "B": "$31.62\\text{ m/s}$",
+      "C": "$10.00\\text{ m/s}$",
+      "D": "Zero"
+    },
+    "optionsList": [
+      "$18.26\\text{ m/s}$ (approx. $65.7\\text{ km/h}$)",
+      "$31.62\\text{ m/s}$",
+      "$10.00\\text{ m/s}$",
+      "Zero"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSubstitute into minimum speed formula: $v_{\\text{min}} = \\sqrt{Rg \\left(\\frac{\\tan\\theta - \\mu_s}{1 + \\mu_s\\tan\\theta}\\right)}$. With $\\theta = 45^\\circ$ ($\\tan 45^\\circ = 1$), $\\frac{1 - 0.5}{1 + 0.5} = \\frac{0.5}{1.5} = \\frac{1}{3}$. $v_{\\text{min}} = \\sqrt{100 \\times 10 \\times \\frac{1}{3}} = \\sqrt{\\frac{1000}{3}} \\approx \\sqrt{333.33} \\approx 18.26\\text{ m/s}$.\n\n2. GIVEN:\n$R = 100\\text{ m}, \\theta = 45^\\circ, \\mu_s = 0.5, g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$v_{\\text{min}} = \\sqrt{Rg \\left(\\frac{\\tan 45^\\circ - \\mu_s}{1 + \\mu_s\\tan 45^\\circ}\\right)} = \\sqrt{\\frac{1000}{3}} \\approx 18.26\\text{ m/s}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Use the minimum speed formula:\n   $v_{\\text{min}} = \\sqrt{Rg \\left(\\frac{\\tan\\theta - \\mu_s}{1 + \\mu_s\\tan\\theta}\\right)}$.\n2. With $\\tan 45^\\circ = 1$ and $\\mu_s = 0.5$:\n   $\\frac{1 - 0.5}{1 + 0.5} = \\frac{0.5}{1.5} = \\frac{1}{3}$.\n3. Calculate under the radical:\n   $v_{\\text{min}}^2 = 100 \\times 10 \\times \\frac{1}{3} = \\frac{1000}{3} \\approx 333.33$.\n4. Taking square root:\n   $v_{\\text{min}} = \\sqrt{333.33} \\approx 18.257 \\approx 18.26\\text{ m/s}$.\n\n5. FINAL ANSWER:\nOption A: $18.26\\text{ m/s}$ (approx. $65.7\\text{ km/h}$)\n\n6. QUICK TIP:\nSafe speed corridor on this banked track is $18.26\\text{ m/s} \\le v \\le 54.77\\text{ m/s}$ (approx. $66\\text{ km/h}$ to $197\\text{ km/h}$)!",
+    "solutionStructured": {
+      "concept": "Substitute into minimum speed formula: $v_{\\text{min}} = \\sqrt{Rg \\left(\\frac{\\tan\\theta - \\mu_s}{1 + \\mu_s\\tan\\theta}\\right)}$. With $\\theta = 45^\\circ$ ($\\tan 45^\\circ = 1$), $\\frac{1 - 0.5}{1 + 0.5} = \\frac{0.5}{1.5} = \\frac{1}{3}$. $v_{\\text{min}} = \\sqrt{100 \\times 10 \\times \\frac{1}{3}} = \\sqrt{\\frac{1000}{3}} \\approx \\sqrt{333.33} \\approx 18.26\\text{ m/s}$.",
+      "given": "$R = 100\\text{ m}, \\theta = 45^\\circ, \\mu_s = 0.5, g = 10\\text{ m/s}^2$.",
+      "formula": "$v_{\\text{min}} = \\sqrt{Rg \\left(\\frac{\\tan 45^\\circ - \\mu_s}{1 + \\mu_s\\tan 45^\\circ}\\right)} = \\sqrt{\\frac{1000}{3}} \\approx 18.26\\text{ m/s}$.",
+      "stepByStep": "1. Use the minimum speed formula:\n   $v_{\\text{min}} = \\sqrt{Rg \\left(\\frac{\\tan\\theta - \\mu_s}{1 + \\mu_s\\tan\\theta}\\right)}$.\n2. With $\\tan 45^\\circ = 1$ and $\\mu_s = 0.5$:\n   $\\frac{1 - 0.5}{1 + 0.5} = \\frac{0.5}{1.5} = \\frac{1}{3}$.\n3. Calculate under the radical:\n   $v_{\\text{min}}^2 = 100 \\times 10 \\times \\frac{1}{3} = \\frac{1000}{3} \\approx 333.33$.\n4. Taking square root:\n   $v_{\\text{min}} = \\sqrt{333.33} \\approx 18.257 \\approx 18.26\\text{ m/s}$.",
+      "finalAnswer": "Option A: $18.26\\text{ m/s}$ (approx. $65.7\\text{ km/h}$)",
+      "whyOtherOptionsWrong": "Option B ($31.62\\text{ m/s}$) is the optimum zero-friction speed. Option C is $10\\text{ m/s}$. Option D (zero) would cause the car to slide into the ditch because $\\tan 45^\\circ = 1 > \\mu_s = 0.5$."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Banking of roads and related applications",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-453",
+    "questionNumber": 453,
+    "question": "At what banking angle $\\theta$ will a car be able to travel around a curve of radius $r$ at speed $v$ with ZERO lateral thrust on its tires?",
+    "options": {
+      "A": "$\\tan\\theta = \\frac{v^2}{rg}$",
+      "B": "$\\sin\\theta = \\frac{v^2}{rg}$",
+      "C": "$\\cos\\theta = \\frac{v^2}{rg}$",
+      "D": "$\\cot\\theta = \\frac{v^2}{rg}$"
+    },
+    "optionsList": [
+      "$\\tan\\theta = \\frac{v^2}{rg}$",
+      "$\\sin\\theta = \\frac{v^2}{rg}$",
+      "$\\cos\\theta = \\frac{v^2}{rg}$",
+      "$\\cot\\theta = \\frac{v^2}{rg}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nZero lateral thrust means zero friction ($f = 0$). As derived from Newton's laws: $N\\sin\\theta = \\frac{mv^2}{r}$ and $N\\cos\\theta = mg$, dividing gives $\\tan\\theta = \\frac{v^2}{rg}$.\n\n2. GIVEN:\nCurve radius $r$, speed $v$, zero friction.\n\n3. FORMULA / PRINCIPLE:\n$\\tan\\theta = \\frac{v^2}{rg}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Zero lateral thrust means no tangential force acts parallel to the road surface.\n2. The only contact force from the road is the perpendicular normal reaction $N$.\n3. The horizontal component $N\\sin\\theta$ must supply the entire centripetal force: $N\\sin\\theta = \\frac{mv^2}{r}$.\n4. The vertical component $N\\cos\\theta$ must balance gravity: $N\\cos\\theta = mg$.\n5. Dividing these two equations:\n   $\\frac{N\\sin\\theta}{N\\cos\\theta} = \\frac{mv^2/r}{mg} \\implies \\tan\\theta = \\frac{v^2}{rg}$.\n\n5. FINAL ANSWER:\nOption A: $\\tan\\theta = \\frac{v^2}{rg}$\n\n6. QUICK TIP:\nDesign condition for highway engineers: Set banking angle $\\theta = \\tan^{-1}\\left(\\frac{v^2}{rg}\\right)$ for the expected speed limit!",
+    "solutionStructured": {
+      "concept": "Zero lateral thrust means zero friction ($f = 0$). As derived from Newton's laws: $N\\sin\\theta = \\frac{mv^2}{r}$ and $N\\cos\\theta = mg$, dividing gives $\\tan\\theta = \\frac{v^2}{rg}$.",
+      "given": "Curve radius $r$, speed $v$, zero friction.",
+      "formula": "$\\tan\\theta = \\frac{v^2}{rg}$.",
+      "stepByStep": "1. Zero lateral thrust means no tangential force acts parallel to the road surface.\n2. The only contact force from the road is the perpendicular normal reaction $N$.\n3. The horizontal component $N\\sin\\theta$ must supply the entire centripetal force: $N\\sin\\theta = \\frac{mv^2}{r}$.\n4. The vertical component $N\\cos\\theta$ must balance gravity: $N\\cos\\theta = mg$.\n5. Dividing these two equations:\n   $\\frac{N\\sin\\theta}{N\\cos\\theta} = \\frac{mv^2/r}{mg} \\implies \\tan\\theta = \\frac{v^2}{rg}$.",
+      "finalAnswer": "Option A: $\\tan\\theta = \\frac{v^2}{rg}$",
+      "whyOtherOptionsWrong": "Option B, C, and D are incorrect trigonometric relationships."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Banking of roads and related applications",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-454",
+    "questionNumber": 454,
+    "question": "A car is traveling along a banked road at the optimum speed $v_0 = \\sqrt{rg\\tan\\theta}$. What is the magnitude of the normal force $N$ exerted by the road on the car of mass $m$?",
+    "options": {
+      "A": "$\\frac{mg}{\\cos\\theta}$",
+      "B": "$mg \\cos\\theta$",
+      "C": "$mg$",
+      "D": "$mg \\sin\\theta$"
+    },
+    "optionsList": [
+      "$\\frac{mg}{\\cos\\theta}$",
+      "$mg \\cos\\theta$",
+      "$mg$",
+      "$mg \\sin\\theta$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn the vertical direction, the car has zero acceleration. Vertical equilibrium requires $N\\cos\\theta = mg \\implies N = \\frac{mg}{\\cos\\theta}$. Since $\\cos\\theta < 1$, $N > mg$.\n\n2. GIVEN:\nOptimum speed $v_0$, mass $m$, banking angle $\\theta$, zero friction.\n\n3. FORMULA / PRINCIPLE:\n$N\\cos\\theta = mg \\implies N = \\frac{mg}{\\cos\\theta}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. At the optimum speed, friction is zero.\n2. The normal reaction $N$ is tilted at angle $\\theta$ to the vertical.\n3. Along the vertical axis, forces must balance since there is no vertical acceleration:\n   $N\\cos\\theta = mg$.\n4. Therefore: $N = \\frac{mg}{\\cos\\theta}$.\n5. Alternative expression: $N = \\sqrt{(mg)^2 + \\left(\\frac{mv_0^2}{r}\\right)^2} = mg\\sqrt{1 + \\tan^2\\theta} = \\frac{mg}{\\cos\\theta}$.\n\n5. FINAL ANSWER:\nOption A: $\\frac{mg}{\\cos\\theta}$\n\n6. QUICK TIP:\nOn a banked curve, normal force is GREATER than weight: $N = \\frac{mg}{\\cos\\theta} > mg$! Passenger feels pushed into seat.",
+    "solutionStructured": {
+      "concept": "In the vertical direction, the car has zero acceleration. Vertical equilibrium requires $N\\cos\\theta = mg \\implies N = \\frac{mg}{\\cos\\theta}$. Since $\\cos\\theta < 1$, $N > mg$.",
+      "given": "Optimum speed $v_0$, mass $m$, banking angle $\\theta$, zero friction.",
+      "formula": "$N\\cos\\theta = mg \\implies N = \\frac{mg}{\\cos\\theta}$.",
+      "stepByStep": "1. At the optimum speed, friction is zero.\n2. The normal reaction $N$ is tilted at angle $\\theta$ to the vertical.\n3. Along the vertical axis, forces must balance since there is no vertical acceleration:\n   $N\\cos\\theta = mg$.\n4. Therefore: $N = \\frac{mg}{\\cos\\theta}$.\n5. Alternative expression: $N = \\sqrt{(mg)^2 + \\left(\\frac{mv_0^2}{r}\\right)^2} = mg\\sqrt{1 + \\tan^2\\theta} = \\frac{mg}{\\cos\\theta}$.",
+      "finalAnswer": "Option A: $\\frac{mg}{\\cos\\theta}$",
+      "whyOtherOptionsWrong": "Option B ($mg\\cos\\theta$) is for an inclined plane where acceleration is down the plane. Option C ignores banking. Option D is the horizontal component."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Banking of roads and related applications",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-455",
+    "questionNumber": 455,
+    "question": "On a flat (unbanked) horizontal road of radius $r$, the maximum safe speed $v_{\\text{max}}$ for a car to turn without skidding depends on the coefficient of static friction $\\mu_s$ as:",
+    "options": {
+      "A": "$v_{\\text{max}} = \\sqrt{\\mu_s r g}$",
+      "B": "$v_{\\text{max}} = \\mu_s r g$",
+      "C": "$v_{\\text{max}} = \\sqrt{\\frac{r g}{\\mu_s}}$",
+      "D": "$v_{\\text{max}} = \\frac{\\mu_s g}{r}$"
+    },
+    "optionsList": [
+      "$v_{\\text{max}} = \\sqrt{\\mu_s r g}$",
+      "$v_{\\text{max}} = \\mu_s r g$",
+      "$v_{\\text{max}} = \\sqrt{\\frac{r g}{\\mu_s}}$",
+      "$v_{\\text{max}} = \\frac{\\mu_s g}{r}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nOn a flat unbanked road, the required centripetal force is provided solely by static friction between tires and road: $f_s = \\frac{mv^2}{r}$. The maximum static friction available is $f_{\\text{lim}} = \\mu_s N = \\mu_s mg$. Setting $\\frac{mv^2}{r} \\le \\mu_s mg$ gives $v \\le \\sqrt{\\mu_s rg}$.\n\n2. GIVEN:\nFlat unbanked circular road, radius $r$, static friction $\\mu_s$.\n\n3. FORMULA / PRINCIPLE:\n$v_{\\text{max}} = \\sqrt{\\mu_s r g}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Normal force on flat road: $N = mg$.\n2. Maximum static friction: $f_{\\text{lim}} = \\mu_s N = \\mu_s mg$.\n3. Inward centripetal force needed: $F_c = \\frac{mv^2}{r}$.\n4. For no skidding: $F_c \\le f_{\\text{lim}} \\implies \\frac{mv^2}{r} \\le \\mu_s mg$.\n5. Cancelling mass $m$: $v^2 \\le \\mu_s rg \\implies v_{\\text{max}} = \\sqrt{\\mu_s r g}$.\n\n5. FINAL ANSWER:\nOption A: $v_{\\text{max}} = \\sqrt{\\mu_s r g}$\n\n6. QUICK TIP:\nUnbanked curve maximum speed: $v_{\\text{max}} = \\sqrt{\\mu_s r g}$. Independent of car mass!",
+    "solutionStructured": {
+      "concept": "On a flat unbanked road, the required centripetal force is provided solely by static friction between tires and road: $f_s = \\frac{mv^2}{r}$. The maximum static friction available is $f_{\\text{lim}} = \\mu_s N = \\mu_s mg$. Setting $\\frac{mv^2}{r} \\le \\mu_s mg$ gives $v \\le \\sqrt{\\mu_s rg}$.",
+      "given": "Flat unbanked circular road, radius $r$, static friction $\\mu_s$.",
+      "formula": "$v_{\\text{max}} = \\sqrt{\\mu_s r g}$.",
+      "stepByStep": "1. Normal force on flat road: $N = mg$.\n2. Maximum static friction: $f_{\\text{lim}} = \\mu_s N = \\mu_s mg$.\n3. Inward centripetal force needed: $F_c = \\frac{mv^2}{r}$.\n4. For no skidding: $F_c \\le f_{\\text{lim}} \\implies \\frac{mv^2}{r} \\le \\mu_s mg$.\n5. Cancelling mass $m$: $v^2 \\le \\mu_s rg \\implies v_{\\text{max}} = \\sqrt{\\mu_s r g}$.",
+      "finalAnswer": "Option A: $v_{\\text{max}} = \\sqrt{\\mu_s r g}$",
+      "whyOtherOptionsWrong": "Option B misses the square root. Option C inverts $\\mu_s$. Option D has wrong dimensions."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Maximum speed and friction in circular motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-456",
+    "questionNumber": 456,
+    "question": "A car of mass $1000\\text{ kg}$ rounds an unbanked circular curve of radius $50\\text{ m}$ on a dry asphalt road with $\\mu_s = 0.8$. Taking $g = 10\\text{ m/s}^2$, what is the maximum speed without skidding?",
+    "options": {
+      "A": "$20\\text{ m/s}$",
+      "B": "$40\\text{ m/s}$",
+      "C": "$10\\text{ m/s}$",
+      "D": "$28.3\\text{ m/s}$"
+    },
+    "optionsList": [
+      "$20\\text{ m/s}$",
+      "$40\\text{ m/s}$",
+      "$10\\text{ m/s}$",
+      "$28.3\\text{ m/s}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nApply $v_{\\text{max}} = \\sqrt{\\mu_s rg} = \\sqrt{0.8 \\times 50 \\times 10} = \\sqrt{400} = 20\\text{ m/s}$.\n\n2. GIVEN:\n$r = 50\\text{ m}, \\mu_s = 0.8, g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$v_{\\text{max}} = \\sqrt{\\mu_s r g} = \\sqrt{0.8 \\times 50 \\times 10} = \\sqrt{400} = 20\\text{ m/s}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Formula: $v_{\\text{max}} = \\sqrt{\\mu_s r g}$.\n2. Substitute values: $v_{\\text{max}} = \\sqrt{0.8 \\times 50 \\times 10} = \\sqrt{400}$.\n3. Taking square root: $v_{\\text{max}} = 20\\text{ m/s}$.\n\n5. FINAL ANSWER:\nOption A: $20\\text{ m/s}$\n\n6. QUICK TIP:\n$20\\text{ m/s} = 72\\text{ km/h}$. Notice the car's mass ($1000\\text{ kg}$) is completely irrelevant!",
+    "solutionStructured": {
+      "concept": "Apply $v_{\\text{max}} = \\sqrt{\\mu_s rg} = \\sqrt{0.8 \\times 50 \\times 10} = \\sqrt{400} = 20\\text{ m/s}$.",
+      "given": "$r = 50\\text{ m}, \\mu_s = 0.8, g = 10\\text{ m/s}^2$.",
+      "formula": "$v_{\\text{max}} = \\sqrt{\\mu_s r g} = \\sqrt{0.8 \\times 50 \\times 10} = \\sqrt{400} = 20\\text{ m/s}$.",
+      "stepByStep": "1. Formula: $v_{\\text{max}} = \\sqrt{\\mu_s r g}$.\n2. Substitute values: $v_{\\text{max}} = \\sqrt{0.8 \\times 50 \\times 10} = \\sqrt{400}$.\n3. Taking square root: $v_{\\text{max}} = 20\\text{ m/s}$.",
+      "finalAnswer": "Option A: $20\\text{ m/s}$",
+      "whyOtherOptionsWrong": "Option B ($40\\text{ m/s}$) is $v^2 / 10$. Option C is half. Option D is $\\sqrt{800}$."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Maximum speed and friction in circular motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-457",
+    "questionNumber": 457,
+    "question": "When the road surface becomes wet or icy, the coefficient of static friction $\\mu_s$ is reduced to one-fourth of its dry value. The maximum safe speed on the curve will:",
+    "options": {
+      "A": "Be halved",
+      "B": "Be reduced to one-fourth",
+      "C": "Remain unchanged",
+      "D": "Be reduced to one-sixteenth"
+    },
+    "optionsList": [
+      "Be halved",
+      "Be reduced to one-fourth",
+      "Remain unchanged",
+      "Be reduced to one-sixteenth"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nBecause $v_{\\text{max}} = \\sqrt{\\mu_s rg}$, speed is proportional to the square root of friction: $v_{\\text{max}} \\propto \\sqrt{\\mu_s}$. Reducing $\\mu_s$ by a factor of 4 reduces $v_{\\text{max}}$ by a factor of $\\sqrt{4} = 2$ (it is halved).\n\n2. GIVEN:\n$\\mu' = \\mu_s / 4$.\n\n3. FORMULA / PRINCIPLE:\n$v' = \\sqrt{\\frac{\\mu_s}{4} r g} = \\frac{1}{2}\\sqrt{\\mu_s r g} = \\frac{v}{2}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Formula: $v_{\\text{max}} = \\sqrt{\\mu_s rg}$.\n2. When $\\mu_s$ becomes $\\mu_s / 4$:\n   $v' = \\sqrt{\\frac{\\mu_s}{4} rg} = \\frac{1}{2}\\sqrt{\\mu_s rg} = \\frac{v_{\\text{max}}}{2}$.\n3. Therefore, the maximum safe speed is halved.\n\n5. FINAL ANSWER:\nOption A: Be halved\n\n6. QUICK TIP:\nDriving Safety Rule: Wet roads have 4 times less grip $\\implies$ maximum safe cornering speed drops by half!",
+    "solutionStructured": {
+      "concept": "Because $v_{\\text{max}} = \\sqrt{\\mu_s rg}$, speed is proportional to the square root of friction: $v_{\\text{max}} \\propto \\sqrt{\\mu_s}$. Reducing $\\mu_s$ by a factor of 4 reduces $v_{\\text{max}}$ by a factor of $\\sqrt{4} = 2$ (it is halved).",
+      "given": "$\\mu' = \\mu_s / 4$.",
+      "formula": "$v' = \\sqrt{\\frac{\\mu_s}{4} r g} = \\frac{1}{2}\\sqrt{\\mu_s r g} = \\frac{v}{2}$.",
+      "stepByStep": "1. Formula: $v_{\\text{max}} = \\sqrt{\\mu_s rg}$.\n2. When $\\mu_s$ becomes $\\mu_s / 4$:\n   $v' = \\sqrt{\\frac{\\mu_s}{4} rg} = \\frac{1}{2}\\sqrt{\\mu_s rg} = \\frac{v_{\\text{max}}}{2}$.\n3. Therefore, the maximum safe speed is halved.",
+      "finalAnswer": "Option A: Be halved",
+      "whyOtherOptionsWrong": "Option B assumes linear dependence. Option C assumes independence. Option D squares the factor."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Maximum speed and friction in circular motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-458",
+    "questionNumber": 458,
+    "question": "For a four-wheeled vehicle of track width $2a$ and center of mass height $h$ turning on a flat circular curve of radius $r$, the condition for skidding before overturning is:",
+    "options": {
+      "A": "$\\mu_s < \\frac{a}{h}$",
+      "B": "$\\mu_s > \\frac{a}{h}$",
+      "C": "$\\mu_s = \\frac{h}{a}$",
+      "D": "$\\mu_s > \\frac{h}{a}$"
+    },
+    "optionsList": [
+      "$\\mu_s < \\frac{a}{h}$",
+      "$\\mu_s > \\frac{a}{h}$",
+      "$\\mu_s = \\frac{h}{a}$",
+      "$\\mu_s > \\frac{h}{a}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe critical speed for skidding is $v_{\\text{skid}} = \\sqrt{\\mu_s rg}$. The critical speed for overturning is $v_{\\text{topple}} = \\sqrt{\\frac{arg}{h}}$. A vehicle will skid before overturning if $v_{\\text{skid}} < v_{\\text{topple}} \\implies \\mu_s rg < \\frac{arg}{h} \\implies \\mu_s < \\frac{a}{h}$.\n\n2. GIVEN:\nTrack width $2a$ (half-width $a$), CM height $h$, radius $r$, coefficient $\\mu_s$.\n\n3. FORMULA / PRINCIPLE:\n$v_{\\text{skid}} = \\sqrt{\\mu_s rg}$; $v_{\\text{topple}} = \\sqrt{\\frac{arg}{h}}$; Skidding precedes overturning if $\\mu_s < \\frac{a}{h}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Speed at which skidding occurs: $v_s = \\sqrt{\\mu_s rg}$.\n2. Speed at which inner wheels lift off and vehicle topples: $v_t = \\sqrt{\\frac{arg}{h}}$.\n3. For the vehicle to skid rather than overturn, the skidding threshold must be reached at a lower speed: $v_s < v_t$.\n4. $\\sqrt{\\mu_s rg} < \\sqrt{\\frac{arg}{h}} \\implies \\mu_s rg < \\frac{arg}{h}$.\n5. Cancelling $rg$: $\\mu_s < \\frac{a}{h}$.\n\n5. FINAL ANSWER:\nOption A: $\\mu_s < \\frac{a}{h}$\n\n6. QUICK TIP:\nVehicle Dynamics Golden Rule:\n- $\\mu_s < \\frac{a}{h} \\implies$ Skids first (safer)\n- $\\mu_s > \\frac{a}{h} \\implies$ Overturns first (tall vehicles like SUVs on high-friction dry pavement)!",
+    "solutionStructured": {
+      "concept": "The critical speed for skidding is $v_{\\text{skid}} = \\sqrt{\\mu_s rg}$. The critical speed for overturning is $v_{\\text{topple}} = \\sqrt{\\frac{arg}{h}}$. A vehicle will skid before overturning if $v_{\\text{skid}} < v_{\\text{topple}} \\implies \\mu_s rg < \\frac{arg}{h} \\implies \\mu_s < \\frac{a}{h}$.",
+      "given": "Track width $2a$ (half-width $a$), CM height $h$, radius $r$, coefficient $\\mu_s$.",
+      "formula": "$v_{\\text{skid}} = \\sqrt{\\mu_s rg}$; $v_{\\text{topple}} = \\sqrt{\\frac{arg}{h}}$; Skidding precedes overturning if $\\mu_s < \\frac{a}{h}$.",
+      "stepByStep": "1. Speed at which skidding occurs: $v_s = \\sqrt{\\mu_s rg}$.\n2. Speed at which inner wheels lift off and vehicle topples: $v_t = \\sqrt{\\frac{arg}{h}}$.\n3. For the vehicle to skid rather than overturn, the skidding threshold must be reached at a lower speed: $v_s < v_t$.\n4. $\\sqrt{\\mu_s rg} < \\sqrt{\\frac{arg}{h}} \\implies \\mu_s rg < \\frac{arg}{h}$.\n5. Cancelling $rg$: $\\mu_s < \\frac{a}{h}$.",
+      "finalAnswer": "Option A: $\\mu_s < \\frac{a}{h}$",
+      "whyOtherOptionsWrong": "Option B is the condition for overturning before skidding. Option C and D invert the geometry ratio."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Maximum speed and friction in circular motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-459",
+    "questionNumber": 459,
+    "question": "A truck has its center of mass at height $h = 1.5\\text{ m}$ above the ground, and its wheel track width is $2a = 1.8\\text{ m}$ (so $a = 0.9\\text{ m}$). The coefficient of friction with the road is $\\mu_s = 0.8$. On a flat curve, this truck will:",
+    "options": {
+      "A": "Overturn before skidding, because $\\mu_s > \\frac{a}{h}$",
+      "B": "Skid before overturning, because $\\mu_s < \\frac{a}{h}$",
+      "C": "Neither skid nor overturn at any speed",
+      "D": "Skid and overturn simultaneously"
+    },
+    "optionsList": [
+      "Overturn before skidding, because $\\mu_s > \\frac{a}{h}$",
+      "Skid before overturning, because $\\mu_s < \\frac{a}{h}$",
+      "Neither skid nor overturn at any speed",
+      "Skid and overturn simultaneously"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nCalculate the stability ratio: $\\frac{a}{h} = \\frac{0.9}{1.5} = 0.6$. The coefficient of friction is $\\mu_s = 0.8$. Since $\\mu_s = 0.8 > 0.6 = \\frac{a}{h}$, the overturning speed is lower than the skidding speed ($v_{\\text{topple}} < v_{\\text{skid}}$). Therefore, the truck will overturn before it skids.\n\n2. GIVEN:\n$h = 1.5\\text{ m}, a = 0.9\\text{ m}, \\mu_s = 0.8$.\n\n3. FORMULA / PRINCIPLE:\n$\\frac{a}{h} = \\frac{0.9}{1.5} = 0.6$; $\\mu_s = 0.8 > 0.6 \\implies v_{\\text{topple}} < v_{\\text{skid}}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Compute the overturning geometric ratio: $\\frac{a}{h} = \\frac{0.9\\text{ m}}{1.5\\text{ m}} = 0.6$.\n2. Compare with friction coefficient: $\\mu_s = 0.8$.\n3. Since $\\mu_s > \\frac{a}{h}$ ($0.8 > 0.6$), the friction force can hold the tires firmly even as the overturning torque flips the vehicle.\n4. Therefore, the inner wheels lift off and the truck topples over before the tires begin to slide.\n\n5. FINAL ANSWER:\nOption A: Overturn before skidding, because $\\mu_s > \\frac{a}{h}$\n\n6. QUICK TIP:\nTall vehicles (large $h$, small $a$) on high-friction pavement flip over rather than slide! This is why SUVs have higher rollover risk.",
+    "solutionStructured": {
+      "concept": "Calculate the stability ratio: $\\frac{a}{h} = \\frac{0.9}{1.5} = 0.6$. The coefficient of friction is $\\mu_s = 0.8$. Since $\\mu_s = 0.8 > 0.6 = \\frac{a}{h}$, the overturning speed is lower than the skidding speed ($v_{\\text{topple}} < v_{\\text{skid}}$). Therefore, the truck will overturn before it skids.",
+      "given": "$h = 1.5\\text{ m}, a = 0.9\\text{ m}, \\mu_s = 0.8$.",
+      "formula": "$\\frac{a}{h} = \\frac{0.9}{1.5} = 0.6$; $\\mu_s = 0.8 > 0.6 \\implies v_{\\text{topple}} < v_{\\text{skid}}$.",
+      "stepByStep": "1. Compute the overturning geometric ratio: $\\frac{a}{h} = \\frac{0.9\\text{ m}}{1.5\\text{ m}} = 0.6$.\n2. Compare with friction coefficient: $\\mu_s = 0.8$.\n3. Since $\\mu_s > \\frac{a}{h}$ ($0.8 > 0.6$), the friction force can hold the tires firmly even as the overturning torque flips the vehicle.\n4. Therefore, the inner wheels lift off and the truck topples over before the tires begin to slide.",
+      "finalAnswer": "Option A: Overturn before skidding, because $\\mu_s > \\frac{a}{h}$",
+      "whyOtherOptionsWrong": "Option B makes an inequality error ($0.8 > 0.6$, not $<$). Option C and D violate mechanics."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Maximum speed and friction in circular motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-460",
+    "questionNumber": 460,
+    "question": "When a four-wheeled car turns to the right on a flat circular track, which wheels experience the greatest normal reaction from the ground?",
+    "options": {
+      "A": "The outer (left) wheels",
+      "B": "The inner (right) wheels",
+      "C": "All wheels experience equal normal force",
+      "D": "The rear wheels only"
+    },
+    "optionsList": [
+      "The outer (left) wheels",
+      "The inner (right) wheels",
+      "All wheels experience equal normal force",
+      "The rear wheels only"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nWhen turning right, the centrifugal inertia torque about the contact patch tends to roll the car outward (to the left). To maintain roll equilibrium, the normal reaction shifts outward: $N_{\\text{outer}} = \\frac{mg}{2}\\left(1 + \\frac{v^2 h}{arg}\\right)$ and $N_{\\text{inner}} = \\frac{mg}{2}\\left(1 - \\frac{v^2 h}{arg}\\right)$. Therefore, the outer (left) wheels carry more load.\n\n2. GIVEN:\nCar turning right on flat road.\n\n3. FORMULA / PRINCIPLE:\n$N_{\\text{outer}} > N_{\\text{inner}}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. The center of curvature is to the right.\n2. In the car's frame, the centrifugal pseudo force acts outwards (to the left) at the center of mass (height $h$).\n3. This produces a clockwise overturning torque about the left wheels.\n4. To counteract this torque, the ground normal reaction increases on the outer (left) wheels and decreases on the inner (right) wheels.\n5. Hence, the outer wheels bear the greatest normal reaction.\n\n5. FINAL ANSWER:\nOption A: The outer (left) wheels\n\n6. QUICK TIP:\nAlways remember: In any turn, OUTER wheels carry MORE weight ($N_{\\text{outer}} > N_{\\text{inner}}$)!",
+    "solutionStructured": {
+      "concept": "When turning right, the centrifugal inertia torque about the contact patch tends to roll the car outward (to the left). To maintain roll equilibrium, the normal reaction shifts outward: $N_{\\text{outer}} = \\frac{mg}{2}\\left(1 + \\frac{v^2 h}{arg}\\right)$ and $N_{\\text{inner}} = \\frac{mg}{2}\\left(1 - \\frac{v^2 h}{arg}\\right)$. Therefore, the outer (left) wheels carry more load.",
+      "given": "Car turning right on flat road.",
+      "formula": "$N_{\\text{outer}} > N_{\\text{inner}}$.",
+      "stepByStep": "1. The center of curvature is to the right.\n2. In the car's frame, the centrifugal pseudo force acts outwards (to the left) at the center of mass (height $h$).\n3. This produces a clockwise overturning torque about the left wheels.\n4. To counteract this torque, the ground normal reaction increases on the outer (left) wheels and decreases on the inner (right) wheels.\n5. Hence, the outer wheels bear the greatest normal reaction.",
+      "finalAnswer": "Option A: The outer (left) wheels",
+      "whyOtherOptionsWrong": "Option B: Inner wheels lose contact at high speed. Option C is only true when traveling straight."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Maximum speed and friction in circular motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-461",
+    "questionNumber": 461,
+    "question": "A motorcyclist takes a turn of radius $30\\text{ m}$ at a speed of $17.32\\text{ m/s}$ (take $g = 10\\text{ m/s}^2$). At what angle $\\theta$ with the vertical must the motorcyclist lean?",
+    "options": {
+      "A": "$45^\\circ$",
+      "B": "$30^\\circ$",
+      "C": "$60^\\circ$",
+      "D": "$15^\\circ$"
+    },
+    "optionsList": [
+      "$45^\\circ$",
+      "$30^\\circ$",
+      "$60^\\circ$",
+      "$15^\\circ$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nUse $\\tan\\theta = \\frac{v^2}{rg}$. Here $v = 17.32\\text{ m/s} = 10\\sqrt{3}\\text{ m/s}$, so $v^2 = 300\\text{ m}^2/\\text{s}^2$. $rg = 30 \\times 10 = 300\\text{ m}^2/\\text{s}^2$. $\\tan\\theta = \\frac{300}{300} = 1 \\implies \\theta = 45^\\circ$.\n\n2. GIVEN:\n$r = 30\\text{ m}, v = 17.32\\text{ m/s} = 10\\sqrt{3}\\text{ m/s}, g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$\\tan\\theta = \\frac{v^2}{rg} = \\frac{300}{300} = 1 \\implies \\theta = 45^\\circ$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Formula: $\\tan\\theta = \\frac{v^2}{rg}$.\n2. Note that $17.32 = 10\\sqrt{3}$.\n3. $v^2 = (10\\sqrt{3})^2 = 100 \\times 3 = 300$.\n4. $rg = 30 \\times 10 = 300$.\n5. $\\tan\\theta = \\frac{300}{300} = 1$.\n6. Therefore, $\\theta = 45^\\circ$.\n\n5. FINAL ANSWER:\nOption A: $45^\\circ$\n\n6. QUICK TIP:\nRecognize standard roots: $17.32 = 10\\sqrt{3}$! Squaring it gives exactly 300.",
+    "solutionStructured": {
+      "concept": "Use $\\tan\\theta = \\frac{v^2}{rg}$. Here $v = 17.32\\text{ m/s} = 10\\sqrt{3}\\text{ m/s}$, so $v^2 = 300\\text{ m}^2/\\text{s}^2$. $rg = 30 \\times 10 = 300\\text{ m}^2/\\text{s}^2$. $\\tan\\theta = \\frac{300}{300} = 1 \\implies \\theta = 45^\\circ$.",
+      "given": "$r = 30\\text{ m}, v = 17.32\\text{ m/s} = 10\\sqrt{3}\\text{ m/s}, g = 10\\text{ m/s}^2$.",
+      "formula": "$\\tan\\theta = \\frac{v^2}{rg} = \\frac{300}{300} = 1 \\implies \\theta = 45^\\circ$.",
+      "stepByStep": "1. Formula: $\\tan\\theta = \\frac{v^2}{rg}$.\n2. Note that $17.32 = 10\\sqrt{3}$.\n3. $v^2 = (10\\sqrt{3})^2 = 100 \\times 3 = 300$.\n4. $rg = 30 \\times 10 = 300$.\n5. $\\tan\\theta = \\frac{300}{300} = 1$.\n6. Therefore, $\\theta = 45^\\circ$.",
+      "finalAnswer": "Option A: $45^\\circ$",
+      "whyOtherOptionsWrong": "Option B ($30^\\circ$) requires $v^2 = 300/\\sqrt{3} \\approx 173$. Option C ($60^\\circ$) requires $v^2 = 300\\sqrt{3} \\approx 520$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Maximum speed and friction in circular motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-462",
+    "questionNumber": 462,
+    "question": "A car is moving with speed $v$ on an unbanked circular curve of radius $r$. If the speed of the car is doubled while the radius is halved, the centripetal force required to keep the car on track increases by a factor of:",
+    "options": {
+      "A": "8",
+      "B": "4",
+      "C": "2",
+      "D": "16"
+    },
+    "optionsList": [
+      "8",
+      "4",
+      "2",
+      "16"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nCentripetal force is $F = \\frac{mv^2}{r}$. If $v' = 2v$ and $r' = r/2$, then $F' = \\frac{m(2v)^2}{r/2} = \\frac{4mv^2}{r/2} = 8 \\frac{mv^2}{r} = 8F$.\n\n2. GIVEN:\n$v' = 2v$, $r' = r/2$.\n\n3. FORMULA / PRINCIPLE:\n$F' = \\frac{m(2v)^2}{r/2} = 8 \\frac{mv^2}{r} = 8F$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Original centripetal force: $F = \\frac{mv^2}{r}$.\n2. New speed is $2v$, so numerator increases by $2^2 = 4$.\n3. New radius is $r/2$, so denominator is halved, multiplying the fraction by 2.\n4. Combined change: $F' = \\frac{m(4v^2)}{r/2} = 8 \\left(\\frac{mv^2}{r}\\right) = 8F$.\n5. Therefore, the required centripetal force increases by a factor of 8.\n\n5. FINAL ANSWER:\nOption A: 8\n\n6. QUICK TIP:\nCentripetal force scales as $v^2 / r$! Doubling speed $\\rightarrow \\times 4$; Halving radius $\\rightarrow \\times 2$; Total $\\rightarrow \\times 8$.",
+    "solutionStructured": {
+      "concept": "Centripetal force is $F = \\frac{mv^2}{r}$. If $v' = 2v$ and $r' = r/2$, then $F' = \\frac{m(2v)^2}{r/2} = \\frac{4mv^2}{r/2} = 8 \\frac{mv^2}{r} = 8F$.",
+      "given": "$v' = 2v$, $r' = r/2$.",
+      "formula": "$F' = \\frac{m(2v)^2}{r/2} = 8 \\frac{mv^2}{r} = 8F$.",
+      "stepByStep": "1. Original centripetal force: $F = \\frac{mv^2}{r}$.\n2. New speed is $2v$, so numerator increases by $2^2 = 4$.\n3. New radius is $r/2$, so denominator is halved, multiplying the fraction by 2.\n4. Combined change: $F' = \\frac{m(4v^2)}{r/2} = 8 \\left(\\frac{mv^2}{r}\\right) = 8F$.\n5. Therefore, the required centripetal force increases by a factor of 8.",
+      "finalAnswer": "Option A: 8",
+      "whyOtherOptionsWrong": "Option B (4) forgets the halving of radius. Option C is 2. Option D is 16."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Maximum speed and friction in circular motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-463",
+    "questionNumber": 463,
+    "question": "A particle of mass $m$ is attached to a string of length $L$ and rotated in a horizontal circle at constant angular speed $\\omega$ on a smooth table. What is the tension in the string?",
+    "options": {
+      "A": "$m \\omega^2 L$",
+      "B": "$\\frac{m \\omega^2}{L}$",
+      "C": "$\\frac{m \\omega}{L}$",
+      "D": "$m \\omega L$"
+    },
+    "optionsList": [
+      "$m \\omega^2 L$",
+      "$\\frac{m \\omega^2}{L}$",
+      "$\\frac{m \\omega}{L}$",
+      "$m \\omega L$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nOn a smooth horizontal table, tension provides the centripetal force: $T = m a_c = m \\omega^2 L$.\n\n2. GIVEN:\nMass $m$, string length $L$, angular velocity $\\omega$, smooth table.\n\n3. FORMULA / PRINCIPLE:\n$T = m \\omega^2 L$.\n\n4. STEP-BY-STEP SOLUTION:\n1. In circular motion, centripetal acceleration is $a_c = \\omega^2 r = \\omega^2 L$.\n2. On a smooth table, the only horizontal force is the string tension $T$.\n3. Applying Newton's second law: $T = m a_c = m \\omega^2 L$.\n\n5. FINAL ANSWER:\nOption A: $m \\omega^2 L$\n\n6. QUICK TIP:\nCentripetal force formulas: $F = \\frac{mv^2}{r} = m\\omega^2 r$! Both are equivalent via $v = \\omega r$.",
+    "solutionStructured": {
+      "concept": "On a smooth horizontal table, tension provides the centripetal force: $T = m a_c = m \\omega^2 L$.",
+      "given": "Mass $m$, string length $L$, angular velocity $\\omega$, smooth table.",
+      "formula": "$T = m \\omega^2 L$.",
+      "stepByStep": "1. In circular motion, centripetal acceleration is $a_c = \\omega^2 r = \\omega^2 L$.\n2. On a smooth table, the only horizontal force is the string tension $T$.\n3. Applying Newton's second law: $T = m a_c = m \\omega^2 L$.",
+      "finalAnswer": "Option A: $m \\omega^2 L$",
+      "whyOtherOptionsWrong": "Option B, C, and D have incorrect dimensions."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Maximum speed and friction in circular motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-464",
+    "questionNumber": 464,
+    "question": "Two bodies of masses $m_1$ and $m_2$ are moving in concentric circles of radii $r_1$ and $r_2$ respectively with the same time period $T$. What is the ratio of their centripetal accelerations $\\frac{a_1}{a_2}$?",
+    "options": {
+      "A": "$\\frac{r_1}{r_2}$",
+      "B": "$\\frac{r_2}{r_1}$",
+      "C": "$\\frac{r_1^2}{r_2^2}$",
+      "D": "1"
+    },
+    "optionsList": [
+      "$\\frac{r_1}{r_2}$",
+      "$\\frac{r_2}{r_1}$",
+      "$\\frac{r_1^2}{r_2^2}$",
+      "1"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSame time period means identical angular velocity $\\omega = \\frac{2\\pi}{T}$. Since centripetal acceleration is $a = \\omega^2 r$, with $\\omega$ constant, $a \\propto r$. Therefore, $\\frac{a_1}{a_2} = \\frac{r_1}{r_2}$.\n\n2. GIVEN:\nSame time period $T$, radii $r_1, r_2$.\n\n3. FORMULA / PRINCIPLE:\n$a = \\omega^2 r$; $\\omega_1 = \\omega_2 \\implies \\frac{a_1}{a_2} = \\frac{r_1}{r_2}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Time period is $T = \\frac{2\\pi}{\\omega}$.\n2. Since $T$ is the same for both, their angular velocities are equal: $\\omega_1 = \\omega_2 = \\omega$.\n3. Centripetal acceleration of mass 1: $a_1 = \\omega^2 r_1$.\n4. Centripetal acceleration of mass 2: $a_2 = \\omega^2 r_2$.\n5. Taking the ratio: $\\frac{a_1}{a_2} = \\frac{\\omega^2 r_1}{\\omega^2 r_2} = \\frac{r_1}{r_2}$.\n\n5. FINAL ANSWER:\nOption A: $\\frac{r_1}{r_2}$\n\n6. QUICK TIP:\nWhen angular speed $\\omega$ or time period $T$ is constant: $a \\propto r$! (When linear speed $v$ is constant: $a \\propto 1/r$).",
+    "solutionStructured": {
+      "concept": "Same time period means identical angular velocity $\\omega = \\frac{2\\pi}{T}$. Since centripetal acceleration is $a = \\omega^2 r$, with $\\omega$ constant, $a \\propto r$. Therefore, $\\frac{a_1}{a_2} = \\frac{r_1}{r_2}$.",
+      "given": "Same time period $T$, radii $r_1, r_2$.",
+      "formula": "$a = \\omega^2 r$; $\\omega_1 = \\omega_2 \\implies \\frac{a_1}{a_2} = \\frac{r_1}{r_2}$.",
+      "stepByStep": "1. Time period is $T = \\frac{2\\pi}{\\omega}$.\n2. Since $T$ is the same for both, their angular velocities are equal: $\\omega_1 = \\omega_2 = \\omega$.\n3. Centripetal acceleration of mass 1: $a_1 = \\omega^2 r_1$.\n4. Centripetal acceleration of mass 2: $a_2 = \\omega^2 r_2$.\n5. Taking the ratio: $\\frac{a_1}{a_2} = \\frac{\\omega^2 r_1}{\\omega^2 r_2} = \\frac{r_1}{r_2}$.",
+      "finalAnswer": "Option A: $\\frac{r_1}{r_2}$",
+      "whyOtherOptionsWrong": "Option B inverts the ratio. Option C squares the radii. Option D assumes equal accelerations."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Maximum speed and friction in circular motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-465",
+    "questionNumber": 465,
+    "question": "In the previous setup, if both bodies had the SAME linear speed $v$ instead of the same period, the ratio of their centripetal accelerations $\\frac{a_1}{a_2}$ would be:",
+    "options": {
+      "A": "$\\frac{r_2}{r_1}$",
+      "B": "$\\frac{r_1}{r_2}$",
+      "C": "$\\frac{r_1^2}{r_2^2}$",
+      "D": "1"
+    },
+    "optionsList": [
+      "$\\frac{r_2}{r_1}$",
+      "$\\frac{r_1}{r_2}$",
+      "$\\frac{r_1^2}{r_2^2}$",
+      "1"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor constant linear speed $v$, centripetal acceleration is $a = \\frac{v^2}{r}$. Since $v$ is constant, $a \\propto \\frac{1}{r}$. Therefore, $\\frac{a_1}{a_2} = \\frac{r_2}{r_1}$.\n\n2. GIVEN:\nSame linear speed $v$, radii $r_1, r_2$.\n\n3. FORMULA / PRINCIPLE:\n$a = \\frac{v^2}{r} \\implies \\frac{a_1}{a_2} = \\frac{r_2}{r_1}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Acceleration formula in terms of linear speed: $a = \\frac{v^2}{r}$.\n2. Given $v_1 = v_2 = v$.\n3. $a_1 = \\frac{v^2}{r_1}$ and $a_2 = \\frac{v^2}{r_2}$.\n4. Taking the ratio: $\\frac{a_1}{a_2} = \\frac{v^2/r_1}{v^2/r_2} = \\frac{r_2}{r_1}$.\n\n5. FINAL ANSWER:\nOption A: $\\frac{r_2}{r_1}$\n\n6. QUICK TIP:\nCompare carefully:\n- Constant $\\omega \\implies a \\propto r$\n- Constant $v \\implies a \\propto 1/r$",
+    "solutionStructured": {
+      "concept": "For constant linear speed $v$, centripetal acceleration is $a = \\frac{v^2}{r}$. Since $v$ is constant, $a \\propto \\frac{1}{r}$. Therefore, $\\frac{a_1}{a_2} = \\frac{r_2}{r_1}$.",
+      "given": "Same linear speed $v$, radii $r_1, r_2$.",
+      "formula": "$a = \\frac{v^2}{r} \\implies \\frac{a_1}{a_2} = \\frac{r_2}{r_1}$.",
+      "stepByStep": "1. Acceleration formula in terms of linear speed: $a = \\frac{v^2}{r}$.\n2. Given $v_1 = v_2 = v$.\n3. $a_1 = \\frac{v^2}{r_1}$ and $a_2 = \\frac{v^2}{r_2}$.\n4. Taking the ratio: $\\frac{a_1}{a_2} = \\frac{v^2/r_1}{v^2/r_2} = \\frac{r_2}{r_1}$.",
+      "finalAnswer": "Option A: $\\frac{r_2}{r_1}$",
+      "whyOtherOptionsWrong": "Option B is the ratio for constant $\\omega$. Option C and D are incorrect."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Maximum speed and friction in circular motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-466",
+    "questionNumber": 466,
+    "question": "A small block of mass $m$ rests on the rough horizontal floor of a vehicle. The vehicle moves in a circle of radius $R$ with speed $v$. If the block is on the verge of sliding outwards, the coefficient of static friction $\\mu_s$ must satisfy:",
+    "options": {
+      "A": "$\\mu_s = \\frac{v^2}{Rg}$",
+      "B": "$\\mu_s = \\frac{Rg}{v^2}$",
+      "C": "$\\mu_s = \\frac{v}{Rg}$",
+      "D": "$\\mu_s = \\frac{v^2}{g}$"
+    },
+    "optionsList": [
+      "$\\mu_s = \\frac{v^2}{Rg}$",
+      "$\\mu_s = \\frac{Rg}{v^2}$",
+      "$\\mu_s = \\frac{v}{Rg}$",
+      "$\\mu_s = \\frac{v^2}{g}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn the vehicle frame, centrifugal pseudo force is $m v^2/R$. Limiting static friction balances it: $f_{\\text{lim}} = \\mu_s mg$. At verge of sliding: $\\mu_s mg = \\frac{mv^2}{R} \\implies \\mu_s = \\frac{v^2}{Rg}$.\n\n2. GIVEN:\nCircular radius $R$, speed $v$, block on horizontal vehicle floor.\n\n3. FORMULA / PRINCIPLE:\n$\\mu_s = \\frac{v^2}{Rg}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. The required centripetal acceleration is $a_c = \\frac{v^2}{R}$.\n2. The only horizontal force on the block is static friction from the floor: $f_s = m a_c = \\frac{mv^2}{R}$.\n3. The maximum static friction available is $f_{\\text{lim}} = \\mu_s N = \\mu_s mg$.\n4. At the verge of slipping: $f_s = f_{\\text{lim}} \\implies \\frac{mv^2}{R} = \\mu_s mg$.\n5. Cancelling $m$: $\\mu_s = \\frac{v^2}{Rg}$.\n\n5. FINAL ANSWER:\nOption A: $\\mu_s = \\frac{v^2}{Rg}$\n\n6. QUICK TIP:\nFriction coefficient at verge of circular slip: $\\mu_s = \\frac{v^2}{Rg}$!",
+    "solutionStructured": {
+      "concept": "In the vehicle frame, centrifugal pseudo force is $m v^2/R$. Limiting static friction balances it: $f_{\\text{lim}} = \\mu_s mg$. At verge of sliding: $\\mu_s mg = \\frac{mv^2}{R} \\implies \\mu_s = \\frac{v^2}{Rg}$.",
+      "given": "Circular radius $R$, speed $v$, block on horizontal vehicle floor.",
+      "formula": "$\\mu_s = \\frac{v^2}{Rg}$.",
+      "stepByStep": "1. The required centripetal acceleration is $a_c = \\frac{v^2}{R}$.\n2. The only horizontal force on the block is static friction from the floor: $f_s = m a_c = \\frac{mv^2}{R}$.\n3. The maximum static friction available is $f_{\\text{lim}} = \\mu_s N = \\mu_s mg$.\n4. At the verge of slipping: $f_s = f_{\\text{lim}} \\implies \\frac{mv^2}{R} = \\mu_s mg$.\n5. Cancelling $m$: $\\mu_s = \\frac{v^2}{Rg}$.",
+      "finalAnswer": "Option A: $\\mu_s = \\frac{v^2}{Rg}$",
+      "whyOtherOptionsWrong": "Option B inverts the ratio. Option C misses the square on $v$. Option D misses the radius $R$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Maximum speed and friction in circular motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-467",
+    "questionNumber": 467,
+    "question": "A heavy uniform ring of mass $m$ and radius $R$ rotates in a horizontal plane about its central vertical axis with constant angular speed $\\omega$. The tension developed in the ring due to its rotation is:",
+    "options": {
+      "A": "$m \\omega^2 R / (2\\pi)$",
+      "B": "$m \\omega^2 R$",
+      "C": "$m \\omega^2 R / \\pi$",
+      "D": "$2\\pi m \\omega^2 R$"
+    },
+    "optionsList": [
+      "$m \\omega^2 R / (2\\pi)$",
+      "$m \\omega^2 R$",
+      "$m \\omega^2 R / \\pi$",
+      "$2\\pi m \\omega^2 R$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nConsider a small element of the ring subtending angle $d\\theta$ at the center. Its mass is $dm = \\frac{m}{2\\pi} d\\theta$. The inward radial force provided by the tensions $T$ at each end is $2T\\sin(d\\theta/2) \\approx T d\\theta$. This provides the centripetal force: $T d\\theta = (dm) \\omega^2 R = \\left(\\frac{m}{2\\pi} d\\theta\\right) \\omega^2 R \\implies T = \\frac{m \\omega^2 R}{2\\pi}$.\n\n2. GIVEN:\nUniform ring mass $m$, radius $R$, angular speed $\\omega$.\n\n3. FORMULA / PRINCIPLE:\n$T = \\frac{m \\omega^2 R}{2\\pi} = \\mu v^2$ where $\\mu = \\frac{m}{2\\pi R}$ is linear mass density and $v = \\omega R$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Total mass of the ring is $m$ and circumference is $2\\pi R$.\n2. Linear mass density: $\\lambda = \\frac{m}{2\\pi R}$.\n3. Consider an infinitesimal arc element subtending angle $d\\theta$:\n   - Mass of element: $dm = \\lambda (R d\\theta) = \\frac{m}{2\\pi} d\\theta$.\n   - It moves in a circle of radius $R$ with centripetal acceleration $a_c = \\omega^2 R$.\n4. Tensions $T$ act tangentially at both ends of the element.\n5. The radial inward component of these tensions is:\n   $F_{\\text{radial}} = 2 T \\sin\\left(\\frac{d\\theta}{2}\\right) \\approx 2 T \\left(\\frac{d\\theta}{2}\\right) = T d\\theta$.\n6. Equating to centripetal force: $T d\\theta = (dm) \\omega^2 R = \\left(\\frac{m}{2\\pi} d\\theta\\right) \\omega^2 R$.\n7. Cancelling $d\\theta$: $T = \\frac{m \\omega^2 R}{2\\pi}$.\n\n5. FINAL ANSWER:\nOption A: $m \\omega^2 R / (2\\pi)$\n\n6. QUICK TIP:\nTension in rotating ring: $T = \\frac{m \\omega^2 R}{2\\pi} = \\lambda v^2$. Very famous advanced NEET question!",
+    "solutionStructured": {
+      "concept": "Consider a small element of the ring subtending angle $d\\theta$ at the center. Its mass is $dm = \\frac{m}{2\\pi} d\\theta$. The inward radial force provided by the tensions $T$ at each end is $2T\\sin(d\\theta/2) \\approx T d\\theta$. This provides the centripetal force: $T d\\theta = (dm) \\omega^2 R = \\left(\\frac{m}{2\\pi} d\\theta\\right) \\omega^2 R \\implies T = \\frac{m \\omega^2 R}{2\\pi}$.",
+      "given": "Uniform ring mass $m$, radius $R$, angular speed $\\omega$.",
+      "formula": "$T = \\frac{m \\omega^2 R}{2\\pi} = \\mu v^2$ where $\\mu = \\frac{m}{2\\pi R}$ is linear mass density and $v = \\omega R$.",
+      "stepByStep": "1. Total mass of the ring is $m$ and circumference is $2\\pi R$.\n2. Linear mass density: $\\lambda = \\frac{m}{2\\pi R}$.\n3. Consider an infinitesimal arc element subtending angle $d\\theta$:\n   - Mass of element: $dm = \\lambda (R d\\theta) = \\frac{m}{2\\pi} d\\theta$.\n   - It moves in a circle of radius $R$ with centripetal acceleration $a_c = \\omega^2 R$.\n4. Tensions $T$ act tangentially at both ends of the element.\n5. The radial inward component of these tensions is:\n   $F_{\\text{radial}} = 2 T \\sin\\left(\\frac{d\\theta}{2}\\right) \\approx 2 T \\left(\\frac{d\\theta}{2}\\right) = T d\\theta$.\n6. Equating to centripetal force: $T d\\theta = (dm) \\omega^2 R = \\left(\\frac{m}{2\\pi} d\\theta\\right) \\omega^2 R$.\n7. Cancelling $d\\theta$: $T = \\frac{m \\omega^2 R}{2\\pi}$.",
+      "finalAnswer": "Option A: $m \\omega^2 R / (2\\pi)$",
+      "whyOtherOptionsWrong": "Option B misses the $2\\pi$ geometric integration factor. Option C has $\\pi$ instead of $2\\pi$. Option D multiplies by $2\\pi$."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Maximum speed and friction in circular motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-468",
+    "questionNumber": 468,
+    "question": "In the rotating ring problem, if $v = \\omega R$ is the linear speed of the ring, the tension in the ring expressed in terms of linear mass density $\\mu = \\frac{m}{2\\pi R}$ and speed $v$ is:",
+    "options": {
+      "A": "$\\mu v^2$",
+      "B": "$\\frac{1}{2}\\mu v^2$",
+      "C": "$2\\mu v^2$",
+      "D": "$\\frac{\\mu v^2}{2\\pi}$"
+    },
+    "optionsList": [
+      "$\\mu v^2$",
+      "$\\frac{1}{2}\\mu v^2$",
+      "$2\\mu v^2$",
+      "$\\frac{\\mu v^2}{2\\pi}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSubstitute $\\omega R = v$ and $\\frac{m}{2\\pi R} = \\mu$ into $T = \\frac{m\\omega^2 R}{2\\pi}$: $T = \\left(\\frac{m}{2\\pi R}\\right) (\\omega R)^2 = \\mu v^2$.\n\n2. GIVEN:\n$v = \\omega R$, $\\mu = \\frac{m}{2\\pi R}$.\n\n3. FORMULA / PRINCIPLE:\n$T = \\mu v^2$.\n\n4. STEP-BY-STEP SOLUTION:\n1. From the previous derivation: $T = \\frac{m \\omega^2 R}{2\\pi}$.\n2. Multiply numerator and denominator by $R$:\n   $T = \\left(\\frac{m}{2\\pi R}\\right) (\\omega^2 R^2) = \\mu (\\omega R)^2$.\n3. Substitute linear velocity $v = \\omega R$:\n   $T = \\mu v^2$.\n\n5. FINAL ANSWER:\nOption A: $\\mu v^2$\n\n6. QUICK TIP:\nRemarkable Insight: The tension in a rotating hoop is $T = \\mu v^2$. Notice that the wave speed on a string is $v_{\\text{wave}} = \\sqrt{T/\\mu} = v$! A transverse pulse moves at the same speed as the hoop.",
+    "solutionStructured": {
+      "concept": "Substitute $\\omega R = v$ and $\\frac{m}{2\\pi R} = \\mu$ into $T = \\frac{m\\omega^2 R}{2\\pi}$: $T = \\left(\\frac{m}{2\\pi R}\\right) (\\omega R)^2 = \\mu v^2$.",
+      "given": "$v = \\omega R$, $\\mu = \\frac{m}{2\\pi R}$.",
+      "formula": "$T = \\mu v^2$.",
+      "stepByStep": "1. From the previous derivation: $T = \\frac{m \\omega^2 R}{2\\pi}$.\n2. Multiply numerator and denominator by $R$:\n   $T = \\left(\\frac{m}{2\\pi R}\\right) (\\omega^2 R^2) = \\mu (\\omega R)^2$.\n3. Substitute linear velocity $v = \\omega R$:\n   $T = \\mu v^2$.",
+      "finalAnswer": "Option A: $\\mu v^2$",
+      "whyOtherOptionsWrong": "Option B misses the factor of 1. Option C and D have incorrect coefficients."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Maximum speed and friction in circular motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-469",
+    "questionNumber": 469,
+    "question": "A particle of mass $m$ moves along a horizontal circle of radius $r$ on the rough inner surface of an inverted cone of half-angle $\\alpha$. If the coefficient of static friction is $\\mu_s$, what is the maximum angular speed $\\omega_{\\text{max}}$ for which the particle does not slide up the surface?",
+    "options": {
+      "A": "$\\sqrt{\\frac{g}{r} \\left(\\frac{\\cos\\alpha + \\mu_s\\sin\\alpha}{\\sin\\alpha - \\mu_s\\cos\\alpha}\\right)}$",
+      "B": "$\\sqrt{\\frac{g}{r} \\tan\\alpha}$",
+      "C": "$\\sqrt{\\frac{g}{r} \\cot\\alpha}$",
+      "D": "$\\sqrt{\\frac{g}{r} \\left(\\frac{\\sin\\alpha - \\mu_s\\cos\\alpha}{\\cos\\alpha + \\mu_s\\sin\\alpha}\\right)}$"
+    },
+    "optionsList": [
+      "$\\sqrt{\\frac{g}{r} \\left(\\frac{\\cos\\alpha + \\mu_s\\sin\\alpha}{\\sin\\alpha - \\mu_s\\cos\\alpha}\\right)}$",
+      "$\\sqrt{\\frac{g}{r} \\tan\\alpha}$",
+      "$\\sqrt{\\frac{g}{r} \\cot\\alpha}$",
+      "$\\sqrt{\\frac{g}{r} \\left(\\frac{\\sin\\alpha - \\mu_s\\cos\\alpha}{\\cos\\alpha + \\mu_s\\sin\\alpha}\\right)}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn an inverted cone of semi-vertical angle $\\alpha$, the inclined surface makes angle $\\theta = 90^\\circ - \\alpha$ with the horizontal, meaning the normal makes angle $\\alpha$ with the horizontal. At maximum angular speed, friction acts down the slant height of the cone. Force balance gives $\\omega_{\\text{max}} = \\sqrt{\\frac{g}{r} \\left(\\frac{\\cos\\alpha + \\mu_s\\sin\\alpha}{\\sin\\alpha - \\mu_s\\cos\\alpha}\\right)}$.\n\n2. GIVEN:\nInverted cone, half-angle $\\alpha$, radius $r$, coefficient $\\mu_s$.\n\n3. FORMULA / PRINCIPLE:\n$\\omega_{\\text{max}} = \\sqrt{\\frac{g}{r} \\left(\\frac{\\cos\\alpha + \\mu_s\\sin\\alpha}{\\sin\\alpha - \\mu_s\\cos\\alpha}\\right)}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Slant surface of cone makes angle $(90^\\circ - \\alpha)$ with horizontal.\n2. Normal force $N$ points inward and upward, making angle $\\alpha$ with horizontal.\n3. At maximum speed, the particle tends to slide UP the slant surface, so limiting friction $f_L = \\mu_s N$ acts DOWN the slant surface.\n4. Vertical equilibrium:\n   $N\\sin\\alpha - f_L\\cos\\alpha = mg \\implies N(\\sin\\alpha - \\mu_s\\cos\\alpha) = mg$.\n5. Horizontal centripetal force:\n   $N\\cos\\alpha + f_L\\sin\\alpha = m\\omega^2 r \\implies N(\\cos\\alpha + \\mu_s\\sin\\alpha) = m\\omega^2 r$.\n6. Dividing equation 5 by equation 4:\n   $\\frac{\\cos\\alpha + \\mu_s\\sin\\alpha}{\\sin\\alpha - \\mu_s\\cos\\alpha} = \\frac{\\omega^2 r}{g}$.\n7. Solving for $\\omega$:\n   $\\omega_{\\text{max}} = \\sqrt{\\frac{g}{r} \\left(\\frac{\\cos\\alpha + \\mu_s\\sin\\alpha}{\\sin\\alpha - \\mu_s\\cos\\alpha}\\right)}$.\n\n5. FINAL ANSWER:\nOption A: $\\sqrt{\\frac{g}{r} \\left(\\frac{\\cos\\alpha + \\mu_s\\sin\\alpha}{\\sin\\alpha - \\mu_s\\cos\\alpha}\\right)}$\n\n6. QUICK TIP:\nFor zero friction ($\\mu_s = 0$), $\\omega_0 = \\sqrt{\\frac{g}{r}\\cot\\alpha}$! Matches standard inverted cone result.",
+    "solutionStructured": {
+      "concept": "In an inverted cone of semi-vertical angle $\\alpha$, the inclined surface makes angle $\\theta = 90^\\circ - \\alpha$ with the horizontal, meaning the normal makes angle $\\alpha$ with the horizontal. At maximum angular speed, friction acts down the slant height of the cone. Force balance gives $\\omega_{\\text{max}} = \\sqrt{\\frac{g}{r} \\left(\\frac{\\cos\\alpha + \\mu_s\\sin\\alpha}{\\sin\\alpha - \\mu_s\\cos\\alpha}\\right)}$.",
+      "given": "Inverted cone, half-angle $\\alpha$, radius $r$, coefficient $\\mu_s$.",
+      "formula": "$\\omega_{\\text{max}} = \\sqrt{\\frac{g}{r} \\left(\\frac{\\cos\\alpha + \\mu_s\\sin\\alpha}{\\sin\\alpha - \\mu_s\\cos\\alpha}\\right)}$.",
+      "stepByStep": "1. Slant surface of cone makes angle $(90^\\circ - \\alpha)$ with horizontal.\n2. Normal force $N$ points inward and upward, making angle $\\alpha$ with horizontal.\n3. At maximum speed, the particle tends to slide UP the slant surface, so limiting friction $f_L = \\mu_s N$ acts DOWN the slant surface.\n4. Vertical equilibrium:\n   $N\\sin\\alpha - f_L\\cos\\alpha = mg \\implies N(\\sin\\alpha - \\mu_s\\cos\\alpha) = mg$.\n5. Horizontal centripetal force:\n   $N\\cos\\alpha + f_L\\sin\\alpha = m\\omega^2 r \\implies N(\\cos\\alpha + \\mu_s\\sin\\alpha) = m\\omega^2 r$.\n6. Dividing equation 5 by equation 4:\n   $\\frac{\\cos\\alpha + \\mu_s\\sin\\alpha}{\\sin\\alpha - \\mu_s\\cos\\alpha} = \\frac{\\omega^2 r}{g}$.\n7. Solving for $\\omega$:\n   $\\omega_{\\text{max}} = \\sqrt{\\frac{g}{r} \\left(\\frac{\\cos\\alpha + \\mu_s\\sin\\alpha}{\\sin\\alpha - \\mu_s\\cos\\alpha}\\right)}$.",
+      "finalAnswer": "Option A: $\\sqrt{\\frac{g}{r} \\left(\\frac{\\cos\\alpha + \\mu_s\\sin\\alpha}{\\sin\\alpha - \\mu_s\\cos\\alpha}\\right)}$",
+      "whyOtherOptionsWrong": "Option B and C assume frictionless cone. Option D is the minimum angular velocity to prevent sliding down."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Maximum speed and friction in circular motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-470",
+    "questionNumber": 470,
+    "question": "A body of mass $m$ is suspended by two identical spring balances arranged in series from a rigid ceiling. The reading of each spring balance is:",
+    "options": {
+      "A": "$mg$",
+      "B": "$\\frac{mg}{2}$",
+      "C": "$2mg$",
+      "D": "Zero"
+    },
+    "optionsList": [
+      "$mg$",
+      "$\\frac{mg}{2}$",
+      "$2mg$",
+      "Zero"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn a series combination of light spring balances, the tension throughout the line is identical. The lower spring balance experiences tension $T = mg$, and transmits that exact same tension $T = mg$ to the upper spring balance. Therefore, BOTH spring balances read $mg$.\n\n2. GIVEN:\nTwo spring balances in series supporting mass $m$.\n\n3. FORMULA / PRINCIPLE:\nSeries: $T_1 = T_2 = mg$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Consider the lower spring balance: It directly supports the mass $m$, so the tension in it is $T_1 = mg$. Its pointer reads $mg$.\n2. The lower spring balance is light (negligible mass) and pulls on the bottom hook of the upper spring balance with tension $T_1 = mg$.\n3. Therefore, the tension in the upper spring balance is also $T_2 = mg$.\n4. Hence, both balances display a reading of $mg$.\n\n5. FINAL ANSWER:\nOption A: $mg$\n\n6. QUICK TIP:\nSeries Spring Balances: Each reads $mg$! Parallel Spring Balances: Each reads $mg/2$. Classic NEET distinction.",
+    "solutionStructured": {
+      "concept": "In a series combination of light spring balances, the tension throughout the line is identical. The lower spring balance experiences tension $T = mg$, and transmits that exact same tension $T = mg$ to the upper spring balance. Therefore, BOTH spring balances read $mg$.",
+      "given": "Two spring balances in series supporting mass $m$.",
+      "formula": "Series: $T_1 = T_2 = mg$.",
+      "stepByStep": "1. Consider the lower spring balance: It directly supports the mass $m$, so the tension in it is $T_1 = mg$. Its pointer reads $mg$.\n2. The lower spring balance is light (negligible mass) and pulls on the bottom hook of the upper spring balance with tension $T_1 = mg$.\n3. Therefore, the tension in the upper spring balance is also $T_2 = mg$.\n4. Hence, both balances display a reading of $mg$.",
+      "finalAnswer": "Option A: $mg$",
+      "whyOtherOptionsWrong": "Option B ($mg/2$) is for parallel spring balances. Option C would require extra masses. Option D is absurd."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Mixed-concept NEET-level problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-471",
+    "questionNumber": 471,
+    "question": "If the two identical spring balances in the previous question are connected in PARALLEL to support the mass $m$ symmetrically, the reading of each balance is:",
+    "options": {
+      "A": "$\\frac{mg}{2}$",
+      "B": "$mg$",
+      "C": "$2mg$",
+      "D": "$\\frac{mg}{4}$"
+    },
+    "optionsList": [
+      "$\\frac{mg}{2}$",
+      "$mg$",
+      "$2mg$",
+      "$\\frac{mg}{4}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn a symmetric parallel arrangement, the two spring balances share the downward load equally: $T_1 + T_2 = mg$. By symmetry, $T_1 = T_2 = \\frac{mg}{2}$.\n\n2. GIVEN:\nTwo identical spring balances in parallel supporting mass $m$.\n\n3. FORMULA / PRINCIPLE:\n$2T = mg \\implies T = \\frac{mg}{2}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Both balances hang side by side from the ceiling, sharing the load.\n2. By symmetry, each balance carries half the total downward weight.\n3. $T_1 = T_2 = \\frac{mg}{2}$.\n4. Therefore, each spring balance reads $\\frac{mg}{2}$.\n\n5. FINAL ANSWER:\nOption A: $\\frac{mg}{2}$\n\n6. QUICK TIP:\nParallel springs divide the load: $T = mg/n$ where $n$ is the number of parallel supports!",
+    "solutionStructured": {
+      "concept": "In a symmetric parallel arrangement, the two spring balances share the downward load equally: $T_1 + T_2 = mg$. By symmetry, $T_1 = T_2 = \\frac{mg}{2}$.",
+      "given": "Two identical spring balances in parallel supporting mass $m$.",
+      "formula": "$2T = mg \\implies T = \\frac{mg}{2}$.",
+      "stepByStep": "1. Both balances hang side by side from the ceiling, sharing the load.\n2. By symmetry, each balance carries half the total downward weight.\n3. $T_1 = T_2 = \\frac{mg}{2}$.\n4. Therefore, each spring balance reads $\\frac{mg}{2}$.",
+      "finalAnswer": "Option A: $\\frac{mg}{2}$",
+      "whyOtherOptionsWrong": "Option B is for series connection. Option C is double. Option D is one-quarter."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Mixed-concept NEET-level problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-472",
+    "questionNumber": 472,
+    "question": "A heavy uniform rope of mass $m$ and length $L$ lies on a smooth table with a fraction $1/4$ of its length hanging over the edge. If the rope is released from rest, the initial acceleration of the rope is:",
+    "options": {
+      "A": "$\\frac{g}{4}$",
+      "B": "$\\frac{g}{2}$",
+      "C": "$g$",
+      "D": "$\\frac{g}{8}$"
+    },
+    "optionsList": [
+      "$\\frac{g}{4}$",
+      "$\\frac{g}{2}$",
+      "$g$",
+      "$\\frac{g}{8}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe hanging portion has mass $m_1 = m/4$, and its weight $m_1 g = \\frac{mg}{4}$ is the sole driving force. The total mass being accelerated is the entire rope of mass $m$. Acceleration is $a = \\frac{F_{\\text{driving}}}{M_{\\text{total}}} = \\frac{mg/4}{m} = \\frac{g}{4}$.\n\n2. GIVEN:\nRope mass $m$, length $L$, fraction hanging $1/4$, smooth table.\n\n3. FORMULA / PRINCIPLE:\n$a = \\frac{m_{\\text{hanging}} g}{m_{\\text{total}}} = \\frac{m/4}{m} g = \\frac{g}{4}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Mass of the hanging segment: $m_{\\text{hang}} = \\frac{1}{4}m$.\n2. The table is smooth, so the segment on the table experiences zero friction.\n3. The sole unbalanced external force on the rope system is the weight of the hanging segment: $F = m_{\\text{hang}} g = \\frac{1}{4}mg$.\n4. By Newton's second law, this force accelerates the ENTIRE rope of mass $m$.\n5. Therefore: $a = \\frac{F}{m} = \\frac{\\frac{1}{4}mg}{m} = \\frac{g}{4}$.\n\n5. FINAL ANSWER:\nOption A: $\\frac{g}{4}$\n\n6. QUICK TIP:\nHanging Rope on Smooth Table: Initial acceleration is ALWAYS $a = \\eta g$ where $\\eta$ is the fraction hanging!",
+    "solutionStructured": {
+      "concept": "The hanging portion has mass $m_1 = m/4$, and its weight $m_1 g = \\frac{mg}{4}$ is the sole driving force. The total mass being accelerated is the entire rope of mass $m$. Acceleration is $a = \\frac{F_{\\text{driving}}}{M_{\\text{total}}} = \\frac{mg/4}{m} = \\frac{g}{4}$.",
+      "given": "Rope mass $m$, length $L$, fraction hanging $1/4$, smooth table.",
+      "formula": "$a = \\frac{m_{\\text{hanging}} g}{m_{\\text{total}}} = \\frac{m/4}{m} g = \\frac{g}{4}$.",
+      "stepByStep": "1. Mass of the hanging segment: $m_{\\text{hang}} = \\frac{1}{4}m$.\n2. The table is smooth, so the segment on the table experiences zero friction.\n3. The sole unbalanced external force on the rope system is the weight of the hanging segment: $F = m_{\\text{hang}} g = \\frac{1}{4}mg$.\n4. By Newton's second law, this force accelerates the ENTIRE rope of mass $m$.\n5. Therefore: $a = \\frac{F}{m} = \\frac{\\frac{1}{4}mg}{m} = \\frac{g}{4}$.",
+      "finalAnswer": "Option A: $\\frac{g}{4}$",
+      "whyOtherOptionsWrong": "Option B is $g/2$. Option C is free fall. Option D is $g/8$."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Mixed-concept NEET-level problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-473",
+    "questionNumber": 473,
+    "question": "A spring balance is attached to the ceiling of a lift. A man hangs his bag on the balance and notices that it reads $49\\text{ N}$ when the lift is stationary. What will the balance read if the lift moves downwards with a CONSTANT VELOCITY of $5\\text{ m/s}$?",
+    "options": {
+      "A": "49 N",
+      "B": "Zero",
+      "C": "24.5 N",
+      "D": "98 N"
+    },
+    "optionsList": [
+      "49 N",
+      "Zero",
+      "24.5 N",
+      "98 N"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nA frame moving with constant velocity has ZERO acceleration ($a = 0$). It is an inertial frame! Apparent weight differs from real weight only when there is non-zero acceleration ($a \\ne 0$). Therefore, the reading remains $49\\text{ N}$.\n\n2. GIVEN:\nStationary reading $49\\text{ N}$, constant downward velocity $v = 5\\text{ m/s}$ ($a = 0$).\n\n3. FORMULA / PRINCIPLE:\n$W_{\\text{app}} = m(g - a) = m(g - 0) = mg = 49\\text{ N}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. The lift is moving downwards with a constant velocity.\n2. Constant velocity means acceleration is zero: $a = \\frac{dv}{dt} = 0$.\n3. The apparent weight in an elevator is $W_{\\text{app}} = m(g \\pm a)$.\n4. Since $a = 0$, $W_{\\text{app}} = mg = 49\\text{ N}$.\n5. The balance reading is completely unaffected by velocity.\n\n5. FINAL ANSWER:\nOption A: 49 N\n\n6. QUICK TIP:\nNEET Trap: VELOCITY does not change the reading of a balance; only ACCELERATION does!",
+    "solutionStructured": {
+      "concept": "A frame moving with constant velocity has ZERO acceleration ($a = 0$). It is an inertial frame! Apparent weight differs from real weight only when there is non-zero acceleration ($a \\ne 0$). Therefore, the reading remains $49\\text{ N}$.",
+      "given": "Stationary reading $49\\text{ N}$, constant downward velocity $v = 5\\text{ m/s}$ ($a = 0$).",
+      "formula": "$W_{\\text{app}} = m(g - a) = m(g - 0) = mg = 49\\text{ N}$.",
+      "stepByStep": "1. The lift is moving downwards with a constant velocity.\n2. Constant velocity means acceleration is zero: $a = \\frac{dv}{dt} = 0$.\n3. The apparent weight in an elevator is $W_{\\text{app}} = m(g \\pm a)$.\n4. Since $a = 0$, $W_{\\text{app}} = mg = 49\\text{ N}$.\n5. The balance reading is completely unaffected by velocity.",
+      "finalAnswer": "Option A: 49 N",
+      "whyOtherOptionsWrong": "Option B (zero) occurs during free fall ($a = g$). Option C and D assume acceleration."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Mixed-concept NEET-level problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-474",
+    "questionNumber": 474,
+    "question": "When a horse pulls a cart, the force that makes the horse-cart system move forward is exerted by:",
+    "options": {
+      "A": "The ground on the horse's hooves",
+      "B": "The horse on the cart",
+      "C": "The cart on the horse",
+      "D": "The horse on the ground"
+    },
+    "optionsList": [
+      "The ground on the horse's hooves",
+      "The horse on the cart",
+      "The cart on the horse",
+      "The horse on the ground"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nBy Newton's third law, the horse pushes backward against the ground with its hooves. The ground exerts an equal and opposite forward reaction force on the horse's hooves. This external ground reaction accelerates the horse and cart forward.\n\n2. GIVEN:\nHorse pulling a cart on the ground.\n\n3. FORMULA / PRINCIPLE:\nExternal force $F_{\\text{ext}} = F_{\\text{ground on horse}} - f_{\\text{cart friction}} = (M_{\\text{horse}} + M_{\\text{cart}}) a$.\n\n4. STEP-BY-STEP SOLUTION:\n1. The forces between the horse and the cart (tension in harnesses) are internal forces of the system; internal forces cancel out in pairs and cannot accelerate the center of mass.\n2. The horse pushes backwards against the ground with its hooves.\n3. By Newton's third law, the ground pushes forwards on the horse's hooves with an equal and opposite force.\n4. This forward force exerted by the ground is the external force that accelerates the whole system forward.\n\n5. FINAL ANSWER:\nOption A: The ground on the horse's hooves\n\n6. QUICK TIP:\nClassic NCERT Question: The horse pushes the ground backward; the GROUND pushes the horse forward!",
+    "solutionStructured": {
+      "concept": "By Newton's third law, the horse pushes backward against the ground with its hooves. The ground exerts an equal and opposite forward reaction force on the horse's hooves. This external ground reaction accelerates the horse and cart forward.",
+      "given": "Horse pulling a cart on the ground.",
+      "formula": "External force $F_{\\text{ext}} = F_{\\text{ground on horse}} - f_{\\text{cart friction}} = (M_{\\text{horse}} + M_{\\text{cart}}) a$.",
+      "stepByStep": "1. The forces between the horse and the cart (tension in harnesses) are internal forces of the system; internal forces cancel out in pairs and cannot accelerate the center of mass.\n2. The horse pushes backwards against the ground with its hooves.\n3. By Newton's third law, the ground pushes forwards on the horse's hooves with an equal and opposite force.\n4. This forward force exerted by the ground is the external force that accelerates the whole system forward.",
+      "finalAnswer": "Option A: The ground on the horse's hooves",
+      "whyOtherOptionsWrong": "Option B and C are internal forces between horse and cart. Option D is a force acting ON the ground, not on the horse."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Mixed-concept NEET-level problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-475",
+    "questionNumber": 475,
+    "question": "A bullet of mass $0.02\\text{ kg}$ is fired from a rifle of mass $4\\text{ kg}$ with a muzzle velocity of $400\\text{ m/s}$. The recoil velocity of the rifle is:",
+    "options": {
+      "A": "$-2\\text{ m/s}$ (in backward direction)",
+      "B": "$+2\\text{ m/s}$",
+      "C": "$-4\\text{ m/s}$",
+      "D": "$-0.2\\text{ m/s}$"
+    },
+    "optionsList": [
+      "$-2\\text{ m/s}$ (in backward direction)",
+      "$+2\\text{ m/s}$",
+      "$-4\\text{ m/s}$",
+      "$-0.2\\text{ m/s}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nConservation of linear momentum: $m_{\\text{bullet}} v_{\\text{bullet}} + M_{\\text{rifle}} V_{\\text{recoil}} = 0 \\implies V_{\\text{recoil}} = -\\frac{m v}{M} = -\\frac{0.02 \\times 400}{4} = -2\\text{ m/s}$.\n\n2. GIVEN:\n$m = 0.02\\text{ kg}, M = 4\\text{ kg}, v = 400\\text{ m/s}$.\n\n3. FORMULA / PRINCIPLE:\n$V = -\\frac{m v}{M}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Total initial momentum before firing is zero.\n2. Since no external horizontal force acts during firing, momentum is conserved:\n   $p_i = p_f \\implies 0 = m v + M V$.\n3. Solving for recoil velocity: $V = -\\frac{mv}{M}$.\n4. Substitute values:\n   $V = -\\frac{0.02 \\times 400}{4} = -\\frac{8}{4} = -2\\text{ m/s}$.\n\n5. FINAL ANSWER:\nOption A: $-2\\text{ m/s}$ (in backward direction)\n\n6. QUICK TIP:\nRecoil Velocity Formula: $V = -\\frac{mv}{M}$. The negative sign indicates backward motion.",
+    "solutionStructured": {
+      "concept": "Conservation of linear momentum: $m_{\\text{bullet}} v_{\\text{bullet}} + M_{\\text{rifle}} V_{\\text{recoil}} = 0 \\implies V_{\\text{recoil}} = -\\frac{m v}{M} = -\\frac{0.02 \\times 400}{4} = -2\\text{ m/s}$.",
+      "given": "$m = 0.02\\text{ kg}, M = 4\\text{ kg}, v = 400\\text{ m/s}$.",
+      "formula": "$V = -\\frac{m v}{M}$.",
+      "stepByStep": "1. Total initial momentum before firing is zero.\n2. Since no external horizontal force acts during firing, momentum is conserved:\n   $p_i = p_f \\implies 0 = m v + M V$.\n3. Solving for recoil velocity: $V = -\\frac{mv}{M}$.\n4. Substitute values:\n   $V = -\\frac{0.02 \\times 400}{4} = -\\frac{8}{4} = -2\\text{ m/s}$.",
+      "finalAnswer": "Option A: $-2\\text{ m/s}$ (in backward direction)",
+      "whyOtherOptionsWrong": "Option B misses the direction. Option C is $-4\\text{ m/s}$. Option D is $-0.2\\text{ m/s}$."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Mixed-concept NEET-level problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-476",
+    "questionNumber": 476,
+    "question": "A body of mass $2\\text{ kg}$ is acted upon by two forces $\\vec{F}_1 = 6\\hat{i}\\text{ N}$ and $\\vec{F}_2 = 8\\hat{j}\\text{ N}$. What is the magnitude of the acceleration of the body?",
+    "options": {
+      "A": "$5\\text{ m/s}^2$",
+      "B": "$10\\text{ m/s}^2$",
+      "C": "$7\\text{ m/s}^2$",
+      "D": "$2.5\\text{ m/s}^2$"
+    },
+    "optionsList": [
+      "$5\\text{ m/s}^2$",
+      "$10\\text{ m/s}^2$",
+      "$7\\text{ m/s}^2$",
+      "$2.5\\text{ m/s}^2$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe resultant force is $\\vec{F} = 6\\hat{i} + 8\\hat{j}\\text{ N}$. Magnitude is $|\\vec{F}| = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = 10\\text{ N}$. Acceleration is $a = F / m = 10 / 2 = 5\\text{ m/s}^2$.\n\n2. GIVEN:\n$\\vec{F}_1 = 6\\hat{i}\\text{ N}, \\vec{F}_2 = 8\\hat{j}\\text{ N}, m = 2\\text{ kg}$.\n\n3. FORMULA / PRINCIPLE:\n$|\\vec{F}| = \\sqrt{F_x^2 + F_y^2} = 10\\text{ N}$; $a = \\frac{|\\vec{F}|}{m} = \\frac{10}{2} = 5\\text{ m/s}^2$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Net force vector: $\\vec{F}_{\\text{net}} = 6\\hat{i} + 8\\hat{j}\\text{ N}$.\n2. Magnitude of net force: $|\\vec{F}_{\\text{net}}| = \\sqrt{6^2 + 8^2} = \\sqrt{100} = 10\\text{ N}$.\n3. Mass of the body: $m = 2\\text{ kg}$.\n4. Acceleration: $a = \\frac{F}{m} = \\frac{10\\text{ N}}{2\\text{ kg}} = 5\\text{ m/s}^2$.\n\n5. FINAL ANSWER:\nOption A: $5\\text{ m/s}^2$\n\n6. QUICK TIP:\nPythagorean 6-8-10 triangle! Resultant force is 10 N, divide by 2 kg gives 5 m/s^2.",
+    "solutionStructured": {
+      "concept": "The resultant force is $\\vec{F} = 6\\hat{i} + 8\\hat{j}\\text{ N}$. Magnitude is $|\\vec{F}| = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = 10\\text{ N}$. Acceleration is $a = F / m = 10 / 2 = 5\\text{ m/s}^2$.",
+      "given": "$\\vec{F}_1 = 6\\hat{i}\\text{ N}, \\vec{F}_2 = 8\\hat{j}\\text{ N}, m = 2\\text{ kg}$.",
+      "formula": "$|\\vec{F}| = \\sqrt{F_x^2 + F_y^2} = 10\\text{ N}$; $a = \\frac{|\\vec{F}|}{m} = \\frac{10}{2} = 5\\text{ m/s}^2$.",
+      "stepByStep": "1. Net force vector: $\\vec{F}_{\\text{net}} = 6\\hat{i} + 8\\hat{j}\\text{ N}$.\n2. Magnitude of net force: $|\\vec{F}_{\\text{net}}| = \\sqrt{6^2 + 8^2} = \\sqrt{100} = 10\\text{ N}$.\n3. Mass of the body: $m = 2\\text{ kg}$.\n4. Acceleration: $a = \\frac{F}{m} = \\frac{10\\text{ N}}{2\\text{ kg}} = 5\\text{ m/s}^2$.",
+      "finalAnswer": "Option A: $5\\text{ m/s}^2$",
+      "whyOtherOptionsWrong": "Option B (10 m/s^2) is the net force, not acceleration. Option C adds scalar components $(6+8)/2$. Option D is $5/2$."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Mixed-concept NEET-level problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-477",
+    "questionNumber": 477,
+    "question": "Which of the following physical quantities is conserved for an isolated system experiencing non-conservative internal forces (such as friction or inelastic collision deformation)?",
+    "options": {
+      "A": "Total linear momentum",
+      "B": "Total mechanical energy",
+      "C": "Total kinetic energy",
+      "D": "Total potential energy"
+    },
+    "optionsList": [
+      "Total linear momentum",
+      "Total mechanical energy",
+      "Total kinetic energy",
+      "Total potential energy"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nLinear momentum depends solely on net external force ($\\sum \u000bec{F}_{\text{ext}} = \frac{d\u000bec{P}}{dt}$). In an isolated system ($\\sum \u000bec{F}_{\text{ext}} = 0$), total linear momentum is ALWAYS strictly conserved, regardless of whether internal forces are conservative, non-conservative, frictional, or explosive.\n\n2. GIVEN:\nIsolated system with non-conservative internal interactions.\n\n3. FORMULA / PRINCIPLE:\n$\\sum \\vec{F}_{\\text{ext}} = 0 \\implies \\vec{P} = \\text{constant}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Newton's second law for a system of particles states that $\\frac{d\\vec{P}}{dt} = \\sum \\vec{F}_{\\text{ext}}$.\n2. For an isolated system, external forces are zero ($\\sum \\vec{F}_{\\text{ext}} = 0$).\n3. Internal forces cancel out in action-reaction pairs by Newton's third law.\n4. Therefore, total linear momentum is conserved unconditionally.\n5. In contrast, mechanical and kinetic energy are converted into heat by friction/inelasticity.\n\n5. FINAL ANSWER:\nOption A: Total linear momentum\n\n6. QUICK TIP:\nGolden NEET Rule: Momentum is conserved in ALL collisions (elastic or inelastic) as long as the system is isolated!",
+    "solutionStructured": {
+      "concept": "Linear momentum depends solely on net external force ($\\sum \u000bec{F}_{\text{ext}} = \frac{d\u000bec{P}}{dt}$). In an isolated system ($\\sum \u000bec{F}_{\text{ext}} = 0$), total linear momentum is ALWAYS strictly conserved, regardless of whether internal forces are conservative, non-conservative, frictional, or explosive.",
+      "given": "Isolated system with non-conservative internal interactions.",
+      "formula": "$\\sum \\vec{F}_{\\text{ext}} = 0 \\implies \\vec{P} = \\text{constant}$.",
+      "stepByStep": "1. Newton's second law for a system of particles states that $\\frac{d\\vec{P}}{dt} = \\sum \\vec{F}_{\\text{ext}}$.\n2. For an isolated system, external forces are zero ($\\sum \\vec{F}_{\\text{ext}} = 0$).\n3. Internal forces cancel out in action-reaction pairs by Newton's third law.\n4. Therefore, total linear momentum is conserved unconditionally.\n5. In contrast, mechanical and kinetic energy are converted into heat by friction/inelasticity.",
+      "finalAnswer": "Option A: Total linear momentum",
+      "whyOtherOptionsWrong": "Option B and C are dissipated as heat by non-conservative forces. Option D is not conserved alone."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Mixed-concept NEET-level problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-478",
+    "questionNumber": 478,
+    "question": "A disc of mass $10\\text{ g}$ is kept floating horizontally in mid-air by firing marbles of mass $5\\text{ g}$ vertically upward at it. The marbles strike the disc from below at $10\\text{ m/s}$ and rebound downward with the same speed. How many marbles must strike the disc per second to keep it floating (take $g = 10\\text{ m/s}^2$)?",
+    "options": {
+      "A": "1 marble/second",
+      "B": "2 marbles/second",
+      "C": "10 marbles/second",
+      "D": "0.5 marbles/second"
+    },
+    "optionsList": [
+      "1 marble/second",
+      "2 marbles/second",
+      "10 marbles/second",
+      "0.5 marbles/second"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nUpward thrust force exerted by $n$ marbles per second is $F = n \\Delta p = n (2 m_{\\text{marble}} v)$. This force must balance the weight of the disc: $F = M_{\\text{disc}} g \\implies n (2 m v) = M g \\implies n = \\frac{M g}{2 m v}$.\n\n2. GIVEN:\n$M = 10\\text{ g} = 0.01\\text{ kg}, m = 5\\text{ g} = 0.005\\text{ kg}, v = 10\\text{ m/s}, g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$n = \\frac{M g}{2 m v}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Weight of the disc: $W = M g = 0.01\\text{ kg} \\times 10\\text{ m/s}^2 = 0.1\\text{ N}$.\n2. Change in momentum per marble on elastic rebound:\n   $\\Delta p = m v - (-m v) = 2 m v = 2 \\times 0.005\\text{ kg} \\times 10\\text{ m/s} = 0.1\\text{ kg}\\cdot\\text{m/s}$.\n3. Upward force exerted by $n$ marbles hitting per second: $F = n \\Delta p = n \\times 0.1\\text{ N}$.\n4. For the disc to float in equilibrium: $F = W \\implies n \\times 0.1 = 0.1$.\n5. Solving for $n$: $n = 1\\text{ marble/second}$.\n\n5. FINAL ANSWER:\nOption A: 1 marble/second\n\n6. QUICK TIP:\nHovering Disc Formula: $n = \\frac{M g}{2 m v}$ for elastic rebound, and $\\frac{M g}{m v}$ if marbles stick!",
+    "solutionStructured": {
+      "concept": "Upward thrust force exerted by $n$ marbles per second is $F = n \\Delta p = n (2 m_{\\text{marble}} v)$. This force must balance the weight of the disc: $F = M_{\\text{disc}} g \\implies n (2 m v) = M g \\implies n = \\frac{M g}{2 m v}$.",
+      "given": "$M = 10\\text{ g} = 0.01\\text{ kg}, m = 5\\text{ g} = 0.005\\text{ kg}, v = 10\\text{ m/s}, g = 10\\text{ m/s}^2$.",
+      "formula": "$n = \\frac{M g}{2 m v}$.",
+      "stepByStep": "1. Weight of the disc: $W = M g = 0.01\\text{ kg} \\times 10\\text{ m/s}^2 = 0.1\\text{ N}$.\n2. Change in momentum per marble on elastic rebound:\n   $\\Delta p = m v - (-m v) = 2 m v = 2 \\times 0.005\\text{ kg} \\times 10\\text{ m/s} = 0.1\\text{ kg}\\cdot\\text{m/s}$.\n3. Upward force exerted by $n$ marbles hitting per second: $F = n \\Delta p = n \\times 0.1\\text{ N}$.\n4. For the disc to float in equilibrium: $F = W \\implies n \\times 0.1 = 0.1$.\n5. Solving for $n$: $n = 1\\text{ marble/second}$.",
+      "finalAnswer": "Option A: 1 marble/second",
+      "whyOtherOptionsWrong": "Option B (2) forgets the factor of 2 from elastic rebound (assumes marbles stick). Option C is $10$. Option D is $0.5$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Mixed-concept NEET-level problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-479",
+    "questionNumber": 479,
+    "question": "A rocket of initial mass $M_0 = 600\\text{ kg}$ is fired vertically. Gases are ejected downward at a constant relative speed $u = 1000\\text{ m/s}$. What must be the rate of consumption of fuel $\\frac{dm}{dt}$ to give the rocket an initial upward acceleration of $20\\text{ m/s}^2$ (take $g = 10\\text{ m/s}^2$)?",
+    "options": {
+      "A": "18 kg/s",
+      "B": "6 kg/s",
+      "C": "12 kg/s",
+      "D": "30 kg/s"
+    },
+    "optionsList": [
+      "18 kg/s",
+      "6 kg/s",
+      "12 kg/s",
+      "30 kg/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nUpward thrust force is $F_{\\text{thrust}} = u \\left(-\\frac{dm}{dt}\\right)$. Net upward force is $F_{\\text{thrust}} - M_0 g = M_0 a \\implies u \\left(-\\frac{dm}{dt}\\right) = M_0 (g + a) \\implies -\\frac{dm}{dt} = \\frac{M_0(g + a)}{u}$.\n\n2. GIVEN:\n$M_0 = 600\\text{ kg}, u = 1000\\text{ m/s}, a = 20\\text{ m/s}^2, g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$-\\frac{dm}{dt} = \\frac{M_0(g + a)}{u}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Total upward force required on the rocket: $F_{\\text{thrust}} = M_0 (g + a)$.\n2. Substitute values: $F_{\\text{thrust}} = 600 \\times (10 + 20) = 600 \\times 30 = 18000\\text{ N}$.\n3. Thrust is generated by fuel ejection: $F_{\\text{thrust}} = u \\left(-\\frac{dm}{dt}\\right)$.\n4. $18000 = 1000 \\times \\left(-\\frac{dm}{dt}\\right)$.\n5. Fuel consumption rate: $-\\frac{dm}{dt} = \\frac{18000}{1000} = 18\\text{ kg/s}$.\n\n5. FINAL ANSWER:\nOption A: 18 kg/s\n\n6. QUICK TIP:\nRocket Thrust Formula: $F = u \\frac{dm}{dt} = M(g + a)$. Remember to add $g$ to the desired acceleration $a$!",
+    "solutionStructured": {
+      "concept": "Upward thrust force is $F_{\\text{thrust}} = u \\left(-\\frac{dm}{dt}\\right)$. Net upward force is $F_{\\text{thrust}} - M_0 g = M_0 a \\implies u \\left(-\\frac{dm}{dt}\\right) = M_0 (g + a) \\implies -\\frac{dm}{dt} = \\frac{M_0(g + a)}{u}$.",
+      "given": "$M_0 = 600\\text{ kg}, u = 1000\\text{ m/s}, a = 20\\text{ m/s}^2, g = 10\\text{ m/s}^2$.",
+      "formula": "$-\\frac{dm}{dt} = \\frac{M_0(g + a)}{u}$.",
+      "stepByStep": "1. Total upward force required on the rocket: $F_{\\text{thrust}} = M_0 (g + a)$.\n2. Substitute values: $F_{\\text{thrust}} = 600 \\times (10 + 20) = 600 \\times 30 = 18000\\text{ N}$.\n3. Thrust is generated by fuel ejection: $F_{\\text{thrust}} = u \\left(-\\frac{dm}{dt}\\right)$.\n4. $18000 = 1000 \\times \\left(-\\frac{dm}{dt}\\right)$.\n5. Fuel consumption rate: $-\\frac{dm}{dt} = \\frac{18000}{1000} = 18\\text{ kg/s}$.",
+      "finalAnswer": "Option A: 18 kg/s",
+      "whyOtherOptionsWrong": "Option B (6 kg/s) only provides thrust to overcome gravity ($a = 0$). Option C (12 kg/s) is $M a / u$ without gravity. Option D is $30\\text{ kg/s}$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Mixed-concept NEET-level problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-480",
+    "questionNumber": 480,
+    "question": "A helicopter of mass $2000\\text{ kg}$ accelerates vertically upwards at $2\\text{ m/s}^2$. The crew and passengers inside weigh $500\\text{ kg}$. Taking $g = 10\\text{ m/s}^2$, what is the vertical force exerted by the air on the helicopter rotors?",
+    "options": {
+      "A": "30,000 N",
+      "B": "25,000 N",
+      "C": "24,000 N",
+      "D": "5,000 N"
+    },
+    "optionsList": [
+      "30,000 N",
+      "25,000 N",
+      "24,000 N",
+      "5,000 N"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTotal mass of the helicopter plus crew is $M = 2000 + 500 = 2500\\text{ kg}$. Net upward acceleration is $a = 2\\text{ m/s}^2$. By Newton's second law, $F_{\\text{air}} - M g = M a \\implies F_{\\text{air}} = M(g + a) = 2500 \\times (10 + 2) = 30000\\text{ N}$.\n\n2. GIVEN:\n$M_{\\text{heli}} = 2000\\text{ kg}, M_{\\text{crew}} = 500\\text{ kg}, a = 2\\text{ m/s}^2, g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$F_{\\text{air}} = (M_{\\text{heli}} + M_{\\text{crew}})(g + a)$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Total mass of the system: $M = 2000 + 500 = 2500\\text{ kg}$.\n2. Downward weight of the system: $W = Mg = 2500 \\times 10 = 25000\\text{ N}$.\n3. Net upward accelerating force required: $F_{\\text{net}} = Ma = 2500 \\times 2 = 5000\\text{ N}$.\n4. Upward force exerted by the air on the rotors:\n   $F_{\\text{air}} = W + F_{\\text{net}} = 25000 + 5000 = 30000\\text{ N}$.\n\n5. FINAL ANSWER:\nOption A: 30,000 N\n\n6. QUICK TIP:\nRotor force supports the ENTIRE system weight plus acceleration: $F = M_{\\text{total}}(g + a)$!",
+    "solutionStructured": {
+      "concept": "Total mass of the helicopter plus crew is $M = 2000 + 500 = 2500\\text{ kg}$. Net upward acceleration is $a = 2\\text{ m/s}^2$. By Newton's second law, $F_{\\text{air}} - M g = M a \\implies F_{\\text{air}} = M(g + a) = 2500 \\times (10 + 2) = 30000\\text{ N}$.",
+      "given": "$M_{\\text{heli}} = 2000\\text{ kg}, M_{\\text{crew}} = 500\\text{ kg}, a = 2\\text{ m/s}^2, g = 10\\text{ m/s}^2$.",
+      "formula": "$F_{\\text{air}} = (M_{\\text{heli}} + M_{\\text{crew}})(g + a)$.",
+      "stepByStep": "1. Total mass of the system: $M = 2000 + 500 = 2500\\text{ kg}$.\n2. Downward weight of the system: $W = Mg = 2500 \\times 10 = 25000\\text{ N}$.\n3. Net upward accelerating force required: $F_{\\text{net}} = Ma = 2500 \\times 2 = 5000\\text{ N}$.\n4. Upward force exerted by the air on the rotors:\n   $F_{\\text{air}} = W + F_{\\text{net}} = 25000 + 5000 = 30000\\text{ N}$.",
+      "finalAnswer": "Option A: 30,000 N",
+      "whyOtherOptionsWrong": "Option B (25,000 N) is only the hovering force ($a = 0$). Option C is for helicopter alone. Option D is just $M a$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Mixed-concept NEET-level problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-481",
+    "questionNumber": 481,
+    "question": "In the previous helicopter problem, what is the force exerted by the crew and passengers on the floor of the helicopter?",
+    "options": {
+      "A": "6,000 N",
+      "B": "5,000 N",
+      "C": "4,000 N",
+      "D": "1,000 N"
+    },
+    "optionsList": [
+      "6,000 N",
+      "5,000 N",
+      "4,000 N",
+      "1,000 N"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor the crew and passengers of mass $m = 500\\text{ kg}$, the normal reaction from the floor accelerates them upward: $N - mg = ma \\implies N = m(g + a) = 500(10 + 2) = 6000\\text{ N}$. By Newton's third law, the force exerted by them on the floor is $6000\\text{ N}$.\n\n2. GIVEN:\n$m = 500\\text{ kg}, a = 2\\text{ m/s}^2, g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$N = m(g + a) = 500(12) = 6000\\text{ N}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Isolate the crew and passengers of mass $m = 500\\text{ kg}$.\n2. Forces acting on them: upward normal reaction $N$ from the floor, downward gravity $mg = 5000\\text{ N}$.\n3. They accelerate upward with $a = 2\\text{ m/s}^2$.\n4. Applying Newton's second law: $N - mg = ma$.\n5. $N = m(g + a) = 500 \\times (10 + 2) = 6000\\text{ N}$.\n6. By Newton's third law, the force exerted by the crew on the floor has the same magnitude: $6000\\text{ N}$.\n\n5. FINAL ANSWER:\nOption A: 6,000 N\n\n6. QUICK TIP:\nApparent weight in an upward accelerating lift/helicopter: $N = m(g + a)$!",
+    "solutionStructured": {
+      "concept": "For the crew and passengers of mass $m = 500\\text{ kg}$, the normal reaction from the floor accelerates them upward: $N - mg = ma \\implies N = m(g + a) = 500(10 + 2) = 6000\\text{ N}$. By Newton's third law, the force exerted by them on the floor is $6000\\text{ N}$.",
+      "given": "$m = 500\\text{ kg}, a = 2\\text{ m/s}^2, g = 10\\text{ m/s}^2$.",
+      "formula": "$N = m(g + a) = 500(12) = 6000\\text{ N}$.",
+      "stepByStep": "1. Isolate the crew and passengers of mass $m = 500\\text{ kg}$.\n2. Forces acting on them: upward normal reaction $N$ from the floor, downward gravity $mg = 5000\\text{ N}$.\n3. They accelerate upward with $a = 2\\text{ m/s}^2$.\n4. Applying Newton's second law: $N - mg = ma$.\n5. $N = m(g + a) = 500 \\times (10 + 2) = 6000\\text{ N}$.\n6. By Newton's third law, the force exerted by the crew on the floor has the same magnitude: $6000\\text{ N}$.",
+      "finalAnswer": "Option A: 6,000 N",
+      "whyOtherOptionsWrong": "Option B (5,000 N) is their static weight ($mg$). Option C (4,000 N) subtracts acceleration. Option D is $m a$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Mixed-concept NEET-level problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-482",
+    "questionNumber": 482,
+    "question": "A ball of mass $0.2\\text{ kg}$ is thrown against a vertical wall with an angle of incidence of $60^\\circ$ to the normal at a speed of $10\\text{ m/s}$. It rebounds elastically at the same angle and speed. What is the magnitude of the impulse imparted by the wall to the ball?",
+    "options": {
+      "A": "$2\\text{ N}\\cdot\\text{s}$",
+      "B": "$4\\text{ N}\\cdot\\text{s}$",
+      "C": "$2\\sqrt{3}\\text{ N}\\cdot\\text{s}$",
+      "D": "$1\\text{ N}\\cdot\\text{s}$"
+    },
+    "optionsList": [
+      "$2\\text{ N}\\cdot\\text{s}$",
+      "$4\\text{ N}\\cdot\\text{s}$",
+      "$2\\sqrt{3}\\text{ N}\\cdot\\text{s}$",
+      "$1\\text{ N}\\cdot\\text{s}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nChoose the x-axis perpendicular to the wall. The velocity component perpendicular to the wall changes from $+v\\cos 60^\\circ$ to $-v\\cos 60^\\circ$. The parallel velocity component $v\\sin 60^\\circ$ is unchanged. The impulse is along the normal: $J = \\Delta p_x = m(v\\cos 60^\\circ - (-v\\cos 60^\\circ)) = 2mv\\cos 60^\\circ = 2(0.2)(10)(0.5) = 2\\text{ N}\\cdot\\text{s}$.\n\n2. GIVEN:\n$m = 0.2\\text{ kg}, v = 10\\text{ m/s}, \\theta = 60^\\circ$ to normal.\n\n3. FORMULA / PRINCIPLE:\n$J = 2mv\\cos\\theta = 2(0.2)(10)\\cos 60^\\circ = 2\\text{ N}\\cdot\\text{s}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Incident normal component of momentum: $p_{xi} = -mv\\cos 60^\\circ$ (into the wall).\n2. Rebound normal component of momentum: $p_{xf} = +mv\\cos 60^\\circ$ (away from the wall).\n3. Change in normal momentum: $\\Delta p = p_{xf} - p_{xi} = 2mv\\cos 60^\\circ$.\n4. Parallel momentum component does not change (smooth wall), so $\\Delta p_y = 0$.\n5. Magnitude of impulse: $J = 2mv\\cos 60^\\circ = 2(0.2)(10)(0.5) = 2\\text{ N}\\cdot\\text{s}$.\n\n5. FINAL ANSWER:\nOption A: $2\\text{ N}\\cdot\\text{s}$\n\n6. QUICK TIP:\nImpulse at an angle $\\theta$ to the normal: $J = 2mv\\cos\\theta$. If angle is given with the wall surface, use $2mv\\sin\\alpha$!",
+    "solutionStructured": {
+      "concept": "Choose the x-axis perpendicular to the wall. The velocity component perpendicular to the wall changes from $+v\\cos 60^\\circ$ to $-v\\cos 60^\\circ$. The parallel velocity component $v\\sin 60^\\circ$ is unchanged. The impulse is along the normal: $J = \\Delta p_x = m(v\\cos 60^\\circ - (-v\\cos 60^\\circ)) = 2mv\\cos 60^\\circ = 2(0.2)(10)(0.5) = 2\\text{ N}\\cdot\\text{s}$.",
+      "given": "$m = 0.2\\text{ kg}, v = 10\\text{ m/s}, \\theta = 60^\\circ$ to normal.",
+      "formula": "$J = 2mv\\cos\\theta = 2(0.2)(10)\\cos 60^\\circ = 2\\text{ N}\\cdot\\text{s}$.",
+      "stepByStep": "1. Incident normal component of momentum: $p_{xi} = -mv\\cos 60^\\circ$ (into the wall).\n2. Rebound normal component of momentum: $p_{xf} = +mv\\cos 60^\\circ$ (away from the wall).\n3. Change in normal momentum: $\\Delta p = p_{xf} - p_{xi} = 2mv\\cos 60^\\circ$.\n4. Parallel momentum component does not change (smooth wall), so $\\Delta p_y = 0$.\n5. Magnitude of impulse: $J = 2mv\\cos 60^\\circ = 2(0.2)(10)(0.5) = 2\\text{ N}\\cdot\\text{s}$.",
+      "finalAnswer": "Option A: $2\\text{ N}\\cdot\\text{s}$",
+      "whyOtherOptionsWrong": "Option B (4 N s) is $2mv$ without the cosine factor. Option C ($2\\sqrt{3}$) uses $\\sin 60^\\circ$. Option D is $1\\text{ N}\\cdot\\text{s}$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Mixed-concept NEET-level problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-483",
+    "questionNumber": 483,
+    "question": "A body of mass $m$ is suspended by a string of length $L$. It is given a horizontal velocity $u$ at the lowest point. If the string becomes slack (tension $T = 0$) at an angle $\\theta$ with the upward vertical, the speed $v$ at that point satisfies:",
+    "options": {
+      "A": "$v^2 = gL \\cos\\theta$",
+      "B": "$v^2 = gL \\sin\\theta$",
+      "C": "$v^2 = 2gL \\cos\\theta$",
+      "D": "$v^2 = gL$"
+    },
+    "optionsList": [
+      "$v^2 = gL \\cos\\theta$",
+      "$v^2 = gL \\sin\\theta$",
+      "$v^2 = 2gL \\cos\\theta$",
+      "$v^2 = gL$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nAt angle $\\theta$ with the upward vertical, the component of gravity directed towards the center is $mg\\cos\\theta$. The radial force equation is $T + mg\\cos\\theta = \\frac{mv^2}{L}$. When the string slacks, tension vanishes ($T = 0$). This leaves $mg\\cos\\theta = \\frac{mv^2}{L} \\implies v^2 = gL\\cos\\theta$.\n\n2. GIVEN:\nString slacks ($T = 0$) at angle $\\theta$ to upward vertical.\n\n3. FORMULA / PRINCIPLE:\n$T + mg\\cos\\theta = \\frac{mv^2}{L} \\implies v^2 = gL\\cos\\theta$ when $T = 0$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Let $\\theta$ be the angle of the string with the UPWARD vertical (in the upper half of the circle).\n2. Tension $T$ points toward the center of the circle.\n3. The component of gravity pointing towards the center is $mg\\cos\\theta$.\n4. Radial equation of motion: $T + mg\\cos\\theta = \\frac{mv^2}{L}$.\n5. Condition for slacking: $T = 0$.\n6. Setting $T = 0$: $mg\\cos\\theta = \\frac{mv^2}{L} \\implies v^2 = gL\\cos\\theta$.\n\n5. FINAL ANSWER:\nOption A: $v^2 = gL \\cos\\theta$\n\n6. QUICK TIP:\nString Slacking Condition: $v^2 = gL\\cos\\theta$ where $\\theta$ is measured with the UPWARD vertical!",
+    "solutionStructured": {
+      "concept": "At angle $\\theta$ with the upward vertical, the component of gravity directed towards the center is $mg\\cos\\theta$. The radial force equation is $T + mg\\cos\\theta = \\frac{mv^2}{L}$. When the string slacks, tension vanishes ($T = 0$). This leaves $mg\\cos\\theta = \\frac{mv^2}{L} \\implies v^2 = gL\\cos\\theta$.",
+      "given": "String slacks ($T = 0$) at angle $\\theta$ to upward vertical.",
+      "formula": "$T + mg\\cos\\theta = \\frac{mv^2}{L} \\implies v^2 = gL\\cos\\theta$ when $T = 0$.",
+      "stepByStep": "1. Let $\\theta$ be the angle of the string with the UPWARD vertical (in the upper half of the circle).\n2. Tension $T$ points toward the center of the circle.\n3. The component of gravity pointing towards the center is $mg\\cos\\theta$.\n4. Radial equation of motion: $T + mg\\cos\\theta = \\frac{mv^2}{L}$.\n5. Condition for slacking: $T = 0$.\n6. Setting $T = 0$: $mg\\cos\\theta = \\frac{mv^2}{L} \\implies v^2 = gL\\cos\\theta$.",
+      "finalAnswer": "Option A: $v^2 = gL \\cos\\theta$",
+      "whyOtherOptionsWrong": "Option B uses sine. Option C has an extra factor of 2. Option D is only true at the very top ($\\theta = 0$)."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Mixed-concept NEET-level problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-484",
+    "questionNumber": 484,
+    "question": "A particle of mass $m$ is moving in a horizontal circle on the smooth inner surface of a hemispherical bowl of radius $R$ at a depth $h$ below the rim. The speed of the particle is:",
+    "options": {
+      "A": "$\\sqrt{g \\frac{(R^2 - h^2)}{h}}$",
+      "B": "$\\sqrt{g h}$",
+      "C": "$\\sqrt{g R}$",
+      "D": "$\\sqrt{g \\frac{h^2}{R}}$"
+    },
+    "optionsList": [
+      "$\\sqrt{g \\frac{(R^2 - h^2)}{h}}$",
+      "$\\sqrt{g h}$",
+      "$\\sqrt{g R}$",
+      "$\\sqrt{g \\frac{h^2}{R}}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nLet $r$ be the radius of the horizontal circle: $r = \\sqrt{R^2 - h^2}$. The normal reaction $N$ makes angle $\\theta$ with the vertical, where $\\cos\\theta = h/R$ and $\\sin\\theta = r/R$. Vertical equilibrium: $N\\cos\\theta = mg \\implies N = \\frac{mgR}{h}$. Horizontal centripetal force: $N\\sin\\theta = \\frac{mv^2}{r} \\implies \\left(\\frac{mgR}{h}\\right)\\left(\\frac{r}{R}\\right) = \\frac{mv^2}{r} \\implies v^2 = \\frac{gr^2}{h} = \\frac{g(R^2 - h^2)}{h}$.\n\n2. GIVEN:\nHemispherical bowl radius $R$, depth below rim $h$.\n\n3. FORMULA / PRINCIPLE:\n$r = \\sqrt{R^2 - h^2}$; $v = \\sqrt{\\frac{g r^2}{h}} = \\sqrt{g \\frac{R^2 - h^2}{h}}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. From the center of the sphere, vertical distance down is $h$, so radius of the horizontal circle is $r = \\sqrt{R^2 - h^2}$.\n2. The normal force $N$ points towards the sphere center at angle $\\theta$ to the vertical.\n3. $\\cos\\theta = \\frac{h}{R}$ and $\\sin\\theta = \\frac{r}{R}$.\n4. Vertical balance: $N\\cos\\theta = mg \\implies N\\left(\\frac{h}{R}\\right) = mg \\implies N = \\frac{mgR}{h}$.\n5. Radial centripetal force: $N\\sin\\theta = \\frac{mv^2}{r} \\implies \\left(\\frac{mgR}{h}\\right)\\left(\\frac{r}{R}\\right) = \\frac{mv^2}{r}$.\n6. $\\frac{mgr}{h} = \\frac{mv^2}{r} \\implies v^2 = \\frac{gr^2}{h} = \\frac{g(R^2 - h^2)}{h}$.\n7. Therefore, $v = \\sqrt{g \\frac{R^2 - h^2}{h}}$.\n\n5. FINAL ANSWER:\nOption A: $\\sqrt{g \\frac{(R^2 - h^2)}{h}}$\n\n6. QUICK TIP:\nNotice: When $h \\to R$ (bottom of bowl), $r \\to 0$ and $v \\to 0$. As $h \\to 0$ (rim), $v \\to \\infty$!",
+    "solutionStructured": {
+      "concept": "Let $r$ be the radius of the horizontal circle: $r = \\sqrt{R^2 - h^2}$. The normal reaction $N$ makes angle $\\theta$ with the vertical, where $\\cos\\theta = h/R$ and $\\sin\\theta = r/R$. Vertical equilibrium: $N\\cos\\theta = mg \\implies N = \\frac{mgR}{h}$. Horizontal centripetal force: $N\\sin\\theta = \\frac{mv^2}{r} \\implies \\left(\\frac{mgR}{h}\\right)\\left(\\frac{r}{R}\\right) = \\frac{mv^2}{r} \\implies v^2 = \\frac{gr^2}{h} = \\frac{g(R^2 - h^2)}{h}$.",
+      "given": "Hemispherical bowl radius $R$, depth below rim $h$.",
+      "formula": "$r = \\sqrt{R^2 - h^2}$; $v = \\sqrt{\\frac{g r^2}{h}} = \\sqrt{g \\frac{R^2 - h^2}{h}}$.",
+      "stepByStep": "1. From the center of the sphere, vertical distance down is $h$, so radius of the horizontal circle is $r = \\sqrt{R^2 - h^2}$.\n2. The normal force $N$ points towards the sphere center at angle $\\theta$ to the vertical.\n3. $\\cos\\theta = \\frac{h}{R}$ and $\\sin\\theta = \\frac{r}{R}$.\n4. Vertical balance: $N\\cos\\theta = mg \\implies N\\left(\\frac{h}{R}\\right) = mg \\implies N = \\frac{mgR}{h}$.\n5. Radial centripetal force: $N\\sin\\theta = \\frac{mv^2}{r} \\implies \\left(\\frac{mgR}{h}\\right)\\left(\\frac{r}{R}\\right) = \\frac{mv^2}{r}$.\n6. $\\frac{mgr}{h} = \\frac{mv^2}{r} \\implies v^2 = \\frac{gr^2}{h} = \\frac{g(R^2 - h^2)}{h}$.\n7. Therefore, $v = \\sqrt{g \\frac{R^2 - h^2}{h}}$.",
+      "finalAnswer": "Option A: $\\sqrt{g \\frac{(R^2 - h^2)}{h}}$",
+      "whyOtherOptionsWrong": "Option B, C, and D do not satisfy the geometry of a spherical bowl."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Mixed-concept NEET-level problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-485",
+    "questionNumber": 485,
+    "question": "Two blocks of masses $m_1 = 4\\text{ kg}$ and $m_2 = 6\\text{ kg}$ are connected by a light string passing over a frictionless pulley. Block $m_1$ is on a smooth inclined plane of angle $30^\\circ$, and $m_2$ hangs vertically. Taking $g = 10\\text{ m/s}^2$, what is the acceleration of the system?",
+    "options": {
+      "A": "$4\\text{ m/s}^2$",
+      "B": "$2\\text{ m/s}^2$",
+      "C": "$6\\text{ m/s}^2$",
+      "D": "$1\\text{ m/s}^2$"
+    },
+    "optionsList": [
+      "$4\\text{ m/s}^2$",
+      "$2\\text{ m/s}^2$",
+      "$6\\text{ m/s}^2$",
+      "$1\\text{ m/s}^2$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDown-plane gravity on $m_1$ is $m_1 g\\sin 30^\\circ = 4(10)(0.5) = 20\\text{ N}$. Downward gravity on hanging mass $m_2$ is $m_2 g = 6(10) = 60\\text{ N}$. Net driving force is $60 - 20 = 40\\text{ N}$. Total mass is $m_1 + m_2 = 10\\text{ kg}$. Acceleration is $a = 40 / 10 = 4\\text{ m/s}^2$.\n\n2. GIVEN:\n$m_1 = 4\\text{ kg}, m_2 = 6\\text{ kg}, \\theta = 30^\\circ$, smooth plane, $g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$a = \\frac{m_2 g - m_1 g\\sin 30^\\circ}{m_1 + m_2}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. FBD of hanging mass $m_2$: $m_2 g - T = m_2 a \\implies 60 - T = 6a$.\n2. FBD of block on incline $m_1$: $T - m_1 g\\sin 30^\\circ = m_1 a \\implies T - 20 = 4a$.\n3. Adding the two equations: $60 - 20 = (6 + 4) a \\implies 40 = 10 a$.\n4. Solving for acceleration: $a = \\frac{40}{10} = 4\\text{ m/s}^2$.\n\n5. FINAL ANSWER:\nOption A: $4\\text{ m/s}^2$\n\n6. QUICK TIP:\nIncline-Pulley Quick Formula: $a = \\frac{m_{\\text{hang}} - m_{\\text{inc}}\\sin\\theta}{m_{\\text{total}}} g$!",
+    "solutionStructured": {
+      "concept": "Down-plane gravity on $m_1$ is $m_1 g\\sin 30^\\circ = 4(10)(0.5) = 20\\text{ N}$. Downward gravity on hanging mass $m_2$ is $m_2 g = 6(10) = 60\\text{ N}$. Net driving force is $60 - 20 = 40\\text{ N}$. Total mass is $m_1 + m_2 = 10\\text{ kg}$. Acceleration is $a = 40 / 10 = 4\\text{ m/s}^2$.",
+      "given": "$m_1 = 4\\text{ kg}, m_2 = 6\\text{ kg}, \\theta = 30^\\circ$, smooth plane, $g = 10\\text{ m/s}^2$.",
+      "formula": "$a = \\frac{m_2 g - m_1 g\\sin 30^\\circ}{m_1 + m_2}$.",
+      "stepByStep": "1. FBD of hanging mass $m_2$: $m_2 g - T = m_2 a \\implies 60 - T = 6a$.\n2. FBD of block on incline $m_1$: $T - m_1 g\\sin 30^\\circ = m_1 a \\implies T - 20 = 4a$.\n3. Adding the two equations: $60 - 20 = (6 + 4) a \\implies 40 = 10 a$.\n4. Solving for acceleration: $a = \\frac{40}{10} = 4\\text{ m/s}^2$.",
+      "finalAnswer": "Option A: $4\\text{ m/s}^2$",
+      "whyOtherOptionsWrong": "Option B ($2\\text{ m/s}^2$) is $(6-4)/10 \\times 10$. Option C is $6\\text{ m/s}^2$. Option D is $1\\text{ m/s}^2$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Mixed-concept NEET-level problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-486",
+    "questionNumber": 486,
+    "question": "In the previous setup, what is the tension in the connecting string?",
+    "options": {
+      "A": "36 N",
+      "B": "60 N",
+      "C": "24 N",
+      "D": "40 N"
+    },
+    "optionsList": [
+      "36 N",
+      "60 N",
+      "24 N",
+      "40 N"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nUsing the hanging mass equation: $T = m_2(g - a) = 6(10 - 4) = 6(6) = 36\\text{ N}$. Using the inclined mass: $T = m_1 a + m_1 g\\sin 30^\\circ = 4(4) + 20 = 16 + 20 = 36\\text{ N}$.\n\n2. GIVEN:\n$m_2 = 6\\text{ kg}, a = 4\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$T = m_2(g - a) = 6(6) = 36\\text{ N}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Substitute $a = 4\\text{ m/s}^2$ into $T = m_2(g - a)$:\n   $T = 6\\text{ kg} \\times (10 - 4)\\text{ m/s}^2 = 6 \\times 6 = 36\\text{ N}$.\n2. Double check on $m_1$:\n   $T = m_1 g\\sin 30^\\circ + m_1 a = 20 + 4(4) = 36\\text{ N}$.\n3. Both yield exactly $36\\text{ N}$.\n\n5. FINAL ANSWER:\nOption A: 36 N\n\n6. QUICK TIP:\nTension is identical along any ideal massless string!",
+    "solutionStructured": {
+      "concept": "Using the hanging mass equation: $T = m_2(g - a) = 6(10 - 4) = 6(6) = 36\\text{ N}$. Using the inclined mass: $T = m_1 a + m_1 g\\sin 30^\\circ = 4(4) + 20 = 16 + 20 = 36\\text{ N}$.",
+      "given": "$m_2 = 6\\text{ kg}, a = 4\\text{ m/s}^2$.",
+      "formula": "$T = m_2(g - a) = 6(6) = 36\\text{ N}$.",
+      "stepByStep": "1. Substitute $a = 4\\text{ m/s}^2$ into $T = m_2(g - a)$:\n   $T = 6\\text{ kg} \\times (10 - 4)\\text{ m/s}^2 = 6 \\times 6 = 36\\text{ N}$.\n2. Double check on $m_1$:\n   $T = m_1 g\\sin 30^\\circ + m_1 a = 20 + 4(4) = 36\\text{ N}$.\n3. Both yield exactly $36\\text{ N}$.",
+      "finalAnswer": "Option A: 36 N",
+      "whyOtherOptionsWrong": "Option B (60 N) is $m_2 g$. Option C (24 N) is $m_2 a$. Option D (40 N) is the net force."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Mixed-concept NEET-level problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-487",
+    "questionNumber": 487,
+    "question": "A body of mass $m$ is suspended by a string of length $L$. It is displaced through an angle of $60^\\circ$ from the vertical and released from rest. What is the tension in the string when the body passes through its lowest point?",
+    "options": {
+      "A": "$2 mg$",
+      "B": "$3 mg$",
+      "C": "$mg$",
+      "D": "$1.5 mg$"
+    },
+    "optionsList": [
+      "$2 mg$",
+      "$3 mg$",
+      "$mg$",
+      "$1.5 mg$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nVertical drop is $h = L(1 - \\cos 60^\\circ) = L(1 - 0.5) = 0.5 L$. By energy conservation, speed at lowest point is $v^2 = 2gh = 2g(0.5L) = gL$. At the lowest point, tension must provide both weight support and centripetal acceleration: $T - mg = \\frac{mv^2}{L} \\implies T = mg + \\frac{m(gL)}{L} = mg + mg = 2mg$.\n\n2. GIVEN:\nReleased from $\\theta_0 = 60^\\circ$, passes lowest point.\n\n3. FORMULA / PRINCIPLE:\n$v^2 = 2gL(1 - \\cos\\theta_0)$; $T = mg\\left(3 - 2\\cos\\theta_0\\right)$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Height drop from $\\theta_0 = 60^\\circ$: $h = L(1 - \\cos 60^\\circ) = L\\left(1 - \\frac{1}{2}\\right) = \\frac{L}{2}$.\n2. Kinetic energy at lowest point: $\\frac{1}{2}mv^2 = mgh = mg\\frac{L}{2} \\implies v^2 = gL$.\n3. Radial equation at lowest point:\n   $T - mg = \\frac{mv^2}{L} = \\frac{m(gL)}{L} = mg$.\n4. Therefore: $T = mg + mg = 2mg$.\n\n5. FINAL ANSWER:\nOption A: $2 mg$\n\n6. QUICK TIP:\nGeneral Pendulum Tension at Lowest Point: $T = mg(3 - 2\\cos\\theta_0)$. For $\\theta_0 = 60^\\circ$, $T = mg(3 - 2(0.5)) = 2mg$. For $\\theta_0 = 90^\\circ$, $T = 3mg$!",
+    "solutionStructured": {
+      "concept": "Vertical drop is $h = L(1 - \\cos 60^\\circ) = L(1 - 0.5) = 0.5 L$. By energy conservation, speed at lowest point is $v^2 = 2gh = 2g(0.5L) = gL$. At the lowest point, tension must provide both weight support and centripetal acceleration: $T - mg = \\frac{mv^2}{L} \\implies T = mg + \\frac{m(gL)}{L} = mg + mg = 2mg$.",
+      "given": "Released from $\\theta_0 = 60^\\circ$, passes lowest point.",
+      "formula": "$v^2 = 2gL(1 - \\cos\\theta_0)$; $T = mg\\left(3 - 2\\cos\\theta_0\\right)$.",
+      "stepByStep": "1. Height drop from $\\theta_0 = 60^\\circ$: $h = L(1 - \\cos 60^\\circ) = L\\left(1 - \\frac{1}{2}\\right) = \\frac{L}{2}$.\n2. Kinetic energy at lowest point: $\\frac{1}{2}mv^2 = mgh = mg\\frac{L}{2} \\implies v^2 = gL$.\n3. Radial equation at lowest point:\n   $T - mg = \\frac{mv^2}{L} = \\frac{m(gL)}{L} = mg$.\n4. Therefore: $T = mg + mg = 2mg$.",
+      "finalAnswer": "Option A: $2 mg$",
+      "whyOtherOptionsWrong": "Option B ($3mg$) is for release from horizontal ($\\theta_0 = 90^\\circ$). Option C is for zero speed. Option D is $1.5mg$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Mixed-concept NEET-level problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-488",
+    "questionNumber": 488,
+    "question": "A body of mass $m$ is released from rest at angle $\\theta_0 = 90^\\circ$ (horizontal position) with a string of length $L$. What is the tension in the string at the lowest point?",
+    "options": {
+      "A": "$3 mg$",
+      "B": "$2 mg$",
+      "C": "$mg$",
+      "D": "$5 mg$"
+    },
+    "optionsList": [
+      "$3 mg$",
+      "$2 mg$",
+      "$mg$",
+      "$5 mg$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nApply $T = mg(3 - 2\\cos\\theta_0)$. With $\\theta_0 = 90^\\circ$, $\\cos 90^\\circ = 0$, giving $T = mg(3 - 0) = 3mg$.\n\n2. GIVEN:\nReleased from $\\theta_0 = 90^\\circ$.\n\n3. FORMULA / PRINCIPLE:\n$v^2 = 2gL$; $T = mg + \\frac{mv^2}{L} = mg + 2mg = 3mg$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Height drop from horizontal is $h = L$.\n2. Speed at lowest point: $v^2 = 2gh = 2gL$.\n3. Centripetal force at lowest point: $F_c = \\frac{mv^2}{L} = \\frac{m(2gL)}{L} = 2mg$.\n4. String tension must support weight and provide centripetal force:\n   $T = mg + F_c = mg + 2mg = 3mg$.\n\n5. FINAL ANSWER:\nOption A: $3 mg$\n\n6. QUICK TIP:\nUniversal Result: Released from horizontal $\\implies$ Tension at bottom is ALWAYS $3mg$!",
+    "solutionStructured": {
+      "concept": "Apply $T = mg(3 - 2\\cos\\theta_0)$. With $\\theta_0 = 90^\\circ$, $\\cos 90^\\circ = 0$, giving $T = mg(3 - 0) = 3mg$.",
+      "given": "Released from $\\theta_0 = 90^\\circ$.",
+      "formula": "$v^2 = 2gL$; $T = mg + \\frac{mv^2}{L} = mg + 2mg = 3mg$.",
+      "stepByStep": "1. Height drop from horizontal is $h = L$.\n2. Speed at lowest point: $v^2 = 2gh = 2gL$.\n3. Centripetal force at lowest point: $F_c = \\frac{mv^2}{L} = \\frac{m(2gL)}{L} = 2mg$.\n4. String tension must support weight and provide centripetal force:\n   $T = mg + F_c = mg + 2mg = 3mg$.",
+      "finalAnswer": "Option A: $3 mg$",
+      "whyOtherOptionsWrong": "Option B is for $\\theta_0 = 60^\\circ$. Option C is static weight. Option D is for completing a full vertical loop."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Mixed-concept NEET-level problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-489",
+    "questionNumber": 489,
+    "question": "A ball of mass $m$ is suspended by a string of length $L$. It is given a speed $u = \\sqrt{2gL}$ at the lowest point. What is the maximum angle $\\theta_{\\text{max}}$ that the string makes with the downward vertical?",
+    "options": {
+      "A": "$90^\\circ$",
+      "B": "$60^\\circ$",
+      "C": "$45^\\circ$",
+      "D": "$180^\\circ$"
+    },
+    "optionsList": [
+      "$90^\\circ$",
+      "$60^\\circ$",
+      "$45^\\circ$",
+      "$180^\\circ$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nBy energy conservation, the maximum height reached is $h = \\frac{u^2}{2g} = \\frac{2gL}{2g} = L$. Since $h = L(1 - \\cos\\theta)$, $L = L(1 - \\cos\\theta) \\implies 1 - \\cos\\theta = 1 \\implies \\cos\\theta = 0 \\implies \\theta = 90^\\circ$ (horizontal position).\n\n2. GIVEN:\n$u = \\sqrt{2gL}$.\n\n3. FORMULA / PRINCIPLE:\n$h = \\frac{u^2}{2g} = L$; $L(1 - \\cos\\theta) = L \\implies \\theta = 90^\\circ$.\n\n4. STEP-BY-STEP SOLUTION:\n1. When the ball reaches maximum height, its speed is momentarily zero ($v = 0$).\n2. By conservation of energy: $\\frac{1}{2}mu^2 = mgh \\implies h = \\frac{u^2}{2g}$.\n3. Substitute $u = \\sqrt{2gL}$:\n   $h = \\frac{2gL}{2g} = L$.\n4. The vertical rise is $h = L(1 - \\cos\\theta)$.\n5. $L = L(1 - \\cos\\theta) \\implies 1 - \\cos\\theta = 1 \\implies \\cos\\theta = 0$.\n6. Therefore, $\\theta = 90^\\circ$, meaning the string reaches the horizontal position.\n\n5. FINAL ANSWER:\nOption A: $90^\\circ$\n\n6. QUICK TIP:\nIf $u \\le \\sqrt{2gL}$, the pendulum simply oscillates with $\\theta_{\\text{max}} \\le 90^\\circ$ without any danger of slacking!",
+    "solutionStructured": {
+      "concept": "By energy conservation, the maximum height reached is $h = \\frac{u^2}{2g} = \\frac{2gL}{2g} = L$. Since $h = L(1 - \\cos\\theta)$, $L = L(1 - \\cos\\theta) \\implies 1 - \\cos\\theta = 1 \\implies \\cos\\theta = 0 \\implies \\theta = 90^\\circ$ (horizontal position).",
+      "given": "$u = \\sqrt{2gL}$.",
+      "formula": "$h = \\frac{u^2}{2g} = L$; $L(1 - \\cos\\theta) = L \\implies \\theta = 90^\\circ$.",
+      "stepByStep": "1. When the ball reaches maximum height, its speed is momentarily zero ($v = 0$).\n2. By conservation of energy: $\\frac{1}{2}mu^2 = mgh \\implies h = \\frac{u^2}{2g}$.\n3. Substitute $u = \\sqrt{2gL}$:\n   $h = \\frac{2gL}{2g} = L$.\n4. The vertical rise is $h = L(1 - \\cos\\theta)$.\n5. $L = L(1 - \\cos\\theta) \\implies 1 - \\cos\\theta = 1 \\implies \\cos\\theta = 0$.\n6. Therefore, $\\theta = 90^\\circ$, meaning the string reaches the horizontal position.",
+      "finalAnswer": "Option A: $90^\\circ$",
+      "whyOtherOptionsWrong": "Option B ($60^\\circ$) is for $u = \\sqrt{gL}$. Option C is for $u = \\sqrt{gL(2 - \\sqrt{2})}$. Option D is the top of the circle."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Mixed-concept NEET-level problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-490",
+    "questionNumber": 490,
+    "question": "A uniform rope of mass $M$ and length $L$ hangs vertically from a ceiling. If a transverse pulse is created at the bottom of the rope, the time taken for the pulse to reach the ceiling is:",
+    "options": {
+      "A": "$2 \\sqrt{\\frac{L}{g}}$",
+      "B": "$\\sqrt{\\frac{L}{g}}$",
+      "C": "$2\\pi \\sqrt{\\frac{L}{g}}$",
+      "D": "$\\sqrt{\\frac{2L}{g}}$"
+    },
+    "optionsList": [
+      "$2 \\sqrt{\\frac{L}{g}}$",
+      "$\\sqrt{\\frac{L}{g}}$",
+      "$2\\pi \\sqrt{\\frac{L}{g}}$",
+      "$\\sqrt{\\frac{2L}{g}}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTension at height $y$ from the bottom free end is $T(y) = \\mu g y$, where $\\mu = M/L$. The wave speed at height $y$ is $v(y) = \\sqrt{\\frac{T(y)}{\\mu}} = \\sqrt{gy}$. Time taken is $t = \\int_0^L \\frac{dy}{v(y)} = \\int_0^L \\frac{dy}{\\sqrt{gy}} = \\frac{1}{\\sqrt{g}} [2\\sqrt{y}]_0^L = 2\\sqrt{\\frac{L}{g}}$.\n\n2. GIVEN:\nUniform rope mass $M$, length $L$, hanging vertically.\n\n3. FORMULA / PRINCIPLE:\n$v = \\sqrt{gy}$; $t = \\int_0^L \\frac{dy}{\\sqrt{gy}} = 2\\sqrt{\\frac{L}{g}}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Tension at distance $y$ from the bottom: $T = \\left(\\frac{M}{L}y\\right)g$.\n2. Mass per unit length: $\\mu = \\frac{M}{L}$.\n3. Wave speed on a string: $v = \\sqrt{\\frac{T}{\\mu}} = \\sqrt{\\frac{(M/L)gy}{M/L}} = \\sqrt{gy}$.\n4. Velocity is $v = \\frac{dy}{dt} \\implies dt = \\frac{dy}{\\sqrt{gy}}$.\n5. Integrating from bottom ($y = 0$) to top ($y = L$):\n   $t = \\frac{1}{\\sqrt{g}} \\int_0^L y^{-1/2} dy = \\frac{1}{\\sqrt{g}} [2\\sqrt{y}]_0^L = 2\\sqrt{\\frac{L}{g}}$.\n\n5. FINAL ANSWER:\nOption A: $2 \\sqrt{\\frac{L}{g}}$\n\n6. QUICK TIP:\nMaster NEET Formula: Time for a pulse to climb a hanging rope is $t = 2\\sqrt{\\frac{L}{g}}$! Independent of rope mass $M$.",
+    "solutionStructured": {
+      "concept": "Tension at height $y$ from the bottom free end is $T(y) = \\mu g y$, where $\\mu = M/L$. The wave speed at height $y$ is $v(y) = \\sqrt{\\frac{T(y)}{\\mu}} = \\sqrt{gy}$. Time taken is $t = \\int_0^L \\frac{dy}{v(y)} = \\int_0^L \\frac{dy}{\\sqrt{gy}} = \\frac{1}{\\sqrt{g}} [2\\sqrt{y}]_0^L = 2\\sqrt{\\frac{L}{g}}$.",
+      "given": "Uniform rope mass $M$, length $L$, hanging vertically.",
+      "formula": "$v = \\sqrt{gy}$; $t = \\int_0^L \\frac{dy}{\\sqrt{gy}} = 2\\sqrt{\\frac{L}{g}}$.",
+      "stepByStep": "1. Tension at distance $y$ from the bottom: $T = \\left(\\frac{M}{L}y\\right)g$.\n2. Mass per unit length: $\\mu = \\frac{M}{L}$.\n3. Wave speed on a string: $v = \\sqrt{\\frac{T}{\\mu}} = \\sqrt{\\frac{(M/L)gy}{M/L}} = \\sqrt{gy}$.\n4. Velocity is $v = \\frac{dy}{dt} \\implies dt = \\frac{dy}{\\sqrt{gy}}$.\n5. Integrating from bottom ($y = 0$) to top ($y = L$):\n   $t = \\frac{1}{\\sqrt{g}} \\int_0^L y^{-1/2} dy = \\frac{1}{\\sqrt{g}} [2\\sqrt{y}]_0^L = 2\\sqrt{\\frac{L}{g}}$.",
+      "finalAnswer": "Option A: $2 \\sqrt{\\frac{L}{g}}$",
+      "whyOtherOptionsWrong": "Option B misses the factor of 2. Option C is the pendulum period. Option D is $\\sqrt{2L/g}$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Mixed-concept NEET-level problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-491",
+    "questionNumber": 491,
+    "question": "In the hanging rope problem above, the acceleration of the climbing transverse wave pulse is:",
+    "options": {
+      "A": "$\\frac{g}{2}$",
+      "B": "$g$",
+      "C": "$2g$",
+      "D": "Zero"
+    },
+    "optionsList": [
+      "$\\frac{g}{2}$",
+      "$g$",
+      "$2g$",
+      "Zero"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nWave velocity is $v = \\sqrt{gy}$. Acceleration is $a = v \\frac{dv}{dy} = \\sqrt{gy} \\left(\\frac{1}{2\\sqrt{gy}} \\cdot g\\right) = \\frac{g}{2} = \\text{constant}$.\n\n2. GIVEN:\n$v = \\sqrt{gy}$.\n\n3. FORMULA / PRINCIPLE:\n$a = v \\frac{dv}{dy} = \\frac{g}{2}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Velocity of pulse: $v = \\sqrt{gy} = g^{1/2} y^{1/2}$.\n2. Differentiate with respect to $y$:\n   $\\frac{dv}{dy} = \\frac{1}{2} g^{1/2} y^{-1/2} = \\frac{g}{2\\sqrt{gy}}$.\n3. Acceleration of the pulse: $a = v \\frac{dv}{dy} = \\sqrt{gy} \\times \\frac{g}{2\\sqrt{gy}} = \\frac{g}{2}$.\n4. Since $a = g/2$ is constant, we can also verify time using $L = \\frac{1}{2}at^2 = \\frac{1}{2}(g/2)t^2 \\implies t = \\sqrt{\\frac{4L}{g}} = 2\\sqrt{\\frac{L}{g}}$!\n\n5. FINAL ANSWER:\nOption A: $\\frac{g}{2}$\n\n6. QUICK TIP:\nThe wave climbs with CONSTANT acceleration $a = \\frac{g}{2}$! Beautiful physics symmetry.",
+    "solutionStructured": {
+      "concept": "Wave velocity is $v = \\sqrt{gy}$. Acceleration is $a = v \\frac{dv}{dy} = \\sqrt{gy} \\left(\\frac{1}{2\\sqrt{gy}} \\cdot g\\right) = \\frac{g}{2} = \\text{constant}$.",
+      "given": "$v = \\sqrt{gy}$.",
+      "formula": "$a = v \\frac{dv}{dy} = \\frac{g}{2}$.",
+      "stepByStep": "1. Velocity of pulse: $v = \\sqrt{gy} = g^{1/2} y^{1/2}$.\n2. Differentiate with respect to $y$:\n   $\\frac{dv}{dy} = \\frac{1}{2} g^{1/2} y^{-1/2} = \\frac{g}{2\\sqrt{gy}}$.\n3. Acceleration of the pulse: $a = v \\frac{dv}{dy} = \\sqrt{gy} \\times \\frac{g}{2\\sqrt{gy}} = \\frac{g}{2}$.\n4. Since $a = g/2$ is constant, we can also verify time using $L = \\frac{1}{2}at^2 = \\frac{1}{2}(g/2)t^2 \\implies t = \\sqrt{\\frac{4L}{g}} = 2\\sqrt{\\frac{L}{g}}$!",
+      "finalAnswer": "Option A: $\\frac{g}{2}$",
+      "whyOtherOptionsWrong": "Option B ($g$) is gravitational acceleration. Option C is $2g$. Option D assumes constant speed."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Mixed-concept NEET-level problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-492",
+    "questionNumber": 492,
+    "question": "A bead of mass $m$ is threaded on a smooth horizontal wire. A spring of natural length $L_0$ and stiffness $k$ has one end attached to the bead and the other fixed to a point at distance $d$ perpendicular to the wire. What is the acceleration of the bead when it is at distance $x$ from the perpendicular projection?",
+    "options": {
+      "A": "$-\\frac{k x}{m} \\left(1 - \\frac{L_0}{\\sqrt{x^2 + d^2}}\\right)$",
+      "B": "$-\\frac{k x}{m}$",
+      "C": "$-\\frac{k}{m}\\sqrt{x^2 + d^2}$",
+      "D": "$-\\frac{k d}{m}$"
+    },
+    "optionsList": [
+      "$-\\frac{k x}{m} \\left(1 - \\frac{L_0}{\\sqrt{x^2 + d^2}}\\right)$",
+      "$-\\frac{k x}{m}$",
+      "$-\\frac{k}{m}\\sqrt{x^2 + d^2}$",
+      "$-\\frac{k d}{m}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nInstantaneous length of the spring is $L = \\sqrt{x^2 + d^2}$. Elongation is $\\Delta L = L - L_0 = \\sqrt{x^2 + d^2} - L_0$. Spring force is $F_s = k \\Delta L$. The component along the wire is $F_x = -F_s \\cos\\theta = -F_s \\frac{x}{L} = -k \\left(L - L_0\\right) \\frac{x}{L} = -kx \\left(1 - \\frac{L_0}{L}\\right) = -kx\\left(1 - \\frac{L_0}{\\sqrt{x^2 + d^2}}\\right)$. Acceleration is $a = F_x / m$.\n\n2. GIVEN:\nSpring on bead along wire, $L_0, k, d$, position $x$.\n\n3. FORMULA / PRINCIPLE:\n$F_x = -k x \\left(1 - \\frac{L_0}{\\sqrt{x^2 + d^2}}\\right)$; $a = \\frac{F_x}{m}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. By geometry, distance from fixed peg to bead is $L = \\sqrt{x^2 + d^2}$.\n2. Extension of spring: $\\Delta L = \\sqrt{x^2 + d^2} - L_0$.\n3. Spring tension magnitude: $F_s = k \\Delta L = k(\\sqrt{x^2 + d^2} - L_0)$.\n4. Angle $\\theta$ between spring and wire: $\\cos\\theta = \\frac{x}{\\sqrt{x^2 + d^2}}$.\n5. Restoring force along the wire: $F_x = -F_s \\cos\\theta = -k(\\sqrt{x^2 + d^2} - L_0) \\frac{x}{\\sqrt{x^2 + d^2}} = -kx \\left(1 - \\frac{L_0}{\\sqrt{x^2 + d^2}}\\right)$.\n6. Acceleration is $a = \\frac{F_x}{m} = -\\frac{kx}{m}\\left(1 - \\frac{L_0}{\\sqrt{x^2 + d^2}}\\right)$.\n\n5. FINAL ANSWER:\nOption A: $-\\frac{k x}{m} \\left(1 - \\frac{L_0}{\\sqrt{x^2 + d^2}}\\right)$\n\n6. QUICK TIP:\nNotice that for small displacements $x \\ll d$, if $L_0 = d$, $a \\approx -\\frac{kx^3}{2md^2}$, an anharmonic cubic restoring force!",
+    "solutionStructured": {
+      "concept": "Instantaneous length of the spring is $L = \\sqrt{x^2 + d^2}$. Elongation is $\\Delta L = L - L_0 = \\sqrt{x^2 + d^2} - L_0$. Spring force is $F_s = k \\Delta L$. The component along the wire is $F_x = -F_s \\cos\\theta = -F_s \\frac{x}{L} = -k \\left(L - L_0\\right) \\frac{x}{L} = -kx \\left(1 - \\frac{L_0}{L}\\right) = -kx\\left(1 - \\frac{L_0}{\\sqrt{x^2 + d^2}}\\right)$. Acceleration is $a = F_x / m$.",
+      "given": "Spring on bead along wire, $L_0, k, d$, position $x$.",
+      "formula": "$F_x = -k x \\left(1 - \\frac{L_0}{\\sqrt{x^2 + d^2}}\\right)$; $a = \\frac{F_x}{m}$.",
+      "stepByStep": "1. By geometry, distance from fixed peg to bead is $L = \\sqrt{x^2 + d^2}$.\n2. Extension of spring: $\\Delta L = \\sqrt{x^2 + d^2} - L_0$.\n3. Spring tension magnitude: $F_s = k \\Delta L = k(\\sqrt{x^2 + d^2} - L_0)$.\n4. Angle $\\theta$ between spring and wire: $\\cos\\theta = \\frac{x}{\\sqrt{x^2 + d^2}}$.\n5. Restoring force along the wire: $F_x = -F_s \\cos\\theta = -k(\\sqrt{x^2 + d^2} - L_0) \\frac{x}{\\sqrt{x^2 + d^2}} = -kx \\left(1 - \\frac{L_0}{\\sqrt{x^2 + d^2}}\\right)$.\n6. Acceleration is $a = \\frac{F_x}{m} = -\\frac{kx}{m}\\left(1 - \\frac{L_0}{\\sqrt{x^2 + d^2}}\\right)$.",
+      "finalAnswer": "Option A: $-\\frac{k x}{m} \\left(1 - \\frac{L_0}{\\sqrt{x^2 + d^2}}\\right)$",
+      "whyOtherOptionsWrong": "Option B assumes linear Hooke's law along the line. Option C and D omit trigonometry."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Mixed-concept NEET-level problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-493",
+    "questionNumber": 493,
+    "question": "A system consists of three blocks $m_1 = 1\\text{ kg}, m_2 = 2\\text{ kg}, m_3 = 3\\text{ kg}$ connected by strings and suspended from a spring of stiffness $k$. If the string connecting $m_2$ and $m_3$ is suddenly cut, what is the acceleration of block $m_1$ immediately after the cut (take $g = 10\\text{ m/s}^2$)?",
+    "options": {
+      "A": "$10\\text{ m/s}^2$ upwards",
+      "B": "$5\\text{ m/s}^2$ upwards",
+      "C": "$15\\text{ m/s}^2$ upwards",
+      "D": "Zero"
+    },
+    "optionsList": [
+      "$10\\text{ m/s}^2$ upwards",
+      "$5\\text{ m/s}^2$ upwards",
+      "$15\\text{ m/s}^2$ upwards",
+      "Zero"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nBefore cutting, spring force supports all three masses: $F_s = (m_1 + m_2 + m_3)g = (1 + 2 + 3)(10) = 60\\text{ N}$. Immediately after the bottom string is cut, $m_3$ drops away, but the string connecting $m_1$ and $m_2$ remains intact! Blocks $m_1$ and $m_2$ remain rigidly connected and accelerate together. The net upward force on the $(m_1 + m_2)$ system is $F_s - (m_1 + m_2)g = 60 - 30 = 30\\text{ N}$. Acceleration is $a = \\frac{30}{m_1 + m_2} = \\frac{30}{3} = 10\\text{ m/s}^2$ upwards.\n\n2. GIVEN:\n$m_1 = 1\\text{ kg}, m_2 = 2\\text{ kg}, m_3 = 3\\text{ kg}$, string between 2 and 3 cut, $g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$F_s = (m_1 + m_2 + m_3)g = 60\\text{ N}$; $a = \\frac{F_s - (m_1 + m_2)g}{m_1 + m_2} = \\frac{30}{3} = 10\\text{ m/s}^2$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Equilibrium before cut: Spring force $F_s = (1 + 2 + 3)g = 60\\text{ N}$.\n2. Immediately after string between $m_2$ and $m_3$ is cut:\n   - Mass $m_3$ is detached.\n   - Spring force $F_s = 60\\text{ N}$ remains unchanged instantaneously.\n   - The string between $m_1$ and $m_2$ remains taut, so $m_1$ and $m_2$ accelerate together as a single combined mass $M = m_1 + m_2 = 3\\text{ kg}$.\n3. Total downward gravity on the remaining $(m_1 + m_2)$ system: $W = (1 + 2)g = 30\\text{ N}$.\n4. Net upward accelerating force: $F_{\\text{net}} = F_s - W = 60 - 30 = 30\\text{ N}$.\n5. Upward acceleration of both $m_1$ and $m_2$: $a = \\frac{F_{\\text{net}}}{M} = \\frac{30\\text{ N}}{3\\text{ kg}} = 10\\text{ m/s}^2$ upwards.\n\n5. FINAL ANSWER:\nOption A: $10\\text{ m/s}^2$ upwards\n\n6. QUICK TIP:\nCrucial Distinction: If the string between $m_1$ and $m_2$ is still intact, they accelerate TOGETHER as $(m_1 + m_2)$! Do not treat $m_1$ in isolation.",
+    "solutionStructured": {
+      "concept": "Before cutting, spring force supports all three masses: $F_s = (m_1 + m_2 + m_3)g = (1 + 2 + 3)(10) = 60\\text{ N}$. Immediately after the bottom string is cut, $m_3$ drops away, but the string connecting $m_1$ and $m_2$ remains intact! Blocks $m_1$ and $m_2$ remain rigidly connected and accelerate together. The net upward force on the $(m_1 + m_2)$ system is $F_s - (m_1 + m_2)g = 60 - 30 = 30\\text{ N}$. Acceleration is $a = \\frac{30}{m_1 + m_2} = \\frac{30}{3} = 10\\text{ m/s}^2$ upwards.",
+      "given": "$m_1 = 1\\text{ kg}, m_2 = 2\\text{ kg}, m_3 = 3\\text{ kg}$, string between 2 and 3 cut, $g = 10\\text{ m/s}^2$.",
+      "formula": "$F_s = (m_1 + m_2 + m_3)g = 60\\text{ N}$; $a = \\frac{F_s - (m_1 + m_2)g}{m_1 + m_2} = \\frac{30}{3} = 10\\text{ m/s}^2$.",
+      "stepByStep": "1. Equilibrium before cut: Spring force $F_s = (1 + 2 + 3)g = 60\\text{ N}$.\n2. Immediately after string between $m_2$ and $m_3$ is cut:\n   - Mass $m_3$ is detached.\n   - Spring force $F_s = 60\\text{ N}$ remains unchanged instantaneously.\n   - The string between $m_1$ and $m_2$ remains taut, so $m_1$ and $m_2$ accelerate together as a single combined mass $M = m_1 + m_2 = 3\\text{ kg}$.\n3. Total downward gravity on the remaining $(m_1 + m_2)$ system: $W = (1 + 2)g = 30\\text{ N}$.\n4. Net upward accelerating force: $F_{\\text{net}} = F_s - W = 60 - 30 = 30\\text{ N}$.\n5. Upward acceleration of both $m_1$ and $m_2$: $a = \\frac{F_{\\text{net}}}{M} = \\frac{30\\text{ N}}{3\\text{ kg}} = 10\\text{ m/s}^2$ upwards.",
+      "finalAnswer": "Option A: $10\\text{ m/s}^2$ upwards",
+      "whyOtherOptionsWrong": "Option B ($5\\text{ m/s}^2$) divides by wrong mass. Option C ($15\\text{ m/s}^2$) is $30/2$. Option D is zero."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Mixed-concept NEET-level problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-494",
+    "questionNumber": 494,
+    "question": "In the previous setup, what is the tension in the string connecting block $m_1$ and block $m_2$ immediately after the string connecting $m_2$ and $m_3$ is cut?",
+    "options": {
+      "A": "40 N",
+      "B": "20 N",
+      "C": "30 N",
+      "D": "60 N"
+    },
+    "optionsList": [
+      "40 N",
+      "20 N",
+      "30 N",
+      "60 N"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor block $m_2$: It accelerates upward at $a = 10\\text{ m/s}^2$. Upward tension $T$ must support its weight and provide its upward acceleration: $T - m_2 g = m_2 a \\implies T = m_2(g + a) = 2(10 + 10) = 40\\text{ N}$.\n\n2. GIVEN:\n$m_2 = 2\\text{ kg}, a = 10\\text{ m/s}^2$ upwards, $g = 10\\text{ m/s}^2$.\n\n3. FORMULA / PRINCIPLE:\n$T = m_2(g + a) = 2(20) = 40\\text{ N}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. FBD of block $m_2$ immediately after the cut:\n   - Upward tension $T$ from the string connecting to $m_1$.\n   - Downward gravity $m_2 g = 20\\text{ N}$.\n   - Block $m_2$ accelerates upwards at $a = 10\\text{ m/s}^2$.\n2. Newton's second law on $m_2$:\n   $T - m_2 g = m_2 a$.\n3. $T = m_2(g + a) = 2\\text{ kg} \\times (10 + 10)\\text{ m/s}^2 = 40\\text{ N}$.\n4. Check on block $m_1$: $F_s - T - m_1 g = m_1 a \\implies 60 - 40 - 10 = 10 = 1(10)$. Perfectly consistent!\n\n5. FINAL ANSWER:\nOption A: 40 N\n\n6. QUICK TIP:\nAlways double check tension using both blocks: $F_s - T - m_1 g = m_1 a$ and $T - m_2 g = m_2 a$!",
+    "solutionStructured": {
+      "concept": "For block $m_2$: It accelerates upward at $a = 10\\text{ m/s}^2$. Upward tension $T$ must support its weight and provide its upward acceleration: $T - m_2 g = m_2 a \\implies T = m_2(g + a) = 2(10 + 10) = 40\\text{ N}$.",
+      "given": "$m_2 = 2\\text{ kg}, a = 10\\text{ m/s}^2$ upwards, $g = 10\\text{ m/s}^2$.",
+      "formula": "$T = m_2(g + a) = 2(20) = 40\\text{ N}$.",
+      "stepByStep": "1. FBD of block $m_2$ immediately after the cut:\n   - Upward tension $T$ from the string connecting to $m_1$.\n   - Downward gravity $m_2 g = 20\\text{ N}$.\n   - Block $m_2$ accelerates upwards at $a = 10\\text{ m/s}^2$.\n2. Newton's second law on $m_2$:\n   $T - m_2 g = m_2 a$.\n3. $T = m_2(g + a) = 2\\text{ kg} \\times (10 + 10)\\text{ m/s}^2 = 40\\text{ N}$.\n4. Check on block $m_1$: $F_s - T - m_1 g = m_1 a \\implies 60 - 40 - 10 = 10 = 1(10)$. Perfectly consistent!",
+      "finalAnswer": "Option A: 40 N",
+      "whyOtherOptionsWrong": "Option B (20 N) is the static weight of $m_2$. Option C (30 N) is $F_{\\text{net}}$. Option D is $F_s$."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Mixed-concept NEET-level problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-495",
+    "questionNumber": 495,
+    "question": "A massive chain of mass $M$ and length $L$ is held vertically with its bottom end just touching a table. The chain is released from rest. What is the total force exerted by the chain on the table at an instant when a length $y$ has fallen onto the table?",
+    "options": {
+      "A": "$\\frac{3 M g y}{L}$",
+      "B": "$\\frac{M g y}{L}$",
+      "C": "$\\frac{2 M g y}{L}$",
+      "D": "$\\frac{4 M g y}{L}$"
+    },
+    "optionsList": [
+      "$\\frac{3 M g y}{L}$",
+      "$\\frac{M g y}{L}$",
+      "$\\frac{2 M g y}{L}$",
+      "$\\frac{4 M g y}{L}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTotal force on the table is the sum of two parts: (1) The static weight of the chain already resting on the table: $W = \\frac{Mgy}{L}$; and (2) The dynamic impact thrust force of the chain links coming to an abrupt stop: $F_{\\text{thrust}} = v \\frac{dm}{dt} = v (\\lambda v) = \\lambda v^2 = \\left(\\frac{M}{L}\\right)(2gy) = \\frac{2Mgy}{L}$. Total force is $F_{\\text{table}} = W + F_{\\text{thrust}} = \\frac{Mgy}{L} + \\frac{2Mgy}{L} = \\frac{3Mgy}{L}$.\n\n2. GIVEN:\nFalling chain of mass $M$, length $L$, length $y$ fallen.\n\n3. FORMULA / PRINCIPLE:\n$F_{\\text{total}} = \\lambda g y + \\lambda v^2 = \\lambda g y + \\lambda (2gy) = 3 \\lambda g y = \\frac{3 M g y}{L}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Static weight contribution: The length of chain lying on the table is $y$. Its mass is $m(y) = \\frac{M}{L}y$. The weight pressing on the table is $W = m(y)g = \\frac{Mgy}{L}$.\n2. Dynamic thrust contribution: Chain links are in free fall, so their speed upon hitting the table is $v = \\sqrt{2gy}$.\n3. The rate at which mass arrives at the table is $\\frac{dm}{dt} = \\lambda \\frac{dy}{dt} = \\lambda v = \\frac{M}{L}v$.\n4. The rate of change of momentum (impact thrust) is $F_{\\text{impulse}} = v \\frac{dm}{dt} = \\lambda v^2 = \\left(\\frac{M}{L}\\right)(2gy) = \\frac{2Mgy}{L}$.\n5. Total force registered on the table:\n   $F_{\\text{total}} = W + F_{\\text{impulse}} = \\frac{Mgy}{L} + \\frac{2Mgy}{L} = \\frac{3Mgy}{L}$.\n\n5. FINAL ANSWER:\nOption A: $\\frac{3 M g y}{L}$\n\n6. QUICK TIP:\nFamous NEET Benchmark: Total force on the scale is THREE TIMES the weight of the fallen portion: $F = 3 \\times W_{\\text{fallen}}$! When the last link hits ($y = L$), the scale momentarily reads $3Mg$.",
+    "solutionStructured": {
+      "concept": "Total force on the table is the sum of two parts: (1) The static weight of the chain already resting on the table: $W = \\frac{Mgy}{L}$; and (2) The dynamic impact thrust force of the chain links coming to an abrupt stop: $F_{\\text{thrust}} = v \\frac{dm}{dt} = v (\\lambda v) = \\lambda v^2 = \\left(\\frac{M}{L}\\right)(2gy) = \\frac{2Mgy}{L}$. Total force is $F_{\\text{table}} = W + F_{\\text{thrust}} = \\frac{Mgy}{L} + \\frac{2Mgy}{L} = \\frac{3Mgy}{L}$.",
+      "given": "Falling chain of mass $M$, length $L$, length $y$ fallen.",
+      "formula": "$F_{\\text{total}} = \\lambda g y + \\lambda v^2 = \\lambda g y + \\lambda (2gy) = 3 \\lambda g y = \\frac{3 M g y}{L}$.",
+      "stepByStep": "1. Static weight contribution: The length of chain lying on the table is $y$. Its mass is $m(y) = \\frac{M}{L}y$. The weight pressing on the table is $W = m(y)g = \\frac{Mgy}{L}$.\n2. Dynamic thrust contribution: Chain links are in free fall, so their speed upon hitting the table is $v = \\sqrt{2gy}$.\n3. The rate at which mass arrives at the table is $\\frac{dm}{dt} = \\lambda \\frac{dy}{dt} = \\lambda v = \\frac{M}{L}v$.\n4. The rate of change of momentum (impact thrust) is $F_{\\text{impulse}} = v \\frac{dm}{dt} = \\lambda v^2 = \\left(\\frac{M}{L}\\right)(2gy) = \\frac{2Mgy}{L}$.\n5. Total force registered on the table:\n   $F_{\\text{total}} = W + F_{\\text{impulse}} = \\frac{Mgy}{L} + \\frac{2Mgy}{L} = \\frac{3Mgy}{L}$.",
+      "finalAnswer": "Option A: $\\frac{3 M g y}{L}$",
+      "whyOtherOptionsWrong": "Option B ($\\frac{Mgy}{L}$) only includes static weight, forgetting the dynamic impact thrust. Option C only includes the impact thrust. Option D is $4Mgy/L$."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Mixed-concept NEET-level problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-496",
+    "questionNumber": 496,
+    "question": "A ball of mass $m$ is suspended by a light inextensible string from the ceiling. A horizontal force $F$ is applied to the ball to slowly pull it until the string makes an angle $\\theta$ with the vertical. The work done by the force $F$ during this slow process is:",
+    "options": {
+      "A": "$mgL (1 - \\cos\\theta)$",
+      "B": "$F L \\sin\\theta$",
+      "C": "$mgL \\sin\\theta$",
+      "D": "$mgL \\cos\\theta$"
+    },
+    "optionsList": [
+      "$mgL (1 - \\cos\\theta)$",
+      "$F L \\sin\\theta$",
+      "$mgL \\sin\\theta$",
+      "$mgL \\cos\\theta$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nBecause the ball is pulled SLOWLY (quasi-statically), kinetic energy remains zero ($\\Delta K = 0$). By the work-energy theorem: $W_F + W_g + W_T = 0$. Since string tension is perpendicular to displacement ($W_T = 0$), $W_F = -W_g = \\Delta U = mgL(1 - \\cos\\theta)$.\n\n2. GIVEN:\nBall pulled slowly to angle $\\theta$, string length $L$.\n\n3. FORMULA / PRINCIPLE:\n$W_F = \\Delta U = mgL(1 - \\cos\\theta)$.\n\n4. STEP-BY-STEP SOLUTION:\n1. 'Slowly' means the speed of the ball is infinitesimally small at all times, so $\\Delta K = 0$.\n2. By the Work-Energy Theorem: $W_{\\text{net}} = W_F + W_{\\text{gravity}} + W_{\\text{tension}} = \\Delta K = 0$.\n3. The tension $T$ is always perpendicular to the circular arc of displacement, so $W_{\\text{tension}} = 0$.\n4. Therefore: $W_F = -W_{\\text{gravity}} = mg \\Delta y$.\n5. The vertical height gained by the ball is $\\Delta y = L(1 - \\cos\\theta)$.\n6. Hence, $W_F = mgL(1 - \\cos\\theta)$.\n\n5. FINAL ANSWER:\nOption A: $mgL (1 - \\cos\\theta)$\n\n6. QUICK TIP:\nQuasi-static work done by external force equals the change in potential energy: $W_{\\text{slow}} = mgL(1 - \\cos\\theta)$!",
+    "solutionStructured": {
+      "concept": "Because the ball is pulled SLOWLY (quasi-statically), kinetic energy remains zero ($\\Delta K = 0$). By the work-energy theorem: $W_F + W_g + W_T = 0$. Since string tension is perpendicular to displacement ($W_T = 0$), $W_F = -W_g = \\Delta U = mgL(1 - \\cos\\theta)$.",
+      "given": "Ball pulled slowly to angle $\\theta$, string length $L$.",
+      "formula": "$W_F = \\Delta U = mgL(1 - \\cos\\theta)$.",
+      "stepByStep": "1. 'Slowly' means the speed of the ball is infinitesimally small at all times, so $\\Delta K = 0$.\n2. By the Work-Energy Theorem: $W_{\\text{net}} = W_F + W_{\\text{gravity}} + W_{\\text{tension}} = \\Delta K = 0$.\n3. The tension $T$ is always perpendicular to the circular arc of displacement, so $W_{\\text{tension}} = 0$.\n4. Therefore: $W_F = -W_{\\text{gravity}} = mg \\Delta y$.\n5. The vertical height gained by the ball is $\\Delta y = L(1 - \\cos\\theta)$.\n6. Hence, $W_F = mgL(1 - \\cos\\theta)$.",
+      "finalAnswer": "Option A: $mgL (1 - \\cos\\theta)$",
+      "whyOtherOptionsWrong": "Option B assumes constant force $F$, but $F$ varies as $mg\\tan\\theta$. Option C uses sine. Option D uses cosine."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Mixed-concept NEET-level problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-497",
+    "questionNumber": 497,
+    "question": "In contrast to the previous question, if a CONSTANT horizontal force $F = mg$ acts on the ball from rest, what is the maximum angle $\\theta_{\\text{max}}$ through which the string deflects?",
+    "options": {
+      "A": "$90^\\circ$",
+      "B": "$45^\\circ$",
+      "C": "$60^\\circ$",
+      "D": "$30^\\circ$"
+    },
+    "optionsList": [
+      "$90^\\circ$",
+      "$45^\\circ$",
+      "$60^\\circ$",
+      "$30^\\circ$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor a constant horizontal force $F = mg$, the work done by $F$ is $W_F = F x = mg(L\\sin\\theta)$. The work done by gravity is $W_g = -mg L(1 - \\cos\\theta)$. At the maximum deflection, the ball momentarily comes to rest, so $\\Delta K = 0 \\implies W_F + W_g = 0 \\implies mgL\\sin\\theta = mgL(1 - \\cos\\theta) \\implies \\sin\\theta + \\cos\\theta = 1$. Squaring gives $1 + 2\\sin\\theta\\cos\\theta = 1 \\implies \\sin 2\\theta = 0 \\implies 2\\theta = 180^\\circ \\implies \\theta = 90^\\circ$.\n\n2. GIVEN:\nConstant force $F = mg$, starts from rest.\n\n3. FORMULA / PRINCIPLE:\n$\\sin\\theta + \\cos\\theta = 1 \\implies \\theta_{\\text{max}} = 90^\\circ$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Work done by constant horizontal force: $W_F = F \\Delta x = (mg)(L\\sin\\theta)$.\n2. Work done by gravity: $W_g = -mg \\Delta y = -mgL(1 - \\cos\\theta)$.\n3. At maximum angle, speed is zero: $\\Delta K = 0$.\n4. $W_F + W_g = 0 \\implies mgL\\sin\\theta - mgL(1 - \\cos\\theta) = 0$.\n5. Dividing by $mgL$: $\\sin\\theta - 1 + \\cos\\theta = 0 \\implies \\sin\\theta + \\cos\\theta = 1$.\n6. The non-trivial solution for $\\theta > 0$ is $\\theta = 90^\\circ$ (since $\\sin 90^\\circ + \\cos 90^\\circ = 1 + 0 = 1$).\n\n5. FINAL ANSWER:\nOption A: $90^\\circ$\n\n6. QUICK TIP:\nCrucial Contrast: Equilibrium position is $\\tan\\theta = F/mg = 1 \\implies \\theta_{\\text{eq}} = 45^\\circ$. Maximum oscillation angle is DOUBLE the equilibrium angle: $\\theta_{\\text{max}} = 2 \\times 45^\\circ = 90^\\circ$!",
+    "solutionStructured": {
+      "concept": "For a constant horizontal force $F = mg$, the work done by $F$ is $W_F = F x = mg(L\\sin\\theta)$. The work done by gravity is $W_g = -mg L(1 - \\cos\\theta)$. At the maximum deflection, the ball momentarily comes to rest, so $\\Delta K = 0 \\implies W_F + W_g = 0 \\implies mgL\\sin\\theta = mgL(1 - \\cos\\theta) \\implies \\sin\\theta + \\cos\\theta = 1$. Squaring gives $1 + 2\\sin\\theta\\cos\\theta = 1 \\implies \\sin 2\\theta = 0 \\implies 2\\theta = 180^\\circ \\implies \\theta = 90^\\circ$.",
+      "given": "Constant force $F = mg$, starts from rest.",
+      "formula": "$\\sin\\theta + \\cos\\theta = 1 \\implies \\theta_{\\text{max}} = 90^\\circ$.",
+      "stepByStep": "1. Work done by constant horizontal force: $W_F = F \\Delta x = (mg)(L\\sin\\theta)$.\n2. Work done by gravity: $W_g = -mg \\Delta y = -mgL(1 - \\cos\\theta)$.\n3. At maximum angle, speed is zero: $\\Delta K = 0$.\n4. $W_F + W_g = 0 \\implies mgL\\sin\\theta - mgL(1 - \\cos\\theta) = 0$.\n5. Dividing by $mgL$: $\\sin\\theta - 1 + \\cos\\theta = 0 \\implies \\sin\\theta + \\cos\\theta = 1$.\n6. The non-trivial solution for $\\theta > 0$ is $\\theta = 90^\\circ$ (since $\\sin 90^\\circ + \\cos 90^\\circ = 1 + 0 = 1$).",
+      "finalAnswer": "Option A: $90^\\circ$",
+      "whyOtherOptionsWrong": "Option B ($45^\\circ$) is the equilibrium angle, NOT the maximum angle of swing! (Mass overshoots equilibrium). Option C and D are incorrect."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Mixed-concept NEET-level problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-498",
+    "questionNumber": 498,
+    "question": "A wedge of mass $M$ with angle $\\alpha$ rests on a smooth horizontal table. A block of mass $m$ slides down the smooth inclined face of the wedge. What is the horizontal acceleration of the wedge?",
+    "options": {
+      "A": "$\\frac{m g \\sin\\alpha \\cos\\alpha}{M + m \\sin^2\\alpha}$",
+      "B": "$\\frac{m g \\sin\\alpha}{M + m}$",
+      "C": "$\\frac{m g \\cos\\alpha}{M + m \\sin^2\\alpha}$",
+      "D": "$g \\tan\\alpha$"
+    },
+    "optionsList": [
+      "$\\frac{m g \\sin\\alpha \\cos\\alpha}{M + m \\sin^2\\alpha}$",
+      "$\\frac{m g \\sin\\alpha}{M + m}$",
+      "$\\frac{m g \\cos\\alpha}{M + m \\sin^2\\alpha}$",
+      "$g \\tan\\alpha$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nLet $A$ be the horizontal acceleration of the wedge to the left. The normal reaction $N$ between wedge and block pushes the wedge with horizontal component $N\\sin\\alpha$: $N\\sin\\alpha = M A$. In the wedge frame, the block has relative acceleration $a_r$ down the incline. Perpendicular to the incline: $N = m(g\\cos\\alpha - A\\sin\\alpha)$. Substituting $N$ yields $m(g\\cos\\alpha - A\\sin\\alpha)\\sin\\alpha = M A \\implies A(M + m\\sin^2\\alpha) = mg\\sin\\alpha\\cos\\alpha \\implies A = \\frac{mg\\sin\\alpha\\cos\\alpha}{M + m\\sin^2\\alpha}$.\n\n2. GIVEN:\nWedge mass $M$, block mass $m$, smooth surfaces, incline $\\alpha$.\n\n3. FORMULA / PRINCIPLE:\n$A = \\frac{m g \\sin\\alpha \\cos\\alpha}{M + m \\sin^2\\alpha}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. FBD of the wedge: The block exerts a normal contact force $N$ perpendicular to the incline.\n2. The horizontal component of $N$ pushing the wedge to the left is $N\\sin\\alpha$.\n3. Newton's second law on the wedge: $N\\sin\\alpha = MA$.\n4. In the accelerated frame of the wedge, the block experiences pseudo force $mA$ directed to the right.\n5. The component of the pseudo force away from the incline is $mA\\sin\\alpha$.\n6. Equilibrium perpendicular to the incline: $N + mA\\sin\\alpha = mg\\cos\\alpha \\implies N = m(g\\cos\\alpha - A\\sin\\alpha)$.\n7. Substitute $N$ into the wedge equation:\n   $m(g\\cos\\alpha - A\\sin\\alpha)\\sin\\alpha = MA$.\n8. $mg\\sin\\alpha\\cos\\alpha - mA\\sin^2\\alpha = MA \\implies A(M + m\\sin^2\\alpha) = mg\\sin\\alpha\\cos\\alpha$.\n9. Solving for $A$: $A = \\frac{mg\\sin\\alpha\\cos\\alpha}{M + m\\sin^2\\alpha}$.\n\n5. FINAL ANSWER:\nOption A: $\\frac{m g \\sin\\alpha \\cos\\alpha}{M + m \\sin^2\\alpha}$\n\n6. QUICK TIP:\nMaster JEE/NEET Formula: Acceleration of a free wedge is $A = \\frac{mg\\sin\\alpha\\cos\\alpha}{M + m\\sin^2\\alpha}$. If $M \\to \\infty$, $A \\to 0$.",
+    "solutionStructured": {
+      "concept": "Let $A$ be the horizontal acceleration of the wedge to the left. The normal reaction $N$ between wedge and block pushes the wedge with horizontal component $N\\sin\\alpha$: $N\\sin\\alpha = M A$. In the wedge frame, the block has relative acceleration $a_r$ down the incline. Perpendicular to the incline: $N = m(g\\cos\\alpha - A\\sin\\alpha)$. Substituting $N$ yields $m(g\\cos\\alpha - A\\sin\\alpha)\\sin\\alpha = M A \\implies A(M + m\\sin^2\\alpha) = mg\\sin\\alpha\\cos\\alpha \\implies A = \\frac{mg\\sin\\alpha\\cos\\alpha}{M + m\\sin^2\\alpha}$.",
+      "given": "Wedge mass $M$, block mass $m$, smooth surfaces, incline $\\alpha$.",
+      "formula": "$A = \\frac{m g \\sin\\alpha \\cos\\alpha}{M + m \\sin^2\\alpha}$.",
+      "stepByStep": "1. FBD of the wedge: The block exerts a normal contact force $N$ perpendicular to the incline.\n2. The horizontal component of $N$ pushing the wedge to the left is $N\\sin\\alpha$.\n3. Newton's second law on the wedge: $N\\sin\\alpha = MA$.\n4. In the accelerated frame of the wedge, the block experiences pseudo force $mA$ directed to the right.\n5. The component of the pseudo force away from the incline is $mA\\sin\\alpha$.\n6. Equilibrium perpendicular to the incline: $N + mA\\sin\\alpha = mg\\cos\\alpha \\implies N = m(g\\cos\\alpha - A\\sin\\alpha)$.\n7. Substitute $N$ into the wedge equation:\n   $m(g\\cos\\alpha - A\\sin\\alpha)\\sin\\alpha = MA$.\n8. $mg\\sin\\alpha\\cos\\alpha - mA\\sin^2\\alpha = MA \\implies A(M + m\\sin^2\\alpha) = mg\\sin\\alpha\\cos\\alpha$.\n9. Solving for $A$: $A = \\frac{mg\\sin\\alpha\\cos\\alpha}{M + m\\sin^2\\alpha}$.",
+      "finalAnswer": "Option A: $\\frac{m g \\sin\\alpha \\cos\\alpha}{M + m \\sin^2\\alpha}$",
+      "whyOtherOptionsWrong": "Option B misses the $\\cos\\alpha$ and $\\sin^2\\alpha$ factors. Option C misses $\\sin\\alpha$. Option D is the holding acceleration."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Mixed-concept NEET-level problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-499",
+    "questionNumber": 499,
+    "question": "In the previous wedge-block problem, what is the acceleration of the block RELATIVE to the wedge ($a_r$)?",
+    "options": {
+      "A": "$\\frac{(M + m) g \\sin\\alpha}{M + m \\sin^2\\alpha}$",
+      "B": "$g \\sin\\alpha$",
+      "C": "$\\frac{M g \\sin\\alpha}{M + m \\sin^2\\alpha}$",
+      "D": "$\\frac{m g \\sin\\alpha}{M + m}$"
+    },
+    "optionsList": [
+      "$\\frac{(M + m) g \\sin\\alpha}{M + m \\sin^2\\alpha}$",
+      "$g \\sin\\alpha$",
+      "$\\frac{M g \\sin\\alpha}{M + m \\sin^2\\alpha}$",
+      "$\\frac{m g \\sin\\alpha}{M + m}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn the frame of the wedge, the forces parallel to the incline are the gravity component $mg\\sin\\alpha$ and the pseudo force component $mA\\cos\\alpha$, both pointing down the incline: $mg\\sin\\alpha + mA\\cos\\alpha = m a_r \\implies a_r = g\\sin\\alpha + A\\cos\\alpha$. Substituting $A = \\frac{mg\\sin\\alpha\\cos\\alpha}{M + m\\sin^2\\alpha}$ yields $a_r = g\\sin\\alpha \\left(1 + \\frac{m\\cos^2\\alpha}{M + m\\sin^2\\alpha}\\right) = \\frac{(M + m)g\\sin\\alpha}{M + m\\sin^2\\alpha}$.\n\n2. GIVEN:\nRelative acceleration down incline $a_r = g\\sin\\alpha + A\\cos\\alpha$.\n\n3. FORMULA / PRINCIPLE:\n$a_r = \\frac{(M + m) g \\sin\\alpha}{M + m \\sin^2\\alpha}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Parallel to the incline, the forces on the block in the wedge frame are:\n   - Downward gravity component: $mg\\sin\\alpha$.\n   - Downward component of horizontal pseudo force $mA$: $mA\\cos\\alpha$.\n2. Newton's second law along the incline: $mg\\sin\\alpha + mA\\cos\\alpha = m a_r \\implies a_r = g\\sin\\alpha + A\\cos\\alpha$.\n3. Substitute $A = \\frac{mg\\sin\\alpha\\cos\\alpha}{M + m\\sin^2\\alpha}$:\n   $a_r = g\\sin\\alpha + \\frac{mg\\sin\\alpha\\cos^2\\alpha}{M + m\\sin^2\\alpha} = g\\sin\\alpha \\left[\\frac{M + m\\sin^2\\alpha + m\\cos^2\\alpha}{M + m\\sin^2\\alpha}\\right]$.\n4. Since $\\sin^2\\alpha + \\cos^2\\alpha = 1$, the bracket simplifies to:\n   $\\frac{M + m}{M + m\\sin^2\\alpha}$.\n5. Therefore: $a_r = \\frac{(M + m) g \\sin\\alpha}{M + m \\sin^2\\alpha}$.\n\n5. FINAL ANSWER:\nOption A: $\\frac{(M + m) g \\sin\\alpha}{M + m \\sin^2\\alpha}$\n\n6. QUICK TIP:\nNotice: When $M \\to \\infty$ (fixed wedge), $a_r = \\frac{M g\\sin\\alpha}{M} = g\\sin\\alpha$, exactly reproducing a fixed incline!",
+    "solutionStructured": {
+      "concept": "In the frame of the wedge, the forces parallel to the incline are the gravity component $mg\\sin\\alpha$ and the pseudo force component $mA\\cos\\alpha$, both pointing down the incline: $mg\\sin\\alpha + mA\\cos\\alpha = m a_r \\implies a_r = g\\sin\\alpha + A\\cos\\alpha$. Substituting $A = \\frac{mg\\sin\\alpha\\cos\\alpha}{M + m\\sin^2\\alpha}$ yields $a_r = g\\sin\\alpha \\left(1 + \\frac{m\\cos^2\\alpha}{M + m\\sin^2\\alpha}\\right) = \\frac{(M + m)g\\sin\\alpha}{M + m\\sin^2\\alpha}$.",
+      "given": "Relative acceleration down incline $a_r = g\\sin\\alpha + A\\cos\\alpha$.",
+      "formula": "$a_r = \\frac{(M + m) g \\sin\\alpha}{M + m \\sin^2\\alpha}$.",
+      "stepByStep": "1. Parallel to the incline, the forces on the block in the wedge frame are:\n   - Downward gravity component: $mg\\sin\\alpha$.\n   - Downward component of horizontal pseudo force $mA$: $mA\\cos\\alpha$.\n2. Newton's second law along the incline: $mg\\sin\\alpha + mA\\cos\\alpha = m a_r \\implies a_r = g\\sin\\alpha + A\\cos\\alpha$.\n3. Substitute $A = \\frac{mg\\sin\\alpha\\cos\\alpha}{M + m\\sin^2\\alpha}$:\n   $a_r = g\\sin\\alpha + \\frac{mg\\sin\\alpha\\cos^2\\alpha}{M + m\\sin^2\\alpha} = g\\sin\\alpha \\left[\\frac{M + m\\sin^2\\alpha + m\\cos^2\\alpha}{M + m\\sin^2\\alpha}\\right]$.\n4. Since $\\sin^2\\alpha + \\cos^2\\alpha = 1$, the bracket simplifies to:\n   $\\frac{M + m}{M + m\\sin^2\\alpha}$.\n5. Therefore: $a_r = \\frac{(M + m) g \\sin\\alpha}{M + m \\sin^2\\alpha}$.",
+      "finalAnswer": "Option A: $\\frac{(M + m) g \\sin\\alpha}{M + m \\sin^2\\alpha}$",
+      "whyOtherOptionsWrong": "Option B ($g\\sin\\alpha$) is only valid for a fixed wedge ($M = \\infty$). Option C is missing $m$ in numerator. Option D has wrong denominator."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Mixed-concept NEET-level problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  },
+  {
+    "id": "lom-mcq-500",
+    "questionNumber": 500,
+    "question": "A block of mass $m$ is placed on a smooth table and connected by a light spring of constant $k$ to a wall. An identical block of mass $m$ is placed on top of it. The coefficient of static friction between the two blocks is $\\mu_s$. What is the maximum amplitude of simple harmonic oscillation $A_{\\text{max}}$ such that the top block does not slip on the bottom block?",
+    "options": {
+      "A": "$\\frac{2 \\mu_s m g}{k}$",
+      "B": "$\\frac{\\mu_s m g}{k}$",
+      "C": "$\\frac{\\mu_s m g}{2k}$",
+      "D": "$\\frac{4 \\mu_s m g}{k}$"
+    },
+    "optionsList": [
+      "$\\frac{2 \\mu_s m g}{k}$",
+      "$\\frac{\\mu_s m g}{k}$",
+      "$\\frac{\\mu_s m g}{2k}$",
+      "$\\frac{4 \\mu_s m g}{k}$"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor the two-block system of total mass $2m$, the angular frequency of SHM is $\\omega = \\sqrt{\\frac{k}{2m}}$. The maximum acceleration during SHM occurs at the extreme positions: $a_{\\text{max}} = \\omega^2 A = \\frac{k}{2m} A$. For the top block of mass $m$, the maximum force accelerating it is static friction, which cannot exceed $f_{\\text{lim}} = \\mu_s mg$. Therefore, $m a_{\\text{max}} \\le \\mu_s mg \\implies a_{\\text{max}} \\le \\mu_s g$. Setting $\\frac{k}{2m} A \\le \\mu_s g$ yields $A_{\\text{max}} = \\frac{2 \\mu_s m g}{k}$.\n\n2. GIVEN:\nTwo blocks of mass $m$ each, spring constant $k$, static friction $\\mu_s$.\n\n3. FORMULA / PRINCIPLE:\n$\\omega^2 = \\frac{k}{2m}$; $a_{\\text{max}} = \\omega^2 A \\le \\mu_s g \\implies A_{\\text{max}} = \\frac{2 \\mu_s m g}{k}$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Total oscillating mass of the combined two-block system is $M = m + m = 2m$.\n2. The angular frequency of oscillation is $\\omega = \\sqrt{\\frac{k}{2m}}$, so $\\omega^2 = \\frac{k}{2m}$.\n3. The maximum acceleration of the system occurs at the amplitude extremes: $a_{\\text{max}} = \\omega^2 A = \\frac{k}{2m} A$.\n4. The upper block of mass $m$ is accelerated purely by the static friction between the blocks: $f = m a$.\n5. The maximum static friction available to hold the top block is $f_{\\text{lim}} = \\mu_s N = \\mu_s mg$.\n6. To prevent slipping at the extreme displacement: $m a_{\\text{max}} \\le f_{\\text{lim}} \\implies m \\left(\\frac{k}{2m} A\\right) \\le \\mu_s mg$.\n7. Simplifying: $\\frac{k}{2} A \\le \\mu_s mg \\implies A \\le \\frac{2 \\mu_s mg}{k}$.\n8. Therefore, the maximum amplitude without slipping is $A_{\\text{max}} = \\frac{2 \\mu_s m g}{k}$.\n\n5. FINAL ANSWER:\nOption A: $\\frac{2 \\mu_s m g}{k}$\n\n6. QUICK TIP:\nSHM + Friction Master Question: $A_{\\text{max}} = \\frac{\\mu_s g}{\\omega^2} = \\frac{\\mu_s g}{k/(2m)} = \\frac{2\\mu_s mg}{k}$! High yield NEET synthesis question.",
+    "solutionStructured": {
+      "concept": "For the two-block system of total mass $2m$, the angular frequency of SHM is $\\omega = \\sqrt{\\frac{k}{2m}}$. The maximum acceleration during SHM occurs at the extreme positions: $a_{\\text{max}} = \\omega^2 A = \\frac{k}{2m} A$. For the top block of mass $m$, the maximum force accelerating it is static friction, which cannot exceed $f_{\\text{lim}} = \\mu_s mg$. Therefore, $m a_{\\text{max}} \\le \\mu_s mg \\implies a_{\\text{max}} \\le \\mu_s g$. Setting $\\frac{k}{2m} A \\le \\mu_s g$ yields $A_{\\text{max}} = \\frac{2 \\mu_s m g}{k}$.",
+      "given": "Two blocks of mass $m$ each, spring constant $k$, static friction $\\mu_s$.",
+      "formula": "$\\omega^2 = \\frac{k}{2m}$; $a_{\\text{max}} = \\omega^2 A \\le \\mu_s g \\implies A_{\\text{max}} = \\frac{2 \\mu_s m g}{k}$.",
+      "stepByStep": "1. Total oscillating mass of the combined two-block system is $M = m + m = 2m$.\n2. The angular frequency of oscillation is $\\omega = \\sqrt{\\frac{k}{2m}}$, so $\\omega^2 = \\frac{k}{2m}$.\n3. The maximum acceleration of the system occurs at the amplitude extremes: $a_{\\text{max}} = \\omega^2 A = \\frac{k}{2m} A$.\n4. The upper block of mass $m$ is accelerated purely by the static friction between the blocks: $f = m a$.\n5. The maximum static friction available to hold the top block is $f_{\\text{lim}} = \\mu_s N = \\mu_s mg$.\n6. To prevent slipping at the extreme displacement: $m a_{\\text{max}} \\le f_{\\text{lim}} \\implies m \\left(\\frac{k}{2m} A\\right) \\le \\mu_s mg$.\n7. Simplifying: $\\frac{k}{2} A \\le \\mu_s mg \\implies A \\le \\frac{2 \\mu_s mg}{k}$.\n8. Therefore, the maximum amplitude without slipping is $A_{\\text{max}} = \\frac{2 \\mu_s m g}{k}$.",
+      "finalAnswer": "Option A: $\\frac{2 \\mu_s m g}{k}$",
+      "whyOtherOptionsWrong": "Option B ($\\frac{\\mu_s mg}{k}$) uses single mass $m$ instead of $2m$. Option C divides by 2 instead of multiplying. Option D multiplies by 4."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Laws of Motion",
+    "chapterId": "laws-of-motion",
+    "topic": "Mixed-concept NEET-level problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false
+  }
+];

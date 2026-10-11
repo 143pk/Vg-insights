@@ -17,6 +17,7 @@ export function renderSidebar(currentPath: string = '#home'): string {
       title: 'LEARN',
       items: [
         { label: 'Start Here', path: '#start-here', icon: '🌱', badge: 'Beginner', badgeColor: 'bg-emerald-500 text-white' },
+        { label: 'Chapterwise MCQs', path: '#chapterwise-mcqs', icon: '📚' },
         { label: 'Physics', path: '#subject/physics', icon: '⚛️' },
         { label: 'Chemistry', path: '#subject/chemistry', icon: '🧪' },
         { label: 'Biology', path: '#subject/biology', icon: '🧬' },

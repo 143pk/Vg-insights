@@ -36,6 +36,7 @@ import { renderWeakTopicPracticeView, renderBookmarkedQuestionsView } from './co
 import { renderPYQsView, attachPYQsEvents } from './components/pyqsViewComponent';
 import { renderRevisionView } from './components/revisionViewComponent';
 import { renderChaptersDirectoryView } from './components/chaptersDirectoryComponent';
+import { renderChapterwiseMcqsView, attachChapterwiseMcqsEvents } from './components/chapterwiseMcqsComponent';
 import { renderBeginnerRoadmapView } from './components/beginnerRoadmapComponent';
 import { renderAssessmentFailureLearnReview, attachAssessmentLearnReviewEvents, MissedQuestionDetail } from './components/assessmentLearnReviewComponent';
 import { LearningRoadmapService, ROADMAP_STEPS } from './data/learningRoadmapData';
@@ -479,21 +480,28 @@ class App {
         this.attachWeeklyMockLandingEvents();
         break;
 
-      case 'weekly-mock-instructions':
-        appContent.innerHTML = renderWeeklyMockInstructions(routeState.mockId!);
-        this.attachWeeklyMockInstructionsEvents(routeState.mockId!);
+      case 'weekly-mock-instructions': {
+        const instrMockId = routeState.mockId || WeeklyMockService.getOrCreateCurrentWeeklyMock().id;
+        appContent.innerHTML = renderWeeklyMockInstructions(instrMockId);
+        this.attachWeeklyMockInstructionsEvents(instrMockId);
         break;
+      }
 
-      case 'weekly-mock-test':
-        appContent.innerHTML = renderWeeklyMockTestView(routeState.mockId!);
-        this.attachWeeklyMockTestEvents(routeState.mockId!);
+      case 'weekly-mock-test': {
+        const activeState = WeeklyMockService.getState();
+        const testMockId = routeState.mockId || activeState.activeAttempt?.mockId || WeeklyMockService.getOrCreateCurrentWeeklyMock().id;
+        appContent.innerHTML = renderWeeklyMockTestView(testMockId);
+        this.attachWeeklyMockTestEvents(testMockId);
         this.startMockTimer();
         break;
+      }
 
-      case 'weekly-mock-result':
-        appContent.innerHTML = renderWeeklyMockResults(routeState.mockId!, routeState.subFilter || 'all');
-        this.attachWeeklyMockResultEvents(routeState.mockId!);
+      case 'weekly-mock-result': {
+        const resMockId = routeState.mockId || WeeklyMockService.getState().history[0]?.mockId || '';
+        appContent.innerHTML = renderWeeklyMockResults(resMockId, routeState.subFilter || 'all');
+        this.attachWeeklyMockResultEvents(resMockId);
         break;
+      }
 
       case 'chapter-tests':
         appContent.innerHTML = renderChapterTestsView(routeState.subFilter || 'all');
@@ -551,6 +559,11 @@ class App {
 
       case 'chapters':
         appContent.innerHTML = renderChaptersDirectoryView();
+        break;
+
+      case 'chapterwise-mcqs':
+        appContent.innerHTML = renderChapterwiseMcqsView(routeState);
+        attachChapterwiseMcqsEvents();
         break;
 
       case 'my-progress':

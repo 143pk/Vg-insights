@@ -1,0 +1,779 @@
+[
+  {
+    "id": "msl-mcq-022",
+    "questionNumber": 22,
+    "question": "The numerical ratio of displacement to distance for a moving particle is always:",
+    "options": {
+      "A": "Always equal to 1",
+      "B": "Always greater than 1",
+      "C": "Equal to or less than 1",
+      "D": "Equal to or greater than 1"
+    },
+    "optionsList": [
+      "Always equal to 1",
+      "Always greater than 1",
+      "Equal to or less than 1",
+      "Equal to or greater than 1"
+    ],
+    "correctAnswer": "C",
+    "correctIndex": 2,
+    "explanation": "1. CONCEPT:\nDistance is the total length of the actual path traversed, whereas displacement is the shortest straight-line distance between initial and final points. Hence, |Displacement| \u2264 Distance.\n\n2. GIVEN:\nRatio: |Displacement| / Distance.\n\n3. FORMULA / PRINCIPLE:\n|Displacement| \u2264 Distance => |Displacement| / Distance \u2264 1.\n\n4. STEP-BY-STEP SOLUTION:\n1. Distance is the actual path traversed, which is always positive and accumulates monotonically.\n2. Displacement is the straight-line vector between initial and final positions.\n3. The straight line is the shortest possible path between two points.\n4. Therefore, |Displacement| \u2264 Distance.\n5. The ratio |Displacement| / Distance is equal to 1 only for unidirectional straight-line motion without reversal, and less than 1 in all other cases.\n6. Hence, the ratio is always equal to or less than 1.\n\n5. FINAL ANSWER:\nOption C: Equal to or less than 1\n\n6. QUICK TIP:\nGolden rule: Distance \u2265 |Displacement|. Ratio (Displacement/Distance) \u2264 1, whereas (Distance/Displacement) \u2265 1.",
+    "solutionStructured": {
+      "concept": "Distance is the total length of the actual path traversed, whereas displacement is the shortest straight-line distance between initial and final points. Hence, |Displacement| \u2264 Distance.",
+      "given": "Ratio: |Displacement| / Distance.",
+      "formula": "|Displacement| \u2264 Distance => |Displacement| / Distance \u2264 1.",
+      "stepByStep": "1. Distance is the actual path traversed, which is always positive and accumulates monotonically.\n2. Displacement is the straight-line vector between initial and final positions.\n3. The straight line is the shortest possible path between two points.\n4. Therefore, |Displacement| \u2264 Distance.\n5. The ratio |Displacement| / Distance is equal to 1 only for unidirectional straight-line motion without reversal, and less than 1 in all other cases.\n6. Hence, the ratio is always equal to or less than 1.",
+      "finalAnswer": "Option C: Equal to or less than 1",
+      "whyOtherOptionsWrong": "Option A holds only for unidirectional motion without turning. Option B is physically impossible because shortest distance is displacement. Option D inverts the inequality."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Distance and displacement",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-023",
+    "questionNumber": 23,
+    "question": "An athlete completes one round of a circular track of radius R in 40 seconds. What will be the magnitude of his displacement at the end of 2 minutes 20 seconds?",
+    "options": {
+      "A": "Zero",
+      "B": "2R",
+      "C": "2\u03c0R",
+      "D": "7\u03c0R"
+    },
+    "optionsList": [
+      "Zero",
+      "2R",
+      "2\u03c0R",
+      "7\u03c0R"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nFor circular motion, displacement depends strictly on the initial and final positions on the circle.\n\n2. GIVEN:\nRadius R, period T = 40 s, total time t = 2 min 20 s = 140 s.\n\n3. FORMULA / PRINCIPLE:\nNumber of rounds n = t / T.\n\n4. STEP-BY-STEP SOLUTION:\n1. Convert total time to seconds: t = 2 * 60 + 20 = 140 s.\n2. Calculate number of rounds completed:\n   n = 140 / 40 = 3.5 rounds.\n3. After 3 complete rounds, the athlete returns to the initial starting point (displacement = 0).\n4. In the remaining 0.5 round (half a circle), the athlete reaches the diametrically opposite point.\n5. The straight-line distance between diametrically opposite points on a circle of radius R is its diameter: 2R.\n6. Therefore, the magnitude of displacement is 2R.\n\n5. FINAL ANSWER:\nOption B: 2R\n\n6. QUICK TIP:\nNEET Classic: Half a round on a circle always produces a displacement equal to the diameter (2R), while the distance is \u03c0R.",
+    "solutionStructured": {
+      "concept": "For circular motion, displacement depends strictly on the initial and final positions on the circle.",
+      "given": "Radius R, period T = 40 s, total time t = 2 min 20 s = 140 s.",
+      "formula": "Number of rounds n = t / T.",
+      "stepByStep": "1. Convert total time to seconds: t = 2 * 60 + 20 = 140 s.\n2. Calculate number of rounds completed:\n   n = 140 / 40 = 3.5 rounds.\n3. After 3 complete rounds, the athlete returns to the initial starting point (displacement = 0).\n4. In the remaining 0.5 round (half a circle), the athlete reaches the diametrically opposite point.\n5. The straight-line distance between diametrically opposite points on a circle of radius R is its diameter: 2R.\n6. Therefore, the magnitude of displacement is 2R.",
+      "finalAnswer": "Option B: 2R",
+      "whyOtherOptionsWrong": "Option A would be the displacement after an integer number of rounds (e.g. 40 s, 80 s, 120 s). Option C is the distance of one round. Option D is the total distance (3.5 * 2\u03c0R = 7\u03c0R)."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Distance and displacement",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-024",
+    "questionNumber": 24,
+    "question": "A body moves 6 m towards East and then 8 m towards North. What is the total distance covered and the magnitude of the net displacement?",
+    "options": {
+      "A": "Distance = 14 m, Displacement = 10 m",
+      "B": "Distance = 10 m, Displacement = 14 m",
+      "C": "Distance = 14 m, Displacement = 2 m",
+      "D": "Distance = 10 m, Displacement = 10 m"
+    },
+    "optionsList": [
+      "Distance = 14 m, Displacement = 10 m",
+      "Distance = 10 m, Displacement = 14 m",
+      "Distance = 14 m, Displacement = 2 m",
+      "Distance = 10 m, Displacement = 10 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDistance is scalar sum of path segments: s = s\u2081 + s\u2082. Displacement is vector sum: s_net = \u221a(s\u2081\u00b2 + s\u2082\u00b2) for mutually perpendicular motions.\n\n2. GIVEN:\ns\u2081 = 6 m East, s\u2082 = 8 m North (angle \u03b8 = 90\u00b0).\n\n3. FORMULA / PRINCIPLE:\nDistance = s\u2081 + s\u2082; Displacement = \u221a(s\u2081\u00b2 + s\u2082\u00b2).\n\n4. STEP-BY-STEP SOLUTION:\n1. Total path length (distance) = 6 m + 8 m = 14 m.\n2. Since East and North are perpendicular:\n   Magnitude of displacement = \u221a(6\u00b2 + 8\u00b2) = \u221a(36 + 64) = \u221a100 = 10 m.\n3. Direction is tan\u207b\u00b9(8/6) = 53\u00b0 North of East.\n4. Hence, Distance = 14 m and Displacement = 10 m.\n\n5. FINAL ANSWER:\nOption A: Distance = 14 m, Displacement = 10 m\n\n6. QUICK TIP:\nRecognize the standard Pythagorean 3-4-5 triangle scaled by 2: 6, 8, 10!",
+    "solutionStructured": {
+      "concept": "Distance is scalar sum of path segments: s = s\u2081 + s\u2082. Displacement is vector sum: s_net = \u221a(s\u2081\u00b2 + s\u2082\u00b2) for mutually perpendicular motions.",
+      "given": "s\u2081 = 6 m East, s\u2082 = 8 m North (angle \u03b8 = 90\u00b0).",
+      "formula": "Distance = s\u2081 + s\u2082; Displacement = \u221a(s\u2081\u00b2 + s\u2082\u00b2).",
+      "stepByStep": "1. Total path length (distance) = 6 m + 8 m = 14 m.\n2. Since East and North are perpendicular:\n   Magnitude of displacement = \u221a(6\u00b2 + 8\u00b2) = \u221a(36 + 64) = \u221a100 = 10 m.\n3. Direction is tan\u207b\u00b9(8/6) = 53\u00b0 North of East.\n4. Hence, Distance = 14 m and Displacement = 10 m.",
+      "finalAnswer": "Option A: Distance = 14 m, Displacement = 10 m",
+      "whyOtherOptionsWrong": "Option B swaps distance and displacement. Option C subtracts 8 - 6 = 2 m for displacement. Option D claims distance equals displacement."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Distance and displacement",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-025",
+    "questionNumber": 25,
+    "question": "Which of the following physical statements regarding distance and displacement is FALSE?",
+    "options": {
+      "A": "Distance can never be negative, but displacement can be positive, negative, or zero.",
+      "B": "For a moving particle, distance can never decrease with time.",
+      "C": "A body can have zero displacement and non-zero distance.",
+      "D": "A body can have zero distance and non-zero displacement."
+    },
+    "optionsList": [
+      "Distance can never be negative, but displacement can be positive, negative, or zero.",
+      "For a moving particle, distance can never decrease with time.",
+      "A body can have zero displacement and non-zero distance.",
+      "A body can have zero distance and non-zero displacement."
+    ],
+    "correctAnswer": "D",
+    "correctIndex": 3,
+    "explanation": "1. CONCEPT:\nSince |Displacement| \u2264 Distance, if Distance = 0, the body has not moved at all, so Displacement must also be identically zero.\n\n2. GIVEN:\nComparison between distance and displacement.\n\n3. FORMULA / PRINCIPLE:\n|\u0394x| \u2264 Total Distance.\n\n4. STEP-BY-STEP SOLUTION:\n1. Statement A is TRUE: distance is scalar path length (always \u2265 0), while displacement is a vector and can be +, -, or 0.\n2. Statement B is TRUE: as time elapses, any motion adds to the odometer reading; distance never decreases.\n3. Statement C is TRUE: a round trip back to the origin has zero displacement but positive distance.\n4. Statement D is FALSE: if distance is zero, the particle remained strictly at rest, meaning its position never changed, so displacement is 0. Displacement can never be non-zero when distance is zero.\n5. Therefore, Statement D is the false statement.\n\n5. FINAL ANSWER:\nOption D: A body can have zero distance and non-zero displacement.\n\n6. QUICK TIP:\nIf distance = 0, the particle is strictly at rest: displacement is guaranteed to be 0.",
+    "solutionStructured": {
+      "concept": "Since |Displacement| \u2264 Distance, if Distance = 0, the body has not moved at all, so Displacement must also be identically zero.",
+      "given": "Comparison between distance and displacement.",
+      "formula": "|\u0394x| \u2264 Total Distance.",
+      "stepByStep": "1. Statement A is TRUE: distance is scalar path length (always \u2265 0), while displacement is a vector and can be +, -, or 0.\n2. Statement B is TRUE: as time elapses, any motion adds to the odometer reading; distance never decreases.\n3. Statement C is TRUE: a round trip back to the origin has zero displacement but positive distance.\n4. Statement D is FALSE: if distance is zero, the particle remained strictly at rest, meaning its position never changed, so displacement is 0. Displacement can never be non-zero when distance is zero.\n5. Therefore, Statement D is the false statement.",
+      "finalAnswer": "Option D: A body can have zero distance and non-zero displacement.",
+      "whyOtherOptionsWrong": "Options A, B, and C are physically correct statements, so they are not the requested false statement."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Distance and displacement",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-026",
+    "questionNumber": 26,
+    "question": "A car travels along a straight road from town A to town B, covering a distance of 60 km towards East. It then returns back along the same road to town A. What are the total distance covered and the net displacement of the car for the entire round trip?",
+    "options": {
+      "A": "Distance = 120 km, Displacement = 0 km",
+      "B": "Distance = 60 km, Displacement = 60 km East",
+      "C": "Distance = 120 km, Displacement = 120 km East",
+      "D": "Distance = 0 km, Displacement = 0 km"
+    },
+    "optionsList": [
+      "Distance = 120 km, Displacement = 0 km",
+      "Distance = 60 km, Displacement = 60 km East",
+      "Distance = 120 km, Displacement = 120 km East",
+      "Distance = 0 km, Displacement = 0 km"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn a complete round trip, the initial and final positions are identical, so displacement is zero, while total distance is the sum of both journeys.\n\n2. GIVEN:\nJourney A to B: 60 km East. Return journey B to A: 60 km West.\n\n3. FORMULA / PRINCIPLE:\nTotal Distance = d\u2081 + d\u2082; Net Displacement = x_final - x_initial.\n\n4. STEP-BY-STEP SOLUTION:\n1. Path length from A to B = 60 km.\n2. Path length from B to A = 60 km.\n3. Total distance = 60 km + 60 km = 120 km.\n4. Initial position is town A, and final position is town A.\n5. Net displacement = 0 km.\n6. Hence, Distance = 120 km, Displacement = 0 km.\n\n5. FINAL ANSWER:\nOption A: Distance = 120 km, Displacement = 0 km\n\n6. QUICK TIP:\nRound trip means initial position = final position => Net displacement = 0 always!",
+    "solutionStructured": {
+      "concept": "In a complete round trip, the initial and final positions are identical, so displacement is zero, while total distance is the sum of both journeys.",
+      "given": "Journey A to B: 60 km East. Return journey B to A: 60 km West.",
+      "formula": "Total Distance = d\u2081 + d\u2082; Net Displacement = x_final - x_initial.",
+      "stepByStep": "1. Path length from A to B = 60 km.\n2. Path length from B to A = 60 km.\n3. Total distance = 60 km + 60 km = 120 km.\n4. Initial position is town A, and final position is town A.\n5. Net displacement = 0 km.\n6. Hence, Distance = 120 km, Displacement = 0 km.",
+      "finalAnswer": "Option A: Distance = 120 km, Displacement = 0 km",
+      "whyOtherOptionsWrong": "Option B considers only one-way trip. Option C treats displacement as scalar addition. Option D claims the odometer did not roll."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Distance and displacement",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-027",
+    "questionNumber": 27,
+    "question": "A particle moves along a semicircular path of radius r from point P to point Q. What is the ratio of the distance traversed to the magnitude of displacement?",
+    "options": {
+      "A": "\u03c0 : 2",
+      "B": "2 : \u03c0",
+      "C": "\u03c0 : 1",
+      "D": "2\u03c0 : 1"
+    },
+    "optionsList": [
+      "\u03c0 : 2",
+      "2 : \u03c0",
+      "\u03c0 : 1",
+      "2\u03c0 : 1"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor a semicircle of radius r, path length is half the circumference (\u03c0r) and displacement magnitude is the diameter (2r).\n\n2. GIVEN:\nSemicircular path of radius r.\n\n3. FORMULA / PRINCIPLE:\nDistance = \u03c0r; |Displacement| = 2r.\n\n4. STEP-BY-STEP SOLUTION:\n1. The perimeter of a full circle is 2\u03c0r.\n2. The path length along the semicircle is: Distance = (1/2) * 2\u03c0r = \u03c0r.\n3. The straight-line separation between the two endpoints P and Q is the diameter: |Displacement| = 2r.\n4. Ratio = Distance / |Displacement| = (\u03c0r) / (2r) = \u03c0 / 2.\n5. Hence, the ratio is \u03c0 : 2.\n\n5. FINAL ANSWER:\nOption A: \u03c0 : 2\n\n6. QUICK TIP:\nFor semicircle: Distance = \u03c0r, Displacement = 2r. Ratio = \u03c0/2 \u2248 1.57.",
+    "solutionStructured": {
+      "concept": "For a semicircle of radius r, path length is half the circumference (\u03c0r) and displacement magnitude is the diameter (2r).",
+      "given": "Semicircular path of radius r.",
+      "formula": "Distance = \u03c0r; |Displacement| = 2r.",
+      "stepByStep": "1. The perimeter of a full circle is 2\u03c0r.\n2. The path length along the semicircle is: Distance = (1/2) * 2\u03c0r = \u03c0r.\n3. The straight-line separation between the two endpoints P and Q is the diameter: |Displacement| = 2r.\n4. Ratio = Distance / |Displacement| = (\u03c0r) / (2r) = \u03c0 / 2.\n5. Hence, the ratio is \u03c0 : 2.",
+      "finalAnswer": "Option A: \u03c0 : 2",
+      "whyOtherOptionsWrong": "Option B inverts the ratio (displacement to distance). Option C assumes displacement is r. Option D uses full circumference."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Distance and displacement",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-028",
+    "questionNumber": 28,
+    "question": "A wheel of radius R = 1 m is resting on a horizontal ground. The wheel rolls forward without slipping through half a revolution. What is the magnitude of the displacement of the point of the wheel initially in contact with the ground?",
+    "options": {
+      "A": "2 m",
+      "B": "\u03c0 m",
+      "C": "\u221a(\u03c0\u00b2 + 4) m",
+      "D": "\u221a(\u03c0\u00b2 + 1) m"
+    },
+    "optionsList": [
+      "2 m",
+      "\u03c0 m",
+      "\u221a(\u03c0\u00b2 + 4) m",
+      "\u221a(\u03c0\u00b2 + 1) m"
+    ],
+    "correctAnswer": "C",
+    "correctIndex": 2,
+    "explanation": "1. CONCEPT:\nWhen a wheel rolls forward through half a revolution without slipping, the point of contact undergoes both horizontal and vertical displacements.\n\n2. GIVEN:\nRadius R = 1 m; rolls through half a revolution (180\u00b0).\n\n3. FORMULA / PRINCIPLE:\n\u0394x = \u03c0R (horizontal); \u0394y = 2R (vertical); Displacement = \u221a(\u0394x\u00b2 + \u0394y\u00b2).\n\n4. STEP-BY-STEP SOLUTION:\n1. In half a revolution, the wheel rolls forward horizontally by half its circumference: \u0394x = \u03c0R.\n2. The point initially at the bottom moves to the top of the wheel, so its vertical displacement is the diameter: \u0394y = 2R.\n3. The net displacement vector is \u0394r = (\u03c0R) i\u0302 + (2R) j\u0302.\n4. Magnitude: |\u0394r| = \u221a((\u03c0R)\u00b2 + (2R)\u00b2) = R \u221a(\u03c0\u00b2 + 4).\n5. For R = 1 m, |\u0394r| = \u221a(\u03c0\u00b2 + 4) m \u2248 \u221a(9.87 + 4) = \u221a13.87 \u2248 3.72 m.\n\n5. FINAL ANSWER:\nOption C: \u221a(\u03c0\u00b2 + 4) m\n\n6. QUICK TIP:\nClassic NEET rolling question: In half rotation, horizontal shift is \u03c0R, vertical shift is 2R => Displacement = R\u221a(\u03c0\u00b2 + 4).",
+    "solutionStructured": {
+      "concept": "When a wheel rolls forward through half a revolution without slipping, the point of contact undergoes both horizontal and vertical displacements.",
+      "given": "Radius R = 1 m; rolls through half a revolution (180\u00b0).",
+      "formula": "\u0394x = \u03c0R (horizontal); \u0394y = 2R (vertical); Displacement = \u221a(\u0394x\u00b2 + \u0394y\u00b2).",
+      "stepByStep": "1. In half a revolution, the wheel rolls forward horizontally by half its circumference: \u0394x = \u03c0R.\n2. The point initially at the bottom moves to the top of the wheel, so its vertical displacement is the diameter: \u0394y = 2R.\n3. The net displacement vector is \u0394r = (\u03c0R) i\u0302 + (2R) j\u0302.\n4. Magnitude: |\u0394r| = \u221a((\u03c0R)\u00b2 + (2R)\u00b2) = R \u221a(\u03c0\u00b2 + 4).\n5. For R = 1 m, |\u0394r| = \u221a(\u03c0\u00b2 + 4) m \u2248 \u221a(9.87 + 4) = \u221a13.87 \u2248 3.72 m.",
+      "finalAnswer": "Option C: \u221a(\u03c0\u00b2 + 4) m",
+      "whyOtherOptionsWrong": "Option A only considers vertical shift (2R). Option B only considers horizontal shift (\u03c0R). Option D uses R instead of 2R for the vertical rise."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Distance and displacement",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-029",
+    "questionNumber": 29,
+    "question": "A particle moves along a straight line with its position defined by x(t) = t\u00b2 - 6t + 8 (in meters). What is the total distance covered by the particle in the time interval from t = 0 to t = 5 s?",
+    "options": {
+      "A": "5 m",
+      "B": "13 m",
+      "C": "9 m",
+      "D": "17 m"
+    },
+    "optionsList": [
+      "5 m",
+      "13 m",
+      "9 m",
+      "17 m"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nTo find total distance when velocity reverses sign, break the interval at the turning point t_turn where v = 0.\n\n2. GIVEN:\nx(t) = t\u00b2 - 6t + 8, interval [0, 5] s.\n\n3. FORMULA / PRINCIPLE:\nv = dx/dt = 2t - 6; turning point at v = 0 => t = 3 s.\n\n4. STEP-BY-STEP SOLUTION:\n1. Find turning point: v(t) = 2t - 6 = 0 => t = 3 s.\n   Since 3 s lies in [0, 5] s, the particle reverses direction at t = 3 s.\n2. Evaluate positions:\n   x(0) = 0 - 0 + 8 = +8 m.\n   x(3) = 3\u00b2 - 6(3) + 8 = 9 - 18 + 8 = -1 m.\n   x(5) = 5\u00b2 - 6(5) + 8 = 25 - 30 + 8 = +3 m.\n3. Distance traveled from t = 0 to t = 3 s:\n   d\u2081 = |x(3) - x(0)| = |-1 - 8| = |-9| = 9 m.\n4. Distance traveled from t = 3 to t = 5 s:\n   d\u2082 = |x(5) - x(3)| = |3 - (-1)| = |4| = 4 m.\n5. Total distance = d\u2081 + d\u2082 = 9 m + 4 m = 13 m.\n6. (Note: Displacement is x(5) - x(0) = 3 - 8 = -5 m, with magnitude 5 m).\n\n5. FINAL ANSWER:\nOption B: 13 m\n\n6. QUICK TIP:\nNever just do x(final) - x(initial) for distance! That gives displacement (-5 m). Always break at the turning point: 9 + 4 = 13 m.",
+    "solutionStructured": {
+      "concept": "To find total distance when velocity reverses sign, break the interval at the turning point t_turn where v = 0.",
+      "given": "x(t) = t\u00b2 - 6t + 8, interval [0, 5] s.",
+      "formula": "v = dx/dt = 2t - 6; turning point at v = 0 => t = 3 s.",
+      "stepByStep": "1. Find turning point: v(t) = 2t - 6 = 0 => t = 3 s.\n   Since 3 s lies in [0, 5] s, the particle reverses direction at t = 3 s.\n2. Evaluate positions:\n   x(0) = 0 - 0 + 8 = +8 m.\n   x(3) = 3\u00b2 - 6(3) + 8 = 9 - 18 + 8 = -1 m.\n   x(5) = 5\u00b2 - 6(5) + 8 = 25 - 30 + 8 = +3 m.\n3. Distance traveled from t = 0 to t = 3 s:\n   d\u2081 = |x(3) - x(0)| = |-1 - 8| = |-9| = 9 m.\n4. Distance traveled from t = 3 to t = 5 s:\n   d\u2082 = |x(5) - x(3)| = |3 - (-1)| = |4| = 4 m.\n5. Total distance = d\u2081 + d\u2082 = 9 m + 4 m = 13 m.\n6. (Note: Displacement is x(5) - x(0) = 3 - 8 = -5 m, with magnitude 5 m).",
+      "finalAnswer": "Option B: 13 m",
+      "whyOtherOptionsWrong": "Option A is the magnitude of displacement (|-5| = 5 m). Option C is only the first segment (9 m). Option D overcalculates."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Distance and displacement",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-030",
+    "questionNumber": 30,
+    "question": "A body starts from the origin and undergoes three successive displacements: d\u2081 = 4 m along East, d\u2082 = 3 m along North, and d\u2083 = 12 m vertically upwards. What is the magnitude of the net displacement of the body?",
+    "options": {
+      "A": "19 m",
+      "B": "13 m",
+      "C": "5 m",
+      "D": "12 m"
+    },
+    "optionsList": [
+      "19 m",
+      "13 m",
+      "5 m",
+      "12 m"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nFor three mutually perpendicular displacements along x, y, and z axes: d_net = \u221a(dx\u00b2 + dy\u00b2 + dz\u00b2).\n\n2. GIVEN:\ndx = 4 m (East), dy = 3 m (North), dz = 12 m (Upwards).\n\n3. FORMULA / PRINCIPLE:\nd_net = \u221a(dx\u00b2 + dy\u00b2 + dz\u00b2)\n\n4. STEP-BY-STEP SOLUTION:\n1. Net horizontal displacement on the ground = \u221a(dx\u00b2 + dy\u00b2) = \u221a(4\u00b2 + 3\u00b2) = \u221a25 = 5 m.\n2. Now combine with the vertical displacement dz = 12 m:\n   d_net = \u221a(5\u00b2 + 12\u00b2) = \u221a(25 + 144) = \u221a169 = 13 m.\n3. Therefore, the magnitude of the net displacement is 13 m.\n4. Total distance covered would be 4 + 3 + 12 = 19 m.\n\n5. FINAL ANSWER:\nOption B: 13 m\n\n6. QUICK TIP:\nUse the two-step Pythagorean triples: (3, 4 -> 5) and then (5, 12 -> 13)!",
+    "solutionStructured": {
+      "concept": "For three mutually perpendicular displacements along x, y, and z axes: d_net = \u221a(dx\u00b2 + dy\u00b2 + dz\u00b2).",
+      "given": "dx = 4 m (East), dy = 3 m (North), dz = 12 m (Upwards).",
+      "formula": "d_net = \u221a(dx\u00b2 + dy\u00b2 + dz\u00b2)",
+      "stepByStep": "1. Net horizontal displacement on the ground = \u221a(dx\u00b2 + dy\u00b2) = \u221a(4\u00b2 + 3\u00b2) = \u221a25 = 5 m.\n2. Now combine with the vertical displacement dz = 12 m:\n   d_net = \u221a(5\u00b2 + 12\u00b2) = \u221a(25 + 144) = \u221a169 = 13 m.\n3. Therefore, the magnitude of the net displacement is 13 m.\n4. Total distance covered would be 4 + 3 + 12 = 19 m.",
+      "finalAnswer": "Option B: 13 m",
+      "whyOtherOptionsWrong": "Option A is the total scalar distance (4 + 3 + 12 = 19 m). Option C is only the horizontal displacement (5 m). Option D is only the vertical displacement."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Distance and displacement",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-031",
+    "questionNumber": 31,
+    "question": "An airplane flies 400 m North, then 300 m West, and then flies straight back to its starting base. The magnitude of displacement of the airplane after completing the entire flight is:",
+    "options": {
+      "A": "700 m",
+      "B": "500 m",
+      "C": "0 m",
+      "D": "1200 m"
+    },
+    "optionsList": [
+      "700 m",
+      "500 m",
+      "0 m",
+      "1200 m"
+    ],
+    "correctAnswer": "C",
+    "correctIndex": 2,
+    "explanation": "1. CONCEPT:\nDisplacement is the vector from initial point to final point. If the final point coincides with the initial starting base, net displacement is identically zero.\n\n2. GIVEN:\nInitial position: starting base. Final position: starting base.\n\n3. FORMULA / PRINCIPLE:\n\u0394r = r_final - r_initial = 0\n\n4. STEP-BY-STEP SOLUTION:\n1. The airplane flies North 400 m, West 300 m (displacement from base is 500 m North-West).\n2. It then flies straight back to its starting base.\n3. The final position of the airplane is the starting base.\n4. Displacement = r_final - r_initial = 0 m.\n5. (Note: Total distance is 400 + 300 + 500 = 1200 m).\n\n5. FINAL ANSWER:\nOption C: 0 m\n\n6. QUICK TIP:\nAlways check whether the motion terminates at the starting point; any closed path has zero displacement.",
+    "solutionStructured": {
+      "concept": "Displacement is the vector from initial point to final point. If the final point coincides with the initial starting base, net displacement is identically zero.",
+      "given": "Initial position: starting base. Final position: starting base.",
+      "formula": "\u0394r = r_final - r_initial = 0",
+      "stepByStep": "1. The airplane flies North 400 m, West 300 m (displacement from base is 500 m North-West).\n2. It then flies straight back to its starting base.\n3. The final position of the airplane is the starting base.\n4. Displacement = r_final - r_initial = 0 m.\n5. (Note: Total distance is 400 + 300 + 500 = 1200 m).",
+      "finalAnswer": "Option C: 0 m",
+      "whyOtherOptionsWrong": "Option A adds 400 + 300. Option B is displacement before returning. Option D is the total distance traveled."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Distance and displacement",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-032",
+    "questionNumber": 32,
+    "question": "A particle moves along a circle of radius R. What is the magnitude of its displacement when it traverses an arc subtending an angle \u03b8 at the center?",
+    "options": {
+      "A": "2R sin(\u03b8/2)",
+      "B": "2R cos(\u03b8/2)",
+      "C": "R sin(\u03b8)",
+      "D": "R (1 - cos \u03b8)"
+    },
+    "optionsList": [
+      "2R sin(\u03b8/2)",
+      "2R cos(\u03b8/2)",
+      "R sin(\u03b8)",
+      "R (1 - cos \u03b8)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe chord length connecting two points on a circle of radius R separated by angle \u03b8 gives the magnitude of displacement: |\u0394r| = 2R sin(\u03b8/2).\n\n2. GIVEN:\nCircle of radius R, subtended central angle \u03b8.\n\n3. FORMULA / PRINCIPLE:\n|\u0394r| = \u221a(R\u00b2 + R\u00b2 - 2R\u00b2 cos \u03b8) = \u221a(2R\u00b2(1 - cos \u03b8)) = 2R sin(\u03b8/2).\n\n4. STEP-BY-STEP SOLUTION:\n1. Let initial position vector be r\u2081 and final position vector be r\u2082 with |r\u2081| = |r\u2082| = R.\n2. The angle between r\u2081 and r\u2082 is \u03b8.\n3. Displacement vector \u0394r = r\u2082 - r\u2081.\n4. Magnitude: |\u0394r| = \u221a(R\u00b2 + R\u00b2 - 2R\u00b2 cos \u03b8) = \u221a(2R\u00b2 (1 - cos \u03b8)).\n5. Use the trigonometric identity 1 - cos \u03b8 = 2 sin\u00b2(\u03b8/2):\n   |\u0394r| = \u221a(4R\u00b2 sin\u00b2(\u03b8/2)) = 2R sin(\u03b8/2).\n6. For example: if \u03b8 = 180\u00b0 (semicircle), |\u0394r| = 2R sin(90\u00b0) = 2R.\n\n5. FINAL ANSWER:\nOption A: 2R sin(\u03b8/2)\n\n6. QUICK TIP:\nUniversal NEET formula for displacement on circular path: |\u0394r| = 2R sin(\u03b8/2). For change in velocity: |\u0394v| = 2v sin(\u03b8/2).",
+    "solutionStructured": {
+      "concept": "The chord length connecting two points on a circle of radius R separated by angle \u03b8 gives the magnitude of displacement: |\u0394r| = 2R sin(\u03b8/2).",
+      "given": "Circle of radius R, subtended central angle \u03b8.",
+      "formula": "|\u0394r| = \u221a(R\u00b2 + R\u00b2 - 2R\u00b2 cos \u03b8) = \u221a(2R\u00b2(1 - cos \u03b8)) = 2R sin(\u03b8/2).",
+      "stepByStep": "1. Let initial position vector be r\u2081 and final position vector be r\u2082 with |r\u2081| = |r\u2082| = R.\n2. The angle between r\u2081 and r\u2082 is \u03b8.\n3. Displacement vector \u0394r = r\u2082 - r\u2081.\n4. Magnitude: |\u0394r| = \u221a(R\u00b2 + R\u00b2 - 2R\u00b2 cos \u03b8) = \u221a(2R\u00b2 (1 - cos \u03b8)).\n5. Use the trigonometric identity 1 - cos \u03b8 = 2 sin\u00b2(\u03b8/2):\n   |\u0394r| = \u221a(4R\u00b2 sin\u00b2(\u03b8/2)) = 2R sin(\u03b8/2).\n6. For example: if \u03b8 = 180\u00b0 (semicircle), |\u0394r| = 2R sin(90\u00b0) = 2R.",
+      "finalAnswer": "Option A: 2R sin(\u03b8/2)",
+      "whyOtherOptionsWrong": "Option B uses cos(\u03b8/2). Option C uses sin \u03b8. Option D is the sagitta (height of arc)."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Distance and displacement",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-033",
+    "questionNumber": 33,
+    "question": "Using the relation |\u0394r| = 2R sin(\u03b8/2), what is the magnitude of displacement of a particle moving on a circular path of radius R when it sweeps an angle of 60\u00b0 at the center?",
+    "options": {
+      "A": "R",
+      "B": "R\u221a3",
+      "C": "R/2",
+      "D": "2R"
+    },
+    "optionsList": [
+      "R",
+      "R\u221a3",
+      "R/2",
+      "2R"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor \u03b8 = 60\u00b0, the two radii and the chord form an equilateral triangle, meaning chord length equals R.\n\n2. GIVEN:\nRadius R, angle \u03b8 = 60\u00b0.\n\n3. FORMULA / PRINCIPLE:\n|\u0394r| = 2R sin(\u03b8/2)\n\n4. STEP-BY-STEP SOLUTION:\n1. Substitute \u03b8 = 60\u00b0 into the chord formula:\n   |\u0394r| = 2R sin(60\u00b0 / 2) = 2R sin(30\u00b0).\n2. Since sin(30\u00b0) = 1/2:\n   |\u0394r| = 2R * (1/2) = R.\n3. Geometrically, the two radii (length R) and the chord form an isosceles triangle with vertex angle 60\u00b0, so all three angles are 60\u00b0 (equilateral triangle).\n4. Hence, the chord length (displacement) is exactly R.\n\n5. FINAL ANSWER:\nOption A: R\n\n6. QUICK TIP:\nQuick memory aid for circle displacement: \u03b8 = 60\u00b0 -> R; \u03b8 = 90\u00b0 -> R\u221a2; \u03b8 = 120\u00b0 -> R\u221a3; \u03b8 = 180\u00b0 -> 2R.",
+    "solutionStructured": {
+      "concept": "For \u03b8 = 60\u00b0, the two radii and the chord form an equilateral triangle, meaning chord length equals R.",
+      "given": "Radius R, angle \u03b8 = 60\u00b0.",
+      "formula": "|\u0394r| = 2R sin(\u03b8/2)",
+      "stepByStep": "1. Substitute \u03b8 = 60\u00b0 into the chord formula:\n   |\u0394r| = 2R sin(60\u00b0 / 2) = 2R sin(30\u00b0).\n2. Since sin(30\u00b0) = 1/2:\n   |\u0394r| = 2R * (1/2) = R.\n3. Geometrically, the two radii (length R) and the chord form an isosceles triangle with vertex angle 60\u00b0, so all three angles are 60\u00b0 (equilateral triangle).\n4. Hence, the chord length (displacement) is exactly R.",
+      "finalAnswer": "Option A: R",
+      "whyOtherOptionsWrong": "Option B is for \u03b8 = 120\u00b0. Option C is half the radius. Option D is for \u03b8 = 180\u00b0 (diameter)."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Distance and displacement",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-034",
+    "questionNumber": 34,
+    "question": "A body moves along a circular path of radius R. When it sweeps an angle of 120\u00b0 at the center, what is the ratio of distance traveled to the magnitude of displacement?",
+    "options": {
+      "A": "2\u03c0 / (3\u221a3)",
+      "B": "\u03c0 / (3\u221a3)",
+      "C": "2\u03c0 / 3",
+      "D": "\u221a3 / (2\u03c0)"
+    },
+    "optionsList": [
+      "2\u03c0 / (3\u221a3)",
+      "\u03c0 / (3\u221a3)",
+      "2\u03c0 / 3",
+      "\u221a3 / (2\u03c0)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDistance along an arc is s = R\u03b8 (with \u03b8 in radians). Displacement magnitude is |\u0394r| = 2R sin(\u03b8/2).\n\n2. GIVEN:\nRadius R, central angle \u03b8 = 120\u00b0 = 2\u03c0/3 radians.\n\n3. FORMULA / PRINCIPLE:\nDistance = R\u03b8; Displacement = 2R sin(\u03b8/2).\n\n4. STEP-BY-STEP SOLUTION:\n1. Angle in radians: \u03b8 = 120\u00b0 * (\u03c0 / 180\u00b0) = 2\u03c0 / 3 radians.\n2. Distance along arc: s = R * (2\u03c0 / 3) = 2\u03c0R / 3.\n3. Displacement magnitude: |\u0394r| = 2R sin(120\u00b0 / 2) = 2R sin(60\u00b0) = 2R * (\u221a3 / 2) = R\u221a3.\n4. Ratio = Distance / Displacement = (2\u03c0R / 3) / (R\u221a3) = 2\u03c0 / (3\u221a3).\n5. Hence, the ratio is 2\u03c0 / (3\u221a3).\n\n5. FINAL ANSWER:\nOption A: 2\u03c0 / (3\u221a3)\n\n6. QUICK TIP:\nAlways express angle \u03b8 in radians when calculating arc length s = R\u03b8!",
+    "solutionStructured": {
+      "concept": "Distance along an arc is s = R\u03b8 (with \u03b8 in radians). Displacement magnitude is |\u0394r| = 2R sin(\u03b8/2).",
+      "given": "Radius R, central angle \u03b8 = 120\u00b0 = 2\u03c0/3 radians.",
+      "formula": "Distance = R\u03b8; Displacement = 2R sin(\u03b8/2).",
+      "stepByStep": "1. Angle in radians: \u03b8 = 120\u00b0 * (\u03c0 / 180\u00b0) = 2\u03c0 / 3 radians.\n2. Distance along arc: s = R * (2\u03c0 / 3) = 2\u03c0R / 3.\n3. Displacement magnitude: |\u0394r| = 2R sin(120\u00b0 / 2) = 2R sin(60\u00b0) = 2R * (\u221a3 / 2) = R\u221a3.\n4. Ratio = Distance / Displacement = (2\u03c0R / 3) / (R\u221a3) = 2\u03c0 / (3\u221a3).\n5. Hence, the ratio is 2\u03c0 / (3\u221a3).",
+      "finalAnswer": "Option A: 2\u03c0 / (3\u221a3)",
+      "whyOtherOptionsWrong": "Option B misses factor of 2. Option C omits \u221a3 in denominator. Option D inverts the ratio."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Distance and displacement",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-035",
+    "questionNumber": 35,
+    "question": "A particle moves from point A(1, 2, 3) to point B(4, 6, 15) in meters. What is the magnitude of the displacement vector of the particle?",
+    "options": {
+      "A": "13 m",
+      "B": "15 m",
+      "C": "11 m",
+      "D": "17 m"
+    },
+    "optionsList": [
+      "13 m",
+      "15 m",
+      "11 m",
+      "17 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDisplacement in Cartesian 3D coordinates: \u0394r = (x\u2082 - x\u2081)i\u0302 + (y\u2082 - y\u2081)j\u0302 + (z\u2082 - z\u2081)k\u0302.\n\n2. GIVEN:\nA(1, 2, 3) and B(4, 6, 15).\n\n3. FORMULA / PRINCIPLE:\n|\u0394r| = \u221a((x\u2082 - x\u2081)\u00b2 + (y\u2082 - y\u2081)\u00b2 + (z\u2082 - z\u2081)\u00b2)\n\n4. STEP-BY-STEP SOLUTION:\n1. \u0394x = 4 - 1 = 3 m.\n2. \u0394y = 6 - 2 = 4 m.\n3. \u0394z = 15 - 3 = 12 m.\n4. Magnitude: |\u0394r| = \u221a(3\u00b2 + 4\u00b2 + 12\u00b2) = \u221a(9 + 16 + 144) = \u221a169 = 13 m.\n5. Hence, the displacement magnitude is 13 m.\n\n5. FINAL ANSWER:\nOption A: 13 m\n\n6. QUICK TIP:\nClassic Pythagorean triple: \u221a(3\u00b2 + 4\u00b2 + 12\u00b2) = \u221a(5\u00b2 + 12\u00b2) = 13.",
+    "solutionStructured": {
+      "concept": "Displacement in Cartesian 3D coordinates: \u0394r = (x\u2082 - x\u2081)i\u0302 + (y\u2082 - y\u2081)j\u0302 + (z\u2082 - z\u2081)k\u0302.",
+      "given": "A(1, 2, 3) and B(4, 6, 15).",
+      "formula": "|\u0394r| = \u221a((x\u2082 - x\u2081)\u00b2 + (y\u2082 - y\u2081)\u00b2 + (z\u2082 - z\u2081)\u00b2)",
+      "stepByStep": "1. \u0394x = 4 - 1 = 3 m.\n2. \u0394y = 6 - 2 = 4 m.\n3. \u0394z = 15 - 3 = 12 m.\n4. Magnitude: |\u0394r| = \u221a(3\u00b2 + 4\u00b2 + 12\u00b2) = \u221a(9 + 16 + 144) = \u221a169 = 13 m.\n5. Hence, the displacement magnitude is 13 m.",
+      "finalAnswer": "Option A: 13 m",
+      "whyOtherOptionsWrong": "Option B adds components directly. Option C and D miscalculate \u221a169."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Distance and displacement",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-036",
+    "questionNumber": 36,
+    "question": "A drunkard takes 5 steps forward and 3 steps backward, each step being 1 meter long and taking 1 second. He continues this pattern until he falls into a pit located 13 meters away from his starting point. How long does he take to fall into the pit?",
+    "options": {
+      "A": "37 seconds",
+      "B": "52 seconds",
+      "C": "32 seconds",
+      "D": "40 seconds"
+    },
+    "optionsList": [
+      "37 seconds",
+      "52 seconds",
+      "32 seconds",
+      "40 seconds"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn step-cycle problems, the net progress per cycle applies only until the person is within one forward burst of the target.\n\n2. GIVEN:\nCycle: 5 steps forward (5 s) + 3 steps backward (3 s) = 8 steps (8 s). Net displacement per cycle = 5 - 3 = 2 m.\n\n3. FORMULA / PRINCIPLE:\nNet displacement per cycle = 2 m in 8 s; final forward burst reaches pit without taking backward steps.\n\n4. STEP-BY-STEP SOLUTION:\n1. Total distance to pit = 13 m.\n2. One cycle takes 8 s and achieves a net displacement of +2 m.\n3. Before the final forward burst of 5 m, the drunkard must reach at least 13 - 5 = 8 m.\n4. To achieve net displacement of 8 m:\n   Number of complete cycles = 8 m / (2 m/cycle) = 4 cycles.\n5. Time for 4 complete cycles = 4 * 8 s = 32 s.\n   Net position at t = 32 s is x = 4 * 2 m = 8 m.\n6. From x = 8 m, the drunkard takes his next 5 steps forward:\n   Position reaches 8 + 5 = 13 m!\n7. He falls directly into the pit at this moment and takes no backward steps!\n8. Time for these last 5 forward steps = 5 s.\n9. Total time = 32 s + 5 s = 37 seconds.\n\n5. FINAL ANSWER:\nOption A: 37 seconds\n\n6. QUICK TIP:\nCommon NEET trap: Do not simply divide 13 by 2 (giving 6.5 cycles = 52 s). Once he reaches 13 m on forward steps, he falls into the pit and does NOT step backward!",
+    "solutionStructured": {
+      "concept": "In step-cycle problems, the net progress per cycle applies only until the person is within one forward burst of the target.",
+      "given": "Cycle: 5 steps forward (5 s) + 3 steps backward (3 s) = 8 steps (8 s). Net displacement per cycle = 5 - 3 = 2 m.",
+      "formula": "Net displacement per cycle = 2 m in 8 s; final forward burst reaches pit without taking backward steps.",
+      "stepByStep": "1. Total distance to pit = 13 m.\n2. One cycle takes 8 s and achieves a net displacement of +2 m.\n3. Before the final forward burst of 5 m, the drunkard must reach at least 13 - 5 = 8 m.\n4. To achieve net displacement of 8 m:\n   Number of complete cycles = 8 m / (2 m/cycle) = 4 cycles.\n5. Time for 4 complete cycles = 4 * 8 s = 32 s.\n   Net position at t = 32 s is x = 4 * 2 m = 8 m.\n6. From x = 8 m, the drunkard takes his next 5 steps forward:\n   Position reaches 8 + 5 = 13 m!\n7. He falls directly into the pit at this moment and takes no backward steps!\n8. Time for these last 5 forward steps = 5 s.\n9. Total time = 32 s + 5 s = 37 seconds.",
+      "finalAnswer": "Option A: 37 seconds",
+      "whyOtherOptionsWrong": "Option B falls into the trap of using average rate (13 / 2 * 8 = 52 s). Option C is the time after 4 cycles (at 8 m). Option D miscalculates the final burst."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Distance and displacement",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-037",
+    "questionNumber": 37,
+    "question": "A clock has a second hand of length R = 6 cm. What is the magnitude of displacement of the tip of the second hand between the 15-second mark and the 45-second mark?",
+    "options": {
+      "A": "6 cm",
+      "B": "12 cm",
+      "C": "6\u221a2 cm",
+      "D": "6\u03c0 cm"
+    },
+    "optionsList": [
+      "6 cm",
+      "12 cm",
+      "6\u221a2 cm",
+      "6\u03c0 cm"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nOn a clock dial, the 15-second mark is at 3 o'clock (horizontal right) and the 45-second mark is at 9 o'clock (horizontal left). These two points are diametrically opposite.\n\n2. GIVEN:\nLength of second hand R = 6 cm; t\u2081 = 15 s, t\u2082 = 45 s.\n\n3. FORMULA / PRINCIPLE:\n|\u0394r| = 2R for diametrically opposite positions (\u03b8 = 180\u00b0).\n\n4. STEP-BY-STEP SOLUTION:\n1. At 15 s, the tip is at position vector r\u2081 = +R i\u0302 = +6 i\u0302 cm.\n2. At 45 s, the tip is at position vector r\u2082 = -R i\u0302 = -6 i\u0302 cm.\n3. Displacement vector \u0394r = r\u2082 - r\u2081 = -6 i\u0302 - (+6 i\u0302) = -12 i\u0302 cm.\n4. Magnitude of displacement = |-12 cm| = 12 cm.\n5. (Note: Distance traveled along the circular circumference is half the perimeter = \u03c0R = 6\u03c0 cm).\n\n5. FINAL ANSWER:\nOption B: 12 cm\n\n6. QUICK TIP:\n15 s to 45 s is exactly 30 s elapsed = half a circle = diametrically opposite => Displacement = 2R.",
+    "solutionStructured": {
+      "concept": "On a clock dial, the 15-second mark is at 3 o'clock (horizontal right) and the 45-second mark is at 9 o'clock (horizontal left). These two points are diametrically opposite.",
+      "given": "Length of second hand R = 6 cm; t\u2081 = 15 s, t\u2082 = 45 s.",
+      "formula": "|\u0394r| = 2R for diametrically opposite positions (\u03b8 = 180\u00b0).",
+      "stepByStep": "1. At 15 s, the tip is at position vector r\u2081 = +R i\u0302 = +6 i\u0302 cm.\n2. At 45 s, the tip is at position vector r\u2082 = -R i\u0302 = -6 i\u0302 cm.\n3. Displacement vector \u0394r = r\u2082 - r\u2081 = -6 i\u0302 - (+6 i\u0302) = -12 i\u0302 cm.\n4. Magnitude of displacement = |-12 cm| = 12 cm.\n5. (Note: Distance traveled along the circular circumference is half the perimeter = \u03c0R = 6\u03c0 cm).",
+      "finalAnswer": "Option B: 12 cm",
+      "whyOtherOptionsWrong": "Option A is the radius. Option C is for 15 s to 30 s (a 90\u00b0 turn, where |\u0394r| = R\u221a2). Option D is the distance traveled."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Distance and displacement",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-038",
+    "questionNumber": 38,
+    "question": "A particle moves along the x-axis according to the equation x(t) = 2t\u00b3 - 15t\u00b2 + 36t - 10 (in meters). Find the total distance traveled by the particle in the time interval from t = 0 to t = 4 s.",
+    "options": {
+      "A": "32 m",
+      "B": "34 m",
+      "C": "28 m",
+      "D": "22 m"
+    },
+    "optionsList": [
+      "22 m",
+      "38 m",
+      "26 m",
+      "18 m"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nFor a cubic trajectory, find all real roots of velocity v(t) = 0 in the interval, evaluate positions at all turning points, and sum the absolute increments.\n\n2. GIVEN:\nx(t) = 2t\u00b3 - 15t\u00b2 + 36t - 10, interval [0, 4] s.\n\n3. FORMULA / PRINCIPLE:\nv = dx/dt = 6t\u00b2 - 30t + 36 = 0\n\n4. STEP-BY-STEP SOLUTION:\n1. Find velocity:\n   v(t) = 6(t\u00b2 - 5t + 6) = 6(t - 2)(t - 3).\n2. Turning points occur at t = 2 s and t = 3 s. Both lie inside [0, 4] s!\n3. Evaluate positions at key times:\n   t = 0: x(0) = -10 m.\n   t = 2: x(2) = 2(8) - 15(4) + 36(2) - 10 = 16 - 60 + 72 - 10 = +18 m.\n   t = 3: x(3) = 2(27) - 15(9) + 36(3) - 10 = 54 - 135 + 108 - 10 = +17 m.\n   t = 4: x(4) = 2(64) - 15(16) + 36(4) - 10 = 128 - 240 + 144 - 10 = +22 m.\n4. Segment 1 (0 to 2 s): |x(2) - x(0)| = |18 - (-10)| = 28 m.\n5. Segment 2 (2 to 3 s): |x(3) - x(2)| = |17 - 18| = 1 m.\n6. Segment 3 (3 to 4 s): |x(4) - x(3)| = |22 - 17| = 5 m.\n7. Total distance = 28 + 1 + 5 = 34 m... wait, let's recalculate x(4) carefully:\n   2(64) = 128.\n   15(16) = 240.\n   36(4) = 144.\n   128 - 240 + 144 - 10 = 32 - 10 = +22 m.\n   Wait, 28 + 1 + 5 = 34 m? Wait, what about x(0) = -10, x(2) = 18 => 28 m. x(3) = 17 => 1 m. x(4) = 22 => 5 m. Sum = 34 m!\n   Let's check option B: 34 m. Let's make Option B: 34 m, Option A: 32 m, Option C: 28 m, Option D: 22 m.\n\n5. FINAL ANSWER:\nOption B: 34 m\n\n6. QUICK TIP:\nAlways evaluate x at every root of v = 0 in the interval and sum the absolute differences |x_{k+1} - x_k|.",
+    "solutionStructured": {
+      "concept": "For a cubic trajectory, find all real roots of velocity v(t) = 0 in the interval, evaluate positions at all turning points, and sum the absolute increments.",
+      "given": "x(t) = 2t\u00b3 - 15t\u00b2 + 36t - 10, interval [0, 4] s.",
+      "formula": "v = dx/dt = 6t\u00b2 - 30t + 36 = 0",
+      "stepByStep": "1. Find velocity:\n   v(t) = 6(t\u00b2 - 5t + 6) = 6(t - 2)(t - 3).\n2. Turning points occur at t = 2 s and t = 3 s. Both lie inside [0, 4] s!\n3. Evaluate positions at key times:\n   t = 0: x(0) = -10 m.\n   t = 2: x(2) = 2(8) - 15(4) + 36(2) - 10 = 16 - 60 + 72 - 10 = +18 m.\n   t = 3: x(3) = 2(27) - 15(9) + 36(3) - 10 = 54 - 135 + 108 - 10 = +17 m.\n   t = 4: x(4) = 2(64) - 15(16) + 36(4) - 10 = 128 - 240 + 144 - 10 = +22 m.\n4. Segment 1 (0 to 2 s): |x(2) - x(0)| = |18 - (-10)| = 28 m.\n5. Segment 2 (2 to 3 s): |x(3) - x(2)| = |17 - 18| = 1 m.\n6. Segment 3 (3 to 4 s): |x(4) - x(3)| = |22 - 17| = 5 m.\n7. Total distance = 28 + 1 + 5 = 34 m... wait, let's recalculate x(4) carefully:\n   2(64) = 128.\n   15(16) = 240.\n   36(4) = 144.\n   128 - 240 + 144 - 10 = 32 - 10 = +22 m.\n   Wait, 28 + 1 + 5 = 34 m? Wait, what about x(0) = -10, x(2) = 18 => 28 m. x(3) = 17 => 1 m. x(4) = 22 => 5 m. Sum = 34 m!\n   Let's check option B: 34 m. Let's make Option B: 34 m, Option A: 32 m, Option C: 28 m, Option D: 22 m.",
+      "finalAnswer": "Option B: 34 m",
+      "whyOtherOptionsWrong": "Option A is displacement x(4) - x(0) = 22 - (-10) = 32 m. Options C and D miss reversing segments."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Distance and displacement",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-039",
+    "questionNumber": 39,
+    "question": "A room has dimensions 10 m \u00d7 12 m \u00d7 14 m. A fly starts from one corner on the floor and flies to the diagonally opposite corner on the ceiling. What is the magnitude of the displacement of the fly?",
+    "options": {
+      "A": "36 m",
+      "B": "2\u221a110 m",
+      "C": "10\u221a2 m",
+      "D": "22 m"
+    },
+    "optionsList": [
+      "36 m",
+      "2\u221a110 m",
+      "10\u221a2 m",
+      "22 m"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nBody diagonal of a rectangular cuboid: d = \u221a(L\u00b2 + W\u00b2 + H\u00b2).\n\n2. GIVEN:\nL = 10 m, W = 12 m, H = 14 m.\n\n3. FORMULA / PRINCIPLE:\nd = \u221a(L\u00b2 + W\u00b2 + H\u00b2)\n\n4. STEP-BY-STEP SOLUTION:\n1. Choose the starting corner as the origin (0, 0, 0).\n2. The diagonally opposite corner has coordinates (10, 12, 14) in meters.\n3. Magnitude of displacement:\n   d = \u221a(10\u00b2 + 12\u00b2 + 14\u00b2) = \u221a(100 + 144 + 196) = \u221a440 m.\n4. Simplify \u221a440:\n   \u221a440 = \u221a(4 * 110) = 2\u221a110 m \u2248 2 * 10.488 = 20.98 m.\n5. Hence, the displacement is 2\u221a110 m.\n\n5. FINAL ANSWER:\nOption B: 2\u221a110 m\n\n6. QUICK TIP:\nThe shortest straight line between opposite corners of a cuboid is the space diagonal: \u221a(a\u00b2 + b\u00b2 + c\u00b2).",
+    "solutionStructured": {
+      "concept": "Body diagonal of a rectangular cuboid: d = \u221a(L\u00b2 + W\u00b2 + H\u00b2).",
+      "given": "L = 10 m, W = 12 m, H = 14 m.",
+      "formula": "d = \u221a(L\u00b2 + W\u00b2 + H\u00b2)",
+      "stepByStep": "1. Choose the starting corner as the origin (0, 0, 0).\n2. The diagonally opposite corner has coordinates (10, 12, 14) in meters.\n3. Magnitude of displacement:\n   d = \u221a(10\u00b2 + 12\u00b2 + 14\u00b2) = \u221a(100 + 144 + 196) = \u221a440 m.\n4. Simplify \u221a440:\n   \u221a440 = \u221a(4 * 110) = 2\u221a110 m \u2248 2 * 10.488 = 20.98 m.\n5. Hence, the displacement is 2\u221a110 m.",
+      "finalAnswer": "Option B: 2\u221a110 m",
+      "whyOtherOptionsWrong": "Option A is the perimeter sum L + W + H = 36 m (scalar sum). Option C is for square base. Option D is an approximation."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Distance and displacement",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-040",
+    "questionNumber": 40,
+    "question": "A particle moves along a path such that its position vector varies with time as r(t) = (3 cos t) i\u0302 + (3 sin t) j\u0302 + (4t) k\u0302 (in meters). What is the distance traveled by the particle in time interval t = 0 to t = 2\u03c0 seconds?",
+    "options": {
+      "A": "5\u03c0 m",
+      "B": "10\u03c0 m",
+      "C": "8\u03c0 m",
+      "D": "6\u03c0 m"
+    },
+    "optionsList": [
+      "5\u03c0 m",
+      "10\u03c0 m",
+      "8\u03c0 m",
+      "6\u03c0 m"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nFor helical motion, speed v = |dr/dt| is constant, and distance traveled is s = \u222b v dt.\n\n2. GIVEN:\nr(t) = 3 cos t i\u0302 + 3 sin t j\u0302 + 4t k\u0302, interval [0, 2\u03c0].\n\n3. FORMULA / PRINCIPLE:\nv(t) = dr/dt; Speed = |v| = \u221a(vx\u00b2 + vy\u00b2 + vz\u00b2); Distance = |v| * \u0394t.\n\n4. STEP-BY-STEP SOLUTION:\n1. Find velocity components:\n   vx = -3 sin t\n   vy = 3 cos t\n   vz = 4\n2. Compute speed:\n   |v| = \u221a((-3 sin t)\u00b2 + (3 cos t)\u00b2 + 4\u00b2) = \u221a(9(sin\u00b2 t + cos\u00b2 t) + 16) = \u221a(9 + 16) = \u221a25 = 5 m/s.\n3. Notice that speed is constant: |v| = 5 m/s at all times!\n4. Time interval \u0394t = 2\u03c0 - 0 = 2\u03c0 seconds.\n5. Total distance = speed * time = 5 m/s * 2\u03c0 s = 10\u03c0 m.\n6. (Note: Displacement is |r(2\u03c0) - r(0)| = |(3i\u0302 + 8\u03c0k\u0302) - (3i\u0302)| = 8\u03c0 m).\n\n5. FINAL ANSWER:\nOption B: 10\u03c0 m\n\n6. QUICK TIP:\nIn uniform helical motion, speed is constant = \u221a(v_circ\u00b2 + v_axial\u00b2) = \u221a(3\u00b2 + 4\u00b2) = 5 m/s.",
+    "solutionStructured": {
+      "concept": "For helical motion, speed v = |dr/dt| is constant, and distance traveled is s = \u222b v dt.",
+      "given": "r(t) = 3 cos t i\u0302 + 3 sin t j\u0302 + 4t k\u0302, interval [0, 2\u03c0].",
+      "formula": "v(t) = dr/dt; Speed = |v| = \u221a(vx\u00b2 + vy\u00b2 + vz\u00b2); Distance = |v| * \u0394t.",
+      "stepByStep": "1. Find velocity components:\n   vx = -3 sin t\n   vy = 3 cos t\n   vz = 4\n2. Compute speed:\n   |v| = \u221a((-3 sin t)\u00b2 + (3 cos t)\u00b2 + 4\u00b2) = \u221a(9(sin\u00b2 t + cos\u00b2 t) + 16) = \u221a(9 + 16) = \u221a25 = 5 m/s.\n3. Notice that speed is constant: |v| = 5 m/s at all times!\n4. Time interval \u0394t = 2\u03c0 - 0 = 2\u03c0 seconds.\n5. Total distance = speed * time = 5 m/s * 2\u03c0 s = 10\u03c0 m.\n6. (Note: Displacement is |r(2\u03c0) - r(0)| = |(3i\u0302 + 8\u03c0k\u0302) - (3i\u0302)| = 8\u03c0 m).",
+      "finalAnswer": "Option B: 10\u03c0 m",
+      "whyOtherOptionsWrong": "Option A uses \u0394t = \u03c0. Option C is the magnitude of displacement (8\u03c0 m). Option D considers only circular perimeter."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Distance and displacement",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-041",
+    "questionNumber": 41,
+    "question": "A particle moves along the x-axis. Its velocity is given by v(t) = 6 - 2t (in m/s). If it starts from x = 0 at t = 0, what is the ratio of total distance covered to the magnitude of displacement in the interval from t = 0 to t = 5 s?",
+    "options": {
+      "A": "13 / 5",
+      "B": "9 / 5",
+      "C": "5 / 13",
+      "D": "1"
+    },
+    "optionsList": [
+      "13 / 5",
+      "9 / 5",
+      "5 / 13",
+      "1"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDistance = \u222b |v(t)| dt, while displacement = \u222b v(t) dt. Ratio = Distance / |Displacement|.\n\n2. GIVEN:\nv(t) = 6 - 2t, interval [0, 5] s, x(0) = 0.\n\n3. FORMULA / PRINCIPLE:\nTurning point at v = 0 => t = 3 s.\n\n4. STEP-BY-STEP SOLUTION:\n1. Velocity is zero at: 6 - 2t = 0 => t = 3 s.\n2. Position function: x(t) = \u222b (6 - 2t) dt = 6t - t\u00b2 (since x(0) = 0).\n3. Positions at key times:\n   x(0) = 0 m.\n   x(3) = 6(3) - 3\u00b2 = 18 - 9 = +9 m.\n   x(5) = 6(5) - 5\u00b2 = 30 - 25 = +5 m.\n4. Distance from 0 to 3 s: |x(3) - x(0)| = 9 m (moving forward).\n5. Distance from 3 to 5 s: |x(5) - x(3)| = |5 - 9| = 4 m (moving backward).\n6. Total distance = 9 + 4 = 13 m.\n7. Net displacement = x(5) - x(0) = +5 m - 0 = +5 m.\n8. Ratio = Distance / |Displacement| = 13 / 5 = 2.6.\n\n5. FINAL ANSWER:\nOption A: 13 / 5\n\n6. QUICK TIP:\nWhenever motion reverses, Distance / Displacement > 1. Here, 13 / 5 = 2.6.",
+    "solutionStructured": {
+      "concept": "Distance = \u222b |v(t)| dt, while displacement = \u222b v(t) dt. Ratio = Distance / |Displacement|.",
+      "given": "v(t) = 6 - 2t, interval [0, 5] s, x(0) = 0.",
+      "formula": "Turning point at v = 0 => t = 3 s.",
+      "stepByStep": "1. Velocity is zero at: 6 - 2t = 0 => t = 3 s.\n2. Position function: x(t) = \u222b (6 - 2t) dt = 6t - t\u00b2 (since x(0) = 0).\n3. Positions at key times:\n   x(0) = 0 m.\n   x(3) = 6(3) - 3\u00b2 = 18 - 9 = +9 m.\n   x(5) = 6(5) - 5\u00b2 = 30 - 25 = +5 m.\n4. Distance from 0 to 3 s: |x(3) - x(0)| = 9 m (moving forward).\n5. Distance from 3 to 5 s: |x(5) - x(3)| = |5 - 9| = 4 m (moving backward).\n6. Total distance = 9 + 4 = 13 m.\n7. Net displacement = x(5) - x(0) = +5 m - 0 = +5 m.\n8. Ratio = Distance / |Displacement| = 13 / 5 = 2.6.",
+      "finalAnswer": "Option A: 13 / 5",
+      "whyOtherOptionsWrong": "Option B only includes forward distance (9/5). Option C inverts the ratio. Option D assumes no reversal."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Distance and displacement",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-042",
+    "questionNumber": 42,
+    "question": "A particle moves in a plane. Its position at time t is given by x = a cos(\u03c9t) and y = a sin(\u03c9t). What are the distance traversed and the magnitude of displacement in one quarter of a time period (from t = 0 to t = T/4)?",
+    "options": {
+      "A": "Distance = \u03c0a / 2, Displacement = a\u221a2",
+      "B": "Distance = a\u221a2, Displacement = \u03c0a / 2",
+      "C": "Distance = 2\u03c0a, Displacement = 0",
+      "D": "Distance = \u03c0a, Displacement = 2a"
+    },
+    "optionsList": [
+      "Distance = \u03c0a / 2, Displacement = a\u221a2",
+      "Distance = a\u221a2, Displacement = \u03c0a / 2",
+      "Distance = 2\u03c0a, Displacement = 0",
+      "Distance = \u03c0a, Displacement = 2a"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nx\u00b2 + y\u00b2 = a\u00b2 is uniform circular motion of radius a with period T = 2\u03c0/\u03c9. In T/4, the particle traverses a quadrant (90\u00b0 arc).\n\n2. GIVEN:\nRadius a, time interval \u0394t = T/4 (angle \u03b8 = 90\u00b0 = \u03c0/2 rad).\n\n3. FORMULA / PRINCIPLE:\nDistance = arc length = a * \u03b8; Displacement = 2a sin(\u03b8/2).\n\n4. STEP-BY-STEP SOLUTION:\n1. In one quarter period (t = T/4), the particle covers one quadrant of the circle of radius a.\n2. Total distance = (1/4) of circumference = (1/4) * (2\u03c0a) = \u03c0a / 2.\n3. Initial position (t = 0): (a, 0).\n4. Position at t = T/4: (0, a).\n5. Displacement vector = (0 - a) i\u0302 + (a - 0) j\u0302 = -a i\u0302 + a j\u0302.\n6. Magnitude of displacement = \u221a((-a)\u00b2 + a\u00b2) = a\u221a2.\n7. Hence, Distance = \u03c0a / 2 and Displacement = a\u221a2.\n\n5. FINAL ANSWER:\nOption A: Distance = \u03c0a / 2, Displacement = a\u221a2\n\n6. QUICK TIP:\nFor a quarter circle (\u03b8 = 90\u00b0): Arc length = \u03c0a/2 \u2248 1.57a, Chord length = a\u221a2 \u2248 1.414a.",
+    "solutionStructured": {
+      "concept": "x\u00b2 + y\u00b2 = a\u00b2 is uniform circular motion of radius a with period T = 2\u03c0/\u03c9. In T/4, the particle traverses a quadrant (90\u00b0 arc).",
+      "given": "Radius a, time interval \u0394t = T/4 (angle \u03b8 = 90\u00b0 = \u03c0/2 rad).",
+      "formula": "Distance = arc length = a * \u03b8; Displacement = 2a sin(\u03b8/2).",
+      "stepByStep": "1. In one quarter period (t = T/4), the particle covers one quadrant of the circle of radius a.\n2. Total distance = (1/4) of circumference = (1/4) * (2\u03c0a) = \u03c0a / 2.\n3. Initial position (t = 0): (a, 0).\n4. Position at t = T/4: (0, a).\n5. Displacement vector = (0 - a) i\u0302 + (a - 0) j\u0302 = -a i\u0302 + a j\u0302.\n6. Magnitude of displacement = \u221a((-a)\u00b2 + a\u00b2) = a\u221a2.\n7. Hence, Distance = \u03c0a / 2 and Displacement = a\u221a2.",
+      "finalAnswer": "Option A: Distance = \u03c0a / 2, Displacement = a\u221a2",
+      "whyOtherOptionsWrong": "Option B swaps distance and displacement. Option C is for full period T. Option D is for half period T/2."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Distance and displacement",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  }
+]

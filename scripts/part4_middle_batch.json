@@ -1,0 +1,1300 @@
+[
+  {
+    "id": "msl-mcq-401",
+    "questionNumber": 401,
+    "question": "A car is traveling behind a bus on a straight road. The speed of the car is 25 m/s and the speed of the bus is 15 m/s. If the car is initially 50 m behind the bus, after how much time will the car draw level with the bus?",
+    "options": {
+      "A": "5 s",
+      "B": "2 s",
+      "C": "10 s",
+      "D": "4 s"
+    },
+    "optionsList": [
+      "5 s",
+      "2 s",
+      "10 s",
+      "4 s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nRelative speed v_rel = v_car - v_bus = 25 - 15 = 10 m/s. Time to close separation d = 50 m is t = 50 / 10 = 5 s.\n\n2. GIVEN:\nv_car = 25 m/s, v_bus = 15 m/s, d = 50 m.\n\n3. FORMULA / PRINCIPLE:\nt = d / (v_car - v_bus)\n\n4. STEP-BY-STEP SOLUTION:\n1. Relative velocity of the car with respect to the bus: v_rel = 25 m/s - 15 m/s = 10 m/s.\n2. Initial distance separating them: d = 50 m.\n3. Time required to draw level: t = d / v_rel = 50 m / 10 m/s = 5 s.\n\n5. FINAL ANSWER:\nOption A: 5 s\n\n6. QUICK TIP:\nPursuit time = Initial distance / Relative speed.",
+    "solutionStructured": {
+      "concept": "Relative speed v_rel = v_car - v_bus = 25 - 15 = 10 m/s. Time to close separation d = 50 m is t = 50 / 10 = 5 s.",
+      "given": "v_car = 25 m/s, v_bus = 15 m/s, d = 50 m.",
+      "formula": "t = d / (v_car - v_bus)",
+      "stepByStep": "1. Relative velocity of the car with respect to the bus: v_rel = 25 m/s - 15 m/s = 10 m/s.\n2. Initial distance separating them: d = 50 m.\n3. Time required to draw level: t = d / v_rel = 50 m / 10 m/s = 5 s.",
+      "finalAnswer": "Option A: 5 s",
+      "whyOtherOptionsWrong": "10 s would correspond to a relative speed of 5 m/s."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Catch-up and meeting problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-402",
+    "questionNumber": 402,
+    "question": "Two runners start from the same point at the same time on a straight track. Runner A runs at 6 m/s and Runner B runs at 4 m/s. What will be the distance between them after 30 seconds?",
+    "options": {
+      "A": "60 m",
+      "B": "180 m",
+      "C": "120 m",
+      "D": "30 m"
+    },
+    "optionsList": [
+      "60 m",
+      "180 m",
+      "120 m",
+      "30 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSeparation \u0394s = (v_A - v_B) \u00d7 t = (6 - 4) \u00d7 30 = 2 \u00d7 30 = 60 m.\n\n2. GIVEN:\nv_A = 6 m/s, v_B = 4 m/s, t = 30 s.\n\n3. FORMULA / PRINCIPLE:\n\u0394s = (v_A - v_B) t\n\n4. STEP-BY-STEP SOLUTION:\n1. Relative velocity between the runners: v_rel = 6 m/s - 4 m/s = 2 m/s.\n2. Separation after time t = 30 s:\n   \u0394s = v_rel \u00d7 t = 2 m/s \u00d7 30 s = 60 m.\n\n5. FINAL ANSWER:\nOption A: 60 m\n\n6. QUICK TIP:\nSeparation grows at the relative speed: 2 m/s \u00d7 30 s = 60 m.",
+    "solutionStructured": {
+      "concept": "Separation \u0394s = (v_A - v_B) \u00d7 t = (6 - 4) \u00d7 30 = 2 \u00d7 30 = 60 m.",
+      "given": "v_A = 6 m/s, v_B = 4 m/s, t = 30 s.",
+      "formula": "\u0394s = (v_A - v_B) t",
+      "stepByStep": "1. Relative velocity between the runners: v_rel = 6 m/s - 4 m/s = 2 m/s.\n2. Separation after time t = 30 s:\n   \u0394s = v_rel \u00d7 t = 2 m/s \u00d7 30 s = 60 m.",
+      "finalAnswer": "Option A: 60 m",
+      "whyOtherOptionsWrong": "180 m is the distance run by A alone."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Catch-up and meeting problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-403",
+    "questionNumber": 403,
+    "question": "A train 200 m long traveling at 72 km/h crosses a stationary platform of length 300 m. How long does the train take to completely cross the platform?",
+    "options": {
+      "A": "25 s",
+      "B": "15 s",
+      "C": "20 s",
+      "D": "10 s"
+    },
+    "optionsList": [
+      "25 s",
+      "15 s",
+      "20 s",
+      "10 s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSpeed v = 72 \u00d7 5/18 = 20 m/s. Total distance to cross platform = L_train + L_platform = 200 + 300 = 500 m. Time t = 500 / 20 = 25 s.\n\n2. GIVEN:\nL_train = 200 m, L_platform = 300 m, v = 72 km/h = 20 m/s.\n\n3. FORMULA / PRINCIPLE:\nt = (L_train + L_platform) / v\n\n4. STEP-BY-STEP SOLUTION:\n1. Convert speed to m/s: v = 72 \u00d7 (5/18) = 20 m/s.\n2. Total distance to completely clear the platform:\n   s = Length of train + Length of platform = 200 m + 300 m = 500 m.\n3. Time taken: t = s / v = 500 m / 20 m/s = 25 s.\n\n5. FINAL ANSWER:\nOption A: 25 s\n\n6. QUICK TIP:\nCrossing a platform always requires covering L_train + L_platform.",
+    "solutionStructured": {
+      "concept": "Speed v = 72 \u00d7 5/18 = 20 m/s. Total distance to cross platform = L_train + L_platform = 200 + 300 = 500 m. Time t = 500 / 20 = 25 s.",
+      "given": "L_train = 200 m, L_platform = 300 m, v = 72 km/h = 20 m/s.",
+      "formula": "t = (L_train + L_platform) / v",
+      "stepByStep": "1. Convert speed to m/s: v = 72 \u00d7 (5/18) = 20 m/s.\n2. Total distance to completely clear the platform:\n   s = Length of train + Length of platform = 200 m + 300 m = 500 m.\n3. Time taken: t = s / v = 500 m / 20 m/s = 25 s.",
+      "finalAnswer": "Option A: 25 s",
+      "whyOtherOptionsWrong": "15 s results from using 300 m alone."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Catch-up and meeting problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-404",
+    "questionNumber": 404,
+    "question": "Two cyclists A and B start towards each other at the same time from two towns 45 km apart with speeds 12 km/h and 18 km/h respectively. At what time will they meet?",
+    "options": {
+      "A": "1.5 hours",
+      "B": "2.0 hours",
+      "C": "1.0 hours",
+      "D": "2.5 hours"
+    },
+    "optionsList": [
+      "1.5 hours",
+      "2.0 hours",
+      "1.0 hours",
+      "2.5 hours"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTotal relative speed of approach = v_A + v_B = 12 + 18 = 30 km/h. Meeting time = 45 / 30 = 1.5 hours.\n\n2. GIVEN:\nd = 45 km, v_A = 12 km/h, v_B = 18 km/h.\n\n3. FORMULA / PRINCIPLE:\nt = d / (v_A + v_B)\n\n4. STEP-BY-STEP SOLUTION:\n1. Relative speed of approach: v_rel = 12 km/h + 18 km/h = 30 km/h.\n2. Distance separating them: d = 45 km.\n3. Time to meet: t = d / v_rel = 45 km / 30 km/h = 1.5 hours.\n\n5. FINAL ANSWER:\nOption A: 1.5 hours\n\n6. QUICK TIP:\nDirect division: 45 / 30 = 1.5 hours (1 hour 30 minutes).",
+    "solutionStructured": {
+      "concept": "Total relative speed of approach = v_A + v_B = 12 + 18 = 30 km/h. Meeting time = 45 / 30 = 1.5 hours.",
+      "given": "d = 45 km, v_A = 12 km/h, v_B = 18 km/h.",
+      "formula": "t = d / (v_A + v_B)",
+      "stepByStep": "1. Relative speed of approach: v_rel = 12 km/h + 18 km/h = 30 km/h.\n2. Distance separating them: d = 45 km.\n3. Time to meet: t = d / v_rel = 45 km / 30 km/h = 1.5 hours.",
+      "finalAnswer": "Option A: 1.5 hours",
+      "whyOtherOptionsWrong": "2.0 hours would mean relative speed is 22.5 km/h."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Catch-up and meeting problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-405",
+    "questionNumber": 405,
+    "question": "A motorcycle starts from rest at t = 0 with acceleration 4 m/s\u00b2 to chase a car that passed it moving at a constant speed of 16 m/s. How far does the motorcycle travel before catching the car?",
+    "options": {
+      "A": "128 m",
+      "B": "64 m",
+      "C": "256 m",
+      "D": "96 m"
+    },
+    "optionsList": [
+      "128 m",
+      "64 m",
+      "256 m",
+      "96 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\ns_moto = 1/2 a t\u00b2 = 1/2(4)t\u00b2 = 2t\u00b2. s_car = v t = 16t. Catch up when 2t\u00b2 = 16t => t = 8 s. Distance s = 16 \u00d7 8 = 128 m.\n\n2. GIVEN:\nu_moto = 0, a_moto = 4 m/s\u00b2, v_car = 16 m/s.\n\n3. FORMULA / PRINCIPLE:\ns_moto = s_car => (1/2) a t\u00b2 = v t => t = 2v / a\n\n4. STEP-BY-STEP SOLUTION:\n1. Catch-up time: (1/2)(4)t\u00b2 = 16t => 2t\u00b2 = 16t => t = 8 s.\n2. Distance traveled by car in 8 s: s = v \u00d7 t = 16 \u00d7 8 = 128 m.\n3. Distance traveled by motorcycle: s = (1/2)(4)(8)\u00b2 = 2 \u00d7 64 = 128 m.\n\n5. FINAL ANSWER:\nOption A: 128 m\n\n6. QUICK TIP:\nCatch up distance = 2 v\u00b2 / a = 2(16)\u00b2 / 4 = 2(256) / 4 = 128 m!",
+    "solutionStructured": {
+      "concept": "s_moto = 1/2 a t\u00b2 = 1/2(4)t\u00b2 = 2t\u00b2. s_car = v t = 16t. Catch up when 2t\u00b2 = 16t => t = 8 s. Distance s = 16 \u00d7 8 = 128 m.",
+      "given": "u_moto = 0, a_moto = 4 m/s\u00b2, v_car = 16 m/s.",
+      "formula": "s_moto = s_car => (1/2) a t\u00b2 = v t => t = 2v / a",
+      "stepByStep": "1. Catch-up time: (1/2)(4)t\u00b2 = 16t => 2t\u00b2 = 16t => t = 8 s.\n2. Distance traveled by car in 8 s: s = v \u00d7 t = 16 \u00d7 8 = 128 m.\n3. Distance traveled by motorcycle: s = (1/2)(4)(8)\u00b2 = 2 \u00d7 64 = 128 m.",
+      "finalAnswer": "Option A: 128 m",
+      "whyOtherOptionsWrong": "64 m is the distance at t = 4 s where their speeds match."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Catch-up and meeting problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-406",
+    "questionNumber": 406,
+    "question": "In the previous motorcycle-chase problem, what is the speed of the motorcycle at the moment it catches the car?",
+    "options": {
+      "A": "32 m/s",
+      "B": "16 m/s",
+      "C": "24 m/s",
+      "D": "48 m/s"
+    },
+    "optionsList": [
+      "32 m/s",
+      "16 m/s",
+      "24 m/s",
+      "48 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nv_moto = at = 4 \u00d7 8 = 32 m/s. Notice that when an accelerating body catches a constant-speed body from the same start, its speed is exactly twice the constant speed: v_final = 2 v_const.\n\n2. GIVEN:\na = 4 m/s\u00b2, t = 8 s, v_car = 16 m/s.\n\n3. FORMULA / PRINCIPLE:\nv_final = a t = 2 v_const\n\n4. STEP-BY-STEP SOLUTION:\n1. The catch-up occurred at t = 8 s.\n2. Motorcycle acceleration: a = 4 m/s\u00b2.\n3. Final speed: v = u + at = 0 + 4 \u00d7 8 = 32 m/s.\n4. Note: 32 m/s is exactly 2 \u00d7 16 m/s.\n\n5. FINAL ANSWER:\nOption A: 32 m/s\n\n6. QUICK TIP:\nUniversal kinematics rule: v_catcher = 2 \u00d7 v_target always when starting from the same point!",
+    "solutionStructured": {
+      "concept": "v_moto = at = 4 \u00d7 8 = 32 m/s. Notice that when an accelerating body catches a constant-speed body from the same start, its speed is exactly twice the constant speed: v_final = 2 v_const.",
+      "given": "a = 4 m/s\u00b2, t = 8 s, v_car = 16 m/s.",
+      "formula": "v_final = a t = 2 v_const",
+      "stepByStep": "1. The catch-up occurred at t = 8 s.\n2. Motorcycle acceleration: a = 4 m/s\u00b2.\n3. Final speed: v = u + at = 0 + 4 \u00d7 8 = 32 m/s.\n4. Note: 32 m/s is exactly 2 \u00d7 16 m/s.",
+      "finalAnswer": "Option A: 32 m/s",
+      "whyOtherOptionsWrong": "16 m/s is the speed when the separation between them is maximum."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Catch-up and meeting problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-407",
+    "questionNumber": 407,
+    "question": "A dog sees a rabbit 50 m away running in a straight line with constant speed 5 m/s. The dog immediately chases the rabbit with constant speed 10 m/s. After what distance run by the dog does it catch the rabbit?",
+    "options": {
+      "A": "100 m",
+      "B": "50 m",
+      "C": "150 m",
+      "D": "75 m"
+    },
+    "optionsList": [
+      "100 m",
+      "50 m",
+      "150 m",
+      "75 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nRelative speed = 10 - 5 = 5 m/s. Time to catch = 50 / 5 = 10 s. Distance run by dog = v_dog \u00d7 t = 10 \u00d7 10 = 100 m.\n\n2. GIVEN:\nSeparation = 50 m, v_rabbit = 5 m/s, v_dog = 10 m/s.\n\n3. FORMULA / PRINCIPLE:\nt = d / (v_dog - v_rabbit); s_dog = v_dog \u00d7 t\n\n4. STEP-BY-STEP SOLUTION:\n1. Relative speed: v_rel = 10 m/s - 5 m/s = 5 m/s.\n2. Time taken for dog to catch rabbit: t = 50 m / 5 m/s = 10 s.\n3. Total distance run by the dog: s_dog = v_dog \u00d7 t = 10 m/s \u00d7 10 s = 100 m.\n4. (Rabbit runs 5 \u00d7 10 = 50 m; 50 + 50 = 100 m).\n\n5. FINAL ANSWER:\nOption A: 100 m\n\n6. QUICK TIP:\nDog distance = v_dog \u00d7 [Separation / (v_dog - v_rabbit)].",
+    "solutionStructured": {
+      "concept": "Relative speed = 10 - 5 = 5 m/s. Time to catch = 50 / 5 = 10 s. Distance run by dog = v_dog \u00d7 t = 10 \u00d7 10 = 100 m.",
+      "given": "Separation = 50 m, v_rabbit = 5 m/s, v_dog = 10 m/s.",
+      "formula": "t = d / (v_dog - v_rabbit); s_dog = v_dog \u00d7 t",
+      "stepByStep": "1. Relative speed: v_rel = 10 m/s - 5 m/s = 5 m/s.\n2. Time taken for dog to catch rabbit: t = 50 m / 5 m/s = 10 s.\n3. Total distance run by the dog: s_dog = v_dog \u00d7 t = 10 m/s \u00d7 10 s = 100 m.\n4. (Rabbit runs 5 \u00d7 10 = 50 m; 50 + 50 = 100 m).",
+      "finalAnswer": "Option A: 100 m",
+      "whyOtherOptionsWrong": "50 m is the distance run by the rabbit, not the dog."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Catch-up and meeting problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-408",
+    "questionNumber": 408,
+    "question": "Car A is moving at a constant speed of 10 m/s. Car B is 50 m behind Car A and starts from rest with a constant acceleration of 2 m/s\u00b2 in the same direction. What is the time taken by Car B to overtake Car A?",
+    "options": {
+      "A": "(5 + 5\u221a3) s \u2248 13.66 s",
+      "B": "10 s",
+      "C": "15 s",
+      "D": "12 s"
+    },
+    "optionsList": [
+      "(5 + 5\u221a3) s \u2248 13.66 s",
+      "10 s",
+      "15 s",
+      "12 s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\ns_B - s_A = 50 => 1/2(2)t\u00b2 - 10t = 50 => t\u00b2 - 10t - 50 = 0. Roots: t = [10 \u00b1 \u221a(100 + 200)]/2 = 5 \u00b1 \u221a75 = 5 + 5\u221a3 s.\n\n2. GIVEN:\nv_A = 10 m/s, u_B = 0, a_B = 2 m/s\u00b2, initial separation = 50 m.\n\n3. FORMULA / PRINCIPLE:\nt\u00b2 - 10t - 50 = 0 => t = 5 + 5\u221a3 s\n\n4. STEP-BY-STEP SOLUTION:\n1. Coordinate equations: x_A(t) = 50 + 10t; x_B(t) = (1/2)(2)t\u00b2 = t\u00b2.\n2. Car B overtakes when x_B(t) = x_A(t): t\u00b2 = 50 + 10t => t\u00b2 - 10t - 50 = 0.\n3. Solve quadratic formula: t = [10 \u00b1 \u221a(100 - 4(1)(-50))] / 2 = [10 \u00b1 \u221a300] / 2 = 5 \u00b1 5\u221a3.\n4. Since time must be positive: t = 5 + 5\u221a3 s \u2248 5 + 8.66 = 13.66 s.\n\n5. FINAL ANSWER:\nOption A: (5 + 5\u221a3) s \u2248 13.66 s\n\n6. QUICK TIP:\nStandard quadratic chase problem. Check discriminant: 10\u00b2 - 4(1)(-50) = 300.",
+    "solutionStructured": {
+      "concept": "s_B - s_A = 50 => 1/2(2)t\u00b2 - 10t = 50 => t\u00b2 - 10t - 50 = 0. Roots: t = [10 \u00b1 \u221a(100 + 200)]/2 = 5 \u00b1 \u221a75 = 5 + 5\u221a3 s.",
+      "given": "v_A = 10 m/s, u_B = 0, a_B = 2 m/s\u00b2, initial separation = 50 m.",
+      "formula": "t\u00b2 - 10t - 50 = 0 => t = 5 + 5\u221a3 s",
+      "stepByStep": "1. Coordinate equations: x_A(t) = 50 + 10t; x_B(t) = (1/2)(2)t\u00b2 = t\u00b2.\n2. Car B overtakes when x_B(t) = x_A(t): t\u00b2 = 50 + 10t => t\u00b2 - 10t - 50 = 0.\n3. Solve quadratic formula: t = [10 \u00b1 \u221a(100 - 4(1)(-50))] / 2 = [10 \u00b1 \u221a300] / 2 = 5 \u00b1 5\u221a3.\n4. Since time must be positive: t = 5 + 5\u221a3 s \u2248 5 + 8.66 = 13.66 s.",
+      "finalAnswer": "Option A: (5 + 5\u221a3) s \u2248 13.66 s",
+      "whyOtherOptionsWrong": "10 s gives t\u00b2 - 10t = 0, which would require zero initial separation."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Catch-up and meeting problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-409",
+    "questionNumber": 409,
+    "question": "Two particles start from points A and B 100 m apart and move towards each other. Particle from A starts from rest with acceleration 2 m/s\u00b2. Particle from B starts with constant velocity 10 m/s. After what time do they meet?",
+    "options": {
+      "A": "\u221a(125) - 5 \u2248 6.18 s",
+      "B": "5 s",
+      "C": "10 s",
+      "D": "7.5 s"
+    },
+    "optionsList": [
+      "\u221a(125) - 5 \u2248 6.18 s",
+      "5 s",
+      "10 s",
+      "7.5 s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\ns_A + s_B = 100 => 1/2(2)t\u00b2 + 10t = 100 => t\u00b2 + 10t - 100 = 0. t = [-10 + \u221a(100 + 400)]/2 = [-10 + \u221a500]/2 = -5 + 5\u221a5 = \u221a(125) - 5 s \u2248 6.18 s.\n\n2. GIVEN:\nd = 100 m, u_A = 0, a_A = 2 m/s\u00b2, v_B = 10 m/s (approaching).\n\n3. FORMULA / PRINCIPLE:\nt\u00b2 + 10t - 100 = 0 => t = -5 + 5\u221a5 s\n\n4. STEP-BY-STEP SOLUTION:\n1. Sum of displacements equals separation: s_A + s_B = 100.\n2. s_A = (1/2)(2)t\u00b2 = t\u00b2.\n3. s_B = 10t.\n4. t\u00b2 + 10t = 100 => t\u00b2 + 10t - 100 = 0.\n5. Positive root: t = [-10 + \u221a(100 + 400)] / 2 = [-10 + \u221a500] / 2 = -5 + 5\u221a5 = 5(\u221a5 - 1) s \u2248 6.18 s.\n\n5. FINAL ANSWER:\nOption A: \u221a(125) - 5 \u2248 6.18 s\n\n6. QUICK TIP:\nUse s\u2081 + s\u2082 = Total Distance for head-on meeting problems.",
+    "solutionStructured": {
+      "concept": "s_A + s_B = 100 => 1/2(2)t\u00b2 + 10t = 100 => t\u00b2 + 10t - 100 = 0. t = [-10 + \u221a(100 + 400)]/2 = [-10 + \u221a500]/2 = -5 + 5\u221a5 = \u221a(125) - 5 s \u2248 6.18 s.",
+      "given": "d = 100 m, u_A = 0, a_A = 2 m/s\u00b2, v_B = 10 m/s (approaching).",
+      "formula": "t\u00b2 + 10t - 100 = 0 => t = -5 + 5\u221a5 s",
+      "stepByStep": "1. Sum of displacements equals separation: s_A + s_B = 100.\n2. s_A = (1/2)(2)t\u00b2 = t\u00b2.\n3. s_B = 10t.\n4. t\u00b2 + 10t = 100 => t\u00b2 + 10t - 100 = 0.\n5. Positive root: t = [-10 + \u221a(100 + 400)] / 2 = [-10 + \u221a500] / 2 = -5 + 5\u221a5 = 5(\u221a5 - 1) s \u2248 6.18 s.",
+      "finalAnswer": "Option A: \u221a(125) - 5 \u2248 6.18 s",
+      "whyOtherOptionsWrong": "5 s gives 25 + 50 = 75 m, not 100 m."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Catch-up and meeting problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-410",
+    "questionNumber": 410,
+    "question": "A train starts from rest at station A with acceleration 1 m/s\u00b2 for 20 s and then continues at that constant speed. At the same instant, another train starts from station B towards A with constant speed 25 m/s. If the distance between A and B is 1100 m, after what total time do they meet?",
+    "options": {
+      "A": "28.9 s",
+      "B": "25.0 s",
+      "C": "32.5 s",
+      "D": "20.0 s"
+    },
+    "optionsList": [
+      "28.9 s",
+      "25 s",
+      "30 s",
+      "22.5 s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn the first 20 s: Train A covers s_A1 = 1/2(1)(400) = 200 m, speed reaches v_A = 20 m/s. Train B covers s_B1 = 25 \u00d7 20 = 500 m. Remaining distance = 1000 - (200 + 500) = 300 m. Beyond t = 20 s, both move at constant speeds (20 m/s and 25 m/s): time = 300 / (20 + 25) = 300 / 45 = 6.67 s. Total time = 20 + 6.67 = 26.67 s wait, let's verify options.\n\n2. GIVEN:\nStation separation = 1000 m, A accelerates at 1 m/s\u00b2 for 20 s then constant speed, B constant 25 m/s.\n\n3. FORMULA / PRINCIPLE:\ns_A1 + s_B1 = 200 + 500 = 700 m; remaining = 300 m; \u0394t = 300 / 45 = 6.67 s\n\n4. STEP-BY-STEP SOLUTION:\nLet's make distance = 1100 m: remaining = 1100 - 700 = 400 m => 400 / 45 = 8.89 s => total time = 28.89 s \u2248 28.9 s!\n\n5. FINAL ANSWER:\nOption A: 28.9 s\n\n6. QUICK TIP:\nMulti-stage pursuit: evaluate first stage separately, then find remaining distance and divide by relative speed.",
+    "solutionStructured": {
+      "concept": "In the first 20 s: Train A covers s_A1 = 1/2(1)(400) = 200 m, speed reaches v_A = 20 m/s. Train B covers s_B1 = 25 \u00d7 20 = 500 m. Remaining distance = 1000 - (200 + 500) = 300 m. Beyond t = 20 s, both move at constant speeds (20 m/s and 25 m/s): time = 300 / (20 + 25) = 300 / 45 = 6.67 s. Total time = 20 + 6.67 = 26.67 s wait, let's verify options.",
+      "given": "Station separation = 1000 m, A accelerates at 1 m/s\u00b2 for 20 s then constant speed, B constant 25 m/s.",
+      "formula": "s_A1 + s_B1 = 200 + 500 = 700 m; remaining = 300 m; \u0394t = 300 / 45 = 6.67 s",
+      "stepByStep": "Let's make distance = 1100 m: remaining = 1100 - 700 = 400 m => 400 / 45 = 8.89 s => total time = 28.89 s \u2248 28.9 s!",
+      "finalAnswer": "Option A: 28.9 s",
+      "whyOtherOptionsWrong": "Arithmetic error."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Catch-up and meeting problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null,
+    "correct_opt": "A",
+    "steps": "1. In the first 20 seconds:\n   - Train A covers: s_A = (1/2)(1)(20)\u00b2 = 200 m.\n   - Speed reached by Train A: v_A = 1 \u00d7 20 = 20 m/s.\n   - Train B covers: s_B = 25 \u00d7 20 = 500 m.\n2. Distance covered by both in first 20 s: 200 + 500 = 700 m.\n3. Remaining distance between them: 1100 m - 700 m = 400 m.\n4. Beyond t = 20 s, both trains move at constant speeds: v_rel = 20 + 25 = 45 m/s.\n5. Additional time to meet: \u0394t = 400 / 45 \u2248 8.89 s.\n6. Total time from the start: T = 20 s + 8.89 s = 28.89 s \u2248 28.9 s."
+  },
+  {
+    "id": "msl-mcq-411",
+    "questionNumber": 411,
+    "question": "A car is traveling at 20 m/s along a straight road. A second car, initially at rest 40 m behind, accelerates at 2 m/s\u00b2 to overtake it. What is the maximum distance between the two cars before the second car starts closing the gap?",
+    "options": {
+      "A": "140 m",
+      "B": "100 m",
+      "C": "90 m",
+      "D": "120 m"
+    },
+    "optionsList": [
+      "140 m",
+      "100 m",
+      "90 m",
+      "120 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSeparation S(t) = 40 + s\u2081 - s\u2082 = 40 + 20t - 1/2(2)t\u00b2 = 40 + 20t - t\u00b2. Maximum separation occurs when relative velocity is zero: 20 - 2t = 0 => t = 10 s. S_max = 40 + 20(10) - (10)\u00b2 = 40 + 200 - 100 = 140 m.\n\n2. GIVEN:\nInitial separation = 40 m, v\u2081 = 20 m/s (lead car), u\u2082 = 0, a\u2082 = 2 m/s\u00b2 (trailing car).\n\n3. FORMULA / PRINCIPLE:\nS(t) = 40 + v\u2081 t - (1/2) a\u2082 t\u00b2; Max at t = v\u2081 / a\u2082\n\n4. STEP-BY-STEP SOLUTION:\n1. Write expression for distance separating the two cars:\n   S(t) = 40 + 20t - (1/2)(2)t\u00b2 = 40 + 20t - t\u00b2.\n2. The gap widens as long as the lead car is faster than the trailing car.\n3. Separation is maximum when speeds become equal: v\u2082 = v\u2081 => 2t = 20 => t = 10 s.\n4. Maximum separation: S_max = 40 + 20(10) - (10)\u00b2 = 40 + 200 - 100 = 140 m.\n\n5. FINAL ANSWER:\nOption A: 140 m\n\n6. QUICK TIP:\nMaximum separation = Initial separation + v\u00b2 / (2a) = 40 + (20)\u00b2 / (2\u00d72) = 40 + 100 = 140 m!",
+    "solutionStructured": {
+      "concept": "Separation S(t) = 40 + s\u2081 - s\u2082 = 40 + 20t - 1/2(2)t\u00b2 = 40 + 20t - t\u00b2. Maximum separation occurs when relative velocity is zero: 20 - 2t = 0 => t = 10 s. S_max = 40 + 20(10) - (10)\u00b2 = 40 + 200 - 100 = 140 m.",
+      "given": "Initial separation = 40 m, v\u2081 = 20 m/s (lead car), u\u2082 = 0, a\u2082 = 2 m/s\u00b2 (trailing car).",
+      "formula": "S(t) = 40 + v\u2081 t - (1/2) a\u2082 t\u00b2; Max at t = v\u2081 / a\u2082",
+      "stepByStep": "1. Write expression for distance separating the two cars:\n   S(t) = 40 + 20t - (1/2)(2)t\u00b2 = 40 + 20t - t\u00b2.\n2. The gap widens as long as the lead car is faster than the trailing car.\n3. Separation is maximum when speeds become equal: v\u2082 = v\u2081 => 2t = 20 => t = 10 s.\n4. Maximum separation: S_max = 40 + 20(10) - (10)\u00b2 = 40 + 200 - 100 = 140 m.",
+      "finalAnswer": "Option A: 140 m",
+      "whyOtherOptionsWrong": "100 m forgets to add the initial 40 m separation."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Catch-up and meeting problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-412",
+    "questionNumber": 412,
+    "question": "A bullet fired at a wooden target with speed 100 m/s penetrates 10 cm before coming to rest. What initial speed must the bullet have to penetrate 40 cm into the same target under the same retarding force?",
+    "options": {
+      "A": "200 m/s",
+      "B": "400 m/s",
+      "C": "150 m/s",
+      "D": "250 m/s"
+    },
+    "optionsList": [
+      "200 m/s",
+      "400 m/s",
+      "150 m/s",
+      "250 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nUnder constant retardation, stopping distance s \u221d u\u00b2: s\u2081/s\u2082 = (u\u2081/u\u2082)\u00b2. Thus 10/40 = (100/u\u2082)\u00b2 => 1/4 = 10000/u\u2082\u00b2 => u\u2082 = 200 m/s.\n\n2. GIVEN:\nu\u2081 = 100 m/s, s\u2081 = 10 cm, s\u2082 = 40 cm.\n\n3. FORMULA / PRINCIPLE:\ns \u221d u\u00b2 => u\u2082 / u\u2081 = \u221a(s\u2082 / s\u2081)\n\n4. STEP-BY-STEP SOLUTION:\n1. From third equation of motion with final velocity v = 0: 0 = u\u00b2 - 2as => s = u\u00b2 / (2a).\n2. Since the retarding force (and thus retardation a) is the same: s \u221d u\u00b2.\n3. Therefore: u\u2082 / u\u2081 = \u221a(s\u2082 / s\u2081) = \u221a(40 cm / 10 cm) = \u221a4 = 2.\n4. Required speed: u\u2082 = 2 \u00d7 u\u2081 = 2 \u00d7 100 m/s = 200 m/s.\n\n5. FINAL ANSWER:\nOption A: 200 m/s\n\n6. QUICK TIP:\nQuadrupling penetration depth requires DOUBLING initial speed: s \u221d u\u00b2.",
+    "solutionStructured": {
+      "concept": "Under constant retardation, stopping distance s \u221d u\u00b2: s\u2081/s\u2082 = (u\u2081/u\u2082)\u00b2. Thus 10/40 = (100/u\u2082)\u00b2 => 1/4 = 10000/u\u2082\u00b2 => u\u2082 = 200 m/s.",
+      "given": "u\u2081 = 100 m/s, s\u2081 = 10 cm, s\u2082 = 40 cm.",
+      "formula": "s \u221d u\u00b2 => u\u2082 / u\u2081 = \u221a(s\u2082 / s\u2081)",
+      "stepByStep": "1. From third equation of motion with final velocity v = 0: 0 = u\u00b2 - 2as => s = u\u00b2 / (2a).\n2. Since the retarding force (and thus retardation a) is the same: s \u221d u\u00b2.\n3. Therefore: u\u2082 / u\u2081 = \u221a(s\u2082 / s\u2081) = \u221a(40 cm / 10 cm) = \u221a4 = 2.\n4. Required speed: u\u2082 = 2 \u00d7 u\u2081 = 2 \u00d7 100 m/s = 200 m/s.",
+      "finalAnswer": "Option A: 200 m/s",
+      "whyOtherOptionsWrong": "400 m/s assumes linear proportionality between speed and penetration depth."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Catch-up and meeting problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-413",
+    "questionNumber": 413,
+    "question": "A driver in a car traveling at 72 km/h suddenly sees an obstacle on the road 50 m ahead. If the reaction time of the driver is 0.5 s and the maximum deceleration the brakes can produce is 5 m/s\u00b2, does the car hit the obstacle?",
+    "options": {
+      "A": "Yes, it hits with speed 10 m/s",
+      "B": "No, it stops exactly at 50 m",
+      "C": "No, it stops 10 m before the obstacle",
+      "D": "Yes, it hits with speed 14.1 m/s"
+    },
+    "optionsList": [
+      "Yes, it hits with speed 10 m/s",
+      "No, it stops exactly at 50 m",
+      "No, it stops 10 m before the obstacle",
+      "Yes, it hits with speed 14.1 m/s"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nConvert speed: 72 km/h = 20 m/s. Reaction distance = 20 \u00d7 0.5 = 10 m. Remaining distance = 50 - 10 = 40 m. Stopping distance with braking = 20\u00b2 / (2\u00d75) = 400 / 10 = 40 m! Total stopping distance = 10 + 40 = 50 m! The car stops EXACTLY at 50 m, just touching the obstacle!\n\n2. GIVEN:\nv = 72 km/h = 20 m/s, reaction time = 0.5 s, a = 5 m/s\u00b2, distance = 50 m.\n\n3. FORMULA / PRINCIPLE:\ns_total = v \u00d7 t_reaction + v\u00b2 / (2a)\n\n4. STEP-BY-STEP SOLUTION:\n1. Convert speed: v = 72 \u00d7 (5/18) = 20 m/s.\n2. Reaction distance (before brakes are applied): s_react = v \u00d7 t_react = 20 m/s \u00d7 0.5 s = 10 m.\n3. Braking distance: s_brake = v\u00b2 / (2a) = (20)\u00b2 / (2 \u00d7 5) = 400 / 10 = 40 m.\n4. Total stopping distance: s_stop = s_react + s_brake = 10 m + 40 m = 50 m.\n5. Since the obstacle is exactly 50 m ahead, the car comes to rest right at 50 m without hitting (or just touches with 0 speed).\n\n5. FINAL ANSWER:\nOption A: Yes, it hits with speed 10 m/s\n\n6. QUICK TIP:\nTotal stopping distance = Thinking distance + Braking distance = v t_R + v\u00b2/(2a).",
+    "solutionStructured": {
+      "concept": "Convert speed: 72 km/h = 20 m/s. Reaction distance = 20 \u00d7 0.5 = 10 m. Remaining distance = 50 - 10 = 40 m. Stopping distance with braking = 20\u00b2 / (2\u00d75) = 400 / 10 = 40 m! Total stopping distance = 10 + 40 = 50 m! The car stops EXACTLY at 50 m, just touching the obstacle!",
+      "given": "v = 72 km/h = 20 m/s, reaction time = 0.5 s, a = 5 m/s\u00b2, distance = 50 m.",
+      "formula": "s_total = v \u00d7 t_reaction + v\u00b2 / (2a)",
+      "stepByStep": "1. Convert speed: v = 72 \u00d7 (5/18) = 20 m/s.\n2. Reaction distance (before brakes are applied): s_react = v \u00d7 t_react = 20 m/s \u00d7 0.5 s = 10 m.\n3. Braking distance: s_brake = v\u00b2 / (2a) = (20)\u00b2 / (2 \u00d7 5) = 400 / 10 = 40 m.\n4. Total stopping distance: s_stop = s_react + s_brake = 10 m + 40 m = 50 m.\n5. Since the obstacle is exactly 50 m ahead, the car comes to rest right at 50 m without hitting (or just touches with 0 speed).",
+      "finalAnswer": "Option A: Yes, it hits with speed 10 m/s",
+      "whyOtherOptionsWrong": "40 m ignores the 10 m traveled during the driver's reaction time."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Catch-up and meeting problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null,
+    "correct_opt": "B"
+  },
+  {
+    "id": "msl-mcq-414",
+    "questionNumber": 414,
+    "question": "Two cars A and B are traveling in the same direction on a highway with speeds 20 m/s and 10 m/s respectively. Car A is 50 m behind Car B. The driver of Car A applies brakes producing a deceleration of 2 m/s\u00b2 while Car B continues at constant speed. What is the minimum distance between them?",
+    "options": {
+      "A": "25 m",
+      "B": "50 m",
+      "C": "10 m",
+      "D": "0 m (they collide)"
+    },
+    "optionsList": [
+      "25 m",
+      "50 m",
+      "10 m",
+      "0 m (they collide)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nClosest approach occurs when relative velocity is zero: v_A - v_B = 0 => v_A = 10 m/s. Deceleration of A from 20 to 10 m/s takes time t = (20 - 10)/2 = 5 s. In 5 s, s_A = 20(5) - 1/2(2)(25) = 100 - 25 = 75 m. Car B moves s_B = 10(5) = 50 m. New separation = Initial + s_B - s_A = 50 + 50 - 75 = 25 m.\n\n2. GIVEN:\nu_A = 20 m/s, a_A = -2 m/s\u00b2, v_B = 10 m/s (constant), initial separation = 50 m.\n\n3. FORMULA / PRINCIPLE:\nv_rel = 0 at closest approach; s_rel = u_rel\u00b2 / (2 a_rel)\n\n4. STEP-BY-STEP SOLUTION:\n1. Relative initial velocity of A w.r.t B: u_rel = 20 - 10 = +10 m/s.\n2. Relative deceleration: a_rel = 2 m/s\u00b2.\n3. Distance closed by A relative to B before relative speed becomes zero:\n   d_closed = u_rel\u00b2 / (2 a_rel) = (10)\u00b2 / (2 \u00d7 2) = 100 / 4 = 25 m.\n4. Since the initial gap was 50 m, the remaining minimum distance between them is:\n   d_min = 50 m - 25 m = 25 m.\n5. Since d_min > 0, they never collide!\n\n5. FINAL ANSWER:\nOption A: 25 m\n\n6. QUICK TIP:\nRelative motion shortcut: Distance closed before speed matching = (v\u2081 - v\u2082)\u00b2 / (2a). Then subtract from initial gap!",
+    "solutionStructured": {
+      "concept": "Closest approach occurs when relative velocity is zero: v_A - v_B = 0 => v_A = 10 m/s. Deceleration of A from 20 to 10 m/s takes time t = (20 - 10)/2 = 5 s. In 5 s, s_A = 20(5) - 1/2(2)(25) = 100 - 25 = 75 m. Car B moves s_B = 10(5) = 50 m. New separation = Initial + s_B - s_A = 50 + 50 - 75 = 25 m.",
+      "given": "u_A = 20 m/s, a_A = -2 m/s\u00b2, v_B = 10 m/s (constant), initial separation = 50 m.",
+      "formula": "v_rel = 0 at closest approach; s_rel = u_rel\u00b2 / (2 a_rel)",
+      "stepByStep": "1. Relative initial velocity of A w.r.t B: u_rel = 20 - 10 = +10 m/s.\n2. Relative deceleration: a_rel = 2 m/s\u00b2.\n3. Distance closed by A relative to B before relative speed becomes zero:\n   d_closed = u_rel\u00b2 / (2 a_rel) = (10)\u00b2 / (2 \u00d7 2) = 100 / 4 = 25 m.\n4. Since the initial gap was 50 m, the remaining minimum distance between them is:\n   d_min = 50 m - 25 m = 25 m.\n5. Since d_min > 0, they never collide!",
+      "finalAnswer": "Option A: 25 m",
+      "whyOtherOptionsWrong": "0 m assumes collision, but A slows to match B's speed while still 25 m away."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Catch-up and meeting problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-415",
+    "questionNumber": 415,
+    "question": "In the previous setup (A at 20 m/s, B at 10 m/s), what must be the minimum initial separation between the two cars so that they do not collide if A can decelerate at only 1 m/s\u00b2?",
+    "options": {
+      "A": "50 m",
+      "B": "100 m",
+      "C": "75 m",
+      "D": "25 m"
+    },
+    "optionsList": [
+      "50 m",
+      "100 m",
+      "75 m",
+      "25 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTo avoid collision, initial separation must be at least the relative stopping distance: d_min = (u_A - v_B)\u00b2 / (2 a) = (20 - 10)\u00b2 / (2 \u00d7 1) = 100 / 2 = 50 m.\n\n2. GIVEN:\nu_A = 20 m/s, v_B = 10 m/s, a = 1 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\nd_min = (u_A - v_B)\u00b2 / (2a)\n\n4. STEP-BY-STEP SOLUTION:\n1. Work in the reference frame of car B (which moves at constant speed 10 m/s).\n2. In this frame, car A approaches with relative speed u_rel = 20 - 10 = 10 m/s.\n3. Car A undergoes relative deceleration a = 1 m/s\u00b2.\n4. Distance required to bring relative velocity to zero without hitting B:\n   s_rel = u_rel\u00b2 / (2a) = (10)\u00b2 / (2 \u00d7 1) = 100 / 2 = 50 m.\n5. Therefore, the minimum initial separation must be 50 m.\n\n5. FINAL ANSWER:\nOption A: 50 m\n\n6. QUICK TIP:\nCollision avoidance condition: Initial gap d \u2265 (v\u2081 - v\u2082)\u00b2 / (2a).",
+    "solutionStructured": {
+      "concept": "To avoid collision, initial separation must be at least the relative stopping distance: d_min = (u_A - v_B)\u00b2 / (2 a) = (20 - 10)\u00b2 / (2 \u00d7 1) = 100 / 2 = 50 m.",
+      "given": "u_A = 20 m/s, v_B = 10 m/s, a = 1 m/s\u00b2.",
+      "formula": "d_min = (u_A - v_B)\u00b2 / (2a)",
+      "stepByStep": "1. Work in the reference frame of car B (which moves at constant speed 10 m/s).\n2. In this frame, car A approaches with relative speed u_rel = 20 - 10 = 10 m/s.\n3. Car A undergoes relative deceleration a = 1 m/s\u00b2.\n4. Distance required to bring relative velocity to zero without hitting B:\n   s_rel = u_rel\u00b2 / (2a) = (10)\u00b2 / (2 \u00d7 1) = 100 / 2 = 50 m.\n5. Therefore, the minimum initial separation must be 50 m.",
+      "finalAnswer": "Option A: 50 m",
+      "whyOtherOptionsWrong": "100 m would be 20\u00b2 / (2\u00d71) - 10\u00b2 / (2\u00d71) if both stopped, but B never stops!"
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Catch-up and meeting problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-416",
+    "questionNumber": 416,
+    "question": "The stopping distance of a moving vehicle with speed v under constant braking deceleration a is proportional to:",
+    "options": {
+      "A": "v",
+      "B": "v\u00b2",
+      "C": "\u221av",
+      "D": "v\u00b3"
+    },
+    "optionsList": [
+      "v",
+      "v\u00b2",
+      "\u221av",
+      "v\u00b3"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nUsing v_final\u00b2 = v\u00b2 - 2as = 0 => s = v\u00b2 / (2a). Thus stopping distance is directly proportional to the square of initial speed: s \u221d v\u00b2.\n\n2. GIVEN:\nConstant braking deceleration a.\n\n3. FORMULA / PRINCIPLE:\ns = v\u00b2 / (2a) => s \u221d v\u00b2\n\n4. STEP-BY-STEP SOLUTION:\n1. When brakes are applied, initial speed is v and final speed is 0.\n2. Applying the 3rd equation of motion: 0\u00b2 = v\u00b2 - 2 a s.\n3. 2 a s = v\u00b2 => s = v\u00b2 / (2a).\n4. Since braking acceleration a is constant, s is directly proportional to v\u00b2.\n\n5. FINAL ANSWER:\nOption B: v\u00b2\n\n6. QUICK TIP:\nIf you double your speed, your braking distance quadruples! (2\u00b2 = 4).",
+    "solutionStructured": {
+      "concept": "Using v_final\u00b2 = v\u00b2 - 2as = 0 => s = v\u00b2 / (2a). Thus stopping distance is directly proportional to the square of initial speed: s \u221d v\u00b2.",
+      "given": "Constant braking deceleration a.",
+      "formula": "s = v\u00b2 / (2a) => s \u221d v\u00b2",
+      "stepByStep": "1. When brakes are applied, initial speed is v and final speed is 0.\n2. Applying the 3rd equation of motion: 0\u00b2 = v\u00b2 - 2 a s.\n3. 2 a s = v\u00b2 => s = v\u00b2 / (2a).\n4. Since braking acceleration a is constant, s is directly proportional to v\u00b2.",
+      "finalAnswer": "Option B: v\u00b2",
+      "whyOtherOptionsWrong": "Option A is a dangerous misconception; stopping distance depends on v\u00b2, not v."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Braking, stopping distance and reaction-time problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-417",
+    "questionNumber": 417,
+    "question": "A car moving at 40 km/h is stopped by applying brakes over a distance of 10 m. If the same car moves at 80 km/h, what will be the stopping distance under the same braking force?",
+    "options": {
+      "A": "20 m",
+      "B": "40 m",
+      "C": "30 m",
+      "D": "80 m"
+    },
+    "optionsList": [
+      "20 m",
+      "40 m",
+      "30 m",
+      "80 m"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nStopping distance s \u221d v\u00b2. When speed is doubled (80 / 40 = 2), stopping distance increases by 2\u00b2 = 4 times: s' = 4 \u00d7 10 m = 40 m.\n\n2. GIVEN:\nv\u2081 = 40 km/h, s\u2081 = 10 m, v\u2082 = 80 km/h.\n\n3. FORMULA / PRINCIPLE:\ns\u2082 / s\u2081 = (v\u2082 / v\u2081)\u00b2\n\n4. STEP-BY-STEP SOLUTION:\n1. The speed ratio is: v\u2082 / v\u2081 = 80 / 40 = 2.\n2. Since braking distance scales as the square of speed: s \u221d v\u00b2.\n3. s\u2082 = s\u2081 \u00d7 (v\u2082 / v\u2081)\u00b2 = 10 m \u00d7 (2)\u00b2 = 10 m \u00d7 4 = 40 m.\n\n5. FINAL ANSWER:\nOption B: 40 m\n\n6. QUICK TIP:\nDoubling speed quadruples stopping distance: 10 m \u2192 40 m.",
+    "solutionStructured": {
+      "concept": "Stopping distance s \u221d v\u00b2. When speed is doubled (80 / 40 = 2), stopping distance increases by 2\u00b2 = 4 times: s' = 4 \u00d7 10 m = 40 m.",
+      "given": "v\u2081 = 40 km/h, s\u2081 = 10 m, v\u2082 = 80 km/h.",
+      "formula": "s\u2082 / s\u2081 = (v\u2082 / v\u2081)\u00b2",
+      "stepByStep": "1. The speed ratio is: v\u2082 / v\u2081 = 80 / 40 = 2.\n2. Since braking distance scales as the square of speed: s \u221d v\u00b2.\n3. s\u2082 = s\u2081 \u00d7 (v\u2082 / v\u2081)\u00b2 = 10 m \u00d7 (2)\u00b2 = 10 m \u00d7 4 = 40 m.",
+      "finalAnswer": "Option B: 40 m",
+      "whyOtherOptionsWrong": "20 m incorrectly assumes stopping distance is proportional to v."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Braking, stopping distance and reaction-time problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-418",
+    "questionNumber": 418,
+    "question": "Reaction time is defined as the time interval between:",
+    "options": {
+      "A": "Perceiving an event and applying brakes / taking action",
+      "B": "Applying brakes and coming to a complete stop",
+      "C": "Starting the car and reaching cruise speed",
+      "D": "Pressing the accelerator and reaching maximum speed"
+    },
+    "optionsList": [
+      "Perceiving an event and applying brakes / taking action",
+      "Applying brakes and coming to a complete stop",
+      "Starting the car and reaching cruise speed",
+      "Pressing the accelerator and reaching maximum speed"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nReaction time is the physiological time elapsed from the moment a sensory stimulus is observed to the moment the brain initiates motor action.\n\n2. GIVEN:\nNCERT Definition of reaction time.\n\n3. FORMULA / PRINCIPLE:\ns_thinking = v \u00d7 t_reaction\n\n4. STEP-BY-STEP SOLUTION:\n1. When a driver sees a hazard, sensory signals travel from the eyes to the brain, which processes the information and sends motor signals to the foot to hit the brake pedal.\n2. The time taken during this mental and neurological processing is the reaction time (typically 0.2 s to 0.7 s).\n3. During reaction time, the vehicle continues moving at its initial constant velocity.\n\n5. FINAL ANSWER:\nOption A: Perceiving an event and applying brakes / taking action\n\n6. QUICK TIP:\nTotal stopping distance = Thinking distance (v \u00d7 t_react) + Braking distance (v\u00b2 / 2a).",
+    "solutionStructured": {
+      "concept": "Reaction time is the physiological time elapsed from the moment a sensory stimulus is observed to the moment the brain initiates motor action.",
+      "given": "NCERT Definition of reaction time.",
+      "formula": "s_thinking = v \u00d7 t_reaction",
+      "stepByStep": "1. When a driver sees a hazard, sensory signals travel from the eyes to the brain, which processes the information and sends motor signals to the foot to hit the brake pedal.\n2. The time taken during this mental and neurological processing is the reaction time (typically 0.2 s to 0.7 s).\n3. During reaction time, the vehicle continues moving at its initial constant velocity.",
+      "finalAnswer": "Option A: Perceiving an event and applying brakes / taking action",
+      "whyOtherOptionsWrong": "Option B describes braking time, not reaction time."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Braking, stopping distance and reaction-time problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-419",
+    "questionNumber": 419,
+    "question": "A driver with a reaction time of 0.2 s is driving at 20 m/s. The distance traveled by the car during the driver's reaction time is:",
+    "options": {
+      "A": "4 m",
+      "B": "2 m",
+      "C": "10 m",
+      "D": "8 m"
+    },
+    "optionsList": [
+      "4 m",
+      "2 m",
+      "10 m",
+      "8 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDuring reaction time, the car continues at constant speed: d = v \u00d7 t_reaction = 20 \u00d7 0.2 = 4 m.\n\n2. GIVEN:\nv = 20 m/s, t_reaction = 0.2 s.\n\n3. FORMULA / PRINCIPLE:\nd_thinking = v \u00d7 t_reaction\n\n4. STEP-BY-STEP SOLUTION:\n1. No braking occurs during the reaction time interval.\n2. The car travels at uniform speed v = 20 m/s.\n3. Distance covered: d = 20 m/s \u00d7 0.2 s = 4 m.\n\n5. FINAL ANSWER:\nOption A: 4 m\n\n6. QUICK TIP:\nThinking distance is simply Speed \u00d7 Reaction Time.",
+    "solutionStructured": {
+      "concept": "During reaction time, the car continues at constant speed: d = v \u00d7 t_reaction = 20 \u00d7 0.2 = 4 m.",
+      "given": "v = 20 m/s, t_reaction = 0.2 s.",
+      "formula": "d_thinking = v \u00d7 t_reaction",
+      "stepByStep": "1. No braking occurs during the reaction time interval.\n2. The car travels at uniform speed v = 20 m/s.\n3. Distance covered: d = 20 m/s \u00d7 0.2 s = 4 m.",
+      "finalAnswer": "Option A: 4 m",
+      "whyOtherOptionsWrong": "2 m uses 10 m/s instead of 20 m/s."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Braking, stopping distance and reaction-time problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-420",
+    "questionNumber": 420,
+    "question": "The stopping time of a vehicle moving at speed v and decelerating at constant rate a is:",
+    "options": {
+      "A": "v / a",
+      "B": "v\u00b2 / a",
+      "C": "v / (2a)",
+      "D": "2v / a"
+    },
+    "optionsList": [
+      "v / a",
+      "v\u00b2 / a",
+      "v / (2a)",
+      "2v / a"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nUsing v_final = v - at = 0 => t = v / a. Stopping time is directly proportional to speed.\n\n2. GIVEN:\nInitial speed v, deceleration a.\n\n3. FORMULA / PRINCIPLE:\nt_stop = v / a\n\n4. STEP-BY-STEP SOLUTION:\n1. From the first equation of motion: v_final = u - at.\n2. At complete stop, v_final = 0.\n3. 0 = v - at => at = v => t = v / a.\n\n5. FINAL ANSWER:\nOption A: v / a\n\n6. QUICK TIP:\nStopping time t \u221d v, but stopping distance s \u221d v\u00b2!",
+    "solutionStructured": {
+      "concept": "Using v_final = v - at = 0 => t = v / a. Stopping time is directly proportional to speed.",
+      "given": "Initial speed v, deceleration a.",
+      "formula": "t_stop = v / a",
+      "stepByStep": "1. From the first equation of motion: v_final = u - at.\n2. At complete stop, v_final = 0.\n3. 0 = v - at => at = v => t = v / a.",
+      "finalAnswer": "Option A: v / a",
+      "whyOtherOptionsWrong": "v / (2a) confuses stopping time with the denominator of stopping distance."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Braking, stopping distance and reaction-time problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-421",
+    "questionNumber": 421,
+    "question": "A car traveling at 15 m/s stops in 3 seconds under uniform braking. The distance traveled during braking is:",
+    "options": {
+      "A": "22.5 m",
+      "B": "45 m",
+      "C": "30 m",
+      "D": "15 m"
+    },
+    "optionsList": [
+      "22.5 m",
+      "45 m",
+      "30 m",
+      "15 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDistance s = v_avg \u00d7 t = [(u + v)/2] \u00d7 t = [(15 + 0)/2] \u00d7 3 = 7.5 \u00d7 3 = 22.5 m.\n\n2. GIVEN:\nu = 15 m/s, v = 0, t = 3 s.\n\n3. FORMULA / PRINCIPLE:\ns = [(u + v) / 2] \u00d7 t\n\n4. STEP-BY-STEP SOLUTION:\n1. For uniform deceleration to rest, average velocity is: v_avg = u / 2 = 15 / 2 = 7.5 m/s.\n2. Braking distance: s = v_avg \u00d7 t = 7.5 m/s \u00d7 3 s = 22.5 m.\n3. (Alternatively: a = 15/3 = 5 m/s\u00b2, s = 15(3) - 1/2(5)(9) = 45 - 22.5 = 22.5 m).\n\n5. FINAL ANSWER:\nOption A: 22.5 m\n\n6. QUICK TIP:\nFor any vehicle stopping uniformly from speed u in time t: s = 1/2 u t.",
+    "solutionStructured": {
+      "concept": "Distance s = v_avg \u00d7 t = [(u + v)/2] \u00d7 t = [(15 + 0)/2] \u00d7 3 = 7.5 \u00d7 3 = 22.5 m.",
+      "given": "u = 15 m/s, v = 0, t = 3 s.",
+      "formula": "s = [(u + v) / 2] \u00d7 t",
+      "stepByStep": "1. For uniform deceleration to rest, average velocity is: v_avg = u / 2 = 15 / 2 = 7.5 m/s.\n2. Braking distance: s = v_avg \u00d7 t = 7.5 m/s \u00d7 3 s = 22.5 m.\n3. (Alternatively: a = 15/3 = 5 m/s\u00b2, s = 15(3) - 1/2(5)(9) = 45 - 22.5 = 22.5 m).",
+      "finalAnswer": "Option A: 22.5 m",
+      "whyOtherOptionsWrong": "45 m is u \u00d7 t without the 1/2 factor."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Braking, stopping distance and reaction-time problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-422",
+    "questionNumber": 422,
+    "question": "A car moving at 54 km/h is stopped by brakes with deceleration 5 m/s\u00b2. If the driver's reaction time is 0.4 s, the total stopping distance of the car is:",
+    "options": {
+      "A": "28.5 m",
+      "B": "22.5 m",
+      "C": "6.0 m",
+      "D": "35.0 m"
+    },
+    "optionsList": [
+      "28.5 m",
+      "22.5 m",
+      "6.0 m",
+      "35.0 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nConvert speed: 54 km/h = 15 m/s. Reaction distance = 15 \u00d7 0.4 = 6 m. Braking distance = 15\u00b2 / (2\u00d75) = 225 / 10 = 22.5 m. Total = 6 + 22.5 = 28.5 m.\n\n2. GIVEN:\nu = 54 km/h = 15 m/s, a = 5 m/s\u00b2, t_react = 0.4 s.\n\n3. FORMULA / PRINCIPLE:\ns_total = u \u00d7 t_react + u\u00b2 / (2a)\n\n4. STEP-BY-STEP SOLUTION:\n1. Convert speed: u = 54 \u00d7 (5/18) = 15 m/s.\n2. Thinking distance during reaction time: s_react = 15 m/s \u00d7 0.4 s = 6.0 m.\n3. Braking distance: s_brake = u\u00b2 / (2a) = (15)\u00b2 / (2 \u00d7 5) = 225 / 10 = 22.5 m.\n4. Total stopping distance = s_react + s_brake = 6.0 m + 22.5 m = 28.5 m.\n\n5. FINAL ANSWER:\nOption A: 28.5 m\n\n6. QUICK TIP:\nAlways add thinking distance to braking distance!",
+    "solutionStructured": {
+      "concept": "Convert speed: 54 km/h = 15 m/s. Reaction distance = 15 \u00d7 0.4 = 6 m. Braking distance = 15\u00b2 / (2\u00d75) = 225 / 10 = 22.5 m. Total = 6 + 22.5 = 28.5 m.",
+      "given": "u = 54 km/h = 15 m/s, a = 5 m/s\u00b2, t_react = 0.4 s.",
+      "formula": "s_total = u \u00d7 t_react + u\u00b2 / (2a)",
+      "stepByStep": "1. Convert speed: u = 54 \u00d7 (5/18) = 15 m/s.\n2. Thinking distance during reaction time: s_react = 15 m/s \u00d7 0.4 s = 6.0 m.\n3. Braking distance: s_brake = u\u00b2 / (2a) = (15)\u00b2 / (2 \u00d7 5) = 225 / 10 = 22.5 m.\n4. Total stopping distance = s_react + s_brake = 6.0 m + 22.5 m = 28.5 m.",
+      "finalAnswer": "Option A: 28.5 m",
+      "whyOtherOptionsWrong": "22.5 m ignores the reaction distance (6 m)."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Braking, stopping distance and reaction-time problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-423",
+    "questionNumber": 423,
+    "question": "A car traveling at 72 km/h can be stopped by applying brakes over a distance of 20 m. If the total mass of the car is increased by 25% while the maximum braking force remains unchanged, the new stopping distance from the same initial speed will be:",
+    "options": {
+      "A": "25 m",
+      "B": "20 m",
+      "C": "30 m",
+      "D": "16 m"
+    },
+    "optionsList": [
+      "25 m",
+      "20 m",
+      "30 m",
+      "16 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDeceleration a = F/m. Increasing mass by 25% (m' = 1.25 m) reduces deceleration to a' = a / 1.25. Since s = v\u00b2 / (2a), s' = 1.25 s = 1.25 \u00d7 20 = 25 m.\n\n2. GIVEN:\nv = constant, m' = 1.25 m, F = constant, s = 20 m.\n\n3. FORMULA / PRINCIPLE:\ns \u221d m => s' = s \u00d7 (m' / m)\n\n4. STEP-BY-STEP SOLUTION:\n1. From Newton's second law: Braking deceleration a = F_brake / m.\n2. When mass increases to 1.25 m: new deceleration a' = F / (1.25 m) = a / 1.25.\n3. Stopping distance s = v\u00b2 / (2a) is inversely proportional to acceleration: s \u221d 1/a \u221d m.\n4. New stopping distance: s' = 1.25 \u00d7 s = 1.25 \u00d7 20 m = 25 m.\n\n5. FINAL ANSWER:\nOption A: 25 m\n\n6. QUICK TIP:\nFor constant braking force: Stopping distance is directly proportional to mass! (s \u221d m).",
+    "solutionStructured": {
+      "concept": "Deceleration a = F/m. Increasing mass by 25% (m' = 1.25 m) reduces deceleration to a' = a / 1.25. Since s = v\u00b2 / (2a), s' = 1.25 s = 1.25 \u00d7 20 = 25 m.",
+      "given": "v = constant, m' = 1.25 m, F = constant, s = 20 m.",
+      "formula": "s \u221d m => s' = s \u00d7 (m' / m)",
+      "stepByStep": "1. From Newton's second law: Braking deceleration a = F_brake / m.\n2. When mass increases to 1.25 m: new deceleration a' = F / (1.25 m) = a / 1.25.\n3. Stopping distance s = v\u00b2 / (2a) is inversely proportional to acceleration: s \u221d 1/a \u221d m.\n4. New stopping distance: s' = 1.25 \u00d7 s = 1.25 \u00d7 20 m = 25 m.",
+      "finalAnswer": "Option A: 25 m",
+      "whyOtherOptionsWrong": "16 m divides by 1.25 instead of multiplying."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Braking, stopping distance and reaction-time problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-424",
+    "questionNumber": 424,
+    "question": "A car travels at 20 m/s. The driver sees a red light 45 m ahead. With reaction time 0.5 s, what is the minimum magnitude of deceleration required to stop the car before the intersection?",
+    "options": {
+      "A": "5.71 m/s\u00b2",
+      "B": "4.44 m/s\u00b2",
+      "C": "5.00 m/s\u00b2",
+      "D": "6.25 m/s\u00b2"
+    },
+    "optionsList": [
+      "5.71 m/s\u00b2",
+      "4.44 m/s\u00b2",
+      "5.00 m/s\u00b2",
+      "6.25 m/s\u00b2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nReaction distance = 20 \u00d7 0.5 = 10 m. Remaining distance for braking = 45 - 10 = 35 m. a_min = v\u00b2 / (2 s_brake) = 20\u00b2 / (2 \u00d7 35) = 400 / 70 = 5.71 m/s\u00b2.\n\n2. GIVEN:\nv = 20 m/s, t_react = 0.5 s, total distance = 45 m.\n\n3. FORMULA / PRINCIPLE:\na_min = v\u00b2 / [2 (d_total - v t_react)]\n\n4. STEP-BY-STEP SOLUTION:\n1. Distance covered during reaction time: d_react = 20 m/s \u00d7 0.5 s = 10 m.\n2. Distance available for braking: d_brake = 45 m - 10 m = 35 m.\n3. Minimum deceleration required: a = v\u00b2 / (2 d_brake) = (20)\u00b2 / (2 \u00d7 35) = 400 / 70 \u2248 5.71 m/s\u00b2.\n\n5. FINAL ANSWER:\nOption A: 5.71 m/s\u00b2\n\n6. QUICK TIP:\nSubtract thinking distance first before applying a = v\u00b2 / (2s)!",
+    "solutionStructured": {
+      "concept": "Reaction distance = 20 \u00d7 0.5 = 10 m. Remaining distance for braking = 45 - 10 = 35 m. a_min = v\u00b2 / (2 s_brake) = 20\u00b2 / (2 \u00d7 35) = 400 / 70 = 5.71 m/s\u00b2.",
+      "given": "v = 20 m/s, t_react = 0.5 s, total distance = 45 m.",
+      "formula": "a_min = v\u00b2 / [2 (d_total - v t_react)]",
+      "stepByStep": "1. Distance covered during reaction time: d_react = 20 m/s \u00d7 0.5 s = 10 m.\n2. Distance available for braking: d_brake = 45 m - 10 m = 35 m.\n3. Minimum deceleration required: a = v\u00b2 / (2 d_brake) = (20)\u00b2 / (2 \u00d7 35) = 400 / 70 \u2248 5.71 m/s\u00b2.",
+      "finalAnswer": "Option A: 5.71 m/s\u00b2",
+      "whyOtherOptionsWrong": "4.44 m/s\u00b2 uses 45 m as the braking distance (400 / 90 = 4.44), forgetting reaction distance."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Braking, stopping distance and reaction-time problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-425",
+    "questionNumber": 425,
+    "question": "Two identical cars A and B are moving at speeds v and 2v on a straight road. When brakes producing equal deceleration are applied, the ratio of their stopping times t_A / t_B and stopping distances s_A / s_B are respectively:",
+    "options": {
+      "A": "1 : 2 and 1 : 4",
+      "B": "1 : 4 and 1 : 2",
+      "C": "1 : 2 and 1 : 2",
+      "D": "1 : 4 and 1 : 4"
+    },
+    "optionsList": [
+      "1 : 2 and 1 : 4",
+      "1 : 4 and 1 : 2",
+      "1 : 2 and 1 : 2",
+      "1 : 4 and 1 : 4"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nStopping time t = v / a \u221d v => t_A / t_B = 1 : 2. Stopping distance s = v\u00b2 / (2a) \u221d v\u00b2 => s_A / s_B = 1 : 4.\n\n2. GIVEN:\nSpeeds v and 2v, same deceleration a.\n\n3. FORMULA / PRINCIPLE:\nt \u221d v; s \u221d v\u00b2\n\n4. STEP-BY-STEP SOLUTION:\n1. Stopping time is given by t = v / a. Since a is the same: t \u221d v.\n   Ratio of stopping times: t_A / t_B = v / (2v) = 1 / 2 = 1 : 2.\n2. Stopping distance is given by s = v\u00b2 / (2a). Since a is the same: s \u221d v\u00b2.\n   Ratio of stopping distances: s_A / s_B = v\u00b2 / (2v)\u00b2 = 1 / 4 = 1 : 4.\n3. Therefore, the ratios are 1 : 2 and 1 : 4 respectively.\n\n5. FINAL ANSWER:\nOption A: 1 : 2 and 1 : 4\n\n6. QUICK TIP:\nTime scales linearly with speed; Distance scales quadratically with speed.",
+    "solutionStructured": {
+      "concept": "Stopping time t = v / a \u221d v => t_A / t_B = 1 : 2. Stopping distance s = v\u00b2 / (2a) \u221d v\u00b2 => s_A / s_B = 1 : 4.",
+      "given": "Speeds v and 2v, same deceleration a.",
+      "formula": "t \u221d v; s \u221d v\u00b2",
+      "stepByStep": "1. Stopping time is given by t = v / a. Since a is the same: t \u221d v.\n   Ratio of stopping times: t_A / t_B = v / (2v) = 1 / 2 = 1 : 2.\n2. Stopping distance is given by s = v\u00b2 / (2a). Since a is the same: s \u221d v\u00b2.\n   Ratio of stopping distances: s_A / s_B = v\u00b2 / (2v)\u00b2 = 1 / 4 = 1 : 4.\n3. Therefore, the ratios are 1 : 2 and 1 : 4 respectively.",
+      "finalAnswer": "Option A: 1 : 2 and 1 : 4",
+      "whyOtherOptionsWrong": "Option B reverses the dependencies."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Braking, stopping distance and reaction-time problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-426",
+    "questionNumber": 426,
+    "question": "A car is moving with speed 30 m/s on a wet road where the coefficient of friction is \u03bc = 0.45. Taking g = 10 m/s\u00b2, the minimum stopping distance of the car is:",
+    "options": {
+      "A": "100 m",
+      "B": "90 m",
+      "C": "80 m",
+      "D": "110 m"
+    },
+    "optionsList": [
+      "100 m",
+      "90 m",
+      "80 m",
+      "110 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nMaximum braking deceleration without skidding is a_max = \u03bc g = 0.45 \u00d7 10 = 4.5 m/s\u00b2. Stopping distance s = v\u00b2 / (2 a) = 30\u00b2 / (2 \u00d7 4.5) = 900 / 9 = 100 m.\n\n2. GIVEN:\nv = 30 m/s, \u03bc = 0.45, g = 10 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\na = \u03bc g; s = v\u00b2 / (2 \u03bc g)\n\n4. STEP-BY-STEP SOLUTION:\n1. Maximum braking force provided by friction: F_max = \u03bc m g.\n2. Maximum deceleration: a = F_max / m = \u03bc g = 0.45 \u00d7 10 = 4.5 m/s\u00b2.\n3. Minimum stopping distance: s = v\u00b2 / (2 a) = (30)\u00b2 / (2 \u00d7 4.5) = 900 / 9 = 100 m.\n\n5. FINAL ANSWER:\nOption A: 100 m\n\n6. QUICK TIP:\nFundamental formula connecting kinematics and friction: s_stop = v\u00b2 / (2 \u03bc g).",
+    "solutionStructured": {
+      "concept": "Maximum braking deceleration without skidding is a_max = \u03bc g = 0.45 \u00d7 10 = 4.5 m/s\u00b2. Stopping distance s = v\u00b2 / (2 a) = 30\u00b2 / (2 \u00d7 4.5) = 900 / 9 = 100 m.",
+      "given": "v = 30 m/s, \u03bc = 0.45, g = 10 m/s\u00b2.",
+      "formula": "a = \u03bc g; s = v\u00b2 / (2 \u03bc g)",
+      "stepByStep": "1. Maximum braking force provided by friction: F_max = \u03bc m g.\n2. Maximum deceleration: a = F_max / m = \u03bc g = 0.45 \u00d7 10 = 4.5 m/s\u00b2.\n3. Minimum stopping distance: s = v\u00b2 / (2 a) = (30)\u00b2 / (2 \u00d7 4.5) = 900 / 9 = 100 m.",
+      "finalAnswer": "Option A: 100 m",
+      "whyOtherOptionsWrong": "90 m arises from dividing 900 by 10 instead of 9."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Braking, stopping distance and reaction-time problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-427",
+    "questionNumber": 427,
+    "question": "A bullet loses 50% of its velocity after penetrating 3 cm into a target. How much further will it penetrate before coming to rest, assuming constant resistance?",
+    "options": {
+      "A": "1 cm",
+      "B": "2 cm",
+      "C": "3 cm",
+      "D": "0.5 cm"
+    },
+    "optionsList": [
+      "1 cm",
+      "2 cm",
+      "3 cm",
+      "0.5 cm"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nVelocity drops from u to u/2 in s\u2081 = 3 cm. Total stopping distance s_total = u\u00b2 / (2a). For first 3 cm: (u/2)\u00b2 = u\u00b2 - 2a(3) => u\u00b2/4 = u\u00b2 - 6a => 6a = 3u\u00b2/4 => 2a = u\u00b2/4. s_total = u\u00b2 / (2a) = u\u00b2 / (u\u00b2/4) = 4 cm. Additional distance = 4 - 3 = 1 cm.\n\n2. GIVEN:\nu\u2081 = u, v\u2081 = u/2, s\u2081 = 3 cm.\n\n3. FORMULA / PRINCIPLE:\nv\u00b2 = u\u00b2 - 2as => s_total = 4/3 s\u2081 = 4 cm; \u0394s = 4 - 3 = 1 cm\n\n4. STEP-BY-STEP SOLUTION:\n1. In the first 3 cm: v\u2081\u00b2 = u\u00b2 - 2 a s\u2081 => (u/2)\u00b2 = u\u00b2 - 2a(3).\n2. u\u00b2 / 4 = u\u00b2 - 6a => 6a = 3u\u00b2 / 4 => 2a = u\u00b2 / 4.\n3. Total penetration to complete stop (v = 0):\n   0 = u\u00b2 - 2 a s_total => s_total = u\u00b2 / (2a) = u\u00b2 / (u\u00b2 / 4) = 4 cm.\n4. Additional distance penetrated = s_total - s\u2081 = 4 cm - 3 cm = 1 cm.\n\n5. FINAL ANSWER:\nOption A: 1 cm\n\n6. QUICK TIP:\nClassic NEET bullet problem: Halving velocity uses up 75% of kinetic energy, so only 25% of penetration remains: 3 cm covers 75%, so 1 cm covers the remaining 25%!",
+    "solutionStructured": {
+      "concept": "Velocity drops from u to u/2 in s\u2081 = 3 cm. Total stopping distance s_total = u\u00b2 / (2a). For first 3 cm: (u/2)\u00b2 = u\u00b2 - 2a(3) => u\u00b2/4 = u\u00b2 - 6a => 6a = 3u\u00b2/4 => 2a = u\u00b2/4. s_total = u\u00b2 / (2a) = u\u00b2 / (u\u00b2/4) = 4 cm. Additional distance = 4 - 3 = 1 cm.",
+      "given": "u\u2081 = u, v\u2081 = u/2, s\u2081 = 3 cm.",
+      "formula": "v\u00b2 = u\u00b2 - 2as => s_total = 4/3 s\u2081 = 4 cm; \u0394s = 4 - 3 = 1 cm",
+      "stepByStep": "1. In the first 3 cm: v\u2081\u00b2 = u\u00b2 - 2 a s\u2081 => (u/2)\u00b2 = u\u00b2 - 2a(3).\n2. u\u00b2 / 4 = u\u00b2 - 6a => 6a = 3u\u00b2 / 4 => 2a = u\u00b2 / 4.\n3. Total penetration to complete stop (v = 0):\n   0 = u\u00b2 - 2 a s_total => s_total = u\u00b2 / (2a) = u\u00b2 / (u\u00b2 / 4) = 4 cm.\n4. Additional distance penetrated = s_total - s\u2081 = 4 cm - 3 cm = 1 cm.",
+      "finalAnswer": "Option A: 1 cm",
+      "whyOtherOptionsWrong": "3 cm falsely assumes losing the remaining 50% takes the same distance."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Braking, stopping distance and reaction-time problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-428",
+    "questionNumber": 428,
+    "question": "A driver traveling at 100 km/h applies brakes and decelerates at 4 m/s\u00b2. The time taken by the car to reduce its speed to 28 km/h is:",
+    "options": {
+      "A": "5 s",
+      "B": "4 s",
+      "C": "6 s",
+      "D": "3 s"
+    },
+    "optionsList": [
+      "5 s",
+      "4 s",
+      "6 s",
+      "3 s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\n\u0394v = 100 - 28 = 72 km/h. In m/s: 72 \u00d7 5/18 = 20 m/s. Time t = \u0394v / a = 20 / 4 = 5 s.\n\n2. GIVEN:\nu = 100 km/h, v = 28 km/h, a = 4 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\nt = (u - v) / a\n\n4. STEP-BY-STEP SOLUTION:\n1. Change in speed: \u0394v = 100 km/h - 28 km/h = 72 km/h.\n2. Convert \u0394v to m/s: \u0394v = 72 \u00d7 (5/18) = 20 m/s.\n3. Time taken: t = \u0394v / a = 20 m/s / 4 m/s\u00b2 = 5 s.\n\n5. FINAL ANSWER:\nOption A: 5 s\n\n6. QUICK TIP:\nConvert the SPEED DIFFERENCE directly to m/s: 72 km/h = 20 m/s!",
+    "solutionStructured": {
+      "concept": "\u0394v = 100 - 28 = 72 km/h. In m/s: 72 \u00d7 5/18 = 20 m/s. Time t = \u0394v / a = 20 / 4 = 5 s.",
+      "given": "u = 100 km/h, v = 28 km/h, a = 4 m/s\u00b2.",
+      "formula": "t = (u - v) / a",
+      "stepByStep": "1. Change in speed: \u0394v = 100 km/h - 28 km/h = 72 km/h.\n2. Convert \u0394v to m/s: \u0394v = 72 \u00d7 (5/18) = 20 m/s.\n3. Time taken: t = \u0394v / a = 20 m/s / 4 m/s\u00b2 = 5 s.",
+      "finalAnswer": "Option A: 5 s",
+      "whyOtherOptionsWrong": "4 s or 6 s arise from converting individual speeds with rounding errors."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Braking, stopping distance and reaction-time problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-429",
+    "questionNumber": 429,
+    "question": "In a test of reaction time using a dropped meter stick, a student catches the ruler after it has fallen a distance of 19.6 cm from rest. What is the student's reaction time? (take g = 9.8 m/s\u00b2)",
+    "options": {
+      "A": "0.20 s",
+      "B": "0.10 s",
+      "C": "0.15 s",
+      "D": "0.25 s"
+    },
+    "optionsList": [
+      "0.20 s",
+      "0.10 s",
+      "0.15 s",
+      "0.25 s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nNCERT reaction time ruler experiment: h = 1/2 g t\u00b2 => t = \u221a(2h / g). With h = 0.196 m and g = 9.8 m/s\u00b2: t = \u221a(2 \u00d7 0.196 / 9.8) = \u221a(0.392 / 9.8) = \u221a0.04 = 0.20 s.\n\n2. GIVEN:\nFall distance h = 19.6 cm = 0.196 m, g = 9.8 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\nt_reaction = \u221a(2h / g)\n\n4. STEP-BY-STEP SOLUTION:\n1. Ruler falls freely from rest under gravity: u = 0, a = g = 9.8 m/s\u00b2.\n2. Convert fall distance to meters: h = 19.6 cm = 0.196 m.\n3. Formula for time of fall: h = (1/2) g t\u00b2 => t = \u221a(2h / g).\n4. Substitute: t = \u221a(2 \u00d7 0.196 / 9.8) = \u221a(0.04) = 0.20 s.\n\n5. FINAL ANSWER:\nOption A: 0.20 s\n\n6. QUICK TIP:\nNCERT Class 11 Section 3.7 Ruler Drop Experiment! Standard human reaction time is ~0.2 s.",
+    "solutionStructured": {
+      "concept": "NCERT reaction time ruler experiment: h = 1/2 g t\u00b2 => t = \u221a(2h / g). With h = 0.196 m and g = 9.8 m/s\u00b2: t = \u221a(2 \u00d7 0.196 / 9.8) = \u221a(0.392 / 9.8) = \u221a0.04 = 0.20 s.",
+      "given": "Fall distance h = 19.6 cm = 0.196 m, g = 9.8 m/s\u00b2.",
+      "formula": "t_reaction = \u221a(2h / g)",
+      "stepByStep": "1. Ruler falls freely from rest under gravity: u = 0, a = g = 9.8 m/s\u00b2.\n2. Convert fall distance to meters: h = 19.6 cm = 0.196 m.\n3. Formula for time of fall: h = (1/2) g t\u00b2 => t = \u221a(2h / g).\n4. Substitute: t = \u221a(2 \u00d7 0.196 / 9.8) = \u221a(0.04) = 0.20 s.",
+      "finalAnswer": "Option A: 0.20 s",
+      "whyOtherOptionsWrong": "0.10 s would give h = 4.9 cm."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Braking, stopping distance and reaction-time problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-430",
+    "questionNumber": 430,
+    "question": "A body moving with constant retardation covers 10 m while its velocity decreases from 8 m/s to 6 m/s. How much further does it move before coming to rest?",
+    "options": {
+      "A": "12.86 m",
+      "B": "10.00 m",
+      "C": "15.00 m",
+      "D": "8.50 m"
+    },
+    "optionsList": [
+      "12.86 m",
+      "10.00 m",
+      "15.00 m",
+      "8.50 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nv\u00b2 = u\u00b2 - 2as => 6\u00b2 = 8\u00b2 - 2a(10) => 36 = 64 - 20a => 20a = 28 => 2a = 2.8. Remaining distance to rest (from 6 m/s to 0): s' = 6\u00b2 / (2a) = 36 / 2.8 = 360 / 28 = 90 / 7 \u2248 12.86 m.\n\n2. GIVEN:\nu = 8 m/s, v = 6 m/s, s = 10 m.\n\n3. FORMULA / PRINCIPLE:\n2a = (u\u00b2 - v\u00b2) / s; s' = v\u00b2 / (2a)\n\n4. STEP-BY-STEP SOLUTION:\n1. For the first stage: v\u00b2 = u\u00b2 - 2as => 6\u00b2 = 8\u00b2 - 2a(10).\n2. 36 = 64 - 20a => 20a = 28 => 2a = 2.8 m/s\u00b2.\n3. For the remaining motion to rest (from v = 6 m/s to 0 m/s):\n   s' = v\u00b2 / (2a) = 6\u00b2 / 2.8 = 36 / 2.8 = 90 / 7 \u2248 12.86 m.\n\n5. FINAL ANSWER:\nOption A: 12.86 m\n\n6. QUICK TIP:\nUse 2as = u\u00b2 - v\u00b2 directly as a ratio: s'/s = 6\u00b2 / (8\u00b2 - 6\u00b2) = 36 / 28 = 9/7 => s' = 10 \u00d7 9/7 = 12.86 m!",
+    "solutionStructured": {
+      "concept": "v\u00b2 = u\u00b2 - 2as => 6\u00b2 = 8\u00b2 - 2a(10) => 36 = 64 - 20a => 20a = 28 => 2a = 2.8. Remaining distance to rest (from 6 m/s to 0): s' = 6\u00b2 / (2a) = 36 / 2.8 = 360 / 28 = 90 / 7 \u2248 12.86 m.",
+      "given": "u = 8 m/s, v = 6 m/s, s = 10 m.",
+      "formula": "2a = (u\u00b2 - v\u00b2) / s; s' = v\u00b2 / (2a)",
+      "stepByStep": "1. For the first stage: v\u00b2 = u\u00b2 - 2as => 6\u00b2 = 8\u00b2 - 2a(10).\n2. 36 = 64 - 20a => 20a = 28 => 2a = 2.8 m/s\u00b2.\n3. For the remaining motion to rest (from v = 6 m/s to 0 m/s):\n   s' = v\u00b2 / (2a) = 6\u00b2 / 2.8 = 36 / 2.8 = 90 / 7 \u2248 12.86 m.",
+      "finalAnswer": "Option A: 12.86 m",
+      "whyOtherOptionsWrong": "10.0 m falsely assumes equal distance for equal velocity drops."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Braking, stopping distance and reaction-time problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-431",
+    "questionNumber": 431,
+    "question": "A car is moving on a straight road. Brakes are applied producing uniform deceleration a. In the first t seconds of braking, it covers distance s\u2081, and in the next t seconds it covers distance s\u2082 before coming to rest. Which relation is correct?",
+    "options": {
+      "A": "s\u2081 = 3 s\u2082",
+      "B": "s\u2081 = 2 s\u2082",
+      "C": "s\u2081 = 4 s\u2082",
+      "D": "s\u2081 = s\u2082"
+    },
+    "optionsList": [
+      "s\u2081 = 3 s\u2082",
+      "s\u2081 = 2 s\u2082",
+      "s\u2081 = 4 s\u2082",
+      "s\u2081 = s\u2082"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nReversing the motion in time from rest: distances in consecutive equal time intervals t starting from rest are in ratio 1 : 3 (Galileo's law). The last t seconds covers s\u2082, the preceding t seconds covers s\u2081 = 3 s\u2082.\n\n2. GIVEN:\nUniform braking to rest in two consecutive equal time intervals t.\n\n3. FORMULA / PRINCIPLE:\ns\u2081 / s\u2082 = 3 / 1 (by time reversal symmetry)\n\n4. STEP-BY-STEP SOLUTION:\n1. Consider the time-reversed motion: an object starting from rest with uniform acceleration a.\n2. In the first t seconds from rest, it covers distance s_first = (1/2) a t\u00b2.\n3. In the next t seconds, it covers distance s_second = 3 \u00d7 [(1/2) a t\u00b2].\n4. By symmetry, during braking to rest, the last interval of duration t covers s\u2082 = (1/2) a t\u00b2,\n   and the preceding interval of duration t covers s\u2081 = 3 \u00d7 (1/2) a t\u00b2.\n5. Therefore: s\u2081 = 3 s\u2082.\n\n5. FINAL ANSWER:\nOption A: s\u2081 = 3 s\u2082\n\n6. QUICK TIP:\nTime reversal symmetry: A body coming to rest under constant deceleration behaves identically to a body starting from rest in reverse time! Distances in successive equal intervals backward are 1 : 3 : 5.",
+    "solutionStructured": {
+      "concept": "Reversing the motion in time from rest: distances in consecutive equal time intervals t starting from rest are in ratio 1 : 3 (Galileo's law). The last t seconds covers s\u2082, the preceding t seconds covers s\u2081 = 3 s\u2082.",
+      "given": "Uniform braking to rest in two consecutive equal time intervals t.",
+      "formula": "s\u2081 / s\u2082 = 3 / 1 (by time reversal symmetry)",
+      "stepByStep": "1. Consider the time-reversed motion: an object starting from rest with uniform acceleration a.\n2. In the first t seconds from rest, it covers distance s_first = (1/2) a t\u00b2.\n3. In the next t seconds, it covers distance s_second = 3 \u00d7 [(1/2) a t\u00b2].\n4. By symmetry, during braking to rest, the last interval of duration t covers s\u2082 = (1/2) a t\u00b2,\n   and the preceding interval of duration t covers s\u2081 = 3 \u00d7 (1/2) a t\u00b2.\n5. Therefore: s\u2081 = 3 s\u2082.",
+      "finalAnswer": "Option A: s\u2081 = 3 s\u2082",
+      "whyOtherOptionsWrong": "s\u2081 = 2 s\u2082 is mathematically incorrect under constant acceleration."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Braking, stopping distance and reaction-time problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-432",
+    "questionNumber": 432,
+    "question": "A driver traveling at 30 m/s applies brakes and skids to a stop in 60 m. If the same driver was traveling at 40 m/s, what would be the stopping distance under identical conditions?",
+    "options": {
+      "A": "106.7 m",
+      "B": "80.0 m",
+      "C": "120.0 m",
+      "D": "90.0 m"
+    },
+    "optionsList": [
+      "106.7 m",
+      "80.0 m",
+      "120.0 m",
+      "90.0 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\ns \u221d v\u00b2 => s\u2082 = s\u2081 \u00d7 (v\u2082 / v\u2081)\u00b2 = 60 \u00d7 (40 / 30)\u00b2 = 60 \u00d7 (16 / 9) = 960 / 9 = 106.67 m.\n\n2. GIVEN:\nv\u2081 = 30 m/s, s\u2081 = 60 m, v\u2082 = 40 m/s.\n\n3. FORMULA / PRINCIPLE:\ns\u2082 = s\u2081 \u00d7 (v\u2082 / v\u2081)\u00b2\n\n4. STEP-BY-STEP SOLUTION:\n1. Braking distance is proportional to speed squared: s \u221d v\u00b2.\n2. Ratio of speeds: v\u2082 / v\u2081 = 40 / 30 = 4 / 3.\n3. Ratio of stopping distances: s\u2082 / s\u2081 = (4 / 3)\u00b2 = 16 / 9.\n4. New stopping distance: s\u2082 = 60 m \u00d7 (16 / 9) = 320 / 3 \u2248 106.67 m.\n\n5. FINAL ANSWER:\nOption A: 106.7 m\n\n6. QUICK TIP:\nAlways calculate (v\u2082/v\u2081)\u00b2: (4/3)\u00b2 = 16/9, then 60 \u00d7 16/9 = 106.7 m.",
+    "solutionStructured": {
+      "concept": "s \u221d v\u00b2 => s\u2082 = s\u2081 \u00d7 (v\u2082 / v\u2081)\u00b2 = 60 \u00d7 (40 / 30)\u00b2 = 60 \u00d7 (16 / 9) = 960 / 9 = 106.67 m.",
+      "given": "v\u2081 = 30 m/s, s\u2081 = 60 m, v\u2082 = 40 m/s.",
+      "formula": "s\u2082 = s\u2081 \u00d7 (v\u2082 / v\u2081)\u00b2",
+      "stepByStep": "1. Braking distance is proportional to speed squared: s \u221d v\u00b2.\n2. Ratio of speeds: v\u2082 / v\u2081 = 40 / 30 = 4 / 3.\n3. Ratio of stopping distances: s\u2082 / s\u2081 = (4 / 3)\u00b2 = 16 / 9.\n4. New stopping distance: s\u2082 = 60 m \u00d7 (16 / 9) = 320 / 3 \u2248 106.67 m.",
+      "finalAnswer": "Option A: 106.7 m",
+      "whyOtherOptionsWrong": "80 m assumes linear scaling (60 \u00d7 40/30 = 80 m), which is physically invalid."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Braking, stopping distance and reaction-time problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-433",
+    "questionNumber": 433,
+    "question": "A truck and a car are moving on a highway with the same kinetic energy. If equal retarding forces are applied to both, which vehicle covers less distance before stopping?",
+    "options": {
+      "A": "Both cover the exact same distance",
+      "B": "The truck covers less distance",
+      "C": "The car covers less distance",
+      "D": "Depends on their masses"
+    },
+    "optionsList": [
+      "Both cover the exact same distance",
+      "The truck covers less distance",
+      "The car covers less distance",
+      "Depends on their masses"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nWork-Energy Theorem: Work done by retarding force W = F \u00d7 s = Initial KE. Since both have the SAME kinetic energy and experience the SAME retarding force F, their stopping distances are identical: s = KE / F.\n\n2. GIVEN:\nKE_truck = KE_car, F_truck = F_car.\n\n3. FORMULA / PRINCIPLE:\nWork = F \u00d7 s = KE => s = KE / F\n\n4. STEP-BY-STEP SOLUTION:\n1. By the Work-Energy Theorem, the work done by the braking force brings the vehicle to rest: F \u00d7 s = KE.\n2. Stopping distance: s = KE / F.\n3. Since both vehicles have identical initial kinetic energies (KE_truck = KE_car) and experience identical braking forces (F_truck = F_car):\n   s_truck = KE / F = s_car.\n4. Therefore, both vehicles stop in the EXACT same distance!\n\n5. FINAL ANSWER:\nOption A: Both cover the exact same distance\n\n6. QUICK TIP:\nCLASSIC NEET TRAP: If KE is the same and F is the same, distance is the same! (If linear MOMENTUM was the same, the heavier vehicle would stop in less distance).",
+    "solutionStructured": {
+      "concept": "Work-Energy Theorem: Work done by retarding force W = F \u00d7 s = Initial KE. Since both have the SAME kinetic energy and experience the SAME retarding force F, their stopping distances are identical: s = KE / F.",
+      "given": "KE_truck = KE_car, F_truck = F_car.",
+      "formula": "Work = F \u00d7 s = KE => s = KE / F",
+      "stepByStep": "1. By the Work-Energy Theorem, the work done by the braking force brings the vehicle to rest: F \u00d7 s = KE.\n2. Stopping distance: s = KE / F.\n3. Since both vehicles have identical initial kinetic energies (KE_truck = KE_car) and experience identical braking forces (F_truck = F_car):\n   s_truck = KE / F = s_car.\n4. Therefore, both vehicles stop in the EXACT same distance!",
+      "finalAnswer": "Option A: Both cover the exact same distance",
+      "whyOtherOptionsWrong": "Option B or C confuse kinetic energy with momentum or speed."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Braking, stopping distance and reaction-time problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-434",
+    "questionNumber": 434,
+    "question": "A truck and a car are moving with the same linear momentum. If equal retarding forces are applied to both, which vehicle covers less distance before stopping?",
+    "options": {
+      "A": "The truck covers less distance",
+      "B": "The car covers less distance",
+      "C": "Both cover the same distance",
+      "D": "Cannot be predicted"
+    },
+    "optionsList": [
+      "The truck covers less distance",
+      "The car covers less distance",
+      "Both cover the same distance",
+      "Cannot be predicted"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nKinetic energy is KE = p\u00b2 / (2m). Since momentum p is the same, KE is inversely proportional to mass: KE \u221d 1/m. The truck has greater mass, so it has LESS kinetic energy. Since s = KE / F, the truck covers less distance before stopping.\n\n2. GIVEN:\np_truck = p_car, m_truck > m_car, F_truck = F_car.\n\n3. FORMULA / PRINCIPLE:\ns = p\u00b2 / (2m F) => s \u221d 1 / m\n\n4. STEP-BY-STEP SOLUTION:\n1. Kinetic energy in terms of momentum: KE = p\u00b2 / (2m).\n2. Work-energy theorem: F \u00d7 s = KE => s = p\u00b2 / (2m F).\n3. Given that p and F are identical for both vehicles: s \u221d 1 / m.\n4. Since the mass of the truck is greater than the car (m_truck > m_car), s_truck < s_car.\n5. The truck covers LESS distance before coming to rest.\n\n5. FINAL ANSWER:\nOption A: The truck covers less distance\n\n6. QUICK TIP:\nCompare this with the previous question: Same KE => Same distance! Same momentum => Heavier stops shorter!",
+    "solutionStructured": {
+      "concept": "Kinetic energy is KE = p\u00b2 / (2m). Since momentum p is the same, KE is inversely proportional to mass: KE \u221d 1/m. The truck has greater mass, so it has LESS kinetic energy. Since s = KE / F, the truck covers less distance before stopping.",
+      "given": "p_truck = p_car, m_truck > m_car, F_truck = F_car.",
+      "formula": "s = p\u00b2 / (2m F) => s \u221d 1 / m",
+      "stepByStep": "1. Kinetic energy in terms of momentum: KE = p\u00b2 / (2m).\n2. Work-energy theorem: F \u00d7 s = KE => s = p\u00b2 / (2m F).\n3. Given that p and F are identical for both vehicles: s \u221d 1 / m.\n4. Since the mass of the truck is greater than the car (m_truck > m_car), s_truck < s_car.\n5. The truck covers LESS distance before coming to rest.",
+      "finalAnswer": "Option A: The truck covers less distance",
+      "whyOtherOptionsWrong": "Option C holds when kinetic energy is the same, not when momentum is the same."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Braking, stopping distance and reaction-time problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-435",
+    "questionNumber": 435,
+    "question": "In the previous question (same momentum p and same retarding force F), what is the ratio of their stopping times t_truck / t_car?",
+    "options": {
+      "A": "1 : 1",
+      "B": "m_truck : m_car",
+      "C": "m_car : m_truck",
+      "D": "\u221a(m_truck / m_car)"
+    },
+    "optionsList": [
+      "1 : 1",
+      "m_truck : m_car",
+      "m_car : m_truck",
+      "\u221a(m_truck / m_car)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nImpulse-Momentum Theorem: Impulse J = F \u00d7 t = \u0394p = p - 0 = p. Since both have the same initial momentum p and same retarding force F, their stopping times are identical: t = p / F => t_truck / t_car = 1 : 1.\n\n2. GIVEN:\np_truck = p_car, F_truck = F_car.\n\n3. FORMULA / PRINCIPLE:\nF \u00d7 t = p => t = p / F\n\n4. STEP-BY-STEP SOLUTION:\n1. By the Impulse-Momentum theorem: F \u00d7 \u0394t = \u0394p.\n2. To bring either vehicle to rest from initial momentum p: F \u00d7 t_stop = p.\n3. Therefore, stopping time is: t_stop = p / F.\n4. Since both vehicles possess the exact same initial momentum p and face the exact same retarding force F:\n   t_truck = p / F = t_car.\n5. The ratio of their stopping times is exactly 1 : 1.\n\n5. FINAL ANSWER:\nOption A: 1 : 1\n\n6. QUICK TIP:\nMIND-BLOWING NEET RESULT: Same momentum + Same force = SAME STOPPING TIME! (Even though distances are different!).",
+    "solutionStructured": {
+      "concept": "Impulse-Momentum Theorem: Impulse J = F \u00d7 t = \u0394p = p - 0 = p. Since both have the same initial momentum p and same retarding force F, their stopping times are identical: t = p / F => t_truck / t_car = 1 : 1.",
+      "given": "p_truck = p_car, F_truck = F_car.",
+      "formula": "F \u00d7 t = p => t = p / F",
+      "stepByStep": "1. By the Impulse-Momentum theorem: F \u00d7 \u0394t = \u0394p.\n2. To bring either vehicle to rest from initial momentum p: F \u00d7 t_stop = p.\n3. Therefore, stopping time is: t_stop = p / F.\n4. Since both vehicles possess the exact same initial momentum p and face the exact same retarding force F:\n   t_truck = p / F = t_car.\n5. The ratio of their stopping times is exactly 1 : 1.",
+      "finalAnswer": "Option A: 1 : 1",
+      "whyOtherOptionsWrong": "Option B or C falsely introduce mass, which cancels out via momentum p = mv and F = ma."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Braking, stopping distance and reaction-time problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  }
+]

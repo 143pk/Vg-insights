@@ -1,0 +1,668 @@
+[
+  {
+    "id": "mip-mcq-036",
+    "questionNumber": 36,
+    "question": "What is the magnitude of the vector $\\vec{A} = 6\\hat{i} + 8\\hat{j}$?",
+    "options": {
+      "A": "10",
+      "B": "14",
+      "C": "48",
+      "D": "2"
+    },
+    "optionsList": [
+      "10",
+      "14",
+      "48",
+      "2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe magnitude of a two-dimensional vector $\\vec{A} = A_x\\hat{i} + A_y\\hat{j}$ is given by the Pythagorean formula: $|\\vec{A}| = \\sqrt{A_x^2 + A_y^2}$.\n\n2. GIVEN:\nVector $\\vec{A} = 6\\hat{i} + 8\\hat{j}$.\n\n3. FORMULA / PRINCIPLE:\n$|\\vec{A}| = \\sqrt{A_x^2 + A_y^2}$\n\n4. STEP-BY-STEP SOLUTION:\n1. Identify the components: $A_x = 6$, $A_y = 8$.\n2. Apply the magnitude formula: $|\\vec{A}| = \\sqrt{6^2 + 8^2}$.\n3. Compute the squares: $6^2 = 36$, $8^2 = 64$.\n4. Sum: $36 + 64 = 100$.\n5. Square root: $\\sqrt{100} = 10$.\n\n5. FINAL ANSWER:\nOption A: 10\n\n6. QUICK TIP:\nPythagorean triples to memorize for NEET: (3, 4, 5), (6, 8, 10), (5, 12, 13), (7, 24, 25), (8, 15, 17).",
+    "solutionStructured": {
+      "concept": "The magnitude of a two-dimensional vector $\\vec{A} = A_x\\hat{i} + A_y\\hat{j}$ is given by the Pythagorean formula: $|\\vec{A}| = \\sqrt{A_x^2 + A_y^2}$.",
+      "given": "Vector $\\vec{A} = 6\\hat{i} + 8\\hat{j}$.",
+      "formula": "$|\\vec{A}| = \\sqrt{A_x^2 + A_y^2}$",
+      "stepByStep": "1. Identify the components: $A_x = 6$, $A_y = 8$.\n2. Apply the magnitude formula: $|\\vec{A}| = \\sqrt{6^2 + 8^2}$.\n3. Compute the squares: $6^2 = 36$, $8^2 = 64$.\n4. Sum: $36 + 64 = 100$.\n5. Square root: $\\sqrt{100} = 10$.",
+      "finalAnswer": "Option A: 10",
+      "whyOtherOptionsWrong": "14 is the simple arithmetic sum $6 + 8$, which ignores vector orthogonality."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Magnitude and direction of vectors",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-037",
+    "questionNumber": 37,
+    "question": "What angle does the vector $\\vec{A} = 4\\hat{i} + 4\\hat{j}$ make with the positive x-axis?",
+    "options": {
+      "A": "45\u00b0",
+      "B": "30\u00b0",
+      "C": "60\u00b0",
+      "D": "90\u00b0"
+    },
+    "optionsList": [
+      "45\u00b0",
+      "30\u00b0",
+      "60\u00b0",
+      "90\u00b0"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe angle $\\theta$ made by a vector $\\vec{A} = A_x\\hat{i} + A_y\\hat{j}$ with the positive x-axis is given by $\\tan\\theta = \\frac{A_y}{A_x}$.\n\n2. GIVEN:\n$A_x = 4$, $A_y = 4$.\n\n3. FORMULA / PRINCIPLE:\n$\\tan\\theta = \\frac{A_y}{A_x} \\implies \\theta = \\tan^{-1}\\left(\\frac{A_y}{A_x}\\right)$\n\n4. STEP-BY-STEP SOLUTION:\n1. Find the ratio of components: $\\tan\\theta = \\frac{A_y}{A_x} = \\frac{4}{4} = 1$.\n2. Since both $A_x > 0$ and $A_y > 0$, the vector lies in the first quadrant.\n3. The angle whose tangent is 1 in the first quadrant is $45^\\circ$.\n4. Therefore, $\\theta = 45^\\circ$.\n\n5. FINAL ANSWER:\nOption A: 45\u00b0\n\n6. QUICK TIP:\nWhenever $A_x = A_y > 0$, the angle with the x-axis is always exactly $45^\\circ$!",
+    "solutionStructured": {
+      "concept": "The angle $\\theta$ made by a vector $\\vec{A} = A_x\\hat{i} + A_y\\hat{j}$ with the positive x-axis is given by $\\tan\\theta = \\frac{A_y}{A_x}$.",
+      "given": "$A_x = 4$, $A_y = 4$.",
+      "formula": "$\\tan\\theta = \\frac{A_y}{A_x} \\implies \\theta = \\tan^{-1}\\left(\\frac{A_y}{A_x}\\right)$",
+      "stepByStep": "1. Find the ratio of components: $\\tan\\theta = \\frac{A_y}{A_x} = \\frac{4}{4} = 1$.\n2. Since both $A_x > 0$ and $A_y > 0$, the vector lies in the first quadrant.\n3. The angle whose tangent is 1 in the first quadrant is $45^\\circ$.\n4. Therefore, $\\theta = 45^\\circ$.",
+      "finalAnswer": "Option A: 45\u00b0",
+      "whyOtherOptionsWrong": "30\u00b0 would require $\\tan\\theta = 1/\\sqrt{3} \\approx 0.577$."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Magnitude and direction of vectors",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-038",
+    "questionNumber": 38,
+    "question": "The magnitude of the position vector $\\vec{r} = 2\\hat{i} + 3\\hat{j} + 6\\hat{k}$ is:",
+    "options": {
+      "A": "7",
+      "B": "11",
+      "C": "49",
+      "D": "5"
+    },
+    "optionsList": [
+      "7",
+      "11",
+      "49",
+      "5"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor a 3D vector $\\vec{r} = x\\hat{i} + y\\hat{j} + z\\hat{k}$, the magnitude is $|\\vec{r}| = \\sqrt{x^2 + y^2 + z^2}$.\n\n2. GIVEN:\n$\\vec{r} = 2\\hat{i} + 3\\hat{j} + 6\\hat{k}$.\n\n3. FORMULA / PRINCIPLE:\n$|\\vec{r}| = \\sqrt{x^2 + y^2 + z^2}$\n\n4. STEP-BY-STEP SOLUTION:\n1. Extract components: $x = 2$, $y = 3$, $z = 6$.\n2. Compute squares: $2^2 = 4$, $3^2 = 9$, $6^2 = 36$.\n3. Sum: $4 + 9 + 36 = 49$.\n4. Take square root: $\\sqrt{49} = 7$.\n5. The magnitude is 7 units.\n\n5. FINAL ANSWER:\nOption A: 7\n\n6. QUICK TIP:\nClassic NEET 3D Pythagorean triple: $(2, 3, 6) \\implies \\sqrt{4+9+36} = \\sqrt{49} = 7$!",
+    "solutionStructured": {
+      "concept": "For a 3D vector $\\vec{r} = x\\hat{i} + y\\hat{j} + z\\hat{k}$, the magnitude is $|\\vec{r}| = \\sqrt{x^2 + y^2 + z^2}$.",
+      "given": "$\\vec{r} = 2\\hat{i} + 3\\hat{j} + 6\\hat{k}$.",
+      "formula": "$|\\vec{r}| = \\sqrt{x^2 + y^2 + z^2}$",
+      "stepByStep": "1. Extract components: $x = 2$, $y = 3$, $z = 6$.\n2. Compute squares: $2^2 = 4$, $3^2 = 9$, $6^2 = 36$.\n3. Sum: $4 + 9 + 36 = 49$.\n4. Take square root: $\\sqrt{49} = 7$.\n5. The magnitude is 7 units.",
+      "finalAnswer": "Option A: 7",
+      "whyOtherOptionsWrong": "11 is the sum of magnitudes $2 + 3 + 6$, not Euclidean vector magnitude."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Magnitude and direction of vectors",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-039",
+    "questionNumber": 39,
+    "question": "A vector $\\vec{A}$ has a magnitude of 20 units and makes an angle of 30\u00b0 with the positive x-axis. What are its horizontal and vertical components, respectively?",
+    "options": {
+      "A": "10\u221a3 units and 10 units",
+      "B": "10 units and 10\u221a3 units",
+      "C": "10\u221a2 units and 10\u221a2 units",
+      "D": "20 units and 10 units"
+    },
+    "optionsList": [
+      "10\u221a3 units and 10 units",
+      "10 units and 10\u221a3 units",
+      "10\u221a2 units and 10\u221a2 units",
+      "20 units and 10 units"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nA vector of magnitude $A$ making angle $\\theta$ with the positive x-axis resolves into $A_x = A\\cos\\theta$ and $A_y = A\\sin\\theta$.\n\n2. GIVEN:\n$A = 20$, $\\theta = 30^\\circ$.\n\n3. FORMULA / PRINCIPLE:\n$A_x = A\\cos(30^\\circ)$; $A_y = A\\sin(30^\\circ)$\n\n4. STEP-BY-STEP SOLUTION:\n1. Horizontal component: $A_x = 20\\cos 30^\\circ = 20 \\times \\frac{\\sqrt{3}}{2} = 10\\sqrt{3}$ units.\n2. Vertical component: $A_y = 20\\sin 30^\\circ = 20 \\times \\frac{1}{2} = 10$ units.\n3. Thus, components are $10\\sqrt{3}$ and $10$.\n\n5. FINAL ANSWER:\nOption A: 10\u221a3 units and 10 units\n\n6. QUICK TIP:\nSide adjacent to angle $\\theta$ takes $\\cos\\theta$; side opposite takes $\\sin\\theta$.",
+    "solutionStructured": {
+      "concept": "A vector of magnitude $A$ making angle $\\theta$ with the positive x-axis resolves into $A_x = A\\cos\\theta$ and $A_y = A\\sin\\theta$.",
+      "given": "$A = 20$, $\\theta = 30^\\circ$.",
+      "formula": "$A_x = A\\cos(30^\\circ)$; $A_y = A\\sin(30^\\circ)$",
+      "stepByStep": "1. Horizontal component: $A_x = 20\\cos 30^\\circ = 20 \\times \\frac{\\sqrt{3}}{2} = 10\\sqrt{3}$ units.\n2. Vertical component: $A_y = 20\\sin 30^\\circ = 20 \\times \\frac{1}{2} = 10$ units.\n3. Thus, components are $10\\sqrt{3}$ and $10$.",
+      "finalAnswer": "Option A: 10\u221a3 units and 10 units",
+      "whyOtherOptionsWrong": "Option B swaps the horizontal and vertical components."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Magnitude and direction of vectors",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-040",
+    "questionNumber": 40,
+    "question": "A vector $\\vec{B}$ has components $B_x = -3$ and $B_y = 4$. What angle does $\\vec{B}$ make with the positive x-axis?",
+    "options": {
+      "A": "127\u00b0",
+      "B": "53\u00b0",
+      "C": "143\u00b0",
+      "D": "37\u00b0"
+    },
+    "optionsList": [
+      "127\u00b0",
+      "53\u00b0",
+      "143\u00b0",
+      "37\u00b0"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nWhen $B_x < 0$ and $B_y > 0$, the vector lies in the second quadrant. The angle with the negative x-axis is $\\phi = \\tan^{-1}(|B_y|/|B_x|) = \\tan^{-1}(4/3) \\approx 53^\\circ$. The angle with the positive x-axis is $\\theta = 180^\\circ - \\phi = 180^\\circ - 53^\\circ = 127^\\circ$.\n\n2. GIVEN:\n$B_x = -3$, $B_y = 4$.\n\n3. FORMULA / PRINCIPLE:\n$\\theta = 180^\\circ - \\tan^{-1}\\left(\\frac{|B_y|}{|B_x|}\\right)$ in Quadrant II.\n\n4. STEP-BY-STEP SOLUTION:\n1. Identify the quadrant: $B_x = -3 < 0$, $B_y = +4 > 0 \\implies$ Second Quadrant.\n2. Find the reference angle $\\alpha$ with the negative x-axis: $\\tan\\alpha = \\frac{|B_y|}{|B_x|} = \\frac{4}{3}$.\n3. For a 3-4-5 right triangle, $\\tan 53^\\circ = \\frac{4}{3} \\approx 1.33$.\n4. Angle measured counterclockwise from the positive x-axis is $\\theta = 180^\\circ - 53^\\circ = 127^\\circ$.\n\n5. FINAL ANSWER:\nOption A: 127\u00b0\n\n6. QUICK TIP:\nStandard NEET triangle values: $\\tan 37^\\circ = 3/4 = 0.75$; $\\tan 53^\\circ = 4/3 = 1.33$.",
+    "solutionStructured": {
+      "concept": "When $B_x < 0$ and $B_y > 0$, the vector lies in the second quadrant. The angle with the negative x-axis is $\\phi = \\tan^{-1}(|B_y|/|B_x|) = \\tan^{-1}(4/3) \\approx 53^\\circ$. The angle with the positive x-axis is $\\theta = 180^\\circ - \\phi = 180^\\circ - 53^\\circ = 127^\\circ$.",
+      "given": "$B_x = -3$, $B_y = 4$.",
+      "formula": "$\\theta = 180^\\circ - \\tan^{-1}\\left(\\frac{|B_y|}{|B_x|}\\right)$ in Quadrant II.",
+      "stepByStep": "1. Identify the quadrant: $B_x = -3 < 0$, $B_y = +4 > 0 \\implies$ Second Quadrant.\n2. Find the reference angle $\\alpha$ with the negative x-axis: $\\tan\\alpha = \\frac{|B_y|}{|B_x|} = \\frac{4}{3}$.\n3. For a 3-4-5 right triangle, $\\tan 53^\\circ = \\frac{4}{3} \\approx 1.33$.\n4. Angle measured counterclockwise from the positive x-axis is $\\theta = 180^\\circ - 53^\\circ = 127^\\circ$.",
+      "finalAnswer": "Option A: 127\u00b0",
+      "whyOtherOptionsWrong": "53\u00b0 is the angle with the negative x-axis, not the positive x-axis."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Magnitude and direction of vectors",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-041",
+    "questionNumber": 41,
+    "question": "What is the unit vector in the direction of $\\vec{A} = 5\\hat{i} + 12\\hat{j}$?",
+    "options": {
+      "A": "(5/13) \u00ee + (12/13) \u0135",
+      "B": "(5/17) \u00ee + (12/17) \u0135",
+      "C": "(12/13) \u00ee + (5/13) \u0135",
+      "D": "5 \u00ee + 12 \u0135"
+    },
+    "optionsList": [
+      "(5/13) \u00ee + (12/13) \u0135",
+      "(5/17) \u00ee + (12/17) \u0135",
+      "(12/13) \u00ee + (5/13) \u0135",
+      "5 \u00ee + 12 \u0135"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nA unit vector $\\hat{A}$ has a magnitude of 1 and is defined by dividing the vector by its magnitude: $\\hat{A} = \\frac{\\vec{A}}{|\\vec{A}|}$.\n\n2. GIVEN:\n$\\vec{A} = 5\\hat{i} + 12\\hat{j}$.\n\n3. FORMULA / PRINCIPLE:\n$\\hat{A} = \\frac{\\vec{A}}{|\\vec{A}|} = \\frac{A_x\\hat{i} + A_y\\hat{j}}{\\sqrt{A_x^2 + A_y^2}}$\n\n4. STEP-BY-STEP SOLUTION:\n1. Calculate magnitude: $|\\vec{A}| = \\sqrt{5^2 + 12^2} = \\sqrt{25 + 144} = \\sqrt{169} = 13$.\n2. Divide each component by 13: $\\hat{A} = \\frac{5}{13}\\hat{i} + \\frac{12}{13}\\hat{j}$.\n3. Verify magnitude: $\\sqrt{(5/13)^2 + (12/13)^2} = \\sqrt{(25 + 144)/169} = \\sqrt{169/169} = 1$.\n\n5. FINAL ANSWER:\nOption A: (5/13) \u00ee + (12/13) \u0135\n\n6. QUICK TIP:\nPythagorean triple (5, 12, 13) makes the magnitude 13 immediately without pencil calculation.",
+    "solutionStructured": {
+      "concept": "A unit vector $\\hat{A}$ has a magnitude of 1 and is defined by dividing the vector by its magnitude: $\\hat{A} = \\frac{\\vec{A}}{|\\vec{A}|}$.",
+      "given": "$\\vec{A} = 5\\hat{i} + 12\\hat{j}$.",
+      "formula": "$\\hat{A} = \\frac{\\vec{A}}{|\\vec{A}|} = \\frac{A_x\\hat{i} + A_y\\hat{j}}{\\sqrt{A_x^2 + A_y^2}}$",
+      "stepByStep": "1. Calculate magnitude: $|\\vec{A}| = \\sqrt{5^2 + 12^2} = \\sqrt{25 + 144} = \\sqrt{169} = 13$.\n2. Divide each component by 13: $\\hat{A} = \\frac{5}{13}\\hat{i} + \\frac{12}{13}\\hat{j}$.\n3. Verify magnitude: $\\sqrt{(5/13)^2 + (12/13)^2} = \\sqrt{(25 + 144)/169} = \\sqrt{169/169} = 1$.",
+      "finalAnswer": "Option A: (5/13) \u00ee + (12/13) \u0135",
+      "whyOtherOptionsWrong": "Option B divides by $5 + 12 = 17$, which is a common beginner error."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Magnitude and direction of vectors",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-042",
+    "questionNumber": 42,
+    "question": "If $\\vec{A} = 0.6\\hat{i} + c\\hat{j}$ is a unit vector, what is the value of the constant c?",
+    "options": {
+      "A": "\u00b1 0.8",
+      "B": "\u00b1 0.4",
+      "C": "\u00b1 0.64",
+      "D": "\u00b1 0.16"
+    },
+    "optionsList": [
+      "\u00b1 0.8",
+      "\u00b1 0.4",
+      "\u00b1 0.64",
+      "\u00b1 0.16"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor a unit vector, the sum of squares of its components must equal 1: $A_x^2 + A_y^2 = 1$.\n\n2. GIVEN:\n$\\vec{A} = 0.6\\hat{i} + c\\hat{j}$ with $|\\vec{A}| = 1$.\n\n3. FORMULA / PRINCIPLE:\n$A_x^2 + A_y^2 = 1 \\implies (0.6)^2 + c^2 = 1$\n\n4. STEP-BY-STEP SOLUTION:\n1. Write the condition for a unit vector: $|\\vec{A}|^2 = 1$.\n2. $(0.6)^2 + c^2 = 1$.\n3. $0.36 + c^2 = 1 \\implies c^2 = 1 - 0.36 = 0.64$.\n4. Taking square root: $c = \\pm \\sqrt{0.64} = \\pm 0.8$.\n\n5. FINAL ANSWER:\nOption A: \u00b1 0.8\n\n6. QUICK TIP:\nFamiliar 0.6 and 0.8: $\\sin^2\\theta + \\cos^2\\theta = 1$ where $\\cos 37^\\circ = 0.8, \\sin 37^\\circ = 0.6$.",
+    "solutionStructured": {
+      "concept": "For a unit vector, the sum of squares of its components must equal 1: $A_x^2 + A_y^2 = 1$.",
+      "given": "$\\vec{A} = 0.6\\hat{i} + c\\hat{j}$ with $|\\vec{A}| = 1$.",
+      "formula": "$A_x^2 + A_y^2 = 1 \\implies (0.6)^2 + c^2 = 1$",
+      "stepByStep": "1. Write the condition for a unit vector: $|\\vec{A}|^2 = 1$.\n2. $(0.6)^2 + c^2 = 1$.\n3. $0.36 + c^2 = 1 \\implies c^2 = 1 - 0.36 = 0.64$.\n4. Taking square root: $c = \\pm \\sqrt{0.64} = \\pm 0.8$.",
+      "finalAnswer": "Option A: \u00b1 0.8",
+      "whyOtherOptionsWrong": "0.64 is $c^2$, not $c$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Magnitude and direction of vectors",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-043",
+    "questionNumber": 43,
+    "question": "If a unit vector is represented by $\\vec{u} = 0.4\\hat{i} + 0.8\\hat{j} + c\\hat{k}$, what is the value of c?",
+    "options": {
+      "A": "\u221a0.2",
+      "B": "\u221a0.8",
+      "C": "0.2",
+      "D": "\u221a0.4"
+    },
+    "optionsList": [
+      "\u221a0.2",
+      "\u221a0.8",
+      "0.2",
+      "\u221a0.4"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor a 3D unit vector: $u_x^2 + u_y^2 + u_z^2 = 1$.\n\n2. GIVEN:\n$\\vec{u} = 0.4\\hat{i} + 0.8\\hat{j} + c\\hat{k}$, $|\\vec{u}| = 1$.\n\n3. FORMULA / PRINCIPLE:\n$u_x^2 + u_y^2 + u_z^2 = 1 \\implies (0.4)^2 + (0.8)^2 + c^2 = 1$\n\n4. STEP-BY-STEP SOLUTION:\n1. Square each component: $(0.4)^2 = 0.16$, $(0.8)^2 = 0.64$.\n2. Sum: $0.16 + 0.64 = 0.80$.\n3. Substitute into unit vector condition: $0.80 + c^2 = 1$.\n4. $c^2 = 1 - 0.80 = 0.20$.\n5. Therefore, $c = \\sqrt{0.2}$ (or $\\sqrt{1/5}$).\n\n5. FINAL ANSWER:\nOption A: \u221a0.2\n\n6. QUICK TIP:\nNEET past question pattern: Always square all terms first: $0.16 + 0.64 + c^2 = 1 \\implies c = \\sqrt{0.2}$.",
+    "solutionStructured": {
+      "concept": "For a 3D unit vector: $u_x^2 + u_y^2 + u_z^2 = 1$.",
+      "given": "$\\vec{u} = 0.4\\hat{i} + 0.8\\hat{j} + c\\hat{k}$, $|\\vec{u}| = 1$.",
+      "formula": "$u_x^2 + u_y^2 + u_z^2 = 1 \\implies (0.4)^2 + (0.8)^2 + c^2 = 1$",
+      "stepByStep": "1. Square each component: $(0.4)^2 = 0.16$, $(0.8)^2 = 0.64$.\n2. Sum: $0.16 + 0.64 = 0.80$.\n3. Substitute into unit vector condition: $0.80 + c^2 = 1$.\n4. $c^2 = 1 - 0.80 = 0.20$.\n5. Therefore, $c = \\sqrt{0.2}$ (or $\\sqrt{1/5}$).",
+      "finalAnswer": "Option A: \u221a0.2",
+      "whyOtherOptionsWrong": "0.2 is $c^2$, forgetting to take the square root."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Magnitude and direction of vectors",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-044",
+    "questionNumber": 44,
+    "question": "What is the angle between the vector $\\vec{A} = \\hat{i} + \\hat{j} + \\hat{k}$ and the positive x-axis?",
+    "options": {
+      "A": "cos\u207b\u00b9(1 / \u221a3)",
+      "B": "cos\u207b\u00b9(1 / 3)",
+      "C": "45\u00b0",
+      "D": "60\u00b0"
+    },
+    "optionsList": [
+      "cos\u207b\u00b9(1 / \u221a3)",
+      "cos\u207b\u00b9(1 / 3)",
+      "45\u00b0",
+      "60\u00b0"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe direction cosine of a vector $\\vec{A}$ with the x-axis is given by $\\cos\\alpha = \\frac{A_x}{|\\vec{A}|}$.\n\n2. GIVEN:\n$\\vec{A} = 1\\hat{i} + 1\\hat{j} + 1\\hat{k}$.\n\n3. FORMULA / PRINCIPLE:\n$\\cos\\alpha = \\frac{A_x}{\\sqrt{A_x^2 + A_y^2 + A_z^2}}$\n\n4. STEP-BY-STEP SOLUTION:\n1. Identify the x-component: $A_x = 1$.\n2. Compute the full magnitude of $\\vec{A}$: $|\\vec{A}| = \\sqrt{1^2 + 1^2 + 1^2} = \\sqrt{3}$.\n3. Direction cosine with the x-axis: $\\cos\\alpha = \\frac{A_x}{|\\vec{A}|} = \\frac{1}{\\sqrt{3}}$.\n4. Thus, $\\alpha = \\cos^{-1}(1 / \\sqrt{3}) \\approx 54.7^\\circ$.\n\n5. FINAL ANSWER:\nOption A: cos\u207b\u00b9(1 / \u221a3)\n\n6. QUICK TIP:\nDirection cosines property: $\\cos^2\\alpha + \\cos^2\\beta + \\cos^2\\gamma = 1$. Here $(1/\\sqrt{3})^2 + (1/\\sqrt{3})^2 + (1/\\sqrt{3})^2 = 3/3 = 1$.",
+    "solutionStructured": {
+      "concept": "The direction cosine of a vector $\\vec{A}$ with the x-axis is given by $\\cos\\alpha = \\frac{A_x}{|\\vec{A}|}$.",
+      "given": "$\\vec{A} = 1\\hat{i} + 1\\hat{j} + 1\\hat{k}$.",
+      "formula": "$\\cos\\alpha = \\frac{A_x}{\\sqrt{A_x^2 + A_y^2 + A_z^2}}$",
+      "stepByStep": "1. Identify the x-component: $A_x = 1$.\n2. Compute the full magnitude of $\\vec{A}$: $|\\vec{A}| = \\sqrt{1^2 + 1^2 + 1^2} = \\sqrt{3}$.\n3. Direction cosine with the x-axis: $\\cos\\alpha = \\frac{A_x}{|\\vec{A}|} = \\frac{1}{\\sqrt{3}}$.\n4. Thus, $\\alpha = \\cos^{-1}(1 / \\sqrt{3}) \\approx 54.7^\\circ$.",
+      "finalAnswer": "Option A: cos\u207b\u00b9(1 / \u221a3)",
+      "whyOtherOptionsWrong": "45\u00b0 is the angle with the x-axis in 2D $(\\hat{i} + \\hat{j})$, not 3D."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Magnitude and direction of vectors",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-045",
+    "questionNumber": 45,
+    "question": "The direction cosines of a vector are $l, m, n$. Which of the following fundamental relations must always be satisfied?",
+    "options": {
+      "A": "l\u00b2 + m\u00b2 + n\u00b2 = 1",
+      "B": "l + m + n = 1",
+      "C": "l\u00b2 + m\u00b2 + n\u00b2 = 0",
+      "D": "l\u00b2 + m\u00b2 = n\u00b2"
+    },
+    "optionsList": [
+      "l\u00b2 + m\u00b2 + n\u00b2 = 1",
+      "l + m + n = 1",
+      "l\u00b2 + m\u00b2 + n\u00b2 = 0",
+      "l\u00b2 + m\u00b2 = n\u00b2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDirection cosines are defined as $l = \\cos\\alpha = A_x/A, m = \\cos\\beta = A_y/A, n = \\cos\\gamma = A_z/A$. Their squares sum to 1.\n\n2. GIVEN:\nDirection cosines $l = \\cos\\alpha$, $m = \\cos\\beta$, $n = \\cos\\gamma$.\n\n3. FORMULA / PRINCIPLE:\n$l^2 + m^2 + n^2 = \\frac{A_x^2 + A_y^2 + A_z^2}{A^2} = \\frac{A^2}{A^2} = 1$\n\n4. STEP-BY-STEP SOLUTION:\n1. By definition: $l = A_x/A$, $m = A_y/A$, $n = A_z/A$.\n2. Sum of squares: $l^2 + m^2 + n^2 = (A_x/A)^2 + (A_y/A)^2 + (A_z/A)^2$.\n3. Combine denominators: $\\frac{A_x^2 + A_y^2 + A_z^2}{A^2}$.\n4. Since $A^2 = A_x^2 + A_y^2 + A_z^2$, the fraction equals $A^2/A^2 = 1$.\n5. Also, $\\sin^2\\alpha + \\sin^2\\beta + \\sin^2\\gamma = 2$.\n\n5. FINAL ANSWER:\nOption A: l\u00b2 + m\u00b2 + n\u00b2 = 1\n\n6. QUICK TIP:\nMemory anchor: $\\cos^2\\alpha + \\cos^2\\beta + \\cos^2\\gamma = 1$, and $\\sin^2\\alpha + \\sin^2\\beta + \\sin^2\\gamma = 2$. Both are frequently asked in NEET!",
+    "solutionStructured": {
+      "concept": "Direction cosines are defined as $l = \\cos\\alpha = A_x/A, m = \\cos\\beta = A_y/A, n = \\cos\\gamma = A_z/A$. Their squares sum to 1.",
+      "given": "Direction cosines $l = \\cos\\alpha$, $m = \\cos\\beta$, $n = \\cos\\gamma$.",
+      "formula": "$l^2 + m^2 + n^2 = \\frac{A_x^2 + A_y^2 + A_z^2}{A^2} = \\frac{A^2}{A^2} = 1$",
+      "stepByStep": "1. By definition: $l = A_x/A$, $m = A_y/A$, $n = A_z/A$.\n2. Sum of squares: $l^2 + m^2 + n^2 = (A_x/A)^2 + (A_y/A)^2 + (A_z/A)^2$.\n3. Combine denominators: $\\frac{A_x^2 + A_y^2 + A_z^2}{A^2}$.\n4. Since $A^2 = A_x^2 + A_y^2 + A_z^2$, the fraction equals $A^2/A^2 = 1$.\n5. Also, $\\sin^2\\alpha + \\sin^2\\beta + \\sin^2\\gamma = 2$.",
+      "finalAnswer": "Option A: l\u00b2 + m\u00b2 + n\u00b2 = 1",
+      "whyOtherOptionsWrong": "Option B linearly sums them, which is mathematically false."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Magnitude and direction of vectors",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-046",
+    "questionNumber": 46,
+    "question": "If a vector makes angles $\\alpha = 60^\\circ$ and $\\beta = 60^\\circ$ with the positive x- and y-axes respectively, what angle $\\gamma$ does it make with the positive z-axis?",
+    "options": {
+      "A": "45\u00b0 or 135\u00b0",
+      "B": "60\u00b0 or 120\u00b0",
+      "C": "30\u00b0 or 150\u00b0",
+      "D": "90\u00b0"
+    },
+    "optionsList": [
+      "45\u00b0 or 135\u00b0",
+      "60\u00b0 or 120\u00b0",
+      "30\u00b0 or 150\u00b0",
+      "90\u00b0"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nUse $\\cos^2\\alpha + \\cos^2\\beta + \\cos^2\\gamma = 1$.\n\n2. GIVEN:\n$\\alpha = 60^\\circ$, $\\beta = 60^\\circ$.\n\n3. FORMULA / PRINCIPLE:\n$\\cos^2(60^\\circ) + \\cos^2(60^\\circ) + \\cos^2\\gamma = 1$\n\n4. STEP-BY-STEP SOLUTION:\n1. Calculate known direction cosines: $\\cos 60^\\circ = 1/2$.\n2. $\\cos^2\\alpha = (1/2)^2 = 1/4$; $\\cos^2\\beta = (1/2)^2 = 1/4$.\n3. Substitute: $1/4 + 1/4 + \\cos^2\\gamma = 1$.\n4. $1/2 + \\cos^2\\gamma = 1 \\implies \\cos^2\\gamma = 1/2$.\n5. $\\cos\\gamma = \\pm 1/\\sqrt{2} \\implies \\gamma = 45^\\circ$ or $135^\\circ$.\n\n5. FINAL ANSWER:\nOption A: 45\u00b0 or 135\u00b0\n\n6. QUICK TIP:\nDirect check: $(1/2)^2 + (1/2)^2 + (1/\\sqrt{2})^2 = 1/4 + 1/4 + 1/2 = 1$.",
+    "solutionStructured": {
+      "concept": "Use $\\cos^2\\alpha + \\cos^2\\beta + \\cos^2\\gamma = 1$.",
+      "given": "$\\alpha = 60^\\circ$, $\\beta = 60^\\circ$.",
+      "formula": "$\\cos^2(60^\\circ) + \\cos^2(60^\\circ) + \\cos^2\\gamma = 1$",
+      "stepByStep": "1. Calculate known direction cosines: $\\cos 60^\\circ = 1/2$.\n2. $\\cos^2\\alpha = (1/2)^2 = 1/4$; $\\cos^2\\beta = (1/2)^2 = 1/4$.\n3. Substitute: $1/4 + 1/4 + \\cos^2\\gamma = 1$.\n4. $1/2 + \\cos^2\\gamma = 1 \\implies \\cos^2\\gamma = 1/2$.\n5. $\\cos\\gamma = \\pm 1/\\sqrt{2} \\implies \\gamma = 45^\\circ$ or $135^\\circ$.",
+      "finalAnswer": "Option A: 45\u00b0 or 135\u00b0",
+      "whyOtherOptionsWrong": "60\u00b0 would give $1/4 + 1/4 + 1/4 = 3/4 \\neq 1$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Magnitude and direction of vectors",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-047",
+    "questionNumber": 47,
+    "question": "A vector $\\vec{A}$ has a magnitude of 10 units. Its component along the x-axis is 6 units. What are the possible values for its component along the y-axis?",
+    "options": {
+      "A": "\u00b1 8 units",
+      "B": "\u00b1 4 units",
+      "C": "\u00b1 16 units",
+      "D": "8 units only"
+    },
+    "optionsList": [
+      "\u00b1 8 units",
+      "\u00b1 4 units",
+      "\u00b1 16 units",
+      "8 units only"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn two dimensions, $A^2 = A_x^2 + A_y^2 \\implies A_y = \\pm \\sqrt{A^2 - A_x^2}$.\n\n2. GIVEN:\n$A = 10$, $A_x = 6$.\n\n3. FORMULA / PRINCIPLE:\n$A_y = \\pm \\sqrt{A^2 - A_x^2}$\n\n4. STEP-BY-STEP SOLUTION:\n1. Write the Pythagorean equation: $A^2 = A_x^2 + A_y^2$.\n2. Substitute: $10^2 = 6^2 + A_y^2 \\implies 100 = 36 + A_y^2$.\n3. $A_y^2 = 100 - 36 = 64$.\n4. Taking square root: $A_y = \\pm \\sqrt{64} = \\pm 8$ units.\n5. The vector could lie in Quadrant I ($+8$) or Quadrant IV ($-8$).\n\n5. FINAL ANSWER:\nOption A: \u00b1 8 units\n\n6. QUICK TIP:\nVectors with $A_x = 6$ and $A = 10$ can point into either Quadrant I or Quadrant IV!",
+    "solutionStructured": {
+      "concept": "In two dimensions, $A^2 = A_x^2 + A_y^2 \\implies A_y = \\pm \\sqrt{A^2 - A_x^2}$.",
+      "given": "$A = 10$, $A_x = 6$.",
+      "formula": "$A_y = \\pm \\sqrt{A^2 - A_x^2}$",
+      "stepByStep": "1. Write the Pythagorean equation: $A^2 = A_x^2 + A_y^2$.\n2. Substitute: $10^2 = 6^2 + A_y^2 \\implies 100 = 36 + A_y^2$.\n3. $A_y^2 = 100 - 36 = 64$.\n4. Taking square root: $A_y = \\pm \\sqrt{64} = \\pm 8$ units.\n5. The vector could lie in Quadrant I ($+8$) or Quadrant IV ($-8$).",
+      "finalAnswer": "Option A: \u00b1 8 units",
+      "whyOtherOptionsWrong": "Option D forgets the negative root in Quadrant IV."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Magnitude and direction of vectors",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-048",
+    "questionNumber": 48,
+    "question": "The magnitude of the vector product of two vectors is $\\sqrt{3}$ times their scalar product: $|\\vec{A} \\times \\vec{B}| = \\sqrt{3} (\\vec{A} \\cdot \\vec{B})$. What is the magnitude of their sum $|\\vec{A} + \\vec{B}|$?",
+    "options": {
+      "A": "(A\u00b2 + B\u00b2 + AB)\u00b9\u141f\u00b2",
+      "B": "(A\u00b2 + B\u00b2 + AB\u221a3)\u00b9\u141f\u00b2",
+      "C": "A + B",
+      "D": "(A\u00b2 + B\u00b2)\u00b9\u141f\u00b2"
+    },
+    "optionsList": [
+      "(A\u00b2 + B\u00b2 + AB)\u00b9\u141f\u00b2",
+      "(A\u00b2 + B\u00b2 + AB\u221a3)\u00b9\u141f\u00b2",
+      "A + B",
+      "(A\u00b2 + B\u00b2)\u00b9\u141f\u00b2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nUse $|\\vec{A} \\times \\vec{B}| = AB\\sin\\theta$ and $\\vec{A} \\cdot \\vec{B} = AB\\cos\\theta$ to find $\\theta$, then calculate $|\\vec{A} + \\vec{B}|$.\n\n2. GIVEN:\n$|\\vec{A} \\times \\vec{B}| = \\sqrt{3} (\\vec{A} \\cdot \\vec{B})$.\n\n3. FORMULA / PRINCIPLE:\n$\\tan\\theta = \\sqrt{3} \\implies \\theta = 60^\\circ$; $|\\vec{A} + \\vec{B}| = \\sqrt{A^2 + B^2 + 2AB\\cos\\theta}$\n\n4. STEP-BY-STEP SOLUTION:\n1. Express both products: $AB \\sin\\theta = \\sqrt{3} AB \\cos\\theta$.\n2. Divide by $AB \\cos\\theta$: $\\tan\\theta = \\sqrt{3} \\implies \\theta = 60^\\circ$.\n3. Now calculate the magnitude of the vector sum:\n   $|\\vec{A} + \\vec{B}| = \\sqrt{A^2 + B^2 + 2AB\\cos 60^\\circ}$.\n4. Since $\\cos 60^\\circ = 1/2$, the term $2AB\\cos 60^\\circ = 2AB(1/2) = AB$.\n5. Thus, $|\\vec{A} + \\vec{B}| = (A^2 + B^2 + AB)^{1/2}$.\n\n5. FINAL ANSWER:\nOption A: (A\u00b2 + B\u00b2 + AB)\u00b9\u141f\u00b2\n\n6. QUICK TIP:\nClassic NEET frequent question: $\\tan\\theta = \\sqrt{3} \\implies \\theta = 60^\\circ \\implies R = \\sqrt{A^2 + B^2 + AB}$.",
+    "solutionStructured": {
+      "concept": "Use $|\\vec{A} \\times \\vec{B}| = AB\\sin\\theta$ and $\\vec{A} \\cdot \\vec{B} = AB\\cos\\theta$ to find $\\theta$, then calculate $|\\vec{A} + \\vec{B}|$.",
+      "given": "$|\\vec{A} \\times \\vec{B}| = \\sqrt{3} (\\vec{A} \\cdot \\vec{B})$.",
+      "formula": "$\\tan\\theta = \\sqrt{3} \\implies \\theta = 60^\\circ$; $|\\vec{A} + \\vec{B}| = \\sqrt{A^2 + B^2 + 2AB\\cos\\theta}$",
+      "stepByStep": "1. Express both products: $AB \\sin\\theta = \\sqrt{3} AB \\cos\\theta$.\n2. Divide by $AB \\cos\\theta$: $\\tan\\theta = \\sqrt{3} \\implies \\theta = 60^\\circ$.\n3. Now calculate the magnitude of the vector sum:\n   $|\\vec{A} + \\vec{B}| = \\sqrt{A^2 + B^2 + 2AB\\cos 60^\\circ}$.\n4. Since $\\cos 60^\\circ = 1/2$, the term $2AB\\cos 60^\\circ = 2AB(1/2) = AB$.\n5. Thus, $|\\vec{A} + \\vec{B}| = (A^2 + B^2 + AB)^{1/2}$.",
+      "finalAnswer": "Option A: (A\u00b2 + B\u00b2 + AB)\u00b9\u141f\u00b2",
+      "whyOtherOptionsWrong": "Option B leaves $\\sqrt{3}$ inside the cosine expansion."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Magnitude and direction of vectors",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-049",
+    "questionNumber": 49,
+    "question": "A vector $\\vec{A}$ has magnitude 5 and makes an angle of 30\u00b0 with the positive x-axis. Another vector $\\vec{B}$ has magnitude 5 and makes an angle of 150\u00b0 with the positive x-axis. What is the magnitude and direction of their resultant $\\vec{R} = \\vec{A} + \\vec{B}$?",
+    "options": {
+      "A": "Magnitude 5, along positive y-axis (90\u00b0)",
+      "B": "Magnitude 5\u221a3, along positive y-axis (90\u00b0)",
+      "C": "Magnitude 10, along positive x-axis (0\u00b0)",
+      "D": "Magnitude 0"
+    },
+    "optionsList": [
+      "Magnitude 5, along positive y-axis (90\u00b0)",
+      "Magnitude 5\u221a3, along positive y-axis (90\u00b0)",
+      "Magnitude 10, along positive x-axis (0\u00b0)",
+      "Magnitude 0"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nAngle between $\\vec{A}$ and $\\vec{B}$ is $150^\\circ - 30^\\circ = 120^\\circ$. The resultant of two equal vectors of magnitude $F$ inclined at $120^\\circ$ is also of magnitude $F$, bisecting the angle between them.\n\n2. GIVEN:\n$A = 5$ at $30^\\circ$, $B = 5$ at $150^\\circ$.\n\n3. FORMULA / PRINCIPLE:\nAngle $\\theta = 120^\\circ$; $R = 2F\\cos(\\theta/2) = 2(5)\\cos(60^\\circ) = 5$; bisector $= (30^\\circ + 150^\\circ)/2 = 90^\\circ$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Write components of $\\vec{A}$:\n   $A_x = 5\\cos 30^\\circ = 5\\sqrt{3}/2$, $A_y = 5\\sin 30^\\circ = 5/2$.\n2. Write components of $\\vec{B}$:\n   $B_x = 5\\cos 150^\\circ = -5\\sqrt{3}/2$, $B_y = 5\\sin 150^\\circ = 5/2$.\n3. Add components to find resultant $\\vec{R}$:\n   $R_x = A_x + B_x = 5\\sqrt{3}/2 - 5\\sqrt{3}/2 = 0$.\n   $R_y = A_y + B_y = 5/2 + 5/2 = 5$.\n4. Since $R_x = 0$ and $R_y = 5$, the resultant has magnitude 5 and points purely along the positive y-axis ($90^\\circ$).\n\n5. FINAL ANSWER:\nOption A: Magnitude 5, along positive y-axis (90\u00b0)\n\n6. QUICK TIP:\nNEET Golden Rule: Resultant of two equal vectors at $120^\\circ$ has the SAME magnitude as each vector and bisects their angle!",
+    "solutionStructured": {
+      "concept": "Angle between $\\vec{A}$ and $\\vec{B}$ is $150^\\circ - 30^\\circ = 120^\\circ$. The resultant of two equal vectors of magnitude $F$ inclined at $120^\\circ$ is also of magnitude $F$, bisecting the angle between them.",
+      "given": "$A = 5$ at $30^\\circ$, $B = 5$ at $150^\\circ$.",
+      "formula": "Angle $\\theta = 120^\\circ$; $R = 2F\\cos(\\theta/2) = 2(5)\\cos(60^\\circ) = 5$; bisector $= (30^\\circ + 150^\\circ)/2 = 90^\\circ$.",
+      "stepByStep": "1. Write components of $\\vec{A}$:\n   $A_x = 5\\cos 30^\\circ = 5\\sqrt{3}/2$, $A_y = 5\\sin 30^\\circ = 5/2$.\n2. Write components of $\\vec{B}$:\n   $B_x = 5\\cos 150^\\circ = -5\\sqrt{3}/2$, $B_y = 5\\sin 150^\\circ = 5/2$.\n3. Add components to find resultant $\\vec{R}$:\n   $R_x = A_x + B_x = 5\\sqrt{3}/2 - 5\\sqrt{3}/2 = 0$.\n   $R_y = A_y + B_y = 5/2 + 5/2 = 5$.\n4. Since $R_x = 0$ and $R_y = 5$, the resultant has magnitude 5 and points purely along the positive y-axis ($90^\\circ$).",
+      "finalAnswer": "Option A: Magnitude 5, along positive y-axis (90\u00b0)",
+      "whyOtherOptionsWrong": "5\u221a3 would correspond to an angle of 60\u00b0 between the vectors."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Magnitude and direction of vectors",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-050",
+    "questionNumber": 50,
+    "question": "The position vector of a particle is given by $\\vec{r}(t) = 3\\cos(\\omega t)\\hat{i} + 3\\sin(\\omega t)\\hat{j}$. What is the magnitude of the velocity vector and its angle with the position vector $\\vec{r}$ at any instant t?",
+    "options": {
+      "A": "Speed = 3\u03c9, angle = 90\u00b0",
+      "B": "Speed = 3\u03c9\u00b2, angle = 0\u00b0",
+      "C": "Speed = 3\u03c9, angle = 180\u00b0",
+      "D": "Speed = 3, angle = 90\u00b0"
+    },
+    "optionsList": [
+      "Speed = 3\u03c9, angle = 90\u00b0",
+      "Speed = 3\u03c9\u00b2, angle = 0\u00b0",
+      "Speed = 3\u03c9, angle = 180\u00b0",
+      "Speed = 3, angle = 90\u00b0"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDifferentiate position vector to find velocity vector: $\\vec{v} = \\frac{d\\vec{r}}{dt}$. Check dot product $\\vec{r} \\cdot \\vec{v} = 0$ to verify orthogonality.\n\n2. GIVEN:\n$\\vec{r}(t) = 3\\cos(\\omega t)\\hat{i} + 3\\sin(\\omega t)\\hat{j}$.\n\n3. FORMULA / PRINCIPLE:\n$\\vec{v} = -3\\omega\\sin(\\omega t)\\hat{i} + 3\\omega\\cos(\\omega t)\\hat{j}$; $|\\vec{v}| = 3\\omega$; $\\vec{r} \\cdot \\vec{v} = 0$.\n\n4. STEP-BY-STEP SOLUTION:\n1. Differentiate components with respect to time $t$:\n   $v_x = \\frac{d}{dt}[3\\cos(\\omega t)] = -3\\omega\\sin(\\omega t)$\n   $v_y = \\frac{d}{dt}[3\\sin(\\omega t)] = 3\\omega\\cos(\\omega t)$\n2. Compute speed (magnitude of velocity):\n   $|\\vec{v}| = \\sqrt{(-3\\omega\\sin\\omega t)^2 + (3\\omega\\cos\\omega t)^2} = \\sqrt{9\\omega^2(\\sin^2\\omega t + \\cos^2\\omega t)} = 3\\omega$.\n3. Compute dot product $\\vec{r} \\cdot \\vec{v}$:\n   $\\vec{r} \\cdot \\vec{v} = [3\\cos\\omega t][-3\\omega\\sin\\omega t] + [3\\sin\\omega t][3\\omega\\cos\\omega t] = -9\\omega\\sin\\omega t\\cos\\omega t + 9\\omega\\sin\\omega t\\cos\\omega t = 0$.\n4. Since $\\vec{r} \\cdot \\vec{v} = 0$, the velocity vector is perpendicular to the position vector (angle = $90^\\circ$).\n\n5. FINAL ANSWER:\nOption A: Speed = 3\u03c9, angle = 90\u00b0\n\n6. QUICK TIP:\nThis describes uniform circular motion where velocity is always tangential (perpendicular to radius vector).",
+    "solutionStructured": {
+      "concept": "Differentiate position vector to find velocity vector: $\\vec{v} = \\frac{d\\vec{r}}{dt}$. Check dot product $\\vec{r} \\cdot \\vec{v} = 0$ to verify orthogonality.",
+      "given": "$\\vec{r}(t) = 3\\cos(\\omega t)\\hat{i} + 3\\sin(\\omega t)\\hat{j}$.",
+      "formula": "$\\vec{v} = -3\\omega\\sin(\\omega t)\\hat{i} + 3\\omega\\cos(\\omega t)\\hat{j}$; $|\\vec{v}| = 3\\omega$; $\\vec{r} \\cdot \\vec{v} = 0$.",
+      "stepByStep": "1. Differentiate components with respect to time $t$:\n   $v_x = \\frac{d}{dt}[3\\cos(\\omega t)] = -3\\omega\\sin(\\omega t)$\n   $v_y = \\frac{d}{dt}[3\\sin(\\omega t)] = 3\\omega\\cos(\\omega t)$\n2. Compute speed (magnitude of velocity):\n   $|\\vec{v}| = \\sqrt{(-3\\omega\\sin\\omega t)^2 + (3\\omega\\cos\\omega t)^2} = \\sqrt{9\\omega^2(\\sin^2\\omega t + \\cos^2\\omega t)} = 3\\omega$.\n3. Compute dot product $\\vec{r} \\cdot \\vec{v}$:\n   $\\vec{r} \\cdot \\vec{v} = [3\\cos\\omega t][-3\\omega\\sin\\omega t] + [3\\sin\\omega t][3\\omega\\cos\\omega t] = -9\\omega\\sin\\omega t\\cos\\omega t + 9\\omega\\sin\\omega t\\cos\\omega t = 0$.\n4. Since $\\vec{r} \\cdot \\vec{v} = 0$, the velocity vector is perpendicular to the position vector (angle = $90^\\circ$).",
+      "finalAnswer": "Option A: Speed = 3\u03c9, angle = 90\u00b0",
+      "whyOtherOptionsWrong": "Angle is 90\u00b0 (perpendicular), not 0\u00b0 or 180\u00b0."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Magnitude and direction of vectors",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-051",
+    "questionNumber": 51,
+    "question": "In the previous question, what is the acceleration vector $\\vec{a}(t)$ and its relation to the position vector $\\vec{r}(t)$?",
+    "options": {
+      "A": "a\u20d7 = -\u03c9\u00b2 r\u20d7 (directed radially inward towards origin)",
+      "B": "a\u20d7 = +\u03c9\u00b2 r\u20d7 (directed radially outward)",
+      "C": "a\u20d7 = -\u03c9 r\u20d7",
+      "D": "a\u20d7 = 0"
+    },
+    "optionsList": [
+      "a\u20d7 = -\u03c9\u00b2 r\u20d7 (directed radially inward towards origin)",
+      "a\u20d7 = +\u03c9\u00b2 r\u20d7 (directed radially outward)",
+      "a\u20d7 = -\u03c9 r\u20d7",
+      "a\u20d7 = 0"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nAcceleration is the second time derivative of position: $\\vec{a} = \\frac{d\\vec{v}}{dt} = -\\omega^2\\vec{r}$. The negative sign indicates it points radially inward towards the origin (centripetal).\n\n2. GIVEN:\n$\\vec{v} = -3\\omega\\sin(\\omega t)\\hat{i} + 3\\omega\\cos(\\omega t)\\hat{j}$.\n\n3. FORMULA / PRINCIPLE:\n$\\vec{a} = \\frac{d\\vec{v}}{dt} = -3\\omega^2\\cos(\\omega t)\\hat{i} - 3\\omega^2\\sin(\\omega t)\\hat{j} = -\\omega^2\\vec{r}$\n\n4. STEP-BY-STEP SOLUTION:\n1. Differentiate velocity with respect to time:\n   $a_x = \\frac{d}{dt}[-3\\omega\\sin\\omega t] = -3\\omega^2\\cos\\omega t$\n   $a_y = \\frac{d}{dt}[3\\omega\\cos\\omega t] = -3\\omega^2\\sin\\omega t$\n2. Factor out $-\\omega^2$:\n   $\\vec{a} = -\\omega^2 [3\\cos(\\omega t)\\hat{i} + 3\\sin(\\omega t)\\hat{j}] = -\\omega^2 \\vec{r}$.\n3. The minus sign shows that acceleration points directly opposite to the position vector $\\vec{r}$ (i.e. toward the origin).\n4. This is the centripetal acceleration vector.\n\n5. FINAL ANSWER:\nOption A: a\u20d7 = -\u03c9\u00b2 r\u20d7 (directed radially inward towards origin)\n\n6. QUICK TIP:\n$\\vec{a} = -\\omega^2\\vec{r}$ is the signature of both Simple Harmonic Motion (1D) and Uniform Circular Motion (2D)!",
+    "solutionStructured": {
+      "concept": "Acceleration is the second time derivative of position: $\\vec{a} = \\frac{d\\vec{v}}{dt} = -\\omega^2\\vec{r}$. The negative sign indicates it points radially inward towards the origin (centripetal).",
+      "given": "$\\vec{v} = -3\\omega\\sin(\\omega t)\\hat{i} + 3\\omega\\cos(\\omega t)\\hat{j}$.",
+      "formula": "$\\vec{a} = \\frac{d\\vec{v}}{dt} = -3\\omega^2\\cos(\\omega t)\\hat{i} - 3\\omega^2\\sin(\\omega t)\\hat{j} = -\\omega^2\\vec{r}$",
+      "stepByStep": "1. Differentiate velocity with respect to time:\n   $a_x = \\frac{d}{dt}[-3\\omega\\sin\\omega t] = -3\\omega^2\\cos\\omega t$\n   $a_y = \\frac{d}{dt}[3\\omega\\cos\\omega t] = -3\\omega^2\\sin\\omega t$\n2. Factor out $-\\omega^2$:\n   $\\vec{a} = -\\omega^2 [3\\cos(\\omega t)\\hat{i} + 3\\sin(\\omega t)\\hat{j}] = -\\omega^2 \\vec{r}$.\n3. The minus sign shows that acceleration points directly opposite to the position vector $\\vec{r}$ (i.e. toward the origin).\n4. This is the centripetal acceleration vector.",
+      "finalAnswer": "Option A: a\u20d7 = -\u03c9\u00b2 r\u20d7 (directed radially inward towards origin)",
+      "whyOtherOptionsWrong": "Option B misses the negative sign, which would mean outward acceleration."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Magnitude and direction of vectors",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-052",
+    "questionNumber": 52,
+    "question": "A vector $\\vec{A}$ has magnitude 13 and makes an angle with the z-axis whose cosine is 12/13. What is the magnitude of the projection of $\\vec{A}$ on the xy-plane?",
+    "options": {
+      "A": "5",
+      "B": "12",
+      "C": "1",
+      "D": "\u221a313"
+    },
+    "optionsList": [
+      "5",
+      "12",
+      "1",
+      "\u221a313"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe component of $\\vec{A}$ along the z-axis is $A_z = A\\cos\\gamma$. The projection on the xy-plane is $A_{xy} = \\sqrt{A_x^2 + A_y^2} = \\sqrt{A^2 - A_z^2} = A\\sin\\gamma$.\n\n2. GIVEN:\n$A = 13$, $\\cos\\gamma = 12/13$.\n\n3. FORMULA / PRINCIPLE:\n$A_{xy} = \\sqrt{A^2 - A_z^2}$\n\n4. STEP-BY-STEP SOLUTION:\n1. Component along z-axis: $A_z = A\\cos\\gamma = 13 \\times \\frac{12}{13} = 12$.\n2. By 3D vector magnitude: $A^2 = A_x^2 + A_y^2 + A_z^2 = A_{xy}^2 + A_z^2$.\n3. Therefore, $A_{xy}^2 = A^2 - A_z^2 = 13^2 - 12^2 = 169 - 144 = 25$.\n4. Taking square root: $A_{xy} = \\sqrt{25} = 5$.\n5. The projection of $\\vec{A}$ on the xy-plane is 5 units.\n\n5. FINAL ANSWER:\nOption A: 5\n\n6. QUICK TIP:\nProjection on a plane perpendicular to an axis: $\\text{Projection on } xy\\text{-plane} = \\sqrt{A^2 - A_z^2}$.",
+    "solutionStructured": {
+      "concept": "The component of $\\vec{A}$ along the z-axis is $A_z = A\\cos\\gamma$. The projection on the xy-plane is $A_{xy} = \\sqrt{A_x^2 + A_y^2} = \\sqrt{A^2 - A_z^2} = A\\sin\\gamma$.",
+      "given": "$A = 13$, $\\cos\\gamma = 12/13$.",
+      "formula": "$A_{xy} = \\sqrt{A^2 - A_z^2}$",
+      "stepByStep": "1. Component along z-axis: $A_z = A\\cos\\gamma = 13 \\times \\frac{12}{13} = 12$.\n2. By 3D vector magnitude: $A^2 = A_x^2 + A_y^2 + A_z^2 = A_{xy}^2 + A_z^2$.\n3. Therefore, $A_{xy}^2 = A^2 - A_z^2 = 13^2 - 12^2 = 169 - 144 = 25$.\n4. Taking square root: $A_{xy} = \\sqrt{25} = 5$.\n5. The projection of $\\vec{A}$ on the xy-plane is 5 units.",
+      "finalAnswer": "Option A: 5",
+      "whyOtherOptionsWrong": "12 is the projection onto the z-axis, not the xy-plane."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Magnitude and direction of vectors",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-053",
+    "questionNumber": 53,
+    "question": "If the sum of two unit vectors is also a unit vector ($|\\hat{a} + \\hat{b}| = 1$), what is the magnitude of their difference $|\\hat{a} - \\hat{b}|$?",
+    "options": {
+      "A": "\u221a3",
+      "B": "1",
+      "C": "2",
+      "D": "1 / \u221a3"
+    },
+    "optionsList": [
+      "\u221a3",
+      "1",
+      "2",
+      "1 / \u221a3"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor two unit vectors ($a = b = 1$), $|\\hat{a} + \\hat{b}| = 2\\cos(\\theta/2) = 1 \\implies \\theta = 120^\\circ$. Then $|\\hat{a} - \\hat{b}| = 2\\sin(\\theta/2) = 2\\sin 60^\\circ = \\sqrt{3}$.\n\n2. GIVEN:\n$|\\hat{a}| = 1$, $|\\hat{b}| = 1$, $|\\hat{a} + \\hat{b}| = 1$.\n\n3. FORMULA / PRINCIPLE:\n$|\\hat{a} + \\hat{b}|^2 + |\\hat{a} - \\hat{b}|^2 = 2(a^2 + b^2) = 2(1 + 1) = 4$\n\n4. STEP-BY-STEP SOLUTION:\n1. Use the parallelogram identity: $|\\vec{u} + \\vec{v}|^2 + |\\vec{u} - \\vec{v}|^2 = 2(|\\vec{u}|^2 + |\\vec{v}|^2)$.\n2. Here $|\\hat{a}| = 1$ and $|\\hat{b}| = 1$, so the right-hand side is $2(1^2 + 1^2) = 4$.\n3. Substitute the given $|\\hat{a} + \\hat{b}| = 1$ into the identity:\n   $1^2 + |\\hat{a} - \\hat{b}|^2 = 4$.\n4. $|\\hat{a} - \\hat{b}|^2 = 4 - 1 = 3$.\n5. Taking square root: $|\\hat{a} - \\hat{b}| = \\sqrt{3}$.\n\n5. FINAL ANSWER:\nOption A: \u221a3\n\n6. QUICK TIP:\nOne of the most repeated questions in NEET! If sum of two unit vectors is a unit vector $\\implies$ difference is $\\sqrt{3}$!",
+    "solutionStructured": {
+      "concept": "For two unit vectors ($a = b = 1$), $|\\hat{a} + \\hat{b}| = 2\\cos(\\theta/2) = 1 \\implies \\theta = 120^\\circ$. Then $|\\hat{a} - \\hat{b}| = 2\\sin(\\theta/2) = 2\\sin 60^\\circ = \\sqrt{3}$.",
+      "given": "$|\\hat{a}| = 1$, $|\\hat{b}| = 1$, $|\\hat{a} + \\hat{b}| = 1$.",
+      "formula": "$|\\hat{a} + \\hat{b}|^2 + |\\hat{a} - \\hat{b}|^2 = 2(a^2 + b^2) = 2(1 + 1) = 4$",
+      "stepByStep": "1. Use the parallelogram identity: $|\\vec{u} + \\vec{v}|^2 + |\\vec{u} - \\vec{v}|^2 = 2(|\\vec{u}|^2 + |\\vec{v}|^2)$.\n2. Here $|\\hat{a}| = 1$ and $|\\hat{b}| = 1$, so the right-hand side is $2(1^2 + 1^2) = 4$.\n3. Substitute the given $|\\hat{a} + \\hat{b}| = 1$ into the identity:\n   $1^2 + |\\hat{a} - \\hat{b}|^2 = 4$.\n4. $|\\hat{a} - \\hat{b}|^2 = 4 - 1 = 3$.\n5. Taking square root: $|\\hat{a} - \\hat{b}| = \\sqrt{3}$.",
+      "finalAnswer": "Option A: \u221a3",
+      "whyOtherOptionsWrong": "1 is the magnitude of the sum, not the difference."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Magnitude and direction of vectors",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  }
+]

@@ -275,6 +275,27 @@ export class SEOService {
         };
         break;
 
+      case 'chapterwise-mcqs': {
+        const sub = route.subjectId ? SUBJECTS.find(s => s.id === route.subjectId) : null;
+        const subName = sub ? sub.name : '';
+        const chapter = route.chapterId ? CHAPTERS[route.chapterId] : null;
+        if (chapter) {
+          title = `${chapter.title} MCQs – NEET UG Chapterwise Practice | ${this.SITE_NAME}`;
+          description = `Practice chapter-wise MCQs for ${chapter.title}. Spot conceptual traps and identify weak areas for NEET UG.`;
+          canonicalUrl = `${this.BASE_URL}/#chapterwise-mcqs/chapter/${chapter.id}`;
+        } else if (subName) {
+          title = `${subName} Chapterwise MCQs – Class 11 & 12 NEET UG Practice | ${this.SITE_NAME}`;
+          description = `Practice chapter-wise MCQs and identify weak areas across Class 11 and Class 12 ${subName} for NEET UG.`;
+          canonicalUrl = `${this.BASE_URL}/#chapterwise-mcqs/${route.subjectId}`;
+        } else {
+          title = `Chapterwise MCQs – NEET UG Practice & Weakness Identification | ${this.SITE_NAME}`;
+          description = `Practice chapter-wise MCQs and identify your weak areas across Physics, Chemistry, and Biology for NEET UG.`;
+          canonicalUrl = `${this.BASE_URL}/#chapterwise-mcqs`;
+        }
+        keywords = `NEET Chapterwise MCQs, NEET practice questions, NEET weak areas, ${subName || 'Physics Chemistry Biology'} MCQs, VG Insights`;
+        break;
+      }
+
       case 'chapters':
         title = `Complete NEET UG 2027 Chapter Directory & Weightage Guide | ${this.SITE_NAME}`;
         description =

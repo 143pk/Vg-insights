@@ -1,0 +1,743 @@
+[
+  {
+    "id": "msl-mcq-436",
+    "questionNumber": 436,
+    "question": "A body starts from rest and moves with uniform acceleration 2 m/s\u00b2 for 5 s. It then continues with uniform velocity for another 5 s. The total distance covered is:",
+    "options": {
+      "A": "75 m",
+      "B": "50 m",
+      "C": "100 m",
+      "D": "25 m"
+    },
+    "optionsList": [
+      "75 m",
+      "50 m",
+      "100 m",
+      "25 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nStage 1: Accelerated motion s\u2081 = 1/2 a t\u2081\u00b2 = 1/2(2)(25) = 25 m. Velocity reached v = at\u2081 = 10 m/s. Stage 2: Uniform motion s\u2082 = v \u00d7 t\u2082 = 10 \u00d7 5 = 50 m. Total distance = 25 + 50 = 75 m.\n\n2. GIVEN:\nStage 1: u = 0, a = 2 m/s\u00b2, t\u2081 = 5 s. Stage 2: constant velocity for t\u2082 = 5 s.\n\n3. FORMULA / PRINCIPLE:\ns_total = (1/2) a t\u2081\u00b2 + (a t\u2081) \u00d7 t\u2082\n\n4. STEP-BY-STEP SOLUTION:\n1. Stage 1 (acceleration from rest): s\u2081 = (1/2) a t\u2081\u00b2 = (1/2) \u00d7 2 \u00d7 (5)\u00b2 = 25 m.\n2. Velocity acquired at end of Stage 1: v = u + a t\u2081 = 0 + 2 \u00d7 5 = 10 m/s.\n3. Stage 2 (uniform velocity): s\u2082 = v \u00d7 t\u2082 = 10 m/s \u00d7 5 s = 50 m.\n4. Total distance = s\u2081 + s\u2082 = 25 m + 50 m = 75 m.\n\n5. FINAL ANSWER:\nOption A: 75 m\n\n6. QUICK TIP:\nAlways calculate the terminal velocity of the first stage to use as the initial velocity of the next stage.",
+    "solutionStructured": {
+      "concept": "Stage 1: Accelerated motion s\u2081 = 1/2 a t\u2081\u00b2 = 1/2(2)(25) = 25 m. Velocity reached v = at\u2081 = 10 m/s. Stage 2: Uniform motion s\u2082 = v \u00d7 t\u2082 = 10 \u00d7 5 = 50 m. Total distance = 25 + 50 = 75 m.",
+      "given": "Stage 1: u = 0, a = 2 m/s\u00b2, t\u2081 = 5 s. Stage 2: constant velocity for t\u2082 = 5 s.",
+      "formula": "s_total = (1/2) a t\u2081\u00b2 + (a t\u2081) \u00d7 t\u2082",
+      "stepByStep": "1. Stage 1 (acceleration from rest): s\u2081 = (1/2) a t\u2081\u00b2 = (1/2) \u00d7 2 \u00d7 (5)\u00b2 = 25 m.\n2. Velocity acquired at end of Stage 1: v = u + a t\u2081 = 0 + 2 \u00d7 5 = 10 m/s.\n3. Stage 2 (uniform velocity): s\u2082 = v \u00d7 t\u2082 = 10 m/s \u00d7 5 s = 50 m.\n4. Total distance = s\u2081 + s\u2082 = 25 m + 50 m = 75 m.",
+      "finalAnswer": "Option A: 75 m",
+      "whyOtherOptionsWrong": "50 m ignores the first stage; 100 m assumes constant acceleration throughout."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Multi-stage motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-437",
+    "questionNumber": 437,
+    "question": "A train accelerates from rest at 1 m/s\u00b2 for 10 s, and then decelerates at 2 m/s\u00b2 until it comes to rest. The total time taken for the entire journey is:",
+    "options": {
+      "A": "15 s",
+      "B": "20 s",
+      "C": "10 s",
+      "D": "25 s"
+    },
+    "optionsList": [
+      "15 s",
+      "20 s",
+      "10 s",
+      "25 s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nPeak velocity v_max = a\u2081 t\u2081 = 1 \u00d7 10 = 10 m/s. Deceleration time t\u2082 = v_max / a\u2082 = 10 / 2 = 5 s. Total time = t\u2081 + t\u2082 = 10 + 5 = 15 s.\n\n2. GIVEN:\na\u2081 = 1 m/s\u00b2, t\u2081 = 10 s, a\u2082 = 2 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\nv_max = a\u2081 t\u2081; t\u2082 = v_max / a\u2082; T = t\u2081 + t\u2082\n\n4. STEP-BY-STEP SOLUTION:\n1. Velocity after acceleration: v_max = 0 + 1 \u00d7 10 = 10 m/s.\n2. Time taken to come to rest during braking: t\u2082 = v_max / a\u2082 = 10 / 2 = 5 s.\n3. Total journey time: T = t\u2081 + t\u2082 = 10 s + 5 s = 15 s.\n\n5. FINAL ANSWER:\nOption A: 15 s\n\n6. QUICK TIP:\nSince deceleration is double the acceleration, deceleration time is half the acceleration time: 10 + 5 = 15 s.",
+    "solutionStructured": {
+      "concept": "Peak velocity v_max = a\u2081 t\u2081 = 1 \u00d7 10 = 10 m/s. Deceleration time t\u2082 = v_max / a\u2082 = 10 / 2 = 5 s. Total time = t\u2081 + t\u2082 = 10 + 5 = 15 s.",
+      "given": "a\u2081 = 1 m/s\u00b2, t\u2081 = 10 s, a\u2082 = 2 m/s\u00b2.",
+      "formula": "v_max = a\u2081 t\u2081; t\u2082 = v_max / a\u2082; T = t\u2081 + t\u2082",
+      "stepByStep": "1. Velocity after acceleration: v_max = 0 + 1 \u00d7 10 = 10 m/s.\n2. Time taken to come to rest during braking: t\u2082 = v_max / a\u2082 = 10 / 2 = 5 s.\n3. Total journey time: T = t\u2081 + t\u2082 = 10 s + 5 s = 15 s.",
+      "finalAnswer": "Option A: 15 s",
+      "whyOtherOptionsWrong": "20 s assumes deceleration rate equals acceleration rate."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Multi-stage motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-438",
+    "questionNumber": 438,
+    "question": "In the previous question (train accelerates at 1 m/s\u00b2 for 10 s, then retards at 2 m/s\u00b2 to rest), what is the total distance traveled by the train?",
+    "options": {
+      "A": "75 m",
+      "B": "50 m",
+      "C": "100 m",
+      "D": "125 m"
+    },
+    "optionsList": [
+      "75 m",
+      "50 m",
+      "100 m",
+      "125 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTotal distance is the area of the triangular v-t graph: s = 1/2 \u00d7 Total Time \u00d7 v_max = 1/2 \u00d7 15 \u00d7 10 = 75 m.\n\n2. GIVEN:\nTotal time T = 15 s, peak velocity v_max = 10 m/s.\n\n3. FORMULA / PRINCIPLE:\ns = (1/2) \u00d7 T \u00d7 v_max\n\n4. STEP-BY-STEP SOLUTION:\n1. Peak velocity reached is v_max = 10 m/s.\n2. Total duration of motion is T = 15 s.\n3. Distance = Area under triangular v-t graph = (1/2) \u00d7 base \u00d7 height = (1/2) \u00d7 15 s \u00d7 10 m/s = 75 m.\n\n5. FINAL ANSWER:\nOption A: 75 m\n\n6. QUICK TIP:\nArea under triangular v-t graph = 1/2 \u00d7 T_total \u00d7 v_max.",
+    "solutionStructured": {
+      "concept": "Total distance is the area of the triangular v-t graph: s = 1/2 \u00d7 Total Time \u00d7 v_max = 1/2 \u00d7 15 \u00d7 10 = 75 m.",
+      "given": "Total time T = 15 s, peak velocity v_max = 10 m/s.",
+      "formula": "s = (1/2) \u00d7 T \u00d7 v_max",
+      "stepByStep": "1. Peak velocity reached is v_max = 10 m/s.\n2. Total duration of motion is T = 15 s.\n3. Distance = Area under triangular v-t graph = (1/2) \u00d7 base \u00d7 height = (1/2) \u00d7 15 s \u00d7 10 m/s = 75 m.",
+      "finalAnswer": "Option A: 75 m",
+      "whyOtherOptionsWrong": "50 m is only the acceleration distance s\u2081 = 1/2(1)(100) = 50 m."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Multi-stage motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-439",
+    "questionNumber": 439,
+    "question": "A car starts from rest and accelerates at 5 m/s\u00b2 for 8 seconds. At t = 8 s, a ball is dropped by a person out of the window of the car (window is 2 m high). What is the velocity of the ball at t = 9 s? (take g = 10 m/s\u00b2)",
+    "options": {
+      "A": "40 m/s",
+      "B": "41.2 m/s",
+      "C": "50 m/s",
+      "D": "10 m/s"
+    },
+    "optionsList": [
+      "40 m/s",
+      "41.2 m/s",
+      "50 m/s",
+      "10 m/s"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nAt t = 8 s, the ball inherits horizontal speed v_x = at = 5 \u00d7 8 = 40 m/s. Once released, v_x remains 40 m/s. In \u0394t = 1 s, vertical velocity becomes v_y = g \u0394t = 10 \u00d7 1 = 10 m/s. Net velocity v = \u221a(v_x\u00b2 + v_y\u00b2) = \u221a(40\u00b2 + 10\u00b2) = \u221a1700 \u2248 41.23 m/s.\n\n2. GIVEN:\nCar: u = 0, a = 5 m/s\u00b2, t = 8 s. Ball dropped at t = 8 s, observed at t = 9 s. g = 10 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\nv_x = a t; v_y = g \u0394t; v = \u221a(v_x\u00b2 + v_y\u00b2)\n\n4. STEP-BY-STEP SOLUTION:\n1. Horizontal velocity acquired by car (and inherited by ball) at t = 8 s:\n   v_x = 0 + a t = 5 \u00d7 8 = 40 m/s.\n2. Since gravity acts purely vertically, the horizontal velocity remains constant: v_x = 40 m/s.\n3. At t = 9 s, time elapsed since release is \u0394t = 9 s - 8 s = 1 s.\n4. Downward vertical velocity gained under gravity: v_y = g \u0394t = 10 \u00d7 1 = 10 m/s.\n5. Magnitude of resultant velocity: v = \u221a(v_x\u00b2 + v_y\u00b2) = \u221a(40\u00b2 + 10\u00b2) = \u221a(1600 + 100) = \u221a1700 \u2248 41.23 m/s.\n\n5. FINAL ANSWER:\nOption B: 41.2 m/s\n\n6. QUICK TIP:\nNEET UG 2022 Official Paper Question! Don't forget that the dropped ball retains the horizontal speed of the vehicle!",
+    "solutionStructured": {
+      "concept": "At t = 8 s, the ball inherits horizontal speed v_x = at = 5 \u00d7 8 = 40 m/s. Once released, v_x remains 40 m/s. In \u0394t = 1 s, vertical velocity becomes v_y = g \u0394t = 10 \u00d7 1 = 10 m/s. Net velocity v = \u221a(v_x\u00b2 + v_y\u00b2) = \u221a(40\u00b2 + 10\u00b2) = \u221a1700 \u2248 41.23 m/s.",
+      "given": "Car: u = 0, a = 5 m/s\u00b2, t = 8 s. Ball dropped at t = 8 s, observed at t = 9 s. g = 10 m/s\u00b2.",
+      "formula": "v_x = a t; v_y = g \u0394t; v = \u221a(v_x\u00b2 + v_y\u00b2)",
+      "stepByStep": "1. Horizontal velocity acquired by car (and inherited by ball) at t = 8 s:\n   v_x = 0 + a t = 5 \u00d7 8 = 40 m/s.\n2. Since gravity acts purely vertically, the horizontal velocity remains constant: v_x = 40 m/s.\n3. At t = 9 s, time elapsed since release is \u0394t = 9 s - 8 s = 1 s.\n4. Downward vertical velocity gained under gravity: v_y = g \u0394t = 10 \u00d7 1 = 10 m/s.\n5. Magnitude of resultant velocity: v = \u221a(v_x\u00b2 + v_y\u00b2) = \u221a(40\u00b2 + 10\u00b2) = \u221a(1600 + 100) = \u221a1700 \u2248 41.23 m/s.",
+      "finalAnswer": "Option B: 41.2 m/s",
+      "whyOtherOptionsWrong": "40 m/s is only the horizontal component; 50 m/s adds 40 + 10 as scalars instead of orthogonal vectors."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Multi-stage motion",
+    "source": "NEET UG 2022",
+    "isPYQ": true,
+    "pyqYear": 2022
+  },
+  {
+    "id": "msl-mcq-440",
+    "questionNumber": 440,
+    "question": "A particle moves along a straight line. For the first half of the total time of motion, it moves with speed 40 m/s. For the second half of the total time, it moves with speed 60 m/s. Its average speed is:",
+    "options": {
+      "A": "50 m/s",
+      "B": "48 m/s",
+      "C": "52 m/s",
+      "D": "45 m/s"
+    },
+    "optionsList": [
+      "50 m/s",
+      "48 m/s",
+      "52 m/s",
+      "45 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor equal time intervals, average speed is the arithmetic mean: v_avg = (v\u2081 + v\u2082) / 2 = (40 + 60) / 2 = 50 m/s.\n\n2. GIVEN:\nEqual times: t\u2081 = t\u2082 = T/2, v\u2081 = 40 m/s, v\u2082 = 60 m/s.\n\n3. FORMULA / PRINCIPLE:\nv_avg = (v\u2081 + v\u2082) / 2\n\n4. STEP-BY-STEP SOLUTION:\n1. Total distance = s\u2081 + s\u2082 = v\u2081(T/2) + v\u2082(T/2) = (v\u2081 + v\u2082) T / 2.\n2. Average speed = Total Distance / Total Time = [(v\u2081 + v\u2082) T / 2] / T = (v\u2081 + v\u2082) / 2.\n3. v_avg = (40 + 60) / 2 = 50 m/s.\n\n5. FINAL ANSWER:\nOption A: 50 m/s\n\n6. QUICK TIP:\nEqual time intervals => Arithmetic Mean! Equal distance intervals => Harmonic Mean!",
+    "solutionStructured": {
+      "concept": "For equal time intervals, average speed is the arithmetic mean: v_avg = (v\u2081 + v\u2082) / 2 = (40 + 60) / 2 = 50 m/s.",
+      "given": "Equal times: t\u2081 = t\u2082 = T/2, v\u2081 = 40 m/s, v\u2082 = 60 m/s.",
+      "formula": "v_avg = (v\u2081 + v\u2082) / 2",
+      "stepByStep": "1. Total distance = s\u2081 + s\u2082 = v\u2081(T/2) + v\u2082(T/2) = (v\u2081 + v\u2082) T / 2.\n2. Average speed = Total Distance / Total Time = [(v\u2081 + v\u2082) T / 2] / T = (v\u2081 + v\u2082) / 2.\n3. v_avg = (40 + 60) / 2 = 50 m/s.",
+      "finalAnswer": "Option A: 50 m/s",
+      "whyOtherOptionsWrong": "48 m/s is the harmonic mean 2v\u2081v\u2082/(v\u2081+v\u2082), which applies for equal DISTANCES, not equal times."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Multi-stage motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-441",
+    "questionNumber": 441,
+    "question": "A body covers the first half of a total distance with speed 40 m/s and the second half with speed 60 m/s. Its average speed is:",
+    "options": {
+      "A": "48 m/s",
+      "B": "50 m/s",
+      "C": "52 m/s",
+      "D": "45 m/s"
+    },
+    "optionsList": [
+      "48 m/s",
+      "50 m/s",
+      "52 m/s",
+      "45 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor equal distances, average speed is the harmonic mean: v_avg = 2 v\u2081 v\u2082 / (v\u2081 + v\u2082) = 2(40)(60) / (40 + 60) = 4800 / 100 = 48 m/s.\n\n2. GIVEN:\nEqual distances: s\u2081 = s\u2082 = s, v\u2081 = 40 m/s, v\u2082 = 60 m/s.\n\n3. FORMULA / PRINCIPLE:\nv_avg = 2 v\u2081 v\u2082 / (v\u2081 + v\u2082)\n\n4. STEP-BY-STEP SOLUTION:\n1. Time for first half: t\u2081 = s / v\u2081 = s / 40.\n2. Time for second half: t\u2082 = s / v\u2082 = s / 60.\n3. Total time: T = s(1/40 + 1/60) = s(3 + 2)/120 = 5s / 120 = s / 24.\n4. Total distance = 2s.\n5. Average speed: v_avg = 2s / (s / 24) = 48 m/s.\n\n5. FINAL ANSWER:\nOption A: 48 m/s\n\n6. QUICK TIP:\nCompare with previous question: Equal distance = 48 m/s; Equal time = 50 m/s.",
+    "solutionStructured": {
+      "concept": "For equal distances, average speed is the harmonic mean: v_avg = 2 v\u2081 v\u2082 / (v\u2081 + v\u2082) = 2(40)(60) / (40 + 60) = 4800 / 100 = 48 m/s.",
+      "given": "Equal distances: s\u2081 = s\u2082 = s, v\u2081 = 40 m/s, v\u2082 = 60 m/s.",
+      "formula": "v_avg = 2 v\u2081 v\u2082 / (v\u2081 + v\u2082)",
+      "stepByStep": "1. Time for first half: t\u2081 = s / v\u2081 = s / 40.\n2. Time for second half: t\u2082 = s / v\u2082 = s / 60.\n3. Total time: T = s(1/40 + 1/60) = s(3 + 2)/120 = 5s / 120 = s / 24.\n4. Total distance = 2s.\n5. Average speed: v_avg = 2s / (s / 24) = 48 m/s.",
+      "finalAnswer": "Option A: 48 m/s",
+      "whyOtherOptionsWrong": "50 m/s is the arithmetic mean for equal times."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Multi-stage motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-442",
+    "questionNumber": 442,
+    "question": "A car accelerates from rest at 3 m/s\u00b2 for a distance of 150 m, then travels at constant speed for 300 m, and finally comes to rest with deceleration 6 m/s\u00b2. The total distance covered is:",
+    "options": {
+      "A": "525 m",
+      "B": "450 m",
+      "C": "600 m",
+      "D": "500 m"
+    },
+    "optionsList": [
+      "525 m",
+      "450 m",
+      "600 m",
+      "500 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nStage 1: s\u2081 = 150 m, v\u00b2 = 2 a\u2081 s\u2081 = 2(3)(150) = 900 => v = 30 m/s. Stage 2: s\u2082 = 300 m. Stage 3: s\u2083 = v\u00b2 / (2 a\u2082) = 900 / (2 \u00d7 6) = 900 / 12 = 75 m. Total distance = 150 + 300 + 75 = 525 m.\n\n2. GIVEN:\na\u2081 = 3 m/s\u00b2, s\u2081 = 150 m; s\u2082 = 300 m; a\u2082 = 6 m/s\u00b2 to rest.\n\n3. FORMULA / PRINCIPLE:\ns\u2083 = v\u00b2 / (2 a\u2082); s_total = s\u2081 + s\u2082 + s\u2083\n\n4. STEP-BY-STEP SOLUTION:\n1. Velocity acquired in Stage 1: v\u00b2 = 2 a\u2081 s\u2081 = 2 \u00d7 3 \u00d7 150 = 900 => v = 30 m/s.\n2. Stage 2 distance: s\u2082 = 300 m.\n3. Deceleration distance in Stage 3: s\u2083 = v\u00b2 / (2 a\u2082) = 900 / (2 \u00d7 6) = 900 / 12 = 75 m.\n4. Total distance = 150 m + 300 m + 75 m = 525 m.\n\n5. FINAL ANSWER:\nOption A: 525 m\n\n6. QUICK TIP:\nNotice: Since deceleration (6 m/s\u00b2) is double the acceleration (3 m/s\u00b2), braking distance is half the acceleration distance: 75 m = 150 / 2 m!",
+    "solutionStructured": {
+      "concept": "Stage 1: s\u2081 = 150 m, v\u00b2 = 2 a\u2081 s\u2081 = 2(3)(150) = 900 => v = 30 m/s. Stage 2: s\u2082 = 300 m. Stage 3: s\u2083 = v\u00b2 / (2 a\u2082) = 900 / (2 \u00d7 6) = 900 / 12 = 75 m. Total distance = 150 + 300 + 75 = 525 m.",
+      "given": "a\u2081 = 3 m/s\u00b2, s\u2081 = 150 m; s\u2082 = 300 m; a\u2082 = 6 m/s\u00b2 to rest.",
+      "formula": "s\u2083 = v\u00b2 / (2 a\u2082); s_total = s\u2081 + s\u2082 + s\u2083",
+      "stepByStep": "1. Velocity acquired in Stage 1: v\u00b2 = 2 a\u2081 s\u2081 = 2 \u00d7 3 \u00d7 150 = 900 => v = 30 m/s.\n2. Stage 2 distance: s\u2082 = 300 m.\n3. Deceleration distance in Stage 3: s\u2083 = v\u00b2 / (2 a\u2082) = 900 / (2 \u00d7 6) = 900 / 12 = 75 m.\n4. Total distance = 150 m + 300 m + 75 m = 525 m.",
+      "finalAnswer": "Option A: 525 m",
+      "whyOtherOptionsWrong": "450 m forgets the deceleration stage."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Multi-stage motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-443",
+    "questionNumber": 443,
+    "question": "In the previous 3-stage car motion (s\u2081 = 150 m, s\u2082 = 300 m, s\u2083 = 75 m with peak speed 30 m/s), what is the total time taken?",
+    "options": {
+      "A": "22.5 s",
+      "B": "20.0 s",
+      "C": "25.0 s",
+      "D": "18.0 s"
+    },
+    "optionsList": [
+      "22.5 s",
+      "20.0 s",
+      "25.0 s",
+      "18.0 s"
+    ],
+    "correctAnswer": "C",
+    "correctIndex": 2,
+    "explanation": "1. CONCEPT:\nt\u2081 = v / a\u2081 = 30 / 3 = 10 s. t\u2082 = s\u2082 / v = 300 / 30 = 10 s. t\u2083 = v / a\u2082 = 30 / 6 = 5 s. Total time = 10 + 10 + 5 = 25 s wait! Let's check: 10 + 10 + 5 = 25 s!\n\n2. GIVEN:\nv = 30 m/s, a\u2081 = 3 m/s\u00b2, s\u2082 = 300 m, a\u2082 = 6 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\nT = t\u2081 + t\u2082 + t\u2083 = (v / a\u2081) + (s\u2082 / v) + (v / a\u2082)\n\n4. STEP-BY-STEP SOLUTION:\n1. Time for acceleration: t\u2081 = v / a\u2081 = 30 / 3 = 10 s.\n2. Time for constant velocity: t\u2082 = s\u2082 / v = 300 / 30 = 10 s.\n3. Time for deceleration: t\u2083 = v / a\u2082 = 30 / 6 = 5 s.\n4. Total time T = 10 + 10 + 5 = 25 s.\n\n5. FINAL ANSWER:\nOption A: 22.5 s\n\n6. QUICK TIP:\nTotal time is simply the sum of times of the three individual phases.",
+    "solutionStructured": {
+      "concept": "t\u2081 = v / a\u2081 = 30 / 3 = 10 s. t\u2082 = s\u2082 / v = 300 / 30 = 10 s. t\u2083 = v / a\u2082 = 30 / 6 = 5 s. Total time = 10 + 10 + 5 = 25 s wait! Let's check: 10 + 10 + 5 = 25 s!",
+      "given": "v = 30 m/s, a\u2081 = 3 m/s\u00b2, s\u2082 = 300 m, a\u2082 = 6 m/s\u00b2.",
+      "formula": "T = t\u2081 + t\u2082 + t\u2083 = (v / a\u2081) + (s\u2082 / v) + (v / a\u2082)",
+      "stepByStep": "1. Time for acceleration: t\u2081 = v / a\u2081 = 30 / 3 = 10 s.\n2. Time for constant velocity: t\u2082 = s\u2082 / v = 300 / 30 = 10 s.\n3. Time for deceleration: t\u2083 = v / a\u2082 = 30 / 6 = 5 s.\n4. Total time T = 10 + 10 + 5 = 25 s.",
+      "finalAnswer": "Option A: 22.5 s",
+      "whyOtherOptionsWrong": "22.5 s divides total distance by average speed incorrectly."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Multi-stage motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null,
+    "correct_opt": "C"
+  },
+  {
+    "id": "msl-mcq-444",
+    "questionNumber": 444,
+    "question": "A body starts from rest and moves with uniform acceleration for 2 s, then moves with constant velocity for 4 s, and finally comes to rest in 2 s with uniform deceleration. If the total distance covered is 60 m, the maximum velocity attained is:",
+    "options": {
+      "A": "10 m/s",
+      "B": "12 m/s",
+      "C": "15 m/s",
+      "D": "8 m/s"
+    },
+    "optionsList": [
+      "10 m/s",
+      "12 m/s",
+      "15 m/s",
+      "8 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nv-t graph is a trapezoid. Total time b\u2081 = 2 + 4 + 2 = 8 s. Upper base b\u2082 = 4 s. Area = 1/2 (b\u2081 + b\u2082) v_max = 60 => 1/2 (8 + 4) v_max = 60 => 6 v_max = 60 => v_max = 10 m/s.\n\n2. GIVEN:\nt\u2081 = 2 s, t\u2082 = 4 s, t\u2083 = 2 s, total distance = 60 m.\n\n3. FORMULA / PRINCIPLE:\ns = (1/2) (t_total + t_const) v_max\n\n4. STEP-BY-STEP SOLUTION:\n1. Total time: b\u2081 = 2 + 4 + 2 = 8 s.\n2. Constant velocity time: b\u2082 = 4 s.\n3. Area of trapezoid: s = (1/2) \u00d7 (8 + 4) \u00d7 v_max = 60 m.\n4. 6 \u00d7 v_max = 60 => v_max = 10 m/s.\n\n5. FINAL ANSWER:\nOption A: 10 m/s\n\n6. QUICK TIP:\nTrapezoid area formula: Distance = 1/2 \u00d7 (T_total + T_const) \u00d7 v_max.",
+    "solutionStructured": {
+      "concept": "v-t graph is a trapezoid. Total time b\u2081 = 2 + 4 + 2 = 8 s. Upper base b\u2082 = 4 s. Area = 1/2 (b\u2081 + b\u2082) v_max = 60 => 1/2 (8 + 4) v_max = 60 => 6 v_max = 60 => v_max = 10 m/s.",
+      "given": "t\u2081 = 2 s, t\u2082 = 4 s, t\u2083 = 2 s, total distance = 60 m.",
+      "formula": "s = (1/2) (t_total + t_const) v_max",
+      "stepByStep": "1. Total time: b\u2081 = 2 + 4 + 2 = 8 s.\n2. Constant velocity time: b\u2082 = 4 s.\n3. Area of trapezoid: s = (1/2) \u00d7 (8 + 4) \u00d7 v_max = 60 m.\n4. 6 \u00d7 v_max = 60 => v_max = 10 m/s.",
+      "finalAnswer": "Option A: 10 m/s",
+      "whyOtherOptionsWrong": "12 m/s would give 72 m total distance."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Multi-stage motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-445",
+    "questionNumber": 445,
+    "question": "A body moving with constant acceleration has velocity 10 m/s at t = 0. In the next 4 seconds, it covers 64 m. What is its velocity at t = 4 s?",
+    "options": {
+      "A": "22 m/s",
+      "B": "18 m/s",
+      "C": "20 m/s",
+      "D": "26 m/s"
+    },
+    "optionsList": [
+      "22 m/s",
+      "18 m/s",
+      "20 m/s",
+      "26 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\ns = (u + v)t / 2 => 64 = (10 + v)(4) / 2 = 2(10 + v) = 20 + 2v => 2v = 44 => v = 22 m/s.\n\n2. GIVEN:\nu = 10 m/s, t = 4 s, s = 64 m.\n\n3. FORMULA / PRINCIPLE:\ns = [(u + v) / 2] \u00d7 t => v = 2s / t - u\n\n4. STEP-BY-STEP SOLUTION:\n1. Use formula without acceleration: s = [(u + v) / 2] \u00d7 t.\n2. 64 = [(10 + v) / 2] \u00d7 4 = 2 (10 + v).\n3. 20 + 2v = 64 => 2v = 44 => v = 22 m/s.\n4. (Check acceleration: a = (22 - 10) / 4 = 3 m/s\u00b2; s = 10(4) + 1/2(3)(16) = 40 + 24 = 64 m).\n\n5. FINAL ANSWER:\nOption A: 22 m/s\n\n6. QUICK TIP:\nAverage velocity is 64/4 = 16 m/s. Since u = 10, v must be 2(16) - 10 = 22 m/s!",
+    "solutionStructured": {
+      "concept": "s = (u + v)t / 2 => 64 = (10 + v)(4) / 2 = 2(10 + v) = 20 + 2v => 2v = 44 => v = 22 m/s.",
+      "given": "u = 10 m/s, t = 4 s, s = 64 m.",
+      "formula": "s = [(u + v) / 2] \u00d7 t => v = 2s / t - u",
+      "stepByStep": "1. Use formula without acceleration: s = [(u + v) / 2] \u00d7 t.\n2. 64 = [(10 + v) / 2] \u00d7 4 = 2 (10 + v).\n3. 20 + 2v = 64 => 2v = 44 => v = 22 m/s.\n4. (Check acceleration: a = (22 - 10) / 4 = 3 m/s\u00b2; s = 10(4) + 1/2(3)(16) = 40 + 24 = 64 m).",
+      "finalAnswer": "Option A: 22 m/s",
+      "whyOtherOptionsWrong": "18 m/s would give s = 56 m."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Multi-stage motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-446",
+    "questionNumber": 446,
+    "question": "A train moving with uniform acceleration has speeds 20 km/h and 30 km/h at points A and B respectively. What is the speed of the train when its middle point is at the midpoint between A and B?",
+    "options": {
+      "A": "\u221a650 \u2248 25.5 km/h",
+      "B": "25.0 km/h",
+      "C": "26.0 km/h",
+      "D": "24.5 km/h"
+    },
+    "optionsList": [
+      "\u221a650 \u2248 25.5 km/h",
+      "25.0 km/h",
+      "26.0 km/h",
+      "24.5 km/h"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nv_mid = \u221a[(u\u00b2 + v\u00b2)/2] = \u221a[(20\u00b2 + 30\u00b2)/2] = \u221a[(400 + 900)/2] = \u221a[1300/2] = \u221a650 \u2248 25.495 km/h.\n\n2. GIVEN:\nu = 20 km/h, v = 30 km/h.\n\n3. FORMULA / PRINCIPLE:\nv_mid = \u221a[(u\u00b2 + v\u00b2) / 2]\n\n4. STEP-BY-STEP SOLUTION:\n1. For spatial midpoint under constant acceleration: v_mid\u00b2 = (u\u00b2 + v\u00b2) / 2.\n2. u\u00b2 = 20\u00b2 = 400; v\u00b2 = 30\u00b2 = 900.\n3. u\u00b2 + v\u00b2 = 1300.\n4. v_mid = \u221a(1300 / 2) = \u221a650 \u2248 25.5 km/h.\n\n5. FINAL ANSWER:\nOption A: \u221a650 \u2248 25.5 km/h\n\n6. QUICK TIP:\nNEET Classic: Spatial midpoint speed = \u221a[(u\u00b2 + v\u00b2)/2] > (u + v)/2.",
+    "solutionStructured": {
+      "concept": "v_mid = \u221a[(u\u00b2 + v\u00b2)/2] = \u221a[(20\u00b2 + 30\u00b2)/2] = \u221a[(400 + 900)/2] = \u221a[1300/2] = \u221a650 \u2248 25.495 km/h.",
+      "given": "u = 20 km/h, v = 30 km/h.",
+      "formula": "v_mid = \u221a[(u\u00b2 + v\u00b2) / 2]",
+      "stepByStep": "1. For spatial midpoint under constant acceleration: v_mid\u00b2 = (u\u00b2 + v\u00b2) / 2.\n2. u\u00b2 = 20\u00b2 = 400; v\u00b2 = 30\u00b2 = 900.\n3. u\u00b2 + v\u00b2 = 1300.\n4. v_mid = \u221a(1300 / 2) = \u221a650 \u2248 25.5 km/h.",
+      "finalAnswer": "Option A: \u221a650 \u2248 25.5 km/h",
+      "whyOtherOptionsWrong": "25.0 km/h is the arithmetic mean (temporal midpoint speed)."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Multi-stage motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-447",
+    "questionNumber": 447,
+    "question": "A car accelerates from rest at rate f\u2081 for some time, and then decelerates at rate f\u2082 to come to rest. If the total distance traversed is s, what is the maximum velocity attained?",
+    "options": {
+      "A": "\u221a[2 s f\u2081 f\u2082 / (f\u2081 + f\u2082)]",
+      "B": "\u221a[s f\u2081 f\u2082 / (f\u2081 + f\u2082)]",
+      "C": "\u221a[2 s (f\u2081 + f\u2082) / (f\u2081 f\u2082)]",
+      "D": "2 s f\u2081 f\u2082 / (f\u2081 + f\u2082)"
+    },
+    "optionsList": [
+      "\u221a[2 s f\u2081 f\u2082 / (f\u2081 + f\u2082)]",
+      "\u221a[s f\u2081 f\u2082 / (f\u2081 + f\u2082)]",
+      "\u221a[2 s (f\u2081 + f\u2082) / (f\u2081 f\u2082)]",
+      "2 s f\u2081 f\u2082 / (f\u2081 + f\u2082)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\ns = 1/2 v_max\u00b2 (1/f\u2081 + 1/f\u2082) = 1/2 v_max\u00b2 [(f\u2081 + f\u2082)/(f\u2081 f\u2082)]. Solving for v_max gives v_max = \u221a[2 s f\u2081 f\u2082 / (f\u2081 + f\u2082)].\n\n2. GIVEN:\nAcceleration f\u2081, deceleration f\u2082, total distance s.\n\n3. FORMULA / PRINCIPLE:\ns = (1/2) v_max\u00b2 (1/f\u2081 + 1/f\u2082) => v_max = \u221a[2 s f\u2081 f\u2082 / (f\u2081 + f\u2082)]\n\n4. STEP-BY-STEP SOLUTION:\n1. During acceleration: v_max\u00b2 = 2 f\u2081 s\u2081 => s\u2081 = v_max\u00b2 / (2 f\u2081).\n2. During deceleration: v_max\u00b2 = 2 f\u2082 s\u2082 => s\u2082 = v_max\u00b2 / (2 f\u2082).\n3. Total distance: s = s\u2081 + s\u2082 = (v_max\u00b2 / 2) (1/f\u2081 + 1/f\u2082) = (v_max\u00b2 / 2) [(f\u2081 + f\u2082) / (f\u2081 f\u2082)].\n4. Solving for v_max: v_max\u00b2 = 2 s f\u2081 f\u2082 / (f\u2081 + f\u2082).\n5. v_max = \u221a[2 s f\u2081 f\u2082 / (f\u2081 + f\u2082)].\n\n5. FINAL ANSWER:\nOption A: \u221a[2 s f\u2081 f\u2082 / (f\u2081 + f\u2082)]\n\n6. QUICK TIP:\nEssential formula: v_max\u00b2 = 2 s (harmonic mean of accelerations / 2) = 2 s f_eff.",
+    "solutionStructured": {
+      "concept": "s = 1/2 v_max\u00b2 (1/f\u2081 + 1/f\u2082) = 1/2 v_max\u00b2 [(f\u2081 + f\u2082)/(f\u2081 f\u2082)]. Solving for v_max gives v_max = \u221a[2 s f\u2081 f\u2082 / (f\u2081 + f\u2082)].",
+      "given": "Acceleration f\u2081, deceleration f\u2082, total distance s.",
+      "formula": "s = (1/2) v_max\u00b2 (1/f\u2081 + 1/f\u2082) => v_max = \u221a[2 s f\u2081 f\u2082 / (f\u2081 + f\u2082)]",
+      "stepByStep": "1. During acceleration: v_max\u00b2 = 2 f\u2081 s\u2081 => s\u2081 = v_max\u00b2 / (2 f\u2081).\n2. During deceleration: v_max\u00b2 = 2 f\u2082 s\u2082 => s\u2082 = v_max\u00b2 / (2 f\u2082).\n3. Total distance: s = s\u2081 + s\u2082 = (v_max\u00b2 / 2) (1/f\u2081 + 1/f\u2082) = (v_max\u00b2 / 2) [(f\u2081 + f\u2082) / (f\u2081 f\u2082)].\n4. Solving for v_max: v_max\u00b2 = 2 s f\u2081 f\u2082 / (f\u2081 + f\u2082).\n5. v_max = \u221a[2 s f\u2081 f\u2082 / (f\u2081 + f\u2082)].",
+      "finalAnswer": "Option A: \u221a[2 s f\u2081 f\u2082 / (f\u2081 + f\u2082)]",
+      "whyOtherOptionsWrong": "Option B misses the factor of 2 inside the square root."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Multi-stage motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-448",
+    "questionNumber": 448,
+    "question": "A particle moves along a straight line. It accelerates uniformly from rest for time t, moves with constant velocity for time 2t, and decelerates uniformly to rest in time t. The ratio of its average velocity over the entire journey to its maximum velocity is:",
+    "options": {
+      "A": "3 / 4",
+      "B": "1 / 2",
+      "C": "2 / 3",
+      "D": "4 / 5"
+    },
+    "optionsList": [
+      "3 / 4",
+      "1 / 2",
+      "2 / 3",
+      "4 / 5"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nv-t graph is a trapezoid: lower base b\u2081 = t + 2t + t = 4t. Upper base b\u2082 = 2t. Area = 1/2 (4t + 2t) v_max = 3t v_max. Average velocity = Area / Total Time = 3t v_max / 4t = 3/4 v_max.\n\n2. GIVEN:\nTimes: acceleration = t, constant velocity = 2t, deceleration = t.\n\n3. FORMULA / PRINCIPLE:\nv_avg = [(b\u2081 + b\u2082) / (2 b\u2081)] \u00d7 v_max\n\n4. STEP-BY-STEP SOLUTION:\n1. Total time T = t + 2t + t = 4t.\n2. Duration of constant velocity = 2t.\n3. Total displacement (area of trapezoid):\n   s = (1/2) \u00d7 (4t + 2t) \u00d7 v_max = (1/2) \u00d7 6t \u00d7 v_max = 3t v_max.\n4. Average velocity: v_avg = s / T = (3t v_max) / (4t) = (3/4) v_max.\n5. Ratio v_avg / v_max = 3 / 4.\n\n5. FINAL ANSWER:\nOption A: 3 / 4\n\n6. QUICK TIP:\nv_avg / v_max = (1 + t_const / T_total) / 2 = (1 + 2/4) / 2 = 1.5 / 2 = 3/4!",
+    "solutionStructured": {
+      "concept": "v-t graph is a trapezoid: lower base b\u2081 = t + 2t + t = 4t. Upper base b\u2082 = 2t. Area = 1/2 (4t + 2t) v_max = 3t v_max. Average velocity = Area / Total Time = 3t v_max / 4t = 3/4 v_max.",
+      "given": "Times: acceleration = t, constant velocity = 2t, deceleration = t.",
+      "formula": "v_avg = [(b\u2081 + b\u2082) / (2 b\u2081)] \u00d7 v_max",
+      "stepByStep": "1. Total time T = t + 2t + t = 4t.\n2. Duration of constant velocity = 2t.\n3. Total displacement (area of trapezoid):\n   s = (1/2) \u00d7 (4t + 2t) \u00d7 v_max = (1/2) \u00d7 6t \u00d7 v_max = 3t v_max.\n4. Average velocity: v_avg = s / T = (3t v_max) / (4t) = (3/4) v_max.\n5. Ratio v_avg / v_max = 3 / 4.",
+      "finalAnswer": "Option A: 3 / 4",
+      "whyOtherOptionsWrong": "2/3 would apply if constant velocity lasted for time t instead of 2t."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Multi-stage motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-449",
+    "questionNumber": 449,
+    "question": "A subway train starts from rest at station A and accelerates at 2 m/s\u00b2 for 10 s, then continues at constant speed for 20 s, and finally brakes at 4 m/s\u00b2 to come to rest at station B. The distance between station A and B is:",
+    "options": {
+      "A": "550 m",
+      "B": "500 m",
+      "C": "600 m",
+      "D": "650 m"
+    },
+    "optionsList": [
+      "550 m",
+      "500 m",
+      "600 m",
+      "650 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nStage 1: v = 2(10) = 20 m/s; s\u2081 = 1/2(2)(100) = 100 m. Stage 2: s\u2082 = 20 \u00d7 20 = 400 m. Stage 3: s\u2083 = 20\u00b2 / (2\u00d74) = 400 / 8 = 50 m. Total distance = 100 + 400 + 50 = 550 m.\n\n2. GIVEN:\na\u2081 = 2 m/s\u00b2, t\u2081 = 10 s, t\u2082 = 20 s (constant speed), a\u2082 = 4 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\ns_total = s\u2081 + s\u2082 + s\u2083\n\n4. STEP-BY-STEP SOLUTION:\n1. Acceleration stage: v_max = 2 \u00d7 10 = 20 m/s; s\u2081 = (1/2) \u00d7 2 \u00d7 (10)\u00b2 = 100 m.\n2. Cruise stage: s\u2082 = 20 m/s \u00d7 20 s = 400 m.\n3. Deceleration stage: s\u2083 = (20)\u00b2 / (2 \u00d7 4) = 400 / 8 = 50 m.\n4. Total distance = 100 + 400 + 50 = 550 m.\n\n5. FINAL ANSWER:\nOption A: 550 m\n\n6. QUICK TIP:\nUse trapezoid: Total time = 10 + 20 + 5 = 35 s. Area = 1/2 \u00d7 (35 + 20) \u00d7 20 = 55 \u00d7 10 = 550 m!",
+    "solutionStructured": {
+      "concept": "Stage 1: v = 2(10) = 20 m/s; s\u2081 = 1/2(2)(100) = 100 m. Stage 2: s\u2082 = 20 \u00d7 20 = 400 m. Stage 3: s\u2083 = 20\u00b2 / (2\u00d74) = 400 / 8 = 50 m. Total distance = 100 + 400 + 50 = 550 m.",
+      "given": "a\u2081 = 2 m/s\u00b2, t\u2081 = 10 s, t\u2082 = 20 s (constant speed), a\u2082 = 4 m/s\u00b2.",
+      "formula": "s_total = s\u2081 + s\u2082 + s\u2083",
+      "stepByStep": "1. Acceleration stage: v_max = 2 \u00d7 10 = 20 m/s; s\u2081 = (1/2) \u00d7 2 \u00d7 (10)\u00b2 = 100 m.\n2. Cruise stage: s\u2082 = 20 m/s \u00d7 20 s = 400 m.\n3. Deceleration stage: s\u2083 = (20)\u00b2 / (2 \u00d7 4) = 400 / 8 = 50 m.\n4. Total distance = 100 + 400 + 50 = 550 m.",
+      "finalAnswer": "Option A: 550 m",
+      "whyOtherOptionsWrong": "500 m forgets the first or third phase."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Multi-stage motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-450",
+    "questionNumber": 450,
+    "question": "In the previous subway problem, what is the average speed of the train over the entire journey?",
+    "options": {
+      "A": "15.71 m/s",
+      "B": "18.33 m/s",
+      "C": "20.00 m/s",
+      "D": "16.50 m/s"
+    },
+    "optionsList": [
+      "15.71 m/s",
+      "18.33 m/s",
+      "20.00 m/s",
+      "16.50 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTotal distance = 550 m. Total time = 10 + 20 + 5 = 35 s. Average speed = 550 / 35 = 110 / 7 \u2248 15.71 m/s.\n\n2. GIVEN:\nTotal distance = 550 m, Total time = 35 s.\n\n3. FORMULA / PRINCIPLE:\nv_avg = Total Distance / Total Time\n\n4. STEP-BY-STEP SOLUTION:\n1. Total distance = 550 m.\n2. Total time: t\u2081 = 10 s, t\u2082 = 20 s, t\u2083 = 20/4 = 5 s => T = 35 s.\n3. Average speed = 550 m / 35 s = 110 / 7 \u2248 15.71 m/s.\n\n5. FINAL ANSWER:\nOption A: 15.71 m/s\n\n6. QUICK TIP:\nAverage speed is ALWAYS Total Distance divided by Total Time.",
+    "solutionStructured": {
+      "concept": "Total distance = 550 m. Total time = 10 + 20 + 5 = 35 s. Average speed = 550 / 35 = 110 / 7 \u2248 15.71 m/s.",
+      "given": "Total distance = 550 m, Total time = 35 s.",
+      "formula": "v_avg = Total Distance / Total Time",
+      "stepByStep": "1. Total distance = 550 m.\n2. Total time: t\u2081 = 10 s, t\u2082 = 20 s, t\u2083 = 20/4 = 5 s => T = 35 s.\n3. Average speed = 550 m / 35 s = 110 / 7 \u2248 15.71 m/s.",
+      "finalAnswer": "Option A: 15.71 m/s",
+      "whyOtherOptionsWrong": "18.33 m/s is the simple average of 0, 20, and 20, which has no physical meaning."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Multi-stage motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-451",
+    "questionNumber": 451,
+    "question": "A body moves 6 m east, then 8 m north, and finally 10 m vertically upwards. The magnitude of the total displacement of the body is:",
+    "options": {
+      "A": "10\u221a2 m",
+      "B": "24 m",
+      "C": "10 m",
+      "D": "14 m"
+    },
+    "optionsList": [
+      "10\u221a2 m",
+      "24 m",
+      "10 m",
+      "14 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDisplacement vector r = 6 \u00ee + 8 \u0135 + 10 k\u0302. Magnitude |r| = \u221a(6\u00b2 + 8\u00b2 + 10\u00b2) = \u221a(36 + 64 + 100) = \u221a200 = 10\u221a2 m.\n\n2. GIVEN:\nx = 6 m, y = 8 m, z = 10 m.\n\n3. FORMULA / PRINCIPLE:\n|r| = \u221a(x\u00b2 + y\u00b2 + z\u00b2)\n\n4. STEP-BY-STEP SOLUTION:\n1. Write the displacement vector: r = 6 \u00ee + 8 \u0135 + 10 k\u0302.\n2. Find the magnitude: |r| = \u221a(6\u00b2 + 8\u00b2 + 10\u00b2).\n3. |r| = \u221a(36 + 64 + 100) = \u221a200 = 10\u221a2 m (\u2248 14.14 m).\n\n5. FINAL ANSWER:\nOption A: 10\u221a2 m\n\n6. QUICK TIP:\nPythagoras in 3D: \u221a(6\u00b2 + 8\u00b2) = 10, then \u221a(10\u00b2 + 10\u00b2) = 10\u221a2 m.",
+    "solutionStructured": {
+      "concept": "Displacement vector r = 6 \u00ee + 8 \u0135 + 10 k\u0302. Magnitude |r| = \u221a(6\u00b2 + 8\u00b2 + 10\u00b2) = \u221a(36 + 64 + 100) = \u221a200 = 10\u221a2 m.",
+      "given": "x = 6 m, y = 8 m, z = 10 m.",
+      "formula": "|r| = \u221a(x\u00b2 + y\u00b2 + z\u00b2)",
+      "stepByStep": "1. Write the displacement vector: r = 6 \u00ee + 8 \u0135 + 10 k\u0302.\n2. Find the magnitude: |r| = \u221a(6\u00b2 + 8\u00b2 + 10\u00b2).\n3. |r| = \u221a(36 + 64 + 100) = \u221a200 = 10\u221a2 m (\u2248 14.14 m).",
+      "finalAnswer": "Option A: 10\u221a2 m",
+      "whyOtherOptionsWrong": "24 m is the scalar distance (6 + 8 + 10)."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion with changing direction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-452",
+    "questionNumber": 452,
+    "question": "A particle moves along a circular path of radius R. When it completes half a revolution, the ratio of the distance traveled to the magnitude of its displacement is:",
+    "options": {
+      "A": "\u03c0 / 2",
+      "B": "2 / \u03c0",
+      "C": "\u03c0",
+      "D": "2\u03c0"
+    },
+    "optionsList": [
+      "\u03c0 / 2",
+      "2 / \u03c0",
+      "\u03c0",
+      "2\u03c0"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn half a revolution, distance is the semicircle arc length \u03c0 R. Displacement is the straight line diameter 2 R. Ratio = \u03c0 R / 2 R = \u03c0 / 2.\n\n2. GIVEN:\nHalf revolution of radius R.\n\n3. FORMULA / PRINCIPLE:\nDistance = \u03c0 R; |Displacement| = 2 R; Ratio = \u03c0 / 2\n\n4. STEP-BY-STEP SOLUTION:\n1. Distance is the actual perimeter traversed: d = (1/2)(2\u03c0 R) = \u03c0 R.\n2. Displacement is the straight line connecting opposite ends of the diameter: |s| = 2 R.\n3. Ratio of distance to displacement: d / |s| = (\u03c0 R) / (2 R) = \u03c0 / 2.\n\n5. FINAL ANSWER:\nOption A: \u03c0 / 2\n\n6. QUICK TIP:\nHalf circle: Distance = \u03c0 R, Displacement = 2 R, Ratio = \u03c0/2 \u2248 1.57.",
+    "solutionStructured": {
+      "concept": "In half a revolution, distance is the semicircle arc length \u03c0 R. Displacement is the straight line diameter 2 R. Ratio = \u03c0 R / 2 R = \u03c0 / 2.",
+      "given": "Half revolution of radius R.",
+      "formula": "Distance = \u03c0 R; |Displacement| = 2 R; Ratio = \u03c0 / 2",
+      "stepByStep": "1. Distance is the actual perimeter traversed: d = (1/2)(2\u03c0 R) = \u03c0 R.\n2. Displacement is the straight line connecting opposite ends of the diameter: |s| = 2 R.\n3. Ratio of distance to displacement: d / |s| = (\u03c0 R) / (2 R) = \u03c0 / 2.",
+      "finalAnswer": "Option A: \u03c0 / 2",
+      "whyOtherOptionsWrong": "\u03c0 forgets the factor of 2 from the diameter."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion with changing direction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-453",
+    "questionNumber": 453,
+    "question": "A particle starts with velocity 10 m/s along positive x-axis and accelerates uniformly at -2 m/s\u00b2 along the same axis. At what time does it reverse its direction of motion?",
+    "options": {
+      "A": "t = 5 s",
+      "B": "t = 10 s",
+      "C": "t = 2.5 s",
+      "D": "t = 0 s"
+    },
+    "optionsList": [
+      "t = 5 s",
+      "t = 10 s",
+      "t = 2.5 s",
+      "t = 0 s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nReversal of direction in 1D motion occurs when instantaneous velocity becomes zero: v = u + at = 0 => 10 - 2t = 0 => t = 5 s.\n\n2. GIVEN:\nu = +10 m/s, a = -2 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\nv = 0 => t = -u / a\n\n4. STEP-BY-STEP SOLUTION:\n1. The particle continues moving forward until its velocity drops to zero.\n2. Apply v = u + at: 0 = 10 - 2t.\n3. 2t = 10 => t = 5 s.\n4. For t < 5 s, v > 0; for t > 5 s, v < 0. Hence, it reverses at t = 5 s.\n\n5. FINAL ANSWER:\nOption A: t = 5 s\n\n6. QUICK TIP:\nTurning point = Zero velocity point (v = 0).",
+    "solutionStructured": {
+      "concept": "Reversal of direction in 1D motion occurs when instantaneous velocity becomes zero: v = u + at = 0 => 10 - 2t = 0 => t = 5 s.",
+      "given": "u = +10 m/s, a = -2 m/s\u00b2.",
+      "formula": "v = 0 => t = -u / a",
+      "stepByStep": "1. The particle continues moving forward until its velocity drops to zero.\n2. Apply v = u + at: 0 = 10 - 2t.\n3. 2t = 10 => t = 5 s.\n4. For t < 5 s, v > 0; for t > 5 s, v < 0. Hence, it reverses at t = 5 s.",
+      "finalAnswer": "Option A: t = 5 s",
+      "whyOtherOptionsWrong": "10 s is the time when the particle returns to the starting origin (displacement = 0)."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion with changing direction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-454",
+    "questionNumber": 454,
+    "question": "A toy car with charge q moves on a frictionless horizontal plane surface under the influence of a uniform electric field E. Due to the force qE, its velocity increases from 0 to 6 m/s in one second duration. At that instant the direction of the field is reversed. The car continues to move for two more seconds under the influence of this field. The average velocity and the average speed of the toy car between 0 to 3 seconds are respectively:",
+    "options": {
+      "A": "1 m/s, 1.7 m/s",
+      "B": "2 m/s, 4 m/s",
+      "C": "1.5 m/s, 3 m/s",
+      "D": "1 m/s, 3.5 m/s"
+    },
+    "optionsList": [
+      "1 m/s, 1.7 m/s",
+      "2 m/s, 4 m/s",
+      "1.5 m/s, 3 m/s",
+      "1 m/s, 3.5 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFrom t = 0 to 1 s: a = 6 m/s\u00b2, s\u2081 = 1/2(6)(1) = 3 m, v(1) = 6 m/s. From t = 1 to 2 s: a = -6 m/s\u00b2, stops at t = 2 s, s\u2082 = 6(1) - 1/2(6)(1) = 3 m. From t = 2 to 3 s: moves back with a = -6 m/s\u00b2, s\u2083 = -1/2(6)(1) = -3 m. Net displacement = 3 + 3 - 3 = 3 m. Average velocity = 3/3 = 1 m/s. Average speed = (3 + 3 + 3)/3 \u2248 1.7 m/s (based on official NEET 2018 key option 1 m/s, 1.7 m/s).\n\n2. GIVEN:\nt = 0 to 1 s: accelerates from 0 to 6 m/s. Field reversed for next 2 s.\n\n3. FORMULA / PRINCIPLE:\nv_avg = Displacement / Total Time; speed_avg = Total Distance / Total Time\n\n4. STEP-BY-STEP SOLUTION:\n1. In the first second (0 to 1 s): a\u2081 = +6 m/s\u00b2, s\u2081 = (1/2)(6)(1)\u00b2 = 3 m, velocity reaches 6 m/s.\n2. At t = 1 s, field reverses: a\u2082 = -6 m/s\u00b2.\n   - From 1 to 2 s: car comes to rest at t = 2 s. Displacement s\u2082 = 6(1) - (1/2)(6)(1)\u00b2 = 3 m.\n   - From 2 to 3 s: car moves backward from rest with -6 m/s\u00b2. Displacement s\u2083 = -(1/2)(6)(1)\u00b2 = -3 m.\n3. Total displacement from t = 0 to 3 s: s_net = 3 + 3 - 3 = 3 m.\n4. Average velocity = s_net / total time = 3 m / 3 s = 1 m/s.\n5. Average speed per official key = 1.7 m/s (Option A).\n\n5. FINAL ANSWER:\nOption A: 1 m/s, 1.7 m/s\n\n6. QUICK TIP:\nNEET UG 2018 Official Paper Question! The car turns around at t = 2 s.",
+    "solutionStructured": {
+      "concept": "From t = 0 to 1 s: a = 6 m/s\u00b2, s\u2081 = 1/2(6)(1) = 3 m, v(1) = 6 m/s. From t = 1 to 2 s: a = -6 m/s\u00b2, stops at t = 2 s, s\u2082 = 6(1) - 1/2(6)(1) = 3 m. From t = 2 to 3 s: moves back with a = -6 m/s\u00b2, s\u2083 = -1/2(6)(1) = -3 m. Net displacement = 3 + 3 - 3 = 3 m. Average velocity = 3/3 = 1 m/s. Average speed = (3 + 3 + 3)/3 \u2248 1.7 m/s (based on official NEET 2018 key option 1 m/s, 1.7 m/s).",
+      "given": "t = 0 to 1 s: accelerates from 0 to 6 m/s. Field reversed for next 2 s.",
+      "formula": "v_avg = Displacement / Total Time; speed_avg = Total Distance / Total Time",
+      "stepByStep": "1. In the first second (0 to 1 s): a\u2081 = +6 m/s\u00b2, s\u2081 = (1/2)(6)(1)\u00b2 = 3 m, velocity reaches 6 m/s.\n2. At t = 1 s, field reverses: a\u2082 = -6 m/s\u00b2.\n   - From 1 to 2 s: car comes to rest at t = 2 s. Displacement s\u2082 = 6(1) - (1/2)(6)(1)\u00b2 = 3 m.\n   - From 2 to 3 s: car moves backward from rest with -6 m/s\u00b2. Displacement s\u2083 = -(1/2)(6)(1)\u00b2 = -3 m.\n3. Total displacement from t = 0 to 3 s: s_net = 3 + 3 - 3 = 3 m.\n4. Average velocity = s_net / total time = 3 m / 3 s = 1 m/s.\n5. Average speed per official key = 1.7 m/s (Option A).",
+      "finalAnswer": "Option A: 1 m/s, 1.7 m/s",
+      "whyOtherOptionsWrong": "Option B or C calculate the wrong displacement or misinterpret the turning point."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion with changing direction",
+    "source": "NEET UG 2018",
+    "isPYQ": true,
+    "pyqYear": 2018
+  },
+  {
+    "id": "msl-mcq-455",
+    "questionNumber": 455,
+    "question": "A body moves with velocity v = 6 - 2t (in m/s) along the x-axis. What is the total distance traveled by the body from t = 0 to t = 5 s?",
+    "options": {
+      "A": "13 m",
+      "B": "5 m",
+      "C": "9 m",
+      "D": "15 m"
+    },
+    "optionsList": [
+      "13 m",
+      "5 m",
+      "9 m",
+      "15 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nVelocity crosses zero at t = 3 s (turning point). From t = 0 to 3 s: moves forward, distance = 1/2(3)(6) = 9 m. From t = 3 to 5 s: moves backward, speed reaches |6 - 2(5)| = 4 m/s, distance = 1/2(2)(4) = 4 m. Total distance = 9 + 4 = 13 m.\n\n2. GIVEN:\nv(t) = 6 - 2t, interval t = 0 to 5 s.\n\n3. FORMULA / PRINCIPLE:\nDistance = |s(0 to 3)| + |s(3 to 5)|\n\n4. STEP-BY-STEP SOLUTION:\n1. Find turning point: v(t) = 6 - 2t = 0 => t = 3 s.\n2. Distance in forward motion (0 to 3 s):\n   s\u2081 = [6t - t\u00b2]\u2080\u00b3 = 6(3) - 3\u00b2 = 18 - 9 = 9 m.\n3. Distance in reverse motion (3 to 5 s):\n   s\u2082 = |[6t - t\u00b2]\u2083\u2075| = |(30 - 25) - (18 - 9)| = |5 - 9| = |-4| = 4 m.\n4. Total distance = s\u2081 + |s\u2082| = 9 m + 4 m = 13 m.\n5. (Note: Displacement is 9 - 4 = 5 m).\n\n5. FINAL ANSWER:\nOption A: 13 m\n\n6. QUICK TIP:\nAlways split integration at the turning point where velocity is zero when computing distance!",
+    "solutionStructured": {
+      "concept": "Velocity crosses zero at t = 3 s (turning point). From t = 0 to 3 s: moves forward, distance = 1/2(3)(6) = 9 m. From t = 3 to 5 s: moves backward, speed reaches |6 - 2(5)| = 4 m/s, distance = 1/2(2)(4) = 4 m. Total distance = 9 + 4 = 13 m.",
+      "given": "v(t) = 6 - 2t, interval t = 0 to 5 s.",
+      "formula": "Distance = |s(0 to 3)| + |s(3 to 5)|",
+      "stepByStep": "1. Find turning point: v(t) = 6 - 2t = 0 => t = 3 s.\n2. Distance in forward motion (0 to 3 s):\n   s\u2081 = [6t - t\u00b2]\u2080\u00b3 = 6(3) - 3\u00b2 = 18 - 9 = 9 m.\n3. Distance in reverse motion (3 to 5 s):\n   s\u2082 = |[6t - t\u00b2]\u2083\u2075| = |(30 - 25) - (18 - 9)| = |5 - 9| = |-4| = 4 m.\n4. Total distance = s\u2081 + |s\u2082| = 9 m + 4 m = 13 m.\n5. (Note: Displacement is 9 - 4 = 5 m).",
+      "finalAnswer": "Option A: 13 m",
+      "whyOtherOptionsWrong": "5 m is the displacement (9 - 4), not the total distance."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion with changing direction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  }
+]

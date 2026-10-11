@@ -1,0 +1,1112 @@
+[
+  {
+    "id": "msl-mcq-276",
+    "questionNumber": 276,
+    "question": "Which equation of motion gives the displacement s in terms of initial velocity u, final velocity v, and time t for motion with constant acceleration?",
+    "options": {
+      "A": "s = (u + v) t / 2",
+      "B": "s = (v - u) t / 2",
+      "C": "s = u t + a t\u00b2",
+      "D": "s = v t - 2 a t\u00b2"
+    },
+    "optionsList": [
+      "s = (u + v) t / 2",
+      "s = (v - u) t / 2",
+      "s = u t + a t\u00b2",
+      "s = v t - 2 a t\u00b2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor constant acceleration, the average velocity is simply the arithmetic mean of initial and final velocities: v_avg = (u + v)/2, and displacement s = v_avg \u00d7 t.\n\n2. GIVEN:\nConstant acceleration, initial velocity u, final velocity v, time interval t.\n\n3. FORMULA / PRINCIPLE:\ns = [(u + v) / 2] \u00d7 t\n\n4. STEP-BY-STEP SOLUTION:\n1. For uniform acceleration, acceleration a is constant, so velocity changes linearly with time.\n2. Average velocity over the interval is: v_avg = (u + v) / 2.\n3. Displacement is the product of average velocity and time: s = v_avg \u00d7 t = (u + v)t / 2.\n\n5. FINAL ANSWER:\nOption A: s = (u + v) t / 2\n\n6. QUICK TIP:\nUse s = (u + v)t / 2 when acceleration 'a' is neither given nor required!",
+    "solutionStructured": {
+      "concept": "For constant acceleration, the average velocity is simply the arithmetic mean of initial and final velocities: v_avg = (u + v)/2, and displacement s = v_avg \u00d7 t.",
+      "given": "Constant acceleration, initial velocity u, final velocity v, time interval t.",
+      "formula": "s = [(u + v) / 2] \u00d7 t",
+      "stepByStep": "1. For uniform acceleration, acceleration a is constant, so velocity changes linearly with time.\n2. Average velocity over the interval is: v_avg = (u + v) / 2.\n3. Displacement is the product of average velocity and time: s = v_avg \u00d7 t = (u + v)t / 2.",
+      "finalAnswer": "Option A: s = (u + v) t / 2",
+      "whyOtherOptionsWrong": "Option B has a minus sign which represents change in velocity, not average velocity."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Equations of motion for constant acceleration",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-277",
+    "questionNumber": 277,
+    "question": "A car starting from rest acquires a speed of 20 m/s in 10 s under uniform acceleration. The acceleration of the car is:",
+    "options": {
+      "A": "1 m/s\u00b2",
+      "B": "2 m/s\u00b2",
+      "C": "3 m/s\u00b2",
+      "D": "4 m/s\u00b2"
+    },
+    "optionsList": [
+      "1 m/s\u00b2",
+      "2 m/s\u00b2",
+      "3 m/s\u00b2",
+      "4 m/s\u00b2"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nUse the first equation of motion: v = u + at.\n\n2. GIVEN:\nu = 0, v = 20 m/s, t = 10 s.\n\n3. FORMULA / PRINCIPLE:\nv = u + at => a = (v - u) / t\n\n4. STEP-BY-STEP SOLUTION:\n1. Identify given values: u = 0 m/s, v = 20 m/s, t = 10 s.\n2. Apply first equation of motion: v = u + at.\n3. 20 = 0 + a(10) => 10a = 20 => a = 2 m/s\u00b2.\n\n5. FINAL ANSWER:\nOption B: 2 m/s\u00b2\n\n6. QUICK TIP:\nStarting from rest always means u = 0.",
+    "solutionStructured": {
+      "concept": "Use the first equation of motion: v = u + at.",
+      "given": "u = 0, v = 20 m/s, t = 10 s.",
+      "formula": "v = u + at => a = (v - u) / t",
+      "stepByStep": "1. Identify given values: u = 0 m/s, v = 20 m/s, t = 10 s.\n2. Apply first equation of motion: v = u + at.\n3. 20 = 0 + a(10) => 10a = 20 => a = 2 m/s\u00b2.",
+      "finalAnswer": "Option B: 2 m/s\u00b2",
+      "whyOtherOptionsWrong": "1 m/s\u00b2 would produce 10 m/s in 10 s."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Equations of motion for constant acceleration",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-278",
+    "questionNumber": 278,
+    "question": "The distance covered by a particle starting from rest and moving with constant acceleration a in the first 4 seconds is:",
+    "options": {
+      "A": "4a",
+      "B": "8a",
+      "C": "16a",
+      "D": "2a"
+    },
+    "optionsList": [
+      "4a",
+      "8a",
+      "16a",
+      "2a"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nUse s = ut + 1/2 at\u00b2. Since u = 0, s = 1/2 a t\u00b2.\n\n2. GIVEN:\nu = 0, t = 4 s.\n\n3. FORMULA / PRINCIPLE:\ns = (1/2) a t\u00b2\n\n4. STEP-BY-STEP SOLUTION:\n1. Since particle starts from rest, initial velocity u = 0.\n2. Distance in 4 seconds: s = (1/2) \u00d7 a \u00d7 (4)\u00b2 = (1/2) \u00d7 a \u00d7 16 = 8a.\n\n5. FINAL ANSWER:\nOption B: 8a\n\n6. QUICK TIP:\nFor u = 0, distance in time t is proportional to t\u00b2: s \u221d t\u00b2.",
+    "solutionStructured": {
+      "concept": "Use s = ut + 1/2 at\u00b2. Since u = 0, s = 1/2 a t\u00b2.",
+      "given": "u = 0, t = 4 s.",
+      "formula": "s = (1/2) a t\u00b2",
+      "stepByStep": "1. Since particle starts from rest, initial velocity u = 0.\n2. Distance in 4 seconds: s = (1/2) \u00d7 a \u00d7 (4)\u00b2 = (1/2) \u00d7 a \u00d7 16 = 8a.",
+      "finalAnswer": "Option B: 8a",
+      "whyOtherOptionsWrong": "16a forgets the factor of 1/2 in s = 1/2 at\u00b2."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Equations of motion for constant acceleration",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-279",
+    "questionNumber": 279,
+    "question": "The distance traveled by a body in the nth second of its uniformly accelerated motion starting from rest is proportional to:",
+    "options": {
+      "A": "n",
+      "B": "n\u00b2",
+      "C": "(2n - 1)",
+      "D": "(2n + 1)"
+    },
+    "optionsList": [
+      "n",
+      "n\u00b2",
+      "(2n - 1)",
+      "(2n + 1)"
+    ],
+    "correctAnswer": "C",
+    "correctIndex": 2,
+    "explanation": "1. CONCEPT:\nThe formula for distance in the nth second is s_n = u + (a/2)(2n - 1). For u = 0, s_n = (a/2)(2n - 1) \u221d (2n - 1).\n\n2. GIVEN:\nUniformly accelerated motion from rest (u = 0).\n\n3. FORMULA / PRINCIPLE:\ns_n = u + (a/2)(2n - 1)\n\n4. STEP-BY-STEP SOLUTION:\n1. Distance in n seconds: s_n_total = (1/2) a n\u00b2.\n2. Distance in (n-1) seconds: s_(n-1)_total = (1/2) a (n-1)\u00b2.\n3. Distance in nth second: s_n = s_n_total - s_(n-1)_total = (a/2)[n\u00b2 - (n-1)\u00b2] = (a/2)(2n - 1).\n4. Since a is constant, s_n is directly proportional to (2n - 1).\n\n5. FINAL ANSWER:\nOption C: (2n - 1)\n\n6. QUICK TIP:\nGalileo's odd number law: Distances in 1st, 2nd, 3rd... seconds are in the ratio 1 : 3 : 5 : 7...",
+    "solutionStructured": {
+      "concept": "The formula for distance in the nth second is s_n = u + (a/2)(2n - 1). For u = 0, s_n = (a/2)(2n - 1) \u221d (2n - 1).",
+      "given": "Uniformly accelerated motion from rest (u = 0).",
+      "formula": "s_n = u + (a/2)(2n - 1)",
+      "stepByStep": "1. Distance in n seconds: s_n_total = (1/2) a n\u00b2.\n2. Distance in (n-1) seconds: s_(n-1)_total = (1/2) a (n-1)\u00b2.\n3. Distance in nth second: s_n = s_n_total - s_(n-1)_total = (a/2)[n\u00b2 - (n-1)\u00b2] = (a/2)(2n - 1).\n4. Since a is constant, s_n is directly proportional to (2n - 1).",
+      "finalAnswer": "Option C: (2n - 1)",
+      "whyOtherOptionsWrong": "n\u00b2 is the total distance traveled in n seconds, not in the nth second."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Equations of motion for constant acceleration",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-280",
+    "questionNumber": 280,
+    "question": "A body moving with an initial velocity of 5 m/s accelerates uniformly at 2 m/s\u00b2. The velocity of the body after traveling 24 m is:",
+    "options": {
+      "A": "9 m/s",
+      "B": "11 m/s",
+      "C": "13 m/s",
+      "D": "7 m/s"
+    },
+    "optionsList": [
+      "9 m/s",
+      "11 m/s",
+      "13 m/s",
+      "7 m/s"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nUse the third equation of motion: v\u00b2 = u\u00b2 + 2as.\n\n2. GIVEN:\nu = 5 m/s, a = 2 m/s\u00b2, s = 24 m.\n\n3. FORMULA / PRINCIPLE:\nv\u00b2 = u\u00b2 + 2as\n\n4. STEP-BY-STEP SOLUTION:\n1. Identify given values: u = 5 m/s, a = 2 m/s\u00b2, s = 24 m.\n2. Apply formula: v\u00b2 = (5)\u00b2 + 2(2)(24).\n3. v\u00b2 = 25 + 96 = 121.\n4. v = \u221a121 = 11 m/s.\n\n5. FINAL ANSWER:\nOption B: 11 m/s\n\n6. QUICK TIP:\nWhenever time 't' is not given and not asked, use v\u00b2 = u\u00b2 + 2as.",
+    "solutionStructured": {
+      "concept": "Use the third equation of motion: v\u00b2 = u\u00b2 + 2as.",
+      "given": "u = 5 m/s, a = 2 m/s\u00b2, s = 24 m.",
+      "formula": "v\u00b2 = u\u00b2 + 2as",
+      "stepByStep": "1. Identify given values: u = 5 m/s, a = 2 m/s\u00b2, s = 24 m.\n2. Apply formula: v\u00b2 = (5)\u00b2 + 2(2)(24).\n3. v\u00b2 = 25 + 96 = 121.\n4. v = \u221a121 = 11 m/s.",
+      "finalAnswer": "Option B: 11 m/s",
+      "whyOtherOptionsWrong": "9 m/s would correspond to v\u00b2 = 81; here v\u00b2 = 121, so v = 11 m/s."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Equations of motion for constant acceleration",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-281",
+    "questionNumber": 281,
+    "question": "A train moving at 54 km/h is brought to rest by applying brakes over a distance of 50 m. The retardation produced by the brakes is:",
+    "options": {
+      "A": "2.25 m/s\u00b2",
+      "B": "1.5 m/s\u00b2",
+      "C": "4.5 m/s\u00b2",
+      "D": "3.0 m/s\u00b2"
+    },
+    "optionsList": [
+      "2.25 m/s\u00b2",
+      "1.5 m/s\u00b2",
+      "4.5 m/s\u00b2",
+      "3.0 m/s\u00b2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nConvert km/h to m/s by multiplying by 5/18. Then apply v\u00b2 = u\u00b2 - 2as.\n\n2. GIVEN:\nu = 54 km/h = 15 m/s, v = 0, s = 50 m.\n\n3. FORMULA / PRINCIPLE:\nv\u00b2 = u\u00b2 - 2as => a = u\u00b2 / (2s)\n\n4. STEP-BY-STEP SOLUTION:\n1. Convert speed: u = 54 \u00d7 (5/18) = 3 \u00d7 5 = 15 m/s.\n2. Final speed v = 0 m/s.\n3. Apply 3rd equation: 0 = (15)\u00b2 - 2 \u00d7 a \u00d7 50.\n4. 100 a = 225 => a = 225 / 100 = 2.25 m/s\u00b2.\n\n5. FINAL ANSWER:\nOption A: 2.25 m/s\u00b2\n\n6. QUICK TIP:\nAlways convert km/h to m/s first! Multiply by 5/18: 54 km/h = 15 m/s, 72 km/h = 20 m/s, 90 km/h = 25 m/s.",
+    "solutionStructured": {
+      "concept": "Convert km/h to m/s by multiplying by 5/18. Then apply v\u00b2 = u\u00b2 - 2as.",
+      "given": "u = 54 km/h = 15 m/s, v = 0, s = 50 m.",
+      "formula": "v\u00b2 = u\u00b2 - 2as => a = u\u00b2 / (2s)",
+      "stepByStep": "1. Convert speed: u = 54 \u00d7 (5/18) = 3 \u00d7 5 = 15 m/s.\n2. Final speed v = 0 m/s.\n3. Apply 3rd equation: 0 = (15)\u00b2 - 2 \u00d7 a \u00d7 50.\n4. 100 a = 225 => a = 225 / 100 = 2.25 m/s\u00b2.",
+      "finalAnswer": "Option A: 2.25 m/s\u00b2",
+      "whyOtherOptionsWrong": "1.5 m/s\u00b2 arises from forgetting to divide by 2s or miscalculating 15\u00b2."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Equations of motion for constant acceleration",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-282",
+    "questionNumber": 282,
+    "question": "The ratio of distances traveled by a body starting from rest with uniform acceleration in the 1st, 2nd, and 3rd seconds of its motion is:",
+    "options": {
+      "A": "1 : 2 : 3",
+      "B": "1 : 4 : 9",
+      "C": "1 : 3 : 5",
+      "D": "1 : 5 : 9"
+    },
+    "optionsList": [
+      "1 : 2 : 3",
+      "1 : 4 : 9",
+      "1 : 3 : 5",
+      "1 : 5 : 9"
+    ],
+    "correctAnswer": "C",
+    "correctIndex": 2,
+    "explanation": "1. CONCEPT:\nBy Galileo's law of odd numbers, s_n = a/2 (2n - 1). For n = 1, 2, 3: (2(1)-1) : (2(2)-1) : (2(3)-1) = 1 : 3 : 5.\n\n2. GIVEN:\nu = 0, constant acceleration a, n = 1, 2, 3.\n\n3. FORMULA / PRINCIPLE:\ns_n \u221d (2n - 1)\n\n4. STEP-BY-STEP SOLUTION:\n1. In 1st second: s\u2081 = (a/2)(2(1) - 1) = 1(a/2).\n2. In 2nd second: s\u2082 = (a/2)(2(2) - 1) = 3(a/2).\n3. In 3rd second: s\u2083 = (a/2)(2(3) - 1) = 5(a/2).\n4. The ratio is 1 : 3 : 5.\n\n5. FINAL ANSWER:\nOption C: 1 : 3 : 5\n\n6. QUICK TIP:\nRatio in consecutive seconds = 1 : 3 : 5 : 7... Total distances in 1, 2, 3 seconds = 1 : 4 : 9...",
+    "solutionStructured": {
+      "concept": "By Galileo's law of odd numbers, s_n = a/2 (2n - 1). For n = 1, 2, 3: (2(1)-1) : (2(2)-1) : (2(3)-1) = 1 : 3 : 5.",
+      "given": "u = 0, constant acceleration a, n = 1, 2, 3.",
+      "formula": "s_n \u221d (2n - 1)",
+      "stepByStep": "1. In 1st second: s\u2081 = (a/2)(2(1) - 1) = 1(a/2).\n2. In 2nd second: s\u2082 = (a/2)(2(2) - 1) = 3(a/2).\n3. In 3rd second: s\u2083 = (a/2)(2(3) - 1) = 5(a/2).\n4. The ratio is 1 : 3 : 5.",
+      "finalAnswer": "Option C: 1 : 3 : 5",
+      "whyOtherOptionsWrong": "1:4:9 is the ratio of TOTAL distances after 1, 2, and 3 seconds, not during each second."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Equations of motion for constant acceleration",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-283",
+    "questionNumber": 283,
+    "question": "A bullet is fired into a wooden block with velocity u. When the bullet penetrates 24 cm along its length, its velocity reduces to u/3. If the bullet continues under uniform retardation, the total thickness of the wooden block penetrated before coming to rest is:",
+    "options": {
+      "A": "27 cm",
+      "B": "24 cm",
+      "C": "30 cm",
+      "D": "36 cm"
+    },
+    "optionsList": [
+      "27 cm",
+      "24 cm",
+      "30 cm",
+      "36 cm"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nApply v\u00b2 = u\u00b2 - 2as for each stage to find the deceleration and the total stopping distance.\n\n2. GIVEN:\nInitial velocity = u, velocity after s\u2081 = 24 cm is v\u2081 = u/3. Final velocity v\u2082 = 0.\n\n3. FORMULA / PRINCIPLE:\nv\u00b2 = u\u00b2 - 2as\n\n4. STEP-BY-STEP SOLUTION:\n1. For the first 24 cm: (u/3)\u00b2 = u\u00b2 - 2a(24).\n2. u\u00b2/9 = u\u00b2 - 48a => 48a = u\u00b2 - u\u00b2/9 = 8u\u00b2/9.\n3. Therefore: 2a = 8u\u00b2 / (9 \u00d7 24) = u\u00b2 / 27.\n4. For the total penetration s_total until the bullet comes to rest (v = 0):\n   0 = u\u00b2 - 2a(s_total) => s_total = u\u00b2 / (2a).\n5. Substitute 2a = u\u00b2/27: s_total = u\u00b2 / (u\u00b2/27) = 27 cm.\n\n5. FINAL ANSWER:\nOption A: 27 cm\n\n6. QUICK TIP:\nNEET UG 2023 Official Question! Extra distance penetrated = 27 - 24 = 3 cm. Total distance = 27 cm.",
+    "solutionStructured": {
+      "concept": "Apply v\u00b2 = u\u00b2 - 2as for each stage to find the deceleration and the total stopping distance.",
+      "given": "Initial velocity = u, velocity after s\u2081 = 24 cm is v\u2081 = u/3. Final velocity v\u2082 = 0.",
+      "formula": "v\u00b2 = u\u00b2 - 2as",
+      "stepByStep": "1. For the first 24 cm: (u/3)\u00b2 = u\u00b2 - 2a(24).\n2. u\u00b2/9 = u\u00b2 - 48a => 48a = u\u00b2 - u\u00b2/9 = 8u\u00b2/9.\n3. Therefore: 2a = 8u\u00b2 / (9 \u00d7 24) = u\u00b2 / 27.\n4. For the total penetration s_total until the bullet comes to rest (v = 0):\n   0 = u\u00b2 - 2a(s_total) => s_total = u\u00b2 / (2a).\n5. Substitute 2a = u\u00b2/27: s_total = u\u00b2 / (u\u00b2/27) = 27 cm.",
+      "finalAnswer": "Option A: 27 cm",
+      "whyOtherOptionsWrong": "30 cm or 36 cm fail to solve the fractional equation correctly."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Equations of motion for constant acceleration",
+    "source": "NEET UG 2023",
+    "isPYQ": true,
+    "pyqYear": 2023
+  },
+  {
+    "id": "msl-mcq-284",
+    "questionNumber": 284,
+    "question": "A particle starts from rest and moves with constant acceleration. If it covers a distance x in the first t seconds and an additional distance y in the next t seconds, then the relation between x and y is:",
+    "options": {
+      "A": "y = x",
+      "B": "y = 2x",
+      "C": "y = 3x",
+      "D": "y = 4x"
+    },
+    "optionsList": [
+      "y = x",
+      "y = 2x",
+      "y = 3x",
+      "y = 4x"
+    ],
+    "correctAnswer": "C",
+    "correctIndex": 2,
+    "explanation": "1. CONCEPT:\nTotal distance in 2t is s(2t) = 1/2 a (2t)\u00b2 = 4 \u00d7 (1/2 a t\u00b2) = 4x. Additional distance y = s(2t) - x = 4x - x = 3x.\n\n2. GIVEN:\nu = 0, constant a, distance in first t is x, additional distance in next t is y.\n\n3. FORMULA / PRINCIPLE:\ns = (1/2) a t\u00b2\n\n4. STEP-BY-STEP SOLUTION:\n1. In the first t seconds: x = (1/2) a t\u00b2.\n2. In the total time 2t seconds: s_total = (1/2) a (2t)\u00b2 = 4 \u00d7 [(1/2) a t\u00b2] = 4x.\n3. The distance covered in the next t seconds is: y = s_total - x = 4x - x = 3x.\n4. Therefore, y = 3x.\n\n5. FINAL ANSWER:\nOption C: y = 3x\n\n6. QUICK TIP:\nDistances in equal successive time intervals starting from rest are always in the ratio 1 : 3 : 5 : 7 : ... So y / x = 3 / 1 => y = 3x.",
+    "solutionStructured": {
+      "concept": "Total distance in 2t is s(2t) = 1/2 a (2t)\u00b2 = 4 \u00d7 (1/2 a t\u00b2) = 4x. Additional distance y = s(2t) - x = 4x - x = 3x.",
+      "given": "u = 0, constant a, distance in first t is x, additional distance in next t is y.",
+      "formula": "s = (1/2) a t\u00b2",
+      "stepByStep": "1. In the first t seconds: x = (1/2) a t\u00b2.\n2. In the total time 2t seconds: s_total = (1/2) a (2t)\u00b2 = 4 \u00d7 [(1/2) a t\u00b2] = 4x.\n3. The distance covered in the next t seconds is: y = s_total - x = 4x - x = 3x.\n4. Therefore, y = 3x.",
+      "finalAnswer": "Option C: y = 3x",
+      "whyOtherOptionsWrong": "y = 4x confuses total distance (4x) with the additional distance in the second interval (3x)."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Equations of motion for constant acceleration",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-285",
+    "questionNumber": 285,
+    "question": "A body moving with uniform acceleration has velocities u and v at points A and B respectively. The velocity of the body at the midpoint between A and B is:",
+    "options": {
+      "A": "(u + v) / 2",
+      "B": "\u221a(u\u00b2 + v\u00b2) / 2",
+      "C": "\u221a[(u\u00b2 + v\u00b2) / 2]",
+      "D": "\u221a(uv)"
+    },
+    "optionsList": [
+      "(u + v) / 2",
+      "\u221a(u\u00b2 + v\u00b2) / 2",
+      "\u221a[(u\u00b2 + v\u00b2) / 2]",
+      "\u221a(uv)"
+    ],
+    "correctAnswer": "C",
+    "correctIndex": 2,
+    "explanation": "1. CONCEPT:\nLet total distance be 2s. Then v\u00b2 = u\u00b2 + 2a(2s). For midpoint M at distance s: v_M\u00b2 = u\u00b2 + 2as. Adding and simplifying gives v_M = \u221a[(u\u00b2 + v\u00b2)/2].\n\n2. GIVEN:\nVelocity at A is u, velocity at B is v, midpoint M.\n\n3. FORMULA / PRINCIPLE:\nv_M = \u221a[(u\u00b2 + v\u00b2) / 2]\n\n4. STEP-BY-STEP SOLUTION:\n1. Let distance between A and M be s, and between M and B be s (total distance = 2s).\n2. From A to M: v_M\u00b2 - u\u00b2 = 2as  =>  2as = v_M\u00b2 - u\u00b2.\n3. From M to B: v\u00b2 - v_M\u00b2 = 2as  =>  2as = v\u00b2 - v_M\u00b2.\n4. Equating both: v_M\u00b2 - u\u00b2 = v\u00b2 - v_M\u00b2.\n5. 2 v_M\u00b2 = u\u00b2 + v\u00b2  =>  v_M = \u221a[(u\u00b2 + v\u00b2) / 2].\n\n5. FINAL ANSWER:\nOption C: \u221a[(u\u00b2 + v\u00b2) / 2]\n\n6. QUICK TIP:\nNEET Gold Standard: Speed at spatial midpoint = \u221a[(u\u00b2 + v\u00b2)/2]. Speed at temporal midpoint = (u + v)/2.",
+    "solutionStructured": {
+      "concept": "Let total distance be 2s. Then v\u00b2 = u\u00b2 + 2a(2s). For midpoint M at distance s: v_M\u00b2 = u\u00b2 + 2as. Adding and simplifying gives v_M = \u221a[(u\u00b2 + v\u00b2)/2].",
+      "given": "Velocity at A is u, velocity at B is v, midpoint M.",
+      "formula": "v_M = \u221a[(u\u00b2 + v\u00b2) / 2]",
+      "stepByStep": "1. Let distance between A and M be s, and between M and B be s (total distance = 2s).\n2. From A to M: v_M\u00b2 - u\u00b2 = 2as  =>  2as = v_M\u00b2 - u\u00b2.\n3. From M to B: v\u00b2 - v_M\u00b2 = 2as  =>  2as = v\u00b2 - v_M\u00b2.\n4. Equating both: v_M\u00b2 - u\u00b2 = v\u00b2 - v_M\u00b2.\n5. 2 v_M\u00b2 = u\u00b2 + v\u00b2  =>  v_M = \u221a[(u\u00b2 + v\u00b2) / 2].",
+      "finalAnswer": "Option C: \u221a[(u\u00b2 + v\u00b2) / 2]",
+      "whyOtherOptionsWrong": "(u + v)/2 is the speed at the halfway time, not the halfway distance."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Equations of motion for constant acceleration",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-286",
+    "questionNumber": 286,
+    "question": "A car accelerates uniformly from rest at a rate \u03b1 for time t\u2081 and then decelerates at a constant rate \u03b2 for time t\u2082 to come to rest. If the total time taken is T, the maximum velocity attained is:",
+    "options": {
+      "A": "(\u03b1 + \u03b2) T / (\u03b1\u03b2)",
+      "B": "\u03b1\u03b2 T / (\u03b1 + \u03b2)",
+      "C": "2\u03b1\u03b2 T / (\u03b1 + \u03b2)",
+      "D": "\u03b1\u03b2 T\u00b2 / (\u03b1 + \u03b2)"
+    },
+    "optionsList": [
+      "(\u03b1 + \u03b2) T / (\u03b1\u03b2)",
+      "\u03b1\u03b2 T / (\u03b1 + \u03b2)",
+      "2\u03b1\u03b2 T / (\u03b1 + \u03b2)",
+      "\u03b1\u03b2 T\u00b2 / (\u03b1 + \u03b2)"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nv_max = \u03b1 t\u2081 = \u03b2 t\u2082. Since t\u2081 + t\u2082 = T, solving gives v_max = (\u03b1\u03b2 / (\u03b1 + \u03b2)) T.\n\n2. GIVEN:\nAcceleration \u03b1, deceleration \u03b2, total time T = t\u2081 + t\u2082.\n\n3. FORMULA / PRINCIPLE:\nv_max = \u03b1 t\u2081 = \u03b2 t\u2082; t\u2081 = v_max / \u03b1, t\u2082 = v_max / \u03b2\n\n4. STEP-BY-STEP SOLUTION:\n1. During acceleration from rest: v_max = \u03b1 t\u2081 => t\u2081 = v_max / \u03b1.\n2. During deceleration to rest: 0 = v_max - \u03b2 t\u2082 => t\u2082 = v_max / \u03b2.\n3. Total time T = t\u2081 + t\u2082 = v_max (1/\u03b1 + 1/\u03b2) = v_max [(\u03b1 + \u03b2) / (\u03b1\u03b2)].\n4. Rearranging for v_max: v_max = [\u03b1\u03b2 / (\u03b1 + \u03b2)] T.\n\n5. FINAL ANSWER:\nOption B: \u03b1\u03b2 T / (\u03b1 + \u03b2)\n\n6. QUICK TIP:\nClassic \u03b1-\u03b2 kinematics problem! Total distance = 1/2 v_max T = 1/2 [\u03b1\u03b2 / (\u03b1 + \u03b2)] T\u00b2.",
+    "solutionStructured": {
+      "concept": "v_max = \u03b1 t\u2081 = \u03b2 t\u2082. Since t\u2081 + t\u2082 = T, solving gives v_max = (\u03b1\u03b2 / (\u03b1 + \u03b2)) T.",
+      "given": "Acceleration \u03b1, deceleration \u03b2, total time T = t\u2081 + t\u2082.",
+      "formula": "v_max = \u03b1 t\u2081 = \u03b2 t\u2082; t\u2081 = v_max / \u03b1, t\u2082 = v_max / \u03b2",
+      "stepByStep": "1. During acceleration from rest: v_max = \u03b1 t\u2081 => t\u2081 = v_max / \u03b1.\n2. During deceleration to rest: 0 = v_max - \u03b2 t\u2082 => t\u2082 = v_max / \u03b2.\n3. Total time T = t\u2081 + t\u2082 = v_max (1/\u03b1 + 1/\u03b2) = v_max [(\u03b1 + \u03b2) / (\u03b1\u03b2)].\n4. Rearranging for v_max: v_max = [\u03b1\u03b2 / (\u03b1 + \u03b2)] T.",
+      "finalAnswer": "Option B: \u03b1\u03b2 T / (\u03b1 + \u03b2)",
+      "whyOtherOptionsWrong": "Option A is inverted; the product \u03b1\u03b2 must be in the numerator."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Equations of motion for constant acceleration",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-287",
+    "questionNumber": 287,
+    "question": "In the \u03b1-\u03b2 problem (car accelerating at \u03b1 from rest and then decelerating at \u03b2 to rest in total time T), the total distance traveled is:",
+    "options": {
+      "A": "[\u03b1\u03b2 / (2(\u03b1 + \u03b2))] T\u00b2",
+      "B": "[\u03b1\u03b2 / (\u03b1 + \u03b2)] T\u00b2",
+      "C": "[(\u03b1 + \u03b2) / (2\u03b1\u03b2)] T\u00b2",
+      "D": "(\u03b1 + \u03b2) T\u00b2"
+    },
+    "optionsList": [
+      "[\u03b1\u03b2 / (2(\u03b1 + \u03b2))] T\u00b2",
+      "[\u03b1\u03b2 / (\u03b1 + \u03b2)] T\u00b2",
+      "[(\u03b1 + \u03b2) / (2\u03b1\u03b2)] T\u00b2",
+      "(\u03b1 + \u03b2) T\u00b2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTotal distance is the area of the triangular v-t graph: s = 1/2 \u00d7 T \u00d7 v_max. Substitute v_max = [\u03b1\u03b2 / (\u03b1 + \u03b2)] T.\n\n2. GIVEN:\nTotal time T, v_max = [\u03b1\u03b2 / (\u03b1 + \u03b2)] T.\n\n3. FORMULA / PRINCIPLE:\ns = (1/2) \u00d7 T \u00d7 v_max = [\u03b1\u03b2 / (2(\u03b1 + \u03b2))] T\u00b2\n\n4. STEP-BY-STEP SOLUTION:\n1. The velocity-time graph is a triangle with base T and height v_max.\n2. Total distance = Area under v-t graph = (1/2) \u00d7 base \u00d7 height = (1/2) \u00d7 T \u00d7 v_max.\n3. Since v_max = [\u03b1\u03b2 / (\u03b1 + \u03b2)] T, we substitute:\n   s = (1/2) \u00d7 T \u00d7 [\u03b1\u03b2 / (\u03b1 + \u03b2)] T = [\u03b1\u03b2 / (2(\u03b1 + \u03b2))] T\u00b2.\n\n5. FINAL ANSWER:\nOption A: [\u03b1\u03b2 / (2(\u03b1 + \u03b2))] T\u00b2\n\n6. QUICK TIP:\nRemember the 1/2 factor from the triangle area!",
+    "solutionStructured": {
+      "concept": "Total distance is the area of the triangular v-t graph: s = 1/2 \u00d7 T \u00d7 v_max. Substitute v_max = [\u03b1\u03b2 / (\u03b1 + \u03b2)] T.",
+      "given": "Total time T, v_max = [\u03b1\u03b2 / (\u03b1 + \u03b2)] T.",
+      "formula": "s = (1/2) \u00d7 T \u00d7 v_max = [\u03b1\u03b2 / (2(\u03b1 + \u03b2))] T\u00b2",
+      "stepByStep": "1. The velocity-time graph is a triangle with base T and height v_max.\n2. Total distance = Area under v-t graph = (1/2) \u00d7 base \u00d7 height = (1/2) \u00d7 T \u00d7 v_max.\n3. Since v_max = [\u03b1\u03b2 / (\u03b1 + \u03b2)] T, we substitute:\n   s = (1/2) \u00d7 T \u00d7 [\u03b1\u03b2 / (\u03b1 + \u03b2)] T = [\u03b1\u03b2 / (2(\u03b1 + \u03b2))] T\u00b2.",
+      "finalAnswer": "Option A: [\u03b1\u03b2 / (2(\u03b1 + \u03b2))] T\u00b2",
+      "whyOtherOptionsWrong": "Option B forgets the 1/2 factor."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Equations of motion for constant acceleration",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-288",
+    "questionNumber": 288,
+    "question": "A particle starts from rest and moves with uniform acceleration. If the ratio of the distance traveled in the nth second to the distance traveled in n seconds is 9/25, what is the value of n?",
+    "options": {
+      "A": "3",
+      "B": "4",
+      "C": "5",
+      "D": "6"
+    },
+    "optionsList": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correctAnswer": "C",
+    "correctIndex": 2,
+    "explanation": "1. CONCEPT:\ns_nth = a/2 (2n - 1) and s_n = 1/2 a n\u00b2. Their ratio is (2n - 1) / n\u00b2 = 9/25.\n\n2. GIVEN:\ns_nth / s_n = 9 / 25.\n\n3. FORMULA / PRINCIPLE:\n(2n - 1) / n\u00b2 = 9 / 25\n\n4. STEP-BY-STEP SOLUTION:\n1. Write the ratio: s_nth / s_n = [a/2 (2n - 1)] / [1/2 a n\u00b2] = (2n - 1) / n\u00b2.\n2. Set equal to 9/25: 25(2n - 1) = 9n\u00b2.\n3. 50n - 25 = 9n\u00b2 => 9n\u00b2 - 50n + 25 = 0.\n4. Factor: 9n\u00b2 - 45n - 5n + 25 = 0 => 9n(n - 5) - 5(n - 5) = 0 => (9n - 5)(n - 5) = 0.\n5. Since n must be an integer, n = 5.\n\n5. FINAL ANSWER:\nOption C: 5\n\n6. QUICK TIP:\nVerify: For n = 5, 2n - 1 = 9 and n\u00b2 = 25, so ratio = 9/25 immediately!",
+    "solutionStructured": {
+      "concept": "s_nth = a/2 (2n - 1) and s_n = 1/2 a n\u00b2. Their ratio is (2n - 1) / n\u00b2 = 9/25.",
+      "given": "s_nth / s_n = 9 / 25.",
+      "formula": "(2n - 1) / n\u00b2 = 9 / 25",
+      "stepByStep": "1. Write the ratio: s_nth / s_n = [a/2 (2n - 1)] / [1/2 a n\u00b2] = (2n - 1) / n\u00b2.\n2. Set equal to 9/25: 25(2n - 1) = 9n\u00b2.\n3. 50n - 25 = 9n\u00b2 => 9n\u00b2 - 50n + 25 = 0.\n4. Factor: 9n\u00b2 - 45n - 5n + 25 = 0 => 9n(n - 5) - 5(n - 5) = 0 => (9n - 5)(n - 5) = 0.\n5. Since n must be an integer, n = 5.",
+      "finalAnswer": "Option C: 5",
+      "whyOtherOptionsWrong": "For n = 3, (2(3)-1)/3\u00b2 = 5/9 \u2260 9/25."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Equations of motion for constant acceleration",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-289",
+    "questionNumber": 289,
+    "question": "A bullet loses 1/20 of its velocity after penetrating a plank of thickness 3 cm. Assuming uniform retardation, how many more such planks are required to stop the bullet completely?",
+    "options": {
+      "A": "10",
+      "B": "9",
+      "C": "11",
+      "D": "8"
+    },
+    "optionsList": [
+      "10",
+      "9",
+      "11",
+      "8"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nv = 19u/20 after 1 plank. Total planks N = u\u00b2 / (u\u00b2 - v\u00b2) = 1 / (1 - (19/20)\u00b2) \u2248 10.25 => 11 planks total => 10 more planks.\n\n2. GIVEN:\nAfter 1 plank, velocity is u - u/20 = 19u/20.\n\n3. FORMULA / PRINCIPLE:\nv\u00b2 = u\u00b2 - 2as => 2as = u\u00b2 - (19/20)\u00b2 u\u00b2 = (39/400) u\u00b2 per plank\n\n4. STEP-BY-STEP SOLUTION:\n1. After 1 plank: v\u2081\u00b2 = u\u00b2 - 2a(s) = (19u/20)\u00b2 = (361/400) u\u00b2.\n2. Loss in v\u00b2 per plank: \u0394(v\u00b2) = u\u00b2 - v\u2081\u00b2 = (39/400) u\u00b2.\n3. For the bullet to stop completely, total loss in v\u00b2 required is u\u00b2 - 0 = u\u00b2.\n4. Total number of planks required: N = u\u00b2 / [(39/400) u\u00b2] = 400 / 39 \u2248 10.26 planks.\n5. Since planks are discrete units, 11 total planks are needed to bring it to a complete halt.\n6. Number of ADDITIONAL planks needed = 11 - 1 = 10 more planks.\n\n5. FINAL ANSWER:\nOption A: 10\n\n6. QUICK TIP:\nClassic NEET trap: Total planks required is 11, but the question asks 'how many MORE planks', so answer is 11 - 1 = 10!",
+    "solutionStructured": {
+      "concept": "v = 19u/20 after 1 plank. Total planks N = u\u00b2 / (u\u00b2 - v\u00b2) = 1 / (1 - (19/20)\u00b2) \u2248 10.25 => 11 planks total => 10 more planks.",
+      "given": "After 1 plank, velocity is u - u/20 = 19u/20.",
+      "formula": "v\u00b2 = u\u00b2 - 2as => 2as = u\u00b2 - (19/20)\u00b2 u\u00b2 = (39/400) u\u00b2 per plank",
+      "stepByStep": "1. After 1 plank: v\u2081\u00b2 = u\u00b2 - 2a(s) = (19u/20)\u00b2 = (361/400) u\u00b2.\n2. Loss in v\u00b2 per plank: \u0394(v\u00b2) = u\u00b2 - v\u2081\u00b2 = (39/400) u\u00b2.\n3. For the bullet to stop completely, total loss in v\u00b2 required is u\u00b2 - 0 = u\u00b2.\n4. Total number of planks required: N = u\u00b2 / [(39/400) u\u00b2] = 400 / 39 \u2248 10.26 planks.\n5. Since planks are discrete units, 11 total planks are needed to bring it to a complete halt.\n6. Number of ADDITIONAL planks needed = 11 - 1 = 10 more planks.",
+      "finalAnswer": "Option A: 10",
+      "whyOtherOptionsWrong": "11 is the total number of planks, not the additional planks."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Equations of motion for constant acceleration",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-290",
+    "questionNumber": 290,
+    "question": "A particle starts with initial velocity 10 m/s and decelerates uniformly at 2 m/s\u00b2. The distance traveled by the particle in the 6th second of its motion is:",
+    "options": {
+      "A": "1 m",
+      "B": "0.5 m",
+      "C": "0 m",
+      "D": "2 m"
+    },
+    "optionsList": [
+      "1 m",
+      "0.5 m",
+      "0 m",
+      "2 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe particle stops at t = u/a = 10/2 = 5 s. In the 6th second (from t = 5 to 6 s), it reverses direction from rest and travels d = 1/2 a (1)\u00b2.\n\n2. GIVEN:\nu = 10 m/s, a = -2 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\nt_stop = u/a = 5 s; distance from t = 5 to 6 s is 1/2 a (\u0394t)\u00b2\n\n4. STEP-BY-STEP SOLUTION:\n1. Time to come to rest: t_stop = u / a = 10 / 2 = 5 s.\n2. At t = 5 s, the particle comes to rest and then accelerates in the reverse direction.\n3. The 6th second corresponds to the time interval from t = 5 s to t = 6 s.\n4. Since it starts from rest at t = 5 s, distance traveled in the next 1 s is:\n   d = (1/2) \u00d7 a \u00d7 (\u0394t)\u00b2 = (1/2) \u00d7 2 m/s\u00b2 \u00d7 (1 s)\u00b2 = 1 m. Wait, let's verify if formula s_6 gives: 10 - 2/2(2(6)-1) = 10 - 11 = -1 m (displacement is -1 m, so distance is 1 m wait, let's re-verify options).\n\n5. FINAL ANSWER:\nOption B: 0.5 m\n\n6. QUICK TIP:\nAt t=5s v=0. From t=5 to 6, with u=0 and a=2 m/s\u00b2, d = 1/2(2)(1\u00b2) = 1 m.",
+    "solutionStructured": {
+      "concept": "The particle stops at t = u/a = 10/2 = 5 s. In the 6th second (from t = 5 to 6 s), it reverses direction from rest and travels d = 1/2 a (1)\u00b2.",
+      "given": "u = 10 m/s, a = -2 m/s\u00b2.",
+      "formula": "t_stop = u/a = 5 s; distance from t = 5 to 6 s is 1/2 a (\u0394t)\u00b2",
+      "stepByStep": "1. Time to come to rest: t_stop = u / a = 10 / 2 = 5 s.\n2. At t = 5 s, the particle comes to rest and then accelerates in the reverse direction.\n3. The 6th second corresponds to the time interval from t = 5 s to t = 6 s.\n4. Since it starts from rest at t = 5 s, distance traveled in the next 1 s is:\n   d = (1/2) \u00d7 a \u00d7 (\u0394t)\u00b2 = (1/2) \u00d7 2 m/s\u00b2 \u00d7 (1 s)\u00b2 = 1 m. Wait, let's verify if formula s_6 gives: 10 - 2/2(2(6)-1) = 10 - 11 = -1 m (displacement is -1 m, so distance is 1 m wait, let's re-verify options).",
+      "finalAnswer": "Option B: 0.5 m",
+      "whyOtherOptionsWrong": "0.5 m would result if acceleration were 1 m/s\u00b2."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Equations of motion for constant acceleration",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-291",
+    "questionNumber": 291,
+    "question": "A body covers 12 m in the 2nd second and 20 m in the 4th second of its uniformly accelerated motion. Its initial velocity u and acceleration a are:",
+    "options": {
+      "A": "u = 4 m/s, a = 4 m/s\u00b2",
+      "B": "u = 6 m/s, a = 4 m/s\u00b2",
+      "C": "u = 2 m/s, a = 4 m/s\u00b2",
+      "D": "u = 4 m/s, a = 2 m/s\u00b2"
+    },
+    "optionsList": [
+      "u = 4 m/s, a = 4 m/s\u00b2",
+      "u = 6 m/s, a = 4 m/s\u00b2",
+      "u = 2 m/s, a = 4 m/s\u00b2",
+      "u = 4 m/s, a = 2 m/s\u00b2"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nUse s_n = u + a/2 (2n - 1) for n = 2 and n = 4, then solve the system of two linear equations.\n\n2. GIVEN:\ns\u2082 = 12 m, s\u2084 = 20 m.\n\n3. FORMULA / PRINCIPLE:\ns_n = u + (a/2)(2n - 1)\n\n4. STEP-BY-STEP SOLUTION:\n1. For n = 2: 12 = u + (a/2)(2(2) - 1) = u + 1.5a  =>  u + 1.5a = 12.\n2. For n = 4: 20 = u + (a/2)(2(4) - 1) = u + 3.5a  =>  u + 3.5a = 20.\n3. Subtract equation 1 from equation 2: (3.5a - 1.5a) = 20 - 12 => 2a = 8 => a = 4 m/s\u00b2.\n4. Substitute a = 4 into equation 1: u + 1.5(4) = 12 => u + 6 = 12 => u = 6 m/s.\n5. Therefore, u = 6 m/s and a = 4 m/s\u00b2.\n\n5. FINAL ANSWER:\nOption B: u = 6 m/s, a = 4 m/s\u00b2\n\n6. QUICK TIP:\nQuick shortcut: s_n\u2082 - s_n\u2081 = a (n\u2082 - n\u2081). Here 20 - 12 = a (4 - 2) => 8 = 2a => a = 4 m/s\u00b2 directly!",
+    "solutionStructured": {
+      "concept": "Use s_n = u + a/2 (2n - 1) for n = 2 and n = 4, then solve the system of two linear equations.",
+      "given": "s\u2082 = 12 m, s\u2084 = 20 m.",
+      "formula": "s_n = u + (a/2)(2n - 1)",
+      "stepByStep": "1. For n = 2: 12 = u + (a/2)(2(2) - 1) = u + 1.5a  =>  u + 1.5a = 12.\n2. For n = 4: 20 = u + (a/2)(2(4) - 1) = u + 3.5a  =>  u + 3.5a = 20.\n3. Subtract equation 1 from equation 2: (3.5a - 1.5a) = 20 - 12 => 2a = 8 => a = 4 m/s\u00b2.\n4. Substitute a = 4 into equation 1: u + 1.5(4) = 12 => u + 6 = 12 => u = 6 m/s.\n5. Therefore, u = 6 m/s and a = 4 m/s\u00b2.",
+      "finalAnswer": "Option B: u = 6 m/s, a = 4 m/s\u00b2",
+      "whyOtherOptionsWrong": "Option A gives s\u2082 = 4 + 6 = 10 m, which is incorrect."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Equations of motion for constant acceleration",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-292",
+    "questionNumber": 292,
+    "question": "A car travels from A to B with constant acceleration. The speed at A is 10 m/s and at B is 30 m/s. What is the speed of the car when it is at the midpoint between A and B?",
+    "options": {
+      "A": "20 m/s",
+      "B": "10\u221a5 m/s",
+      "C": "25 m/s",
+      "D": "15\u221a2 m/s"
+    },
+    "optionsList": [
+      "20 m/s",
+      "10\u221a5 m/s",
+      "25 m/s",
+      "15\u221a2 m/s"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nThe speed at the midpoint of distance under constant acceleration is v_mid = \u221a[(u\u00b2 + v\u00b2)/2].\n\n2. GIVEN:\nu = 10 m/s, v = 30 m/s.\n\n3. FORMULA / PRINCIPLE:\nv_mid = \u221a[(u\u00b2 + v\u00b2) / 2]\n\n4. STEP-BY-STEP SOLUTION:\n1. Apply midpoint speed formula: v_mid = \u221a[(u\u00b2 + v\u00b2) / 2].\n2. u\u00b2 = 10\u00b2 = 100, and v\u00b2 = 30\u00b2 = 900.\n3. u\u00b2 + v\u00b2 = 100 + 900 = 1000.\n4. (u\u00b2 + v\u00b2) / 2 = 1000 / 2 = 500.\n5. v_mid = \u221a500 = \u221a(100 \u00d7 5) = 10\u221a5 m/s (\u2248 22.36 m/s).\n\n5. FINAL ANSWER:\nOption B: 10\u221a5 m/s\n\n6. QUICK TIP:\nNEET Trap: 20 m/s is the speed at the halfway TIME (10+30)/2 = 20 m/s. But halfway DISTANCE is 10\u221a5 m/s!",
+    "solutionStructured": {
+      "concept": "The speed at the midpoint of distance under constant acceleration is v_mid = \u221a[(u\u00b2 + v\u00b2)/2].",
+      "given": "u = 10 m/s, v = 30 m/s.",
+      "formula": "v_mid = \u221a[(u\u00b2 + v\u00b2) / 2]",
+      "stepByStep": "1. Apply midpoint speed formula: v_mid = \u221a[(u\u00b2 + v\u00b2) / 2].\n2. u\u00b2 = 10\u00b2 = 100, and v\u00b2 = 30\u00b2 = 900.\n3. u\u00b2 + v\u00b2 = 100 + 900 = 1000.\n4. (u\u00b2 + v\u00b2) / 2 = 1000 / 2 = 500.\n5. v_mid = \u221a500 = \u221a(100 \u00d7 5) = 10\u221a5 m/s (\u2248 22.36 m/s).",
+      "finalAnswer": "Option B: 10\u221a5 m/s",
+      "whyOtherOptionsWrong": "20 m/s is the temporal midpoint speed, not the spatial midpoint speed."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Equations of motion for constant acceleration",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-293",
+    "questionNumber": 293,
+    "question": "A vehicle starts from rest and accelerates uniformly at 4 m/s\u00b2 until it reaches 20 m/s. It then travels at this constant speed for 5 seconds before coming to rest with deceleration 2 m/s\u00b2. The total displacement is:",
+    "options": {
+      "A": "200 m",
+      "B": "250 m",
+      "C": "150 m",
+      "D": "300 m"
+    },
+    "optionsList": [
+      "200 m",
+      "250 m",
+      "150 m",
+      "300 m"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nBreak motion into three stages: Stage 1 (acceleration), Stage 2 (constant speed), Stage 3 (deceleration).\n\n2. GIVEN:\nStage 1: u=0, a=4 m/s\u00b2, v=20 m/s. Stage 2: v=20 m/s, t=5 s. Stage 3: u=20 m/s, a=-2 m/s\u00b2, v=0.\n\n3. FORMULA / PRINCIPLE:\ns_total = s\u2081 + s\u2082 + s\u2083\n\n4. STEP-BY-STEP SOLUTION:\n1. Stage 1: v\u00b2 = u\u00b2 + 2as\u2081 => 20\u00b2 = 0 + 2(4)s\u2081 => 8s\u2081 = 400 => s\u2081 = 50 m.\n2. Stage 2: s\u2082 = v \u00d7 t = 20 \u00d7 5 = 100 m.\n3. Stage 3: v\u00b2 = u\u00b2 - 2as\u2083 => 0 = 20\u00b2 - 2(2)s\u2083 => 4s\u2083 = 400 => s\u2083 = 100 m.\n4. Total displacement: s_total = 50 + 100 + 100 = 250 m.\n\n5. FINAL ANSWER:\nOption B: 250 m\n\n6. QUICK TIP:\nSum the displacements of the three individual stages cleanly.",
+    "solutionStructured": {
+      "concept": "Break motion into three stages: Stage 1 (acceleration), Stage 2 (constant speed), Stage 3 (deceleration).",
+      "given": "Stage 1: u=0, a=4 m/s\u00b2, v=20 m/s. Stage 2: v=20 m/s, t=5 s. Stage 3: u=20 m/s, a=-2 m/s\u00b2, v=0.",
+      "formula": "s_total = s\u2081 + s\u2082 + s\u2083",
+      "stepByStep": "1. Stage 1: v\u00b2 = u\u00b2 + 2as\u2081 => 20\u00b2 = 0 + 2(4)s\u2081 => 8s\u2081 = 400 => s\u2081 = 50 m.\n2. Stage 2: s\u2082 = v \u00d7 t = 20 \u00d7 5 = 100 m.\n3. Stage 3: v\u00b2 = u\u00b2 - 2as\u2083 => 0 = 20\u00b2 - 2(2)s\u2083 => 4s\u2083 = 400 => s\u2083 = 100 m.\n4. Total displacement: s_total = 50 + 100 + 100 = 250 m.",
+      "finalAnswer": "Option B: 250 m",
+      "whyOtherOptionsWrong": "200 m forgets the first acceleration stage (50 m)."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Equations of motion for constant acceleration",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-294",
+    "questionNumber": 294,
+    "question": "A train 100 m long moving with constant acceleration crosses a pole. If the front end of the train passes the pole with speed 10 m/s and the rear end passes with speed 20 m/s, the acceleration of the train is:",
+    "options": {
+      "A": "1.5 m/s\u00b2",
+      "B": "2.0 m/s\u00b2",
+      "C": "1.0 m/s\u00b2",
+      "D": "0.5 m/s\u00b2"
+    },
+    "optionsList": [
+      "1.5 m/s\u00b2",
+      "2.0 m/s\u00b2",
+      "1.0 m/s\u00b2",
+      "0.5 m/s\u00b2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe displacement to cross the pole completely is equal to the length of the train L = 100 m. Use v\u00b2 = u\u00b2 + 2aL.\n\n2. GIVEN:\nu = 10 m/s, v = 20 m/s, s = L = 100 m.\n\n3. FORMULA / PRINCIPLE:\nv\u00b2 = u\u00b2 + 2aL => a = (v\u00b2 - u\u00b2) / (2L)\n\n4. STEP-BY-STEP SOLUTION:\n1. When the front passes the pole, u = 10 m/s.\n2. When the rear passes the pole, the train has displaced by its length L = 100 m.\n3. Final speed v = 20 m/s.\n4. Apply third equation: v\u00b2 = u\u00b2 + 2aL => 20\u00b2 = 10\u00b2 + 2a(100).\n5. 400 = 100 + 200a => 200a = 300 => a = 300 / 200 = 1.5 m/s\u00b2.\n\n5. FINAL ANSWER:\nOption A: 1.5 m/s\u00b2\n\n6. QUICK TIP:\nFor a train of length L passing an object, displacement covered = L.",
+    "solutionStructured": {
+      "concept": "The displacement to cross the pole completely is equal to the length of the train L = 100 m. Use v\u00b2 = u\u00b2 + 2aL.",
+      "given": "u = 10 m/s, v = 20 m/s, s = L = 100 m.",
+      "formula": "v\u00b2 = u\u00b2 + 2aL => a = (v\u00b2 - u\u00b2) / (2L)",
+      "stepByStep": "1. When the front passes the pole, u = 10 m/s.\n2. When the rear passes the pole, the train has displaced by its length L = 100 m.\n3. Final speed v = 20 m/s.\n4. Apply third equation: v\u00b2 = u\u00b2 + 2aL => 20\u00b2 = 10\u00b2 + 2a(100).\n5. 400 = 100 + 200a => 200a = 300 => a = 300 / 200 = 1.5 m/s\u00b2.",
+      "finalAnswer": "Option A: 1.5 m/s\u00b2",
+      "whyOtherOptionsWrong": "2.0 m/s\u00b2 would require v\u00b2 - u\u00b2 = 400."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Equations of motion for constant acceleration",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-295",
+    "questionNumber": 295,
+    "question": "A particle starts from rest and moves along a straight line with uniform acceleration. If it covers a distance s\u2081 in the first 2 seconds and s\u2082 in the next 2 seconds, then:",
+    "options": {
+      "A": "s\u2082 = s\u2081",
+      "B": "s\u2082 = 2s\u2081",
+      "C": "s\u2082 = 3s\u2081",
+      "D": "s\u2082 = 4s\u2081"
+    },
+    "optionsList": [
+      "s\u2082 = s\u2081",
+      "s\u2082 = 2s\u2081",
+      "s\u2082 = 3s\u2081",
+      "s\u2082 = 4s\u2081"
+    ],
+    "correctAnswer": "C",
+    "correctIndex": 2,
+    "explanation": "1. CONCEPT:\nFor equal consecutive time intervals starting from rest, distances are in ratio 1 : 3 : 5... so s\u2082 = 3s\u2081.\n\n2. GIVEN:\nu = 0, \u0394t\u2081 = 2 s, \u0394t\u2082 = 2 s.\n\n3. FORMULA / PRINCIPLE:\ns\u2081 = 1/2 a (2)\u00b2, s_total(4) = 1/2 a (4)\u00b2 = 4s\u2081, s\u2082 = 4s\u2081 - s\u2081 = 3s\u2081\n\n4. STEP-BY-STEP SOLUTION:\n1. Distance in first 2 s: s\u2081 = (1/2) a (2)\u00b2 = 2a.\n2. Total distance in 4 s: s_total = (1/2) a (4)\u00b2 = 8a = 4(2a) = 4s\u2081.\n3. Distance in next 2 s: s\u2082 = s_total - s\u2081 = 4s\u2081 - s\u2081 = 3s\u2081.\n\n5. FINAL ANSWER:\nOption C: s\u2082 = 3s\u2081\n\n6. QUICK TIP:\nConsecutive intervals of duration T starting from rest: s\u2081 : s\u2082 : s\u2083 = 1 : 3 : 5.",
+    "solutionStructured": {
+      "concept": "For equal consecutive time intervals starting from rest, distances are in ratio 1 : 3 : 5... so s\u2082 = 3s\u2081.",
+      "given": "u = 0, \u0394t\u2081 = 2 s, \u0394t\u2082 = 2 s.",
+      "formula": "s\u2081 = 1/2 a (2)\u00b2, s_total(4) = 1/2 a (4)\u00b2 = 4s\u2081, s\u2082 = 4s\u2081 - s\u2081 = 3s\u2081",
+      "stepByStep": "1. Distance in first 2 s: s\u2081 = (1/2) a (2)\u00b2 = 2a.\n2. Total distance in 4 s: s_total = (1/2) a (4)\u00b2 = 8a = 4(2a) = 4s\u2081.\n3. Distance in next 2 s: s\u2082 = s_total - s\u2081 = 4s\u2081 - s\u2081 = 3s\u2081.",
+      "finalAnswer": "Option C: s\u2082 = 3s\u2081",
+      "whyOtherOptionsWrong": "s\u2082 = 4s\u2081 is the total distance in 4 seconds, not the distance in the second 2-second interval."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Equations of motion for constant acceleration",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-296",
+    "questionNumber": 296,
+    "question": "A body moving with uniform acceleration has a velocity of 12 m/s after 3 s and 18 m/s after 5 s. The distance traveled by the body in the 4th second is:",
+    "options": {
+      "A": "13.5 m",
+      "B": "15.0 m",
+      "C": "12.0 m",
+      "D": "16.5 m"
+    },
+    "optionsList": [
+      "13.5 m",
+      "15.0 m",
+      "12.0 m",
+      "16.5 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFind acceleration a = (v\u2082 - v\u2081)/(t\u2082 - t\u2081), then initial velocity u = v\u2081 - at\u2081, then use s_n = u + a/2(2n - 1).\n\n2. GIVEN:\nv(3) = 12 m/s, v(5) = 18 m/s, n = 4.\n\n3. FORMULA / PRINCIPLE:\na = \u0394v / \u0394t; u = v - at; s_n = u + (a/2)(2n - 1)\n\n4. STEP-BY-STEP SOLUTION:\n1. Acceleration a = (18 - 12) / (5 - 3) = 6 / 2 = 3 m/s\u00b2.\n2. Initial velocity: u = v(3) - a(3) = 12 - 3(3) = 12 - 9 = 3 m/s.\n3. Distance in 4th second (n = 4): s\u2084 = u + (a/2)(2n - 1).\n4. s\u2084 = 3 + (3/2)(2(4) - 1) = 3 + 1.5(7) = 3 + 10.5 = 13.5 m.\n\n5. FINAL ANSWER:\nOption A: 13.5 m\n\n6. QUICK TIP:\nNotice that s\u2084 equals the velocity at t = 3.5 s: v(3.5) = u + a(3.5) = 3 + 3(3.5) = 13.5 m/s!",
+    "solutionStructured": {
+      "concept": "Find acceleration a = (v\u2082 - v\u2081)/(t\u2082 - t\u2081), then initial velocity u = v\u2081 - at\u2081, then use s_n = u + a/2(2n - 1).",
+      "given": "v(3) = 12 m/s, v(5) = 18 m/s, n = 4.",
+      "formula": "a = \u0394v / \u0394t; u = v - at; s_n = u + (a/2)(2n - 1)",
+      "stepByStep": "1. Acceleration a = (18 - 12) / (5 - 3) = 6 / 2 = 3 m/s\u00b2.\n2. Initial velocity: u = v(3) - a(3) = 12 - 3(3) = 12 - 9 = 3 m/s.\n3. Distance in 4th second (n = 4): s\u2084 = u + (a/2)(2n - 1).\n4. s\u2084 = 3 + (3/2)(2(4) - 1) = 3 + 1.5(7) = 3 + 10.5 = 13.5 m.",
+      "finalAnswer": "Option A: 13.5 m",
+      "whyOtherOptionsWrong": "15.0 m is the velocity at t = 4 s, not the average velocity over the 4th second."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Equations of motion for constant acceleration",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-297",
+    "questionNumber": 297,
+    "question": "A body traveling along a straight line with uniform acceleration covers 40 m in the first 4 seconds and 60 m in the next 4 seconds. What is its initial velocity?",
+    "options": {
+      "A": "5 m/s",
+      "B": "7.5 m/s",
+      "C": "10 m/s",
+      "D": "2.5 m/s"
+    },
+    "optionsList": [
+      "5 m/s",
+      "7.5 m/s",
+      "10 m/s",
+      "2.5 m/s"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nUse s\u2081 = 40 m in t = 4 s, and total s\u2082 = 100 m in t = 8 s. Set up two equations to solve for u and a.\n\n2. GIVEN:\ns(4) = 40 m, s(8) = 40 + 60 = 100 m.\n\n3. FORMULA / PRINCIPLE:\ns = ut + (1/2) a t\u00b2\n\n4. STEP-BY-STEP SOLUTION:\n1. Equation 1 (t = 4 s): 40 = 4u + (1/2) a (16) => 4u + 8a = 40 => u + 2a = 10.\n2. Equation 2 (t = 8 s): 100 = 8u + (1/2) a (64) => 8u + 32a = 100 => u + 4a = 12.5.\n3. Subtract Eq 1 from Eq 2: 2a = 2.5 => a = 1.25 m/s\u00b2.\n4. Substitute into Eq 1: u + 2(1.25) = 10 => u + 2.5 = 10 => u = 7.5 m/s.\n\n5. FINAL ANSWER:\nOption B: 7.5 m/s\n\n6. QUICK TIP:\nQuick trick: Average speed in first 4 s is 40/4 = 10 m/s (at t = 2 s). Average speed in next 4 s is 60/4 = 15 m/s (at t = 6 s). a = (15 - 10)/(6 - 2) = 1.25 m/s\u00b2. Then u = v(2) - 2a = 10 - 2.5 = 7.5 m/s!",
+    "solutionStructured": {
+      "concept": "Use s\u2081 = 40 m in t = 4 s, and total s\u2082 = 100 m in t = 8 s. Set up two equations to solve for u and a.",
+      "given": "s(4) = 40 m, s(8) = 40 + 60 = 100 m.",
+      "formula": "s = ut + (1/2) a t\u00b2",
+      "stepByStep": "1. Equation 1 (t = 4 s): 40 = 4u + (1/2) a (16) => 4u + 8a = 40 => u + 2a = 10.\n2. Equation 2 (t = 8 s): 100 = 8u + (1/2) a (64) => 8u + 32a = 100 => u + 4a = 12.5.\n3. Subtract Eq 1 from Eq 2: 2a = 2.5 => a = 1.25 m/s\u00b2.\n4. Substitute into Eq 1: u + 2(1.25) = 10 => u + 2.5 = 10 => u = 7.5 m/s.",
+      "finalAnswer": "Option B: 7.5 m/s",
+      "whyOtherOptionsWrong": "5 m/s or 10 m/s result from forgetting the quadratic term in s = ut + 1/2 at\u00b2."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Equations of motion for constant acceleration",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-298",
+    "questionNumber": 298,
+    "question": "A car accelerates from rest at a constant rate a\u2081 for distance s\u2081 and time t\u2081, and then decelerates at a constant rate a\u2082 for distance s\u2082 and time t\u2082 to come to rest. Which of the following relations is correct?",
+    "options": {
+      "A": "s\u2081 / s\u2082 = a\u2082 / a\u2081 = t\u2081 / t\u2082",
+      "B": "s\u2081 / s\u2082 = a\u2081 / a\u2082 = t\u2082 / t\u2081",
+      "C": "s\u2081 / s\u2082 = a\u2082 / a\u2081 = (t\u2081 / t\u2082)\u00b2",
+      "D": "s\u2081 / s\u2082 = (a\u2082 / a\u2081)\u00b2"
+    },
+    "optionsList": [
+      "s\u2081 / s\u2082 = a\u2082 / a\u2081 = t\u2081 / t\u2082",
+      "s\u2081 / s\u2082 = a\u2081 / a\u2082 = t\u2082 / t\u2081",
+      "s\u2081 / s\u2082 = a\u2082 / a\u2081 = (t\u2081 / t\u2082)\u00b2",
+      "s\u2081 / s\u2082 = (a\u2082 / a\u2081)\u00b2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nPeak velocity v is common to both stages. v = a\u2081 t\u2081 = a\u2082 t\u2082 => t\u2081/t\u2082 = a\u2082/a\u2081. Also v\u00b2 = 2a\u2081 s\u2081 = 2a\u2082 s\u2082 => s\u2081/s\u2082 = a\u2082/a\u2081.\n\n2. GIVEN:\nInitial velocity = 0, final velocity = 0, peak velocity = v.\n\n3. FORMULA / PRINCIPLE:\nv = a\u2081 t\u2081 = a\u2082 t\u2082 and v\u00b2 = 2 a\u2081 s\u2081 = 2 a\u2082 s\u2082\n\n4. STEP-BY-STEP SOLUTION:\n1. For the acceleration stage: v\u00b2 = 2 a\u2081 s\u2081  and  v = a\u2081 t\u2081.\n2. For the deceleration stage: v\u00b2 = 2 a\u2082 s\u2082  and  v = a\u2082 t\u2082.\n3. Equating v\u00b2: 2 a\u2081 s\u2081 = 2 a\u2082 s\u2082 => s\u2081 / s\u2082 = a\u2082 / a\u2081.\n4. Equating v: a\u2081 t\u2081 = a\u2082 t\u2082 => t\u2081 / t\u2082 = a\u2082 / a\u2081.\n5. Therefore: s\u2081 / s\u2082 = a\u2082 / a\u2081 = t\u2081 / t\u2082.\n\n5. FINAL ANSWER:\nOption A: s\u2081 / s\u2082 = a\u2082 / a\u2081 = t\u2081 / t\u2082\n\n6. QUICK TIP:\nMemorable NEET Rule: In 2-stage motion starting and ending at rest, distance and time are both INVERSELY proportional to acceleration: s \u221d 1/a and t \u221d 1/a.",
+    "solutionStructured": {
+      "concept": "Peak velocity v is common to both stages. v = a\u2081 t\u2081 = a\u2082 t\u2082 => t\u2081/t\u2082 = a\u2082/a\u2081. Also v\u00b2 = 2a\u2081 s\u2081 = 2a\u2082 s\u2082 => s\u2081/s\u2082 = a\u2082/a\u2081.",
+      "given": "Initial velocity = 0, final velocity = 0, peak velocity = v.",
+      "formula": "v = a\u2081 t\u2081 = a\u2082 t\u2082 and v\u00b2 = 2 a\u2081 s\u2081 = 2 a\u2082 s\u2082",
+      "stepByStep": "1. For the acceleration stage: v\u00b2 = 2 a\u2081 s\u2081  and  v = a\u2081 t\u2081.\n2. For the deceleration stage: v\u00b2 = 2 a\u2082 s\u2082  and  v = a\u2082 t\u2082.\n3. Equating v\u00b2: 2 a\u2081 s\u2081 = 2 a\u2082 s\u2082 => s\u2081 / s\u2082 = a\u2082 / a\u2081.\n4. Equating v: a\u2081 t\u2081 = a\u2082 t\u2082 => t\u2081 / t\u2082 = a\u2082 / a\u2081.\n5. Therefore: s\u2081 / s\u2082 = a\u2082 / a\u2081 = t\u2081 / t\u2082.",
+      "finalAnswer": "Option A: s\u2081 / s\u2082 = a\u2082 / a\u2081 = t\u2081 / t\u2082",
+      "whyOtherOptionsWrong": "Option B has direct proportionality, which contradicts v = constant."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Equations of motion for constant acceleration",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-299",
+    "questionNumber": 299,
+    "question": "A body moving with uniform acceleration covers three consecutive equal distances s in time intervals t\u2081, t\u2082, and t\u2083. Which of the following relations is correct?",
+    "options": {
+      "A": "1/t\u2081 - 1/t\u2082 = 1/t\u2082 - 1/t\u2083",
+      "B": "1/t\u2081 - 1/t\u2083 = 2 / t\u2082",
+      "C": "1/t\u2081 - 1/t\u2082 + 1/t\u2083 = 0",
+      "D": "t\u2081 + t\u2083 = 2 t\u2082"
+    },
+    "optionsList": [
+      "1/t\u2081 - 1/t\u2082 = 1/t\u2082 - 1/t\u2083",
+      "1/t\u2081 - 1/t\u2083 = 2 / t\u2082",
+      "1/t\u2081 - 1/t\u2082 + 1/t\u2083 = 0",
+      "t\u2081 + t\u2083 = 2 t\u2082"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nAverage velocity over consecutive equal distances s is v_avg = s/t. For uniform acceleration, these average velocities are related such that 1/t\u2081 - 1/t\u2083 = 2/t\u2082 wait, let's derive accurately.\n\n2. GIVEN:\nEqual distances s, consecutive times t\u2081, t\u2082, t\u2083.\n\n3. FORMULA / PRINCIPLE:\nv_avg = s/t; v\u2082 - v\u2081 = a t_interval\n\n4. STEP-BY-STEP SOLUTION:\n1. Let velocities at boundaries be v\u2080, v\u2081, v\u2082, v\u2083.\n2. Average velocity in interval 1: s/t\u2081 = (v\u2080 + v\u2081)/2.\n3. Average velocity in interval 2: s/t\u2082 = (v\u2081 + v\u2082)/2.\n4. Average velocity in interval 3: s/t\u2083 = (v\u2082 + v\u2083)/2.\n5. Also, v\u2081 - v\u2080 = a t\u2081, v\u2082 - v\u2081 = a t\u2082, v\u2083 - v\u2082 = a t\u2083.\n6. By standard algebraic identity for equal distances under uniform acceleration: 1/t\u2081 - 1/t\u2082 = 1/t\u2082 - 1/t\u2083 is not true, but (1/t\u2081 - 1/t\u2083) = 2/t\u2082 is a well-known NEET result wait, let's verify: (1/t\u2081 - 1/t\u2082) = (1/t\u2082 - 1/t\u2083) => 1/t\u2081 + 1/t\u2083 = 2/t\u2082 (harmonic progression of times!).\n7. Let's check: 1/t\u2081 - 1/t\u2082 + 1/t\u2082 - 1/t\u2083 => if 1/t\u2081, 1/t\u2082, 1/t\u2083 form an AP, then (1/t\u2081 - 1/t\u2082) = (1/t\u2082 - 1/t\u2083).\n\n5. FINAL ANSWER:\nOption B: 1/t\u2081 - 1/t\u2083 = 2 / t\u2082\n\n6. QUICK TIP:\nClassic result: For equal distances with uniform acceleration, the inverse times 1/t\u2081, 1/t\u2082, 1/t\u2083 form an AP, so 1/t\u2081 - 1/t\u2082 = 1/t\u2082 - 1/t\u2083, or 1/t\u2081 + 1/t\u2083 = 2/t\u2082.",
+    "solutionStructured": {
+      "concept": "Average velocity over consecutive equal distances s is v_avg = s/t. For uniform acceleration, these average velocities are related such that 1/t\u2081 - 1/t\u2083 = 2/t\u2082 wait, let's derive accurately.",
+      "given": "Equal distances s, consecutive times t\u2081, t\u2082, t\u2083.",
+      "formula": "v_avg = s/t; v\u2082 - v\u2081 = a t_interval",
+      "stepByStep": "1. Let velocities at boundaries be v\u2080, v\u2081, v\u2082, v\u2083.\n2. Average velocity in interval 1: s/t\u2081 = (v\u2080 + v\u2081)/2.\n3. Average velocity in interval 2: s/t\u2082 = (v\u2081 + v\u2082)/2.\n4. Average velocity in interval 3: s/t\u2083 = (v\u2082 + v\u2083)/2.\n5. Also, v\u2081 - v\u2080 = a t\u2081, v\u2082 - v\u2081 = a t\u2082, v\u2083 - v\u2082 = a t\u2083.\n6. By standard algebraic identity for equal distances under uniform acceleration: 1/t\u2081 - 1/t\u2082 = 1/t\u2082 - 1/t\u2083 is not true, but (1/t\u2081 - 1/t\u2083) = 2/t\u2082 is a well-known NEET result wait, let's verify: (1/t\u2081 - 1/t\u2082) = (1/t\u2082 - 1/t\u2083) => 1/t\u2081 + 1/t\u2083 = 2/t\u2082 (harmonic progression of times!).\n7. Let's check: 1/t\u2081 - 1/t\u2082 + 1/t\u2082 - 1/t\u2083 => if 1/t\u2081, 1/t\u2082, 1/t\u2083 form an AP, then (1/t\u2081 - 1/t\u2082) = (1/t\u2082 - 1/t\u2083).",
+      "finalAnswer": "Option B: 1/t\u2081 - 1/t\u2083 = 2 / t\u2082",
+      "whyOtherOptionsWrong": "t\u2081 + t\u2083 = 2t\u2082 assumes arithmetic progression of time, which only holds for equal velocity changes, not equal distances."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Equations of motion for constant acceleration",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-300",
+    "questionNumber": 300,
+    "question": "A particle starts from rest with acceleration 2 m/s\u00b2 for 10 s, then moves with constant velocity for 30 s, and finally retards uniformly at 4 m/s\u00b2 to come to rest. The total distance covered is:",
+    "options": {
+      "A": "750 m",
+      "B": "800 m",
+      "C": "650 m",
+      "D": "700 m"
+    },
+    "optionsList": [
+      "750 m",
+      "800 m",
+      "650 m",
+      "700 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nBreak into three stages: Stage 1 (acceleration), Stage 2 (constant velocity), Stage 3 (retardation).\n\n2. GIVEN:\na\u2081 = 2 m/s\u00b2, t\u2081 = 10 s; t\u2082 = 30 s; a\u2082 = -4 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\ns_total = s\u2081 + s\u2082 + s\u2083\n\n4. STEP-BY-STEP SOLUTION:\n1. Stage 1: v_max = u + a\u2081 t\u2081 = 0 + 2 \u00d7 10 = 20 m/s.\n   Distance s\u2081 = (1/2) a\u2081 t\u2081\u00b2 = (1/2) \u00d7 2 \u00d7 (10)\u00b2 = 100 m.\n2. Stage 2: Constant speed v = 20 m/s for t\u2082 = 30 s.\n   Distance s\u2082 = v \u00d7 t\u2082 = 20 \u00d7 30 = 600 m.\n3. Stage 3: Deceleration a\u2082 = 4 m/s\u00b2 from 20 m/s to 0.\n   Distance s\u2083 = v\u00b2 / (2 a\u2082) = (20)\u00b2 / (2 \u00d7 4) = 400 / 8 = 50 m.\n4. Total distance = s\u2081 + s\u2082 + s\u2083 = 100 m + 600 m + 50 m = 750 m.\n\n5. FINAL ANSWER:\nOption A: 750 m\n\n6. QUICK TIP:\nUse s\u2083 = v\u00b2 / (2a) directly for stopping distance without having to calculate stopping time first!",
+    "solutionStructured": {
+      "concept": "Break into three stages: Stage 1 (acceleration), Stage 2 (constant velocity), Stage 3 (retardation).",
+      "given": "a\u2081 = 2 m/s\u00b2, t\u2081 = 10 s; t\u2082 = 30 s; a\u2082 = -4 m/s\u00b2.",
+      "formula": "s_total = s\u2081 + s\u2082 + s\u2083",
+      "stepByStep": "1. Stage 1: v_max = u + a\u2081 t\u2081 = 0 + 2 \u00d7 10 = 20 m/s.\n   Distance s\u2081 = (1/2) a\u2081 t\u2081\u00b2 = (1/2) \u00d7 2 \u00d7 (10)\u00b2 = 100 m.\n2. Stage 2: Constant speed v = 20 m/s for t\u2082 = 30 s.\n   Distance s\u2082 = v \u00d7 t\u2082 = 20 \u00d7 30 = 600 m.\n3. Stage 3: Deceleration a\u2082 = 4 m/s\u00b2 from 20 m/s to 0.\n   Distance s\u2083 = v\u00b2 / (2 a\u2082) = (20)\u00b2 / (2 \u00d7 4) = 400 / 8 = 50 m.\n4. Total distance = s\u2081 + s\u2082 + s\u2083 = 100 m + 600 m + 50 m = 750 m.",
+      "finalAnswer": "Option A: 750 m",
+      "whyOtherOptionsWrong": "800 m forgets the 1/2 factor in either the first or third stage."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Equations of motion for constant acceleration",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-301",
+    "questionNumber": 301,
+    "question": "A particle moves along a straight line with uniform acceleration. If it covers distances s\u2081 and s\u2082 in successive equal time intervals of duration t each, the acceleration of the particle is given by:",
+    "options": {
+      "A": "(s\u2082 - s\u2081) / t\u00b2",
+      "B": "(s\u2082 - s\u2081) / (2t\u00b2)",
+      "C": "2(s\u2082 - s\u2081) / t\u00b2",
+      "D": "(s\u2081 + s\u2082) / t\u00b2"
+    },
+    "optionsList": [
+      "(s\u2082 - s\u2081) / t\u00b2",
+      "(s\u2082 - s\u2081) / (2t\u00b2)",
+      "2(s\u2082 - s\u2081) / t\u00b2",
+      "(s\u2081 + s\u2082) / t\u00b2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\ns\u2081 = ut + 1/2 at\u00b2, and velocity at end of first interval is u' = u + at. Then s\u2082 = (u + at)t + 1/2 at\u00b2 = s\u2081 + at\u00b2. Thus s\u2082 - s\u2081 = at\u00b2 => a = (s\u2082 - s\u2081)/t\u00b2.\n\n2. GIVEN:\nDistances s\u2081 and s\u2082 in consecutive equal time intervals t.\n\n3. FORMULA / PRINCIPLE:\ns\u2082 - s\u2081 = a t\u00b2 => a = (s\u2082 - s\u2081) / t\u00b2\n\n4. STEP-BY-STEP SOLUTION:\n1. First interval: s\u2081 = ut + (1/2) a t\u00b2.\n2. Velocity at the start of second interval: u\u2082 = u + at.\n3. Second interval: s\u2082 = u\u2082 t + (1/2) a t\u00b2 = (u + at)t + (1/2) a t\u00b2 = ut + at\u00b2 + (1/2) a t\u00b2.\n4. Difference: s\u2082 - s\u2081 = [ut + (3/2) a t\u00b2] - [ut + (1/2) a t\u00b2] = a t\u00b2.\n5. Therefore, acceleration a = (s\u2082 - s\u2081) / t\u00b2.\n\n5. FINAL ANSWER:\nOption A: (s\u2082 - s\u2081) / t\u00b2\n\n6. QUICK TIP:\nFundamental formula in experimental kinematics: Difference in consecutive displacements over equal times \u0394t gives a = \u0394s / (\u0394t)\u00b2.",
+    "solutionStructured": {
+      "concept": "s\u2081 = ut + 1/2 at\u00b2, and velocity at end of first interval is u' = u + at. Then s\u2082 = (u + at)t + 1/2 at\u00b2 = s\u2081 + at\u00b2. Thus s\u2082 - s\u2081 = at\u00b2 => a = (s\u2082 - s\u2081)/t\u00b2.",
+      "given": "Distances s\u2081 and s\u2082 in consecutive equal time intervals t.",
+      "formula": "s\u2082 - s\u2081 = a t\u00b2 => a = (s\u2082 - s\u2081) / t\u00b2",
+      "stepByStep": "1. First interval: s\u2081 = ut + (1/2) a t\u00b2.\n2. Velocity at the start of second interval: u\u2082 = u + at.\n3. Second interval: s\u2082 = u\u2082 t + (1/2) a t\u00b2 = (u + at)t + (1/2) a t\u00b2 = ut + at\u00b2 + (1/2) a t\u00b2.\n4. Difference: s\u2082 - s\u2081 = [ut + (3/2) a t\u00b2] - [ut + (1/2) a t\u00b2] = a t\u00b2.\n5. Therefore, acceleration a = (s\u2082 - s\u2081) / t\u00b2.",
+      "finalAnswer": "Option A: (s\u2082 - s\u2081) / t\u00b2",
+      "whyOtherOptionsWrong": "Option B divides by 2t\u00b2, which is incorrect."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Equations of motion for constant acceleration",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-302",
+    "questionNumber": 302,
+    "question": "A body starts from rest with acceleration a. After time t, another body starts from the same point with the same acceleration. When the first body has covered a distance S, what is the distance covered by the second body?",
+    "options": {
+      "A": "(\u221aS - \u221a(at\u00b2/2))\u00b2",
+      "B": "S - (1/2) a t\u00b2",
+      "C": "(\u221aS - t\u221a(a/2))\u00b2",
+      "D": "(\u221aS - t\u221a(2/a))\u00b2"
+    },
+    "optionsList": [
+      "(\u221aS - \u221a(at\u00b2/2))\u00b2",
+      "S - (1/2) a t\u00b2",
+      "(\u221aS - t\u221a(a/2))\u00b2",
+      "(\u221aS - t\u221a(2/a))\u00b2"
+    ],
+    "correctAnswer": "C",
+    "correctIndex": 2,
+    "explanation": "1. CONCEPT:\nFirst body: S = 1/2 a t\u2081\u00b2 => t\u2081 = \u221a(2S/a). Second body has moved for time t\u2082 = t\u2081 - t. Distance S\u2082 = 1/2 a (t\u2081 - t)\u00b2 = (\u221aS - t\u221a(a/2))\u00b2.\n\n2. GIVEN:\nBody 1 covers S in time t\u2081. Body 2 starts t seconds later.\n\n3. FORMULA / PRINCIPLE:\nS\u2081 = (1/2) a t\u2081\u00b2; S\u2082 = (1/2) a (t\u2081 - t)\u00b2\n\n4. STEP-BY-STEP SOLUTION:\n1. For the first body: S = (1/2) a t\u2081\u00b2 => t\u2081 = \u221a(2S / a).\n2. For the second body, time of travel is t\u2082 = t\u2081 - t = \u221a(2S / a) - t.\n3. Distance covered by second body: S\u2082 = (1/2) a t\u2082\u00b2 = (1/2) a [\u221a(2S / a) - t]\u00b2.\n4. Expand inside: \u221a[(1/2) a] \u00d7 [\u221a(2S / a) - t] = \u221aS - t \u221a(a / 2).\n5. Squaring gives: S\u2082 = [\u221aS - t \u221a(a / 2)]\u00b2.\n\n5. FINAL ANSWER:\nOption C: (\u221aS - t\u221a(a/2))\u00b2\n\n6. QUICK TIP:\nExpress t\u2081 in terms of S, then substitute t\u2082 = t\u2081 - t into S\u2082 = 1/2 a t\u2082\u00b2.",
+    "solutionStructured": {
+      "concept": "First body: S = 1/2 a t\u2081\u00b2 => t\u2081 = \u221a(2S/a). Second body has moved for time t\u2082 = t\u2081 - t. Distance S\u2082 = 1/2 a (t\u2081 - t)\u00b2 = (\u221aS - t\u221a(a/2))\u00b2.",
+      "given": "Body 1 covers S in time t\u2081. Body 2 starts t seconds later.",
+      "formula": "S\u2081 = (1/2) a t\u2081\u00b2; S\u2082 = (1/2) a (t\u2081 - t)\u00b2",
+      "stepByStep": "1. For the first body: S = (1/2) a t\u2081\u00b2 => t\u2081 = \u221a(2S / a).\n2. For the second body, time of travel is t\u2082 = t\u2081 - t = \u221a(2S / a) - t.\n3. Distance covered by second body: S\u2082 = (1/2) a t\u2082\u00b2 = (1/2) a [\u221a(2S / a) - t]\u00b2.\n4. Expand inside: \u221a[(1/2) a] \u00d7 [\u221a(2S / a) - t] = \u221aS - t \u221a(a / 2).\n5. Squaring gives: S\u2082 = [\u221aS - t \u221a(a / 2)]\u00b2.",
+      "finalAnswer": "Option C: (\u221aS - t\u221a(a/2))\u00b2",
+      "whyOtherOptionsWrong": "S - 1/2 at\u00b2 is incorrect because the two bodies do not maintain a constant distance separation."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Equations of motion for constant acceleration",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-303",
+    "questionNumber": 303,
+    "question": "A point moves with uniform acceleration and v\u2081, v\u2082, v\u2083 denote the average velocities in three successive intervals of time t\u2081, t\u2082, t\u2083. Which of the following is correct?",
+    "options": {
+      "A": "(v\u2081 - v\u2082) / (v\u2082 - v\u2083) = (t\u2081 + t\u2082) / (t\u2082 + t\u2083)",
+      "B": "(v\u2081 - v\u2082) / (v\u2082 - v\u2083) = (t\u2081 - t\u2082) / (t\u2082 - t\u2083)",
+      "C": "(v\u2081 - v\u2082) / (v\u2082 - v\u2083) = t\u2081 / t\u2083",
+      "D": "(v\u2081 - v\u2082) / (v\u2082 - v\u2083) = 1"
+    },
+    "optionsList": [
+      "(v\u2081 - v\u2082) / (v\u2082 - v\u2083) = (t\u2081 + t\u2082) / (t\u2082 + t\u2083)",
+      "(v\u2081 - v\u2082) / (v\u2082 - v\u2083) = (t\u2081 - t\u2082) / (t\u2082 - t\u2083)",
+      "(v\u2081 - v\u2082) / (v\u2082 - v\u2083) = t\u2081 / t\u2083",
+      "(v\u2081 - v\u2082) / (v\u2082 - v\u2083) = 1"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor uniform acceleration, the average velocity in an interval is the instantaneous velocity at its midpoint. Midpoint of interval 1 is at t\u2081/2, interval 2 is at t\u2081 + t\u2082/2. Separation between midpoints is (t\u2081 + t\u2082)/2.\n\n2. GIVEN:\nAverage velocities v\u2081, v\u2082, v\u2083 in successive times t\u2081, t\u2082, t\u2083.\n\n3. FORMULA / PRINCIPLE:\nv_avg = v at midpoint time\n\n4. STEP-BY-STEP SOLUTION:\n1. In uniformly accelerated motion, the average velocity over a time interval equals the instantaneous velocity at the midpoint of that interval.\n2. Let the midpoints of the three intervals occur at times T\u2081, T\u2082, T\u2083 from the start.\n3. T\u2082 - T\u2081 = (t\u2081 + t\u2082) / 2, so v\u2082 - v\u2081 = a (T\u2082 - T\u2081) = a (t\u2081 + t\u2082) / 2.\n4. Similarly, T\u2083 - T\u2082 = (t\u2082 + t\u2083) / 2, so v\u2083 - v\u2082 = a (t\u2082 + t\u2083) / 2.\n5. Taking the ratio: (v\u2081 - v\u2082) / (v\u2082 - v\u2083) = (T\u2082 - T\u2081) / (T\u2083 - T\u2082) = (t\u2081 + t\u2082) / (t\u2082 + t\u2083).\n\n5. FINAL ANSWER:\nOption A: (v\u2081 - v\u2082) / (v\u2082 - v\u2083) = (t\u2081 + t\u2082) / (t\u2082 + t\u2083)\n\n6. QUICK TIP:\nAverage velocity in uniform acceleration ALWAYS occurs at the temporal midpoint: t_mid = (t_start + t_end) / 2.",
+    "solutionStructured": {
+      "concept": "For uniform acceleration, the average velocity in an interval is the instantaneous velocity at its midpoint. Midpoint of interval 1 is at t\u2081/2, interval 2 is at t\u2081 + t\u2082/2. Separation between midpoints is (t\u2081 + t\u2082)/2.",
+      "given": "Average velocities v\u2081, v\u2082, v\u2083 in successive times t\u2081, t\u2082, t\u2083.",
+      "formula": "v_avg = v at midpoint time",
+      "stepByStep": "1. In uniformly accelerated motion, the average velocity over a time interval equals the instantaneous velocity at the midpoint of that interval.\n2. Let the midpoints of the three intervals occur at times T\u2081, T\u2082, T\u2083 from the start.\n3. T\u2082 - T\u2081 = (t\u2081 + t\u2082) / 2, so v\u2082 - v\u2081 = a (T\u2082 - T\u2081) = a (t\u2081 + t\u2082) / 2.\n4. Similarly, T\u2083 - T\u2082 = (t\u2082 + t\u2083) / 2, so v\u2083 - v\u2082 = a (t\u2082 + t\u2083) / 2.\n5. Taking the ratio: (v\u2081 - v\u2082) / (v\u2082 - v\u2083) = (T\u2082 - T\u2081) / (T\u2083 - T\u2082) = (t\u2081 + t\u2082) / (t\u2082 + t\u2083).",
+      "finalAnswer": "Option A: (v\u2081 - v\u2082) / (v\u2082 - v\u2083) = (t\u2081 + t\u2082) / (t\u2082 + t\u2083)",
+      "whyOtherOptionsWrong": "Option C ignores that the time difference between the midpoints includes both intervals."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Equations of motion for constant acceleration",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-304",
+    "questionNumber": 304,
+    "question": "A particle starts from rest with acceleration a = 2 m/s\u00b2 for some time, and then decelerates at 1 m/s\u00b2 to come to rest. If the total distance covered is 300 m, the total time of motion is:",
+    "options": {
+      "A": "30 s",
+      "B": "20 s",
+      "C": "25 s",
+      "D": "35 s"
+    },
+    "optionsList": [
+      "30 s",
+      "20 s",
+      "25 s",
+      "35 s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nUse s = [\u03b1\u03b2 / (2(\u03b1 + \u03b2))] T\u00b2. Solve for T.\n\n2. GIVEN:\n\u03b1 = 2 m/s\u00b2, \u03b2 = 1 m/s\u00b2, s = 300 m.\n\n3. FORMULA / PRINCIPLE:\ns = [\u03b1\u03b2 / (2(\u03b1 + \u03b2))] T\u00b2 => T = \u221a[2s (\u03b1 + \u03b2) / (\u03b1\u03b2)]\n\n4. STEP-BY-STEP SOLUTION:\n1. \u03b1 = 2 m/s\u00b2, \u03b2 = 1 m/s\u00b2.\n2. \u03b1\u03b2 / [2(\u03b1 + \u03b2)] = (2 \u00d7 1) / [2(2 + 1)] = 2 / 6 = 1/3.\n3. Total distance: s = (1/3) T\u00b2 = 300 m.\n4. T\u00b2 = 300 \u00d7 3 = 900.\n5. T = \u221a900 = 30 s.\n\n5. FINAL ANSWER:\nOption A: 30 s\n\n6. QUICK TIP:\nDirect substitution into T = \u221a[2s(\u03b1 + \u03b2)/(\u03b1\u03b2)] yields the answer in under 30 seconds!",
+    "solutionStructured": {
+      "concept": "Use s = [\u03b1\u03b2 / (2(\u03b1 + \u03b2))] T\u00b2. Solve for T.",
+      "given": "\u03b1 = 2 m/s\u00b2, \u03b2 = 1 m/s\u00b2, s = 300 m.",
+      "formula": "s = [\u03b1\u03b2 / (2(\u03b1 + \u03b2))] T\u00b2 => T = \u221a[2s (\u03b1 + \u03b2) / (\u03b1\u03b2)]",
+      "stepByStep": "1. \u03b1 = 2 m/s\u00b2, \u03b2 = 1 m/s\u00b2.\n2. \u03b1\u03b2 / [2(\u03b1 + \u03b2)] = (2 \u00d7 1) / [2(2 + 1)] = 2 / 6 = 1/3.\n3. Total distance: s = (1/3) T\u00b2 = 300 m.\n4. T\u00b2 = 300 \u00d7 3 = 900.\n5. T = \u221a900 = 30 s.",
+      "finalAnswer": "Option A: 30 s",
+      "whyOtherOptionsWrong": "20 s would give distance = (1/3)(400) = 133 m."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Equations of motion for constant acceleration",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-305",
+    "questionNumber": 305,
+    "question": "An elevator starts from rest and moves upwards with acceleration 2 m/s\u00b2 for 4 s, then continues at constant speed for 6 s, and finally retards uniformly at 4 m/s\u00b2 to come to rest. The total height climbed by the elevator is:",
+    "options": {
+      "A": "72 m",
+      "B": "64 m",
+      "C": "80 m",
+      "D": "56 m"
+    },
+    "optionsList": [
+      "72 m",
+      "64 m",
+      "80 m",
+      "56 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nCalculate height in three stages: acceleration, constant velocity, and deceleration.\n\n2. GIVEN:\nStage 1: a = 2 m/s\u00b2, t = 4 s. Stage 2: constant speed for 6 s. Stage 3: a = -4 m/s\u00b2 to rest.\n\n3. FORMULA / PRINCIPLE:\nh_total = h\u2081 + h\u2082 + h\u2083\n\n4. STEP-BY-STEP SOLUTION:\n1. Stage 1: v_max = a\u2081 t\u2081 = 2 \u00d7 4 = 8 m/s.\n   h\u2081 = (1/2) a\u2081 t\u2081\u00b2 = (1/2) \u00d7 2 \u00d7 (4)\u00b2 = 16 m.\n2. Stage 2: h\u2082 = v_max \u00d7 t\u2082 = 8 \u00d7 6 = 48 m.\n3. Stage 3: h\u2083 = v_max\u00b2 / (2 a\u2082) = (8)\u00b2 / (2 \u00d7 4) = 64 / 8 = 8 m.\n4. Total height h_total = h\u2081 + h\u2082 + h\u2083 = 16 + 48 + 8 = 72 m.\n\n5. FINAL ANSWER:\nOption A: 72 m\n\n6. QUICK TIP:\nUse trapezoid rule: t_acc = 4 s, t_const = 6 s, t_dec = 8/4 = 2 s. Total time = 12 s. Height = 1/2 \u00d7 (12 + 6) \u00d7 8 = 9 \u00d7 8 = 72 m!",
+    "solutionStructured": {
+      "concept": "Calculate height in three stages: acceleration, constant velocity, and deceleration.",
+      "given": "Stage 1: a = 2 m/s\u00b2, t = 4 s. Stage 2: constant speed for 6 s. Stage 3: a = -4 m/s\u00b2 to rest.",
+      "formula": "h_total = h\u2081 + h\u2082 + h\u2083",
+      "stepByStep": "1. Stage 1: v_max = a\u2081 t\u2081 = 2 \u00d7 4 = 8 m/s.\n   h\u2081 = (1/2) a\u2081 t\u2081\u00b2 = (1/2) \u00d7 2 \u00d7 (4)\u00b2 = 16 m.\n2. Stage 2: h\u2082 = v_max \u00d7 t\u2082 = 8 \u00d7 6 = 48 m.\n3. Stage 3: h\u2083 = v_max\u00b2 / (2 a\u2082) = (8)\u00b2 / (2 \u00d7 4) = 64 / 8 = 8 m.\n4. Total height h_total = h\u2081 + h\u2082 + h\u2083 = 16 + 48 + 8 = 72 m.",
+      "finalAnswer": "Option A: 72 m",
+      "whyOtherOptionsWrong": "64 m forgets the final deceleration height (8 m)."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Equations of motion for constant acceleration",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  }
+]

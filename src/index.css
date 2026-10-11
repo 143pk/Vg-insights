@@ -850,3 +850,115 @@ sup {
   line-height: 0;
 }
 
+/* ==================================================
+   CHAPTERWISE MCQ PRACTICE - RESPONSIVE MOBILE STYLES
+   Prevent horizontal scroll & overflow, responsive math & touch
+   ================================================== */
+
+html,
+body {
+  overflow-x: hidden !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+#app {
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mcq-engine-wrapper {
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mcq-card-container {
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  touch-action: pan-y;
+}
+
+.mcq-question-card {
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mcq-question-text {
+  word-break: break-word !important;
+  overflow-wrap: anywhere !important;
+  white-space: normal !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.mcq-option-btn {
+  touch-action: manipulation !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+  cursor: pointer !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  min-height: 48px !important;
+}
+
+.mcq-option-text {
+  word-break: break-word !important;
+  overflow-wrap: anywhere !important;
+  white-space: normal !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.mcq-solution-text {
+  word-break: break-word !important;
+  overflow-wrap: anywhere !important;
+  white-space: normal !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.math-container {
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  -webkit-overflow-scrolling: touch !important;
+  box-sizing: border-box !important;
+}
+
+.math-container::-webkit-scrollbar {
+  height: 4px;
+}
+
+.math-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.math-container::-webkit-scrollbar-thumb {
+  background-color: rgba(148, 163, 184, 0.4);
+  border-radius: 4px;
+}
+
+/* Ensure any rendered KaTeX inside MCQ container never overflows the card */
+.mcq-card-container .katex-display {
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  -webkit-overflow-scrolling: touch !important;
+  margin: 0.5rem 0 !important;
+}
+
+.mcq-card-container .katex {
+  max-width: 100% !important;
+}
+
+

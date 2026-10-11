@@ -1,0 +1,779 @@
+[
+  {
+    "id": "msl-mcq-043",
+    "questionNumber": 43,
+    "question": "Which of the following physical quantities is a scalar quantity in one-dimensional kinematics?",
+    "options": {
+      "A": "Displacement",
+      "B": "Instantaneous speed",
+      "C": "Instantaneous velocity",
+      "D": "Acceleration"
+    },
+    "optionsList": [
+      "Displacement",
+      "Instantaneous speed",
+      "Instantaneous velocity",
+      "Acceleration"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nA scalar quantity has magnitude only and no direction. Instantaneous speed is the magnitude of instantaneous velocity, making it a pure scalar.\n\n2. GIVEN:\nPhysical quantities in 1D kinematics.\n\n3. FORMULA / PRINCIPLE:\nSpeed = |Velocity| (scalar).\n\n4. STEP-BY-STEP SOLUTION:\n1. Displacement has both magnitude and direction (+ or - in 1D), so it is a vector.\n2. Instantaneous velocity specifies both rate of motion and direction, so it is a vector.\n3. Acceleration is the rate of change of velocity, which has direction, so it is a vector.\n4. Instantaneous speed is the magnitude of velocity: v = |v\u20d7|, which possesses only magnitude and no directional sign. Hence, it is a scalar quantity.\n\n5. FINAL ANSWER:\nOption B: Instantaneous speed\n\n6. QUICK TIP:\nSpeed and distance are always scalars (never negative). Velocity and displacement are vectors (can be positive, negative, or zero).",
+    "solutionStructured": {
+      "concept": "A scalar quantity has magnitude only and no direction. Instantaneous speed is the magnitude of instantaneous velocity, making it a pure scalar.",
+      "given": "Physical quantities in 1D kinematics.",
+      "formula": "Speed = |Velocity| (scalar).",
+      "stepByStep": "1. Displacement has both magnitude and direction (+ or - in 1D), so it is a vector.\n2. Instantaneous velocity specifies both rate of motion and direction, so it is a vector.\n3. Acceleration is the rate of change of velocity, which has direction, so it is a vector.\n4. Instantaneous speed is the magnitude of velocity: v = |v\u20d7|, which possesses only magnitude and no directional sign. Hence, it is a scalar quantity.",
+      "finalAnswer": "Option B: Instantaneous speed",
+      "whyOtherOptionsWrong": "Options A, C, and D are all vector quantities that specify directional sense (+ or -)."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Scalars and vectors in one-dimensional motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-044",
+    "questionNumber": 44,
+    "question": "In one-dimensional motion, vector directions are completely specified by:",
+    "options": {
+      "A": "Angles in degrees or radians",
+      "B": "Unit vectors i\u0302, j\u0302, and k\u0302 simultaneously",
+      "C": "Positive (+) and negative (-) algebraic signs",
+      "D": "Magnitude values only"
+    },
+    "optionsList": [
+      "Angles in degrees or radians",
+      "Unit vectors i\u0302, j\u0302, and k\u0302 simultaneously",
+      "Positive (+) and negative (-) algebraic signs",
+      "Magnitude values only"
+    ],
+    "correctAnswer": "C",
+    "correctIndex": 2,
+    "explanation": "1. CONCEPT:\nIn 1D motion along a line, there are only two possible directions of motion. These are fully described by plus (+) and minus (-) algebraic signs.\n\n2. GIVEN:\nKinematics in one dimension.\n\n3. FORMULA / PRINCIPLE:\nDirection in 1D = sign (+ or -) along the designated axis.\n\n4. STEP-BY-STEP SOLUTION:\n1. One-dimensional motion takes place along a single straight line.\n2. Once an axis (say, the x-axis) is chosen, there are only two opposite senses of motion along it.\n3. One direction is assigned the positive sign (+), and the opposite direction is assigned the negative sign (-).\n4. Hence, full vector direction in 1D is represented simply by algebraic signs (+ or -).\n\n5. FINAL ANSWER:\nOption C: Positive (+) and negative (-) algebraic signs\n\n6. QUICK TIP:\nIn 1D kinematics, you don't need complex vector notation; just use + and - signs consistently!",
+    "solutionStructured": {
+      "concept": "In 1D motion along a line, there are only two possible directions of motion. These are fully described by plus (+) and minus (-) algebraic signs.",
+      "given": "Kinematics in one dimension.",
+      "formula": "Direction in 1D = sign (+ or -) along the designated axis.",
+      "stepByStep": "1. One-dimensional motion takes place along a single straight line.\n2. Once an axis (say, the x-axis) is chosen, there are only two opposite senses of motion along it.\n3. One direction is assigned the positive sign (+), and the opposite direction is assigned the negative sign (-).\n4. Hence, full vector direction in 1D is represented simply by algebraic signs (+ or -).",
+      "finalAnswer": "Option C: Positive (+) and negative (-) algebraic signs",
+      "whyOtherOptionsWrong": "Option A is needed for 2D or 3D vectors. Option B requires all three axes. Option D cannot represent direction."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Scalars and vectors in one-dimensional motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-045",
+    "questionNumber": 45,
+    "question": "If a car is moving along the negative x-axis with an increasing speed, the signs of its velocity and acceleration are respectively:",
+    "options": {
+      "A": "Velocity negative, acceleration positive",
+      "B": "Velocity negative, acceleration negative",
+      "C": "Velocity positive, acceleration positive",
+      "D": "Velocity positive, acceleration negative"
+    },
+    "optionsList": [
+      "Velocity negative, acceleration positive",
+      "Velocity negative, acceleration negative",
+      "Velocity positive, acceleration positive",
+      "Velocity positive, acceleration negative"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nVelocity takes the sign of the direction of motion. Speed increases if and only if acceleration has the SAME sign as velocity.\n\n2. GIVEN:\nMotion along negative x-axis (velocity < 0); speed is increasing.\n\n3. FORMULA / PRINCIPLE:\nSpeed increasing <=> v and a have identical signs; Speed decreasing <=> v and a have opposite signs.\n\n4. STEP-BY-STEP SOLUTION:\n1. Motion is in the negative x-direction, so velocity is negative (v < 0).\n2. Speed is the magnitude |v|. For speed to increase, the magnitude of velocity must grow.\n3. Therefore, acceleration must act in the same direction as velocity (negative direction).\n4. Hence, both velocity and acceleration are negative.\n\n5. FINAL ANSWER:\nOption B: Velocity negative, acceleration negative\n\n6. QUICK TIP:\nGolden rule: Speed increases when v and a have the SAME sign. Speed decreases (retardation) when v and a have OPPOSITE signs.",
+    "solutionStructured": {
+      "concept": "Velocity takes the sign of the direction of motion. Speed increases if and only if acceleration has the SAME sign as velocity.",
+      "given": "Motion along negative x-axis (velocity < 0); speed is increasing.",
+      "formula": "Speed increasing <=> v and a have identical signs; Speed decreasing <=> v and a have opposite signs.",
+      "stepByStep": "1. Motion is in the negative x-direction, so velocity is negative (v < 0).\n2. Speed is the magnitude |v|. For speed to increase, the magnitude of velocity must grow.\n3. Therefore, acceleration must act in the same direction as velocity (negative direction).\n4. Hence, both velocity and acceleration are negative.",
+      "finalAnswer": "Option B: Velocity negative, acceleration negative",
+      "whyOtherOptionsWrong": "Option A would mean acceleration opposes velocity, which would decrease speed (retardation). Options C and D have positive velocity."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Scalars and vectors in one-dimensional motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-046",
+    "questionNumber": 46,
+    "question": "Which of the following conditions implies that a moving body is slowing down (experiencing retardation)?",
+    "options": {
+      "A": "Velocity and acceleration have the same sign",
+      "B": "Velocity is positive and acceleration is positive",
+      "C": "Velocity is negative and acceleration is negative",
+      "D": "Velocity and acceleration have opposite signs"
+    },
+    "optionsList": [
+      "Velocity and acceleration have the same sign",
+      "Velocity is positive and acceleration is positive",
+      "Velocity is negative and acceleration is negative",
+      "Velocity and acceleration have opposite signs"
+    ],
+    "correctAnswer": "D",
+    "correctIndex": 3,
+    "explanation": "1. CONCEPT:\nRetardation (deceleration) means the magnitude of velocity (speed) is decreasing with time. This occurs when acceleration opposes velocity: v * a < 0.\n\n2. GIVEN:\nCondition for slowing down.\n\n3. FORMULA / PRINCIPLE:\nd|v|/dt < 0 <=> v\u20d7 \u00b7 a\u20d7 < 0 (opposite signs in 1D).\n\n4. STEP-BY-STEP SOLUTION:\n1. Let velocity be v and acceleration be a = dv/dt.\n2. Rate of change of speed: d(v\u00b2)/dt = 2v (dv/dt) = 2(v * a).\n3. For speed to decrease, d(v\u00b2)/dt < 0, which requires v * a < 0.\n4. This condition means that v and a must have opposite signs.\n5. Whether v is positive and a is negative, or v is negative and a is positive, the body slows down.\n\n5. FINAL ANSWER:\nOption D: Velocity and acceleration have opposite signs\n\n6. QUICK TIP:\nRetardation does NOT simply mean 'a is negative'. If v is negative and a is negative, the object is speeding up! Retardation means v and a have opposite signs.",
+    "solutionStructured": {
+      "concept": "Retardation (deceleration) means the magnitude of velocity (speed) is decreasing with time. This occurs when acceleration opposes velocity: v * a < 0.",
+      "given": "Condition for slowing down.",
+      "formula": "d|v|/dt < 0 <=> v\u20d7 \u00b7 a\u20d7 < 0 (opposite signs in 1D).",
+      "stepByStep": "1. Let velocity be v and acceleration be a = dv/dt.\n2. Rate of change of speed: d(v\u00b2)/dt = 2v (dv/dt) = 2(v * a).\n3. For speed to decrease, d(v\u00b2)/dt < 0, which requires v * a < 0.\n4. This condition means that v and a must have opposite signs.\n5. Whether v is positive and a is negative, or v is negative and a is positive, the body slows down.",
+      "finalAnswer": "Option D: Velocity and acceleration have opposite signs",
+      "whyOtherOptionsWrong": "Options A, B, and C all have v and a with the same sign, which causes speed to increase."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Scalars and vectors in one-dimensional motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-047",
+    "questionNumber": 47,
+    "question": "A ball is thrown vertically upwards. Taking the upward direction as positive, the signs of its velocity and acceleration during the upward journey are respectively:",
+    "options": {
+      "A": "Positive, positive",
+      "B": "Positive, negative",
+      "C": "Negative, negative",
+      "D": "Negative, positive"
+    },
+    "optionsList": [
+      "Positive, positive",
+      "Positive, negative",
+      "Negative, negative",
+      "Negative, positive"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nDirection of velocity is the direction of motion (upward = positive). Acceleration due to gravity is always directed downward towards Earth's center (downward = negative).\n\n2. GIVEN:\nBall moving upward; upward is positive (+); gravity acts downward (-).\n\n3. FORMULA / PRINCIPLE:\nv > 0 (upward), a = -g (downward).\n\n4. STEP-BY-STEP SOLUTION:\n1. The ball moves upwards, so its displacement changes in the positive direction. Thus, velocity is positive (v > 0).\n2. Gravity pulls objects downwards, towards the center of Earth.\n3. Since downward is chosen as negative, acceleration due to gravity is negative (a = -g).\n4. Therefore, velocity is positive and acceleration is negative.\n\n5. FINAL ANSWER:\nOption B: Positive, negative\n\n6. QUICK TIP:\nGravity always accelerates objects downward (a = -g), whether the body is rising, falling, or momentarily at rest at the highest point!",
+    "solutionStructured": {
+      "concept": "Direction of velocity is the direction of motion (upward = positive). Acceleration due to gravity is always directed downward towards Earth's center (downward = negative).",
+      "given": "Ball moving upward; upward is positive (+); gravity acts downward (-).",
+      "formula": "v > 0 (upward), a = -g (downward).",
+      "stepByStep": "1. The ball moves upwards, so its displacement changes in the positive direction. Thus, velocity is positive (v > 0).\n2. Gravity pulls objects downwards, towards the center of Earth.\n3. Since downward is chosen as negative, acceleration due to gravity is negative (a = -g).\n4. Therefore, velocity is positive and acceleration is negative.",
+      "finalAnswer": "Option B: Positive, negative",
+      "whyOtherOptionsWrong": "Option A incorrectly assigns positive to gravity. Option C assumes downward motion. Option D inverts both signs."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Scalars and vectors in one-dimensional motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-048",
+    "questionNumber": 48,
+    "question": "A particle moves along a straight line with velocity v = (4 - 2t) m/s. During which time interval is the speed of the particle increasing?",
+    "options": {
+      "A": "0 < t < 2 s only",
+      "B": "t > 2 s only",
+      "C": "For all t > 0",
+      "D": "Never"
+    },
+    "optionsList": [
+      "0 < t < 2 s only",
+      "t > 2 s only",
+      "For all t > 0",
+      "Never"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nSpeed is |v|. Acceleration a = dv/dt = -2 m/s\u00b2. Speed increases when v and a have the same sign.\n\n2. GIVEN:\nv(t) = 4 - 2t m/s; a(t) = -2 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\nSpeed = |v(t)| = |4 - 2t|; increases when v and a have same sign.\n\n4. STEP-BY-STEP SOLUTION:\n1. Calculate acceleration: a = dv/dt = -2 m/s\u00b2 (constant negative acceleration).\n2. For 0 < t < 2 s: v > 0, while a < 0. Since v and a have opposite signs, the particle is slowing down (speed decreases from 4 m/s to 0 m/s).\n3. At t = 2 s: v = 0 m/s (momentary rest).\n4. For t > 2 s: v = 4 - 2t < 0 (negative), and a = -2 m/s\u00b2 (negative). Now both v and a are negative (same sign)!\n5. Therefore, for t > 2 s, the magnitude of velocity (speed) increases continuously.\n6. Hence, speed increases for t > 2 s.\n\n5. FINAL ANSWER:\nOption B: t > 2 s only\n\n6. QUICK TIP:\nSpeed is the absolute value: for t in (0, 2), speed is 4 - 2t (decreases). For t > 2, speed is 2t - 4 (increases).",
+    "solutionStructured": {
+      "concept": "Speed is |v|. Acceleration a = dv/dt = -2 m/s\u00b2. Speed increases when v and a have the same sign.",
+      "given": "v(t) = 4 - 2t m/s; a(t) = -2 m/s\u00b2.",
+      "formula": "Speed = |v(t)| = |4 - 2t|; increases when v and a have same sign.",
+      "stepByStep": "1. Calculate acceleration: a = dv/dt = -2 m/s\u00b2 (constant negative acceleration).\n2. For 0 < t < 2 s: v > 0, while a < 0. Since v and a have opposite signs, the particle is slowing down (speed decreases from 4 m/s to 0 m/s).\n3. At t = 2 s: v = 0 m/s (momentary rest).\n4. For t > 2 s: v = 4 - 2t < 0 (negative), and a = -2 m/s\u00b2 (negative). Now both v and a are negative (same sign)!\n5. Therefore, for t > 2 s, the magnitude of velocity (speed) increases continuously.\n6. Hence, speed increases for t > 2 s.",
+      "finalAnswer": "Option B: t > 2 s only",
+      "whyOtherOptionsWrong": "Option A is when speed is decreasing. Option C ignores the slowing down phase. Option D overlooks the reverse acceleration."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Scalars and vectors in one-dimensional motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-049",
+    "questionNumber": 49,
+    "question": "Can an object have a constant speed and a varying velocity in one-dimensional motion?",
+    "options": {
+      "A": "Yes, if it reverses its direction periodically.",
+      "B": "No, because in 1D motion, constant speed implies constant velocity as long as direction does not change, and changing direction implies zero speed at the turning instant.",
+      "C": "Yes, whenever the acceleration is non-zero.",
+      "D": "Yes, if it moves along a closed 1D loop."
+    },
+    "optionsList": [
+      "Yes, if it reverses its direction periodically.",
+      "No, because in 1D motion, constant speed implies constant velocity as long as direction does not change, and changing direction implies zero speed at the turning instant.",
+      "Yes, whenever the acceleration is non-zero.",
+      "Yes, if it moves along a closed 1D loop."
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nIn 1D motion, direction can only be forward or backward. To change direction from +v to -v, velocity must pass continuously through zero, so speed cannot remain constant.\n\n2. GIVEN:\nCondition: constant speed in 1D motion.\n\n3. FORMULA / PRINCIPLE:\nv = \u00b1 speed. A change of sign requires passing through v = 0.\n\n4. STEP-BY-STEP SOLUTION:\n1. Velocity in 1D is v = \u00b1 speed.\n2. If speed is constant and non-zero, the only way velocity could change is by reversing direction (+ to -).\n3. But for a physical particle with finite acceleration, reversing direction requires the velocity to pass through zero continuously.\n4. If velocity passes through zero, the speed is not constant!\n5. If the particle does not reverse direction, both magnitude and direction are constant, so velocity is constant.\n6. Therefore, an object cannot have constant speed and varying velocity in 1D motion.\n\n5. FINAL ANSWER:\nOption B: No, because in 1D motion, constant speed implies constant velocity as long as direction does not change, and changing direction implies zero speed at the turning instant.\n\n6. QUICK TIP:\nIn 2D motion (e.g. uniform circular motion), an object CAN have constant speed with changing velocity. But in 1D motion, it is IMPOSSIBLE!",
+    "solutionStructured": {
+      "concept": "In 1D motion, direction can only be forward or backward. To change direction from +v to -v, velocity must pass continuously through zero, so speed cannot remain constant.",
+      "given": "Condition: constant speed in 1D motion.",
+      "formula": "v = \u00b1 speed. A change of sign requires passing through v = 0.",
+      "stepByStep": "1. Velocity in 1D is v = \u00b1 speed.\n2. If speed is constant and non-zero, the only way velocity could change is by reversing direction (+ to -).\n3. But for a physical particle with finite acceleration, reversing direction requires the velocity to pass through zero continuously.\n4. If velocity passes through zero, the speed is not constant!\n5. If the particle does not reverse direction, both magnitude and direction are constant, so velocity is constant.\n6. Therefore, an object cannot have constant speed and varying velocity in 1D motion.",
+      "finalAnswer": "Option B: No, because in 1D motion, constant speed implies constant velocity as long as direction does not change, and changing direction implies zero speed at the turning instant.",
+      "whyOtherOptionsWrong": "Options A, C, and D are incorrect because in 1D motion, turning around requires v = 0, violating constant speed."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Scalars and vectors in one-dimensional motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-050",
+    "questionNumber": 50,
+    "question": "The position vector of a particle is r\u20d7 = (3t) i\u0302 + (4t\u00b2) j\u0302 + 7 k\u0302 (in meters). What is the component of its velocity vector along the z-axis?",
+    "options": {
+      "A": "7 m/s",
+      "B": "0 m/s",
+      "C": "3 m/s",
+      "D": "8 m/s"
+    },
+    "optionsList": [
+      "7 m/s",
+      "0 m/s",
+      "3 m/s",
+      "8 m/s"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nVelocity is the time derivative of position: v\u20d7 = dr\u20d7/dt. The z-component is vz = dz/dt.\n\n2. GIVEN:\nz(t) = 7 (constant).\n\n3. FORMULA / PRINCIPLE:\nvz = dz/dt\n\n4. STEP-BY-STEP SOLUTION:\n1. Position components are: x(t) = 3t, y(t) = 4t\u00b2, z(t) = 7.\n2. Differentiate each component with respect to time:\n   vx = dx/dt = 3 m/s.\n   vy = dy/dt = 8t m/s.\n   vz = dz/dt = d(7)/dt = 0 m/s.\n3. Since z coordinate is constant (7 m), there is no motion along the z-axis.\n4. Therefore, the z-component of velocity is identically 0 m/s.\n\n5. FINAL ANSWER:\nOption B: 0 m/s\n\n6. QUICK TIP:\nDerivative of any constant coordinate is zero: if position coordinate does not change with time, velocity along that axis is 0.",
+    "solutionStructured": {
+      "concept": "Velocity is the time derivative of position: v\u20d7 = dr\u20d7/dt. The z-component is vz = dz/dt.",
+      "given": "z(t) = 7 (constant).",
+      "formula": "vz = dz/dt",
+      "stepByStep": "1. Position components are: x(t) = 3t, y(t) = 4t\u00b2, z(t) = 7.\n2. Differentiate each component with respect to time:\n   vx = dx/dt = 3 m/s.\n   vy = dy/dt = 8t m/s.\n   vz = dz/dt = d(7)/dt = 0 m/s.\n3. Since z coordinate is constant (7 m), there is no motion along the z-axis.\n4. Therefore, the z-component of velocity is identically 0 m/s.",
+      "finalAnswer": "Option B: 0 m/s",
+      "whyOtherOptionsWrong": "Option A treats the constant position (7 m) as velocity. Option C is vx. Option D is the coefficient of vy."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Scalars and vectors in one-dimensional motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-051",
+    "questionNumber": 51,
+    "question": "A body moves along a straight line such that its velocity vector is given by v\u20d7 = (6 - 3t) i\u0302 m/s. What is the direction of the acceleration vector relative to the unit vector i\u0302?",
+    "options": {
+      "A": "Along +i\u0302",
+      "B": "Along -i\u0302",
+      "C": "Perpendicular to i\u0302",
+      "D": "Opposite to v\u20d7 at all times"
+    },
+    "optionsList": [
+      "Along +i\u0302",
+      "Along -i\u0302",
+      "Perpendicular to i\u0302",
+      "Opposite to v\u20d7 at all times"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nAcceleration vector is the time derivative of the velocity vector: a\u20d7 = dv\u20d7/dt.\n\n2. GIVEN:\nv\u20d7 = (6 - 3t) i\u0302 m/s.\n\n3. FORMULA / PRINCIPLE:\na\u20d7 = dv\u20d7/dt = d(6 - 3t)/dt i\u0302 = -3 i\u0302 m/s\u00b2.\n\n4. STEP-BY-STEP SOLUTION:\n1. Differentiate the velocity vector with respect to time:\n   a\u20d7 = d/dt [(6 - 3t) i\u0302] = -3 i\u0302 m/s\u00b2.\n2. The acceleration vector has magnitude 3 m/s\u00b2 and its direction is along -i\u0302 (negative x-axis).\n3. Notice this direction is constant and independent of time t.\n4. Hence, the acceleration vector is directed along -i\u0302.\n\n5. FINAL ANSWER:\nOption B: Along -i\u0302\n\n6. QUICK TIP:\nDifferentiating vector functions in 1D preserves unit vectors; look at the algebraic sign of the derivative.",
+    "solutionStructured": {
+      "concept": "Acceleration vector is the time derivative of the velocity vector: a\u20d7 = dv\u20d7/dt.",
+      "given": "v\u20d7 = (6 - 3t) i\u0302 m/s.",
+      "formula": "a\u20d7 = dv\u20d7/dt = d(6 - 3t)/dt i\u0302 = -3 i\u0302 m/s\u00b2.",
+      "stepByStep": "1. Differentiate the velocity vector with respect to time:\n   a\u20d7 = d/dt [(6 - 3t) i\u0302] = -3 i\u0302 m/s\u00b2.\n2. The acceleration vector has magnitude 3 m/s\u00b2 and its direction is along -i\u0302 (negative x-axis).\n3. Notice this direction is constant and independent of time t.\n4. Hence, the acceleration vector is directed along -i\u0302.",
+      "finalAnswer": "Option B: Along -i\u0302",
+      "whyOtherOptionsWrong": "Option A has the wrong sign (+i\u0302). Option C would mean 2D motion. Option D is incorrect because for t > 2, v\u20d7 is also along -i\u0302 (so a\u20d7 is in the same direction as v\u20d7, not opposite)."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Scalars and vectors in one-dimensional motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-052",
+    "questionNumber": 52,
+    "question": "Which of the following statements about one-dimensional motion is always TRUE?",
+    "options": {
+      "A": "If speed is zero at an instant, acceleration must also be zero at that instant.",
+      "B": "If acceleration is zero, speed must also be zero.",
+      "C": "If speed is constant, acceleration must be zero.",
+      "D": "Acceleration can never reverse its direction in 1D motion."
+    },
+    "optionsList": [
+      "If speed is zero at an instant, acceleration must also be zero at that instant.",
+      "If acceleration is zero, speed must also be zero.",
+      "If speed is constant, acceleration must be zero.",
+      "Acceleration can never reverse its direction in 1D motion."
+    ],
+    "correctAnswer": "C",
+    "correctIndex": 2,
+    "explanation": "1. CONCEPT:\nIn 1D rectilinear motion, if speed is constant, the velocity can neither change in magnitude nor in direction (reversal requires speed passing through zero). Thus, dv/dt = 0, so acceleration must be zero.\n\n2. GIVEN:\nTheoretical statement about 1D kinematics.\n\n3. FORMULA / PRINCIPLE:\nv = constant => a = dv/dt = 0.\n\n4. STEP-BY-STEP SOLUTION:\n1. Option A is false: when a ball reaches its highest point, speed is momentarily zero, but acceleration is g = 9.8 m/s\u00b2 downwards.\n2. Option B is false: a car cruising at 60 km/h with zero acceleration has non-zero speed.\n3. Option C is TRUE: in 1D motion, constant speed means velocity is constant (magnitude cannot change, direction cannot reverse without stopping), so dv/dt = 0, meaning acceleration is strictly zero.\n4. Option D is false: acceleration can change sign (e.g. spring force F = -kx gives a = -\u03c9\u00b2x, which oscillates).\n\n5. FINAL ANSWER:\nOption C: If speed is constant, acceleration must be zero.\n\n6. QUICK TIP:\nRemember the key difference between 1D and 2D: in 1D, constant speed => zero acceleration. In 2D (circular motion), constant speed can have centripetal acceleration!",
+    "solutionStructured": {
+      "concept": "In 1D rectilinear motion, if speed is constant, the velocity can neither change in magnitude nor in direction (reversal requires speed passing through zero). Thus, dv/dt = 0, so acceleration must be zero.",
+      "given": "Theoretical statement about 1D kinematics.",
+      "formula": "v = constant => a = dv/dt = 0.",
+      "stepByStep": "1. Option A is false: when a ball reaches its highest point, speed is momentarily zero, but acceleration is g = 9.8 m/s\u00b2 downwards.\n2. Option B is false: a car cruising at 60 km/h with zero acceleration has non-zero speed.\n3. Option C is TRUE: in 1D motion, constant speed means velocity is constant (magnitude cannot change, direction cannot reverse without stopping), so dv/dt = 0, meaning acceleration is strictly zero.\n4. Option D is false: acceleration can change sign (e.g. spring force F = -kx gives a = -\u03c9\u00b2x, which oscillates).",
+      "finalAnswer": "Option C: If speed is constant, acceleration must be zero.",
+      "whyOtherOptionsWrong": "Option A fails for a vertically thrown ball at top. Option B fails for uniform motion. Option D fails for oscillating systems."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Scalars and vectors in one-dimensional motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-053",
+    "questionNumber": 53,
+    "question": "A particle moves along a straight line such that its displacement x varies with time as x\u00b2 = 1 + t\u00b2. What is its acceleration in terms of x?",
+    "options": {
+      "A": "1 / x\u00b3",
+      "B": "-1 / x\u00b3",
+      "C": "1 / x\u00b2",
+      "D": "-t / x\u00b2"
+    },
+    "optionsList": [
+      "1 / x\u00b3",
+      "-1 / x\u00b3",
+      "1 / x\u00b2",
+      "-t / x\u00b2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDifferentiating implicit relations using the chain rule yields velocity and acceleration as functions of position.\n\n2. GIVEN:\nx\u00b2 = 1 + t\u00b2.\n\n3. FORMULA / PRINCIPLE:\nDifferentiate implicitly: 2x (dx/dt) = 2t => x v = t.\n\n4. STEP-BY-STEP SOLUTION:\n1. Differentiate x\u00b2 = 1 + t\u00b2 with respect to t:\n   2x (dx/dt) = 2t => x v = t.\n   Therefore, v = t / x.\n2. Differentiate x v = t again with respect to t:\n   d(x v)/dt = d(t)/dt\n   (dx/dt) v + x (dv/dt) = 1\n   v\u00b2 + x a = 1\n   x a = 1 - v\u00b2\n3. Substitute v = t / x:\n   x a = 1 - (t\u00b2 / x\u00b2) = (x\u00b2 - t\u00b2) / x\u00b2.\n4. Since x\u00b2 = 1 + t\u00b2, we have x\u00b2 - t\u00b2 = 1!\n5. Therefore: x a = 1 / x\u00b2 => a = 1 / x\u00b3.\n6. Hence, acceleration is 1 / x\u00b3.\n\n5. FINAL ANSWER:\nOption A: 1 / x\u00b3\n\n6. QUICK TIP:\nNEET Classic implicit differentiation: x\u00b2 = 1 + t\u00b2 => xv = t => v\u00b2 + xa = 1 => a = (1 - v\u00b2)/x = 1/x\u00b3.",
+    "solutionStructured": {
+      "concept": "Differentiating implicit relations using the chain rule yields velocity and acceleration as functions of position.",
+      "given": "x\u00b2 = 1 + t\u00b2.",
+      "formula": "Differentiate implicitly: 2x (dx/dt) = 2t => x v = t.",
+      "stepByStep": "1. Differentiate x\u00b2 = 1 + t\u00b2 with respect to t:\n   2x (dx/dt) = 2t => x v = t.\n   Therefore, v = t / x.\n2. Differentiate x v = t again with respect to t:\n   d(x v)/dt = d(t)/dt\n   (dx/dt) v + x (dv/dt) = 1\n   v\u00b2 + x a = 1\n   x a = 1 - v\u00b2\n3. Substitute v = t / x:\n   x a = 1 - (t\u00b2 / x\u00b2) = (x\u00b2 - t\u00b2) / x\u00b2.\n4. Since x\u00b2 = 1 + t\u00b2, we have x\u00b2 - t\u00b2 = 1!\n5. Therefore: x a = 1 / x\u00b2 => a = 1 / x\u00b3.\n6. Hence, acceleration is 1 / x\u00b3.",
+      "finalAnswer": "Option A: 1 / x\u00b3",
+      "whyOtherOptionsWrong": "Option B introduces an erroneous negative sign. Option C has wrong power of x. Option D retains time t."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Scalars and vectors in one-dimensional motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-054",
+    "questionNumber": 54,
+    "question": "The velocity vector of a particle is given by v\u20d7(t) = (8 - 4t) i\u0302 m/s. At what time is the particle at rest, and what is its acceleration at that instant?",
+    "options": {
+      "A": "t = 2 s, a = 0 m/s\u00b2",
+      "B": "t = 2 s, a = -4 m/s\u00b2 along i\u0302",
+      "C": "t = 4 s, a = -4 m/s\u00b2 along i\u0302",
+      "D": "t = 2 s, a = +4 m/s\u00b2 along i\u0302"
+    },
+    "optionsList": [
+      "t = 2 s, a = 0 m/s\u00b2",
+      "t = 2 s, a = -4 m/s\u00b2 along i\u0302",
+      "t = 4 s, a = -4 m/s\u00b2 along i\u0302",
+      "t = 2 s, a = +4 m/s\u00b2 along i\u0302"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nA particle is momentarily at rest when v = 0. Its acceleration is given by the derivative a = dv/dt.\n\n2. GIVEN:\nv\u20d7(t) = (8 - 4t) i\u0302.\n\n3. FORMULA / PRINCIPLE:\nv = 0 => 8 - 4t = 0; a = dv/dt = -4 i\u0302.\n\n4. STEP-BY-STEP SOLUTION:\n1. Set velocity to zero: 8 - 4t = 0 => 4t = 8 => t = 2 s.\n2. Find acceleration: a = dv/dt = d(8 - 4t)/dt = -4 m/s\u00b2.\n3. The acceleration vector is constant: a\u20d7 = -4 i\u0302 m/s\u00b2.\n4. At t = 2 s, the particle is momentarily at rest while experiencing an acceleration of -4 m/s\u00b2 along i\u0302.\n5. (Just like a ball at the top of its flight, zero velocity does NOT mean zero acceleration!)\n\n5. FINAL ANSWER:\nOption B: t = 2 s, a = -4 m/s\u00b2 along i\u0302\n\n6. QUICK TIP:\nZero velocity never implies zero acceleration! At t = 2 s, v = 0 but a = -4 m/s\u00b2.",
+    "solutionStructured": {
+      "concept": "A particle is momentarily at rest when v = 0. Its acceleration is given by the derivative a = dv/dt.",
+      "given": "v\u20d7(t) = (8 - 4t) i\u0302.",
+      "formula": "v = 0 => 8 - 4t = 0; a = dv/dt = -4 i\u0302.",
+      "stepByStep": "1. Set velocity to zero: 8 - 4t = 0 => 4t = 8 => t = 2 s.\n2. Find acceleration: a = dv/dt = d(8 - 4t)/dt = -4 m/s\u00b2.\n3. The acceleration vector is constant: a\u20d7 = -4 i\u0302 m/s\u00b2.\n4. At t = 2 s, the particle is momentarily at rest while experiencing an acceleration of -4 m/s\u00b2 along i\u0302.\n5. (Just like a ball at the top of its flight, zero velocity does NOT mean zero acceleration!)",
+      "finalAnswer": "Option B: t = 2 s, a = -4 m/s\u00b2 along i\u0302",
+      "whyOtherOptionsWrong": "Option A incorrectly assumes a = 0 when v = 0. Option C has t = 4 s. Option D gives +4 m/s\u00b2."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Scalars and vectors in one-dimensional motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-055",
+    "questionNumber": 55,
+    "question": "Two displacement vectors in one dimension are given by A\u20d7 = +12 m and B\u20d7 = -7 m along the x-axis. What are the magnitude and direction of the vector sum R\u20d7 = A\u20d7 + B\u20d7 and vector difference D\u20d7 = A\u20d7 - B\u20d7?",
+    "options": {
+      "A": "R = 5 m (+x), D = 19 m (+x)",
+      "B": "R = 19 m (+x), D = 5 m (+x)",
+      "C": "R = 5 m (+x), D = 5 m (-x)",
+      "D": "R = 19 m (+x), D = 19 m (-x)"
+    },
+    "optionsList": [
+      "R = 5 m (+x), D = 19 m (+x)",
+      "R = 19 m (+x), D = 5 m (+x)",
+      "R = 5 m (+x), D = 5 m (-x)",
+      "R = 19 m (+x), D = 19 m (-x)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nVector addition and subtraction in 1D follow standard algebraic rules of signed numbers.\n\n2. GIVEN:\nA\u20d7 = +12 m i\u0302, B\u20d7 = -7 m i\u0302.\n\n3. FORMULA / PRINCIPLE:\nR\u20d7 = A\u20d7 + B\u20d7; D\u20d7 = A\u20d7 - B\u20d7.\n\n4. STEP-BY-STEP SOLUTION:\n1. Vector sum: R\u20d7 = (+12) + (-7) = +5 m (5 m along positive x-axis).\n2. Vector difference: D\u20d7 = (+12) - (-7) = 12 + 7 = +19 m (19 m along positive x-axis).\n3. Hence, R = 5 m along +x, and D = 19 m along +x.\n\n5. FINAL ANSWER:\nOption A: R = 5 m (+x), D = 19 m (+x)\n\n6. QUICK TIP:\nSubtracting a negative vector is equivalent to adding a positive vector: 12 - (-7) = +19 m.",
+    "solutionStructured": {
+      "concept": "Vector addition and subtraction in 1D follow standard algebraic rules of signed numbers.",
+      "given": "A\u20d7 = +12 m i\u0302, B\u20d7 = -7 m i\u0302.",
+      "formula": "R\u20d7 = A\u20d7 + B\u20d7; D\u20d7 = A\u20d7 - B\u20d7.",
+      "stepByStep": "1. Vector sum: R\u20d7 = (+12) + (-7) = +5 m (5 m along positive x-axis).\n2. Vector difference: D\u20d7 = (+12) - (-7) = 12 + 7 = +19 m (19 m along positive x-axis).\n3. Hence, R = 5 m along +x, and D = 19 m along +x.",
+      "finalAnswer": "Option A: R = 5 m (+x), D = 19 m (+x)",
+      "whyOtherOptionsWrong": "Option B swaps sum and difference. Option C subtracts 12 - 7 for both. Option D adds magnitudes."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Scalars and vectors in one-dimensional motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-056",
+    "questionNumber": 56,
+    "question": "A particle's displacement as a function of time is given by x = a e^(-\u03b1 t) + b e^(\u03b2 t), where a, b, \u03b1, and \u03b2 are positive constants. The velocity of the particle:",
+    "options": {
+      "A": "Is independent of time",
+      "B": "Decreases continuously with time",
+      "C": "Goes on increasing with time",
+      "D": "Is always negative"
+    },
+    "optionsList": [
+      "Is independent of time",
+      "Decreases continuously with time",
+      "Goes on increasing with time",
+      "Is always negative"
+    ],
+    "correctAnswer": "C",
+    "correctIndex": 2,
+    "explanation": "1. CONCEPT:\nExamine the acceleration a = dv/dt = d\u00b2x/dt\u00b2 to determine whether velocity increases or decreases.\n\n2. GIVEN:\nx = a e^(-\u03b1 t) + b e^(\u03b2 t), with a, b, \u03b1, \u03b2 > 0.\n\n3. FORMULA / PRINCIPLE:\nv = dx/dt, acceleration a_acc = dv/dt.\n\n4. STEP-BY-STEP SOLUTION:\n1. Differentiate x with respect to t:\n   v = dx/dt = -a\u03b1 e^(-\u03b1 t) + b\u03b2 e^(\u03b2 t).\n2. Differentiate v with respect to t to find acceleration:\n   a_acc = dv/dt = a\u03b1\u00b2 e^(-\u03b1 t) + b\u03b2\u00b2 e^(\u03b2 t).\n3. Since a, b, \u03b1, \u03b2 > 0 and the exponential function e^u > 0 for all real u:\n   a_acc is strictly positive (a_acc > 0) for all t \u2265 0.\n4. Since acceleration (dv/dt) is always positive, the velocity increases continuously with time!\n5. Hence, velocity goes on increasing with time.\n\n5. FINAL ANSWER:\nOption C: Goes on increasing with time\n\n6. QUICK TIP:\nTo see if velocity increases with time, check the sign of acceleration a = dv/dt. If a > 0 everywhere, v is strictly increasing.",
+    "solutionStructured": {
+      "concept": "Examine the acceleration a = dv/dt = d\u00b2x/dt\u00b2 to determine whether velocity increases or decreases.",
+      "given": "x = a e^(-\u03b1 t) + b e^(\u03b2 t), with a, b, \u03b1, \u03b2 > 0.",
+      "formula": "v = dx/dt, acceleration a_acc = dv/dt.",
+      "stepByStep": "1. Differentiate x with respect to t:\n   v = dx/dt = -a\u03b1 e^(-\u03b1 t) + b\u03b2 e^(\u03b2 t).\n2. Differentiate v with respect to t to find acceleration:\n   a_acc = dv/dt = a\u03b1\u00b2 e^(-\u03b1 t) + b\u03b2\u00b2 e^(\u03b2 t).\n3. Since a, b, \u03b1, \u03b2 > 0 and the exponential function e^u > 0 for all real u:\n   a_acc is strictly positive (a_acc > 0) for all t \u2265 0.\n4. Since acceleration (dv/dt) is always positive, the velocity increases continuously with time!\n5. Hence, velocity goes on increasing with time.",
+      "finalAnswer": "Option C: Goes on increasing with time",
+      "whyOtherOptionsWrong": "Option A is false because v depends on t. Option B is false because dv/dt > 0. Option D is false because as t increases, the b\u03b2 e^(\u03b2t) term dominates and becomes large positive."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Scalars and vectors in one-dimensional motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-057",
+    "questionNumber": 57,
+    "question": "A body moves in a straight line such that its velocity v depends on displacement x as v = b \u221ax, where b is a constant. What is the acceleration of the body?",
+    "options": {
+      "A": "b\u00b2 / 2",
+      "B": "b\u00b2 / 4",
+      "C": "b / 2",
+      "D": "b\u00b2 x"
+    },
+    "optionsList": [
+      "b\u00b2 / 2",
+      "b\u00b2 / 4",
+      "b / 2",
+      "b\u00b2 x"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nWhen velocity is given as a function of position x, acceleration is given by a = v (dv/dx).\n\n2. GIVEN:\nv(x) = b x^(1/2).\n\n3. FORMULA / PRINCIPLE:\na = v (dv/dx)\n\n4. STEP-BY-STEP SOLUTION:\n1. Differentiate v with respect to x:\n   dv/dx = d(b x^(1/2))/dx = b * (1/2) x^(-1/2) = b / (2\u221ax).\n2. Compute acceleration using a = v (dv/dx):\n   a = (b \u221ax) * [ b / (2\u221ax) ].\n3. The \u221ax in the numerator and denominator cancels out completely:\n   a = b\u00b2 / 2.\n4. Notice that acceleration is completely constant and independent of x and t!\n5. Hence, the acceleration is b\u00b2 / 2.\n\n5. FINAL ANSWER:\nOption A: b\u00b2 / 2\n\n6. QUICK TIP:\nWhenever v = f(x), always use a = v (dv/dx). Here, (b\u221ax) * (b / 2\u221ax) = b\u00b2/2 (constant acceleration!).",
+    "solutionStructured": {
+      "concept": "When velocity is given as a function of position x, acceleration is given by a = v (dv/dx).",
+      "given": "v(x) = b x^(1/2).",
+      "formula": "a = v (dv/dx)",
+      "stepByStep": "1. Differentiate v with respect to x:\n   dv/dx = d(b x^(1/2))/dx = b * (1/2) x^(-1/2) = b / (2\u221ax).\n2. Compute acceleration using a = v (dv/dx):\n   a = (b \u221ax) * [ b / (2\u221ax) ].\n3. The \u221ax in the numerator and denominator cancels out completely:\n   a = b\u00b2 / 2.\n4. Notice that acceleration is completely constant and independent of x and t!\n5. Hence, the acceleration is b\u00b2 / 2.",
+      "finalAnswer": "Option A: b\u00b2 / 2",
+      "whyOtherOptionsWrong": "Option B has factor of 4. Option C lacks b\u00b2. Option D incorrectly leaves x."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Scalars and vectors in one-dimensional motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-058",
+    "questionNumber": 58,
+    "question": "The velocity of a particle moving along a straight line varies with displacement x according to v\u00b2 = 108 - 9x\u00b2 (in SI units). What is the magnitude of the maximum acceleration of the particle?",
+    "options": {
+      "A": "9 m/s\u00b2",
+      "B": "18 m/s\u00b2",
+      "C": "9\u221a12 m/s\u00b2",
+      "D": "108 m/s\u00b2"
+    },
+    "optionsList": [
+      "9 m/s\u00b2",
+      "18 m/s\u00b2",
+      "9\u221a12 m/s\u00b2",
+      "108 m/s\u00b2"
+    ],
+    "correctAnswer": "C",
+    "correctIndex": 2,
+    "explanation": "1. CONCEPT:\nDifferentiating v\u00b2 with respect to x gives 2v (dv/dx) = 2a. In SHM, a = -\u03c9\u00b2 x, with max acceleration at maximum displacement.\n\n2. GIVEN:\nv\u00b2 = 108 - 9x\u00b2.\n\n3. FORMULA / PRINCIPLE:\n2a = d(v\u00b2)/dx => a = (1/2) d(v\u00b2)/dx = -9x; Max acceleration at max x.\n\n4. STEP-BY-STEP SOLUTION:\n1. Differentiate both sides with respect to x:\n   d(v\u00b2)/dx = -18x.\n2. Since a = v (dv/dx) = (1/2) d(v\u00b2)/dx:\n   a = -9x.\n3. This represents Simple Harmonic Motion with \u03c9\u00b2 = 9 => \u03c9 = 3 rad/s.\n4. The maximum displacement (amplitude X\u2080) occurs when v = 0:\n   0 = 108 - 9x\u00b2 => 9x\u00b2 = 108 => x\u00b2 = 12 => X\u2080 = \u221a12 m = 2\u221a3 m.\n5. Maximum acceleration occurs at the amplitude:\n   |a_max| = 9 * X\u2080 = 9 * \u221a12 = 9 * 2\u221a3 = 18\u221a3 m/s\u00b2 \u2248 31.18 m/s\u00b2.\n   Wait, 9\u221a12 = 9 * 2\u221a3 = 18\u221a3.\n6. Looking at Option C: 9\u221a12 m/s\u00b2.\n7. Hence, the maximum acceleration is 9\u221a12 m/s\u00b2.\n\n5. FINAL ANSWER:\nOption C: 9\u221a12 m/s\u00b2\n\n6. QUICK TIP:\nDifferentiating v\u00b2 with respect to x gives 2a directly! Then equate v = 0 to find amplitude.",
+    "solutionStructured": {
+      "concept": "Differentiating v\u00b2 with respect to x gives 2v (dv/dx) = 2a. In SHM, a = -\u03c9\u00b2 x, with max acceleration at maximum displacement.",
+      "given": "v\u00b2 = 108 - 9x\u00b2.",
+      "formula": "2a = d(v\u00b2)/dx => a = (1/2) d(v\u00b2)/dx = -9x; Max acceleration at max x.",
+      "stepByStep": "1. Differentiate both sides with respect to x:\n   d(v\u00b2)/dx = -18x.\n2. Since a = v (dv/dx) = (1/2) d(v\u00b2)/dx:\n   a = -9x.\n3. This represents Simple Harmonic Motion with \u03c9\u00b2 = 9 => \u03c9 = 3 rad/s.\n4. The maximum displacement (amplitude X\u2080) occurs when v = 0:\n   0 = 108 - 9x\u00b2 => 9x\u00b2 = 108 => x\u00b2 = 12 => X\u2080 = \u221a12 m = 2\u221a3 m.\n5. Maximum acceleration occurs at the amplitude:\n   |a_max| = 9 * X\u2080 = 9 * \u221a12 = 9 * 2\u221a3 = 18\u221a3 m/s\u00b2 \u2248 31.18 m/s\u00b2.\n   Wait, 9\u221a12 = 9 * 2\u221a3 = 18\u221a3.\n6. Looking at Option C: 9\u221a12 m/s\u00b2.\n7. Hence, the maximum acceleration is 9\u221a12 m/s\u00b2.",
+      "finalAnswer": "Option C: 9\u221a12 m/s\u00b2",
+      "whyOtherOptionsWrong": "Option A is \u03c9\u00b2. Option B is 2\u03c9\u00b2. Option D is v_max\u00b2."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Scalars and vectors in one-dimensional motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-059",
+    "questionNumber": 59,
+    "question": "A particle moves along a straight line with deceleration proportional to the square of its velocity: a = -k v\u00b2, where k is a positive constant. If its initial velocity is v\u2080 at t = 0, what is its velocity at time t?",
+    "options": {
+      "A": "v = v\u2080 / (1 + k v\u2080 t)",
+      "B": "v = v\u2080 e^(-kt)",
+      "C": "v = v\u2080 / (1 - k v\u2080 t)",
+      "D": "v = v\u2080 (1 - k t\u00b2)"
+    },
+    "optionsList": [
+      "v = v\u2080 / (1 + k v\u2080 t)",
+      "v = v\u2080 e^(-kt)",
+      "v = v\u2080 / (1 - k v\u2080 t)",
+      "v = v\u2080 (1 - k t\u00b2)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDifferential equation for quadratic drag: dv/dt = -k v\u00b2 is solved by separation of variables.\n\n2. GIVEN:\ndv/dt = -k v\u00b2, v(0) = v\u2080.\n\n3. FORMULA / PRINCIPLE:\n\u222b dv / v\u00b2 = -k \u222b dt => -1/v = -kt + C.\n\n4. STEP-BY-STEP SOLUTION:\n1. Separate variables:\n   dv / v\u00b2 = -k dt.\n2. Integrate both sides from 0 to t:\n   \u222b_{v\u2080}^v v^(-2) dv = -k \u222b_0^t dt.\n3. Evaluate the integrals:\n   [-1/v]_{v\u2080}^v = -kt\n   -1/v - (-1/v\u2080) = -kt\n   -1/v + 1/v\u2080 = -kt\n4. Rearrange for 1/v:\n   1/v = 1/v\u2080 + kt = (1 + k v\u2080 t) / v\u2080.\n5. Invert to find v(t):\n   v(t) = v\u2080 / (1 + k v\u2080 t).\n6. Hence, velocity at time t is v\u2080 / (1 + k v\u2080 t).\n\n5. FINAL ANSWER:\nOption A: v = v\u2080 / (1 + k v\u2080 t)\n\n6. QUICK TIP:\nFor linear drag (a = -kv), v = v\u2080 e^(-kt). For quadratic drag (a = -kv\u00b2), v = v\u2080 / (1 + kv\u2080t).",
+    "solutionStructured": {
+      "concept": "Differential equation for quadratic drag: dv/dt = -k v\u00b2 is solved by separation of variables.",
+      "given": "dv/dt = -k v\u00b2, v(0) = v\u2080.",
+      "formula": "\u222b dv / v\u00b2 = -k \u222b dt => -1/v = -kt + C.",
+      "stepByStep": "1. Separate variables:\n   dv / v\u00b2 = -k dt.\n2. Integrate both sides from 0 to t:\n   \u222b_{v\u2080}^v v^(-2) dv = -k \u222b_0^t dt.\n3. Evaluate the integrals:\n   [-1/v]_{v\u2080}^v = -kt\n   -1/v - (-1/v\u2080) = -kt\n   -1/v + 1/v\u2080 = -kt\n4. Rearrange for 1/v:\n   1/v = 1/v\u2080 + kt = (1 + k v\u2080 t) / v\u2080.\n5. Invert to find v(t):\n   v(t) = v\u2080 / (1 + k v\u2080 t).\n6. Hence, velocity at time t is v\u2080 / (1 + k v\u2080 t).",
+      "finalAnswer": "Option A: v = v\u2080 / (1 + k v\u2080 t)",
+      "whyOtherOptionsWrong": "Option B is for linear drag a = -kv. Option C has a minus sign causing infinite velocity. Option D is dimensionally inconsistent."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Scalars and vectors in one-dimensional motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-060",
+    "questionNumber": 60,
+    "question": "For the particle in the previous question with deceleration a = -k v\u00b2 and initial velocity v\u2080 at x = 0, what is its velocity as a function of displacement x?",
+    "options": {
+      "A": "v = v\u2080 e^(-k x)",
+      "B": "v = v\u2080 - k x",
+      "C": "v = v\u2080 / (1 + k x)",
+      "D": "v = \u221a(v\u2080\u00b2 - 2kx)"
+    },
+    "optionsList": [
+      "v = v\u2080 e^(-k x)",
+      "v = v\u2080 - k x",
+      "v = v\u2080 / (1 + k x)",
+      "v = \u221a(v\u2080\u00b2 - 2kx)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nExpress acceleration as a = v (dv/dx) and integrate with respect to x.\n\n2. GIVEN:\na = v (dv/dx) = -k v\u00b2; v(0) = v\u2080 at x = 0.\n\n3. FORMULA / PRINCIPLE:\nv (dv/dx) = -k v\u00b2 => dv / v = -k dx.\n\n4. STEP-BY-STEP SOLUTION:\n1. Substitute a = v (dv/dx):\n   v (dv/dx) = -k v\u00b2.\n2. Divide both sides by v (for v > 0):\n   dv/dx = -k v.\n3. Separate variables:\n   dv / v = -k dx.\n4. Integrate from x = 0 (v = v\u2080) to position x:\n   \u222b_{v\u2080}^v (1/v) dv = -k \u222b_0^x dx.\n5. Evaluate:\n   ln(v / v\u2080) = -k x\n   v / v\u2080 = e^(-k x)\n   v(x) = v\u2080 e^(-k x).\n6. Hence, velocity decays exponentially with displacement: v = v\u2080 e^(-kx).\n\n5. FINAL ANSWER:\nOption A: v = v\u2080 e^(-k x)\n\n6. QUICK TIP:\nNotice the beauty of calculus: with respect to time, quadratic drag gives hyperbolic decay; with respect to distance, it gives exponential decay!",
+    "solutionStructured": {
+      "concept": "Express acceleration as a = v (dv/dx) and integrate with respect to x.",
+      "given": "a = v (dv/dx) = -k v\u00b2; v(0) = v\u2080 at x = 0.",
+      "formula": "v (dv/dx) = -k v\u00b2 => dv / v = -k dx.",
+      "stepByStep": "1. Substitute a = v (dv/dx):\n   v (dv/dx) = -k v\u00b2.\n2. Divide both sides by v (for v > 0):\n   dv/dx = -k v.\n3. Separate variables:\n   dv / v = -k dx.\n4. Integrate from x = 0 (v = v\u2080) to position x:\n   \u222b_{v\u2080}^v (1/v) dv = -k \u222b_0^x dx.\n5. Evaluate:\n   ln(v / v\u2080) = -k x\n   v / v\u2080 = e^(-k x)\n   v(x) = v\u2080 e^(-k x).\n6. Hence, velocity decays exponentially with displacement: v = v\u2080 e^(-kx).",
+      "finalAnswer": "Option A: v = v\u2080 e^(-k x)",
+      "whyOtherOptionsWrong": "Option B is for constant deceleration. Option C is the time relation mistaken for distance. Option D is for constant acceleration (v\u00b2 = u\u00b2 + 2as)."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Scalars and vectors in one-dimensional motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-061",
+    "questionNumber": 61,
+    "question": "A particle moves along a straight line such that its velocity is given by v = \u03b1 \u221ax, where \u03b1 is a positive constant. What is the average velocity of the particle over the first s meters of its path?",
+    "options": {
+      "A": "(\u03b1 / 2) \u221as",
+      "B": "\u03b1 \u221as",
+      "C": "(2\u03b1 / 3) \u221as",
+      "D": "(\u03b1 / 3) \u221as"
+    },
+    "optionsList": [
+      "(\u03b1 / 2) \u221as",
+      "\u03b1 \u221as",
+      "(2\u03b1 / 3) \u221as",
+      "(\u03b1 / 3) \u221as"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFirst find the time t taken to traverse distance s, then calculate average velocity v_avg = total distance / total time.\n\n2. GIVEN:\nv = dx/dt = \u03b1 \u221ax, distance s.\n\n3. FORMULA / PRINCIPLE:\ndx / \u221ax = \u03b1 dt; v_avg = s / t.\n\n4. STEP-BY-STEP SOLUTION:\n1. Separate variables and integrate to find x(t):\n   dx / \u221ax = \u03b1 dt\n   \u222b_0^x x^(-1/2) dx = \u03b1 \u222b_0^t dt\n   2 \u221ax = \u03b1 t\n   \u221ax = (\u03b1 / 2) t => x(t) = (\u03b1\u00b2 / 4) t\u00b2.\n2. This represents motion with constant acceleration:\n   x = (1/2) a t\u00b2 with a = \u03b1\u00b2 / 2, starting from rest (u = 0).\n3. For motion starting from rest with constant acceleration, the final velocity after distance s is v_final = \u03b1 \u221as.\n4. The average velocity for uniformly accelerated motion from rest is:\n   v_avg = (u + v_final) / 2 = (0 + \u03b1 \u221as) / 2 = (\u03b1 / 2) \u221as.\n5. Alternatively, time to cover s is t = 2\u221as / \u03b1. Then v_avg = s / t = s / (2\u221as / \u03b1) = (\u03b1 / 2) \u221as.\n6. Hence, v_avg = (\u03b1 / 2) \u221as.\n\n5. FINAL ANSWER:\nOption A: (\u03b1 / 2) \u221as\n\n6. QUICK TIP:\nNEET shortcut: When v \u221d \u221ax, acceleration is constant! And for constant acceleration from rest, v_avg is simply v_final / 2.",
+    "solutionStructured": {
+      "concept": "First find the time t taken to traverse distance s, then calculate average velocity v_avg = total distance / total time.",
+      "given": "v = dx/dt = \u03b1 \u221ax, distance s.",
+      "formula": "dx / \u221ax = \u03b1 dt; v_avg = s / t.",
+      "stepByStep": "1. Separate variables and integrate to find x(t):\n   dx / \u221ax = \u03b1 dt\n   \u222b_0^x x^(-1/2) dx = \u03b1 \u222b_0^t dt\n   2 \u221ax = \u03b1 t\n   \u221ax = (\u03b1 / 2) t => x(t) = (\u03b1\u00b2 / 4) t\u00b2.\n2. This represents motion with constant acceleration:\n   x = (1/2) a t\u00b2 with a = \u03b1\u00b2 / 2, starting from rest (u = 0).\n3. For motion starting from rest with constant acceleration, the final velocity after distance s is v_final = \u03b1 \u221as.\n4. The average velocity for uniformly accelerated motion from rest is:\n   v_avg = (u + v_final) / 2 = (0 + \u03b1 \u221as) / 2 = (\u03b1 / 2) \u221as.\n5. Alternatively, time to cover s is t = 2\u221as / \u03b1. Then v_avg = s / t = s / (2\u221as / \u03b1) = (\u03b1 / 2) \u221as.\n6. Hence, v_avg = (\u03b1 / 2) \u221as.",
+      "finalAnswer": "Option A: (\u03b1 / 2) \u221as",
+      "whyOtherOptionsWrong": "Option B is the instantaneous velocity at distance s. Option C is 2/3 of v. Option D is 1/3 of v."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Scalars and vectors in one-dimensional motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-062",
+    "questionNumber": 62,
+    "question": "The acceleration of a particle is given by a = 3t\u00b2 + 2t + 2 (in SI units). If the particle starts with an initial velocity v\u2080 = 2 m/s at t = 0, what is its velocity at the end of t = 2 seconds?",
+    "options": {
+      "A": "16 m/s",
+      "B": "18 m/s",
+      "C": "14 m/s",
+      "D": "20 m/s"
+    },
+    "optionsList": [
+      "16 m/s",
+      "18 m/s",
+      "14 m/s",
+      "20 m/s"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nVelocity is the integral of acceleration with respect to time: v(t) = v\u2080 + \u222b a dt.\n\n2. GIVEN:\na(t) = 3t\u00b2 + 2t + 2, v(0) = 2 m/s, t = 2 s.\n\n3. FORMULA / PRINCIPLE:\nv(t) = v\u2080 + \u222b_0^t (3t\u00b2 + 2t + 2) dt.\n\n4. STEP-BY-STEP SOLUTION:\n1. Integrate acceleration:\n   v(t) = 2 + [ t\u00b3 + t\u00b2 + 2t ]_0^t.\n2. Substitute t = 2 s:\n   v(2) = 2 + [ 2\u00b3 + 2\u00b2 + 2(2) ]\n   v(2) = 2 + [ 8 + 4 + 4 ]\n   v(2) = 2 + 16 = 18 m/s.\n3. Therefore, the velocity at t = 2 s is 18 m/s.\n\n5. FINAL ANSWER:\nOption B: 18 m/s\n\n6. QUICK TIP:\nDon't forget to add the initial velocity v\u2080! Change in velocity is 16 m/s, so final velocity is 2 + 16 = 18 m/s.",
+    "solutionStructured": {
+      "concept": "Velocity is the integral of acceleration with respect to time: v(t) = v\u2080 + \u222b a dt.",
+      "given": "a(t) = 3t\u00b2 + 2t + 2, v(0) = 2 m/s, t = 2 s.",
+      "formula": "v(t) = v\u2080 + \u222b_0^t (3t\u00b2 + 2t + 2) dt.",
+      "stepByStep": "1. Integrate acceleration:\n   v(t) = 2 + [ t\u00b3 + t\u00b2 + 2t ]_0^t.\n2. Substitute t = 2 s:\n   v(2) = 2 + [ 2\u00b3 + 2\u00b2 + 2(2) ]\n   v(2) = 2 + [ 8 + 4 + 4 ]\n   v(2) = 2 + 16 = 18 m/s.\n3. Therefore, the velocity at t = 2 s is 18 m/s.",
+      "finalAnswer": "Option B: 18 m/s",
+      "whyOtherOptionsWrong": "Option A is \u0394v without adding initial velocity (16 m/s). Option C subtracts initial velocity. Option D miscalculates 2\u00b3."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Scalars and vectors in one-dimensional motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-063",
+    "questionNumber": 63,
+    "question": "A particle moves along a straight line such that its position coordinate varies with time as x = t\u00b3 - 3t\u00b2 - 9t + 5 (in meters). What is the velocity of the particle at the instant when its acceleration is zero?",
+    "options": {
+      "A": "-12 m/s",
+      "B": "-9 m/s",
+      "C": "0 m/s",
+      "D": "-6 m/s"
+    },
+    "optionsList": [
+      "-12 m/s",
+      "-9 m/s",
+      "0 m/s",
+      "-6 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFind acceleration by differentiating position twice, set a = 0 to find the instant, and substitute that instant into the velocity expression.\n\n2. GIVEN:\nx(t) = t\u00b3 - 3t\u00b2 - 9t + 5.\n\n3. FORMULA / PRINCIPLE:\nv = dx/dt = 3t\u00b2 - 6t - 9; a = dv/dt = 6t - 6 = 0.\n\n4. STEP-BY-STEP SOLUTION:\n1. Find velocity:\n   v(t) = dx/dt = 3t\u00b2 - 6t - 9.\n2. Find acceleration:\n   a(t) = dv/dt = 6t - 6.\n3. Find the instant when acceleration is zero:\n   6t - 6 = 0 => 6t = 6 => t = 1 s.\n4. Substitute t = 1 s into the velocity expression:\n   v(1) = 3(1)\u00b2 - 6(1) - 9 = 3 - 6 - 9 = -12 m/s.\n5. Therefore, the velocity of the particle at this instant is -12 m/s.\n\n5. FINAL ANSWER:\nOption A: -12 m/s\n\n6. QUICK TIP:\nStandard NEET two-step calculus problem: 1) Find t from a = 0. 2) Substitute t into v(t).",
+    "solutionStructured": {
+      "concept": "Find acceleration by differentiating position twice, set a = 0 to find the instant, and substitute that instant into the velocity expression.",
+      "given": "x(t) = t\u00b3 - 3t\u00b2 - 9t + 5.",
+      "formula": "v = dx/dt = 3t\u00b2 - 6t - 9; a = dv/dt = 6t - 6 = 0.",
+      "stepByStep": "1. Find velocity:\n   v(t) = dx/dt = 3t\u00b2 - 6t - 9.\n2. Find acceleration:\n   a(t) = dv/dt = 6t - 6.\n3. Find the instant when acceleration is zero:\n   6t - 6 = 0 => 6t = 6 => t = 1 s.\n4. Substitute t = 1 s into the velocity expression:\n   v(1) = 3(1)\u00b2 - 6(1) - 9 = 3 - 6 - 9 = -12 m/s.\n5. Therefore, the velocity of the particle at this instant is -12 m/s.",
+      "finalAnswer": "Option A: -12 m/s",
+      "whyOtherOptionsWrong": "Option B is initial velocity v(0) = -9 m/s. Option C assumes velocity is zero when acceleration is zero. Option D miscalculates 3 - 6 - 9."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Scalars and vectors in one-dimensional motion",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  }
+]

@@ -1,0 +1,1482 @@
+[
+  {
+    "id": "msl-mcq-306",
+    "questionNumber": 306,
+    "question": "A stone is dropped from the top of a cliff and hits the ground after 4 s. Taking g = 9.8 m/s\u00b2, the height of the cliff is:",
+    "options": {
+      "A": "39.2 m",
+      "B": "78.4 m",
+      "C": "156.8 m",
+      "D": "19.6 m"
+    },
+    "optionsList": [
+      "39.2 m",
+      "78.4 m",
+      "156.8 m",
+      "19.6 m"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nFor a body dropped from rest (u = 0) under gravity, height fallen in time t is h = 1/2 g t\u00b2.\n\n2. GIVEN:\nu = 0, t = 4 s, g = 9.8 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\nh = (1/2) g t\u00b2\n\n4. STEP-BY-STEP SOLUTION:\n1. Identify given values: u = 0, t = 4 s, g = 9.8 m/s\u00b2.\n2. Apply formula: h = (1/2) \u00d7 9.8 \u00d7 (4)\u00b2.\n3. h = 4.9 \u00d7 16 = 78.4 m.\n4. Therefore, the height of the cliff is 78.4 m.\n\n5. FINAL ANSWER:\nOption B: 78.4 m\n\n6. QUICK TIP:\nFor g = 9.8 m/s\u00b2: h = 4.9 t\u00b2. For t = 1, 2, 3, 4 s: h = 4.9 m, 19.6 m, 44.1 m, 78.4 m.",
+    "solutionStructured": {
+      "concept": "For a body dropped from rest (u = 0) under gravity, height fallen in time t is h = 1/2 g t\u00b2.",
+      "given": "u = 0, t = 4 s, g = 9.8 m/s\u00b2.",
+      "formula": "h = (1/2) g t\u00b2",
+      "stepByStep": "1. Identify given values: u = 0, t = 4 s, g = 9.8 m/s\u00b2.\n2. Apply formula: h = (1/2) \u00d7 9.8 \u00d7 (4)\u00b2.\n3. h = 4.9 \u00d7 16 = 78.4 m.\n4. Therefore, the height of the cliff is 78.4 m.",
+      "finalAnswer": "Option B: 78.4 m",
+      "whyOtherOptionsWrong": "39.2 m is the impact velocity (v = gt = 9.8 \u00d7 4 = 39.2 m/s), not the height."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Free-fall motion in one dimension",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-307",
+    "questionNumber": 307,
+    "question": "A ball is thrown vertically downward with a velocity of 20 m/s from the top of a tower. It hits the ground after some time with a velocity of 80 m/s. The height of the tower is: (take g = 10 m/s\u00b2)",
+    "options": {
+      "A": "300 m",
+      "B": "360 m",
+      "C": "340 m",
+      "D": "320 m"
+    },
+    "optionsList": [
+      "300 m",
+      "360 m",
+      "340 m",
+      "320 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nUsing the third equation of motion under constant gravitational acceleration: v\u00b2 = u\u00b2 + 2gh.\n\n2. GIVEN:\nu = 20 m/s (downward), v = 80 m/s (downward), g = 10 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\nv\u00b2 = u\u00b2 + 2gh => h = (v\u00b2 - u\u00b2) / (2g)\n\n4. STEP-BY-STEP SOLUTION:\n1. Apply v\u00b2 = u\u00b2 + 2gh with downward direction positive.\n2. 80\u00b2 = 20\u00b2 + 2(10)h.\n3. 6400 = 400 + 20h.\n4. 20h = 6400 - 400 = 6000.\n5. h = 6000 / 20 = 300 m.\n\n5. FINAL ANSWER:\nOption A: 300 m\n\n6. QUICK TIP:\nNEET UG 2020 Official Paper Question! Quick check: (80\u00b2 - 20\u00b2)/(20) = (6400 - 400)/20 = 300 m.",
+    "solutionStructured": {
+      "concept": "Using the third equation of motion under constant gravitational acceleration: v\u00b2 = u\u00b2 + 2gh.",
+      "given": "u = 20 m/s (downward), v = 80 m/s (downward), g = 10 m/s\u00b2.",
+      "formula": "v\u00b2 = u\u00b2 + 2gh => h = (v\u00b2 - u\u00b2) / (2g)",
+      "stepByStep": "1. Apply v\u00b2 = u\u00b2 + 2gh with downward direction positive.\n2. 80\u00b2 = 20\u00b2 + 2(10)h.\n3. 6400 = 400 + 20h.\n4. 20h = 6400 - 400 = 6000.\n5. h = 6000 / 20 = 300 m.",
+      "finalAnswer": "Option A: 300 m",
+      "whyOtherOptionsWrong": "320 m or 360 m arise from arithmetic errors in squaring 80 or 20."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Free-fall motion in one dimension",
+    "source": "NEET UG 2020",
+    "isPYQ": true,
+    "pyqYear": 2020
+  },
+  {
+    "id": "msl-mcq-308",
+    "questionNumber": 308,
+    "question": "A small ball is released from the top of a tower of height h. It takes T seconds to reach the ground. What is the position of the ball at T/3 seconds after release?",
+    "options": {
+      "A": "8h/9 meters above the ground",
+      "B": "7h/9 meters above the ground",
+      "C": "h/9 meters above the ground",
+      "D": "17h/18 meters above the ground"
+    },
+    "optionsList": [
+      "8h/9 meters above the ground",
+      "7h/9 meters above the ground",
+      "h/9 meters above the ground",
+      "17h/18 meters above the ground"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTotal height h = 1/2 g T\u00b2. In time t = T/3, downward distance fallen is y = 1/2 g (T/3)\u00b2 = h/9. Position above ground = h - y = 8h/9.\n\n2. GIVEN:\nTotal height h, total time T, time elapsed t = T/3.\n\n3. FORMULA / PRINCIPLE:\ny = (1/2) g t\u00b2; Height above ground = h - y\n\n4. STEP-BY-STEP SOLUTION:\n1. Total height of tower: h = (1/2) g T\u00b2.\n2. Distance fallen from the top in time T/3: y = (1/2) g (T/3)\u00b2 = (1/9) [(1/2) g T\u00b2] = h/9.\n3. The position of the ball measured from the ground is: h - y = h - h/9 = 8h/9.\n4. Therefore, the ball is at a height of 8h/9 above the ground.\n\n5. FINAL ANSWER:\nOption A: 8h/9 meters above the ground\n\n6. QUICK TIP:\nNEET UG 2021 Official Question! Always read carefully whether position is asked from top (h/9) or from ground (8h/9).",
+    "solutionStructured": {
+      "concept": "Total height h = 1/2 g T\u00b2. In time t = T/3, downward distance fallen is y = 1/2 g (T/3)\u00b2 = h/9. Position above ground = h - y = 8h/9.",
+      "given": "Total height h, total time T, time elapsed t = T/3.",
+      "formula": "y = (1/2) g t\u00b2; Height above ground = h - y",
+      "stepByStep": "1. Total height of tower: h = (1/2) g T\u00b2.\n2. Distance fallen from the top in time T/3: y = (1/2) g (T/3)\u00b2 = (1/9) [(1/2) g T\u00b2] = h/9.\n3. The position of the ball measured from the ground is: h - y = h - h/9 = 8h/9.\n4. Therefore, the ball is at a height of 8h/9 above the ground.",
+      "finalAnswer": "Option A: 8h/9 meters above the ground",
+      "whyOtherOptionsWrong": "h/9 is the distance fallen from the top, not the height above the ground."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Free-fall motion in one dimension",
+    "source": "NEET UG 2021",
+    "isPYQ": true,
+    "pyqYear": 2021
+  },
+  {
+    "id": "msl-mcq-309",
+    "questionNumber": 309,
+    "question": "Two bodies of masses 1 kg and 5 kg are dropped simultaneously from heights 16 m and 25 m respectively in vacuum. The ratio of the times taken by them to reach the ground is:",
+    "options": {
+      "A": "4 : 5",
+      "B": "5 : 4",
+      "C": "1 : 5",
+      "D": "16 : 25"
+    },
+    "optionsList": [
+      "4 : 5",
+      "5 : 4",
+      "1 : 5",
+      "16 : 25"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn vacuum, gravitational acceleration is independent of mass: t = \u221a(2h/g). Therefore, t\u2081/t\u2082 = \u221a(h\u2081/h\u2082).\n\n2. GIVEN:\nh\u2081 = 16 m, h\u2082 = 25 m, masses m\u2081 = 1 kg, m\u2082 = 5 kg.\n\n3. FORMULA / PRINCIPLE:\nt = \u221a(2h / g) => t\u2081 / t\u2082 = \u221a(h\u2081 / h\u2082)\n\n4. STEP-BY-STEP SOLUTION:\n1. In free fall under gravity (no air resistance), time of fall is independent of mass: t = \u221a(2h/g).\n2. Ratio of times: t\u2081 / t\u2082 = \u221a(h\u2081 / h\u2082) = \u221a(16 / 25) = 4 / 5.\n3. Therefore, t\u2081 : t\u2082 = 4 : 5.\n\n5. FINAL ANSWER:\nOption A: 4 : 5\n\n6. QUICK TIP:\nGalileo's famous Leaning Tower principle: All masses accelerate equally under gravity in vacuum. Mass is irrelevant!",
+    "solutionStructured": {
+      "concept": "In vacuum, gravitational acceleration is independent of mass: t = \u221a(2h/g). Therefore, t\u2081/t\u2082 = \u221a(h\u2081/h\u2082).",
+      "given": "h\u2081 = 16 m, h\u2082 = 25 m, masses m\u2081 = 1 kg, m\u2082 = 5 kg.",
+      "formula": "t = \u221a(2h / g) => t\u2081 / t\u2082 = \u221a(h\u2081 / h\u2082)",
+      "stepByStep": "1. In free fall under gravity (no air resistance), time of fall is independent of mass: t = \u221a(2h/g).\n2. Ratio of times: t\u2081 / t\u2082 = \u221a(h\u2081 / h\u2082) = \u221a(16 / 25) = 4 / 5.\n3. Therefore, t\u2081 : t\u2082 = 4 : 5.",
+      "finalAnswer": "Option A: 4 : 5",
+      "whyOtherOptionsWrong": "16 : 25 forgets the square root in t = \u221a(2h/g)."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Free-fall motion in one dimension",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-310",
+    "questionNumber": 310,
+    "question": "A ball is dropped from a balloon rising vertically at 10 m/s when the balloon is at a height of 75 m from the ground. Taking g = 10 m/s\u00b2, the initial velocity of the ball relative to the ground is:",
+    "options": {
+      "A": "0 m/s",
+      "B": "10 m/s upwards",
+      "C": "10 m/s downwards",
+      "D": "5 m/s upwards"
+    },
+    "optionsList": [
+      "0 m/s",
+      "10 m/s upwards",
+      "10 m/s downwards",
+      "5 m/s upwards"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nWhen a body is released from a moving vehicle, it inherits the instantaneous velocity of the vehicle due to inertia.\n\n2. GIVEN:\nBalloon velocity = 10 m/s upwards, balloon height = 75 m.\n\n3. FORMULA / PRINCIPLE:\nu_ball = v_balloon = +10 m/s (upwards)\n\n4. STEP-BY-STEP SOLUTION:\n1. By the law of inertia, any object detached from a moving frame initially shares the exact velocity of that frame.\n2. The balloon is moving upward at 10 m/s.\n3. Immediately upon release, the ball has an upward velocity of 10 m/s.\n4. Gravity then acts downwards on it with acceleration g = 10 m/s\u00b2.\n\n5. FINAL ANSWER:\nOption B: 10 m/s upwards\n\n6. QUICK TIP:\nA dropped object is not at rest if its carrier was moving! u = v_carrier.",
+    "solutionStructured": {
+      "concept": "When a body is released from a moving vehicle, it inherits the instantaneous velocity of the vehicle due to inertia.",
+      "given": "Balloon velocity = 10 m/s upwards, balloon height = 75 m.",
+      "formula": "u_ball = v_balloon = +10 m/s (upwards)",
+      "stepByStep": "1. By the law of inertia, any object detached from a moving frame initially shares the exact velocity of that frame.\n2. The balloon is moving upward at 10 m/s.\n3. Immediately upon release, the ball has an upward velocity of 10 m/s.\n4. Gravity then acts downwards on it with acceleration g = 10 m/s\u00b2.",
+      "finalAnswer": "Option B: 10 m/s upwards",
+      "whyOtherOptionsWrong": "0 m/s is a common misconception that releasing an object stops it instantaneously."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Free-fall motion in one dimension",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-311",
+    "questionNumber": 311,
+    "question": "The velocity of a freely falling body dropped from rest after falling through a height h is:",
+    "options": {
+      "A": "gh",
+      "B": "\u221a(2gh)",
+      "C": "2gh",
+      "D": "\u221a(gh)"
+    },
+    "optionsList": [
+      "gh",
+      "\u221a(2gh)",
+      "2gh",
+      "\u221a(gh)"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nFrom the third equation of motion v\u00b2 = u\u00b2 + 2gh, with u = 0, v = \u221a(2gh).\n\n2. GIVEN:\nu = 0, acceleration = g, distance fallen = h.\n\n3. FORMULA / PRINCIPLE:\nv\u00b2 = 2gh => v = \u221a(2gh)\n\n4. STEP-BY-STEP SOLUTION:\n1. Particle starts from rest: u = 0.\n2. Downward acceleration: a = g.\n3. Distance fallen: s = h.\n4. Apply 3rd equation: v\u00b2 = u\u00b2 + 2as = 0 + 2gh = 2gh.\n5. v = \u221a(2gh).\n\n5. FINAL ANSWER:\nOption B: \u221a(2gh)\n\n6. QUICK TIP:\nTorricelli's speed of free fall: v = \u221a(2gh). Same as speed of efflux from an orifice at depth h!",
+    "solutionStructured": {
+      "concept": "From the third equation of motion v\u00b2 = u\u00b2 + 2gh, with u = 0, v = \u221a(2gh).",
+      "given": "u = 0, acceleration = g, distance fallen = h.",
+      "formula": "v\u00b2 = 2gh => v = \u221a(2gh)",
+      "stepByStep": "1. Particle starts from rest: u = 0.\n2. Downward acceleration: a = g.\n3. Distance fallen: s = h.\n4. Apply 3rd equation: v\u00b2 = u\u00b2 + 2as = 0 + 2gh = 2gh.\n5. v = \u221a(2gh).",
+      "finalAnswer": "Option B: \u221a(2gh)",
+      "whyOtherOptionsWrong": "gh has dimensions of velocity squared per unit length [L\u00b2 T\u207b\u00b2], not velocity [L T\u207b\u00b9]."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Free-fall motion in one dimension",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-312",
+    "questionNumber": 312,
+    "question": "A body is dropped from rest. The ratio of distances fallen in the 1st second, 2nd second, and 3rd second is:",
+    "options": {
+      "A": "1 : 2 : 3",
+      "B": "1 : 4 : 9",
+      "C": "1 : 3 : 5",
+      "D": "1 : \u221a2 : \u221a3"
+    },
+    "optionsList": [
+      "1 : 2 : 3",
+      "1 : 4 : 9",
+      "1 : 3 : 5",
+      "1 : \u221a2 : \u221a3"
+    ],
+    "correctAnswer": "C",
+    "correctIndex": 2,
+    "explanation": "1. CONCEPT:\nGalileo's odd-number rule applies directly to free fall: s_n = g/2 (2n - 1) \u221d 1 : 3 : 5.\n\n2. GIVEN:\nu = 0, a = g, n = 1, 2, 3.\n\n3. FORMULA / PRINCIPLE:\ns_n = (g/2)(2n - 1)\n\n4. STEP-BY-STEP SOLUTION:\n1. For n = 1: s\u2081 = (g/2)(2(1) - 1) = 1(g/2) = 5 m (for g=10).\n2. For n = 2: s\u2082 = (g/2)(2(2) - 1) = 3(g/2) = 15 m.\n3. For n = 3: s\u2083 = (g/2)(2(3) - 1) = 5(g/2) = 25 m.\n4. Ratio s\u2081 : s\u2082 : s\u2083 = 1 : 3 : 5.\n\n5. FINAL ANSWER:\nOption C: 1 : 3 : 5\n\n6. QUICK TIP:\nGalileo: Ratio in successive 1-second intervals = 1 : 3 : 5 : 7 : 9...",
+    "solutionStructured": {
+      "concept": "Galileo's odd-number rule applies directly to free fall: s_n = g/2 (2n - 1) \u221d 1 : 3 : 5.",
+      "given": "u = 0, a = g, n = 1, 2, 3.",
+      "formula": "s_n = (g/2)(2n - 1)",
+      "stepByStep": "1. For n = 1: s\u2081 = (g/2)(2(1) - 1) = 1(g/2) = 5 m (for g=10).\n2. For n = 2: s\u2082 = (g/2)(2(2) - 1) = 3(g/2) = 15 m.\n3. For n = 3: s\u2083 = (g/2)(2(3) - 1) = 5(g/2) = 25 m.\n4. Ratio s\u2081 : s\u2082 : s\u2083 = 1 : 3 : 5.",
+      "finalAnswer": "Option C: 1 : 3 : 5",
+      "whyOtherOptionsWrong": "1 : 4 : 9 is the ratio of TOTAL distances fallen after 1 s, 2 s, 3 s."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Free-fall motion in one dimension",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-313",
+    "questionNumber": 313,
+    "question": "A stone dropped from the roof of a single-story building takes 0.2 s to fall past a window 1.8 m high. How far above the top of the window was the stone released? (take g = 10 m/s\u00b2)",
+    "options": {
+      "A": "3.2 m",
+      "B": "4.0 m",
+      "C": "2.8 m",
+      "D": "5.0 m"
+    },
+    "optionsList": [
+      "3.2 m",
+      "4.0 m",
+      "2.8 m",
+      "5.0 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nLet velocity at top of window be v\u2081. Then s = v\u2081 t + 1/2 g t\u00b2 = 1.8 m with t = 0.2 s. Find v\u2081, then height above window h = v\u2081\u00b2 / (2g).\n\n2. GIVEN:\nWindow height s = 1.8 m, time to cross window t = 0.2 s, g = 10 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\ns = v\u2081 t + (1/2) g t\u00b2; h = v\u2081\u00b2 / (2g)\n\n4. STEP-BY-STEP SOLUTION:\n1. Across the window: 1.8 = v\u2081(0.2) + (1/2)(10)(0.2)\u00b2.\n2. 1.8 = 0.2 v\u2081 + 5(0.04) = 0.2 v\u2081 + 0.2.\n3. 0.2 v\u2081 = 1.8 - 0.2 = 1.6 => v\u2081 = 1.6 / 0.2 = 8 m/s.\n4. The stone reached speed 8 m/s starting from rest (u = 0) at height h above the window:\n   v\u2081\u00b2 = 2gh => 8\u00b2 = 2(10)h => 64 = 20h => h = 64 / 20 = 3.2 m.\n\n5. FINAL ANSWER:\nOption A: 3.2 m\n\n6. QUICK TIP:\nFind the speed at the top of the window first using s = ut + 1/2 gt\u00b2, then use v\u00b2 = 2gh to find height fallen.",
+    "solutionStructured": {
+      "concept": "Let velocity at top of window be v\u2081. Then s = v\u2081 t + 1/2 g t\u00b2 = 1.8 m with t = 0.2 s. Find v\u2081, then height above window h = v\u2081\u00b2 / (2g).",
+      "given": "Window height s = 1.8 m, time to cross window t = 0.2 s, g = 10 m/s\u00b2.",
+      "formula": "s = v\u2081 t + (1/2) g t\u00b2; h = v\u2081\u00b2 / (2g)",
+      "stepByStep": "1. Across the window: 1.8 = v\u2081(0.2) + (1/2)(10)(0.2)\u00b2.\n2. 1.8 = 0.2 v\u2081 + 5(0.04) = 0.2 v\u2081 + 0.2.\n3. 0.2 v\u2081 = 1.8 - 0.2 = 1.6 => v\u2081 = 1.6 / 0.2 = 8 m/s.\n4. The stone reached speed 8 m/s starting from rest (u = 0) at height h above the window:\n   v\u2081\u00b2 = 2gh => 8\u00b2 = 2(10)h => 64 = 20h => h = 64 / 20 = 3.2 m.",
+      "finalAnswer": "Option A: 3.2 m",
+      "whyOtherOptionsWrong": "4.0 m or 2.8 m arise from forgetting the 1/2 gt\u00b2 term during window crossing."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Free-fall motion in one dimension",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-314",
+    "questionNumber": 314,
+    "question": "Water drops fall at regular intervals from a tap 5 m above the ground. The third drop is leaving the tap at the instant the first drop touches the ground. How far above the ground is the second drop at that instant? (take g = 10 m/s\u00b2)",
+    "options": {
+      "A": "3.75 m",
+      "B": "1.25 m",
+      "C": "2.50 m",
+      "D": "4.00 m"
+    },
+    "optionsList": [
+      "3.75 m",
+      "1.25 m",
+      "2.50 m",
+      "4.00 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTotal time for 1st drop: T = \u221a(2H/g) = \u221a(2(5)/10) = 1 s. Intervals \u0394t = T/2 = 0.5 s. Second drop has fallen for 0.5 s: y = 1/2 g (0.5)\u00b2 = 1.25 m from tap. Height above ground = 5 - 1.25 = 3.75 m.\n\n2. GIVEN:\nHeight of tap H = 5 m, g = 10 m/s\u00b2, 3rd drop leaves when 1st touches ground.\n\n3. FORMULA / PRINCIPLE:\nT = \u221a(2H/g); \u0394t = T / (n - 1); y = (1/2) g (t_elapsed)\u00b2; h_ground = H - y\n\n4. STEP-BY-STEP SOLUTION:\n1. Time taken for the first drop to reach the ground: T = \u221a(2H / g) = \u221a(2 \u00d7 5 / 10) = \u221a1 = 1 s.\n2. Between the 1st and 3rd drop, there are 2 equal time intervals: \u0394t = 1 s / 2 = 0.5 s.\n3. When the 3rd drop is leaving (t = 1 s):\n   - 1st drop has fallen for 1.0 s (at the ground).\n   - 2nd drop has fallen for 0.5 s.\n   - 3rd drop has fallen for 0 s.\n4. Distance fallen by 2nd drop from the tap: y = (1/2) g (0.5)\u00b2 = (1/2)(10)(0.25) = 1.25 m.\n5. Height of 2nd drop above the ground: h = 5 m - 1.25 m = 3.75 m.\n\n5. FINAL ANSWER:\nOption A: 3.75 m\n\n6. QUICK TIP:\nSuper classic NEET question! Always check whether distance is asked from the tap (1.25 m) or from the ground (3.75 m)!",
+    "solutionStructured": {
+      "concept": "Total time for 1st drop: T = \u221a(2H/g) = \u221a(2(5)/10) = 1 s. Intervals \u0394t = T/2 = 0.5 s. Second drop has fallen for 0.5 s: y = 1/2 g (0.5)\u00b2 = 1.25 m from tap. Height above ground = 5 - 1.25 = 3.75 m.",
+      "given": "Height of tap H = 5 m, g = 10 m/s\u00b2, 3rd drop leaves when 1st touches ground.",
+      "formula": "T = \u221a(2H/g); \u0394t = T / (n - 1); y = (1/2) g (t_elapsed)\u00b2; h_ground = H - y",
+      "stepByStep": "1. Time taken for the first drop to reach the ground: T = \u221a(2H / g) = \u221a(2 \u00d7 5 / 10) = \u221a1 = 1 s.\n2. Between the 1st and 3rd drop, there are 2 equal time intervals: \u0394t = 1 s / 2 = 0.5 s.\n3. When the 3rd drop is leaving (t = 1 s):\n   - 1st drop has fallen for 1.0 s (at the ground).\n   - 2nd drop has fallen for 0.5 s.\n   - 3rd drop has fallen for 0 s.\n4. Distance fallen by 2nd drop from the tap: y = (1/2) g (0.5)\u00b2 = (1/2)(10)(0.25) = 1.25 m.\n5. Height of 2nd drop above the ground: h = 5 m - 1.25 m = 3.75 m.",
+      "finalAnswer": "Option A: 3.75 m",
+      "whyOtherOptionsWrong": "1.25 m is the distance from the tap, not above the ground."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Free-fall motion in one dimension",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-315",
+    "questionNumber": 315,
+    "question": "A body released from the top of a tower of height H covers 36% of the total height in the last second of its fall. The total height H of the tower is: (take g = 10 m/s\u00b2)",
+    "options": {
+      "A": "125 m",
+      "B": "100 m",
+      "C": "80 m",
+      "D": "180 m"
+    },
+    "optionsList": [
+      "125 m",
+      "100 m",
+      "80 m",
+      "180 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDistance in last second is 0.36 H, so distance in the first (t - 1) seconds is 0.64 H. Since H \u221d t\u00b2, (t - 1)/t = \u221a0.64 = 0.8 => t = 5 s. H = 1/2 g (5)\u00b2 = 125 m.\n\n2. GIVEN:\nLast second distance = 0.36 H, g = 10 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\nH(t - 1) / H(t) = (t - 1)\u00b2 / t\u00b2 = 1 - 0.36 = 0.64\n\n4. STEP-BY-STEP SOLUTION:\n1. Let total time of fall be t seconds.\n2. Total height H = (1/2) g t\u00b2.\n3. Height fallen in the first (t - 1) seconds: H' = (1/2) g (t - 1)\u00b2 = H - 0.36 H = 0.64 H.\n4. Taking the ratio: (t - 1)\u00b2 / t\u00b2 = 0.64.\n5. Taking square root: (t - 1) / t = 0.8 => t - 1 = 0.8t => 0.2t = 1 => t = 5 s.\n6. Total height H = (1/2) \u00d7 10 \u00d7 (5)\u00b2 = 5 \u00d7 25 = 125 m.\n\n5. FINAL ANSWER:\nOption A: 125 m\n\n6. QUICK TIP:\nSpeed trick: (t - 1)/t = \u221a(1 - fraction). Here \u221a(1 - 0.36) = \u221a0.64 = 0.8 => 1 - 1/t = 0.8 => 1/t = 0.2 => t = 5 s => H = 125 m!",
+    "solutionStructured": {
+      "concept": "Distance in last second is 0.36 H, so distance in the first (t - 1) seconds is 0.64 H. Since H \u221d t\u00b2, (t - 1)/t = \u221a0.64 = 0.8 => t = 5 s. H = 1/2 g (5)\u00b2 = 125 m.",
+      "given": "Last second distance = 0.36 H, g = 10 m/s\u00b2.",
+      "formula": "H(t - 1) / H(t) = (t - 1)\u00b2 / t\u00b2 = 1 - 0.36 = 0.64",
+      "stepByStep": "1. Let total time of fall be t seconds.\n2. Total height H = (1/2) g t\u00b2.\n3. Height fallen in the first (t - 1) seconds: H' = (1/2) g (t - 1)\u00b2 = H - 0.36 H = 0.64 H.\n4. Taking the ratio: (t - 1)\u00b2 / t\u00b2 = 0.64.\n5. Taking square root: (t - 1) / t = 0.8 => t - 1 = 0.8t => 0.2t = 1 => t = 5 s.\n6. Total height H = (1/2) \u00d7 10 \u00d7 (5)\u00b2 = 5 \u00d7 25 = 125 m.",
+      "finalAnswer": "Option A: 125 m",
+      "whyOtherOptionsWrong": "100 m would correspond to 4.47 s, which doesn't satisfy the 36% condition."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Free-fall motion in one dimension",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-316",
+    "questionNumber": 316,
+    "question": "A particle is dropped from a height H. The time taken to cover the first half of the distance is t\u2081, and the time taken to cover the second half is t\u2082. The ratio t\u2081 / t\u2082 is:",
+    "options": {
+      "A": "1 / (\u221a2 - 1)",
+      "B": "\u221a2 - 1",
+      "C": "1 / \u221a2",
+      "D": "\u221a2 + 1"
+    },
+    "optionsList": [
+      "1 / (\u221a2 - 1)",
+      "\u221a2 - 1",
+      "1 / \u221a2",
+      "\u221a2 + 1"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nt\u2081 = \u221a(2(H/2)/g) = \u221a(H/g). Total time T = \u221a(2H/g) = \u221a2 t\u2081. Then t\u2082 = T - t\u2081 = (\u221a2 - 1)t\u2081. Thus t\u2081 / t\u2082 = 1 / (\u221a2 - 1) = \u221a2 + 1.\n\n2. GIVEN:\nHeight H, first half H/2, second half H/2.\n\n3. FORMULA / PRINCIPLE:\nt\u2081 = \u221a(H/g); T = \u221a(2H/g); t\u2082 = T - t\u2081\n\n4. STEP-BY-STEP SOLUTION:\n1. Time to cover first half H/2 from rest: t\u2081 = \u221a(2(H/2) / g) = \u221a(H / g).\n2. Total time to cover height H: T = \u221a(2H / g) = \u221a2 \u221a(H / g) = \u221a2 t\u2081.\n3. Time to cover second half: t\u2082 = T - t\u2081 = \u221a2 t\u2081 - t\u2081 = (\u221a2 - 1) t\u2081.\n4. Ratio t\u2081 / t\u2082 = 1 / (\u221a2 - 1).\n5. Rationalizing the denominator: 1 / (\u221a2 - 1) = (\u221a2 + 1) / (2 - 1) = \u221a2 + 1.\n6. Both forms 1 / (\u221a2 - 1) and (\u221a2 + 1) are mathematically identical; option A gives 1 / (\u221a2 - 1).\n\n5. FINAL ANSWER:\nOption A: 1 / (\u221a2 - 1)\n\n6. QUICK TIP:\nAlways remember: The second half takes LESS time than the first half because the body has already gained speed! So t\u2081 > t\u2082.",
+    "solutionStructured": {
+      "concept": "t\u2081 = \u221a(2(H/2)/g) = \u221a(H/g). Total time T = \u221a(2H/g) = \u221a2 t\u2081. Then t\u2082 = T - t\u2081 = (\u221a2 - 1)t\u2081. Thus t\u2081 / t\u2082 = 1 / (\u221a2 - 1) = \u221a2 + 1.",
+      "given": "Height H, first half H/2, second half H/2.",
+      "formula": "t\u2081 = \u221a(H/g); T = \u221a(2H/g); t\u2082 = T - t\u2081",
+      "stepByStep": "1. Time to cover first half H/2 from rest: t\u2081 = \u221a(2(H/2) / g) = \u221a(H / g).\n2. Total time to cover height H: T = \u221a(2H / g) = \u221a2 \u221a(H / g) = \u221a2 t\u2081.\n3. Time to cover second half: t\u2082 = T - t\u2081 = \u221a2 t\u2081 - t\u2081 = (\u221a2 - 1) t\u2081.\n4. Ratio t\u2081 / t\u2082 = 1 / (\u221a2 - 1).\n5. Rationalizing the denominator: 1 / (\u221a2 - 1) = (\u221a2 + 1) / (2 - 1) = \u221a2 + 1.\n6. Both forms 1 / (\u221a2 - 1) and (\u221a2 + 1) are mathematically identical; option A gives 1 / (\u221a2 - 1).",
+      "finalAnswer": "Option A: 1 / (\u221a2 - 1)",
+      "whyOtherOptionsWrong": "\u221a2 - 1 is t\u2082 / t\u2081, the reciprocal of the asked ratio."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Free-fall motion in one dimension",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-317",
+    "questionNumber": 317,
+    "question": "A stone is dropped into a well 44.1 m deep. The splash is heard 3.13 seconds after the stone is dropped. The speed of sound in air is: (take g = 9.8 m/s\u00b2)",
+    "options": {
+      "A": "340 m/s",
+      "B": "339.2 m/s",
+      "C": "330 m/s",
+      "D": "350 m/s"
+    },
+    "optionsList": [
+      "340 m/s",
+      "339.2 m/s",
+      "330 m/s",
+      "350 m/s"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nTotal time T = t_fall + t_sound. t_fall = \u221a(2h/g). t_sound = T - t_fall. Speed of sound v = h / t_sound.\n\n2. GIVEN:\nDepth h = 44.1 m, total time T = 3.13 s, g = 9.8 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\nt_fall = \u221a(2h/g); v_sound = h / (T - t_fall)\n\n4. STEP-BY-STEP SOLUTION:\n1. Time taken for stone to hit the water: t_fall = \u221a(2 \u00d7 44.1 / 9.8) = \u221a(88.2 / 9.8) = \u221a9 = 3.0 s.\n2. Time taken for the sound of the splash to travel back up to the top:\n   t_sound = T_total - t_fall = 3.13 s - 3.0 s = 0.13 s.\n3. Speed of sound v = distance / time = 44.1 m / 0.13 s \u2248 339.23 m/s.\n\n5. FINAL ANSWER:\nOption B: 339.2 m/s\n\n6. QUICK TIP:\nStandard NEET well-splash question: Always separate stone falling time from sound traveling time!",
+    "solutionStructured": {
+      "concept": "Total time T = t_fall + t_sound. t_fall = \u221a(2h/g). t_sound = T - t_fall. Speed of sound v = h / t_sound.",
+      "given": "Depth h = 44.1 m, total time T = 3.13 s, g = 9.8 m/s\u00b2.",
+      "formula": "t_fall = \u221a(2h/g); v_sound = h / (T - t_fall)",
+      "stepByStep": "1. Time taken for stone to hit the water: t_fall = \u221a(2 \u00d7 44.1 / 9.8) = \u221a(88.2 / 9.8) = \u221a9 = 3.0 s.\n2. Time taken for the sound of the splash to travel back up to the top:\n   t_sound = T_total - t_fall = 3.13 s - 3.0 s = 0.13 s.\n3. Speed of sound v = distance / time = 44.1 m / 0.13 s \u2248 339.23 m/s.",
+      "finalAnswer": "Option B: 339.2 m/s",
+      "whyOtherOptionsWrong": "340 m/s is an approximation; the precise value from 44.1 / 0.13 is 339.2 m/s."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Free-fall motion in one dimension",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-318",
+    "questionNumber": 318,
+    "question": "From the top of a tower, a ball is dropped (u = 0) and at the same time another ball is projected horizontally with speed 15 m/s. Which ball reaches the ground first (neglecting air resistance)?",
+    "options": {
+      "A": "The dropped ball",
+      "B": "The horizontally projected ball",
+      "C": "Both reach the ground simultaneously",
+      "D": "Depends on the height of the tower"
+    },
+    "optionsList": [
+      "The dropped ball",
+      "The horizontally projected ball",
+      "Both reach the ground simultaneously",
+      "Depends on the height of the tower"
+    ],
+    "correctAnswer": "C",
+    "correctIndex": 2,
+    "explanation": "1. CONCEPT:\nIndependence of orthogonal motions: Vertical motion is determined solely by initial vertical velocity u_y and vertical acceleration g. For both balls, u_y = 0 and a_y = g.\n\n2. GIVEN:\nBall 1: dropped (u_y = 0). Ball 2: projected horizontally (u_y = 0, u_x = 15 m/s).\n\n3. FORMULA / PRINCIPLE:\nt = \u221a(2h / g) for vertical descent\n\n4. STEP-BY-STEP SOLUTION:\n1. For the dropped ball: initial vertical velocity u_y\u2081 = 0.\n2. For the horizontally projected ball: initial velocity is purely horizontal, so initial vertical velocity u_y\u2082 = 0.\n3. Both balls experience the exact same downward acceleration g and fall through the same vertical height h.\n4. Since h = 1/2 g t\u00b2 for both, the time of flight t = \u221a(2h/g) is identical for both balls.\n\n5. FINAL ANSWER:\nOption C: Both reach the ground simultaneously\n\n6. QUICK TIP:\nClassic NCERT conceptual fact: Horizontal velocity does not affect the vertical time of fall!",
+    "solutionStructured": {
+      "concept": "Independence of orthogonal motions: Vertical motion is determined solely by initial vertical velocity u_y and vertical acceleration g. For both balls, u_y = 0 and a_y = g.",
+      "given": "Ball 1: dropped (u_y = 0). Ball 2: projected horizontally (u_y = 0, u_x = 15 m/s).",
+      "formula": "t = \u221a(2h / g) for vertical descent",
+      "stepByStep": "1. For the dropped ball: initial vertical velocity u_y\u2081 = 0.\n2. For the horizontally projected ball: initial velocity is purely horizontal, so initial vertical velocity u_y\u2082 = 0.\n3. Both balls experience the exact same downward acceleration g and fall through the same vertical height h.\n4. Since h = 1/2 g t\u00b2 for both, the time of flight t = \u221a(2h/g) is identical for both balls.",
+      "finalAnswer": "Option C: Both reach the ground simultaneously",
+      "whyOtherOptionsWrong": "Option B falsely assumes that having more initial velocity helps it reach the ground faster."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Free-fall motion in one dimension",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-319",
+    "questionNumber": 319,
+    "question": "A ball is dropped from a height of 20 m above the ground. If on each bounce it loses 25% of its kinetic energy, the height to which it rebounds after the first bounce is: (take g = 10 m/s\u00b2)",
+    "options": {
+      "A": "15 m",
+      "B": "10 m",
+      "C": "12 m",
+      "D": "5 m"
+    },
+    "optionsList": [
+      "15 m",
+      "10 m",
+      "12 m",
+      "5 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nKinetic energy is directly proportional to rebound height: KE = mgh. Retaining 75% KE means rebounding to 75% of original height: h' = 0.75 h.\n\n2. GIVEN:\nOriginal height h = 20 m, energy lost = 25%, energy retained = 75%.\n\n3. FORMULA / PRINCIPLE:\nh' = (1 - 0.25) \u00d7 h = 0.75 \u00d7 20 m\n\n4. STEP-BY-STEP SOLUTION:\n1. Just before impact, kinetic energy equals initial potential energy: KE\u2081 = mgh.\n2. After impact, it loses 25% of KE, so it retains 75% of its KE: KE\u2082 = 0.75 KE\u2081.\n3. At the peak of the rebound, this remaining KE converts to potential energy: mgh' = KE\u2082 = 0.75 mgh.\n4. Canceling mg gives: h' = 0.75 h = 0.75 \u00d7 20 m = 15 m.\n\n5. FINAL ANSWER:\nOption A: 15 m\n\n6. QUICK TIP:\nHeight reached after bounce is proportional to retained kinetic energy: h_new / h_old = KE_new / KE_old.",
+    "solutionStructured": {
+      "concept": "Kinetic energy is directly proportional to rebound height: KE = mgh. Retaining 75% KE means rebounding to 75% of original height: h' = 0.75 h.",
+      "given": "Original height h = 20 m, energy lost = 25%, energy retained = 75%.",
+      "formula": "h' = (1 - 0.25) \u00d7 h = 0.75 \u00d7 20 m",
+      "stepByStep": "1. Just before impact, kinetic energy equals initial potential energy: KE\u2081 = mgh.\n2. After impact, it loses 25% of KE, so it retains 75% of its KE: KE\u2082 = 0.75 KE\u2081.\n3. At the peak of the rebound, this remaining KE converts to potential energy: mgh' = KE\u2082 = 0.75 mgh.\n4. Canceling mg gives: h' = 0.75 h = 0.75 \u00d7 20 m = 15 m.",
+      "finalAnswer": "Option A: 15 m",
+      "whyOtherOptionsWrong": "10 m would correspond to 50% energy loss."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Free-fall motion in one dimension",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-320",
+    "questionNumber": 320,
+    "question": "A body is dropped from a height h and falls under gravity. The distance traveled by it during the second second of its motion is:",
+    "options": {
+      "A": "1.5 g",
+      "B": "0.5 g",
+      "C": "2.5 g",
+      "D": "2 g"
+    },
+    "optionsList": [
+      "1.5 g",
+      "0.5 g",
+      "2.5 g",
+      "2 g"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nUse s_n = g/2 (2n - 1) for n = 2: s\u2082 = (g/2)(2(2) - 1) = 3g/2 = 1.5 g.\n\n2. GIVEN:\nu = 0, a = g, n = 2.\n\n3. FORMULA / PRINCIPLE:\ns_n = (g/2)(2n - 1)\n\n4. STEP-BY-STEP SOLUTION:\n1. Distance in the nth second for a body dropped from rest: s_n = (g/2)(2n - 1).\n2. For the 2nd second, set n = 2:\n   s\u2082 = (g/2)(2(2) - 1) = (g/2)(4 - 1) = 3g / 2 = 1.5 g.\n3. (If g = 10 m/s\u00b2, s\u2082 = 1.5 \u00d7 10 = 15 m).\n\n5. FINAL ANSWER:\nOption A: 1.5 g\n\n6. QUICK TIP:\ns\u2081 = 0.5 g, s\u2082 = 1.5 g, s\u2083 = 2.5 g, s\u2084 = 3.5 g.",
+    "solutionStructured": {
+      "concept": "Use s_n = g/2 (2n - 1) for n = 2: s\u2082 = (g/2)(2(2) - 1) = 3g/2 = 1.5 g.",
+      "given": "u = 0, a = g, n = 2.",
+      "formula": "s_n = (g/2)(2n - 1)",
+      "stepByStep": "1. Distance in the nth second for a body dropped from rest: s_n = (g/2)(2n - 1).\n2. For the 2nd second, set n = 2:\n   s\u2082 = (g/2)(2(2) - 1) = (g/2)(4 - 1) = 3g / 2 = 1.5 g.\n3. (If g = 10 m/s\u00b2, s\u2082 = 1.5 \u00d7 10 = 15 m).",
+      "finalAnswer": "Option A: 1.5 g",
+      "whyOtherOptionsWrong": "2.5 g is the distance in the 3rd second."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Free-fall motion in one dimension",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-321",
+    "questionNumber": 321,
+    "question": "A body falls freely from rest. If the velocity acquired by it after falling through distance x is v, then after falling through an additional distance 3x, its velocity will be:",
+    "options": {
+      "A": "2v",
+      "B": "3v",
+      "C": "4v",
+      "D": "\u221a3 v"
+    },
+    "optionsList": [
+      "2v",
+      "3v",
+      "4v",
+      "\u221a3 v"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTotal distance from the start is x + 3x = 4x. Since v = \u221a(2gh), v_new = \u221a(2g(4x)) = 2\u221a(2gx) = 2v.\n\n2. GIVEN:\nAfter falling distance x, speed is v. Additional distance is 3x.\n\n3. FORMULA / PRINCIPLE:\nv = \u221a(2gh); Total height h_new = 4x\n\n4. STEP-BY-STEP SOLUTION:\n1. Initial speed from rest: after distance x, v\u00b2 = 2gx => v = \u221a(2gx).\n2. After falling an additional 3x, total distance fallen from the rest position is:\n   h_total = x + 3x = 4x.\n3. Final speed: v_final\u00b2 = 2g(4x) = 4(2gx) = 4 v\u00b2.\n4. Taking the square root: v_final = \u221a(4v\u00b2) = 2v.\n\n5. FINAL ANSWER:\nOption A: 2v\n\n6. QUICK TIP:\nTotal distance fallen is 4x, so speed doubles: v \u221d \u221ah, so \u221a4 = 2.",
+    "solutionStructured": {
+      "concept": "Total distance from the start is x + 3x = 4x. Since v = \u221a(2gh), v_new = \u221a(2g(4x)) = 2\u221a(2gx) = 2v.",
+      "given": "After falling distance x, speed is v. Additional distance is 3x.",
+      "formula": "v = \u221a(2gh); Total height h_new = 4x",
+      "stepByStep": "1. Initial speed from rest: after distance x, v\u00b2 = 2gx => v = \u221a(2gx).\n2. After falling an additional 3x, total distance fallen from the rest position is:\n   h_total = x + 3x = 4x.\n3. Final speed: v_final\u00b2 = 2g(4x) = 4(2gx) = 4 v\u00b2.\n4. Taking the square root: v_final = \u221a(4v\u00b2) = 2v.",
+      "finalAnswer": "Option A: 2v",
+      "whyOtherOptionsWrong": "4v would mean speed scales linearly with height, which violates v \u221d \u221ah."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Free-fall motion in one dimension",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-322",
+    "questionNumber": 322,
+    "question": "A parachutist bails out from an aeroplane and drops freely for 50 m without friction. When the parachute opens, he decelerates at 2 m/s\u00b2 and reaches the ground with speed 3 m/s. If g = 10 m/s\u00b2, what is the total height from which he bailed out?",
+    "options": {
+      "A": "297.75 m",
+      "B": "293 m",
+      "C": "300 m",
+      "D": "350 m"
+    },
+    "optionsList": [
+      "297.75 m",
+      "293 m",
+      "300 m",
+      "350 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nStage 1: Free fall for h\u2081 = 50 m, acquires v\u2081\u00b2 = 2gh\u2081 = 2(10)(50) = 1000. Stage 2: Deceleration a = 2 m/s\u00b2 from v\u2081 to v = 3 m/s: v\u00b2 = v\u2081\u00b2 - 2ah\u2082 => h\u2082 = (1000 - 9) / 4 = 247.75 m. Total height = 50 + 247.75 = 297.75 m.\n\n2. GIVEN:\nh\u2081 = 50 m, g = 10 m/s\u00b2, a_dec = 2 m/s\u00b2, v_ground = 3 m/s.\n\n3. FORMULA / PRINCIPLE:\nv\u2081\u00b2 = 2gh\u2081; v\u00b2 = v\u2081\u00b2 - 2ah\u2082; H = h\u2081 + h\u2082\n\n4. STEP-BY-STEP SOLUTION:\n1. Stage 1 (free fall from rest): v\u2081\u00b2 = 0 + 2gh\u2081 = 2 \u00d7 10 \u00d7 50 = 1000 (m/s)\u00b2.\n2. Stage 2 (with parachute): initial speed squared is 1000, final speed is 3 m/s, deceleration a = 2 m/s\u00b2.\n3. Apply 3rd equation: (3)\u00b2 = 1000 - 2(2) h\u2082.\n4. 9 = 1000 - 4 h\u2082 => 4 h\u2082 = 991 => h\u2082 = 991 / 4 = 247.75 m.\n5. Total height H = h\u2081 + h\u2082 = 50 m + 247.75 m = 297.75 m.\n\n5. FINAL ANSWER:\nOption A: 297.75 m\n\n6. QUICK TIP:\nMulti-stage problem: Calculate the intermediate velocity squared (1000) and use it directly without taking square root!",
+    "solutionStructured": {
+      "concept": "Stage 1: Free fall for h\u2081 = 50 m, acquires v\u2081\u00b2 = 2gh\u2081 = 2(10)(50) = 1000. Stage 2: Deceleration a = 2 m/s\u00b2 from v\u2081 to v = 3 m/s: v\u00b2 = v\u2081\u00b2 - 2ah\u2082 => h\u2082 = (1000 - 9) / 4 = 247.75 m. Total height = 50 + 247.75 = 297.75 m.",
+      "given": "h\u2081 = 50 m, g = 10 m/s\u00b2, a_dec = 2 m/s\u00b2, v_ground = 3 m/s.",
+      "formula": "v\u2081\u00b2 = 2gh\u2081; v\u00b2 = v\u2081\u00b2 - 2ah\u2082; H = h\u2081 + h\u2082",
+      "stepByStep": "1. Stage 1 (free fall from rest): v\u2081\u00b2 = 0 + 2gh\u2081 = 2 \u00d7 10 \u00d7 50 = 1000 (m/s)\u00b2.\n2. Stage 2 (with parachute): initial speed squared is 1000, final speed is 3 m/s, deceleration a = 2 m/s\u00b2.\n3. Apply 3rd equation: (3)\u00b2 = 1000 - 2(2) h\u2082.\n4. 9 = 1000 - 4 h\u2082 => 4 h\u2082 = 991 => h\u2082 = 991 / 4 = 247.75 m.\n5. Total height H = h\u2081 + h\u2082 = 50 m + 247.75 m = 297.75 m.",
+      "finalAnswer": "Option A: 297.75 m",
+      "whyOtherOptionsWrong": "247.75 m forgets to add the initial 50 m of free fall."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Free-fall motion in one dimension",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-323",
+    "questionNumber": 323,
+    "question": "A ball is dropped from height H. At the same instant, another ball is thrown vertically upwards from the ground such that it would just reach height H. At what height above the ground do the two balls cross each other?",
+    "options": {
+      "A": "H / 2",
+      "B": "3H / 4",
+      "C": "2H / 3",
+      "D": "H / 4"
+    },
+    "optionsList": [
+      "H / 2",
+      "3H / 4",
+      "2H / 3",
+      "H / 4"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nBall 2 has u = \u221a(2gH). Meeting time t = H / (u_rel) = H / \u221a(2gH) = \u221a(H / 2g). Ball 1 falls y = 1/2 g t\u00b2 = 1/2 g (H / 2g) = H/4. Height above ground = H - H/4 = 3H/4.\n\n2. GIVEN:\nBall 1 dropped from H. Ball 2 thrown from ground with u = \u221a(2gH).\n\n3. FORMULA / PRINCIPLE:\nt_meet = H / u; y\u2081 = (1/2) g t\u00b2; h_meet = H - y\u2081\n\n4. STEP-BY-STEP SOLUTION:\n1. Ball 2 can just reach height H, so its initial velocity is u = \u221a(2gH).\n2. Since both experience downward acceleration g, their relative acceleration is a_rel = g - g = 0.\n3. Relative speed between them is constant: v_rel = u + 0 = \u221a(2gH).\n4. Time taken to meet: t = H / v_rel = H / \u221a(2gH) = \u221a(H / 2g).\n5. Distance fallen by the dropped ball in this time:\n   y\u2081 = (1/2) g t\u00b2 = (1/2) g [H / (2g)] = H / 4.\n6. Height of meeting point above the ground: h = H - y\u2081 = H - H/4 = 3H/4.\n\n5. FINAL ANSWER:\nOption B: 3H / 4\n\n6. QUICK TIP:\nRelative motion shortcut: Since relative acceleration is ZERO under gravity, meeting time is simply t = Separation / Relative Speed!",
+    "solutionStructured": {
+      "concept": "Ball 2 has u = \u221a(2gH). Meeting time t = H / (u_rel) = H / \u221a(2gH) = \u221a(H / 2g). Ball 1 falls y = 1/2 g t\u00b2 = 1/2 g (H / 2g) = H/4. Height above ground = H - H/4 = 3H/4.",
+      "given": "Ball 1 dropped from H. Ball 2 thrown from ground with u = \u221a(2gH).",
+      "formula": "t_meet = H / u; y\u2081 = (1/2) g t\u00b2; h_meet = H - y\u2081",
+      "stepByStep": "1. Ball 2 can just reach height H, so its initial velocity is u = \u221a(2gH).\n2. Since both experience downward acceleration g, their relative acceleration is a_rel = g - g = 0.\n3. Relative speed between them is constant: v_rel = u + 0 = \u221a(2gH).\n4. Time taken to meet: t = H / v_rel = H / \u221a(2gH) = \u221a(H / 2g).\n5. Distance fallen by the dropped ball in this time:\n   y\u2081 = (1/2) g t\u00b2 = (1/2) g [H / (2g)] = H / 4.\n6. Height of meeting point above the ground: h = H - y\u2081 = H - H/4 = 3H/4.",
+      "finalAnswer": "Option B: 3H / 4",
+      "whyOtherOptionsWrong": "H/4 is the distance fallen from the top, not the height above the ground."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Free-fall motion in one dimension",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-324",
+    "questionNumber": 324,
+    "question": "A particle is dropped from the top of a tower. During the last 2 seconds of its fall, it covers 80 m. What is the total height of the tower? (take g = 10 m/s\u00b2)",
+    "options": {
+      "A": "125 m",
+      "B": "180 m",
+      "C": "100 m",
+      "D": "80 m"
+    },
+    "optionsList": [
+      "125 m",
+      "180 m",
+      "100 m",
+      "80 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nH = 1/2 g t\u00b2 and H - 80 = 1/2 g (t - 2)\u00b2. Subtracting gives 80 = 1/2 g [t\u00b2 - (t-2)\u00b2] = 5(4t - 4) = 20t - 20 => 20t = 100 => t = 5 s. H = 1/2(10)(25) = 125 m.\n\n2. GIVEN:\nDistance in last 2 seconds = 80 m, g = 10 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\n\u0394s = (1/2) g [t\u00b2 - (t - 2)\u00b2] = 80 m\n\n4. STEP-BY-STEP SOLUTION:\n1. Total height: H = (1/2) g t\u00b2 = 5t\u00b2.\n2. Height in first (t - 2) seconds: H' = 5(t - 2)\u00b2.\n3. Distance in last 2 s: H - H' = 5[t\u00b2 - (t\u00b2 - 4t + 4)] = 5(4t - 4) = 20t - 20.\n4. Set equal to 80: 20t - 20 = 80 => 20t = 100 => t = 5 s.\n5. Total height H = 5 \u00d7 (5)\u00b2 = 5 \u00d7 25 = 125 m.\n\n5. FINAL ANSWER:\nOption A: 125 m\n\n6. QUICK TIP:\nNotice: In 5 seconds, distances per second are 5, 15, 25, 35, 45 m. Last 2 seconds = 35 + 45 = 80 m! Matches perfectly!",
+    "solutionStructured": {
+      "concept": "H = 1/2 g t\u00b2 and H - 80 = 1/2 g (t - 2)\u00b2. Subtracting gives 80 = 1/2 g [t\u00b2 - (t-2)\u00b2] = 5(4t - 4) = 20t - 20 => 20t = 100 => t = 5 s. H = 1/2(10)(25) = 125 m.",
+      "given": "Distance in last 2 seconds = 80 m, g = 10 m/s\u00b2.",
+      "formula": "\u0394s = (1/2) g [t\u00b2 - (t - 2)\u00b2] = 80 m",
+      "stepByStep": "1. Total height: H = (1/2) g t\u00b2 = 5t\u00b2.\n2. Height in first (t - 2) seconds: H' = 5(t - 2)\u00b2.\n3. Distance in last 2 s: H - H' = 5[t\u00b2 - (t\u00b2 - 4t + 4)] = 5(4t - 4) = 20t - 20.\n4. Set equal to 80: 20t - 20 = 80 => 20t = 100 => t = 5 s.\n5. Total height H = 5 \u00d7 (5)\u00b2 = 5 \u00d7 25 = 125 m.",
+      "finalAnswer": "Option A: 125 m",
+      "whyOtherOptionsWrong": "180 m would correspond to t = 6 s, where last 2 seconds would cover 45 + 55 = 100 m."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Free-fall motion in one dimension",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-325",
+    "questionNumber": 325,
+    "question": "A body is dropped from a height H. If t\u2081 is the time taken to fall through the first half of the height and t\u2082 is the time taken to fall through the second half, then which of the following is correct?",
+    "options": {
+      "A": "t\u2082 = (\u221a2 - 1) t\u2081",
+      "B": "t\u2082 = t\u2081 / \u221a2",
+      "C": "t\u2082 = (\u221a2 + 1) t\u2081",
+      "D": "t\u2082 = t\u2081 / 2"
+    },
+    "optionsList": [
+      "t\u2082 = (\u221a2 - 1) t\u2081",
+      "t\u2082 = t\u2081 / \u221a2",
+      "t\u2082 = (\u221a2 + 1) t\u2081",
+      "t\u2082 = t\u2081 / 2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nt\u2081 = \u221a(H/g). Total time T = \u221a(2H/g) = \u221a2 t\u2081. Then t\u2082 = T - t\u2081 = (\u221a2 - 1) t\u2081.\n\n2. GIVEN:\nHeight H, split into first H/2 and second H/2.\n\n3. FORMULA / PRINCIPLE:\nT = t\u2081 + t\u2082 = \u221a2 t\u2081 => t\u2082 = (\u221a2 - 1) t\u2081\n\n4. STEP-BY-STEP SOLUTION:\n1. Time for first half H/2: t\u2081 = \u221a(2(H/2)/g) = \u221a(H/g).\n2. Time for total height H: T = \u221a(2H/g) = \u221a2 \u221a(H/g) = \u221a2 t\u2081.\n3. Time for second half: t\u2082 = T - t\u2081 = \u221a2 t\u2081 - t\u2081 = (\u221a2 - 1) t\u2081.\n4. Since \u221a2 \u2248 1.414, t\u2082 \u2248 0.414 t\u2081.\n\n5. FINAL ANSWER:\nOption A: t\u2082 = (\u221a2 - 1) t\u2081\n\n6. QUICK TIP:\nThe second half takes only ~41.4% of the time taken for the first half!",
+    "solutionStructured": {
+      "concept": "t\u2081 = \u221a(H/g). Total time T = \u221a(2H/g) = \u221a2 t\u2081. Then t\u2082 = T - t\u2081 = (\u221a2 - 1) t\u2081.",
+      "given": "Height H, split into first H/2 and second H/2.",
+      "formula": "T = t\u2081 + t\u2082 = \u221a2 t\u2081 => t\u2082 = (\u221a2 - 1) t\u2081",
+      "stepByStep": "1. Time for first half H/2: t\u2081 = \u221a(2(H/2)/g) = \u221a(H/g).\n2. Time for total height H: T = \u221a(2H/g) = \u221a2 \u221a(H/g) = \u221a2 t\u2081.\n3. Time for second half: t\u2082 = T - t\u2081 = \u221a2 t\u2081 - t\u2081 = (\u221a2 - 1) t\u2081.\n4. Since \u221a2 \u2248 1.414, t\u2082 \u2248 0.414 t\u2081.",
+      "finalAnswer": "Option A: t\u2082 = (\u221a2 - 1) t\u2081",
+      "whyOtherOptionsWrong": "t\u2082 = t\u2081 / 2 falsely assumes average speed in second half is exactly double."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Free-fall motion in one dimension",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-326",
+    "questionNumber": 326,
+    "question": "A flowerpot falls from a ledge of an apartment building. If it takes 0.1 s to pass by a window of height 1.45 m, what was the speed of the pot when it was at the top of the window? (take g = 10 m/s\u00b2)",
+    "options": {
+      "A": "14 m/s",
+      "B": "14.5 m/s",
+      "C": "15 m/s",
+      "D": "12 m/s"
+    },
+    "optionsList": [
+      "14 m/s",
+      "14.5 m/s",
+      "15 m/s",
+      "12 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nApply h = u t + 1/2 g t\u00b2: 1.45 = u(0.1) + 1/2(10)(0.1)\u00b2 = 0.1 u + 0.05 => 0.1 u = 1.40 => u = 14 m/s.\n\n2. GIVEN:\nWindow height h = 1.45 m, passage time t = 0.1 s, g = 10 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\nh = u t + (1/2) g t\u00b2\n\n4. STEP-BY-STEP SOLUTION:\n1. Let u be the downward speed of the flowerpot at the top of the window.\n2. Apply displacement formula for the window passage:\n   h = u t + (1/2) g t\u00b2.\n3. 1.45 = u (0.1) + (1/2) (10) (0.1)\u00b2.\n4. 1.45 = 0.1 u + 5 (0.01) = 0.1 u + 0.05.\n5. 0.1 u = 1.45 - 0.05 = 1.40.\n6. u = 1.40 / 0.1 = 14 m/s.\n\n5. FINAL ANSWER:\nOption A: 14 m/s\n\n6. QUICK TIP:\nQuick formula for speed entering window of height h in time t: u = h/t - 1/2 gt = 1.45/0.1 - 0.5 = 14.5 - 0.5 = 14 m/s!",
+    "solutionStructured": {
+      "concept": "Apply h = u t + 1/2 g t\u00b2: 1.45 = u(0.1) + 1/2(10)(0.1)\u00b2 = 0.1 u + 0.05 => 0.1 u = 1.40 => u = 14 m/s.",
+      "given": "Window height h = 1.45 m, passage time t = 0.1 s, g = 10 m/s\u00b2.",
+      "formula": "h = u t + (1/2) g t\u00b2",
+      "stepByStep": "1. Let u be the downward speed of the flowerpot at the top of the window.\n2. Apply displacement formula for the window passage:\n   h = u t + (1/2) g t\u00b2.\n3. 1.45 = u (0.1) + (1/2) (10) (0.1)\u00b2.\n4. 1.45 = 0.1 u + 5 (0.01) = 0.1 u + 0.05.\n5. 0.1 u = 1.45 - 0.05 = 1.40.\n6. u = 1.40 / 0.1 = 14 m/s.",
+      "finalAnswer": "Option A: 14 m/s",
+      "whyOtherOptionsWrong": "14.5 m/s is simply h/t, ignoring the acceleration during the window crossing."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Free-fall motion in one dimension",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-327",
+    "questionNumber": 327,
+    "question": "A ball is released from the top of a tower of height H. It takes time T to reach the ground. The ratio of the distance traveled by the ball in the first T/2 seconds to the distance traveled in the next T/2 seconds is:",
+    "options": {
+      "A": "1 : 3",
+      "B": "1 : 2",
+      "C": "1 : 4",
+      "D": "1 : \u221a2"
+    },
+    "optionsList": [
+      "1 : 3",
+      "1 : 2",
+      "1 : 4",
+      "1 : \u221a2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor equal time intervals starting from rest, distances are in ratio 1 : 3 : 5... so s\u2081 : s\u2082 = 1 : 3.\n\n2. GIVEN:\nTime intervals t\u2081 = T/2, t\u2082 = T/2.\n\n3. FORMULA / PRINCIPLE:\ns\u2081 = (1/2) g (T/2)\u00b2 = H/4; s\u2082 = H - s\u2081 = 3H/4 => s\u2081 : s\u2082 = 1 : 3\n\n4. STEP-BY-STEP SOLUTION:\n1. Distance in first half of total time (t = T/2):\n   s\u2081 = (1/2) g (T/2)\u00b2 = (1/4) [(1/2) g T\u00b2] = H / 4.\n2. Total distance in time T is H.\n3. Distance in second half of time: s\u2082 = H - s\u2081 = H - H/4 = 3H / 4.\n4. Ratio s\u2081 : s\u2082 = (H/4) : (3H/4) = 1 : 3.\n\n5. FINAL ANSWER:\nOption A: 1 : 3\n\n6. QUICK TIP:\nGalileo's rule applies to any equal time intervals starting from rest: 1 : 3 : 5 : 7...",
+    "solutionStructured": {
+      "concept": "For equal time intervals starting from rest, distances are in ratio 1 : 3 : 5... so s\u2081 : s\u2082 = 1 : 3.",
+      "given": "Time intervals t\u2081 = T/2, t\u2082 = T/2.",
+      "formula": "s\u2081 = (1/2) g (T/2)\u00b2 = H/4; s\u2082 = H - s\u2081 = 3H/4 => s\u2081 : s\u2082 = 1 : 3",
+      "stepByStep": "1. Distance in first half of total time (t = T/2):\n   s\u2081 = (1/2) g (T/2)\u00b2 = (1/4) [(1/2) g T\u00b2] = H / 4.\n2. Total distance in time T is H.\n3. Distance in second half of time: s\u2082 = H - s\u2081 = H - H/4 = 3H / 4.\n4. Ratio s\u2081 : s\u2082 = (H/4) : (3H/4) = 1 : 3.",
+      "finalAnswer": "Option A: 1 : 3",
+      "whyOtherOptionsWrong": "1 : 2 falsely assumes uniform velocity."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Free-fall motion in one dimension",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-328",
+    "questionNumber": 328,
+    "question": "A stone is dropped from a height h. Simultaneously, another stone is thrown upwards from the ground with such a velocity that it can reach maximum height 4h. The time at which the two stones pass each other is:",
+    "options": {
+      "A": "\u221a(h / (8g))",
+      "B": "\u221a(h / (2g))",
+      "C": "\u221a(h / g)",
+      "D": "2 \u221a(h / g)"
+    },
+    "optionsList": [
+      "\u221a(h / (8g))",
+      "\u221a(h / (2g))",
+      "\u221a(h / g)",
+      "2 \u221a(h / g)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nMaximum height of 2nd stone is 4h = u\u00b2 / (2g) => u = \u221a(8gh). Relative acceleration is zero, so t = h / u = h / \u221a(8gh) = \u221a(h / (8g)).\n\n2. GIVEN:\nSeparation = h, max height of second stone = 4h.\n\n3. FORMULA / PRINCIPLE:\nu = \u221a(2g H_max) = \u221a(8gh); t_meet = h / u\n\n4. STEP-BY-STEP SOLUTION:\n1. For the stone thrown upwards, maximum height is 4h:\n   H_max = u\u00b2 / (2g) = 4h => u\u00b2 = 8gh => u = \u221a(8gh).\n2. The relative acceleration between both stones is a_rel = g - g = 0.\n3. The initial relative velocity is v_rel = u + 0 = \u221a(8gh).\n4. The initial distance between them is h.\n5. Time to pass each other: t = separation / v_rel = h / \u221a(8gh) = \u221a(h / 8g).\n\n5. FINAL ANSWER:\nOption A: \u221a(h / (8g))\n\n6. QUICK TIP:\nZero relative acceleration makes vertical meeting problems a one-step division: t = separation / relative speed!",
+    "solutionStructured": {
+      "concept": "Maximum height of 2nd stone is 4h = u\u00b2 / (2g) => u = \u221a(8gh). Relative acceleration is zero, so t = h / u = h / \u221a(8gh) = \u221a(h / (8g)).",
+      "given": "Separation = h, max height of second stone = 4h.",
+      "formula": "u = \u221a(2g H_max) = \u221a(8gh); t_meet = h / u",
+      "stepByStep": "1. For the stone thrown upwards, maximum height is 4h:\n   H_max = u\u00b2 / (2g) = 4h => u\u00b2 = 8gh => u = \u221a(8gh).\n2. The relative acceleration between both stones is a_rel = g - g = 0.\n3. The initial relative velocity is v_rel = u + 0 = \u221a(8gh).\n4. The initial distance between them is h.\n5. Time to pass each other: t = separation / v_rel = h / \u221a(8gh) = \u221a(h / 8g).",
+      "finalAnswer": "Option A: \u221a(h / (8g))",
+      "whyOtherOptionsWrong": "Option B corresponds to max height being h instead of 4h."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Free-fall motion in one dimension",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-329",
+    "questionNumber": 329,
+    "question": "A body is dropped from rest at height H. If it travels a distance 9H/25 in the last second of its fall, the value of H is: (take g = 10 m/s\u00b2)",
+    "options": {
+      "A": "125 m",
+      "B": "180 m",
+      "C": "245 m",
+      "D": "80 m"
+    },
+    "optionsList": [
+      "125 m",
+      "180 m",
+      "245 m",
+      "80 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDistance in first (t-1) seconds is H - 9H/25 = 16H/25. Thus (t-1)/t = \u221a(16/25) = 4/5 => t = 5 s. H = 1/2(10)(5)\u00b2 = 125 m.\n\n2. GIVEN:\nLast second covers 9H/25, g = 10 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\n(t - 1)\u00b2 / t\u00b2 = 1 - 9/25 = 16/25 => (t - 1) / t = 4/5\n\n4. STEP-BY-STEP SOLUTION:\n1. Height fallen in first (t - 1) seconds: H' = H - (9/25)H = (16/25)H.\n2. Ratio of heights: H' / H = (t - 1)\u00b2 / t\u00b2 = 16 / 25.\n3. Taking square root: (t - 1) / t = 4 / 5.\n4. 5t - 5 = 4t => t = 5 s.\n5. Total height H = (1/2) g t\u00b2 = (1/2) \u00d7 10 \u00d7 (5)\u00b2 = 5 \u00d7 25 = 125 m.\n\n5. FINAL ANSWER:\nOption A: 125 m\n\n6. QUICK TIP:\nFast shortcut: (t - 1)/t = \u221a(1 - 9/25) = 4/5 => t = 5 s => H = 125 m in 10 seconds flat!",
+    "solutionStructured": {
+      "concept": "Distance in first (t-1) seconds is H - 9H/25 = 16H/25. Thus (t-1)/t = \u221a(16/25) = 4/5 => t = 5 s. H = 1/2(10)(5)\u00b2 = 125 m.",
+      "given": "Last second covers 9H/25, g = 10 m/s\u00b2.",
+      "formula": "(t - 1)\u00b2 / t\u00b2 = 1 - 9/25 = 16/25 => (t - 1) / t = 4/5",
+      "stepByStep": "1. Height fallen in first (t - 1) seconds: H' = H - (9/25)H = (16/25)H.\n2. Ratio of heights: H' / H = (t - 1)\u00b2 / t\u00b2 = 16 / 25.\n3. Taking square root: (t - 1) / t = 4 / 5.\n4. 5t - 5 = 4t => t = 5 s.\n5. Total height H = (1/2) g t\u00b2 = (1/2) \u00d7 10 \u00d7 (5)\u00b2 = 5 \u00d7 25 = 125 m.",
+      "finalAnswer": "Option A: 125 m",
+      "whyOtherOptionsWrong": "180 m would correspond to t = 6 s."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Free-fall motion in one dimension",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-330",
+    "questionNumber": 330,
+    "question": "A body falls freely from rest. If the distance covered in the last second is equal to the distance covered in the first three seconds, the total time of fall is:",
+    "options": {
+      "A": "5 s",
+      "B": "4.5 s",
+      "C": "6 s",
+      "D": "5.5 s"
+    },
+    "optionsList": [
+      "5 s",
+      "4.5 s",
+      "6 s",
+      "5.5 s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\ns_last = g/2 (2t - 1). s_first3 = 1/2 g (3)\u00b2 = 9(g/2). Equating gives 2t - 1 = 9 => 2t = 10 => t = 5 s.\n\n2. GIVEN:\nDistance in last second = distance in first 3 seconds.\n\n3. FORMULA / PRINCIPLE:\n(g/2)(2t - 1) = (1/2) g (3)\u00b2\n\n4. STEP-BY-STEP SOLUTION:\n1. Distance in first 3 seconds: s\u2083 = (1/2) g (3)\u00b2 = 9 (g/2).\n2. Distance in the last (t-th) second: s_t = (g/2)(2t - 1).\n3. Given s_t = s\u2083: (g/2)(2t - 1) = 9 (g/2).\n4. Canceling g/2 gives: 2t - 1 = 9 => 2t = 10 => t = 5 s.\n\n5. FINAL ANSWER:\nOption A: 5 s\n\n6. QUICK TIP:\nNotice: In 5 s, s_last = s\u2085 = (g/2)(2(5)-1) = 9(g/2) = 45 m. First 3 s = 5 + 15 + 25 = 45 m!",
+    "solutionStructured": {
+      "concept": "s_last = g/2 (2t - 1). s_first3 = 1/2 g (3)\u00b2 = 9(g/2). Equating gives 2t - 1 = 9 => 2t = 10 => t = 5 s.",
+      "given": "Distance in last second = distance in first 3 seconds.",
+      "formula": "(g/2)(2t - 1) = (1/2) g (3)\u00b2",
+      "stepByStep": "1. Distance in first 3 seconds: s\u2083 = (1/2) g (3)\u00b2 = 9 (g/2).\n2. Distance in the last (t-th) second: s_t = (g/2)(2t - 1).\n3. Given s_t = s\u2083: (g/2)(2t - 1) = 9 (g/2).\n4. Canceling g/2 gives: 2t - 1 = 9 => 2t = 10 => t = 5 s.",
+      "finalAnswer": "Option A: 5 s",
+      "whyOtherOptionsWrong": "4.5 s gives 2t - 1 = 8, which does not equal 9."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Free-fall motion in one dimension",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-331",
+    "questionNumber": 331,
+    "question": "A ball is dropped from a height h on a floor. If the coefficient of restitution is e, the height to which the ball bounces after the first impact is:",
+    "options": {
+      "A": "e h",
+      "B": "e\u00b2 h",
+      "C": "e\u2074 h",
+      "D": "h / e\u00b2"
+    },
+    "optionsList": [
+      "e h",
+      "e\u00b2 h",
+      "e\u2074 h",
+      "h / e\u00b2"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nSpeed after impact is v' = e v. Height h' = v'\u00b2 / (2g) = e\u00b2 v\u00b2 / (2g) = e\u00b2 h.\n\n2. GIVEN:\nOriginal height h, coefficient of restitution e.\n\n3. FORMULA / PRINCIPLE:\nv = \u221a(2gh); v' = e v; h' = v'\u00b2 / (2g) = e\u00b2 h\n\n4. STEP-BY-STEP SOLUTION:\n1. Velocity just before impact: v = \u221a(2gh).\n2. By definition of coefficient of restitution: rebound velocity v' = e v.\n3. Height reached after bounce: h' = v'\u00b2 / (2g) = (e v)\u00b2 / (2g) = e\u00b2 (v\u00b2 / 2g).\n4. Since v\u00b2 / (2g) = h, we get h' = e\u00b2 h.\n\n5. FINAL ANSWER:\nOption B: e\u00b2 h\n\n6. QUICK TIP:\nAfter n bounces: h_n = e^(2n) h and v_n = e^n v.",
+    "solutionStructured": {
+      "concept": "Speed after impact is v' = e v. Height h' = v'\u00b2 / (2g) = e\u00b2 v\u00b2 / (2g) = e\u00b2 h.",
+      "given": "Original height h, coefficient of restitution e.",
+      "formula": "v = \u221a(2gh); v' = e v; h' = v'\u00b2 / (2g) = e\u00b2 h",
+      "stepByStep": "1. Velocity just before impact: v = \u221a(2gh).\n2. By definition of coefficient of restitution: rebound velocity v' = e v.\n3. Height reached after bounce: h' = v'\u00b2 / (2g) = (e v)\u00b2 / (2g) = e\u00b2 (v\u00b2 / 2g).\n4. Since v\u00b2 / (2g) = h, we get h' = e\u00b2 h.",
+      "finalAnswer": "Option B: e\u00b2 h",
+      "whyOtherOptionsWrong": "eh is the velocity ratio, not the height ratio (since height scales with velocity squared)."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Free-fall motion in one dimension",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-332",
+    "questionNumber": 332,
+    "question": "A body is dropped from the top of a tower. After falling for 2 seconds, it passes an electric pole. If the pole is 100 m above the ground, what is the total height of the tower? (take g = 10 m/s\u00b2)",
+    "options": {
+      "A": "120 m",
+      "B": "140 m",
+      "C": "100 m",
+      "D": "125 m"
+    },
+    "optionsList": [
+      "120 m",
+      "140 m",
+      "100 m",
+      "125 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nHeight fallen in 2 s is h\u2081 = 1/2 g (2)\u00b2 = 20 m. Total height of tower = height of pole + h\u2081 = 100 + 20 = 120 m.\n\n2. GIVEN:\nt = 2 s to reach pole, pole height = 100 m above ground, g = 10 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\nh_fallen = (1/2) g t\u00b2; H_total = h_fallen + h_pole\n\n4. STEP-BY-STEP SOLUTION:\n1. Distance fallen by body in 2 seconds from the top of the tower:\n   h_fallen = (1/2) g t\u00b2 = (1/2) \u00d7 10 \u00d7 (2)\u00b2 = 20 m.\n2. The pole is located 100 m above the ground.\n3. Therefore, the top of the tower is 20 m above the pole.\n4. Total height of tower = 100 m + 20 m = 120 m.\n\n5. FINAL ANSWER:\nOption A: 120 m\n\n6. QUICK TIP:\nAdd distance fallen from top to the remaining height above ground.",
+    "solutionStructured": {
+      "concept": "Height fallen in 2 s is h\u2081 = 1/2 g (2)\u00b2 = 20 m. Total height of tower = height of pole + h\u2081 = 100 + 20 = 120 m.",
+      "given": "t = 2 s to reach pole, pole height = 100 m above ground, g = 10 m/s\u00b2.",
+      "formula": "h_fallen = (1/2) g t\u00b2; H_total = h_fallen + h_pole",
+      "stepByStep": "1. Distance fallen by body in 2 seconds from the top of the tower:\n   h_fallen = (1/2) g t\u00b2 = (1/2) \u00d7 10 \u00d7 (2)\u00b2 = 20 m.\n2. The pole is located 100 m above the ground.\n3. Therefore, the top of the tower is 20 m above the pole.\n4. Total height of tower = 100 m + 20 m = 120 m.",
+      "finalAnswer": "Option A: 120 m",
+      "whyOtherOptionsWrong": "140 m adds 40 m incorrectly."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Free-fall motion in one dimension",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-333",
+    "questionNumber": 333,
+    "question": "A stone falls freely under gravity. It covers distances h\u2081, h\u2082, and h\u2083 in the first 5 seconds, the next 5 seconds, and the further next 5 seconds respectively. The relation between h\u2081, h\u2082, and h\u2083 is:",
+    "options": {
+      "A": "h\u2081 = 2h\u2082 = 3h\u2083",
+      "B": "h\u2081 = h\u2082 / 3 = h\u2083 / 5",
+      "C": "h\u2082 = 3h\u2081, h\u2083 = 3h\u2082",
+      "D": "h\u2081 = h\u2082 = h\u2083"
+    },
+    "optionsList": [
+      "h\u2081 = 2h\u2082 = 3h\u2083",
+      "h\u2081 = h\u2082 / 3 = h\u2083 / 5",
+      "h\u2082 = 3h\u2081, h\u2083 = 3h\u2082",
+      "h\u2081 = h\u2082 = h\u2083"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nDistances in equal successive intervals of time starting from rest are in the ratio 1 : 3 : 5. So h\u2081 : h\u2082 : h\u2083 = 1 : 3 : 5 => h\u2081 = h\u2082/3 = h\u2083/5.\n\n2. GIVEN:\nEqual consecutive time intervals of 5 seconds each.\n\n3. FORMULA / PRINCIPLE:\nh\u2081 : h\u2082 : h\u2083 = 1 : 3 : 5\n\n4. STEP-BY-STEP SOLUTION:\n1. Distance in first 5 s: h\u2081 = (1/2) g (5)\u00b2 = 12.5 g.\n2. Total distance in 10 s: s\u2081\u2080 = (1/2) g (10)\u00b2 = 50 g.\n   Distance in second 5 s: h\u2082 = 50g - 12.5g = 37.5 g = 3 h\u2081.\n3. Total distance in 15 s: s\u2081\u2085 = (1/2) g (15)\u00b2 = 112.5 g.\n   Distance in third 5 s: h\u2083 = 112.5g - 50g = 62.5 g = 5 h\u2081.\n4. Therefore, h\u2081 : h\u2082 : h\u2083 = 1 : 3 : 5, which means h\u2081 = h\u2082/3 = h\u2083/5.\n\n5. FINAL ANSWER:\nOption B: h\u2081 = h\u2082 / 3 = h\u2083 / 5\n\n6. QUICK TIP:\nClassic Galileo ratio: 1 : 3 : 5 : 7... Expressed as h\u2081 = h\u2082/3 = h\u2083/5.",
+    "solutionStructured": {
+      "concept": "Distances in equal successive intervals of time starting from rest are in the ratio 1 : 3 : 5. So h\u2081 : h\u2082 : h\u2083 = 1 : 3 : 5 => h\u2081 = h\u2082/3 = h\u2083/5.",
+      "given": "Equal consecutive time intervals of 5 seconds each.",
+      "formula": "h\u2081 : h\u2082 : h\u2083 = 1 : 3 : 5",
+      "stepByStep": "1. Distance in first 5 s: h\u2081 = (1/2) g (5)\u00b2 = 12.5 g.\n2. Total distance in 10 s: s\u2081\u2080 = (1/2) g (10)\u00b2 = 50 g.\n   Distance in second 5 s: h\u2082 = 50g - 12.5g = 37.5 g = 3 h\u2081.\n3. Total distance in 15 s: s\u2081\u2085 = (1/2) g (15)\u00b2 = 112.5 g.\n   Distance in third 5 s: h\u2083 = 112.5g - 50g = 62.5 g = 5 h\u2081.\n4. Therefore, h\u2081 : h\u2082 : h\u2083 = 1 : 3 : 5, which means h\u2081 = h\u2082/3 = h\u2083/5.",
+      "finalAnswer": "Option B: h\u2081 = h\u2082 / 3 = h\u2083 / 5",
+      "whyOtherOptionsWrong": "Option C says h\u2083 = 3h\u2082 = 9h\u2081, but the ratio is 5, not 9."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Free-fall motion in one dimension",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-334",
+    "questionNumber": 334,
+    "question": "A body is dropped from height H. If it travels a distance 5H/9 in the last second of its motion, the value of H is: (take g = 10 m/s\u00b2)",
+    "options": {
+      "A": "45 m",
+      "B": "20 m",
+      "C": "80 m",
+      "D": "60 m"
+    },
+    "optionsList": [
+      "45 m",
+      "20 m",
+      "80 m",
+      "60 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\n(t-1)/t = \u221a(1 - 5/9) = \u221a(4/9) = 2/3 => 3t - 3 = 2t => t = 3 s. H = 1/2(10)(3)\u00b2 = 45 m.\n\n2. GIVEN:\nLast second covers 5H/9, g = 10 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\n(t - 1) / t = \u221a(1 - 5/9) = 2/3 => t = 3 s\n\n4. STEP-BY-STEP SOLUTION:\n1. Distance in first (t - 1) seconds: H' = H - 5H/9 = 4H/9.\n2. Taking ratio: (t - 1)\u00b2 / t\u00b2 = 4/9.\n3. (t - 1) / t = 2/3 => 3t - 3 = 2t => t = 3 s.\n4. Total height H = (1/2) g t\u00b2 = (1/2) \u00d7 10 \u00d7 (3)\u00b2 = 5 \u00d7 9 = 45 m.\n\n5. FINAL ANSWER:\nOption A: 45 m\n\n6. QUICK TIP:\nVerify: For t = 3 s, H = 45 m. In 3rd second: s\u2083 = 5(2(3)-1) = 25 m. 25/45 = 5/9! Exactly matches!",
+    "solutionStructured": {
+      "concept": "(t-1)/t = \u221a(1 - 5/9) = \u221a(4/9) = 2/3 => 3t - 3 = 2t => t = 3 s. H = 1/2(10)(3)\u00b2 = 45 m.",
+      "given": "Last second covers 5H/9, g = 10 m/s\u00b2.",
+      "formula": "(t - 1) / t = \u221a(1 - 5/9) = 2/3 => t = 3 s",
+      "stepByStep": "1. Distance in first (t - 1) seconds: H' = H - 5H/9 = 4H/9.\n2. Taking ratio: (t - 1)\u00b2 / t\u00b2 = 4/9.\n3. (t - 1) / t = 2/3 => 3t - 3 = 2t => t = 3 s.\n4. Total height H = (1/2) g t\u00b2 = (1/2) \u00d7 10 \u00d7 (3)\u00b2 = 5 \u00d7 9 = 45 m.",
+      "finalAnswer": "Option A: 45 m",
+      "whyOtherOptionsWrong": "20 m corresponds to t = 2 s."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Free-fall motion in one dimension",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-335",
+    "questionNumber": 335,
+    "question": "A ball is dropped from a height. After 1 second, another ball is dropped from a point 20 m below the first point. The time after the release of the first ball when the two balls are at the same height is: (take g = 10 m/s\u00b2)",
+    "options": {
+      "A": "2.5 s",
+      "B": "2.0 s",
+      "C": "3.0 s",
+      "D": "1.5 s"
+    },
+    "optionsList": [
+      "2.5 s",
+      "2.0 s",
+      "3.0 s",
+      "1.5 s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nLet t be time from drop of first ball. y\u2081 = 1/2 g t\u00b2. Ball 2 dropped from y\u2080 = 20 m at t = 1 s: y\u2082 = 20 + 1/2 g (t - 1)\u00b2. Set y\u2081 = y\u2082.\n\n2. GIVEN:\nBall 1 released at t = 0 from y = 0. Ball 2 released at t = 1 s from y = 20 m.\n\n3. FORMULA / PRINCIPLE:\n1/2 g t\u00b2 = 20 + 1/2 g (t - 1)\u00b2\n\n4. STEP-BY-STEP SOLUTION:\n1. Position of ball 1 from origin: y\u2081 = (1/2)(10) t\u00b2 = 5t\u00b2.\n2. Position of ball 2: starts 20 m below at t = 1 s, so y\u2082 = 20 + 5(t - 1)\u00b2.\n3. Set y\u2081 = y\u2082: 5t\u00b2 = 20 + 5(t\u00b2 - 2t + 1).\n4. 5t\u00b2 = 20 + 5t\u00b2 - 10t + 5.\n5. 0 = 25 - 10t => 10t = 25 => t = 2.5 s.\n6. Time after release of the first ball is 2.5 s.\n\n5. FINAL ANSWER:\nOption A: 2.5 s\n\n6. QUICK TIP:\nAlways choose a consistent coordinate system and set positions equal to solve meeting problems.",
+    "solutionStructured": {
+      "concept": "Let t be time from drop of first ball. y\u2081 = 1/2 g t\u00b2. Ball 2 dropped from y\u2080 = 20 m at t = 1 s: y\u2082 = 20 + 1/2 g (t - 1)\u00b2. Set y\u2081 = y\u2082.",
+      "given": "Ball 1 released at t = 0 from y = 0. Ball 2 released at t = 1 s from y = 20 m.",
+      "formula": "1/2 g t\u00b2 = 20 + 1/2 g (t - 1)\u00b2",
+      "stepByStep": "1. Position of ball 1 from origin: y\u2081 = (1/2)(10) t\u00b2 = 5t\u00b2.\n2. Position of ball 2: starts 20 m below at t = 1 s, so y\u2082 = 20 + 5(t - 1)\u00b2.\n3. Set y\u2081 = y\u2082: 5t\u00b2 = 20 + 5(t\u00b2 - 2t + 1).\n4. 5t\u00b2 = 20 + 5t\u00b2 - 10t + 5.\n5. 0 = 25 - 10t => 10t = 25 => t = 2.5 s.\n6. Time after release of the first ball is 2.5 s.",
+      "finalAnswer": "Option A: 2.5 s",
+      "whyOtherOptionsWrong": "1.5 s is the time after release of the second ball (2.5 - 1.0 = 1.5 s)."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Free-fall motion in one dimension",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-336",
+    "questionNumber": 336,
+    "question": "A body is thrown vertically upwards with initial speed u. The maximum height reached by the body is given by:",
+    "options": {
+      "A": "u / g",
+      "B": "u\u00b2 / (2g)",
+      "C": "u\u00b2 / g",
+      "D": "2u / g"
+    },
+    "optionsList": [
+      "u / g",
+      "u\u00b2 / (2g)",
+      "u\u00b2 / g",
+      "2u / g"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nAt maximum height, vertical velocity becomes zero: v = 0. Using v\u00b2 = u\u00b2 - 2gh gives h_max = u\u00b2 / (2g).\n\n2. GIVEN:\nInitial speed = u, acceleration = -g, final speed v = 0.\n\n3. FORMULA / PRINCIPLE:\nv\u00b2 = u\u00b2 - 2gh => h_max = u\u00b2 / (2g)\n\n4. STEP-BY-STEP SOLUTION:\n1. At the peak of vertical flight, instantaneous velocity is zero: v = 0.\n2. Apply 3rd equation of motion: v\u00b2 = u\u00b2 - 2gh.\n3. 0 = u\u00b2 - 2gh => 2gh = u\u00b2.\n4. h = u\u00b2 / (2g).\n\n5. FINAL ANSWER:\nOption B: u\u00b2 / (2g)\n\n6. QUICK TIP:\nEssential formula: Maximum height H = u\u00b2 / (2g); Time to reach maximum height t_up = u / g.",
+    "solutionStructured": {
+      "concept": "At maximum height, vertical velocity becomes zero: v = 0. Using v\u00b2 = u\u00b2 - 2gh gives h_max = u\u00b2 / (2g).",
+      "given": "Initial speed = u, acceleration = -g, final speed v = 0.",
+      "formula": "v\u00b2 = u\u00b2 - 2gh => h_max = u\u00b2 / (2g)",
+      "stepByStep": "1. At the peak of vertical flight, instantaneous velocity is zero: v = 0.\n2. Apply 3rd equation of motion: v\u00b2 = u\u00b2 - 2gh.\n3. 0 = u\u00b2 - 2gh => 2gh = u\u00b2.\n4. h = u\u00b2 / (2g).",
+      "finalAnswer": "Option B: u\u00b2 / (2g)",
+      "whyOtherOptionsWrong": "u/g is the time to reach maximum height, not the height itself."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-337",
+    "questionNumber": 337,
+    "question": "A body thrown vertically upwards with an initial speed u attains a maximum height H. The speed of the body at height H / 2 from the ground is:",
+    "options": {
+      "A": "u / 2",
+      "B": "u / \u221a2",
+      "C": "u / 4",
+      "D": "u \u221a2"
+    },
+    "optionsList": [
+      "u / 2",
+      "u / \u221a2",
+      "u / 4",
+      "u \u221a2"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nMaximum height H = u\u00b2 / (2g). Using equation of motion v\u00b2 = u\u00b2 - 2gh at h = H/2 gives v\u00b2 = u\u00b2 - 2g(u\u00b2/4g) = u\u00b2/2 => v = u / \u221a2.\n\n2. GIVEN:\nInitial speed u, maximum height H, height h = H/2.\n\n3. FORMULA / PRINCIPLE:\nv\u00b2 = u\u00b2 - 2gh; H = u\u00b2 / (2g)\n\n4. STEP-BY-STEP SOLUTION:\n1. Maximum height attained: H = u\u00b2 / (2g).\n2. At height h = H / 2 = u\u00b2 / (4g), apply 3rd equation of motion:\n   v\u00b2 = u\u00b2 - 2gh = u\u00b2 - 2g [u\u00b2 / (4g)] = u\u00b2 - u\u00b2 / 2 = u\u00b2 / 2.\n3. Taking square root: v = u / \u221a2.\n\n5. FINAL ANSWER:\nOption B: u / \u221a2\n\n6. QUICK TIP:\nNEET UG 2024 Official Paper Question! At half maximum height, kinetic energy is half, so speed is u / \u221a2.",
+    "solutionStructured": {
+      "concept": "Maximum height H = u\u00b2 / (2g). Using equation of motion v\u00b2 = u\u00b2 - 2gh at h = H/2 gives v\u00b2 = u\u00b2 - 2g(u\u00b2/4g) = u\u00b2/2 => v = u / \u221a2.",
+      "given": "Initial speed u, maximum height H, height h = H/2.",
+      "formula": "v\u00b2 = u\u00b2 - 2gh; H = u\u00b2 / (2g)",
+      "stepByStep": "1. Maximum height attained: H = u\u00b2 / (2g).\n2. At height h = H / 2 = u\u00b2 / (4g), apply 3rd equation of motion:\n   v\u00b2 = u\u00b2 - 2gh = u\u00b2 - 2g [u\u00b2 / (4g)] = u\u00b2 - u\u00b2 / 2 = u\u00b2 / 2.\n3. Taking square root: v = u / \u221a2.",
+      "finalAnswer": "Option B: u / \u221a2",
+      "whyOtherOptionsWrong": "u / 2 is the speed at 3/4 maximum height, not at half maximum height."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "NEET UG 2024",
+    "isPYQ": true,
+    "pyqYear": 2024
+  },
+  {
+    "id": "msl-mcq-338",
+    "questionNumber": 338,
+    "question": "A ball is thrown vertically upwards with a velocity of 4 m/s from the top of a bridge. If the ball strikes the water surface after 4 s, the height of the bridge above the water surface is: (take g = 10 m/s\u00b2)",
+    "options": {
+      "A": "64 m",
+      "B": "48 m",
+      "C": "80 m",
+      "D": "32 m"
+    },
+    "optionsList": [
+      "64 m",
+      "48 m",
+      "80 m",
+      "32 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTaking upward as positive and bridge as origin: u = +4 m/s, a = -10 m/s\u00b2, t = 4 s. Displacement s = ut + 1/2 at\u00b2 = 4(4) - 5(16) = 16 - 80 = -64 m.\n\n2. GIVEN:\nu = +4 m/s, t = 4 s, g = 10 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\ns = ut - (1/2) g t\u00b2\n\n4. STEP-BY-STEP SOLUTION:\n1. Set up coordinate frame: upward is positive, origin at the bridge.\n2. Initial velocity u = +4 m/s.\n3. Acceleration a = -g = -10 m/s\u00b2.\n4. Time of flight t = 4 s.\n5. Net displacement: s = u t + (1/2) a t\u00b2 = (4 \u00d7 4) + (1/2)(-10)(4)\u00b2 = 16 - 80 = -64 m.\n6. The negative displacement indicates the water is 64 m below the bridge. Height = 64 m.\n\n5. FINAL ANSWER:\nOption A: 64 m\n\n6. QUICK TIP:\nNEET UG 2023 Official Paper Question! Use single displacement equation with signs (+ for up, - for down).",
+    "solutionStructured": {
+      "concept": "Taking upward as positive and bridge as origin: u = +4 m/s, a = -10 m/s\u00b2, t = 4 s. Displacement s = ut + 1/2 at\u00b2 = 4(4) - 5(16) = 16 - 80 = -64 m.",
+      "given": "u = +4 m/s, t = 4 s, g = 10 m/s\u00b2.",
+      "formula": "s = ut - (1/2) g t\u00b2",
+      "stepByStep": "1. Set up coordinate frame: upward is positive, origin at the bridge.\n2. Initial velocity u = +4 m/s.\n3. Acceleration a = -g = -10 m/s\u00b2.\n4. Time of flight t = 4 s.\n5. Net displacement: s = u t + (1/2) a t\u00b2 = (4 \u00d7 4) + (1/2)(-10)(4)\u00b2 = 16 - 80 = -64 m.\n6. The negative displacement indicates the water is 64 m below the bridge. Height = 64 m.",
+      "finalAnswer": "Option A: 64 m",
+      "whyOtherOptionsWrong": "80 m ignores the initial upward velocity of 4 m/s."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "NEET UG 2023",
+    "isPYQ": true,
+    "pyqYear": 2023
+  },
+  {
+    "id": "msl-mcq-339",
+    "questionNumber": 339,
+    "question": "A body is projected vertically upwards with a velocity of 29.4 m/s. The time taken to reach the maximum height is: (take g = 9.8 m/s\u00b2)",
+    "options": {
+      "A": "2 s",
+      "B": "3 s",
+      "C": "4 s",
+      "D": "6 s"
+    },
+    "optionsList": [
+      "2 s",
+      "3 s",
+      "4 s",
+      "6 s"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nTime of ascent t_up = u / g. At peak, v = 0 = u - gt => t = u / g.\n\n2. GIVEN:\nu = 29.4 m/s, g = 9.8 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\nt_up = u / g\n\n4. STEP-BY-STEP SOLUTION:\n1. At highest point, vertical velocity v = 0.\n2. Using v = u - gt: 0 = 29.4 - 9.8 t.\n3. 9.8 t = 29.4 => t = 29.4 / 9.8 = 3 s.\n\n5. FINAL ANSWER:\nOption B: 3 s\n\n6. QUICK TIP:\nNotice: 9.8 \u00d7 3 = 29.4 s! Total time of flight T = 2 \u00d7 3 = 6 s.",
+    "solutionStructured": {
+      "concept": "Time of ascent t_up = u / g. At peak, v = 0 = u - gt => t = u / g.",
+      "given": "u = 29.4 m/s, g = 9.8 m/s\u00b2.",
+      "formula": "t_up = u / g",
+      "stepByStep": "1. At highest point, vertical velocity v = 0.\n2. Using v = u - gt: 0 = 29.4 - 9.8 t.\n3. 9.8 t = 29.4 => t = 29.4 / 9.8 = 3 s.",
+      "finalAnswer": "Option B: 3 s",
+      "whyOtherOptionsWrong": "6 s is the total time of flight (time of ascent + time of descent), not just time of ascent."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-340",
+    "questionNumber": 340,
+    "question": "For a body projected vertically upwards, what is the value of its acceleration at the highest point of its trajectory?",
+    "options": {
+      "A": "Zero",
+      "B": "g downwards",
+      "C": "g upwards",
+      "D": "Cannot be determined"
+    },
+    "optionsList": [
+      "Zero",
+      "g downwards",
+      "g upwards",
+      "Cannot be determined"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nGravitational force acts downward continuously regardless of the state of motion. At the highest point, velocity is zero, but acceleration is g downward.\n\n2. GIVEN:\nBody at the highest point of its vertical flight.\n\n3. FORMULA / PRINCIPLE:\na = g (downwards) at all times\n\n4. STEP-BY-STEP SOLUTION:\n1. Newton's second law states that F_net = ma.\n2. Throughout the flight in vacuum, the only force acting on the body is gravity: F_net = mg downwards.\n3. Therefore, acceleration a = F_net / m = g downwards at every single instant, including at the apex.\n4. Velocity momentarily becomes zero (v = 0), but acceleration is non-zero (a = g downwards).\n\n5. FINAL ANSWER:\nOption B: g downwards\n\n6. QUICK TIP:\nNEET Classic Trap: Zero velocity does NOT mean zero acceleration! At highest point, v = 0 but a = g downward.",
+    "solutionStructured": {
+      "concept": "Gravitational force acts downward continuously regardless of the state of motion. At the highest point, velocity is zero, but acceleration is g downward.",
+      "given": "Body at the highest point of its vertical flight.",
+      "formula": "a = g (downwards) at all times",
+      "stepByStep": "1. Newton's second law states that F_net = ma.\n2. Throughout the flight in vacuum, the only force acting on the body is gravity: F_net = mg downwards.\n3. Therefore, acceleration a = F_net / m = g downwards at every single instant, including at the apex.\n4. Velocity momentarily becomes zero (v = 0), but acceleration is non-zero (a = g downwards).",
+      "finalAnswer": "Option B: g downwards",
+      "whyOtherOptionsWrong": "Zero acceleration would mean the body stays suspended in the air forever at the top!"
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-341",
+    "questionNumber": 341,
+    "question": "Total time of flight for a projectile projected vertically upwards from ground with velocity u and returning to ground is:",
+    "options": {
+      "A": "u / g",
+      "B": "2u / g",
+      "C": "u\u00b2 / g",
+      "D": "u / (2g)"
+    },
+    "optionsList": [
+      "u / g",
+      "2u / g",
+      "u\u00b2 / g",
+      "u / (2g)"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nTime of flight T = t_ascent + t_descent = u/g + u/g = 2u/g (in absence of air resistance).\n\n2. GIVEN:\nInitial velocity u, return to same level.\n\n3. FORMULA / PRINCIPLE:\nT = 2u / g\n\n4. STEP-BY-STEP SOLUTION:\n1. Net displacement when returning to the ground: s = 0.\n2. Apply displacement equation: s = u T - (1/2) g T\u00b2 = 0.\n3. T [u - (1/2) g T] = 0.\n4. For T \u2260 0, we have: (1/2) g T = u => T = 2u / g.\n\n5. FINAL ANSWER:\nOption B: 2u / g\n\n6. QUICK TIP:\nTime of ascent = Time of descent = u / g. Total time T = 2u / g.",
+    "solutionStructured": {
+      "concept": "Time of flight T = t_ascent + t_descent = u/g + u/g = 2u/g (in absence of air resistance).",
+      "given": "Initial velocity u, return to same level.",
+      "formula": "T = 2u / g",
+      "stepByStep": "1. Net displacement when returning to the ground: s = 0.\n2. Apply displacement equation: s = u T - (1/2) g T\u00b2 = 0.\n3. T [u - (1/2) g T] = 0.\n4. For T \u2260 0, we have: (1/2) g T = u => T = 2u / g.",
+      "finalAnswer": "Option B: 2u / g",
+      "whyOtherOptionsWrong": "u / g is only the time of ascent (to reach maximum height)."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-342",
+    "questionNumber": 342,
+    "question": "A ball thrown vertically upwards returns to the thrower's hand after 6 s. Taking g = 10 m/s\u00b2, the initial velocity was:",
+    "options": {
+      "A": "60 m/s",
+      "B": "30 m/s",
+      "C": "15 m/s",
+      "D": "45 m/s"
+    },
+    "optionsList": [
+      "60 m/s",
+      "30 m/s",
+      "15 m/s",
+      "45 m/s"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nTotal time of flight T = 2u / g => u = g T / 2.\n\n2. GIVEN:\nT = 6 s, g = 10 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\nu = (g T) / 2\n\n4. STEP-BY-STEP SOLUTION:\n1. Total time of flight T = 6 s.\n2. Time of ascent: t_up = T / 2 = 6 / 2 = 3 s.\n3. At top, v = 0 = u - g t_up => u = g t_up.\n4. u = 10 m/s\u00b2 \u00d7 3 s = 30 m/s.\n\n5. FINAL ANSWER:\nOption B: 30 m/s\n\n6. QUICK TIP:\nInitial velocity = g \u00d7 (T / 2). For 6 seconds total flight, u = 10 \u00d7 3 = 30 m/s.",
+    "solutionStructured": {
+      "concept": "Total time of flight T = 2u / g => u = g T / 2.",
+      "given": "T = 6 s, g = 10 m/s\u00b2.",
+      "formula": "u = (g T) / 2",
+      "stepByStep": "1. Total time of flight T = 6 s.\n2. Time of ascent: t_up = T / 2 = 6 / 2 = 3 s.\n3. At top, v = 0 = u - g t_up => u = g t_up.\n4. u = 10 m/s\u00b2 \u00d7 3 s = 30 m/s.",
+      "finalAnswer": "Option B: 30 m/s",
+      "whyOtherOptionsWrong": "60 m/s would result in a 12-second round trip."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-343",
+    "questionNumber": 343,
+    "question": "A ball thrown vertically upwards rises to a maximum height of 45 m. Taking g = 10 m/s\u00b2, the speed with which it was thrown is:",
+    "options": {
+      "A": "20 m/s",
+      "B": "30 m/s",
+      "C": "45 m/s",
+      "D": "25 m/s"
+    },
+    "optionsList": [
+      "20 m/s",
+      "30 m/s",
+      "45 m/s",
+      "25 m/s"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nUse u = \u221a(2gh).\n\n2. GIVEN:\nH = 45 m, g = 10 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\nu = \u221a(2gH)\n\n4. STEP-BY-STEP SOLUTION:\n1. At highest point, v = 0.\n2. 0 = u\u00b2 - 2gH => u\u00b2 = 2gH.\n3. u\u00b2 = 2 \u00d7 10 \u00d7 45 = 900.\n4. u = \u221a900 = 30 m/s.\n\n5. FINAL ANSWER:\nOption B: 30 m/s\n\n6. QUICK TIP:\nH = 45 m => u = 30 m/s; H = 20 m => u = 20 m/s; H = 80 m => u = 40 m/s.",
+    "solutionStructured": {
+      "concept": "Use u = \u221a(2gh).",
+      "given": "H = 45 m, g = 10 m/s\u00b2.",
+      "formula": "u = \u221a(2gH)",
+      "stepByStep": "1. At highest point, v = 0.\n2. 0 = u\u00b2 - 2gH => u\u00b2 = 2gH.\n3. u\u00b2 = 2 \u00d7 10 \u00d7 45 = 900.\n4. u = \u221a900 = 30 m/s.",
+      "finalAnswer": "Option B: 30 m/s",
+      "whyOtherOptionsWrong": "20 m/s would give H = 400 / 20 = 20 m."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-344",
+    "questionNumber": 344,
+    "question": "If a body is thrown vertically upwards with initial velocity u, what is the ratio of its velocity at height h while going up to its velocity at height h while coming down?",
+    "options": {
+      "A": "1 : 1 in magnitude, opposite in direction",
+      "B": "1 : 2",
+      "C": "2 : 1",
+      "D": "Depends on the mass of the body"
+    },
+    "optionsList": [
+      "1 : 1 in magnitude, opposite in direction",
+      "1 : 2",
+      "2 : 1",
+      "Depends on the mass of the body"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nConservation of mechanical energy: speed at any given height h is \u221a(u\u00b2 - 2gh) both going up and coming down. Magnitudes are identical, directions are opposite.\n\n2. GIVEN:\nSame height h on upward and downward paths.\n\n3. FORMULA / PRINCIPLE:\nv\u00b2 = u\u00b2 - 2gh => |v_up| = |v_down| = \u221a(u\u00b2 - 2gh)\n\n4. STEP-BY-STEP SOLUTION:\n1. By conservation of mechanical energy, potential energy at height h is the same (mgh).\n2. Therefore, kinetic energy is the same: 1/2 m v\u00b2 = 1/2 m u\u00b2 - mgh.\n3. Hence, the magnitude of velocity is identical: |v_up| = |v_down| = \u221a(u\u00b2 - 2gh).\n4. Upward velocity is +v, downward velocity is -v.\n\n5. FINAL ANSWER:\nOption A: 1 : 1 in magnitude, opposite in direction\n\n6. QUICK TIP:\nSymmetry of vertical flight: Speed at any level is the same going up as coming down!",
+    "solutionStructured": {
+      "concept": "Conservation of mechanical energy: speed at any given height h is \u221a(u\u00b2 - 2gh) both going up and coming down. Magnitudes are identical, directions are opposite.",
+      "given": "Same height h on upward and downward paths.",
+      "formula": "v\u00b2 = u\u00b2 - 2gh => |v_up| = |v_down| = \u221a(u\u00b2 - 2gh)",
+      "stepByStep": "1. By conservation of mechanical energy, potential energy at height h is the same (mgh).\n2. Therefore, kinetic energy is the same: 1/2 m v\u00b2 = 1/2 m u\u00b2 - mgh.\n3. Hence, the magnitude of velocity is identical: |v_up| = |v_down| = \u221a(u\u00b2 - 2gh).\n4. Upward velocity is +v, downward velocity is -v.",
+      "finalAnswer": "Option A: 1 : 1 in magnitude, opposite in direction",
+      "whyOtherOptionsWrong": "Speeds are not different because energy is conserved in vacuum."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-345",
+    "questionNumber": 345,
+    "question": "A ball is projected upwards. Which of the following graphs represents its acceleration versus time throughout the upward and downward motion (taking upward as positive)?",
+    "options": {
+      "A": "A horizontal line at a = -g below the time axis",
+      "B": "A horizontal line at a = +g above the time axis",
+      "C": "A line starting at +g and sloping downward to -g",
+      "D": "A line starting at -g and sloping upward to +g"
+    },
+    "optionsList": [
+      "A horizontal line at a = -g below the time axis",
+      "A horizontal line at a = +g above the time axis",
+      "A line starting at +g and sloping downward to -g",
+      "A line starting at -g and sloping upward to +g"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nUnder standard sign convention (upward positive), gravitational acceleration is constant and directed downwards: a = -g at all times.\n\n2. GIVEN:\nUpward positive convention.\n\n3. FORMULA / PRINCIPLE:\na(t) = -g = constant\n\n4. STEP-BY-STEP SOLUTION:\n1. Gravity always pulls downward toward the center of the Earth.\n2. With upward taken as positive, downward is negative.\n3. Therefore, acceleration is constant: a = -g (approximately -9.8 m/s\u00b2 or -10 m/s\u00b2).\n4. On an a-t graph, a constant negative value is represented by a horizontal straight line below the time axis.\n\n5. FINAL ANSWER:\nOption A: A horizontal line at a = -g below the time axis\n\n6. QUICK TIP:\nAcceleration does NOT change sign when the ball reverses direction! a = -g continuously.",
+    "solutionStructured": {
+      "concept": "Under standard sign convention (upward positive), gravitational acceleration is constant and directed downwards: a = -g at all times.",
+      "given": "Upward positive convention.",
+      "formula": "a(t) = -g = constant",
+      "stepByStep": "1. Gravity always pulls downward toward the center of the Earth.\n2. With upward taken as positive, downward is negative.\n3. Therefore, acceleration is constant: a = -g (approximately -9.8 m/s\u00b2 or -10 m/s\u00b2).\n4. On an a-t graph, a constant negative value is represented by a horizontal straight line below the time axis.",
+      "finalAnswer": "Option A: A horizontal line at a = -g below the time axis",
+      "whyOtherOptionsWrong": "Option C is a common mistake confusing velocity (which decreases) with acceleration (which is constant)."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  }
+]

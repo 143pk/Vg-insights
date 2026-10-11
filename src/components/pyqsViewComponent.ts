@@ -22,7 +22,15 @@ export function renderPYQsView(): string {
 
   // Filter questions
   const filtered = PYQ_DATABASE.filter(q => {
-    if (currentFilter.subject !== 'all' && q.subject !== currentFilter.subject) return false;
+    if (currentFilter.subject !== 'all') {
+      if (currentFilter.subject === 'botany') {
+        if (q.subject !== 'biology' || q.biologySection !== 'Botany') return false;
+      } else if (currentFilter.subject === 'zoology') {
+        if (q.subject !== 'biology' || q.biologySection !== 'Zoology') return false;
+      } else if (q.subject !== currentFilter.subject) {
+        return false;
+      }
+    }
     if (currentFilter.year !== 'all' && q.year.toString() !== currentFilter.year) return false;
     if (currentFilter.search.trim() !== '') {
       const s = currentFilter.search.toLowerCase();
@@ -63,16 +71,16 @@ export function renderPYQsView(): string {
           <div>
             <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">Subject</label>
             <div class="flex gap-1 bg-slate-100 dark:bg-slate-800 p-1 rounded-2xl">
-              ${['all', 'physics', 'chemistry', 'biology'].map(sub => `
+              ${['all', 'physics', 'chemistry', 'biology', 'botany', 'zoology'].map(sub => `
                 <button 
                   id="btn-pyq-sub-${sub}"
                   data-sub="${sub}"
-                  class="pyq-sub-btn flex-1 py-1.5 text-xs font-bold rounded-xl transition-all capitalize ${
+                  class="pyq-sub-btn flex-1 py-1.5 text-[11px] sm:text-xs font-bold rounded-xl transition-all capitalize ${
                     currentFilter.subject === sub 
                       ? 'bg-white dark:bg-slate-700 text-blue-600 dark:text-blue-400 shadow-sm' 
                       : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
                   }">
-                  ${sub === 'all' ? 'All' : sub.slice(0, 4)}
+                  ${sub === 'all' ? 'All' : sub === 'physics' ? 'Phy' : sub === 'chemistry' ? 'Chem' : sub === 'biology' ? 'Bio' : sub === 'botany' ? 'Bot' : 'Zoo'}
                 </button>
               `).join('')}
             </div>
@@ -86,7 +94,7 @@ export function renderPYQsView(): string {
               class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl px-3 py-2 text-xs font-bold text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500">
               <option value="all" ${currentFilter.year === 'all' ? 'selected' : ''}>All Years (2014 - 2026)</option>
               ${years.map(y => `
-                <option value="${y}" ${currentFilter.year === y.toString() ? 'selected' : ''}>NEET UG / AIPMT ${y}</option>
+                <option value="${y}" ${currentFilter.year === y.toString() ? 'selected' : ''}>${y <= 2015 ? `AIPMT ${y}` : `NEET UG ${y}`}</option>
               `).join('')}
             </select>
           </div>
@@ -135,8 +143,24 @@ export function renderPYQsView(): string {
                     ${q.subject}
                   </span>
                   <span class="px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/50 text-blue-700 dark:text-blue-300 font-extrabold text-xs border border-blue-200 dark:border-blue-800">
-                    NEET ${q.year}
+                    ${q.exam ? `${q.exam} ${q.year}` : (q.year <= 2015 ? `AIPMT ${q.year}` : `NEET ${q.year}`)}
                   </span>
+                  ${q.biologySection ? `
+                    <span class="px-2.5 py-0.5 rounded-full bg-teal-50 dark:bg-teal-950/50 text-teal-700 dark:text-teal-300 border border-teal-200 dark:border-teal-800 text-[11px] font-bold">
+                      ${q.biologySection}
+                    </span>
+                  ` : ''}
+                  ${q.verificationStatus ? `
+                    <span class="px-2.5 py-0.5 rounded-full ${
+                      q.verificationStatus === 'VERIFIED'
+                        ? 'bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800'
+                        : q.verificationStatus === 'PARTIALLY_VERIFIED'
+                        ? 'bg-amber-50 dark:bg-amber-950/50 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800'
+                        : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400'
+                    } text-[11px] font-bold">
+                      ${q.verificationStatus === 'VERIFIED' ? '✓ Verified' : q.verificationStatus === 'PARTIALLY_VERIFIED' ? '⚡ Partially Verified' : 'Unverified'}
+                    </span>
+                  ` : ''}
                   ${q.difficulty ? `
                     <span class="px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-[11px] font-bold">
                       ${q.difficulty}
@@ -217,8 +241,15 @@ export function renderPYQsView(): string {
                     ${renderInlineMathHTML(q.explanation)}
                   </div>
 
-                  ${q.ncertReference ? `
+                  ${q.examInstance ? `
                     <div class="pt-2 mt-2 border-t border-slate-200/60 dark:border-slate-800/60 text-[11px] font-semibold text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
+                      <span>🏷️</span>
+                      <span><strong>Paper:</strong> ${q.examInstance}${q.sourceVerified ? ' (Verified Official Paper)' : ''}</span>
+                    </div>
+                  ` : ''}
+
+                  ${q.ncertReference ? `
+                    <div class="${q.examInstance ? 'pt-1' : 'pt-2 mt-2 border-t border-slate-200/60 dark:border-slate-800/60'} text-[11px] font-semibold text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
                       <span>📖</span>
                       <span><strong>NCERT Reference:</strong> ${q.ncertReference}</span>
                     </div>

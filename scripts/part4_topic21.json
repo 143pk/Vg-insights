@@ -1,0 +1,742 @@
+[
+  {
+    "id": "msl-mcq-456",
+    "questionNumber": 456,
+    "question": "When a particle moving along the x-axis reverses its direction of motion, what must momentarily happen to its instantaneous velocity and acceleration?",
+    "options": {
+      "A": "Instantaneous velocity must be zero, but acceleration need not be zero",
+      "B": "Both instantaneous velocity and acceleration must be zero",
+      "C": "Instantaneous acceleration must be zero, but velocity need not be zero",
+      "D": "Neither velocity nor acceleration can be zero"
+    },
+    "optionsList": [
+      "Instantaneous velocity must be zero, but acceleration need not be zero",
+      "Both instantaneous velocity and acceleration must be zero",
+      "Instantaneous acceleration must be zero, but velocity need not be zero",
+      "Neither velocity nor acceleration can be zero"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDirection reversal in 1D motion requires the velocity to pass through zero ($v = 0$). Acceleration at that instant is non-zero (otherwise the particle would come to permanent rest rather than turning back).\n\n2. GIVEN:\nA particle reverses its direction along the straight line x-axis.\n\n3. FORMULA / PRINCIPLE:\nReversal occurs when $v = dx/dt = 0$, while $a = dv/dt \\neq 0$.\n\n4. STEP-BY-STEP SOLUTION:\n1. In 1D motion along the x-axis, direction is indicated by the sign of velocity v.\n2. To change sign (e.g. from positive to negative), continuous velocity v(t) must pass through zero.\n3. If acceleration were also zero, velocity would stay at zero. For v to change sign, dv/dt = a \u2260 0.\n4. Example: A ball at the top of its flight has v = 0 and a = -g \u2260 0.\n\n5. FINAL ANSWER:\nOption A: Instantaneous velocity must be zero, but acceleration need not be zero\n\n6. QUICK TIP:\nAt the turning point of 1D motion, speed is instantaneously zero, but acceleration is generally non-zero.",
+    "solutionStructured": {
+      "concept": "Direction reversal in 1D motion requires the velocity to pass through zero ($v = 0$). Acceleration at that instant is non-zero (otherwise the particle would come to permanent rest rather than turning back).",
+      "given": "A particle reverses its direction along the straight line x-axis.",
+      "formula": "Reversal occurs when $v = dx/dt = 0$, while $a = dv/dt \\neq 0$.",
+      "stepByStep": "1. In 1D motion along the x-axis, direction is indicated by the sign of velocity v.\n2. To change sign (e.g. from positive to negative), continuous velocity v(t) must pass through zero.\n3. If acceleration were also zero, velocity would stay at zero. For v to change sign, dv/dt = a \u2260 0.\n4. Example: A ball at the top of its flight has v = 0 and a = -g \u2260 0.",
+      "finalAnswer": "Option A: Instantaneous velocity must be zero, but acceleration need not be zero",
+      "whyOtherOptionsWrong": "Option B is wrong because if both were zero, the particle would remain at rest forever."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion with changing direction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-457",
+    "questionNumber": 457,
+    "question": "A particle moves along the x-axis according to x(t) = 12t - 3t\u00b2, where x is in meters and t is in seconds. At what time does the particle momentarily reverse its direction of motion?",
+    "options": {
+      "A": "1 s",
+      "B": "2 s",
+      "C": "4 s",
+      "D": "6 s"
+    },
+    "optionsList": [
+      "1 s",
+      "2 s",
+      "4 s",
+      "6 s"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nThe particle changes direction when its velocity becomes zero ($v = 0$).\n\n2. GIVEN:\nPosition function x(t) = 12t - 3t\u00b2.\n\n3. FORMULA / PRINCIPLE:\nv(t) = dx/dt = 0\n\n4. STEP-BY-STEP SOLUTION:\n1. Differentiate position x(t) with respect to time: v(t) = dx/dt = 12 - 6t.\n2. Set velocity to zero to find the turnaround point: 12 - 6t = 0.\n3. Solving yields t = 12 / 6 = 2 s.\n4. Acceleration a = dv/dt = -6 m/s\u00b2 \u2260 0, confirming reversal.\n\n5. FINAL ANSWER:\nOption B: 2 s\n\n6. QUICK TIP:\nTo find the turnaround point, differentiate position to get velocity and solve v(t) = 0.",
+    "solutionStructured": {
+      "concept": "The particle changes direction when its velocity becomes zero ($v = 0$).",
+      "given": "Position function x(t) = 12t - 3t\u00b2.",
+      "formula": "v(t) = dx/dt = 0",
+      "stepByStep": "1. Differentiate position x(t) with respect to time: v(t) = dx/dt = 12 - 6t.\n2. Set velocity to zero to find the turnaround point: 12 - 6t = 0.\n3. Solving yields t = 12 / 6 = 2 s.\n4. Acceleration a = dv/dt = -6 m/s\u00b2 \u2260 0, confirming reversal.",
+      "finalAnswer": "Option B: 2 s",
+      "whyOtherOptionsWrong": "4 s is the time when the particle returns to the origin x = 0, not when it reverses direction."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion with changing direction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-458",
+    "questionNumber": 458,
+    "question": "A particle moves along a straight line such that its position is given by x(t) = 20 + 8t - 2t\u00b2 (in SI units). What is the total distance traveled by the particle from t = 0 to t = 4 s?",
+    "options": {
+      "A": "0 m",
+      "B": "8 m",
+      "C": "16 m",
+      "D": "24 m"
+    },
+    "optionsList": [
+      "0 m",
+      "8 m",
+      "16 m",
+      "24 m"
+    ],
+    "correctAnswer": "C",
+    "correctIndex": 2,
+    "explanation": "1. CONCEPT:\nWhen direction changes, total distance is the sum of magnitudes of displacements for each monotonic interval, whereas total displacement is simply x(t\u2082) - x(t\u2081).\n\n2. GIVEN:\nPosition equation x(t) = 20 + 8t - 2t\u00b2, interval t = 0 to t = 4 s.\n\n3. FORMULA / PRINCIPLE:\nd = |x(t_turn) - x(0)| + |x(4) - x(t_turn)|\n\n4. STEP-BY-STEP SOLUTION:\n1. Velocity v(t) = dx/dt = 8 - 4t. Setting v = 0 gives t = 2 s (turnaround point in [0, 4]).\n2. Position at t = 0: x(0) = 20 m.\n3. Position at turnaround t = 2 s: x(2) = 20 + 8(2) - 2(4) = 28 m.\n4. Position at t = 4 s: x(4) = 20 + 8(4) - 2(16) = 20 m.\n5. Distance = |28 - 20| + |20 - 28| = 8 m + 8 m = 16 m.\n\n5. FINAL ANSWER:\nOption C: 16 m\n\n6. QUICK TIP:\nDisplacement is x(4) - x(0) = 20 - 20 = 0 m, but total distance traveled is 16 m.",
+    "solutionStructured": {
+      "concept": "When direction changes, total distance is the sum of magnitudes of displacements for each monotonic interval, whereas total displacement is simply x(t\u2082) - x(t\u2081).",
+      "given": "Position equation x(t) = 20 + 8t - 2t\u00b2, interval t = 0 to t = 4 s.",
+      "formula": "d = |x(t_turn) - x(0)| + |x(4) - x(t_turn)|",
+      "stepByStep": "1. Velocity v(t) = dx/dt = 8 - 4t. Setting v = 0 gives t = 2 s (turnaround point in [0, 4]).\n2. Position at t = 0: x(0) = 20 m.\n3. Position at turnaround t = 2 s: x(2) = 20 + 8(2) - 2(4) = 28 m.\n4. Position at t = 4 s: x(4) = 20 + 8(4) - 2(16) = 20 m.\n5. Distance = |28 - 20| + |20 - 28| = 8 m + 8 m = 16 m.",
+      "finalAnswer": "Option C: 16 m",
+      "whyOtherOptionsWrong": "0 m is the net displacement, not the total distance."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion with changing direction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-459",
+    "questionNumber": 459,
+    "question": "A particle moves along the x-axis with an initial velocity of +30 m/s and a constant acceleration of -6 m/s\u00b2. What is the ratio of the distance traveled in the first 7 seconds to the magnitude of the displacement in the first 7 seconds?",
+    "options": {
+      "A": "13 : 9",
+      "B": "29 : 21",
+      "C": "25 : 21",
+      "D": "15 : 7"
+    },
+    "optionsList": [
+      "13 : 9",
+      "29 : 21",
+      "25 : 21",
+      "15 : 7"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nFor uniformly accelerated motion where initial velocity and acceleration have opposite signs, the particle stops and turns back at t = u/|a|.\n\n2. GIVEN:\nu = +30 m/s, a = -6 m/s\u00b2, total time t = 7 s.\n\n3. FORMULA / PRINCIPLE:\nTurnaround at t = u/|a| = 5 s. Distance = d\u2081 + d\u2082; Displacement s = ut + (1/2)at\u00b2.\n\n4. STEP-BY-STEP SOLUTION:\n1. Turnaround time: v = u + at = 30 - 6t = 0 => t = 5 s.\n2. Distance in first 5 s (forward): d\u2081 = u\u00b2 / (2|a|) = 30\u00b2 / (2 \u00d7 6) = 75 m.\n3. Motion in next 2 s (backward from rest): d\u2082 = (1/2)|a|(\u0394t)\u00b2 = (1/2)(6)(2)\u00b2 = 12 m.\n4. Total distance in 7 s = 75 + 12 = 87 m.\n5. Displacement in 7 s: s = ut + (1/2)at\u00b2 = 30(7) - 3(49) = 210 - 147 = +63 m.\n6. Ratio = Distance / |Displacement| = 87 / 63 = 29 / 21.\n\n5. FINAL ANSWER:\nOption B: 29 : 21\n\n6. QUICK TIP:\nAlways split the motion into two intervals: before turnaround and after turnaround.",
+    "solutionStructured": {
+      "concept": "For uniformly accelerated motion where initial velocity and acceleration have opposite signs, the particle stops and turns back at t = u/|a|.",
+      "given": "u = +30 m/s, a = -6 m/s\u00b2, total time t = 7 s.",
+      "formula": "Turnaround at t = u/|a| = 5 s. Distance = d\u2081 + d\u2082; Displacement s = ut + (1/2)at\u00b2.",
+      "stepByStep": "1. Turnaround time: v = u + at = 30 - 6t = 0 => t = 5 s.\n2. Distance in first 5 s (forward): d\u2081 = u\u00b2 / (2|a|) = 30\u00b2 / (2 \u00d7 6) = 75 m.\n3. Motion in next 2 s (backward from rest): d\u2082 = (1/2)|a|(\u0394t)\u00b2 = (1/2)(6)(2)\u00b2 = 12 m.\n4. Total distance in 7 s = 75 + 12 = 87 m.\n5. Displacement in 7 s: s = ut + (1/2)at\u00b2 = 30(7) - 3(49) = 210 - 147 = +63 m.\n6. Ratio = Distance / |Displacement| = 87 / 63 = 29 / 21.",
+      "finalAnswer": "Option B: 29 : 21",
+      "whyOtherOptionsWrong": "Assuming distance equals displacement gives 63 / 63 = 1."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion with changing direction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-460",
+    "questionNumber": 460,
+    "question": "A body starts from the origin at t = 0 with velocity u = -10 m/s and moves with constant acceleration a = +4 m/s\u00b2. At what time does the body return to the origin, and what is the total distance covered up to that time?",
+    "options": {
+      "A": "t = 5 s, distance = 25 m",
+      "B": "t = 5 s, distance = 50 m",
+      "C": "t = 2.5 s, distance = 12.5 m",
+      "D": "t = 4 s, distance = 32 m"
+    },
+    "optionsList": [
+      "t = 5 s, distance = 25 m",
+      "t = 5 s, distance = 50 m",
+      "t = 2.5 s, distance = 12.5 m",
+      "t = 4 s, distance = 32 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nReturning to origin means net displacement s = 0. Total distance is twice the maximum backward excursion.\n\n2. GIVEN:\nu = -10 m/s, a = +4 m/s\u00b2, s = 0.\n\n3. FORMULA / PRINCIPLE:\ns = ut + (1/2)at\u00b2 = 0; s_max = u\u00b2 / (2a); Total distance = 2 \u00d7 s_max.\n\n4. STEP-BY-STEP SOLUTION:\n1. Return to origin: s = -10t + (1/2)(4)t\u00b2 = -10t + 2t\u00b2 = 0 => t(2t - 10) = 0 => t = 5 s.\n2. Turnaround occurs when v = -10 + 4t = 0 => t = 2.5 s.\n3. Maximum backward distance reached: d\u2081 = |u|\u00b2 / (2a) = 10\u00b2 / (2 \u00d7 4) = 12.5 m.\n4. Since it returns to origin, forward return distance d\u2082 = 12.5 m.\n5. Total distance = 12.5 + 12.5 = 25 m.\n\n5. FINAL ANSWER:\nOption A: t = 5 s, distance = 25 m\n\n6. QUICK TIP:\nWhen returning to origin after turning back, total distance = 2 \u00d7 s_max = u\u00b2 / a = 100 / 4 = 25 m.",
+    "solutionStructured": {
+      "concept": "Returning to origin means net displacement s = 0. Total distance is twice the maximum backward excursion.",
+      "given": "u = -10 m/s, a = +4 m/s\u00b2, s = 0.",
+      "formula": "s = ut + (1/2)at\u00b2 = 0; s_max = u\u00b2 / (2a); Total distance = 2 \u00d7 s_max.",
+      "stepByStep": "1. Return to origin: s = -10t + (1/2)(4)t\u00b2 = -10t + 2t\u00b2 = 0 => t(2t - 10) = 0 => t = 5 s.\n2. Turnaround occurs when v = -10 + 4t = 0 => t = 2.5 s.\n3. Maximum backward distance reached: d\u2081 = |u|\u00b2 / (2a) = 10\u00b2 / (2 \u00d7 4) = 12.5 m.\n4. Since it returns to origin, forward return distance d\u2082 = 12.5 m.\n5. Total distance = 12.5 + 12.5 = 25 m.",
+      "finalAnswer": "Option A: t = 5 s, distance = 25 m",
+      "whyOtherOptionsWrong": "50 m wrongly multiplies by 4 instead of 2; 12.5 m is only one-way excursion."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion with changing direction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-461",
+    "questionNumber": 461,
+    "question": "A toy car travels along a straight track: forward at 4 m/s for 6 s, then backward at 2 m/s for 4 s, and finally forward at 3 m/s for 2 s. What are the average speed and average velocity over the entire 12-second journey?",
+    "options": {
+      "A": "Average speed = 3.17 m/s, Average velocity = 1.83 m/s",
+      "B": "Average speed = 3.50 m/s, Average velocity = 2.00 m/s",
+      "C": "Average speed = 3.17 m/s, Average velocity = 3.17 m/s",
+      "D": "Average speed = 2.50 m/s, Average velocity = 1.50 m/s"
+    },
+    "optionsList": [
+      "Average speed = 3.17 m/s, Average velocity = 1.83 m/s",
+      "Average speed = 3.50 m/s, Average velocity = 2.00 m/s",
+      "Average speed = 3.17 m/s, Average velocity = 3.17 m/s",
+      "Average speed = 2.50 m/s, Average velocity = 1.50 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nAverage speed = total distance / total time; Average velocity = net displacement / total time.\n\n2. GIVEN:\nLeg 1: +4 m/s, 6 s. Leg 2: -2 m/s, 4 s. Leg 3: +3 m/s, 2 s. Total time = 12 s.\n\n3. FORMULA / PRINCIPLE:\nv_avg_speed = \u03a3 |v_i| t_i / T; v_avg_vel = \u03a3 v_i t_i / T\n\n4. STEP-BY-STEP SOLUTION:\n1. Displacements: s\u2081 = (+4)(6) = +24 m; s\u2082 = (-2)(4) = -8 m; s\u2083 = (+3)(2) = +6 m.\n2. Net displacement = 24 - 8 + 6 = +22 m.\n3. Distances: d\u2081 = 24 m; d\u2082 = 8 m; d\u2083 = 6 m. Total distance = 24 + 8 + 6 = 38 m.\n4. Total time = 6 + 4 + 2 = 12 s.\n5. Average speed = 38 / 12 = 3.17 m/s.\n6. Average velocity = 22 / 12 = 1.83 m/s.\n\n5. FINAL ANSWER:\nOption A: Average speed = 3.17 m/s, Average velocity = 1.83 m/s\n\n6. QUICK TIP:\nAverage speed is scalar (path length), average velocity is vector (displacement).",
+    "solutionStructured": {
+      "concept": "Average speed = total distance / total time; Average velocity = net displacement / total time.",
+      "given": "Leg 1: +4 m/s, 6 s. Leg 2: -2 m/s, 4 s. Leg 3: +3 m/s, 2 s. Total time = 12 s.",
+      "formula": "v_avg_speed = \u03a3 |v_i| t_i / T; v_avg_vel = \u03a3 v_i t_i / T",
+      "stepByStep": "1. Displacements: s\u2081 = (+4)(6) = +24 m; s\u2082 = (-2)(4) = -8 m; s\u2083 = (+3)(2) = +6 m.\n2. Net displacement = 24 - 8 + 6 = +22 m.\n3. Distances: d\u2081 = 24 m; d\u2082 = 8 m; d\u2083 = 6 m. Total distance = 24 + 8 + 6 = 38 m.\n4. Total time = 6 + 4 + 2 = 12 s.\n5. Average speed = 38 / 12 = 3.17 m/s.\n6. Average velocity = 22 / 12 = 1.83 m/s.",
+      "finalAnswer": "Option A: Average speed = 3.17 m/s, Average velocity = 1.83 m/s",
+      "whyOtherOptionsWrong": "Setting them equal ignores the directional reversal in the second leg."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion with changing direction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-462",
+    "questionNumber": 462,
+    "question": "A ball is thrown vertically upward with speed u under gravity. Which of the following statements is INCORRECT regarding the motion?",
+    "options": {
+      "A": "The acceleration at the highest point is non-zero and directed downward",
+      "B": "The time taken to ascend equals the time taken to descend back to the projection point",
+      "C": "The speed upon returning to the projection level equals the launch speed",
+      "D": "At the highest point, both the velocity and acceleration are momentarily zero"
+    },
+    "optionsList": [
+      "The acceleration at the highest point is non-zero and directed downward",
+      "The time taken to ascend equals the time taken to descend back to the projection point",
+      "The speed upon returning to the projection level equals the launch speed",
+      "At the highest point, both the velocity and acceleration are momentarily zero"
+    ],
+    "correctAnswer": "D",
+    "correctIndex": 3,
+    "explanation": "1. CONCEPT:\nIn vertical motion under gravity, gravity acts downward continuously with acceleration g at every instant, including at the apex.\n\n2. GIVEN:\nVertically thrown ball under gravity.\n\n3. FORMULA / PRINCIPLE:\nAt peak: v = 0, a = -g\n\n4. STEP-BY-STEP SOLUTION:\n1. At the highest point, vertical velocity is momentarily zero (v = 0).\n2. The gravitational force F = mg acts continuously downward.\n3. Therefore, acceleration a = F/m = g downwards at all times, including at the peak.\n4. Statement D claims acceleration is zero, which is incorrect, making D the right option.\n\n5. FINAL ANSWER:\nOption D: At the highest point, both the velocity and acceleration are momentarily zero\n\n6. QUICK TIP:\nNever say acceleration is zero at the peak of free fall! If a were zero when v = 0, the body would remain floating in mid-air.",
+    "solutionStructured": {
+      "concept": "In vertical motion under gravity, gravity acts downward continuously with acceleration g at every instant, including at the apex.",
+      "given": "Vertically thrown ball under gravity.",
+      "formula": "At peak: v = 0, a = -g",
+      "stepByStep": "1. At the highest point, vertical velocity is momentarily zero (v = 0).\n2. The gravitational force F = mg acts continuously downward.\n3. Therefore, acceleration a = F/m = g downwards at all times, including at the peak.\n4. Statement D claims acceleration is zero, which is incorrect, making D the right option.",
+      "finalAnswer": "Option D: At the highest point, both the velocity and acceleration are momentarily zero",
+      "whyOtherOptionsWrong": "A, B, and C are all well-known correct physical properties of free projectile motion."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion with changing direction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-463",
+    "questionNumber": 463,
+    "question": "A particle moves along the x-axis with velocity v(t) = t\u00b2 - 6t + 8 m/s. How many times does the particle reverse its direction of motion in the time interval t = 0 to t = 5 s?",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "2",
+      "D": "3"
+    },
+    "optionsList": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "correctAnswer": "C",
+    "correctIndex": 2,
+    "explanation": "1. CONCEPT:\nA particle reverses direction when v(t) = 0 and the velocity changes sign across that root.\n\n2. GIVEN:\nv(t) = t\u00b2 - 6t + 8, interval [0, 5] s.\n\n3. FORMULA / PRINCIPLE:\nv(t) = (t - 2)(t - 4) = 0\n\n4. STEP-BY-STEP SOLUTION:\n1. Factorize velocity: v(t) = (t - 2)(t - 4) = 0.\n2. Roots are t = 2 s and t = 4 s, both within the interval (0, 5).\n3. For t < 2: v > 0 (forward). At t = 2: v = 0 and a = 2(2) - 6 = -2 m/s\u00b2 \u2260 0 (reversal 1).\n4. For 2 < t < 4: v < 0 (backward). At t = 4: v = 0 and a = 2(4) - 6 = +2 m/s\u00b2 \u2260 0 (reversal 2).\n5. For 4 < t \u2264 5: v > 0 (forward again). Total reversals = 2.\n\n5. FINAL ANSWER:\nOption C: 2\n\n6. QUICK TIP:\nEvery simple root of v(t) = 0 within the interior of the time interval represents a reversal of direction.",
+    "solutionStructured": {
+      "concept": "A particle reverses direction when v(t) = 0 and the velocity changes sign across that root.",
+      "given": "v(t) = t\u00b2 - 6t + 8, interval [0, 5] s.",
+      "formula": "v(t) = (t - 2)(t - 4) = 0",
+      "stepByStep": "1. Factorize velocity: v(t) = (t - 2)(t - 4) = 0.\n2. Roots are t = 2 s and t = 4 s, both within the interval (0, 5).\n3. For t < 2: v > 0 (forward). At t = 2: v = 0 and a = 2(2) - 6 = -2 m/s\u00b2 \u2260 0 (reversal 1).\n4. For 2 < t < 4: v < 0 (backward). At t = 4: v = 0 and a = 2(4) - 6 = +2 m/s\u00b2 \u2260 0 (reversal 2).\n5. For 4 < t \u2264 5: v > 0 (forward again). Total reversals = 2.",
+      "finalAnswer": "Option C: 2",
+      "whyOtherOptionsWrong": "Counting only one root or assuming velocity never becomes zero."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion with changing direction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-464",
+    "questionNumber": 464,
+    "question": "For the particle with velocity v(t) = t\u00b2 - 6t + 8 m/s starting from x(0) = 0, what is the total distance traveled from t = 0 to t = 5 s?",
+    "options": {
+      "A": "9.33 m",
+      "B": "6.67 m",
+      "C": "12.00 m",
+      "D": "4.67 m"
+    },
+    "optionsList": [
+      "9.33 m",
+      "6.67 m",
+      "12.00 m",
+      "4.67 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTotal distance is \u222b |v(t)| dt. We split the integral at the zeros of velocity: t = 2 s and t = 4 s.\n\n2. GIVEN:\nv(t) = t\u00b2 - 6t + 8, zeros at t = 2 and t = 4, interval [0, 5] s.\n\n3. FORMULA / PRINCIPLE:\nd = |\u222b\u2080\u00b2 v dt| + |\u222b\u2082\u2074 v dt| + |\u222b\u2084\u2075 v dt|\n\n4. STEP-BY-STEP SOLUTION:\n1. Indefinite integral: x(t) = t\u00b3/3 - 3t\u00b2 + 8t.\n2. x(0) = 0.\n3. x(2) = 8/3 - 12 + 16 = 20/3 m => d\u2081 = 20/3 m.\n4. x(4) = 64/3 - 48 + 32 = 16/3 m => d\u2082 = |16/3 - 20/3| = 4/3 m.\n5. x(5) = 125/3 - 75 + 40 = 20/3 m => d\u2083 = |20/3 - 16/3| = 4/3 m.\n6. Total distance = 20/3 + 4/3 + 4/3 = 28/3 \u2248 9.33 m.\n\n5. FINAL ANSWER:\nOption A: 9.33 m\n\n6. QUICK TIP:\nAlways split integration of speed into separate intervals where velocity maintains a constant sign.",
+    "solutionStructured": {
+      "concept": "Total distance is \u222b |v(t)| dt. We split the integral at the zeros of velocity: t = 2 s and t = 4 s.",
+      "given": "v(t) = t\u00b2 - 6t + 8, zeros at t = 2 and t = 4, interval [0, 5] s.",
+      "formula": "d = |\u222b\u2080\u00b2 v dt| + |\u222b\u2082\u2074 v dt| + |\u222b\u2084\u2075 v dt|",
+      "stepByStep": "1. Indefinite integral: x(t) = t\u00b3/3 - 3t\u00b2 + 8t.\n2. x(0) = 0.\n3. x(2) = 8/3 - 12 + 16 = 20/3 m => d\u2081 = 20/3 m.\n4. x(4) = 64/3 - 48 + 32 = 16/3 m => d\u2082 = |16/3 - 20/3| = 4/3 m.\n5. x(5) = 125/3 - 75 + 40 = 20/3 m => d\u2083 = |20/3 - 16/3| = 4/3 m.\n6. Total distance = 20/3 + 4/3 + 4/3 = 28/3 \u2248 9.33 m.",
+      "finalAnswer": "Option A: 9.33 m",
+      "whyOtherOptionsWrong": "Integrating directly without splitting gives net displacement x(5) - x(0) = 20/3 = 6.67 m, which is not distance."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion with changing direction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-465",
+    "questionNumber": 465,
+    "question": "A particle moves along a straight line with an initial velocity of 20 m/s and experiences a constant deceleration of 5 m/s\u00b2. What is the distance traveled by the particle in the 5th second of its motion?",
+    "options": {
+      "A": "2.5 m",
+      "B": "5.0 m",
+      "C": "1.25 m",
+      "D": "0 m"
+    },
+    "optionsList": [
+      "2.5 m",
+      "5.0 m",
+      "1.25 m",
+      "0 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe 5th second runs from t = 4 s to t = 5 s. Since turnaround occurs at t = 4 s, the particle turns around right at the start of the 5th second.\n\n2. GIVEN:\nu = 20 m/s, a = -5 m/s\u00b2, 5th second interval [4 s, 5 s].\n\n3. FORMULA / PRINCIPLE:\nTurnaround time t\u2080 = u/|a| = 20/5 = 4 s. Distance in next 1 s from rest = (1/2)|a|(\u0394t)\u00b2.\n\n4. STEP-BY-STEP SOLUTION:\n1. Stopping time: v = u + at = 20 - 5t = 0 => t = 4 s.\n2. The 5th second spans from t = 4 s to t = 5 s.\n3. At t = 4 s, the particle is momentarily at rest (v = 0).\n4. During the 5th second, the particle accelerates in the reverse direction for 1 second.\n5. Distance traveled = (1/2)|a|(\u0394t)\u00b2 = (1/2)(5)(1)\u00b2 = 2.5 m.\n\n5. FINAL ANSWER:\nOption A: 2.5 m\n\n6. QUICK TIP:\nThe standard formula s_n = u + (a/2)(2n - 1) gives displacement: 20 + (-5/2)(9) = -2.5 m. Distance is magnitude = 2.5 m.",
+    "solutionStructured": {
+      "concept": "The 5th second runs from t = 4 s to t = 5 s. Since turnaround occurs at t = 4 s, the particle turns around right at the start of the 5th second.",
+      "given": "u = 20 m/s, a = -5 m/s\u00b2, 5th second interval [4 s, 5 s].",
+      "formula": "Turnaround time t\u2080 = u/|a| = 20/5 = 4 s. Distance in next 1 s from rest = (1/2)|a|(\u0394t)\u00b2.",
+      "stepByStep": "1. Stopping time: v = u + at = 20 - 5t = 0 => t = 4 s.\n2. The 5th second spans from t = 4 s to t = 5 s.\n3. At t = 4 s, the particle is momentarily at rest (v = 0).\n4. During the 5th second, the particle accelerates in the reverse direction for 1 second.\n5. Distance traveled = (1/2)|a|(\u0394t)\u00b2 = (1/2)(5)(1)\u00b2 = 2.5 m.",
+      "finalAnswer": "Option A: 2.5 m",
+      "whyOtherOptionsWrong": "0 m assumes the particle stays permanently stopped after coming to rest."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion with changing direction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-466",
+    "questionNumber": 466,
+    "question": "A body is projected vertically upwards with a speed of 40 m/s. Taking g = 10 m/s\u00b2, what is the distance covered by the body during the 5th second of its motion?",
+    "options": {
+      "A": "5 m",
+      "B": "10 m",
+      "C": "15 m",
+      "D": "20 m"
+    },
+    "optionsList": [
+      "5 m",
+      "10 m",
+      "15 m",
+      "20 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe body reaches maximum height at t = u/g = 4 s. The 5th second is from t = 4 s to t = 5 s, which is the first second of its downward fall.\n\n2. GIVEN:\nu = 40 m/s, g = 10 m/s\u00b2, 5th second (t = 4 s to 5 s).\n\n3. FORMULA / PRINCIPLE:\nAscent time t_a = u/g = 4 s. Distance fallen in first second = (1/2)gt\u00b2.\n\n4. STEP-BY-STEP SOLUTION:\n1. Time of ascent: t = u/g = 40 / 10 = 4 s.\n2. The 5th second is the time interval from t = 4 s to t = 5 s.\n3. At t = 4 s, the body reaches maximum height with v = 0.\n4. During the 5th second, it falls freely from rest for 1 second: d = (1/2)gt\u00b2 = (1/2)(10)(1)\u00b2 = 5 m.\n\n5. FINAL ANSWER:\nOption A: 5 m\n\n6. QUICK TIP:\nThe distance fallen in the 1st second of descent is always 5 m (for g = 10 m/s\u00b2).",
+    "solutionStructured": {
+      "concept": "The body reaches maximum height at t = u/g = 4 s. The 5th second is from t = 4 s to t = 5 s, which is the first second of its downward fall.",
+      "given": "u = 40 m/s, g = 10 m/s\u00b2, 5th second (t = 4 s to 5 s).",
+      "formula": "Ascent time t_a = u/g = 4 s. Distance fallen in first second = (1/2)gt\u00b2.",
+      "stepByStep": "1. Time of ascent: t = u/g = 40 / 10 = 4 s.\n2. The 5th second is the time interval from t = 4 s to t = 5 s.\n3. At t = 4 s, the body reaches maximum height with v = 0.\n4. During the 5th second, it falls freely from rest for 1 second: d = (1/2)gt\u00b2 = (1/2)(10)(1)\u00b2 = 5 m.",
+      "finalAnswer": "Option A: 5 m",
+      "whyOtherOptionsWrong": "Using s_n without understanding direction gives -5 m, but distance must be positive."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion with changing direction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-467",
+    "questionNumber": 467,
+    "question": "A body is projected vertically upwards with velocity u = 30 m/s. Taking g = 10 m/s\u00b2, what is the ratio of distance traveled in the 3rd second to that in the 4th second?",
+    "options": {
+      "A": "1 : 1",
+      "B": "5 : 1",
+      "C": "3 : 1",
+      "D": "2 : 1"
+    },
+    "optionsList": [
+      "1 : 1",
+      "5 : 1",
+      "3 : 1",
+      "2 : 1"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nBy symmetry of motion under gravity, the distance traveled in the last second of ascent equals the distance fallen in the first second of descent.\n\n2. GIVEN:\nu = 30 m/s, g = 10 m/s\u00b2. Time to top t = 30/10 = 3 s.\n\n3. FORMULA / PRINCIPLE:\nAscent time = 3 s. 3rd second is last second of ascent; 4th second is first second of descent.\n\n4. STEP-BY-STEP SOLUTION:\n1. Time of ascent: t = u/g = 30 / 10 = 3 s.\n2. 3rd second (t = 2 s to 3 s): v(2) = 30 - 20 = 10 m/s, v(3) = 0. Distance = (0\u00b2 - 10\u00b2) / (-2 \u00d7 10) = 5 m.\n3. 4th second (t = 3 s to 4 s): falls from rest for 1 s. Distance = (1/2)(10)(1)\u00b2 = 5 m.\n4. Ratio = 5 m : 5 m = 1 : 1.\n\n5. FINAL ANSWER:\nOption A: 1 : 1\n\n6. QUICK TIP:\nNEET symmetry rule: Distance in the last second before reaching the peak always equals distance in the first second after leaving the peak (5 m for g = 10 m/s\u00b2).",
+    "solutionStructured": {
+      "concept": "By symmetry of motion under gravity, the distance traveled in the last second of ascent equals the distance fallen in the first second of descent.",
+      "given": "u = 30 m/s, g = 10 m/s\u00b2. Time to top t = 30/10 = 3 s.",
+      "formula": "Ascent time = 3 s. 3rd second is last second of ascent; 4th second is first second of descent.",
+      "stepByStep": "1. Time of ascent: t = u/g = 30 / 10 = 3 s.\n2. 3rd second (t = 2 s to 3 s): v(2) = 30 - 20 = 10 m/s, v(3) = 0. Distance = (0\u00b2 - 10\u00b2) / (-2 \u00d7 10) = 5 m.\n3. 4th second (t = 3 s to 4 s): falls from rest for 1 s. Distance = (1/2)(10)(1)\u00b2 = 5 m.\n4. Ratio = 5 m : 5 m = 1 : 1.",
+      "finalAnswer": "Option A: 1 : 1",
+      "whyOtherOptionsWrong": "5 : 1 is the ratio of distance in 1st second to 3rd second."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion with changing direction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-468",
+    "questionNumber": 468,
+    "question": "A particle starts with an initial velocity of 15 m/s along the positive x-direction and experiences a constant deceleration of 5 m/s\u00b2. What is the ratio of the distance traveled in the 3rd second to the distance traveled in the 4th second?",
+    "options": {
+      "A": "1 : 1",
+      "B": "2 : 1",
+      "C": "1 : 2",
+      "D": "3 : 1"
+    },
+    "optionsList": [
+      "1 : 1",
+      "2 : 1",
+      "1 : 2",
+      "3 : 1"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDeceleration brings the particle to rest at t = 15/5 = 3 s. The 3rd second is immediately before rest, and the 4th second is immediately after turnaround.\n\n2. GIVEN:\nu = 15 m/s, a = -5 m/s\u00b2. Turnaround time t = 3 s.\n\n3. FORMULA / PRINCIPLE:\nDistance to/from rest in time \u0394t = 1 s is (1/2)|a|(\u0394t)\u00b2.\n\n4. STEP-BY-STEP SOLUTION:\n1. Stopping time: t\u2080 = 15 / 5 = 3 s.\n2. 3rd second (t = 2 s to 3 s): v(2) = 5 m/s, v(3) = 0. Distance = 5\u00b2 / (2 \u00d7 5) = 2.5 m.\n3. 4th second (t = 3 s to 4 s): starts from rest with a = 5 m/s\u00b2. Distance = (1/2)(5)(1)\u00b2 = 2.5 m.\n4. Ratio = 2.5 m : 2.5 m = 1 : 1.\n\n5. FINAL ANSWER:\nOption A: 1 : 1\n\n6. QUICK TIP:\nDue to time-reversal symmetry around the turning point, distance in [t\u2080 - \u03c4, t\u2080] equals distance in [t\u2080, t\u2080 + \u03c4].",
+    "solutionStructured": {
+      "concept": "Deceleration brings the particle to rest at t = 15/5 = 3 s. The 3rd second is immediately before rest, and the 4th second is immediately after turnaround.",
+      "given": "u = 15 m/s, a = -5 m/s\u00b2. Turnaround time t = 3 s.",
+      "formula": "Distance to/from rest in time \u0394t = 1 s is (1/2)|a|(\u0394t)\u00b2.",
+      "stepByStep": "1. Stopping time: t\u2080 = 15 / 5 = 3 s.\n2. 3rd second (t = 2 s to 3 s): v(2) = 5 m/s, v(3) = 0. Distance = 5\u00b2 / (2 \u00d7 5) = 2.5 m.\n3. 4th second (t = 3 s to 4 s): starts from rest with a = 5 m/s\u00b2. Distance = (1/2)(5)(1)\u00b2 = 2.5 m.\n4. Ratio = 2.5 m : 2.5 m = 1 : 1.",
+      "finalAnswer": "Option A: 1 : 1",
+      "whyOtherOptionsWrong": "Assuming acceleration vanishes after stopping."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion with changing direction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-469",
+    "questionNumber": 469,
+    "question": "A particle moves along a straight line with an initial velocity of u = 12 m/s and constant acceleration a = -4 m/s\u00b2. What is the average speed of the particle in the first 5 seconds of its motion?",
+    "options": {
+      "A": "5.2 m/s",
+      "B": "3.6 m/s",
+      "C": "2.0 m/s",
+      "D": "4.8 m/s"
+    },
+    "optionsList": [
+      "5.2 m/s",
+      "3.6 m/s",
+      "2.0 m/s",
+      "4.8 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nAverage speed = total distance / total time. Calculate distance before turnaround and after turnaround.\n\n2. GIVEN:\nu = 12 m/s, a = -4 m/s\u00b2, total time t = 5 s.\n\n3. FORMULA / PRINCIPLE:\nTurnaround time t\u2080 = u/|a| = 3 s. Total distance d = d\u2081 + d\u2082.\n\n4. STEP-BY-STEP SOLUTION:\n1. Turnaround time: v = 12 - 4t = 0 => t = 3 s.\n2. Forward distance in first 3 s: d\u2081 = 12\u00b2 / (2 \u00d7 4) = 144 / 8 = 18 m.\n3. Backward distance in next 2 s (from t = 3 s to 5 s): d\u2082 = (1/2)(4)(2)\u00b2 = 8 m.\n4. Total distance = 18 + 8 = 26 m.\n5. Average speed = 26 m / 5 s = 5.2 m/s.\n\n5. FINAL ANSWER:\nOption A: 5.2 m/s\n\n6. QUICK TIP:\nNet displacement is 18 - 8 = 10 m, giving average velocity 2.0 m/s. Do not confuse average speed with average velocity!",
+    "solutionStructured": {
+      "concept": "Average speed = total distance / total time. Calculate distance before turnaround and after turnaround.",
+      "given": "u = 12 m/s, a = -4 m/s\u00b2, total time t = 5 s.",
+      "formula": "Turnaround time t\u2080 = u/|a| = 3 s. Total distance d = d\u2081 + d\u2082.",
+      "stepByStep": "1. Turnaround time: v = 12 - 4t = 0 => t = 3 s.\n2. Forward distance in first 3 s: d\u2081 = 12\u00b2 / (2 \u00d7 4) = 144 / 8 = 18 m.\n3. Backward distance in next 2 s (from t = 3 s to 5 s): d\u2082 = (1/2)(4)(2)\u00b2 = 8 m.\n4. Total distance = 18 + 8 = 26 m.\n5. Average speed = 26 m / 5 s = 5.2 m/s.",
+      "finalAnswer": "Option A: 5.2 m/s",
+      "whyOtherOptionsWrong": "2.0 m/s is the average velocity, not average speed."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion with changing direction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-470",
+    "questionNumber": 470,
+    "question": "A ball is dropped from a height of 20 m above a hard floor. Upon striking the floor, it rebounds vertically with half the speed it hit the floor with. Taking g = 10 m/s\u00b2, what is the total distance traveled by the ball from the release until it reaches the peak of its first bounce?",
+    "options": {
+      "A": "25 m",
+      "B": "30 m",
+      "C": "22.5 m",
+      "D": "27.5 m"
+    },
+    "optionsList": [
+      "25 m",
+      "30 m",
+      "22.5 m",
+      "27.5 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nMotion with sudden change of direction upon impact. Downward drop followed by upward bounce.\n\n2. GIVEN:\nDrop height h\u2081 = 20 m, rebound speed v' = v/2, g = 10 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\nv = \u221a(2gh\u2081), h\u2082 = (v')\u00b2 / (2g) = h\u2081 / 4\n\n4. STEP-BY-STEP SOLUTION:\n1. Speed just before hitting floor: v = \u221a(2 \u00d7 10 \u00d7 20) = \u221a400 = 20 m/s.\n2. Rebound speed: v' = 20 / 2 = 10 m/s.\n3. Peak height of bounce: h\u2082 = (10)\u00b2 / (2 \u00d7 10) = 100 / 20 = 5 m.\n4. Total distance traveled = h\u2081 + h\u2082 = 20 m + 5 m = 25 m.\n\n5. FINAL ANSWER:\nOption A: 25 m\n\n6. QUICK TIP:\nSince rebound speed is halved, rebound height is (1/2)\u00b2 = 1/4 of the drop height.",
+    "solutionStructured": {
+      "concept": "Motion with sudden change of direction upon impact. Downward drop followed by upward bounce.",
+      "given": "Drop height h\u2081 = 20 m, rebound speed v' = v/2, g = 10 m/s\u00b2.",
+      "formula": "v = \u221a(2gh\u2081), h\u2082 = (v')\u00b2 / (2g) = h\u2081 / 4",
+      "stepByStep": "1. Speed just before hitting floor: v = \u221a(2 \u00d7 10 \u00d7 20) = \u221a400 = 20 m/s.\n2. Rebound speed: v' = 20 / 2 = 10 m/s.\n3. Peak height of bounce: h\u2082 = (10)\u00b2 / (2 \u00d7 10) = 100 / 20 = 5 m.\n4. Total distance traveled = h\u2081 + h\u2082 = 20 m + 5 m = 25 m.",
+      "finalAnswer": "Option A: 25 m",
+      "whyOtherOptionsWrong": "30 m assumes rebound height equals half the drop height (10 m) instead of one-fourth."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion with changing direction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-471",
+    "questionNumber": 471,
+    "question": "In the previous question, what is the net displacement of the ball from its initial drop position to the peak of the first bounce?",
+    "options": {
+      "A": "15 m downward",
+      "B": "25 m downward",
+      "C": "5 m upward",
+      "D": "15 m upward"
+    },
+    "optionsList": [
+      "15 m downward",
+      "25 m downward",
+      "5 m upward",
+      "15 m upward"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDisplacement is the vector from the initial position to the final position.\n\n2. GIVEN:\nInitial position: +20 m above floor. Final position: +5 m above floor.\n\n3. FORMULA / PRINCIPLE:\n\u0394y = y_final - y_initial\n\n4. STEP-BY-STEP SOLUTION:\n1. Coordinate system: Floor at y = 0, upward positive.\n2. Initial position y_i = +20 m.\n3. Final position at apex of bounce y_f = +5 m.\n4. Displacement \u0394y = 5 - 20 = -15 m (15 m downward).\n\n5. FINAL ANSWER:\nOption A: 15 m downward\n\n6. QUICK TIP:\nDisplacement depends only on initial and final positions, regardless of the floor collision in between.",
+    "solutionStructured": {
+      "concept": "Displacement is the vector from the initial position to the final position.",
+      "given": "Initial position: +20 m above floor. Final position: +5 m above floor.",
+      "formula": "\u0394y = y_final - y_initial",
+      "stepByStep": "1. Coordinate system: Floor at y = 0, upward positive.\n2. Initial position y_i = +20 m.\n3. Final position at apex of bounce y_f = +5 m.\n4. Displacement \u0394y = 5 - 20 = -15 m (15 m downward).",
+      "finalAnswer": "Option A: 15 m downward",
+      "whyOtherOptionsWrong": "25 m downward is the total distance traveled, not displacement."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion with changing direction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-472",
+    "questionNumber": 472,
+    "question": "A particle moves along a straight line with velocity v(t) = 6 - 2t m/s. Find the displacement and the distance traveled between t = 1 s and t = 5 s.",
+    "options": {
+      "A": "Displacement = 0 m, Distance = 8 m",
+      "B": "Displacement = 8 m, Distance = 8 m",
+      "C": "Displacement = 0 m, Distance = 16 m",
+      "D": "Displacement = 4 m, Distance = 10 m"
+    },
+    "optionsList": [
+      "Displacement = 0 m, Distance = 8 m",
+      "Displacement = 8 m, Distance = 8 m",
+      "Displacement = 0 m, Distance = 16 m",
+      "Displacement = 4 m, Distance = 10 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nReversal occurs at t = 3 s. The interval [1, 5] s is symmetric around t = 3 s.\n\n2. GIVEN:\nv(t) = 6 - 2t, interval [1, 5] s.\n\n3. FORMULA / PRINCIPLE:\nTurnaround at v = 0 => t = 3 s. \u0394x\u2081 = \u222b\u2081\u00b3 v dt, \u0394x\u2082 = \u222b\u2083\u2075 v dt.\n\n4. STEP-BY-STEP SOLUTION:\n1. Velocity becomes zero at 6 - 2t = 0 => t = 3 s.\n2. Forward displacement (t = 1 to 3 s): \u0394x\u2081 = [6t - t\u00b2]\u2081\u00b3 = (18 - 9) - (6 - 1) = 9 - 5 = +4 m.\n3. Backward displacement (t = 3 to 5 s): \u0394x\u2082 = [6t - t\u00b2]\u2083\u2075 = (30 - 25) - (18 - 9) = 5 - 9 = -4 m.\n4. Net displacement = +4 - 4 = 0 m.\n5. Total distance = |+4| + |-4| = 8 m.\n\n5. FINAL ANSWER:\nOption A: Displacement = 0 m, Distance = 8 m\n\n6. QUICK TIP:\nDue to symmetry around t = 3 s, forward and backward displacements cancel to 0, while distances add to 8 m.",
+    "solutionStructured": {
+      "concept": "Reversal occurs at t = 3 s. The interval [1, 5] s is symmetric around t = 3 s.",
+      "given": "v(t) = 6 - 2t, interval [1, 5] s.",
+      "formula": "Turnaround at v = 0 => t = 3 s. \u0394x\u2081 = \u222b\u2081\u00b3 v dt, \u0394x\u2082 = \u222b\u2083\u2075 v dt.",
+      "stepByStep": "1. Velocity becomes zero at 6 - 2t = 0 => t = 3 s.\n2. Forward displacement (t = 1 to 3 s): \u0394x\u2081 = [6t - t\u00b2]\u2081\u00b3 = (18 - 9) - (6 - 1) = 9 - 5 = +4 m.\n3. Backward displacement (t = 3 to 5 s): \u0394x\u2082 = [6t - t\u00b2]\u2083\u2075 = (30 - 25) - (18 - 9) = 5 - 9 = -4 m.\n4. Net displacement = +4 - 4 = 0 m.\n5. Total distance = |+4| + |-4| = 8 m.",
+      "finalAnswer": "Option A: Displacement = 0 m, Distance = 8 m",
+      "whyOtherOptionsWrong": "Equating distance with displacement gives 0 m for distance."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion with changing direction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-473",
+    "questionNumber": 473,
+    "question": "A vehicle moving along a straight road at 25 m/s experiences a constant acceleration of -5 m/s\u00b2. If this acceleration acts for 6 seconds (accelerating the vehicle in reverse after stopping), what is the total distance traveled in those 6 seconds?",
+    "options": {
+      "A": "65 m",
+      "B": "60 m",
+      "C": "70 m",
+      "D": "50 m"
+    },
+    "optionsList": [
+      "65 m",
+      "60 m",
+      "70 m",
+      "50 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nMotion comes to rest at t = 5 s and then continues in reverse for the remaining 1 s.\n\n2. GIVEN:\nu = 25 m/s, a = -5 m/s\u00b2, t = 6 s.\n\n3. FORMULA / PRINCIPLE:\nStopping time t\u2080 = u/|a| = 5 s. Distance = d\u2081 + d\u2082 = u\u00b2/(2|a|) + (1/2)|a|(\u0394t)\u00b2.\n\n4. STEP-BY-STEP SOLUTION:\n1. Forward stopping time: t\u2080 = 25 / 5 = 5 s.\n2. Forward distance: d\u2081 = 25\u00b2 / (2 \u00d7 5) = 625 / 10 = 62.5 m.\n3. Reverse distance in remaining time (\u0394t = 6 - 5 = 1 s): d\u2082 = (1/2)(5)(1)\u00b2 = 2.5 m.\n4. Total distance = 62.5 + 2.5 = 65 m.\n\n5. FINAL ANSWER:\nOption A: 65 m\n\n6. QUICK TIP:\nNet displacement is 62.5 - 2.5 = 60 m, but total distance is 65 m.",
+    "solutionStructured": {
+      "concept": "Motion comes to rest at t = 5 s and then continues in reverse for the remaining 1 s.",
+      "given": "u = 25 m/s, a = -5 m/s\u00b2, t = 6 s.",
+      "formula": "Stopping time t\u2080 = u/|a| = 5 s. Distance = d\u2081 + d\u2082 = u\u00b2/(2|a|) + (1/2)|a|(\u0394t)\u00b2.",
+      "stepByStep": "1. Forward stopping time: t\u2080 = 25 / 5 = 5 s.\n2. Forward distance: d\u2081 = 25\u00b2 / (2 \u00d7 5) = 625 / 10 = 62.5 m.\n3. Reverse distance in remaining time (\u0394t = 6 - 5 = 1 s): d\u2082 = (1/2)(5)(1)\u00b2 = 2.5 m.\n4. Total distance = 62.5 + 2.5 = 65 m.",
+      "finalAnswer": "Option A: 65 m",
+      "whyOtherOptionsWrong": "60 m is displacement, not distance."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion with changing direction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-474",
+    "questionNumber": 474,
+    "question": "A body moves along a straight line such that its velocity v and position x are related by v\u00b2 = 64 - 16x (in SI units). What is the maximum displacement of the body along the positive x-direction before it reverses its direction?",
+    "options": {
+      "A": "4 m",
+      "B": "8 m",
+      "C": "16 m",
+      "D": "2 m"
+    },
+    "optionsList": [
+      "4 m",
+      "8 m",
+      "16 m",
+      "2 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nReversal of motion occurs when velocity v = 0.\n\n2. GIVEN:\nVelocity-position relation: v\u00b2 = 64 - 16x.\n\n3. FORMULA / PRINCIPLE:\nSet v = 0 => 64 - 16x = 0\n\n4. STEP-BY-STEP SOLUTION:\n1. The particle continues in the positive x direction until its speed drops to zero.\n2. Set v\u00b2 = 0: 64 - 16x = 0.\n3. 16x = 64 => x = 4 m.\n4. Comparing with v\u00b2 = u\u00b2 + 2as gives u\u00b2 = 64 and 2a = -16 => a = -8 m/s\u00b2.\n\n5. FINAL ANSWER:\nOption A: 4 m\n\n6. QUICK TIP:\nWhen given v\u00b2(x), find the turning point directly by setting v = 0.",
+    "solutionStructured": {
+      "concept": "Reversal of motion occurs when velocity v = 0.",
+      "given": "Velocity-position relation: v\u00b2 = 64 - 16x.",
+      "formula": "Set v = 0 => 64 - 16x = 0",
+      "stepByStep": "1. The particle continues in the positive x direction until its speed drops to zero.\n2. Set v\u00b2 = 0: 64 - 16x = 0.\n3. 16x = 64 => x = 4 m.\n4. Comparing with v\u00b2 = u\u00b2 + 2as gives u\u00b2 = 64 and 2a = -16 => a = -8 m/s\u00b2.",
+      "finalAnswer": "Option A: 4 m",
+      "whyOtherOptionsWrong": "8 m confuses 64 / 16 with 64 / 8."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion with changing direction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-475",
+    "questionNumber": 475,
+    "question": "A particle starts with velocity +u and uniform retardation -a. It reaches the turnaround point and returns to the starting point. What is the average velocity and average speed for the entire round trip?",
+    "options": {
+      "A": "Average velocity = 0, Average speed = u / 2",
+      "B": "Average velocity = 0, Average speed = u",
+      "C": "Average velocity = u / 2, Average speed = u / 2",
+      "D": "Average velocity = 0, Average speed = 0"
+    },
+    "optionsList": [
+      "Average velocity = 0, Average speed = u / 2",
+      "Average velocity = 0, Average speed = u",
+      "Average velocity = u / 2, Average speed = u / 2",
+      "Average velocity = 0, Average speed = 0"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nRound trip means net displacement is zero. Total distance is twice the maximum excursion, and total time is 2u/a.\n\n2. GIVEN:\nInitial velocity u, retardation a, round trip back to start.\n\n3. FORMULA / PRINCIPLE:\nDisplacement = 0 => v_avg = 0. Total distance D = 2(u\u00b2/(2a)) = u\u00b2/a. Total time T = 2u/a.\n\n4. STEP-BY-STEP SOLUTION:\n1. For any round trip starting and ending at the same point, net displacement = 0.\n2. Therefore, Average velocity = 0.\n3. Time to turn around: t\u2080 = u/a. Total time T = 2u/a.\n4. Maximum distance d\u2081 = u\u00b2 / (2a). Total distance D = 2 \u00d7 d\u2081 = u\u00b2 / a.\n5. Average speed = D / T = (u\u00b2 / a) / (2u / a) = u / 2.\n\n5. FINAL ANSWER:\nOption A: Average velocity = 0, Average speed = u / 2\n\n6. QUICK TIP:\nFor any uniformly accelerated round trip returning to start, average speed is always u / 2.",
+    "solutionStructured": {
+      "concept": "Round trip means net displacement is zero. Total distance is twice the maximum excursion, and total time is 2u/a.",
+      "given": "Initial velocity u, retardation a, round trip back to start.",
+      "formula": "Displacement = 0 => v_avg = 0. Total distance D = 2(u\u00b2/(2a)) = u\u00b2/a. Total time T = 2u/a.",
+      "stepByStep": "1. For any round trip starting and ending at the same point, net displacement = 0.\n2. Therefore, Average velocity = 0.\n3. Time to turn around: t\u2080 = u/a. Total time T = 2u/a.\n4. Maximum distance d\u2081 = u\u00b2 / (2a). Total distance D = 2 \u00d7 d\u2081 = u\u00b2 / a.\n5. Average speed = D / T = (u\u00b2 / a) / (2u / a) = u / 2.",
+      "finalAnswer": "Option A: Average velocity = 0, Average speed = u / 2",
+      "whyOtherOptionsWrong": "Average speed is never zero for a moving particle."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion with changing direction",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  }
+]

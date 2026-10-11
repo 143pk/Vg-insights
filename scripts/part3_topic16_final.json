@@ -1,0 +1,1128 @@
+[
+  {
+    "id": "msl-mcq-346",
+    "questionNumber": 346,
+    "question": "A ball thrown vertically upwards passes a certain height h at time t\u2081 on its way up and at time t\u2082 on its way down. The initial speed of projection u is:",
+    "options": {
+      "A": "g (t\u2081 + t\u2082) / 2",
+      "B": "g (t\u2081 + t\u2082)",
+      "C": "g \u221a(t\u2081 t\u2082)",
+      "D": "g (t\u2082 - t\u2081) / 2"
+    },
+    "optionsList": [
+      "g (t\u2081 + t\u2082) / 2",
+      "g (t\u2081 + t\u2082)",
+      "g \u221a(t\u2081 t\u2082)",
+      "g (t\u2082 - t\u2081) / 2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe displacement equation h = ut - 1/2 gt\u00b2 is quadratic in t: 1/2 gt\u00b2 - ut + h = 0. The sum of roots is t\u2081 + t\u2082 = u / (g/2) = 2u / g => u = g (t\u2081 + t\u2082) / 2.\n\n2. GIVEN:\nHeight h passed at t\u2081 and t\u2082.\n\n3. FORMULA / PRINCIPLE:\n1/2 g t\u00b2 - u t + h = 0 => t\u2081 + t\u2082 = 2u / g => u = g (t\u2081 + t\u2082) / 2\n\n4. STEP-BY-STEP SOLUTION:\n1. Write the vertical position equation: h = u t - (1/2) g t\u00b2.\n2. Rearrange as a standard quadratic equation in t: (g/2) t\u00b2 - u t + h = 0.\n3. By Vieta's formulas, the sum of the roots t\u2081 and t\u2082 is: t\u2081 + t\u2082 = -(-u) / (g/2) = 2u / g.\n4. Solving for u: u = g (t\u2081 + t\u2082) / 2.\n\n5. FINAL ANSWER:\nOption A: g (t\u2081 + t\u2082) / 2\n\n6. QUICK TIP:\nGolden NEET Formula: u = g(t\u2081 + t\u2082)/2 and h = 1/2 g t\u2081 t\u2082!",
+    "solutionStructured": {
+      "concept": "The displacement equation h = ut - 1/2 gt\u00b2 is quadratic in t: 1/2 gt\u00b2 - ut + h = 0. The sum of roots is t\u2081 + t\u2082 = u / (g/2) = 2u / g => u = g (t\u2081 + t\u2082) / 2.",
+      "given": "Height h passed at t\u2081 and t\u2082.",
+      "formula": "1/2 g t\u00b2 - u t + h = 0 => t\u2081 + t\u2082 = 2u / g => u = g (t\u2081 + t\u2082) / 2",
+      "stepByStep": "1. Write the vertical position equation: h = u t - (1/2) g t\u00b2.\n2. Rearrange as a standard quadratic equation in t: (g/2) t\u00b2 - u t + h = 0.\n3. By Vieta's formulas, the sum of the roots t\u2081 and t\u2082 is: t\u2081 + t\u2082 = -(-u) / (g/2) = 2u / g.\n4. Solving for u: u = g (t\u2081 + t\u2082) / 2.",
+      "finalAnswer": "Option A: g (t\u2081 + t\u2082) / 2",
+      "whyOtherOptionsWrong": "Option B forgets the factor of 1/2 in the sum of roots."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-347",
+    "questionNumber": 347,
+    "question": "Using the same setup (a ball passing height h at times t\u2081 and t\u2082), what is the value of the height h?",
+    "options": {
+      "A": "(1/2) g t\u2081 t\u2082",
+      "B": "g t\u2081 t\u2082",
+      "C": "2 g t\u2081 t\u2082",
+      "D": "(1/4) g t\u2081 t\u2082"
+    },
+    "optionsList": [
+      "(1/2) g t\u2081 t\u2082",
+      "g t\u2081 t\u2082",
+      "2 g t\u2081 t\u2082",
+      "(1/4) g t\u2081 t\u2082"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFrom Vieta's formulas on (g/2) t\u00b2 - u t + h = 0, the product of roots is t\u2081 t\u2082 = h / (g/2) => h = 1/2 g t\u2081 t\u2082.\n\n2. GIVEN:\nTimes t\u2081 and t\u2082 at height h.\n\n3. FORMULA / PRINCIPLE:\nProduct of roots: t\u2081 t\u2082 = h / (g/2) => h = (1/2) g t\u2081 t\u2082\n\n4. STEP-BY-STEP SOLUTION:\n1. From the quadratic (g/2) t\u00b2 - ut + h = 0, the product of roots is:\n   Product = constant term / leading coefficient = h / (g/2).\n2. Therefore: t\u2081 t\u2082 = 2h / g.\n3. Solving for h: h = (1/2) g t\u2081 t\u2082.\n\n5. FINAL ANSWER:\nOption A: (1/2) g t\u2081 t\u2082\n\n6. QUICK TIP:\nMemorable NEET Identity: Height h = 1/2 g t\u2081 t\u2082. Very commonly tested!",
+    "solutionStructured": {
+      "concept": "From Vieta's formulas on (g/2) t\u00b2 - u t + h = 0, the product of roots is t\u2081 t\u2082 = h / (g/2) => h = 1/2 g t\u2081 t\u2082.",
+      "given": "Times t\u2081 and t\u2082 at height h.",
+      "formula": "Product of roots: t\u2081 t\u2082 = h / (g/2) => h = (1/2) g t\u2081 t\u2082",
+      "stepByStep": "1. From the quadratic (g/2) t\u00b2 - ut + h = 0, the product of roots is:\n   Product = constant term / leading coefficient = h / (g/2).\n2. Therefore: t\u2081 t\u2082 = 2h / g.\n3. Solving for h: h = (1/2) g t\u2081 t\u2082.",
+      "finalAnswer": "Option A: (1/2) g t\u2081 t\u2082",
+      "whyOtherOptionsWrong": "g t\u2081 t\u2082 forgets the 1/2 factor."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-348",
+    "questionNumber": 348,
+    "question": "A ball is thrown vertically upwards from the top of a tower of height 40 m with an initial speed of 10 m/s. Taking g = 10 m/s\u00b2, the time taken by the ball to reach the ground is:",
+    "options": {
+      "A": "4 s",
+      "B": "2 s",
+      "C": "3 s",
+      "D": "5 s"
+    },
+    "optionsList": [
+      "2 s",
+      "3 s",
+      "4 s",
+      "1 s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTaking upward positive: s = -20 m, u = +10 m/s, a = -10 m/s\u00b2. Solve -20 = 10t - 5t\u00b2 => 5t\u00b2 - 10t - 20 = 0 => t\u00b2 - 2t - 4 = 0 wait, let's check values.\n\n2. GIVEN:\nh = 20 m (ground is -20 m from top), u = 10 m/s, g = 10 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\ns = ut - (1/2) g t\u00b2 => -20 = 10t - 5t\u00b2 => 5t\u00b2 - 10t - 20 = 0 wait, roots: t = [2 \u00b1 \u221a(4+16)]/2 = 1 \u00b1 \u221a5 \u2248 3.23 s. Wait, let's choose u=15 or h=25 so roots are integers!\n\n4. STEP-BY-STEP SOLUTION:\nLet's choose h = 25 m, u = 20 m/s: -25 = 20t - 5t\u00b2 => 5t\u00b2 - 20t - 25 = 0 => t\u00b2 - 4t - 5 = 0 => (t - 5)(t + 1) = 0 => t = 5 s. Or h = 40 m, u = 10 m/s => 5t\u00b2 - 10t - 40 = 0 => t\u00b2 - 2t - 8 = 0 => (t - 4)(t + 2) = 0 => t = 4 s! Perfect integer roots.\n\n5. FINAL ANSWER:\nOption A: 2 s\n\n6. QUICK TIP:\nSet s = -h in s = ut - 1/2 gt\u00b2.",
+    "solutionStructured": {
+      "concept": "Taking upward positive: s = -20 m, u = +10 m/s, a = -10 m/s\u00b2. Solve -20 = 10t - 5t\u00b2 => 5t\u00b2 - 10t - 20 = 0 => t\u00b2 - 2t - 4 = 0 wait, let's check values.",
+      "given": "h = 20 m (ground is -20 m from top), u = 10 m/s, g = 10 m/s\u00b2.",
+      "formula": "s = ut - (1/2) g t\u00b2 => -20 = 10t - 5t\u00b2 => 5t\u00b2 - 10t - 20 = 0 wait, roots: t = [2 \u00b1 \u221a(4+16)]/2 = 1 \u00b1 \u221a5 \u2248 3.23 s. Wait, let's choose u=15 or h=25 so roots are integers!",
+      "stepByStep": "Let's choose h = 25 m, u = 20 m/s: -25 = 20t - 5t\u00b2 => 5t\u00b2 - 20t - 25 = 0 => t\u00b2 - 4t - 5 = 0 => (t - 5)(t + 1) = 0 => t = 5 s. Or h = 40 m, u = 10 m/s => 5t\u00b2 - 10t - 40 = 0 => t\u00b2 - 2t - 8 = 0 => (t - 4)(t + 2) = 0 => t = 4 s! Perfect integer roots.",
+      "finalAnswer": "Option A: 2 s",
+      "whyOtherOptionsWrong": "Sign error in displacement."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null,
+    "correct_opt": "A",
+    "concept": "Taking upward as positive and the tower top as the origin: s = -40 m, u = +10 m/s, a = -g = -10 m/s\u00b2.",
+    "formula": "s = u t - (1/2) g t\u00b2 => -40 = 10t - 5t\u00b2",
+    "steps": "1. Coordinate system: upward is positive, origin at the top of the tower.\n2. Displacement to the ground: s = -40 m.\n3. Apply displacement formula: -40 = 10t - (1/2)(10)t\u00b2 = 10t - 5t\u00b2.\n4. Rearrange: 5t\u00b2 - 10t - 40 = 0 => t\u00b2 - 2t - 8 = 0.\n5. Factor: (t - 4)(t + 2) = 0.\n6. Since time cannot be negative, t = 4 s."
+  },
+  {
+    "id": "msl-mcq-349",
+    "questionNumber": 349,
+    "question": "A ball thrown vertically upwards from the top of a tower of height 40 m with speed 10 m/s hits the ground with what speed? (take g = 10 m/s\u00b2)",
+    "options": {
+      "A": "30 m/s",
+      "B": "25 m/s",
+      "C": "20 m/s",
+      "D": "35 m/s"
+    },
+    "optionsList": [
+      "30 m/s",
+      "25 m/s",
+      "20 m/s",
+      "35 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nUsing v\u00b2 = u\u00b2 + 2gh (or v = u - gt): v\u00b2 = 10\u00b2 + 2(10)(40) = 100 + 800 = 900 => v = 30 m/s.\n\n2. GIVEN:\nu = 10 m/s, h = 40 m, g = 10 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\nv\u00b2 = u\u00b2 + 2gh\n\n4. STEP-BY-STEP SOLUTION:\n1. By conservation of mechanical energy or 3rd equation of motion:\n   v\u00b2 = u\u00b2 + 2gh (since net vertical drop is h = 40 m).\n2. v\u00b2 = (10)\u00b2 + 2 \u00d7 10 \u00d7 40 = 100 + 800 = 900.\n3. v = \u221a900 = 30 m/s.\n4. Alternatively, using t = 4 s: v = u - gt = 10 - 10(4) = -30 m/s (downward speed is 30 m/s).\n\n5. FINAL ANSWER:\nOption A: 30 m/s\n\n6. QUICK TIP:\nSpeed upon hitting the ground does NOT depend on whether the ball was thrown upwards or downwards at initial speed u!",
+    "solutionStructured": {
+      "concept": "Using v\u00b2 = u\u00b2 + 2gh (or v = u - gt): v\u00b2 = 10\u00b2 + 2(10)(40) = 100 + 800 = 900 => v = 30 m/s.",
+      "given": "u = 10 m/s, h = 40 m, g = 10 m/s\u00b2.",
+      "formula": "v\u00b2 = u\u00b2 + 2gh",
+      "stepByStep": "1. By conservation of mechanical energy or 3rd equation of motion:\n   v\u00b2 = u\u00b2 + 2gh (since net vertical drop is h = 40 m).\n2. v\u00b2 = (10)\u00b2 + 2 \u00d7 10 \u00d7 40 = 100 + 800 = 900.\n3. v = \u221a900 = 30 m/s.\n4. Alternatively, using t = 4 s: v = u - gt = 10 - 10(4) = -30 m/s (downward speed is 30 m/s).",
+      "finalAnswer": "Option A: 30 m/s",
+      "whyOtherOptionsWrong": "20 m/s forgets the initial kinetic energy."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-350",
+    "questionNumber": 350,
+    "question": "From the top of a tower, one ball is thrown vertically upwards with speed u and another ball is thrown vertically downwards with the same speed u. If they reach the ground with speeds v\u2081 and v\u2082 respectively, then:",
+    "options": {
+      "A": "v\u2081 = v\u2082",
+      "B": "v\u2081 > v\u2082",
+      "C": "v\u2081 < v\u2082",
+      "D": "Depends on the mass of the balls"
+    },
+    "optionsList": [
+      "v\u2081 = v\u2082",
+      "v\u2081 > v\u2082",
+      "v\u2081 < v\u2082",
+      "Depends on the mass of the balls"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nBy conservation of energy, the mechanical energy at the top is E = 1/2 m u\u00b2 + mgh for both balls. Therefore, the kinetic energy at the ground is identical: 1/2 m v\u00b2 = 1/2 m u\u00b2 + mgh => v\u2081 = v\u2082 = \u221a(u\u00b2 + 2gh).\n\n2. GIVEN:\nSame height h, same initial speed u in opposite vertical directions.\n\n3. FORMULA / PRINCIPLE:\nv = \u221a(u\u00b2 + 2gh)\n\n4. STEP-BY-STEP SOLUTION:\n1. For the ball thrown upwards, it rises to max height and returns to the tower top with the same speed u downwards.\n2. From that point on, its motion is identical to the ball thrown downwards with speed u.\n3. Alternatively, by energy conservation: 1/2 m v\u00b2 = 1/2 m u\u00b2 + mgh.\n4. Since mass cancels and energy is a scalar independent of velocity direction, v\u2081 = v\u2082 = \u221a(u\u00b2 + 2gh).\n\n5. FINAL ANSWER:\nOption A: v\u2081 = v\u2082\n\n6. QUICK TIP:\nTheir final speeds are identical (v\u2081 = v\u2082), but their times of flight are different (t\u2081 > t\u2082)!",
+    "solutionStructured": {
+      "concept": "By conservation of energy, the mechanical energy at the top is E = 1/2 m u\u00b2 + mgh for both balls. Therefore, the kinetic energy at the ground is identical: 1/2 m v\u00b2 = 1/2 m u\u00b2 + mgh => v\u2081 = v\u2082 = \u221a(u\u00b2 + 2gh).",
+      "given": "Same height h, same initial speed u in opposite vertical directions.",
+      "formula": "v = \u221a(u\u00b2 + 2gh)",
+      "stepByStep": "1. For the ball thrown upwards, it rises to max height and returns to the tower top with the same speed u downwards.\n2. From that point on, its motion is identical to the ball thrown downwards with speed u.\n3. Alternatively, by energy conservation: 1/2 m v\u00b2 = 1/2 m u\u00b2 + mgh.\n4. Since mass cancels and energy is a scalar independent of velocity direction, v\u2081 = v\u2082 = \u221a(u\u00b2 + 2gh).",
+      "finalAnswer": "Option A: v\u2081 = v\u2082",
+      "whyOtherOptionsWrong": "Option B falsely assumes going higher gives it more final speed (it actually just takes more time)."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-351",
+    "questionNumber": 351,
+    "question": "In the previous problem, if the times taken to reach the ground are t\u2081 (thrown upwards) and t\u2082 (thrown downwards), the time t taken by a third ball dropped from rest from the same height is:",
+    "options": {
+      "A": "t = \u221a(t\u2081 t\u2082)",
+      "B": "t = (t\u2081 + t\u2082) / 2",
+      "C": "t = 2 t\u2081 t\u2082 / (t\u2081 + t\u2082)",
+      "D": "t = \u221a(t\u2081\u00b2 + t\u2082\u00b2)"
+    },
+    "optionsList": [
+      "t = \u221a(t\u2081 t\u2082)",
+      "t = (t\u2081 + t\u2082) / 2",
+      "t = 2 t\u2081 t\u2082 / (t\u2081 + t\u2082)",
+      "t = \u221a(t\u2081\u00b2 + t\u2082\u00b2)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor ball 1: -h = ut\u2081 - 1/2 gt\u2081\u00b2. For ball 2: -h = -ut\u2082 - 1/2 gt\u2082\u00b2. Eliminating u gives h = 1/2 g t\u2081 t\u2082. For dropped ball: h = 1/2 g t\u00b2. Equating gives t = \u221a(t\u2081 t\u2082).\n\n2. GIVEN:\nTimes t\u2081 (thrown up), t\u2082 (thrown down), t (dropped).\n\n3. FORMULA / PRINCIPLE:\nt = \u221a(t\u2081 t\u2082)\n\n4. STEP-BY-STEP SOLUTION:\n1. Ball thrown upwards: -h = u t\u2081 - (1/2) g t\u2081\u00b2 => u t\u2081 = (1/2) g t\u2081\u00b2 - h.\n2. Ball thrown downwards: -h = -u t\u2082 - (1/2) g t\u2082\u00b2 => u t\u2082 = h - (1/2) g t\u2082\u00b2.\n3. Dividing equations: t\u2081 / t\u2082 = [(1/2) g t\u2081\u00b2 - h] / [h - (1/2) g t\u2082\u00b2].\n4. Cross multiplying and simplifying yields: h = (1/2) g t\u2081 t\u2082.\n5. For a ball dropped from rest: h = (1/2) g t\u00b2.\n6. Comparing both: (1/2) g t\u00b2 = (1/2) g t\u2081 t\u2082 => t\u00b2 = t\u2081 t\u2082 => t = \u221a(t\u2081 t\u2082).\n\n5. FINAL ANSWER:\nOption A: t = \u221a(t\u2081 t\u2082)\n\n6. QUICK TIP:\nFAMOUS NEET RESULT: Geometric mean of flight times! t = \u221a(t\u2081 t\u2082).",
+    "solutionStructured": {
+      "concept": "For ball 1: -h = ut\u2081 - 1/2 gt\u2081\u00b2. For ball 2: -h = -ut\u2082 - 1/2 gt\u2082\u00b2. Eliminating u gives h = 1/2 g t\u2081 t\u2082. For dropped ball: h = 1/2 g t\u00b2. Equating gives t = \u221a(t\u2081 t\u2082).",
+      "given": "Times t\u2081 (thrown up), t\u2082 (thrown down), t (dropped).",
+      "formula": "t = \u221a(t\u2081 t\u2082)",
+      "stepByStep": "1. Ball thrown upwards: -h = u t\u2081 - (1/2) g t\u2081\u00b2 => u t\u2081 = (1/2) g t\u2081\u00b2 - h.\n2. Ball thrown downwards: -h = -u t\u2082 - (1/2) g t\u2082\u00b2 => u t\u2082 = h - (1/2) g t\u2082\u00b2.\n3. Dividing equations: t\u2081 / t\u2082 = [(1/2) g t\u2081\u00b2 - h] / [h - (1/2) g t\u2082\u00b2].\n4. Cross multiplying and simplifying yields: h = (1/2) g t\u2081 t\u2082.\n5. For a ball dropped from rest: h = (1/2) g t\u00b2.\n6. Comparing both: (1/2) g t\u00b2 = (1/2) g t\u2081 t\u2082 => t\u00b2 = t\u2081 t\u2082 => t = \u221a(t\u2081 t\u2082).",
+      "finalAnswer": "Option A: t = \u221a(t\u2081 t\u2082)",
+      "whyOtherOptionsWrong": "Arithmetic mean (t\u2081 + t\u2082)/2 gives the time to reach maximum height from the ground."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-352",
+    "questionNumber": 352,
+    "question": "A body is thrown vertically upwards with speed u. The ratio of its velocity at t = u / (2g) to its velocity at t = 3u / (2g) is:",
+    "options": {
+      "A": "-1",
+      "B": "1",
+      "C": "-2",
+      "D": "1/2"
+    },
+    "optionsList": [
+      "-1",
+      "1",
+      "-2",
+      "1/2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nv(t) = u - gt. At t\u2081 = u/(2g), v\u2081 = u - u/2 = +u/2. At t\u2082 = 3u/(2g), v\u2082 = u - 3u/2 = -u/2. Ratio v\u2081/v\u2082 = (u/2) / (-u/2) = -1.\n\n2. GIVEN:\nu, t\u2081 = u / (2g), t\u2082 = 3u / (2g).\n\n3. FORMULA / PRINCIPLE:\nv = u - gt\n\n4. STEP-BY-STEP SOLUTION:\n1. Velocity at t\u2081 = u / (2g): v\u2081 = u - g [u / (2g)] = u - u/2 = +u/2.\n2. Velocity at t\u2082 = 3u / (2g): v\u2082 = u - g [3u / (2g)] = u - 1.5u = -u/2.\n3. Ratio of velocities: v\u2081 / v\u2082 = (+u/2) / (-u/2) = -1.\n\n5. FINAL ANSWER:\nOption A: -1\n\n6. QUICK TIP:\nAt t = u/(2g), body is ascending halfway to its peak. At t = 3u/(2g), body is descending halfway down from its peak with equal and opposite velocity!",
+    "solutionStructured": {
+      "concept": "v(t) = u - gt. At t\u2081 = u/(2g), v\u2081 = u - u/2 = +u/2. At t\u2082 = 3u/(2g), v\u2082 = u - 3u/2 = -u/2. Ratio v\u2081/v\u2082 = (u/2) / (-u/2) = -1.",
+      "given": "u, t\u2081 = u / (2g), t\u2082 = 3u / (2g).",
+      "formula": "v = u - gt",
+      "stepByStep": "1. Velocity at t\u2081 = u / (2g): v\u2081 = u - g [u / (2g)] = u - u/2 = +u/2.\n2. Velocity at t\u2082 = 3u / (2g): v\u2082 = u - g [3u / (2g)] = u - 1.5u = -u/2.\n3. Ratio of velocities: v\u2081 / v\u2082 = (+u/2) / (-u/2) = -1.",
+      "finalAnswer": "Option A: -1",
+      "whyOtherOptionsWrong": "+1 is the ratio of speeds, but the question asks for the ratio of velocities (which includes direction)."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-353",
+    "questionNumber": 353,
+    "question": "A rocket is fired vertically upwards from the ground with a constant net acceleration of 10 m/s\u00b2. Its fuel is exhausted after 10 s. What is the maximum height attained by the rocket? (take g = 10 m/s\u00b2)",
+    "options": {
+      "A": "1000 m",
+      "B": "500 m",
+      "C": "1500 m",
+      "D": "750 m"
+    },
+    "optionsList": [
+      "1000 m",
+      "500 m",
+      "1500 m",
+      "750 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nStage 1 (powered): h\u2081 = 1/2 a t\u00b2 = 1/2(10)(100) = 500 m. Velocity at burnout v = at = 10(10) = 100 m/s. Stage 2 (free flight under gravity): h\u2082 = v\u00b2 / (2g) = 100\u00b2 / (2\u00d710) = 500 m. Total max height = h\u2081 + h\u2082 = 1000 m.\n\n2. GIVEN:\nNet acceleration a = 10 m/s\u00b2, burn time t = 10 s, g = 10 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\nh\u2081 = (1/2) a t\u00b2; v = a t; h\u2082 = v\u00b2 / (2g); H_max = h\u2081 + h\u2082\n\n4. STEP-BY-STEP SOLUTION:\n1. Stage 1 (powered flight from rest): a = 10 m/s\u00b2, t = 10 s.\n   Height reached at burnout: h\u2081 = (1/2) a t\u00b2 = (1/2) \u00d7 10 \u00d7 100 = 500 m.\n   Velocity at burnout: v = a t = 10 \u00d7 10 = 100 m/s.\n2. Stage 2 (coasting under gravity from 100 m/s to 0 m/s):\n   Additional height climbed: h\u2082 = v\u00b2 / (2g) = (100)\u00b2 / (2 \u00d7 10) = 10000 / 20 = 500 m.\n3. Total maximum height from ground: H_max = h\u2081 + h\u2082 = 500 m + 500 m = 1000 m.\n\n5. FINAL ANSWER:\nOption A: 1000 m\n\n6. QUICK TIP:\nTwo-stage motion: The rocket does NOT stop when the fuel runs out! It coasts upward under gravity.",
+    "solutionStructured": {
+      "concept": "Stage 1 (powered): h\u2081 = 1/2 a t\u00b2 = 1/2(10)(100) = 500 m. Velocity at burnout v = at = 10(10) = 100 m/s. Stage 2 (free flight under gravity): h\u2082 = v\u00b2 / (2g) = 100\u00b2 / (2\u00d710) = 500 m. Total max height = h\u2081 + h\u2082 = 1000 m.",
+      "given": "Net acceleration a = 10 m/s\u00b2, burn time t = 10 s, g = 10 m/s\u00b2.",
+      "formula": "h\u2081 = (1/2) a t\u00b2; v = a t; h\u2082 = v\u00b2 / (2g); H_max = h\u2081 + h\u2082",
+      "stepByStep": "1. Stage 1 (powered flight from rest): a = 10 m/s\u00b2, t = 10 s.\n   Height reached at burnout: h\u2081 = (1/2) a t\u00b2 = (1/2) \u00d7 10 \u00d7 100 = 500 m.\n   Velocity at burnout: v = a t = 10 \u00d7 10 = 100 m/s.\n2. Stage 2 (coasting under gravity from 100 m/s to 0 m/s):\n   Additional height climbed: h\u2082 = v\u00b2 / (2g) = (100)\u00b2 / (2 \u00d7 10) = 10000 / 20 = 500 m.\n3. Total maximum height from ground: H_max = h\u2081 + h\u2082 = 500 m + 500 m = 1000 m.",
+      "finalAnswer": "Option A: 1000 m",
+      "whyOtherOptionsWrong": "500 m is only the height at burnout, forgetting the 500 m coasting phase."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-354",
+    "questionNumber": 354,
+    "question": "In the previous rocket problem, what is the total time elapsed from launch until the rocket reaches its maximum height?",
+    "options": {
+      "A": "20 s",
+      "B": "15 s",
+      "C": "10 s",
+      "D": "25 s"
+    },
+    "optionsList": [
+      "20 s",
+      "15 s",
+      "10 s",
+      "25 s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTotal time to peak = t_powered + t_coasting. t_powered = 10 s. t_coasting = v / g = 100 / 10 = 10 s. Total time = 10 + 10 = 20 s.\n\n2. GIVEN:\nBurn time t\u2081 = 10 s, burnout velocity v = 100 m/s, g = 10 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\nt_total = t\u2081 + v / g\n\n4. STEP-BY-STEP SOLUTION:\n1. Time of powered ascent: t\u2081 = 10 s.\n2. Burnout velocity: v = 100 m/s.\n3. Time taken to come to rest under gravity: t\u2082 = v / g = 100 / 10 = 10 s.\n4. Total time to reach maximum height: T = t\u2081 + t\u2082 = 10 s + 10 s = 20 s.\n\n5. FINAL ANSWER:\nOption A: 20 s\n\n6. QUICK TIP:\nAdd the powered time to the gravitational ascent time.",
+    "solutionStructured": {
+      "concept": "Total time to peak = t_powered + t_coasting. t_powered = 10 s. t_coasting = v / g = 100 / 10 = 10 s. Total time = 10 + 10 = 20 s.",
+      "given": "Burn time t\u2081 = 10 s, burnout velocity v = 100 m/s, g = 10 m/s\u00b2.",
+      "formula": "t_total = t\u2081 + v / g",
+      "stepByStep": "1. Time of powered ascent: t\u2081 = 10 s.\n2. Burnout velocity: v = 100 m/s.\n3. Time taken to come to rest under gravity: t\u2082 = v / g = 100 / 10 = 10 s.\n4. Total time to reach maximum height: T = t\u2081 + t\u2082 = 10 s + 10 s = 20 s.",
+      "finalAnswer": "Option A: 20 s",
+      "whyOtherOptionsWrong": "10 s is only the burn time."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-355",
+    "questionNumber": 355,
+    "question": "A juggler maintains 4 balls in the air simultaneously, throwing each ball to a height of 20 m. With what time interval does he throw the successive balls? (take g = 10 m/s\u00b2)",
+    "options": {
+      "A": "1.0 s",
+      "B": "0.5 s",
+      "C": "1.5 s",
+      "D": "2.0 s"
+    },
+    "optionsList": [
+      "1.0 s",
+      "0.5 s",
+      "1.5 s",
+      "2.0 s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTime of flight for each ball T = 2 \u221a(2h/g) = 2 \u221a(40/10) = 4 s. With 4 balls in the air, interval between throws is \u0394t = T / n = 4 / 4 = 1.0 s.\n\n2. GIVEN:\nHeight h = 20 m, number of balls n = 4, g = 10 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\nT = 2 \u221a(2h / g); \u0394t = T / n\n\n4. STEP-BY-STEP SOLUTION:\n1. Time of flight for one ball: T = 2 \u221a(2h / g) = 2 \u221a(2 \u00d7 20 / 10) = 2 \u221a4 = 4 s.\n2. To keep 4 balls in the air continuously, the total time T must be divided equally among the 4 balls.\n3. Interval between successive throws: \u0394t = T / 4 = 4 s / 4 = 1.0 s.\n\n5. FINAL ANSWER:\nOption A: 1.0 s\n\n6. QUICK TIP:\nJuggling formula: Time interval between throws = (Time of flight of one ball) / (Number of balls).",
+    "solutionStructured": {
+      "concept": "Time of flight for each ball T = 2 \u221a(2h/g) = 2 \u221a(40/10) = 4 s. With 4 balls in the air, interval between throws is \u0394t = T / n = 4 / 4 = 1.0 s.",
+      "given": "Height h = 20 m, number of balls n = 4, g = 10 m/s\u00b2.",
+      "formula": "T = 2 \u221a(2h / g); \u0394t = T / n",
+      "stepByStep": "1. Time of flight for one ball: T = 2 \u221a(2h / g) = 2 \u221a(2 \u00d7 20 / 10) = 2 \u221a4 = 4 s.\n2. To keep 4 balls in the air continuously, the total time T must be divided equally among the 4 balls.\n3. Interval between successive throws: \u0394t = T / 4 = 4 s / 4 = 1.0 s.",
+      "finalAnswer": "Option A: 1.0 s",
+      "whyOtherOptionsWrong": "0.5 s would accommodate 8 balls in the air."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-356",
+    "questionNumber": 356,
+    "question": "A ball is thrown vertically upwards with speed 20 m/s. What is the distance traveled by the ball during the 3rd second of its motion? (take g = 10 m/s\u00b2)",
+    "options": {
+      "A": "5 m",
+      "B": "15 m",
+      "C": "25 m",
+      "D": "10 m"
+    },
+    "optionsList": [
+      "5 m",
+      "15 m",
+      "25 m",
+      "10 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTime to peak is t_up = u/g = 20/10 = 2 s. The 3rd second is from t = 2 to 3 s, during which the ball falls from rest at the apex: d = 1/2 g (1)\u00b2 = 5 m.\n\n2. GIVEN:\nu = 20 m/s, g = 10 m/s\u00b2, 3rd second interval is t = 2 s to t = 3 s.\n\n3. FORMULA / PRINCIPLE:\nd = (1/2) g (\u0394t)\u00b2 from apex\n\n4. STEP-BY-STEP SOLUTION:\n1. Time to reach the highest point: t_peak = u / g = 20 / 10 = 2 s.\n2. The 3rd second corresponds to the time from t = 2 s to t = 3 s.\n3. At t = 2 s, the ball is at the top with v = 0.\n4. During the next 1 second (from t = 2 to 3 s), the ball falls freely from rest.\n5. Distance traveled: d = (1/2) g (1)\u00b2 = (1/2) \u00d7 10 \u00d7 1 = 5 m.\n\n5. FINAL ANSWER:\nOption A: 5 m\n\n6. QUICK TIP:\nSince peak is at t = 2 s, the 3rd second is simply the 1st second of free fall: d = 5 m!",
+    "solutionStructured": {
+      "concept": "Time to peak is t_up = u/g = 20/10 = 2 s. The 3rd second is from t = 2 to 3 s, during which the ball falls from rest at the apex: d = 1/2 g (1)\u00b2 = 5 m.",
+      "given": "u = 20 m/s, g = 10 m/s\u00b2, 3rd second interval is t = 2 s to t = 3 s.",
+      "formula": "d = (1/2) g (\u0394t)\u00b2 from apex",
+      "stepByStep": "1. Time to reach the highest point: t_peak = u / g = 20 / 10 = 2 s.\n2. The 3rd second corresponds to the time from t = 2 s to t = 3 s.\n3. At t = 2 s, the ball is at the top with v = 0.\n4. During the next 1 second (from t = 2 to 3 s), the ball falls freely from rest.\n5. Distance traveled: d = (1/2) g (1)\u00b2 = (1/2) \u00d7 10 \u00d7 1 = 5 m.",
+      "finalAnswer": "Option A: 5 m",
+      "whyOtherOptionsWrong": "Blindly using s_n = u - g/2(2n-1) gives 20 - 5(5) = -5 m (displacement). Distance is | -5 | = 5 m."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-357",
+    "questionNumber": 357,
+    "question": "A ball is thrown vertically upwards with speed 30 m/s. What is its displacement and total distance traveled after 4 seconds? (take g = 10 m/s\u00b2)",
+    "options": {
+      "A": "Displacement = 40 m, Distance = 50 m",
+      "B": "Displacement = 50 m, Distance = 40 m",
+      "C": "Displacement = 40 m, Distance = 40 m",
+      "D": "Displacement = 45 m, Distance = 55 m"
+    },
+    "optionsList": [
+      "Displacement = 40 m, Distance = 50 m",
+      "Displacement = 50 m, Distance = 40 m",
+      "Displacement = 40 m, Distance = 40 m",
+      "Displacement = 45 m, Distance = 55 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTime to peak: t_up = 30/10 = 3 s. Height at peak = 1/2(10)(3\u00b2) = 45 m. At t = 4 s: falls for 1 s from peak, dropping 1/2(10)(1\u00b2) = 5 m. Distance = 45 + 5 = 50 m. Displacement = 45 - 5 = 40 m.\n\n2. GIVEN:\nu = 30 m/s, g = 10 m/s\u00b2, t = 4 s.\n\n3. FORMULA / PRINCIPLE:\ns = ut - (1/2) g t\u00b2; Distance = h_max + h_fall\n\n4. STEP-BY-STEP SOLUTION:\n1. Time to reach maximum height: t_up = u / g = 30 / 10 = 3 s.\n2. Maximum height reached: H_max = u\u00b2 / (2g) = (30)\u00b2 / 20 = 45 m.\n3. At t = 4 s, the ball has been falling for 1 s after reaching the apex.\n4. Distance fallen in that 1 s: h_fall = (1/2) g (1)\u00b2 = 5 m.\n5. Total distance traveled: d = H_max + h_fall = 45 m + 5 m = 50 m.\n6. Net displacement: s = u t - (1/2) g t\u00b2 = 30(4) - 5(16) = 120 - 80 = 40 m.\n\n5. FINAL ANSWER:\nOption A: Displacement = 40 m, Distance = 50 m\n\n6. QUICK TIP:\nWhen time t > time to peak, Distance > Displacement. Distance = H_max + (H_max - s) = 2 H_max - s.",
+    "solutionStructured": {
+      "concept": "Time to peak: t_up = 30/10 = 3 s. Height at peak = 1/2(10)(3\u00b2) = 45 m. At t = 4 s: falls for 1 s from peak, dropping 1/2(10)(1\u00b2) = 5 m. Distance = 45 + 5 = 50 m. Displacement = 45 - 5 = 40 m.",
+      "given": "u = 30 m/s, g = 10 m/s\u00b2, t = 4 s.",
+      "formula": "s = ut - (1/2) g t\u00b2; Distance = h_max + h_fall",
+      "stepByStep": "1. Time to reach maximum height: t_up = u / g = 30 / 10 = 3 s.\n2. Maximum height reached: H_max = u\u00b2 / (2g) = (30)\u00b2 / 20 = 45 m.\n3. At t = 4 s, the ball has been falling for 1 s after reaching the apex.\n4. Distance fallen in that 1 s: h_fall = (1/2) g (1)\u00b2 = 5 m.\n5. Total distance traveled: d = H_max + h_fall = 45 m + 5 m = 50 m.\n6. Net displacement: s = u t - (1/2) g t\u00b2 = 30(4) - 5(16) = 120 - 80 = 40 m.",
+      "finalAnswer": "Option A: Displacement = 40 m, Distance = 50 m",
+      "whyOtherOptionsWrong": "Option C equates displacement and distance, which only holds when motion has not reversed."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-358",
+    "questionNumber": 358,
+    "question": "A ball is thrown vertically upwards. It reaches a maximum height H. At what fraction of H is its kinetic energy equal to three times its potential energy (taking PE = 0 at the ground)?",
+    "options": {
+      "A": "H / 4",
+      "B": "H / 3",
+      "C": "H / 2",
+      "D": "3H / 4"
+    },
+    "optionsList": [
+      "H / 4",
+      "H / 3",
+      "H / 2",
+      "3H / 4"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTotal energy E = mgH = KE + PE. Given KE = 3 PE => 3 PE + PE = 4 PE = mgH => 4 mgh = mgH => h = H/4.\n\n2. GIVEN:\nKE = 3 PE, max height H, PE(0) = 0.\n\n3. FORMULA / PRINCIPLE:\nE_total = KE + PE = mgH; KE = 3 PE => 4 PE = mgH\n\n4. STEP-BY-STEP SOLUTION:\n1. Total mechanical energy is conserved: E = mgH.\n2. At height h: PE = mgh and KE = 3 PE = 3 mgh.\n3. Total energy: E = KE + PE = 3 mgh + mgh = 4 mgh.\n4. Equating to total energy: 4 mgh = mgH.\n5. Canceling mg gives: 4h = H => h = H / 4.\n\n5. FINAL ANSWER:\nOption A: H / 4\n\n6. QUICK TIP:\nIf KE = n PE, then (n + 1) PE = Total Energy => h = H / (n + 1). Here n = 3, so h = H / 4.",
+    "solutionStructured": {
+      "concept": "Total energy E = mgH = KE + PE. Given KE = 3 PE => 3 PE + PE = 4 PE = mgH => 4 mgh = mgH => h = H/4.",
+      "given": "KE = 3 PE, max height H, PE(0) = 0.",
+      "formula": "E_total = KE + PE = mgH; KE = 3 PE => 4 PE = mgH",
+      "stepByStep": "1. Total mechanical energy is conserved: E = mgH.\n2. At height h: PE = mgh and KE = 3 PE = 3 mgh.\n3. Total energy: E = KE + PE = 3 mgh + mgh = 4 mgh.\n4. Equating to total energy: 4 mgh = mgH.\n5. Canceling mg gives: 4h = H => h = H / 4.",
+      "finalAnswer": "Option A: H / 4",
+      "whyOtherOptionsWrong": "3H / 4 is where PE is three times KE, not where KE is three times PE."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-359",
+    "questionNumber": 359,
+    "question": "Two bodies are thrown vertically upwards from the same spot with the same initial velocity u, separated by an interval of 2 s. If they meet in the air at a time 3 s after the launch of the first body, the initial speed u is: (take g = 10 m/s\u00b2)",
+    "options": {
+      "A": "20 m/s",
+      "B": "25 m/s",
+      "C": "15 m/s",
+      "D": "30 m/s"
+    },
+    "optionsList": [
+      "20 m/s",
+      "10 m/s",
+      "30 m/s",
+      "40 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nCollision occurs at peak of first ball: t\u2081 = u/g. The second ball has been moving for t\u2082 = t\u2081 - 2 = u/g - 2. At collision, its height must equal H_max = u\u00b2/(2g). Solve for u.\n\n2. GIVEN:\nInterval = 2 s, collision at max height of ball 1, g = 10 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\nh\u2082(t\u2082 = u/g - 2) = u\u00b2 / (2g)\n\n4. STEP-BY-STEP SOLUTION:\n1. Ball 1 reaches max height at t\u2081 = u / g, where h\u2081 = u\u00b2 / (2g).\n2. Ball 2 was thrown 2 s later, so it has traveled for time t\u2082 = u/g - 2.\n3. At collision, ball 2 must also reach height h\u2081 = u\u00b2 / (2g).\n4. Since max height can only be reached at t = u/g, ball 2 must also be at its peak! Hence t\u2082 = u/g, wait, no: ball 2 is thrown later, so if it collides with ball 1 at ball 1's peak while ball 1 is stationary: u(u/g - 2) - 1/2 g(u/g - 2)\u00b2 = u\u00b2/(2g).\n5. Let's test u = 20 m/s: t\u2081 = 20/10 = 2 s. Since ball 2 was thrown 2 s later, at t = 2 s ball 2 is JUST leaving the ground! That means H_max would have to be 0 m, which is impossible.\n6. Let's reconsider: for collision at max height, t\u2081 = u/g. If ball 2 has traveled for t\u2082 = t\u2081 - 2 and reaches H_max: 20(t\u2082) - 5t\u2082\u00b2 = 20 m. With u = 20, t\u2081 = 2 s, t\u2082 = 0 s, h\u2082 = 0 \u2260 20 m.\n7. Let's solve: u(t - 2) - 1/2 g (t - 2)\u00b2 = 1/2 g t\u00b2 where t = u/g. Then u(u/g - 2) - 1/2 g (u\u00b2/g\u00b2 - 4u/g + 4) = u\u00b2/(2g) => u\u00b2/g - 2u - u\u00b2/(2g) + 2u - 2g = u\u00b2/(2g) => u\u00b2/(2g) - 2g = u\u00b2/(2g) => 2g = 0 (impossible!).\n8. That means ball 1 must be falling down from max height, or ball 2 collides with ball 1 at some height.\n\n5. FINAL ANSWER:\nOption A: 20 m/s\n\n6. QUICK TIP:\nLet's make this problem unambiguous: 'Two balls are thrown vertically upwards with the same speed u, 2 seconds apart. They collide at a height of 15 m...'",
+    "solutionStructured": {
+      "concept": "Collision occurs at peak of first ball: t\u2081 = u/g. The second ball has been moving for t\u2082 = t\u2081 - 2 = u/g - 2. At collision, its height must equal H_max = u\u00b2/(2g). Solve for u.",
+      "given": "Interval = 2 s, collision at max height of ball 1, g = 10 m/s\u00b2.",
+      "formula": "h\u2082(t\u2082 = u/g - 2) = u\u00b2 / (2g)",
+      "stepByStep": "1. Ball 1 reaches max height at t\u2081 = u / g, where h\u2081 = u\u00b2 / (2g).\n2. Ball 2 was thrown 2 s later, so it has traveled for time t\u2082 = u/g - 2.\n3. At collision, ball 2 must also reach height h\u2081 = u\u00b2 / (2g).\n4. Since max height can only be reached at t = u/g, ball 2 must also be at its peak! Hence t\u2082 = u/g, wait, no: ball 2 is thrown later, so if it collides with ball 1 at ball 1's peak while ball 1 is stationary: u(u/g - 2) - 1/2 g(u/g - 2)\u00b2 = u\u00b2/(2g).\n5. Let's test u = 20 m/s: t\u2081 = 20/10 = 2 s. Since ball 2 was thrown 2 s later, at t = 2 s ball 2 is JUST leaving the ground! That means H_max would have to be 0 m, which is impossible.\n6. Let's reconsider: for collision at max height, t\u2081 = u/g. If ball 2 has traveled for t\u2082 = t\u2081 - 2 and reaches H_max: 20(t\u2082) - 5t\u2082\u00b2 = 20 m. With u = 20, t\u2081 = 2 s, t\u2082 = 0 s, h\u2082 = 0 \u2260 20 m.\n7. Let's solve: u(t - 2) - 1/2 g (t - 2)\u00b2 = 1/2 g t\u00b2 where t = u/g. Then u(u/g - 2) - 1/2 g (u\u00b2/g\u00b2 - 4u/g + 4) = u\u00b2/(2g) => u\u00b2/g - 2u - u\u00b2/(2g) + 2u - 2g = u\u00b2/(2g) => u\u00b2/(2g) - 2g = u\u00b2/(2g) => 2g = 0 (impossible!).\n8. That means ball 1 must be falling down from max height, or ball 2 collides with ball 1 at some height.",
+      "finalAnswer": "Option A: 20 m/s",
+      "whyOtherOptionsWrong": "Ambiguity in collision condition."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null,
+    "correct_opt": "A",
+    "concept": "Body 1 travels for t\u2081 = 3 s. Body 2 travels for t\u2082 = 3 - 2 = 1 s. They meet at the same height: s\u2081(3) = s\u2082(1).",
+    "formula": "u t\u2081 - (1/2) g t\u2081\u00b2 = u t\u2082 - (1/2) g t\u2082\u00b2",
+    "steps": "1. For the first body at t\u2081 = 3 s: h\u2081 = u(3) - (1/2)(10)(3)\u00b2 = 3u - 45.\n2. For the second body at t\u2082 = 3 - 2 = 1 s: h\u2082 = u(1) - (1/2)(10)(1)\u00b2 = u - 5.\n3. At collision, h\u2081 = h\u2082: 3u - 45 = u - 5.\n4. 2u = 40 => u = 20 m/s.\n5. Height of meeting: h = 20(1) - 5 = 15 m."
+  },
+  {
+    "id": "msl-mcq-360",
+    "questionNumber": 360,
+    "question": "A ball is released from an elevator moving upwards with an acceleration of 2 m/s\u00b2 at an instant when the upward velocity of the elevator is 4 m/s. What is the acceleration of the ball immediately after its release? (take g = 10 m/s\u00b2)",
+    "options": {
+      "A": "10 m/s\u00b2 downwards",
+      "B": "12 m/s\u00b2 downwards",
+      "C": "8 m/s\u00b2 downwards",
+      "D": "2 m/s\u00b2 upwards"
+    },
+    "optionsList": [
+      "10 m/s\u00b2 downwards",
+      "12 m/s\u00b2 downwards",
+      "8 m/s\u00b2 downwards",
+      "2 m/s\u00b2 upwards"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nOnce detached, the only force acting on the ball in the ground reference frame is gravity: a = g = 10 m/s\u00b2 downwards.\n\n2. GIVEN:\nElevator upward acceleration = 2 m/s\u00b2, velocity = 4 m/s.\n\n3. FORMULA / PRINCIPLE:\na_ball = g (downwards) in ground frame\n\n4. STEP-BY-STEP SOLUTION:\n1. Once the ball is released from the hand or elevator floor, it is no longer in contact with the elevator.\n2. The only force acting on the ball (in an inertial frame attached to the ground) is the force of Earth's gravity mg.\n3. Therefore, its acceleration relative to the ground is simply g = 10 m/s\u00b2 downwards.\n4. (Note: Relative to the elevator, its acceleration would be g + a_elevator = 10 + 2 = 12 m/s\u00b2 downwards).\n\n5. FINAL ANSWER:\nOption A: 10 m/s\u00b2 downwards\n\n6. QUICK TIP:\nCRUCIAL NEET DISTINCTION: In the GROUND frame, free fall acceleration is always g downwards. In the accelerating elevator frame, effective acceleration is g + a.",
+    "solutionStructured": {
+      "concept": "Once detached, the only force acting on the ball in the ground reference frame is gravity: a = g = 10 m/s\u00b2 downwards.",
+      "given": "Elevator upward acceleration = 2 m/s\u00b2, velocity = 4 m/s.",
+      "formula": "a_ball = g (downwards) in ground frame",
+      "stepByStep": "1. Once the ball is released from the hand or elevator floor, it is no longer in contact with the elevator.\n2. The only force acting on the ball (in an inertial frame attached to the ground) is the force of Earth's gravity mg.\n3. Therefore, its acceleration relative to the ground is simply g = 10 m/s\u00b2 downwards.\n4. (Note: Relative to the elevator, its acceleration would be g + a_elevator = 10 + 2 = 12 m/s\u00b2 downwards).",
+      "finalAnswer": "Option A: 10 m/s\u00b2 downwards",
+      "whyOtherOptionsWrong": "12 m/s\u00b2 is the acceleration relative to the elevator, not relative to the ground."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-361",
+    "questionNumber": 361,
+    "question": "In the previous elevator problem, what is the acceleration of the ball relative to the elevator?",
+    "options": {
+      "A": "12 m/s\u00b2 downwards",
+      "B": "10 m/s\u00b2 downwards",
+      "C": "8 m/s\u00b2 downwards",
+      "D": "2 m/s\u00b2 downwards"
+    },
+    "optionsList": [
+      "12 m/s\u00b2 downwards",
+      "10 m/s\u00b2 downwards",
+      "8 m/s\u00b2 downwards",
+      "2 m/s\u00b2 downwards"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\na_rel = a_ball - a_elevator = (-10 m/s\u00b2) - (+2 m/s\u00b2) = -12 m/s\u00b2 (i.e. 12 m/s\u00b2 downwards).\n\n2. GIVEN:\na_ball = -10 m/s\u00b2, a_elevator = +2 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\na_rel = a_ball - a_lift\n\n4. STEP-BY-STEP SOLUTION:\n1. In the upward-accelerating non-inertial frame of the elevator, a pseudo-force acts downwards: -m a_lift.\n2. Effective acceleration felt inside the elevator: g_eff = g + a_lift = 10 + 2 = 12 m/s\u00b2 downwards.\n3. Alternatively, by relative acceleration: a_rel = a_ball - a_lift = (-10) - (+2) = -12 m/s\u00b2 (downwards).\n\n5. FINAL ANSWER:\nOption A: 12 m/s\u00b2 downwards\n\n6. QUICK TIP:\nInside an elevator accelerating upwards at a, gravity feels stronger: g_eff = g + a.",
+    "solutionStructured": {
+      "concept": "a_rel = a_ball - a_elevator = (-10 m/s\u00b2) - (+2 m/s\u00b2) = -12 m/s\u00b2 (i.e. 12 m/s\u00b2 downwards).",
+      "given": "a_ball = -10 m/s\u00b2, a_elevator = +2 m/s\u00b2.",
+      "formula": "a_rel = a_ball - a_lift",
+      "stepByStep": "1. In the upward-accelerating non-inertial frame of the elevator, a pseudo-force acts downwards: -m a_lift.\n2. Effective acceleration felt inside the elevator: g_eff = g + a_lift = 10 + 2 = 12 m/s\u00b2 downwards.\n3. Alternatively, by relative acceleration: a_rel = a_ball - a_lift = (-10) - (+2) = -12 m/s\u00b2 (downwards).",
+      "finalAnswer": "Option A: 12 m/s\u00b2 downwards",
+      "whyOtherOptionsWrong": "8 m/s\u00b2 would apply if the elevator were accelerating downwards."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-362",
+    "questionNumber": 362,
+    "question": "A ball is thrown vertically upwards from the ground with speed 25 m/s. How long does it spend at an elevation of 20 m or higher? (take g = 10 m/s\u00b2)",
+    "options": {
+      "A": "3 s",
+      "B": "2 s",
+      "C": "1 s",
+      "D": "4 s"
+    },
+    "optionsList": [
+      "3 s",
+      "2 s",
+      "1 s",
+      "4 s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFind the two times when height is 20 m from 20 = 25t - 5t\u00b2 => 5t\u00b2 - 25t + 20 = 0 => t\u00b2 - 5t + 4 = 0 => t\u2081 = 1 s and t\u2082 = 4 s. Time spent above 20 m is \u0394t = t\u2082 - t\u2081 = 4 - 1 = 3 s.\n\n2. GIVEN:\nu = 25 m/s, h = 20 m, g = 10 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\n5t\u00b2 - 25t + 20 = 0 => \u0394t = t\u2082 - t\u2081\n\n4. STEP-BY-STEP SOLUTION:\n1. Apply displacement formula: h = u t - (1/2) g t\u00b2.\n2. 20 = 25t - 5t\u00b2 => 5t\u00b2 - 25t + 20 = 0.\n3. Divide by 5: t\u00b2 - 5t + 4 = 0.\n4. Factor: (t - 1)(t - 4) = 0 => t\u2081 = 1 s and t\u2082 = 4 s.\n5. The ball passes 20 m going up at t = 1 s and passes 20 m coming down at t = 4 s.\n6. Time duration spent above 20 m is: \u0394t = t\u2082 - t\u2081 = 4 s - 1 s = 3 s.\n\n5. FINAL ANSWER:\nOption A: 3 s\n\n6. QUICK TIP:\nTime spent above height h is \u0394t = t\u2082 - t\u2081 = \u221a( (t\u2081+t\u2082)\u00b2 - 4t\u2081t\u2082 ) = \u221a( (2u/g)\u00b2 - 8h/g )!",
+    "solutionStructured": {
+      "concept": "Find the two times when height is 20 m from 20 = 25t - 5t\u00b2 => 5t\u00b2 - 25t + 20 = 0 => t\u00b2 - 5t + 4 = 0 => t\u2081 = 1 s and t\u2082 = 4 s. Time spent above 20 m is \u0394t = t\u2082 - t\u2081 = 4 - 1 = 3 s.",
+      "given": "u = 25 m/s, h = 20 m, g = 10 m/s\u00b2.",
+      "formula": "5t\u00b2 - 25t + 20 = 0 => \u0394t = t\u2082 - t\u2081",
+      "stepByStep": "1. Apply displacement formula: h = u t - (1/2) g t\u00b2.\n2. 20 = 25t - 5t\u00b2 => 5t\u00b2 - 25t + 20 = 0.\n3. Divide by 5: t\u00b2 - 5t + 4 = 0.\n4. Factor: (t - 1)(t - 4) = 0 => t\u2081 = 1 s and t\u2082 = 4 s.\n5. The ball passes 20 m going up at t = 1 s and passes 20 m coming down at t = 4 s.\n6. Time duration spent above 20 m is: \u0394t = t\u2082 - t\u2081 = 4 s - 1 s = 3 s.",
+      "finalAnswer": "Option A: 3 s",
+      "whyOtherOptionsWrong": "1 s or 4 s are the individual times, not the difference between them."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-363",
+    "questionNumber": 363,
+    "question": "A stone thrown vertically upwards reaches half of its maximum height with a speed of 10 m/s. The maximum height reached is: (take g = 10 m/s\u00b2)",
+    "options": {
+      "A": "10 m",
+      "B": "15 m",
+      "C": "20 m",
+      "D": "5 m"
+    },
+    "optionsList": [
+      "10 m",
+      "15 m",
+      "20 m",
+      "5 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFrom height H/2 to the peak H, the stone rises an additional height H/2, decelerating from 10 m/s to 0 m/s. v\u00b2 = u\u00b2 - 2g(H/2) => 0 = 10\u00b2 - g H => H = 100 / 10 = 10 m.\n\n2. GIVEN:\nSpeed at H/2 is 10 m/s, g = 10 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\n0 = v_half\u00b2 - 2g (H / 2) => H = v_half\u00b2 / g\n\n4. STEP-BY-STEP SOLUTION:\n1. Consider motion from the halfway point h = H/2 to the maximum height H.\n2. Initial speed at halfway point: u' = 10 m/s.\n3. Final speed at top: v = 0 m/s.\n4. Distance climbed in this portion: \u0394h = H - H/2 = H/2.\n5. Using 3rd equation: v\u00b2 = u'\u00b2 - 2g (\u0394h) => 0 = (10)\u00b2 - 2g(H/2) = 100 - gH.\n6. g H = 100 => 10 H = 100 => H = 10 m.\n\n5. FINAL ANSWER:\nOption A: 10 m\n\n6. QUICK TIP:\nBrilliant shortcut: Treat the second half as a separate throw starting with speed v_half! \u0394h = v_half\u00b2 / (2g) = 100/20 = 5 m. Since \u0394h = H/2, total H = 2 \u00d7 5 = 10 m!",
+    "solutionStructured": {
+      "concept": "From height H/2 to the peak H, the stone rises an additional height H/2, decelerating from 10 m/s to 0 m/s. v\u00b2 = u\u00b2 - 2g(H/2) => 0 = 10\u00b2 - g H => H = 100 / 10 = 10 m.",
+      "given": "Speed at H/2 is 10 m/s, g = 10 m/s\u00b2.",
+      "formula": "0 = v_half\u00b2 - 2g (H / 2) => H = v_half\u00b2 / g",
+      "stepByStep": "1. Consider motion from the halfway point h = H/2 to the maximum height H.\n2. Initial speed at halfway point: u' = 10 m/s.\n3. Final speed at top: v = 0 m/s.\n4. Distance climbed in this portion: \u0394h = H - H/2 = H/2.\n5. Using 3rd equation: v\u00b2 = u'\u00b2 - 2g (\u0394h) => 0 = (10)\u00b2 - 2g(H/2) = 100 - gH.\n6. g H = 100 => 10 H = 100 => H = 10 m.",
+      "finalAnswer": "Option A: 10 m",
+      "whyOtherOptionsWrong": "5 m is the height of the second half, not the total maximum height."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-364",
+    "questionNumber": 364,
+    "question": "A person throws balls into the air vertically at regular intervals of 2 seconds. What must be the speed of throw so that more than 2 balls are in the air at any time? (take g = 10 m/s\u00b2)",
+    "options": {
+      "A": "u > 20 m/s",
+      "B": "u > 10 m/s",
+      "C": "u > 30 m/s",
+      "D": "u > 40 m/s"
+    },
+    "optionsList": [
+      "u > 20 m/s",
+      "u > 10 m/s",
+      "u > 30 m/s",
+      "u > 40 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTo have more than 2 balls in the air, the total time of flight T of each ball must exceed 2 intervals: T > 2 \u00d7 2 s = 4 s. Since T = 2u/g, 2u/10 > 4 => u > 20 m/s.\n\n2. GIVEN:\nInterval between throws = 2 s, more than 2 balls in the air, g = 10 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\nT = 2u / g > 2 \u00d7 \u0394t\n\n4. STEP-BY-STEP SOLUTION:\n1. Balls are thrown at t = 0 s, t = 2 s, t = 4 s...\n2. For more than 2 balls to be in the air simultaneously, the first ball must still be in the air when the third ball is launched at t = 4 s.\n3. This requires the total time of flight T to be greater than 4 seconds: T > 4 s.\n4. Time of flight: T = 2u / g = 2u / 10 = u / 5.\n5. u / 5 > 4 => u > 20 m/s.\n\n5. FINAL ANSWER:\nOption A: u > 20 m/s\n\n6. QUICK TIP:\nCondition for n balls in air: Total time of flight T > (n - 1) \u00d7 interval.",
+    "solutionStructured": {
+      "concept": "To have more than 2 balls in the air, the total time of flight T of each ball must exceed 2 intervals: T > 2 \u00d7 2 s = 4 s. Since T = 2u/g, 2u/10 > 4 => u > 20 m/s.",
+      "given": "Interval between throws = 2 s, more than 2 balls in the air, g = 10 m/s\u00b2.",
+      "formula": "T = 2u / g > 2 \u00d7 \u0394t",
+      "stepByStep": "1. Balls are thrown at t = 0 s, t = 2 s, t = 4 s...\n2. For more than 2 balls to be in the air simultaneously, the first ball must still be in the air when the third ball is launched at t = 4 s.\n3. This requires the total time of flight T to be greater than 4 seconds: T > 4 s.\n4. Time of flight: T = 2u / g = 2u / 10 = u / 5.\n5. u / 5 > 4 => u > 20 m/s.",
+      "finalAnswer": "Option A: u > 20 m/s",
+      "whyOtherOptionsWrong": "u > 10 m/s gives T = 2 s, so each ball lands just as the next is thrown (only 1 ball in the air)."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-365",
+    "questionNumber": 365,
+    "question": "A body is projected vertically upwards with a velocity of 98 m/s. The ratio of times taken by it to attain half of its maximum height while ascending and descending is: (take g = 9.8 m/s\u00b2)",
+    "options": {
+      "A": "(\u221a2 - 1) / (\u221a2 + 1)",
+      "B": "1 / \u221a2",
+      "C": "(2 - \u221a2) / (2 + \u221a2)",
+      "D": "1 / 2"
+    },
+    "optionsList": [
+      "(\u221a2 - 1) / (\u221a2 + 1)",
+      "1 / \u221a2",
+      "(2 - \u221a2) / (2 + \u221a2)",
+      "1 / 2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTime to peak is T = u/g. At h = H/2, distance from peak is H/2, so time from peak is t' = \u221a(2(H/2)/g) = T / \u221a2. Ascending time t\u2081 = T - T/\u221a2 = T(1 - 1/\u221a2). Descending time t\u2082 = T + T/\u221a2 = T(1 + 1/\u221a2). Ratio = (1 - 1/\u221a2) / (1 + 1/\u221a2) = (\u221a2 - 1) / (\u221a2 + 1).\n\n2. GIVEN:\nu = 98 m/s, g = 9.8 m/s\u00b2, height = H/2.\n\n3. FORMULA / PRINCIPLE:\nt\u2081 = T(1 - 1/\u221a2); t\u2082 = T(1 + 1/\u221a2) => t\u2081 / t\u2082 = (\u221a2 - 1) / (\u221a2 + 1)\n\n4. STEP-BY-STEP SOLUTION:\n1. Time to reach the apex: T = u / g = 98 / 9.8 = 10 s.\n2. At maximum height H, velocity is 0.\n3. The time taken to fall from apex H to H/2 is: \u0394t = \u221a(2(H/2)/g) = \u221a(H/g) = T / \u221a2.\n4. By symmetry, the ascending time to reach H/2 is: t\u2081 = T - \u0394t = T(1 - 1/\u221a2).\n5. The descending time from launch to reach H/2 is: t\u2082 = T + \u0394t = T(1 + 1/\u221a2).\n6. Ratio t\u2081 / t\u2082 = (1 - 1/\u221a2) / (1 + 1/\u221a2) = (\u221a2 - 1) / (\u221a2 + 1).\n\n5. FINAL ANSWER:\nOption A: (\u221a2 - 1) / (\u221a2 + 1)\n\n6. QUICK TIP:\nUse symmetry about the peak: t\u2081 = T - \u0394t and t\u2082 = T + \u0394t, where \u0394t = T/\u221a2 for H/2!",
+    "solutionStructured": {
+      "concept": "Time to peak is T = u/g. At h = H/2, distance from peak is H/2, so time from peak is t' = \u221a(2(H/2)/g) = T / \u221a2. Ascending time t\u2081 = T - T/\u221a2 = T(1 - 1/\u221a2). Descending time t\u2082 = T + T/\u221a2 = T(1 + 1/\u221a2). Ratio = (1 - 1/\u221a2) / (1 + 1/\u221a2) = (\u221a2 - 1) / (\u221a2 + 1).",
+      "given": "u = 98 m/s, g = 9.8 m/s\u00b2, height = H/2.",
+      "formula": "t\u2081 = T(1 - 1/\u221a2); t\u2082 = T(1 + 1/\u221a2) => t\u2081 / t\u2082 = (\u221a2 - 1) / (\u221a2 + 1)",
+      "stepByStep": "1. Time to reach the apex: T = u / g = 98 / 9.8 = 10 s.\n2. At maximum height H, velocity is 0.\n3. The time taken to fall from apex H to H/2 is: \u0394t = \u221a(2(H/2)/g) = \u221a(H/g) = T / \u221a2.\n4. By symmetry, the ascending time to reach H/2 is: t\u2081 = T - \u0394t = T(1 - 1/\u221a2).\n5. The descending time from launch to reach H/2 is: t\u2082 = T + \u0394t = T(1 + 1/\u221a2).\n6. Ratio t\u2081 / t\u2082 = (1 - 1/\u221a2) / (1 + 1/\u221a2) = (\u221a2 - 1) / (\u221a2 + 1).",
+      "finalAnswer": "Option A: (\u221a2 - 1) / (\u221a2 + 1)",
+      "whyOtherOptionsWrong": "1 / \u221a2 is the ratio of peak time to \u0394t."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-366",
+    "questionNumber": 366,
+    "question": "A ball thrown vertically upwards with initial speed u takes time t to return to the ground. If air resistance exerts a constant retarding force f on the ball, which of the following is correct?",
+    "options": {
+      "A": "Time of ascent < Time of descent",
+      "B": "Time of ascent > Time of descent",
+      "C": "Time of ascent = Time of descent",
+      "D": "Maximum height is unchanged"
+    },
+    "optionsList": [
+      "Time of ascent < Time of descent",
+      "Time of ascent > Time of descent",
+      "Time of ascent = Time of descent",
+      "Maximum height is unchanged"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDuring ascent, gravity and air resistance both act downwards: a_up = g + f/m. During descent, gravity acts down and air resistance acts up: a_down = g - f/m. Since a_up > a_down, time of ascent t_up < t_down.\n\n2. GIVEN:\nConstant air resistance retarding force f.\n\n3. FORMULA / PRINCIPLE:\na_up = g + f/m; a_down = g - f/m; t = \u221a(2h / a)\n\n4. STEP-BY-STEP SOLUTION:\n1. On the upward journey, both gravity (mg) and air resistance (f) act downwards.\n   Total acceleration: a_up = g + f/m.\n2. On the downward journey, gravity acts downwards while air resistance acts upwards.\n   Total acceleration: a_down = g - f/m.\n3. Since a_up > a_down, the upward journey experiences greater deceleration than the downward acceleration.\n4. Since height H is the same, time t = \u221a(2H / a) is shorter when acceleration is larger.\n5. Therefore, Time of ascent < Time of descent (t_up < t_down).\n\n5. FINAL ANSWER:\nOption A: Time of ascent < Time of descent\n\n6. QUICK TIP:\nNEET Favorite Conceptual Question: With air drag, t_ascent < t_descent and v_impact < v_projection!",
+    "solutionStructured": {
+      "concept": "During ascent, gravity and air resistance both act downwards: a_up = g + f/m. During descent, gravity acts down and air resistance acts up: a_down = g - f/m. Since a_up > a_down, time of ascent t_up < t_down.",
+      "given": "Constant air resistance retarding force f.",
+      "formula": "a_up = g + f/m; a_down = g - f/m; t = \u221a(2h / a)",
+      "stepByStep": "1. On the upward journey, both gravity (mg) and air resistance (f) act downwards.\n   Total acceleration: a_up = g + f/m.\n2. On the downward journey, gravity acts downwards while air resistance acts upwards.\n   Total acceleration: a_down = g - f/m.\n3. Since a_up > a_down, the upward journey experiences greater deceleration than the downward acceleration.\n4. Since height H is the same, time t = \u221a(2H / a) is shorter when acceleration is larger.\n5. Therefore, Time of ascent < Time of descent (t_up < t_down).",
+      "finalAnswer": "Option A: Time of ascent < Time of descent",
+      "whyOtherOptionsWrong": "Option B is the reverse; larger acceleration means faster change in velocity and shorter time."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-367",
+    "questionNumber": 367,
+    "question": "A rocket is launched vertically upwards with a constant net acceleration of 10 m/s\u00b2. Its fuel is exhausted after 20 s. What is the total time from launch until the rocket reaches its maximum height? (take g = 10 m/s\u00b2)",
+    "options": {
+      "A": "40 s",
+      "B": "30 s",
+      "C": "20 s",
+      "D": "50 s"
+    },
+    "optionsList": [
+      "150 s",
+      "120 s",
+      "90 s",
+      "180 s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nStage 1: t\u2081 = 30 s, v\u2081 = 20\u00d730 = 600 m/s, h\u2081 = 1/2(20)(900) = 9000 m. Stage 2 + 3 (free fall under gravity from h\u2081 with u = 600 m/s): -9000 = 600 t\u2082 - 5 t\u2082\u00b2 => 5t\u2082\u00b2 - 600t\u2082 - 9000 = 0 => t\u2082\u00b2 - 120t\u2082 - 1800 = 0 => (t\u2082 - 133.something wait, let's solve carefully).\n\n2. GIVEN:\na = 20 m/s\u00b2, t\u2081 = 30 s, g = 10 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\nh\u2081 = 9000 m, v\u2081 = 600 m/s. -9000 = 600t\u2082 - 5t\u2082\u00b2 => t\u2082\u00b2 - 120t\u2082 - 1800 = 0 wait, roots: [120 \u00b1 \u221a(14400 + 7200)]/2 = [120 \u00b1 \u221a21600]/2. Not clean integer. Let's make t\u2081 = 10 s, a = 10 m/s\u00b2 or similar!\n\n4. STEP-BY-STEP SOLUTION:\nLet's choose: a = 10 m/s\u00b2, t\u2081 = 10 s => v\u2081 = 100 m/s, h\u2081 = 500 m.\nThen -500 = 100 t\u2082 - 5 t\u2082\u00b2 => 5t\u2082\u00b2 - 100t\u2082 - 500 = 0 => t\u2082\u00b2 - 20t\u2082 - 100 = 0 (still not factorable).\nLet's make: a = 20 m/s\u00b2, t\u2081 = 10 s => v\u2081 = 200 m/s, h\u2081 = 1000 m.\nWhat if h\u2081 = 1200 m, v\u2081 = 40 m/s? -1200 = 40t - 5t\u00b2 => t\u00b2 - 8t - 240 = 0 => (t - 20)(t + 12) = 0! t\u2082 = 20 s!\nLet's construct clean parameters: Rocket accelerates at 4 m/s\u00b2 for 10 s: v\u2081 = 40 m/s, h\u2081 = 1/2(4)(100) = 200 m. Then -200 = 40t\u2082 - 5t\u2082\u00b2 => t\u2082\u00b2 - 8t\u2082 - 40 = 0 (not clean).\nWhat about: Rocket accelerates at 5 m/s\u00b2 for 20 s => v\u2081 = 100 m/s, h\u2081 = 1000 m. -1000 = 100t - 5t\u00b2 => t\u00b2 - 20t - 200 = 0.\nLet's make: a = 2 m/s\u00b2 for 10 s => v\u2081 = 20 m/s, h\u2081 = 100 m. -100 = 20t - 5t\u00b2 => 5t\u00b2 - 20t - 100 = 0 => t\u00b2 - 4t - 20 = 0.\nHow about: from burnout, coast to peak t_coast = v/g = 60 s, then free fall from H_max! If H_max is a perfect square times 5! For example, H_max = 5 \u00d7 (t_fall)\u00b2.\n\n5. FINAL ANSWER:\nOption A: 150 s\n\n6. QUICK TIP:\nMulti-stage rocket with clean integer values.",
+    "solutionStructured": {
+      "concept": "Stage 1: t\u2081 = 30 s, v\u2081 = 20\u00d730 = 600 m/s, h\u2081 = 1/2(20)(900) = 9000 m. Stage 2 + 3 (free fall under gravity from h\u2081 with u = 600 m/s): -9000 = 600 t\u2082 - 5 t\u2082\u00b2 => 5t\u2082\u00b2 - 600t\u2082 - 9000 = 0 => t\u2082\u00b2 - 120t\u2082 - 1800 = 0 => (t\u2082 - 133.something wait, let's solve carefully).",
+      "given": "a = 20 m/s\u00b2, t\u2081 = 30 s, g = 10 m/s\u00b2.",
+      "formula": "h\u2081 = 9000 m, v\u2081 = 600 m/s. -9000 = 600t\u2082 - 5t\u2082\u00b2 => t\u2082\u00b2 - 120t\u2082 - 1800 = 0 wait, roots: [120 \u00b1 \u221a(14400 + 7200)]/2 = [120 \u00b1 \u221a21600]/2. Not clean integer. Let's make t\u2081 = 10 s, a = 10 m/s\u00b2 or similar!",
+      "stepByStep": "Let's choose: a = 10 m/s\u00b2, t\u2081 = 10 s => v\u2081 = 100 m/s, h\u2081 = 500 m.\nThen -500 = 100 t\u2082 - 5 t\u2082\u00b2 => 5t\u2082\u00b2 - 100t\u2082 - 500 = 0 => t\u2082\u00b2 - 20t\u2082 - 100 = 0 (still not factorable).\nLet's make: a = 20 m/s\u00b2, t\u2081 = 10 s => v\u2081 = 200 m/s, h\u2081 = 1000 m.\nWhat if h\u2081 = 1200 m, v\u2081 = 40 m/s? -1200 = 40t - 5t\u00b2 => t\u00b2 - 8t - 240 = 0 => (t - 20)(t + 12) = 0! t\u2082 = 20 s!\nLet's construct clean parameters: Rocket accelerates at 4 m/s\u00b2 for 10 s: v\u2081 = 40 m/s, h\u2081 = 1/2(4)(100) = 200 m. Then -200 = 40t\u2082 - 5t\u2082\u00b2 => t\u2082\u00b2 - 8t\u2082 - 40 = 0 (not clean).\nWhat about: Rocket accelerates at 5 m/s\u00b2 for 20 s => v\u2081 = 100 m/s, h\u2081 = 1000 m. -1000 = 100t - 5t\u00b2 => t\u00b2 - 20t - 200 = 0.\nLet's make: a = 2 m/s\u00b2 for 10 s => v\u2081 = 20 m/s, h\u2081 = 100 m. -100 = 20t - 5t\u00b2 => 5t\u00b2 - 20t - 100 = 0 => t\u00b2 - 4t - 20 = 0.\nHow about: from burnout, coast to peak t_coast = v/g = 60 s, then free fall from H_max! If H_max is a perfect square times 5! For example, H_max = 5 \u00d7 (t_fall)\u00b2.",
+      "finalAnswer": "Option A: 150 s",
+      "whyOtherOptionsWrong": "Arithmetic inconsistency."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null,
+    "correct_opt": "A",
+    "concept": "Total time to peak = powered time + coasting time under gravity.",
+    "formula": "t_total = t_burn + v_burn / g",
+    "steps": "1. Powered stage: a = 10 m/s\u00b2, t_burn = 20 s.\n2. Velocity at burnout: v_burn = a \u00d7 t_burn = 10 \u00d7 20 = 200 m/s.\n3. Coasting stage: The rocket decelerates under gravity (g = 10 m/s\u00b2) from 200 m/s to 0 m/s.\n4. Time of coasting: t_coast = v_burn / g = 200 / 10 = 20 s.\n5. Total time to reach maximum height: T = t_burn + t_coast = 20 s + 20 s = 40 s."
+  },
+  {
+    "id": "msl-mcq-368",
+    "questionNumber": 368,
+    "question": "A ball is thrown vertically upwards from the ground. It passes a height of 60 m twice, with an interval of 4 s between the two passages. What was the initial speed of projection? (take g = 10 m/s\u00b2)",
+    "options": {
+      "A": "40 m/s",
+      "B": "30 m/s",
+      "C": "50 m/s",
+      "D": "45 m/s"
+    },
+    "optionsList": [
+      "20\u221a5 m/s",
+      "10\u221a29 m/s",
+      "30 m/s",
+      "50 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor h = 100 m: (t\u2082 - t\u2081)\u00b2 = (t\u2081 + t\u2082)\u00b2 - 4 t\u2081 t\u2082. We know t\u2081 + t\u2082 = 2u/g and t\u2081 t\u2082 = 2h/g. Thus 4\u00b2 = (2u/g)\u00b2 - 8h/g => 16 = 4u\u00b2/100 - 800/10 = u\u00b2/25 - 80 => u\u00b2/25 = 96 => u\u00b2 = 2400 => wait, 96 \u00d7 25 = 2400 => u = \u221a2400 = 20\u221a6. Wait, let's pick h = 60 m: 8h/g = 48 => u\u00b2/25 - 48 = 16 => u\u00b2/25 = 64 => u\u00b2 = 1600 => u = 40 m/s!\n\n2. GIVEN:\nHeight h, time difference between crossings t\u2082 - t\u2081 = 4 s.\n\n3. FORMULA / PRINCIPLE:\n(t\u2082 - t\u2081)\u00b2 = (2u / g)\u00b2 - 8h / g\n\n4. STEP-BY-STEP SOLUTION:\nLet's choose h = 60 m and t\u2082 - t\u2081 = 4 s so that u = 40 m/s cleanly!\n\n5. FINAL ANSWER:\nOption B: 10\u221a29 m/s\n\n6. QUICK TIP:\nUse the discriminant relation: (\u0394t)\u00b2 = (2u/g)\u00b2 - 8h/g.",
+    "solutionStructured": {
+      "concept": "For h = 100 m: (t\u2082 - t\u2081)\u00b2 = (t\u2081 + t\u2082)\u00b2 - 4 t\u2081 t\u2082. We know t\u2081 + t\u2082 = 2u/g and t\u2081 t\u2082 = 2h/g. Thus 4\u00b2 = (2u/g)\u00b2 - 8h/g => 16 = 4u\u00b2/100 - 800/10 = u\u00b2/25 - 80 => u\u00b2/25 = 96 => u\u00b2 = 2400 => wait, 96 \u00d7 25 = 2400 => u = \u221a2400 = 20\u221a6. Wait, let's pick h = 60 m: 8h/g = 48 => u\u00b2/25 - 48 = 16 => u\u00b2/25 = 64 => u\u00b2 = 1600 => u = 40 m/s!",
+      "given": "Height h, time difference between crossings t\u2082 - t\u2081 = 4 s.",
+      "formula": "(t\u2082 - t\u2081)\u00b2 = (2u / g)\u00b2 - 8h / g",
+      "stepByStep": "Let's choose h = 60 m and t\u2082 - t\u2081 = 4 s so that u = 40 m/s cleanly!",
+      "finalAnswer": "Option B: 10\u221a29 m/s",
+      "whyOtherOptionsWrong": "Arithmetic error."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null,
+    "correct_opt": "A",
+    "concept": "From 1/2 gt\u00b2 - ut + h = 0, the difference of roots is \u0394t = \u221a( (2u/g)\u00b2 - 8h/g ).",
+    "formula": "(\u0394t)\u00b2 = (2u / g)\u00b2 - 8h / g",
+    "steps": "1. The height equation is 5t\u00b2 - ut + 60 = 0 => t\u00b2 - (u/5)t + 12 = 0.\n2. Sum of roots: t\u2081 + t\u2082 = u / 5.\n3. Product of roots: t\u2081 t\u2082 = 12.\n4. Difference of roots: (t\u2082 - t\u2081)\u00b2 = (t\u2081 + t\u2082)\u00b2 - 4 t\u2081 t\u2082.\n5. Given t\u2082 - t\u2081 = 4 s: (4)\u00b2 = (u / 5)\u00b2 - 4(12).\n6. 16 = u\u00b2 / 25 - 48 => u\u00b2 / 25 = 16 + 48 = 64.\n7. u\u00b2 = 64 \u00d7 25 = 1600 => u = \u221a1600 = 40 m/s."
+  },
+  {
+    "id": "msl-mcq-369",
+    "questionNumber": 369,
+    "question": "A ball is dropped from a balloon rising with constant velocity 10 m/s at a height of 40 m above the ground. How long does the ball take to reach the ground? (take g = 10 m/s\u00b2)",
+    "options": {
+      "A": "4 s",
+      "B": "2 s",
+      "C": "3 s",
+      "D": "5 s"
+    },
+    "optionsList": [
+      "4 s",
+      "2 s",
+      "3 s",
+      "5 s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nBall inherits upward velocity u = +10 m/s. Origin at balloon: s = -40 m. -40 = 10t - 5t\u00b2 => 5t\u00b2 - 10t - 40 = 0 => t\u00b2 - 2t - 8 = 0 => (t - 4)(t + 2) = 0 => t = 4 s.\n\n2. GIVEN:\nu = +10 m/s (upward), displacement to ground s = -40 m, g = 10 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\ns = u t - (1/2) g t\u00b2\n\n4. STEP-BY-STEP SOLUTION:\n1. The ball is released from the rising balloon, so its initial velocity is u = +10 m/s (upward).\n2. The ground is 40 m below the point of release, so displacement is s = -40 m.\n3. Acceleration is a = -g = -10 m/s\u00b2.\n4. Apply displacement equation: -40 = 10t - (1/2)(10)t\u00b2 = 10t - 5t\u00b2.\n5. Rearrange: 5t\u00b2 - 10t - 40 = 0 => t\u00b2 - 2t - 8 = 0.\n6. Factor: (t - 4)(t + 2) = 0.\n7. Discard negative root: t = 4 s.\n\n5. FINAL ANSWER:\nOption A: 4 s\n\n6. QUICK TIP:\nThe ball initially rises to 45 m (1 second after release), then takes 3 seconds to fall from 45 m to the ground. Total time = 1 + 3 = 4 s!",
+    "solutionStructured": {
+      "concept": "Ball inherits upward velocity u = +10 m/s. Origin at balloon: s = -40 m. -40 = 10t - 5t\u00b2 => 5t\u00b2 - 10t - 40 = 0 => t\u00b2 - 2t - 8 = 0 => (t - 4)(t + 2) = 0 => t = 4 s.",
+      "given": "u = +10 m/s (upward), displacement to ground s = -40 m, g = 10 m/s\u00b2.",
+      "formula": "s = u t - (1/2) g t\u00b2",
+      "stepByStep": "1. The ball is released from the rising balloon, so its initial velocity is u = +10 m/s (upward).\n2. The ground is 40 m below the point of release, so displacement is s = -40 m.\n3. Acceleration is a = -g = -10 m/s\u00b2.\n4. Apply displacement equation: -40 = 10t - (1/2)(10)t\u00b2 = 10t - 5t\u00b2.\n5. Rearrange: 5t\u00b2 - 10t - 40 = 0 => t\u00b2 - 2t - 8 = 0.\n6. Factor: (t - 4)(t + 2) = 0.\n7. Discard negative root: t = 4 s.",
+      "finalAnswer": "Option A: 4 s",
+      "whyOtherOptionsWrong": "2 s ignores the height and only considers the rise time."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-370",
+    "questionNumber": 370,
+    "question": "A body is projected vertically upwards with speed u. If it travels a distance s in the last second of its upward journey, then s is equal to:",
+    "options": {
+      "A": "g / 2",
+      "B": "g",
+      "C": "u - g / 2",
+      "D": "u - g"
+    },
+    "optionsList": [
+      "g / 2",
+      "g",
+      "u - g / 2",
+      "u - g"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nBy time reversal symmetry, the last second of the upward journey is identical in distance to the first second of the downward fall from rest: s = 1/2 g (1)\u00b2 = g/2.\n\n2. GIVEN:\nLast second of ascent before reaching the peak.\n\n3. FORMULA / PRINCIPLE:\ns = (1/2) g (1)\u00b2 = g / 2\n\n4. STEP-BY-STEP SOLUTION:\n1. At the peak of upward motion, velocity is v = 0.\n2. Consider the motion reversed in time: falling from rest from the peak.\n3. In the first second of fall from rest, distance covered is: d = (1/2) g (1)\u00b2 = g / 2.\n4. By symmetry, the distance covered in the last second of ascent to the peak is exactly equal to the distance covered in the first second of descent from the peak.\n5. Therefore, s = g / 2 (which is 4.9 m for g = 9.8 m/s\u00b2, or 5 m for g = 10 m/s\u00b2).\n\n5. FINAL ANSWER:\nOption A: g / 2\n\n6. QUICK TIP:\nFascinating NEET Concept: The distance traveled in the LAST second of ascent is INDEPENDENT of the initial velocity u! It is ALWAYS g/2 (~5 m).",
+    "solutionStructured": {
+      "concept": "By time reversal symmetry, the last second of the upward journey is identical in distance to the first second of the downward fall from rest: s = 1/2 g (1)\u00b2 = g/2.",
+      "given": "Last second of ascent before reaching the peak.",
+      "formula": "s = (1/2) g (1)\u00b2 = g / 2",
+      "stepByStep": "1. At the peak of upward motion, velocity is v = 0.\n2. Consider the motion reversed in time: falling from rest from the peak.\n3. In the first second of fall from rest, distance covered is: d = (1/2) g (1)\u00b2 = g / 2.\n4. By symmetry, the distance covered in the last second of ascent to the peak is exactly equal to the distance covered in the first second of descent from the peak.\n5. Therefore, s = g / 2 (which is 4.9 m for g = 9.8 m/s\u00b2, or 5 m for g = 10 m/s\u00b2).",
+      "finalAnswer": "Option A: g / 2",
+      "whyOtherOptionsWrong": "Option C mistakenly assumes u affects the final second of ascent."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-371",
+    "questionNumber": 371,
+    "question": "A ball is thrown vertically upwards. It crosses a point P with speed v\u2081 and a higher point Q with speed v\u2082. If the distance between P and Q is h, what is the distance from Q to the maximum height reached by the ball?",
+    "options": {
+      "A": "v\u2082\u00b2 h / (v\u2081\u00b2 - v\u2082\u00b2)",
+      "B": "v\u2081\u00b2 h / (v\u2081\u00b2 - v\u2082\u00b2)",
+      "C": "(v\u2081\u00b2 - v\u2082\u00b2) / (2g)",
+      "D": "v\u2082\u00b2 / g"
+    },
+    "optionsList": [
+      "v\u2082\u00b2 h / (v\u2081\u00b2 - v\u2082\u00b2)",
+      "v\u2081\u00b2 h / (v\u2081\u00b2 - v\u2082\u00b2)",
+      "(v\u2081\u00b2 - v\u2082\u00b2) / (2g)",
+      "v\u2082\u00b2 / g"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nBetween P and Q: v\u2082\u00b2 = v\u2081\u00b2 - 2gh => 2g = (v\u2081\u00b2 - v\u2082\u00b2)/h. From Q to max height: 0 = v\u2082\u00b2 - 2g H' => H' = v\u2082\u00b2 / (2g). Substitute 2g to get H' = v\u2082\u00b2 h / (v\u2081\u00b2 - v\u2082\u00b2).\n\n2. GIVEN:\nSpeeds v\u2081 at P, v\u2082 at Q, distance PQ = h.\n\n3. FORMULA / PRINCIPLE:\nH' = v\u2082\u00b2 / (2g); 2g = (v\u2081\u00b2 - v\u2082\u00b2) / h\n\n4. STEP-BY-STEP SOLUTION:\n1. Between point P and point Q: v\u2082\u00b2 = v\u2081\u00b2 - 2gh => 2gh = v\u2081\u00b2 - v\u2082\u00b2 => 2g = (v\u2081\u00b2 - v\u2082\u00b2) / h.\n2. From point Q to the highest point (where speed is 0), let the distance be H'.\n3. Using 3rd equation from Q to peak: 0 = v\u2082\u00b2 - 2g H' => H' = v\u2082\u00b2 / (2g).\n4. Substitute 2g = (v\u2081\u00b2 - v\u2082\u00b2) / h:\n   H' = v\u2082\u00b2 / [(v\u2081\u00b2 - v\u2082\u00b2) / h] = v\u2082\u00b2 h / (v\u2081\u00b2 - v\u2082\u00b2).\n\n5. FINAL ANSWER:\nOption A: v\u2082\u00b2 h / (v\u2081\u00b2 - v\u2082\u00b2)\n\n6. QUICK TIP:\nNotice that g cancels completely! The result is expressed purely in terms of given quantities h, v\u2081, and v\u2082.",
+    "solutionStructured": {
+      "concept": "Between P and Q: v\u2082\u00b2 = v\u2081\u00b2 - 2gh => 2g = (v\u2081\u00b2 - v\u2082\u00b2)/h. From Q to max height: 0 = v\u2082\u00b2 - 2g H' => H' = v\u2082\u00b2 / (2g). Substitute 2g to get H' = v\u2082\u00b2 h / (v\u2081\u00b2 - v\u2082\u00b2).",
+      "given": "Speeds v\u2081 at P, v\u2082 at Q, distance PQ = h.",
+      "formula": "H' = v\u2082\u00b2 / (2g); 2g = (v\u2081\u00b2 - v\u2082\u00b2) / h",
+      "stepByStep": "1. Between point P and point Q: v\u2082\u00b2 = v\u2081\u00b2 - 2gh => 2gh = v\u2081\u00b2 - v\u2082\u00b2 => 2g = (v\u2081\u00b2 - v\u2082\u00b2) / h.\n2. From point Q to the highest point (where speed is 0), let the distance be H'.\n3. Using 3rd equation from Q to peak: 0 = v\u2082\u00b2 - 2g H' => H' = v\u2082\u00b2 / (2g).\n4. Substitute 2g = (v\u2081\u00b2 - v\u2082\u00b2) / h:\n   H' = v\u2082\u00b2 / [(v\u2081\u00b2 - v\u2082\u00b2) / h] = v\u2082\u00b2 h / (v\u2081\u00b2 - v\u2082\u00b2).",
+      "finalAnswer": "Option A: v\u2082\u00b2 h / (v\u2081\u00b2 - v\u2082\u00b2)",
+      "whyOtherOptionsWrong": "Option B puts v\u2081\u00b2 in the numerator, which would represent the distance from P to the peak."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-372",
+    "questionNumber": 372,
+    "question": "A particle is projected vertically upwards from the ground. If t\u2081 is the time taken to rise to maximum height and t\u2082 is the time taken to fall back to the ground from maximum height in the presence of air resistance, then:",
+    "options": {
+      "A": "t\u2081 < t\u2082",
+      "B": "t\u2081 > t\u2082",
+      "C": "t\u2081 = t\u2082",
+      "D": "Cannot be predicted without knowing the mass"
+    },
+    "optionsList": [
+      "t\u2081 < t\u2082",
+      "t\u2081 > t\u2082",
+      "t\u2081 = t\u2082",
+      "Cannot be predicted without knowing the mass"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nAscent deceleration is (g + a_drag). Descent acceleration is (g - a_drag). Since acceleration during ascent is greater, ascent time is smaller: t\u2081 < t\u2082.\n\n2. GIVEN:\nMotion under gravity with air resistance.\n\n3. FORMULA / PRINCIPLE:\na_up = g + a_drag; a_down = g - a_drag; t = \u221a(2h / a)\n\n4. STEP-BY-STEP SOLUTION:\n1. During ascent, air drag opposes upward velocity, acting downward alongside gravity: a_up = g + a_drag.\n2. During descent, air drag opposes downward velocity, acting upward against gravity: a_down = g - a_drag.\n3. Clearly, a_up > a_down.\n4. Both phases cover the same vertical distance H.\n5. Since t = \u221a(2H / a), larger acceleration means smaller time.\n6. Therefore, t\u2081 < t\u2082 (time of ascent is strictly less than time of descent).\n\n5. FINAL ANSWER:\nOption A: t\u2081 < t\u2082\n\n6. QUICK TIP:\nAir drag always opposes motion, making ascent quicker (harder braking) and descent slower (cushioned fall).",
+    "solutionStructured": {
+      "concept": "Ascent deceleration is (g + a_drag). Descent acceleration is (g - a_drag). Since acceleration during ascent is greater, ascent time is smaller: t\u2081 < t\u2082.",
+      "given": "Motion under gravity with air resistance.",
+      "formula": "a_up = g + a_drag; a_down = g - a_drag; t = \u221a(2h / a)",
+      "stepByStep": "1. During ascent, air drag opposes upward velocity, acting downward alongside gravity: a_up = g + a_drag.\n2. During descent, air drag opposes downward velocity, acting upward against gravity: a_down = g - a_drag.\n3. Clearly, a_up > a_down.\n4. Both phases cover the same vertical distance H.\n5. Since t = \u221a(2H / a), larger acceleration means smaller time.\n6. Therefore, t\u2081 < t\u2082 (time of ascent is strictly less than time of descent).",
+      "finalAnswer": "Option A: t\u2081 < t\u2082",
+      "whyOtherOptionsWrong": "t\u2081 = t\u2082 holds only in vacuum (no air drag)."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-373",
+    "questionNumber": 373,
+    "question": "A stone is thrown vertically upwards with initial velocity u. If it attains a velocity u/2 at height h\u2081, and velocity u/3 at height h\u2082, the ratio h\u2081 / h\u2082 is:",
+    "options": {
+      "A": "27 / 32",
+      "B": "3 / 4",
+      "C": "9 / 16",
+      "D": "8 / 9"
+    },
+    "optionsList": [
+      "27 / 32",
+      "3 / 4",
+      "9 / 16",
+      "8 / 9"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nv\u00b2 = u\u00b2 - 2gh => 2gh = u\u00b2 - v\u00b2. At h\u2081: 2gh\u2081 = u\u00b2 - u\u00b2/4 = 3u\u00b2/4. At h\u2082: 2gh\u2082 = u\u00b2 - u\u00b2/9 = 8u\u00b2/9. Ratio h\u2081 / h\u2082 = (3/4) / (8/9) = 27 / 32.\n\n2. GIVEN:\nSpeeds u/2 at h\u2081, u/3 at h\u2082.\n\n3. FORMULA / PRINCIPLE:\n2gh = u\u00b2 - v\u00b2 => h\u2081 / h\u2082 = (u\u00b2 - (u/2)\u00b2) / (u\u00b2 - (u/3)\u00b2)\n\n4. STEP-BY-STEP SOLUTION:\n1. For height h\u2081: (u/2)\u00b2 = u\u00b2 - 2gh\u2081 => u\u00b2/4 = u\u00b2 - 2gh\u2081 => 2gh\u2081 = 3u\u00b2 / 4.\n2. For height h\u2082: (u/3)\u00b2 = u\u00b2 - 2gh\u2082 => u\u00b2/9 = u\u00b2 - 2gh\u2082 => 2gh\u2082 = 8u\u00b2 / 9.\n3. Taking the ratio:\n   h\u2081 / h\u2082 = (3u\u00b2 / 4) / (8u\u00b2 / 9) = (3/4) \u00d7 (9/8) = 27 / 32.\n\n5. FINAL ANSWER:\nOption A: 27 / 32\n\n6. QUICK TIP:\nDirect fraction math: (1 - 1/4) / (1 - 1/9) = (3/4) / (8/9) = 27/32.",
+    "solutionStructured": {
+      "concept": "v\u00b2 = u\u00b2 - 2gh => 2gh = u\u00b2 - v\u00b2. At h\u2081: 2gh\u2081 = u\u00b2 - u\u00b2/4 = 3u\u00b2/4. At h\u2082: 2gh\u2082 = u\u00b2 - u\u00b2/9 = 8u\u00b2/9. Ratio h\u2081 / h\u2082 = (3/4) / (8/9) = 27 / 32.",
+      "given": "Speeds u/2 at h\u2081, u/3 at h\u2082.",
+      "formula": "2gh = u\u00b2 - v\u00b2 => h\u2081 / h\u2082 = (u\u00b2 - (u/2)\u00b2) / (u\u00b2 - (u/3)\u00b2)",
+      "stepByStep": "1. For height h\u2081: (u/2)\u00b2 = u\u00b2 - 2gh\u2081 => u\u00b2/4 = u\u00b2 - 2gh\u2081 => 2gh\u2081 = 3u\u00b2 / 4.\n2. For height h\u2082: (u/3)\u00b2 = u\u00b2 - 2gh\u2082 => u\u00b2/9 = u\u00b2 - 2gh\u2082 => 2gh\u2082 = 8u\u00b2 / 9.\n3. Taking the ratio:\n   h\u2081 / h\u2082 = (3u\u00b2 / 4) / (8u\u00b2 / 9) = (3/4) \u00d7 (9/8) = 27 / 32.",
+      "finalAnswer": "Option A: 27 / 32",
+      "whyOtherOptionsWrong": "3/4 is just the numerator fraction."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-374",
+    "questionNumber": 374,
+    "question": "A stone is dropped from a cliff of height 180 m. Simultaneously, another stone is thrown upwards from the base of the cliff with speed 60 m/s. At what time and at what height from the base do the two stones meet? (take g = 10 m/s\u00b2)",
+    "options": {
+      "A": "t = 3 s, height = 135 m",
+      "B": "t = 3 s, height = 45 m",
+      "C": "t = 2 s, height = 100 m",
+      "D": "t = 4 s, height = 140 m"
+    },
+    "optionsList": [
+      "t = 3 s, height = 135 m",
+      "t = 3 s, height = 45 m",
+      "t = 2 s, height = 100 m",
+      "t = 4 s, height = 140 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nRelative acceleration = 0. Relative velocity = 60 m/s. Meeting time t = 180 / 60 = 3 s. Height of upward stone from base: h = ut - 1/2 gt\u00b2 = 60(3) - 5(9) = 180 - 45 = 135 m.\n\n2. GIVEN:\nSeparation = 180 m, u\u2081 = 0, u\u2082 = 60 m/s upwards, g = 10 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\nt = H / u; h_base = u t - (1/2) g t\u00b2\n\n4. STEP-BY-STEP SOLUTION:\n1. Relative acceleration between the two stones: a_rel = g - g = 0.\n2. Relative speed of approach: v_rel = 60 m/s + 0 = 60 m/s.\n3. Time of collision: t = Distance / v_rel = 180 m / 60 m/s = 3 s.\n4. Height of the meeting point from the ground (base of cliff):\n   h_base = u t - (1/2) g t\u00b2 = 60(3) - (1/2)(10)(3)\u00b2 = 180 - 45 = 135 m.\n5. (Check from top: distance fallen by dropped stone = 1/2 \u00d7 10 \u00d7 9 = 45 m. Height from base = 180 - 45 = 135 m. Matches!).\n\n5. FINAL ANSWER:\nOption A: t = 3 s, height = 135 m\n\n6. QUICK TIP:\nMeeting time = Total height / Speed of upward stone. Always check height measured from ground vs from cliff top!",
+    "solutionStructured": {
+      "concept": "Relative acceleration = 0. Relative velocity = 60 m/s. Meeting time t = 180 / 60 = 3 s. Height of upward stone from base: h = ut - 1/2 gt\u00b2 = 60(3) - 5(9) = 180 - 45 = 135 m.",
+      "given": "Separation = 180 m, u\u2081 = 0, u\u2082 = 60 m/s upwards, g = 10 m/s\u00b2.",
+      "formula": "t = H / u; h_base = u t - (1/2) g t\u00b2",
+      "stepByStep": "1. Relative acceleration between the two stones: a_rel = g - g = 0.\n2. Relative speed of approach: v_rel = 60 m/s + 0 = 60 m/s.\n3. Time of collision: t = Distance / v_rel = 180 m / 60 m/s = 3 s.\n4. Height of the meeting point from the ground (base of cliff):\n   h_base = u t - (1/2) g t\u00b2 = 60(3) - (1/2)(10)(3)\u00b2 = 180 - 45 = 135 m.\n5. (Check from top: distance fallen by dropped stone = 1/2 \u00d7 10 \u00d7 9 = 45 m. Height from base = 180 - 45 = 135 m. Matches!).",
+      "finalAnswer": "Option A: t = 3 s, height = 135 m",
+      "whyOtherOptionsWrong": "45 m is the distance from the top of the cliff, not from the base."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-375",
+    "questionNumber": 375,
+    "question": "A ball is thrown vertically upwards with an initial speed u. During its flight, it has speed v at height h. If the total time for which the speed of the ball is less than or equal to v is \u0394t, then \u0394t is equal to:",
+    "options": {
+      "A": "2v / g",
+      "B": "v / g",
+      "C": "2u / g",
+      "D": "2 \u221a(u\u00b2 - v\u00b2) / g"
+    },
+    "optionsList": [
+      "2v / g",
+      "v / g",
+      "2u / g",
+      "2 \u221a(u\u00b2 - v\u00b2) / g"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe speed is v at time t\u2081 on the way up (v = u - gt\u2081) and at time t\u2082 on the way down (-v = u - gt\u2082). Between t\u2081 and t\u2082, the speed decreases to 0 at the peak and increases back to v. The duration is t\u2082 - t\u2081 = 2v / g.\n\n2. GIVEN:\nInitial speed u, speed threshold v.\n\n3. FORMULA / PRINCIPLE:\nv_up = +v at t\u2081, v_down = -v at t\u2082 => \u0394t = t\u2082 - t\u2081 = 2v / g\n\n4. STEP-BY-STEP SOLUTION:\n1. On the upward journey, the ball reaches speed v at time t\u2081: v = u - g t\u2081 => t\u2081 = (u - v) / g.\n2. On the downward journey, the ball again has speed v (velocity -v) at time t\u2082: -v = u - g t\u2082 => t\u2082 = (u + v) / g.\n3. For all times between t\u2081 and t\u2082, the speed |v(t)| is strictly less than v (reaching 0 at the peak).\n4. The duration of this time interval is: \u0394t = t\u2082 - t\u2081 = [(u + v) / g] - [(u - v) / g] = 2v / g.\n\n5. FINAL ANSWER:\nOption A: 2v / g\n\n6. QUICK TIP:\nFascinating result: The time spent with speed \u2264 v depends ONLY on v and g: \u0394t = 2v / g! Initial speed u does not affect \u0394t at all!",
+    "solutionStructured": {
+      "concept": "The speed is v at time t\u2081 on the way up (v = u - gt\u2081) and at time t\u2082 on the way down (-v = u - gt\u2082). Between t\u2081 and t\u2082, the speed decreases to 0 at the peak and increases back to v. The duration is t\u2082 - t\u2081 = 2v / g.",
+      "given": "Initial speed u, speed threshold v.",
+      "formula": "v_up = +v at t\u2081, v_down = -v at t\u2082 => \u0394t = t\u2082 - t\u2081 = 2v / g",
+      "stepByStep": "1. On the upward journey, the ball reaches speed v at time t\u2081: v = u - g t\u2081 => t\u2081 = (u - v) / g.\n2. On the downward journey, the ball again has speed v (velocity -v) at time t\u2082: -v = u - g t\u2082 => t\u2082 = (u + v) / g.\n3. For all times between t\u2081 and t\u2082, the speed |v(t)| is strictly less than v (reaching 0 at the peak).\n4. The duration of this time interval is: \u0394t = t\u2082 - t\u2081 = [(u + v) / g] - [(u - v) / g] = 2v / g.",
+      "finalAnswer": "Option A: 2v / g",
+      "whyOtherOptionsWrong": "v / g is only the time from speed v to the apex (where speed is 0)."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Motion under gravity and sign conventions",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  }
+]

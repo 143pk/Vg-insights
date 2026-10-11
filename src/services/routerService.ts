@@ -35,6 +35,7 @@ export interface RouteState {
     | 'pyqs'
     | 'revision'
     | 'chapters'
+    | 'chapterwise-mcqs'
     | 'my-progress';
   mockId?: string;
   subFilter?: string;
@@ -50,7 +51,7 @@ export interface RouteState {
 
 export class RouterService {
   static parseHash(hash: string): RouteState {
-    const cleanHash = hash.replace(/^#\/?/, '').trim();
+    const cleanHash = hash.replace(/^[#/]+/, '').trim();
     
     // Landing page is the public entry point
     if (!cleanHash || cleanHash === 'landing') {
@@ -262,6 +263,75 @@ export class RouterService {
           { label: 'Home', path: '#home' },
           { label: 'All Chapters', path: '#chapters' }
         ]
+      };
+    }
+
+    if (prefix === 'chapterwise-mcqs') {
+      const p1 = parts[1];
+      const p2 = parts[2];
+      const p3 = parts[3];
+
+      let subjectId: string | undefined = undefined;
+      let classLevel: 'class-11' | 'class-12' | undefined = undefined;
+      let chapterId: string | undefined = undefined;
+
+      if (p1 === 'chapter' && p2) {
+        chapterId = p2;
+      } else if (p1 === 'physics' || p1 === 'chemistry' || p1 === 'biology') {
+        subjectId = p1;
+        if (p2 === 'class-11' || p2 === 'class-12') {
+          classLevel = p2;
+          if (p3) {
+            chapterId = p3;
+          }
+        } else if (p2) {
+          chapterId = p2;
+        }
+      } else if (p1 && CHAPTERS[p1]) {
+        chapterId = p1;
+      }
+
+      // If chapterId is present, resolve subject and classLevel from chapter
+      const chapter = chapterId ? CHAPTERS[chapterId] : undefined;
+      if (chapter) {
+        const classification = CLASSIFICATIONS[chapter.classificationId];
+        if (classification) {
+          if (!subjectId) subjectId = classification.subjectId;
+          if (!classLevel) classLevel = classification.classLevel;
+        }
+      }
+
+      // Build breadcrumbs: Home → Chapterwise MCQs → [Subject] → [Class] → [Chapter]
+      const crumbs: BreadcrumbItem[] = [
+        { label: 'Home', path: '#home' },
+        { label: 'Chapterwise MCQs', path: '#chapterwise-mcqs' }
+      ];
+
+      const subject = subjectId ? SUBJECTS.find(s => s.id === subjectId) : undefined;
+      if (subject) {
+        crumbs.push({ label: subject.name, path: `#chapterwise-mcqs/${subject.id}` });
+      }
+
+      if (subject && classLevel) {
+        const classLabel = classLevel === 'class-11' ? 'Class 11' : 'Class 12';
+        crumbs.push({ label: classLabel, path: `#chapterwise-mcqs/${subject.id}/${classLevel}` });
+      }
+
+      if (chapter) {
+        crumbs.push({
+          label: chapter.title,
+          path: subject && classLevel
+            ? `#chapterwise-mcqs/${subject.id}/${classLevel}/${chapter.id}`
+            : `#chapterwise-mcqs/chapter/${chapter.id}`
+        });
+      }
+
+      return {
+        type: 'chapterwise-mcqs',
+        subjectId,
+        classLevel,
+        chapterId,
+        breadcrumbs: crumbs
       };
     }
 

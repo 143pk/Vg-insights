@@ -34,9 +34,11 @@ const MISTAKE_BOOK_STORAGE_KEY = 'vg_neet_mistake_book_v1';
 export class MistakeBookService {
   public static getState(): MistakeBookState {
     try {
-      const data = localStorage.getItem(MISTAKE_BOOK_STORAGE_KEY);
-      if (data) {
-        return JSON.parse(data);
+      if (typeof window !== 'undefined' && window.localStorage) {
+        const data = window.localStorage.getItem(MISTAKE_BOOK_STORAGE_KEY);
+        if (data) {
+          return JSON.parse(data);
+        }
       }
     } catch (e) {
       console.warn('Failed to parse mistake book state:', e);
@@ -56,7 +58,9 @@ export class MistakeBookService {
       state.totalMistakesCount = all.length;
       state.repeatedMistakesCount = all.filter(m => m.isRepeatedMistake && !m.isResolved).length;
       state.resolvedMistakesCount = all.filter(m => m.isResolved).length;
-      localStorage.setItem(MISTAKE_BOOK_STORAGE_KEY, JSON.stringify(state));
+      if (typeof window !== 'undefined' && window.localStorage) {
+        window.localStorage.setItem(MISTAKE_BOOK_STORAGE_KEY, JSON.stringify(state));
+      }
     } catch (e) {
       console.error('Failed to save mistake book state:', e);
     }

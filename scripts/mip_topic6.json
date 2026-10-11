@@ -1,0 +1,668 @@
+[
+  {
+    "id": "mip-mcq-090",
+    "questionNumber": 90,
+    "question": "What is meant by the resolution of a vector in physics?",
+    "options": {
+      "A": "The process of splitting a single vector into two or more vectors whose combined effect is identical to the original vector",
+      "B": "The process of finding the single resultant of multiple vectors",
+      "C": "The process of measuring the length of a vector",
+      "D": "The process of converting a vector into a scalar"
+    },
+    "optionsList": [
+      "The process of splitting a single vector into two or more vectors whose combined effect is identical to the original vector",
+      "The process of finding the single resultant of multiple vectors",
+      "The process of measuring the length of a vector",
+      "The process of converting a vector into a scalar"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nResolution of a vector is the reverse of vector addition: breaking a single vector into components along specified directions such that their vector sum equals the original vector.\n\n2. GIVEN:\nDefinition of resolution of a vector.\n\n3. FORMULA / PRINCIPLE:\n$\\vec{A} = \\vec{A}_1 + \\vec{A}_2 + \\dots + \\vec{A}_n$\n\n4. STEP-BY-STEP SOLUTION:\n1. Vector addition combines multiple vectors into a single resultant vector.\n2. Resolution is the exact inverse process: taking a single vector and decomposing it into two or more component vectors along different chosen axes.\n3. When these components are added together according to the laws of vector addition, they reconstruct the original vector exactly.\n4. Thus, option A defines resolution.\n\n5. FINAL ANSWER:\nOption A: The process of splitting a single vector into two or more vectors whose combined effect is identical to the original vector\n\n6. QUICK TIP:\nAddition = Composition of vectors; Decomposition = Resolution of vectors.",
+    "solutionStructured": {
+      "concept": "Resolution of a vector is the reverse of vector addition: breaking a single vector into components along specified directions such that their vector sum equals the original vector.",
+      "given": "Definition of resolution of a vector.",
+      "formula": "$\\vec{A} = \\vec{A}_1 + \\vec{A}_2 + \\dots + \\vec{A}_n$",
+      "stepByStep": "1. Vector addition combines multiple vectors into a single resultant vector.\n2. Resolution is the exact inverse process: taking a single vector and decomposing it into two or more component vectors along different chosen axes.\n3. When these components are added together according to the laws of vector addition, they reconstruct the original vector exactly.\n4. Thus, option A defines resolution.",
+      "finalAnswer": "Option A: The process of splitting a single vector into two or more vectors whose combined effect is identical to the original vector",
+      "whyOtherOptionsWrong": "Option B describes composition (finding the resultant), which is the opposite of resolution."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Resolution of vectors into components",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-091",
+    "questionNumber": 91,
+    "question": "Into how many components can a single vector be resolved in a plane?",
+    "options": {
+      "A": "An infinite number of components",
+      "B": "Only two components",
+      "C": "Only three components",
+      "D": "Only rectangular components"
+    },
+    "optionsList": [
+      "An infinite number of components",
+      "Only two components",
+      "Only three components",
+      "Only rectangular components"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nA vector in a plane can be resolved into two rectangular components along mutually perpendicular axes, but it can be resolved into an infinite number of components along non-perpendicular or multiple arbitrary directions.\n\n2. GIVEN:\nResolution of a vector in a 2D plane.\n\n3. FORMULA / PRINCIPLE:\n$\\vec{A} = \\sum_{i=1}^N \\vec{A}_i$ for any $N \\ge 2$.\n\n4. STEP-BY-STEP SOLUTION:\n1. If mutually perpendicular axes are chosen, a 2D vector has uniquely two rectangular components.\n2. However, the general question asks for ANY components: a vector can be written as the sum of 2, 3, 4, or arbitrarily many vectors forming a closed polygon.\n3. Even if restricted to two non-parallel directions, infinitely many pairs of directions can be chosen in the plane.\n4. Hence, a vector can be resolved into an infinite number of components.\n\n5. FINAL ANSWER:\nOption A: An infinite number of components\n\n6. QUICK TIP:\nRectangular components in a plane = strictly 2. General components in a plane = infinite!",
+    "solutionStructured": {
+      "concept": "A vector in a plane can be resolved into two rectangular components along mutually perpendicular axes, but it can be resolved into an infinite number of components along non-perpendicular or multiple arbitrary directions.",
+      "given": "Resolution of a vector in a 2D plane.",
+      "formula": "$\\vec{A} = \\sum_{i=1}^N \\vec{A}_i$ for any $N \\ge 2$.",
+      "stepByStep": "1. If mutually perpendicular axes are chosen, a 2D vector has uniquely two rectangular components.\n2. However, the general question asks for ANY components: a vector can be written as the sum of 2, 3, 4, or arbitrarily many vectors forming a closed polygon.\n3. Even if restricted to two non-parallel directions, infinitely many pairs of directions can be chosen in the plane.\n4. Hence, a vector can be resolved into an infinite number of components.",
+      "finalAnswer": "Option A: An infinite number of components",
+      "whyOtherOptionsWrong": "Option B is true only for mutually perpendicular (rectangular) components, not general components."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Resolution of vectors into components",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-092",
+    "questionNumber": 92,
+    "question": "A force of 100 N acts at an angle of 60\u00b0 to the horizontal. What are its horizontal and vertical rectangular components?",
+    "options": {
+      "A": "50 N horizontal, 50\u221a3 N vertical",
+      "B": "50\u221a3 N horizontal, 50 N vertical",
+      "C": "50 N horizontal, 50 N vertical",
+      "D": "100 N horizontal, 0 N vertical"
+    },
+    "optionsList": [
+      "50 N horizontal, 50\u221a3 N vertical",
+      "50\u221a3 N horizontal, 50 N vertical",
+      "50 N horizontal, 50 N vertical",
+      "100 N horizontal, 0 N vertical"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nHorizontal component is $F_x = F\\cos\\theta$ and vertical component is $F_y = F\\sin\\theta$.\n\n2. GIVEN:\n$F = 100\\text{ N}$, $\\theta = 60^\\circ$ to horizontal.\n\n3. FORMULA / PRINCIPLE:\n$F_x = 100\\cos 60^\\circ = 50\\text{ N}$; $F_y = 100\\sin 60^\\circ = 50\\sqrt{3}\\text{ N}$\n\n4. STEP-BY-STEP SOLUTION:\n1. Horizontal component: $F_x = F\\cos 60^\\circ = 100 \\times \\frac{1}{2} = 50\\text{ N}$.\n2. Vertical component: $F_y = F\\sin 60^\\circ = 100 \\times \\frac{\\sqrt{3}}{2} = 50\\sqrt{3}\\text{ N} \\approx 86.6\\text{ N}$.\n3. Check: $\\sqrt{F_x^2 + F_y^2} = \\sqrt{50^2 + (50\\sqrt{3})^2} = \\sqrt{2500 + 7500} = \\sqrt{10000} = 100\\text{ N}$.\n\n5. FINAL ANSWER:\nOption A: 50 N horizontal, 50\u221a3 N vertical\n\n6. QUICK TIP:\nSide adjacent to the angle gets $\\cos$; side opposite gets $\\sin$.",
+    "solutionStructured": {
+      "concept": "Horizontal component is $F_x = F\\cos\\theta$ and vertical component is $F_y = F\\sin\\theta$.",
+      "given": "$F = 100\\text{ N}$, $\\theta = 60^\\circ$ to horizontal.",
+      "formula": "$F_x = 100\\cos 60^\\circ = 50\\text{ N}$; $F_y = 100\\sin 60^\\circ = 50\\sqrt{3}\\text{ N}$",
+      "stepByStep": "1. Horizontal component: $F_x = F\\cos 60^\\circ = 100 \\times \\frac{1}{2} = 50\\text{ N}$.\n2. Vertical component: $F_y = F\\sin 60^\\circ = 100 \\times \\frac{\\sqrt{3}}{2} = 50\\sqrt{3}\\text{ N} \\approx 86.6\\text{ N}$.\n3. Check: $\\sqrt{F_x^2 + F_y^2} = \\sqrt{50^2 + (50\\sqrt{3})^2} = \\sqrt{2500 + 7500} = \\sqrt{10000} = 100\\text{ N}$.",
+      "finalAnswer": "Option A: 50 N horizontal, 50\u221a3 N vertical",
+      "whyOtherOptionsWrong": "Option B swaps the horizontal and vertical components."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Resolution of vectors into components",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-093",
+    "questionNumber": 93,
+    "question": "Can the magnitude of a rectangular component of a vector ever be greater than the magnitude of the vector itself?",
+    "options": {
+      "A": "No, a rectangular component can never exceed the magnitude of the vector",
+      "B": "Yes, if the angle is greater than 45\u00b0",
+      "C": "Yes, if the vector lies in the second quadrant",
+      "D": "Yes, if the vector is a unit vector"
+    },
+    "optionsList": [
+      "No, a rectangular component can never exceed the magnitude of the vector",
+      "Yes, if the angle is greater than 45\u00b0",
+      "Yes, if the vector lies in the second quadrant",
+      "Yes, if the vector is a unit vector"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor rectangular components: $A = \\sqrt{A_x^2 + A_y^2}$. Since $A_x^2, A_y^2 \\ge 0$, it is strictly guaranteed that $|A_x| \\le A$ and $|A_y| \\le A$.\n\n2. GIVEN:\nRectangular components $A_x = A\\cos\\theta, A_y = A\\sin\\theta$.\n\n3. FORMULA / PRINCIPLE:\n$|A_x| = A|\\cos\\theta| \\le A$ because $|\\cos\\theta| \\le 1$\n\n4. STEP-BY-STEP SOLUTION:\n1. The components along perpendicular axes are $A_x = A\\cos\\theta$ and $A_y = A\\sin\\theta$.\n2. The cosine and sine functions have a maximum absolute value of 1.\n3. Therefore, $|A_x| = A|\\cos\\theta| \\le A(1) = A$, and $|A_y| = A|\\sin\\theta| \\le A(1) = A$.\n4. A component equals the vector magnitude only when the vector lies entirely along that axis (e.g. $\\theta = 0^\\circ$).\n5. It can never exceed the vector's magnitude.\n\n5. FINAL ANSWER:\nOption A: No, a rectangular component can never exceed the magnitude of the vector\n\n6. QUICK TIP:\nNon-rectangular oblique components CAN exceed the magnitude of a vector, but rectangular components NEVER can!",
+    "solutionStructured": {
+      "concept": "For rectangular components: $A = \\sqrt{A_x^2 + A_y^2}$. Since $A_x^2, A_y^2 \\ge 0$, it is strictly guaranteed that $|A_x| \\le A$ and $|A_y| \\le A$.",
+      "given": "Rectangular components $A_x = A\\cos\\theta, A_y = A\\sin\\theta$.",
+      "formula": "$|A_x| = A|\\cos\\theta| \\le A$ because $|\\cos\\theta| \\le 1$",
+      "stepByStep": "1. The components along perpendicular axes are $A_x = A\\cos\\theta$ and $A_y = A\\sin\\theta$.\n2. The cosine and sine functions have a maximum absolute value of 1.\n3. Therefore, $|A_x| = A|\\cos\\theta| \\le A(1) = A$, and $|A_y| = A|\\sin\\theta| \\le A(1) = A$.\n4. A component equals the vector magnitude only when the vector lies entirely along that axis (e.g. $\\theta = 0^\\circ$).\n5. It can never exceed the vector's magnitude.",
+      "finalAnswer": "Option A: No, a rectangular component can never exceed the magnitude of the vector",
+      "whyOtherOptionsWrong": "Options B, C, and D are geometrically and trigonometrically false."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Resolution of vectors into components",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-094",
+    "questionNumber": 94,
+    "question": "A block of mass $m$ is placed on a frictionless incline of angle $\\theta$. What is the component of the gravitational force ($mg$) acting parallel to the inclined plane (pulling the block down)?",
+    "options": {
+      "A": "mg sin \u03b8",
+      "B": "mg cos \u03b8",
+      "C": "mg tan \u03b8",
+      "D": "mg"
+    },
+    "optionsList": [
+      "mg sin \u03b8",
+      "mg cos \u03b8",
+      "mg tan \u03b8",
+      "mg"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nWeight $mg$ acts vertically downward. The angle between the downward vertical and the normal to the incline is $\\theta$. Therefore, the normal component is $mg\\cos\\theta$ and the tangential downslope component is $mg\\sin\\theta$.\n\n2. GIVEN:\nIncline angle $\\theta$, gravitational force $\\vec{W} = mg$ vertically downward.\n\n3. FORMULA / PRINCIPLE:\n$W_{\\parallel} = mg\\sin\\theta$; $W_{\\perp} = mg\\cos\\theta$\n\n4. STEP-BY-STEP SOLUTION:\n1. Set up axes: axis 1 parallel to the incline, axis 2 perpendicular to the incline.\n2. The incline makes angle $\\theta$ with the horizontal.\n3. Geometry of right triangles shows that the angle between the downward vertical and the normal to the surface is equal to $\\theta$.\n4. Component along the normal (perpendicular to surface): $mg\\cos\\theta$.\n5. Component along the incline (parallel to surface): $mg\\sin\\theta$.\n6. This downslope component accelerates the block down the incline.\n\n5. FINAL ANSWER:\nOption A: mg sin \u03b8\n\n6. QUICK TIP:\nFoundational NEET Physics rule: Parallel to incline is ALWAYS $mg\\sin\\theta$; perpendicular to incline is ALWAYS $mg\\cos\\theta$!",
+    "solutionStructured": {
+      "concept": "Weight $mg$ acts vertically downward. The angle between the downward vertical and the normal to the incline is $\\theta$. Therefore, the normal component is $mg\\cos\\theta$ and the tangential downslope component is $mg\\sin\\theta$.",
+      "given": "Incline angle $\\theta$, gravitational force $\\vec{W} = mg$ vertically downward.",
+      "formula": "$W_{\\parallel} = mg\\sin\\theta$; $W_{\\perp} = mg\\cos\\theta$",
+      "stepByStep": "1. Set up axes: axis 1 parallel to the incline, axis 2 perpendicular to the incline.\n2. The incline makes angle $\\theta$ with the horizontal.\n3. Geometry of right triangles shows that the angle between the downward vertical and the normal to the surface is equal to $\\theta$.\n4. Component along the normal (perpendicular to surface): $mg\\cos\\theta$.\n5. Component along the incline (parallel to surface): $mg\\sin\\theta$.\n6. This downslope component accelerates the block down the incline.",
+      "finalAnswer": "Option A: mg sin \u03b8",
+      "whyOtherOptionsWrong": "mg cos \u03b8 is perpendicular to the incline (balanced by normal reaction N)."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Resolution of vectors into components",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-095",
+    "questionNumber": 95,
+    "question": "A lawn mower is pulled by a handle with a force $F$ at an angle $\\theta$ to the horizontal. Why is pulling a lawn mower easier than pushing it with the same force $F$ at the same angle?",
+    "options": {
+      "A": "Pulling provides an upward vertical component (F sin \u03b8) that reduces normal reaction and friction",
+      "B": "Pulling increases the horizontal forward force",
+      "C": "Pushing reduces the gravitational force",
+      "D": "Pulling eliminates friction entirely"
+    },
+    "optionsList": [
+      "Pulling provides an upward vertical component (F sin \u03b8) that reduces normal reaction and friction",
+      "Pulling increases the horizontal forward force",
+      "Pushing reduces the gravitational force",
+      "Pulling eliminates friction entirely"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nWhen pulling, the vertical component $F\\sin\\theta$ acts upward, reducing the normal force to $N = mg - F\\sin\\theta$. When pushing, $F\\sin\\theta$ acts downward, increasing the normal force to $N = mg + F\\sin\\theta$. Since kinetic friction $f = \\mu N$, friction is smaller when pulling.\n\n2. GIVEN:\nPulling vs pushing with force $F$ at angle $\\theta$ to horizontal.\n\n3. FORMULA / PRINCIPLE:\nPulling: $N = mg - F\\sin\\theta$; Pushing: $N = mg + F\\sin\\theta$\n\n4. STEP-BY-STEP SOLUTION:\n1. Resolve the applied force $F$ into horizontal ($F\\cos\\theta$) and vertical components.\n2. In pulling: the force is directed upward and forward, so vertical component $F\\sin\\theta$ points upward.\n   Vertical equilibrium: $N + F\\sin\\theta = mg \\implies N = mg - F\\sin\\theta$.\n3. In pushing: the force is directed downward and forward, so vertical component points downward.\n   Vertical equilibrium: $N = mg + F\\sin\\theta$.\n4. Frictional resistance is directly proportional to normal force: $f = \\mu N$.\n5. Since $N_{\\text{pull}} < N_{\\text{push}}$, friction is smaller during pulling, making pulling easier.\n\n5. FINAL ANSWER:\nOption A: Pulling provides an upward vertical component (F sin \u03b8) that reduces normal reaction and friction\n\n6. QUICK TIP:\nClassic NCERT conceptual question: 'It is easier to pull than to push' because pulling reduces normal reaction!",
+    "solutionStructured": {
+      "concept": "When pulling, the vertical component $F\\sin\\theta$ acts upward, reducing the normal force to $N = mg - F\\sin\\theta$. When pushing, $F\\sin\\theta$ acts downward, increasing the normal force to $N = mg + F\\sin\\theta$. Since kinetic friction $f = \\mu N$, friction is smaller when pulling.",
+      "given": "Pulling vs pushing with force $F$ at angle $\\theta$ to horizontal.",
+      "formula": "Pulling: $N = mg - F\\sin\\theta$; Pushing: $N = mg + F\\sin\\theta$",
+      "stepByStep": "1. Resolve the applied force $F$ into horizontal ($F\\cos\\theta$) and vertical components.\n2. In pulling: the force is directed upward and forward, so vertical component $F\\sin\\theta$ points upward.\n   Vertical equilibrium: $N + F\\sin\\theta = mg \\implies N = mg - F\\sin\\theta$.\n3. In pushing: the force is directed downward and forward, so vertical component points downward.\n   Vertical equilibrium: $N = mg + F\\sin\\theta$.\n4. Frictional resistance is directly proportional to normal force: $f = \\mu N$.\n5. Since $N_{\\text{pull}} < N_{\\text{push}}$, friction is smaller during pulling, making pulling easier.",
+      "finalAnswer": "Option A: Pulling provides an upward vertical component (F sin \u03b8) that reduces normal reaction and friction",
+      "whyOtherOptionsWrong": "Option B is wrong because the horizontal force $F\\cos\\theta$ is identical in both cases."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Resolution of vectors into components",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-096",
+    "questionNumber": 96,
+    "question": "A vector $\\vec{A}$ of magnitude 10 is resolved into two non-perpendicular components $\\vec{A}_1$ and $\\vec{A}_2$ making angles of 30\u00b0 and 45\u00b0 with $\\vec{A}$ on opposite sides. What is the magnitude of $\\vec{A}_1$?",
+    "options": {
+      "A": "10 sin(45\u00b0) / sin(75\u00b0)",
+      "B": "10 sin(30\u00b0) / sin(75\u00b0)",
+      "C": "10 cos(30\u00b0)",
+      "D": "10 / sin(75\u00b0)"
+    },
+    "optionsList": [
+      "10 sin(45\u00b0) / sin(75\u00b0)",
+      "10 sin(30\u00b0) / sin(75\u00b0)",
+      "10 cos(30\u00b0)",
+      "10 / sin(75\u00b0)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nWhen resolving a vector $\\vec{A}$ into two oblique components making angles $\\alpha$ and $\\beta$ on opposite sides, apply the sine rule on the vector triangle: $\\frac{A_1}{\\sin\\beta} = \\frac{A_2}{\\sin\\alpha} = \\frac{A}{\\sin(\\alpha + \\beta)}$.\n\n2. GIVEN:\n$A = 10$, $\\alpha = 30^\\circ$ (angle of $A_1$), $\\beta = 45^\\circ$ (angle of $A_2$).\n\n3. FORMULA / PRINCIPLE:\n$A_1 = \\frac{A\\sin\\beta}{\\sin(\\alpha + \\beta)}$; $A_2 = \\frac{A\\sin\\alpha}{\\sin(\\alpha + \\beta)}$\n\n4. STEP-BY-STEP SOLUTION:\n1. Draw the vector triangle: $\\vec{A}_1 + \\vec{A}_2 = \\vec{A}$.\n2. In this triangle, the angle opposite to $\\vec{A}_1$ is $\\beta = 45^\\circ$.\n3. The angle opposite to $\\vec{A}_2$ is $\\alpha = 30^\\circ$.\n4. The angle opposite to the resultant $\\vec{A}$ is $180^\\circ - (\\alpha + \\beta) = 180^\\circ - 75^\\circ$.\n5. By the Law of Sines:\n   $\\frac{A_1}{\\sin\\beta} = \\frac{A}{\\sin(180^\\circ - (\\alpha + \\beta))} = \\frac{A}{\\sin(\\alpha + \\beta)}$.\n6. Substituting $\\beta = 45^\\circ$ and $\\alpha + \\beta = 75^\\circ$:\n   $A_1 = \\frac{A \\sin 45^\\circ}{\\sin 75^\\circ} = \\frac{10 \\sin 45^\\circ}{\\sin 75^\\circ}$.\n\n5. FINAL ANSWER:\nOption A: 10 sin(45\u00b0) / sin(75\u00b0)\n\n6. QUICK TIP:\nOblique components rule: $A_1$ takes the sine of the OTHER angle $\\beta$ in the numerator!",
+    "solutionStructured": {
+      "concept": "When resolving a vector $\\vec{A}$ into two oblique components making angles $\\alpha$ and $\\beta$ on opposite sides, apply the sine rule on the vector triangle: $\\frac{A_1}{\\sin\\beta} = \\frac{A_2}{\\sin\\alpha} = \\frac{A}{\\sin(\\alpha + \\beta)}$.",
+      "given": "$A = 10$, $\\alpha = 30^\\circ$ (angle of $A_1$), $\\beta = 45^\\circ$ (angle of $A_2$).",
+      "formula": "$A_1 = \\frac{A\\sin\\beta}{\\sin(\\alpha + \\beta)}$; $A_2 = \\frac{A\\sin\\alpha}{\\sin(\\alpha + \\beta)}$",
+      "stepByStep": "1. Draw the vector triangle: $\\vec{A}_1 + \\vec{A}_2 = \\vec{A}$.\n2. In this triangle, the angle opposite to $\\vec{A}_1$ is $\\beta = 45^\\circ$.\n3. The angle opposite to $\\vec{A}_2$ is $\\alpha = 30^\\circ$.\n4. The angle opposite to the resultant $\\vec{A}$ is $180^\\circ - (\\alpha + \\beta) = 180^\\circ - 75^\\circ$.\n5. By the Law of Sines:\n   $\\frac{A_1}{\\sin\\beta} = \\frac{A}{\\sin(180^\\circ - (\\alpha + \\beta))} = \\frac{A}{\\sin(\\alpha + \\beta)}$.\n6. Substituting $\\beta = 45^\\circ$ and $\\alpha + \\beta = 75^\\circ$:\n   $A_1 = \\frac{A \\sin 45^\\circ}{\\sin 75^\\circ} = \\frac{10 \\sin 45^\\circ}{\\sin 75^\\circ}$.",
+      "finalAnswer": "Option A: 10 sin(45\u00b0) / sin(75\u00b0)",
+      "whyOtherOptionsWrong": "Option B uses $\\sin 30^\\circ$, which gives the magnitude of $A_2$, not $A_1$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Resolution of vectors into components",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-097",
+    "questionNumber": 97,
+    "question": "A force of 20 N acts along the positive x-axis. What is its component along a line making an angle of 60\u00b0 with the x-axis?",
+    "options": {
+      "A": "10 N",
+      "B": "10\u221a3 N",
+      "C": "20 N",
+      "D": "5 N"
+    },
+    "optionsList": [
+      "10 N",
+      "10\u221a3 N",
+      "20 N",
+      "5 N"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe projection (component) of a vector $\\vec{F}$ along any direction making an angle $\\phi$ with it is simply $F\\cos\\phi$.\n\n2. GIVEN:\n$F = 20\\text{ N}$, angle with the target line $\\phi = 60^\\circ$.\n\n3. FORMULA / PRINCIPLE:\n$F_{\\text{line}} = F\\cos\\phi = 20\\cos 60^\\circ$\n\n4. STEP-BY-STEP SOLUTION:\n1. The projection of a vector $\\vec{F}$ on a line is the length of its orthogonal shadow on that line.\n2. This is given by the scalar dot product with the unit vector along the line: $\\vec{F} \\cdot \\hat{u} = F \\cos\\phi$.\n3. Here $F = 20\\text{ N}$ and $\\phi = 60^\\circ$.\n4. $F_{\\text{line}} = 20 \\times \\cos 60^\\circ = 20 \\times \\frac{1}{2} = 10\\text{ N}$.\n\n5. FINAL ANSWER:\nOption A: 10 N\n\n6. QUICK TIP:\nThe component of ANY vector along a line inclined at angle $\\theta$ to it is always $F\\cos\\theta$.",
+    "solutionStructured": {
+      "concept": "The projection (component) of a vector $\\vec{F}$ along any direction making an angle $\\phi$ with it is simply $F\\cos\\phi$.",
+      "given": "$F = 20\\text{ N}$, angle with the target line $\\phi = 60^\\circ$.",
+      "formula": "$F_{\\text{line}} = F\\cos\\phi = 20\\cos 60^\\circ$",
+      "stepByStep": "1. The projection of a vector $\\vec{F}$ on a line is the length of its orthogonal shadow on that line.\n2. This is given by the scalar dot product with the unit vector along the line: $\\vec{F} \\cdot \\hat{u} = F \\cos\\phi$.\n3. Here $F = 20\\text{ N}$ and $\\phi = 60^\\circ$.\n4. $F_{\\text{line}} = 20 \\times \\cos 60^\\circ = 20 \\times \\frac{1}{2} = 10\\text{ N}$.",
+      "finalAnswer": "Option A: 10 N",
+      "whyOtherOptionsWrong": "10\u221a3 N is $20\\sin 60^\\circ$, which is perpendicular to the specified line."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Resolution of vectors into components",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-098",
+    "questionNumber": 98,
+    "question": "A vector $\\vec{A}$ lies in the xy-plane and makes an angle of 30\u00b0 with the x-axis. Its x-component is $5\\sqrt{3}$. If the vector is resolved into two non-perpendicular components along axes at 0\u00b0 and 60\u00b0 to the x-axis, what are these components?",
+    "options": {
+      "A": "5\u221a3 / 3 and 10 / \u221a3",
+      "B": "5 and 5",
+      "C": "5\u221a3 and 5",
+      "D": "10 and 5"
+    },
+    "optionsList": [
+      "5\u221a3 / 3 and 10 / \u221a3",
+      "5 and 5",
+      "5\u221a3 and 5",
+      "10 and 5"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFirst find magnitude $A$ from $A_x = A\\cos 30^\\circ \\implies A = 10$. Then resolve $\\vec{A}$ along directions $\\alpha = 30^\\circ$ (axis 1 at $0^\\circ$) and $\\beta = 30^\\circ$ (axis 2 at $60^\\circ$).\n\n2. GIVEN:\n$A_x = 5\\sqrt{3}$ at $30^\\circ$ to x-axis. Target axes at $0^\\circ$ and $60^\\circ$.\n\n3. FORMULA / PRINCIPLE:\nSine rule for oblique resolution: $A_1 = \\frac{A\\sin 30^\\circ}{\\sin 60^\\circ} = \\frac{10(1/2)}{\\sqrt{3}/2} = \\frac{10}{\\sqrt{3}}$\n\n4. STEP-BY-STEP SOLUTION:\n1. Find magnitude of $\\vec{A}$:\n   $A\\cos 30^\\circ = 5\\sqrt{3} \\implies A \\left(\\frac{\\sqrt{3}}{2}\\right) = 5\\sqrt{3} \\implies A = 10$.\n2. The vector $\\vec{A}$ makes $30^\\circ$ with axis 1 (at $0^\\circ$) and $60^\\circ - 30^\\circ = 30^\\circ$ with axis 2 (at $60^\\circ$).\n3. So $\\alpha = 30^\\circ$ and $\\beta = 30^\\circ$, and total angle between axes is $\\alpha + \\beta = 60^\\circ$.\n4. By symmetry, the components along both axes are equal:\n   $A_1 = A_2 = \\frac{A\\sin 30^\\circ}{\\sin 60^\\circ} = \\frac{10(1/2)}{\\sqrt{3}/2} = \\frac{10}{\\sqrt{3}} = \\frac{10\\sqrt{3}}{3}$.\n5. Both components equal $10/\\sqrt{3}$.\n\n5. FINAL ANSWER:\nOption A: 5\u221a3 / 3 and 10 / \u221a3\n\n6. QUICK TIP:\nWhen the vector exactly bisects the angle between the two axes, the two oblique components must be equal!",
+    "solutionStructured": {
+      "concept": "First find magnitude $A$ from $A_x = A\\cos 30^\\circ \\implies A = 10$. Then resolve $\\vec{A}$ along directions $\\alpha = 30^\\circ$ (axis 1 at $0^\\circ$) and $\\beta = 30^\\circ$ (axis 2 at $60^\\circ$).",
+      "given": "$A_x = 5\\sqrt{3}$ at $30^\\circ$ to x-axis. Target axes at $0^\\circ$ and $60^\\circ$.",
+      "formula": "Sine rule for oblique resolution: $A_1 = \\frac{A\\sin 30^\\circ}{\\sin 60^\\circ} = \\frac{10(1/2)}{\\sqrt{3}/2} = \\frac{10}{\\sqrt{3}}$",
+      "stepByStep": "1. Find magnitude of $\\vec{A}$:\n   $A\\cos 30^\\circ = 5\\sqrt{3} \\implies A \\left(\\frac{\\sqrt{3}}{2}\\right) = 5\\sqrt{3} \\implies A = 10$.\n2. The vector $\\vec{A}$ makes $30^\\circ$ with axis 1 (at $0^\\circ$) and $60^\\circ - 30^\\circ = 30^\\circ$ with axis 2 (at $60^\\circ$).\n3. So $\\alpha = 30^\\circ$ and $\\beta = 30^\\circ$, and total angle between axes is $\\alpha + \\beta = 60^\\circ$.\n4. By symmetry, the components along both axes are equal:\n   $A_1 = A_2 = \\frac{A\\sin 30^\\circ}{\\sin 60^\\circ} = \\frac{10(1/2)}{\\sqrt{3}/2} = \\frac{10}{\\sqrt{3}} = \\frac{10\\sqrt{3}}{3}$.\n5. Both components equal $10/\\sqrt{3}$.",
+      "finalAnswer": "Option A: 5\u221a3 / 3 and 10 / \u221a3",
+      "whyOtherOptionsWrong": "Option C gives the rectangular components along perpendicular axes ($0^\\circ$ and $90^\\circ$)."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Resolution of vectors into components",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-099",
+    "questionNumber": 99,
+    "question": "A force of 60 N is resolved into two components such that one component is 30 N and is perpendicular to the original 60 N force. What is the magnitude of the other component?",
+    "options": {
+      "A": "30\u221a5 N",
+      "B": "30\u221a3 N",
+      "C": "30 N",
+      "D": "90 N"
+    },
+    "optionsList": [
+      "30\u221a5 N",
+      "30\u221a3 N",
+      "30 N",
+      "90 N"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIf $\\vec{F} = \\vec{F}_1 + \\vec{F}_2$, where $\\vec{F}_1 \\perp \\vec{F}$, then $\\vec{F}$ and $\\vec{F}_1$ are perpendicular legs of a right triangle whose hypotenuse is $\\vec{F}_2$: $F_2 = \\sqrt{F^2 + F_1^2}$.\n\n2. GIVEN:\nOriginal force $F = 60\\text{ N}$, component $F_1 = 30\\text{ N}$ with $\\vec{F}_1 \\perp \\vec{F}$.\n\n3. FORMULA / PRINCIPLE:\n$\\vec{F}_2 = \\vec{F} - \\vec{F}_1 \\implies F_2 = \\sqrt{F^2 + F_1^2}$ since $\\vec{F} \\perp \\vec{F}_1$\n\n4. STEP-BY-STEP SOLUTION:\n1. By definition of vector components: $\\vec{F} = \\vec{F}_1 + \\vec{F}_2$.\n2. Rearrange for the second component: $\\vec{F}_2 = \\vec{F} - \\vec{F}_1$.\n3. We are given that $\\vec{F}_1$ is perpendicular to $\\vec{F}$, meaning $\\vec{F} \\cdot \\vec{F}_1 = 0$.\n4. The magnitude of $\\vec{F}_2$ is:\n   $F_2 = |\\vec{F} - \\vec{F}_1| = \\sqrt{F^2 + F_1^2 - 2\\vec{F}\\cdot\\vec{F}_1} = \\sqrt{F^2 + F_1^2}$.\n5. Substitute $F = 60\\text{ N}$ and $F_1 = 30\\text{ N}$:\n   $F_2 = \\sqrt{60^2 + 30^2} = \\sqrt{3600 + 900} = \\sqrt{4500} = \\sqrt{900 \\times 5} = 30\\sqrt{5}\\text{ N}$.\n6. Thus, $F_2 = 30\\sqrt{5}\\text{ N} \\approx 67.08\\text{ N}$.\n\n5. FINAL ANSWER:\nOption A: 30\u221a5 N\n\n6. QUICK TIP:\nCareful! A component CAN be larger than the original vector if the components are not mutually perpendicular!",
+    "solutionStructured": {
+      "concept": "If $\\vec{F} = \\vec{F}_1 + \\vec{F}_2$, where $\\vec{F}_1 \\perp \\vec{F}$, then $\\vec{F}$ and $\\vec{F}_1$ are perpendicular legs of a right triangle whose hypotenuse is $\\vec{F}_2$: $F_2 = \\sqrt{F^2 + F_1^2}$.",
+      "given": "Original force $F = 60\\text{ N}$, component $F_1 = 30\\text{ N}$ with $\\vec{F}_1 \\perp \\vec{F}$.",
+      "formula": "$\\vec{F}_2 = \\vec{F} - \\vec{F}_1 \\implies F_2 = \\sqrt{F^2 + F_1^2}$ since $\\vec{F} \\perp \\vec{F}_1$",
+      "stepByStep": "1. By definition of vector components: $\\vec{F} = \\vec{F}_1 + \\vec{F}_2$.\n2. Rearrange for the second component: $\\vec{F}_2 = \\vec{F} - \\vec{F}_1$.\n3. We are given that $\\vec{F}_1$ is perpendicular to $\\vec{F}$, meaning $\\vec{F} \\cdot \\vec{F}_1 = 0$.\n4. The magnitude of $\\vec{F}_2$ is:\n   $F_2 = |\\vec{F} - \\vec{F}_1| = \\sqrt{F^2 + F_1^2 - 2\\vec{F}\\cdot\\vec{F}_1} = \\sqrt{F^2 + F_1^2}$.\n5. Substitute $F = 60\\text{ N}$ and $F_1 = 30\\text{ N}$:\n   $F_2 = \\sqrt{60^2 + 30^2} = \\sqrt{3600 + 900} = \\sqrt{4500} = \\sqrt{900 \\times 5} = 30\\sqrt{5}\\text{ N}$.\n6. Thus, $F_2 = 30\\sqrt{5}\\text{ N} \\approx 67.08\\text{ N}$.",
+      "finalAnswer": "Option A: 30\u221a5 N",
+      "whyOtherOptionsWrong": "30\u221a3 N assumes $F_2^2 = 60^2 - 30^2$, which would make $F$ the hypotenuse instead of $F_2$."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Resolution of vectors into components",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-100",
+    "questionNumber": 100,
+    "question": "A vector $\\vec{A}$ has components $A_x = 2$, $A_y = 3$, $A_z = 6$. What is the component of $\\vec{A}$ along the direction of the vector $\\vec{B} = \\hat{i} + 2\\hat{j} + 2\\hat{k}$?",
+    "options": {
+      "A": "20 / 3",
+      "B": "20 / 7",
+      "C": "7",
+      "D": "3"
+    },
+    "optionsList": [
+      "20 / 3",
+      "20 / 7",
+      "7",
+      "3"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe scalar component (projection) of vector $\\vec{A}$ along vector $\\vec{B}$ is given by $A_B = \\frac{\\vec{A} \\cdot \\vec{B}}{|\\vec{B}|}$.\n\n2. GIVEN:\n$\\vec{A} = 2\\hat{i} + 3\\hat{j} + 6\\hat{k}$, $\\vec{B} = 1\\hat{i} + 2\\hat{j} + 2\\hat{k}$.\n\n3. FORMULA / PRINCIPLE:\n$A_B = \\frac{\\vec{A}\\cdot\\vec{B}}{|\\vec{B}|} = \\frac{A_x B_x + A_y B_y + A_z B_z}{\\sqrt{B_x^2 + B_y^2 + B_z^2}}$\n\n4. STEP-BY-STEP SOLUTION:\n1. Calculate the dot product $\\vec{A} \\cdot \\vec{B}$:\n   $\\vec{A} \\cdot \\vec{B} = (2)(1) + (3)(2) + (6)(2) = 2 + 6 + 12 = 20$.\n2. Calculate the magnitude of $\\vec{B}$:\n   $|\\vec{B}| = \\sqrt{1^2 + 2^2 + 2^2} = \\sqrt{1 + 4 + 4} = \\sqrt{9} = 3$.\n3. Compute the projection:\n   $A_B = \\frac{\\vec{A} \\cdot \\vec{B}}{|\\vec{B}|} = \\frac{20}{3}$.\n4. Therefore, the component of $\\vec{A}$ along $\\vec{B}$ is $20/3$.\n\n5. FINAL ANSWER:\nOption A: 20 / 3\n\n6. QUICK TIP:\nComponent of $\\vec{A}$ along $\\vec{B}$ is $\\frac{\\vec{A}\\cdot\\vec{B}}{|\\vec{B}|}$ (divide by the vector you are projecting ONTO)!",
+    "solutionStructured": {
+      "concept": "The scalar component (projection) of vector $\\vec{A}$ along vector $\\vec{B}$ is given by $A_B = \\frac{\\vec{A} \\cdot \\vec{B}}{|\\vec{B}|}$.",
+      "given": "$\\vec{A} = 2\\hat{i} + 3\\hat{j} + 6\\hat{k}$, $\\vec{B} = 1\\hat{i} + 2\\hat{j} + 2\\hat{k}$.",
+      "formula": "$A_B = \\frac{\\vec{A}\\cdot\\vec{B}}{|\\vec{B}|} = \\frac{A_x B_x + A_y B_y + A_z B_z}{\\sqrt{B_x^2 + B_y^2 + B_z^2}}$",
+      "stepByStep": "1. Calculate the dot product $\\vec{A} \\cdot \\vec{B}$:\n   $\\vec{A} \\cdot \\vec{B} = (2)(1) + (3)(2) + (6)(2) = 2 + 6 + 12 = 20$.\n2. Calculate the magnitude of $\\vec{B}$:\n   $|\\vec{B}| = \\sqrt{1^2 + 2^2 + 2^2} = \\sqrt{1 + 4 + 4} = \\sqrt{9} = 3$.\n3. Compute the projection:\n   $A_B = \\frac{\\vec{A} \\cdot \\vec{B}}{|\\vec{B}|} = \\frac{20}{3}$.\n4. Therefore, the component of $\\vec{A}$ along $\\vec{B}$ is $20/3$.",
+      "finalAnswer": "Option A: 20 / 3",
+      "whyOtherOptionsWrong": "Option B divides by $|\\vec{A}| = 7$, which is the component of $\\vec{B}$ along $\\vec{A}$."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Resolution of vectors into components",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-101",
+    "questionNumber": 101,
+    "question": "In the previous question, what is the vector component of $\\vec{A}$ perpendicular to $\\vec{B}$?",
+    "options": {
+      "A": "A\u20d7 - (20/9) B\u20d7",
+      "B": "(20/3) B\u0302",
+      "C": "A\u20d7 + (20/9) B\u20d7",
+      "D": "0"
+    },
+    "optionsList": [
+      "A\u20d7 - (20/9) B\u20d7",
+      "(20/3) B\u0302",
+      "A\u20d7 + (20/9) B\u20d7",
+      "0"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nAny vector can be resolved into parallel and perpendicular parts relative to $\\vec{B}$: $\\vec{A} = \\vec{A}_{\\parallel} + \\vec{A}_{\\perp}$. Therefore, $\\vec{A}_{\\perp} = \\vec{A} - \\vec{A}_{\\parallel} = \\vec{A} - \\left(\\frac{\\vec{A}\\cdot\\vec{B}}{|\\vec{B}|^2}\\right)\\vec{B}$.\n\n2. GIVEN:\n$\\vec{A}$, $\\vec{B}$, $\\vec{A} \\cdot \\vec{B} = 20$, $|\\vec{B}|^2 = 9$.\n\n3. FORMULA / PRINCIPLE:\n$\\vec{A}_{\\perp} = \\vec{A} - \\frac{\\vec{A}\\cdot\\vec{B}}{|\\vec{B}|^2}\\vec{B}$\n\n4. STEP-BY-STEP SOLUTION:\n1. The vector component of $\\vec{A}$ parallel to $\\vec{B}$ is:\n   $\\vec{A}_{\\parallel} = A_B \\hat{B} = \\left(\\frac{\\vec{A}\\cdot\\vec{B}}{|\\vec{B}|}\\right) \\frac{\\vec{B}}{|\\vec{B}|} = \\frac{\\vec{A}\\cdot\\vec{B}}{|\\vec{B}|^2}\\vec{B}$.\n2. With $\\vec{A}\\cdot\\vec{B} = 20$ and $|\\vec{B}|^2 = 3^2 = 9$:\n   $\\vec{A}_{\\parallel} = \\frac{20}{9}\\vec{B}$.\n3. The perpendicular component is the remainder:\n   $\\vec{A}_{\\perp} = \\vec{A} - \\vec{A}_{\\parallel} = \\vec{A} - \\frac{20}{9}\\vec{B}$.\n4. This satisfies $\\vec{A}_{\\perp} \\cdot \\vec{B} = \\vec{A}\\cdot\\vec{B} - \\frac{20}{9}(\\vec{B}\\cdot\\vec{B}) = 20 - \\frac{20}{9}(9) = 0$.\n\n5. FINAL ANSWER:\nOption A: A\u20d7 - (20/9) B\u20d7\n\n6. QUICK TIP:\nGram-Schmidt orthogonalization: $\\vec{A}_{\\perp} = \\vec{A} - \\frac{\\vec{A}\\cdot\\vec{B}}{|\\vec{B}|^2}\\vec{B}$ is guaranteed to be perpendicular to $\\vec{B}$!",
+    "solutionStructured": {
+      "concept": "Any vector can be resolved into parallel and perpendicular parts relative to $\\vec{B}$: $\\vec{A} = \\vec{A}_{\\parallel} + \\vec{A}_{\\perp}$. Therefore, $\\vec{A}_{\\perp} = \\vec{A} - \\vec{A}_{\\parallel} = \\vec{A} - \\left(\\frac{\\vec{A}\\cdot\\vec{B}}{|\\vec{B}|^2}\\right)\\vec{B}$.",
+      "given": "$\\vec{A}$, $\\vec{B}$, $\\vec{A} \\cdot \\vec{B} = 20$, $|\\vec{B}|^2 = 9$.",
+      "formula": "$\\vec{A}_{\\perp} = \\vec{A} - \\frac{\\vec{A}\\cdot\\vec{B}}{|\\vec{B}|^2}\\vec{B}$",
+      "stepByStep": "1. The vector component of $\\vec{A}$ parallel to $\\vec{B}$ is:\n   $\\vec{A}_{\\parallel} = A_B \\hat{B} = \\left(\\frac{\\vec{A}\\cdot\\vec{B}}{|\\vec{B}|}\\right) \\frac{\\vec{B}}{|\\vec{B}|} = \\frac{\\vec{A}\\cdot\\vec{B}}{|\\vec{B}|^2}\\vec{B}$.\n2. With $\\vec{A}\\cdot\\vec{B} = 20$ and $|\\vec{B}|^2 = 3^2 = 9$:\n   $\\vec{A}_{\\parallel} = \\frac{20}{9}\\vec{B}$.\n3. The perpendicular component is the remainder:\n   $\\vec{A}_{\\perp} = \\vec{A} - \\vec{A}_{\\parallel} = \\vec{A} - \\frac{20}{9}\\vec{B}$.\n4. This satisfies $\\vec{A}_{\\perp} \\cdot \\vec{B} = \\vec{A}\\cdot\\vec{B} - \\frac{20}{9}(\\vec{B}\\cdot\\vec{B}) = 20 - \\frac{20}{9}(9) = 0$.",
+      "finalAnswer": "Option A: A\u20d7 - (20/9) B\u20d7",
+      "whyOtherOptionsWrong": "Option B is the parallel component $\\vec{A}_{\\parallel}$."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Resolution of vectors into components",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-102",
+    "questionNumber": 102,
+    "question": "A force $\\vec{F} = (4\\hat{i} + 3\\hat{j})\\text{ N}$ acts on a particle. What is the component of this force along the line $y = x$?",
+    "options": {
+      "A": "7 / \u221a2 N",
+      "B": "1 / \u221a2 N",
+      "C": "5 N",
+      "D": "7 N"
+    },
+    "optionsList": [
+      "7 / \u221a2 N",
+      "1 / \u221a2 N",
+      "5 N",
+      "7 N"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe line $y = x$ makes an angle of $45^\\circ$ with the x-axis. Its unit vector is $\\hat{u} = \\frac{\\hat{i} + \\hat{j}}{\\sqrt{2}}$. The component is $\\vec{F} \\cdot \\hat{u}$.\n\n2. GIVEN:\n$\\vec{F} = 4\\hat{i} + 3\\hat{j}$, target line $y = x$.\n\n3. FORMULA / PRINCIPLE:\n$F_{\\text{line}} = \\vec{F} \\cdot \\hat{u} = (4\\hat{i} + 3\\hat{j}) \\cdot \\frac{\\hat{i} + \\hat{j}}{\\sqrt{2}}$\n\n4. STEP-BY-STEP SOLUTION:\n1. The unit vector along the line $y = x$ is $\\hat{u} = \\frac{\\hat{i} + \\hat{j}}{\\sqrt{1^2 + 1^2}} = \\frac{\\hat{i} + \\hat{j}}{\\sqrt{2}}$.\n2. The component along the line is the dot product:\n   $F_{\\text{line}} = \\vec{F} \\cdot \\hat{u} = (4\\hat{i} + 3\\hat{j}) \\cdot \\left(\\frac{\\hat{i} + \\hat{j}}{\\sqrt{2}}\\right)$.\n3. $F_{\\text{line}} = \\frac{(4)(1) + (3)(1)}{\\sqrt{2}} = \\frac{4 + 3}{\\sqrt{2}} = \\frac{7}{\\sqrt{2}}\\text{ N}$.\n4. This can also be written as $3.5\\sqrt{2}\\text{ N} \\approx 4.95\\text{ N}$.\n\n5. FINAL ANSWER:\nOption A: 7 / \u221a2 N\n\n6. QUICK TIP:\nTo find component along any line $a x + b y = 0$, construct unit vector along the line and take dot product!",
+    "solutionStructured": {
+      "concept": "The line $y = x$ makes an angle of $45^\\circ$ with the x-axis. Its unit vector is $\\hat{u} = \\frac{\\hat{i} + \\hat{j}}{\\sqrt{2}}$. The component is $\\vec{F} \\cdot \\hat{u}$.",
+      "given": "$\\vec{F} = 4\\hat{i} + 3\\hat{j}$, target line $y = x$.",
+      "formula": "$F_{\\text{line}} = \\vec{F} \\cdot \\hat{u} = (4\\hat{i} + 3\\hat{j}) \\cdot \\frac{\\hat{i} + \\hat{j}}{\\sqrt{2}}$",
+      "stepByStep": "1. The unit vector along the line $y = x$ is $\\hat{u} = \\frac{\\hat{i} + \\hat{j}}{\\sqrt{1^2 + 1^2}} = \\frac{\\hat{i} + \\hat{j}}{\\sqrt{2}}$.\n2. The component along the line is the dot product:\n   $F_{\\text{line}} = \\vec{F} \\cdot \\hat{u} = (4\\hat{i} + 3\\hat{j}) \\cdot \\left(\\frac{\\hat{i} + \\hat{j}}{\\sqrt{2}}\\right)$.\n3. $F_{\\text{line}} = \\frac{(4)(1) + (3)(1)}{\\sqrt{2}} = \\frac{4 + 3}{\\sqrt{2}} = \\frac{7}{\\sqrt{2}}\\text{ N}$.\n4. This can also be written as $3.5\\sqrt{2}\\text{ N} \\approx 4.95\\text{ N}$.",
+      "finalAnswer": "Option A: 7 / \u221a2 N",
+      "whyOtherOptionsWrong": "5 N is the total magnitude of $\\vec{F}$, not its projection on $y = x$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Resolution of vectors into components",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-103",
+    "questionNumber": 103,
+    "question": "A heavy uniform sphere of mass $M$ rests between two smooth inclined planes making angles of 30\u00b0 and 60\u00b0 with the horizontal. What is the normal reaction exerted by the 30\u00b0 incline on the sphere?",
+    "options": {
+      "A": "Mg cos(30\u00b0) = Mg\u221a3 / 2",
+      "B": "Mg sin(30\u00b0) = Mg / 2",
+      "C": "Mg",
+      "D": "Mg / \u221a3"
+    },
+    "optionsList": [
+      "Mg cos(30\u00b0) = Mg\u221a3 / 2",
+      "Mg sin(30\u00b0) = Mg / 2",
+      "Mg",
+      "Mg / \u221a3"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe two inclines are mutually perpendicular ($30^\\circ + 60^\\circ = 90^\\circ$). In this rotated coordinate frame, the normal reactions $N_1$ and $N_2$ are perpendicular and balance the resolved components of weight $Mg$.\n\n2. GIVEN:\nIncline angles $\\theta_1 = 30^\\circ$, $\\theta_2 = 60^\\circ$, weight $W = Mg$.\n\n3. FORMULA / PRINCIPLE:\n$N_1 = Mg\\cos 30^\\circ = Mg\\frac{\\sqrt{3}}{2}$; $N_2 = Mg\\cos 60^\\circ = Mg\\frac{1}{2}$\n\n4. STEP-BY-STEP SOLUTION:\n1. The surfaces are inclined at $30^\\circ$ and $60^\\circ$, so the angle between the two surfaces is $180^\\circ - (30^\\circ + 60^\\circ) = 90^\\circ$.\n2. Their normal reactions $N_1$ and $N_2$ are therefore mutually perpendicular ($90^\\circ$).\n3. Resolving the vertical weight $Mg$ along the normal directions:\n   $N_1 = Mg\\cos 30^\\circ = Mg\\frac{\\sqrt{3}}{2}$.\n   $N_2 = Mg\\cos 60^\\circ = Mg\\frac{1}{2}$.\n4. Check equilibrium: $N_1^2 + N_2^2 = (Mg)^2 (3/4 + 1/4) = (Mg)^2$, exactly balancing weight!\n5. Reaction from the $30^\\circ$ incline is $Mg\\frac{\\sqrt{3}}{2}$.\n\n5. FINAL ANSWER:\nOption A: Mg cos(30\u00b0) = Mg\u221a3 / 2\n\n6. QUICK TIP:\nWhenever two supporting surfaces are perpendicular ($30^\\circ + 60^\\circ = 90^\\circ$), normal reactions are simply $Mg\\cos\\theta_1$ and $Mg\\cos\\theta_2$!",
+    "solutionStructured": {
+      "concept": "The two inclines are mutually perpendicular ($30^\\circ + 60^\\circ = 90^\\circ$). In this rotated coordinate frame, the normal reactions $N_1$ and $N_2$ are perpendicular and balance the resolved components of weight $Mg$.",
+      "given": "Incline angles $\\theta_1 = 30^\\circ$, $\\theta_2 = 60^\\circ$, weight $W = Mg$.",
+      "formula": "$N_1 = Mg\\cos 30^\\circ = Mg\\frac{\\sqrt{3}}{2}$; $N_2 = Mg\\cos 60^\\circ = Mg\\frac{1}{2}$",
+      "stepByStep": "1. The surfaces are inclined at $30^\\circ$ and $60^\\circ$, so the angle between the two surfaces is $180^\\circ - (30^\\circ + 60^\\circ) = 90^\\circ$.\n2. Their normal reactions $N_1$ and $N_2$ are therefore mutually perpendicular ($90^\\circ$).\n3. Resolving the vertical weight $Mg$ along the normal directions:\n   $N_1 = Mg\\cos 30^\\circ = Mg\\frac{\\sqrt{3}}{2}$.\n   $N_2 = Mg\\cos 60^\\circ = Mg\\frac{1}{2}$.\n4. Check equilibrium: $N_1^2 + N_2^2 = (Mg)^2 (3/4 + 1/4) = (Mg)^2$, exactly balancing weight!\n5. Reaction from the $30^\\circ$ incline is $Mg\\frac{\\sqrt{3}}{2}$.",
+      "finalAnswer": "Option A: Mg cos(30\u00b0) = Mg\u221a3 / 2",
+      "whyOtherOptionsWrong": "Mg / 2 is the normal reaction from the 60\u00b0 incline."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Resolution of vectors into components",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-104",
+    "questionNumber": 104,
+    "question": "A vector $\\vec{A}$ has magnitude 10 and is inclined at 45\u00b0 to the x-axis in the first quadrant. If its x-axis is tilted upwards by 15\u00b0 (new x'-axis at 15\u00b0 to original x-axis), what are the components of $\\vec{A}$ in the new coordinate system?",
+    "options": {
+      "A": "5\u221a3 along x' and 5 along y'",
+      "B": "5 along x' and 5\u221a3 along y'",
+      "C": "5\u221a2 along x' and 5\u221a2 along y'",
+      "D": "10 along x' and 0 along y'"
+    },
+    "optionsList": [
+      "5\u221a3 along x' and 5 along y'",
+      "5 along x' and 5\u221a3 along y'",
+      "5\u221a2 along x' and 5\u221a2 along y'",
+      "10 along x' and 0 along y'"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn the new coordinate frame, the angle between vector $\\vec{A}$ and the new x'-axis is $\\theta' = 45^\\circ - 15^\\circ = 30^\\circ$. New components are $A_{x'} = A\\cos 30^\\circ$ and $A_{y'} = A\\sin 30^\\circ$.\n\n2. GIVEN:\n$A = 10$, original angle $= 45^\\circ$, axis rotated by $+15^\\circ$.\n\n3. FORMULA / PRINCIPLE:\n$A_{x'} = 10\\cos(30^\\circ) = 5\\sqrt{3}$; $A_{y'} = 10\\sin(30^\\circ) = 5$\n\n4. STEP-BY-STEP SOLUTION:\n1. The original vector makes $45^\\circ$ with the horizontal.\n2. The new x'-axis makes $15^\\circ$ with the horizontal.\n3. Therefore, the angle between the vector and the new x'-axis is:\n   $\\theta' = 45^\\circ - 15^\\circ = 30^\\circ$.\n4. Component along new x'-axis:\n   $A_{x'} = 10\\cos 30^\\circ = 10 \\times \\frac{\\sqrt{3}}{2} = 5\\sqrt{3}$.\n5. Component along new y'-axis:\n   $A_{y'} = 10\\sin 30^\\circ = 10 \\times \\frac{1}{2} = 5$.\n\n5. FINAL ANSWER:\nOption A: 5\u221a3 along x' and 5 along y'\n\n6. QUICK TIP:\nRelative angle rule: Angle with new axis = Original angle - Axis rotation angle!",
+    "solutionStructured": {
+      "concept": "In the new coordinate frame, the angle between vector $\\vec{A}$ and the new x'-axis is $\\theta' = 45^\\circ - 15^\\circ = 30^\\circ$. New components are $A_{x'} = A\\cos 30^\\circ$ and $A_{y'} = A\\sin 30^\\circ$.",
+      "given": "$A = 10$, original angle $= 45^\\circ$, axis rotated by $+15^\\circ$.",
+      "formula": "$A_{x'} = 10\\cos(30^\\circ) = 5\\sqrt{3}$; $A_{y'} = 10\\sin(30^\\circ) = 5$",
+      "stepByStep": "1. The original vector makes $45^\\circ$ with the horizontal.\n2. The new x'-axis makes $15^\\circ$ with the horizontal.\n3. Therefore, the angle between the vector and the new x'-axis is:\n   $\\theta' = 45^\\circ - 15^\\circ = 30^\\circ$.\n4. Component along new x'-axis:\n   $A_{x'} = 10\\cos 30^\\circ = 10 \\times \\frac{\\sqrt{3}}{2} = 5\\sqrt{3}$.\n5. Component along new y'-axis:\n   $A_{y'} = 10\\sin 30^\\circ = 10 \\times \\frac{1}{2} = 5$.",
+      "finalAnswer": "Option A: 5\u221a3 along x' and 5 along y'",
+      "whyOtherOptionsWrong": "Option C gives the components in the original untilted coordinate frame ($10/\\sqrt{2} = 5\\sqrt{2}$)."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Resolution of vectors into components",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-105",
+    "questionNumber": 105,
+    "question": "What is the component of the velocity vector $\\vec{v} = (20\\hat{i} + 30\\hat{j})\\text{ m/s}$ in the direction of the vector $\\vec{u} = 4\\hat{i} + 3\\hat{j}$?",
+    "options": {
+      "A": "34 m/s",
+      "B": "170 m/s",
+      "C": "25 m/s",
+      "D": "17 m/s"
+    },
+    "optionsList": [
+      "34 m/s",
+      "170 m/s",
+      "25 m/s",
+      "17 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nComponent of $\\vec{v}$ along $\\vec{u}$ is $\\frac{\\vec{v} \\cdot \\vec{u}}{|\\vec{u}|}$.\n\n2. GIVEN:\n$\\vec{v} = 20\\hat{i} + 30\\hat{j}$, $\\vec{u} = 4\\hat{i} + 3\\hat{j}$.\n\n3. FORMULA / PRINCIPLE:\n$v_u = \\frac{20(4) + 30(3)}{\\sqrt{4^2 + 3^2}} = \\frac{80 + 90}{5} = \\frac{170}{5} = 34\\text{ m/s}$\n\n4. STEP-BY-STEP SOLUTION:\n1. Compute the dot product: $\\vec{v} \\cdot \\vec{u} = (20)(4) + (30)(3) = 80 + 90 = 170$.\n2. Compute the magnitude of $\\vec{u}$: $|\\vec{u}| = \\sqrt{4^2 + 3^2} = \\sqrt{16 + 9} = \\sqrt{25} = 5$.\n3. Divide the dot product by the magnitude: $\\frac{170}{5} = 34\\text{ m/s}$.\n4. Hence, the component is 34 m/s.\n\n5. FINAL ANSWER:\nOption A: 34 m/s\n\n6. QUICK TIP:\nDon't forget to divide by the magnitude of the target vector! 170 is the raw dot product.",
+    "solutionStructured": {
+      "concept": "Component of $\\vec{v}$ along $\\vec{u}$ is $\\frac{\\vec{v} \\cdot \\vec{u}}{|\\vec{u}|}$.",
+      "given": "$\\vec{v} = 20\\hat{i} + 30\\hat{j}$, $\\vec{u} = 4\\hat{i} + 3\\hat{j}$.",
+      "formula": "$v_u = \\frac{20(4) + 30(3)}{\\sqrt{4^2 + 3^2}} = \\frac{80 + 90}{5} = \\frac{170}{5} = 34\\text{ m/s}$",
+      "stepByStep": "1. Compute the dot product: $\\vec{v} \\cdot \\vec{u} = (20)(4) + (30)(3) = 80 + 90 = 170$.\n2. Compute the magnitude of $\\vec{u}$: $|\\vec{u}| = \\sqrt{4^2 + 3^2} = \\sqrt{16 + 9} = \\sqrt{25} = 5$.\n3. Divide the dot product by the magnitude: $\\frac{170}{5} = 34\\text{ m/s}$.\n4. Hence, the component is 34 m/s.",
+      "finalAnswer": "Option A: 34 m/s",
+      "whyOtherOptionsWrong": "170 m/s forgets to divide by $|\\vec{u}| = 5$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Resolution of vectors into components",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-106",
+    "questionNumber": 106,
+    "question": "A rope pulls a sled with force $T = 50\\text{ N}$ at an angle of 37\u00b0 above the horizontal. If the sled moves horizontally by 10 m, what is the effective work done by the rope?",
+    "options": {
+      "A": "400 J",
+      "B": "300 J",
+      "C": "500 J",
+      "D": "350 J"
+    },
+    "optionsList": [
+      "400 J",
+      "300 J",
+      "500 J",
+      "350 J"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nOnly the component of force parallel to the displacement does work: $W = F_x d = (T\\cos\\theta) d$.\n\n2. GIVEN:\n$T = 50\\text{ N}$, $\\theta = 37^\\circ$, displacement $d = 10\\text{ m}$, $\\cos 37^\\circ = 0.8$.\n\n3. FORMULA / PRINCIPLE:\n$W = T d \\cos\\theta = 50 \\times 10 \\times 0.8$\n\n4. STEP-BY-STEP SOLUTION:\n1. The vertical component $T\\sin 37^\\circ = 50(0.6) = 30\\text{ N}$ is perpendicular to horizontal displacement and does ZERO work.\n2. The horizontal component of tension is $T_x = T\\cos 37^\\circ = 50 \\times 0.8 = 40\\text{ N}$.\n3. Work done = Force component along displacement $\\times$ displacement:\n   $W = T_x \\times d = 40\\text{ N} \\times 10\\text{ m} = 400\\text{ J}$.\n\n5. FINAL ANSWER:\nOption A: 400 J\n\n6. QUICK TIP:\nComponents perpendicular to motion do NO work! Only the resolved parallel component contributes.",
+    "solutionStructured": {
+      "concept": "Only the component of force parallel to the displacement does work: $W = F_x d = (T\\cos\\theta) d$.",
+      "given": "$T = 50\\text{ N}$, $\\theta = 37^\\circ$, displacement $d = 10\\text{ m}$, $\\cos 37^\\circ = 0.8$.",
+      "formula": "$W = T d \\cos\\theta = 50 \\times 10 \\times 0.8$",
+      "stepByStep": "1. The vertical component $T\\sin 37^\\circ = 50(0.6) = 30\\text{ N}$ is perpendicular to horizontal displacement and does ZERO work.\n2. The horizontal component of tension is $T_x = T\\cos 37^\\circ = 50 \\times 0.8 = 40\\text{ N}$.\n3. Work done = Force component along displacement $\\times$ displacement:\n   $W = T_x \\times d = 40\\text{ N} \\times 10\\text{ m} = 400\\text{ J}$.",
+      "finalAnswer": "Option A: 400 J",
+      "whyOtherOptionsWrong": "500 J assumes force is fully along displacement (cos 0\u00b0 = 1)."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Resolution of vectors into components",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-107",
+    "questionNumber": 107,
+    "question": "The x and y components of a force $\\vec{F}$ are 12 N and -5 N respectively. What is the magnitude of $\\vec{F}$ and which quadrant does it point into?",
+    "options": {
+      "A": "13 N, Fourth quadrant",
+      "B": "13 N, Second quadrant",
+      "C": "17 N, Fourth quadrant",
+      "D": "7 N, First quadrant"
+    },
+    "optionsList": [
+      "13 N, Fourth quadrant",
+      "13 N, Second quadrant",
+      "17 N, Fourth quadrant",
+      "7 N, First quadrant"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nMagnitude is $\\sqrt{F_x^2 + F_y^2} = \\sqrt{12^2 + (-5)^2} = 13\\text{ N}$. Since $F_x > 0$ and $F_y < 0$, it lies in the fourth quadrant.\n\n2. GIVEN:\n$F_x = +12\\text{ N}$, $F_y = -5\\text{ N}$.\n\n3. FORMULA / PRINCIPLE:\n$|\\vec{F}| = \\sqrt{12^2 + (-5)^2} = \\sqrt{144 + 25} = 13\\text{ N}$; signs (+, -) $\\implies$ Quadrant IV.\n\n4. STEP-BY-STEP SOLUTION:\n1. Calculate magnitude: $|\\vec{F}| = \\sqrt{12^2 + (-5)^2} = \\sqrt{169} = 13\\text{ N}$.\n2. Analyze coordinate signs:\n   - $F_x = +12 > 0$ (points right)\n   - $F_y = -5 < 0$ (points down)\n3. A point with $(+x, -y)$ lies in the fourth quadrant.\n4. Angle with positive x-axis is $\\theta = -\\tan^{-1}(5/12) \\approx -22.6^\\circ$ or $337.4^\\circ$.\n\n5. FINAL ANSWER:\nOption A: 13 N, Fourth quadrant\n\n6. QUICK TIP:\nQuadrant sign convention:\nQI: (+, +)\nQII: (-, +)\nQIII: (-, -)\nQIV: (+, -)",
+    "solutionStructured": {
+      "concept": "Magnitude is $\\sqrt{F_x^2 + F_y^2} = \\sqrt{12^2 + (-5)^2} = 13\\text{ N}$. Since $F_x > 0$ and $F_y < 0$, it lies in the fourth quadrant.",
+      "given": "$F_x = +12\\text{ N}$, $F_y = -5\\text{ N}$.",
+      "formula": "$|\\vec{F}| = \\sqrt{12^2 + (-5)^2} = \\sqrt{144 + 25} = 13\\text{ N}$; signs (+, -) $\\implies$ Quadrant IV.",
+      "stepByStep": "1. Calculate magnitude: $|\\vec{F}| = \\sqrt{12^2 + (-5)^2} = \\sqrt{169} = 13\\text{ N}$.\n2. Analyze coordinate signs:\n   - $F_x = +12 > 0$ (points right)\n   - $F_y = -5 < 0$ (points down)\n3. A point with $(+x, -y)$ lies in the fourth quadrant.\n4. Angle with positive x-axis is $\\theta = -\\tan^{-1}(5/12) \\approx -22.6^\\circ$ or $337.4^\\circ$.",
+      "finalAnswer": "Option A: 13 N, Fourth quadrant",
+      "whyOtherOptionsWrong": "Second quadrant has $(-x, +y)$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Resolution of vectors into components",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  }
+]

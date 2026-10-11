@@ -64,19 +64,6 @@ export class AuthService {
 
     // Subscribe to Firebase Auth state
     try {
-      // Check for redirect result (mobile auth return)
-      getRedirectResult(auth).then((result) => {
-        if (result && result.user) {
-          const syncedUser = this.syncFromFirebaseUser(result.user);
-          this.user = syncedUser;
-          localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(syncedUser));
-          this.saveUserToLocalRegistry(syncedUser);
-          this.notifyListeners();
-        }
-      }).catch((err) => {
-        console.warn('[AuthService] getRedirectResult error:', err);
-      });
-
       onAuthStateChanged(auth, (fbUser: FirebaseUser | null) => {
         if (fbUser) {
           const syncedUser = this.syncFromFirebaseUser(fbUser);
@@ -86,6 +73,21 @@ export class AuthService {
         }
         this.notifyListeners();
       });
+
+      // Check for redirect result only if URL indicates redirect flow return
+      if (typeof window !== 'undefined' && (window.location.search.includes('apiKey') || window.location.search.includes('state'))) {
+        getRedirectResult(auth).then((result) => {
+          if (result && result.user) {
+            const syncedUser = this.syncFromFirebaseUser(result.user);
+            this.user = syncedUser;
+            localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(syncedUser));
+            this.saveUserToLocalRegistry(syncedUser);
+            this.notifyListeners();
+          }
+        }).catch((err) => {
+          console.warn('[AuthService] getRedirectResult info:', err);
+        });
+      }
     } catch (e) {
       console.warn('[AuthService] Firebase Auth observer fallback:', e);
     }
@@ -127,45 +129,52 @@ export class AuthService {
       isEmailVerified: fbUser.emailVerified ?? true,
     };
 
-    // Asynchronous background firestore sync (completely non-blocking)
+    // Asynchronous background firestore sync (completely non-blocking, fast-timeout, and offline resilient)
     if (typeof navigator === 'undefined' || navigator.onLine) {
-      try {
-        const userDocRef = doc(db, 'users', fbUser.uid);
-        getDoc(userDocRef).then((snap) => {
-          if (snap.exists()) {
-            const data = snap.data();
-            let updated = false;
-            if (data.name && data.name !== user.name) {
-              user.name = data.name;
-              updated = true;
-            }
-            if (data.targetYear && data.targetYear !== user.targetYear) {
-              user.targetYear = data.targetYear;
-              updated = true;
-            }
-            if (updated) {
-              localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(user));
-              this.notifyListeners();
-            }
-          } else {
-            setDoc(userDocRef, {
-              uid: fbUser.uid,
-              email: fbUser.email,
-              name: user.name,
-              targetYear: user.targetYear,
-              photoURL: fbUser.photoURL || '',
-              createdAt: new Date().toISOString(),
-              updatedAt: new Date().toISOString(),
-            }, { merge: true }).catch((err) => {
-              handleFirestoreError(err, OperationType.WRITE, `users/${fbUser.uid}`);
+      setTimeout(() => {
+        try {
+          if (fbUser.uid) {
+            const userDocRef = doc(db, 'users', fbUser.uid);
+            const timeoutPromise = new Promise<never>((_, reject) =>
+              setTimeout(() => reject(new Error('timeout')), 2000)
+            );
+            Promise.race([getDoc(userDocRef), timeoutPromise]).then((snap) => {
+              if (snap && snap.exists()) {
+                const data = snap.data();
+                let updated = false;
+                if (data.name && data.name !== user.name) {
+                  user.name = data.name;
+                  updated = true;
+                }
+                if (data.targetYear && data.targetYear !== user.targetYear) {
+                  user.targetYear = data.targetYear;
+                  updated = true;
+                }
+                if (updated) {
+                  localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(user));
+                  this.notifyListeners();
+                }
+              } else {
+                setDoc(userDocRef, {
+                  uid: fbUser.uid,
+                  email: fbUser.email || user.email,
+                  name: user.name,
+                  targetYear: user.targetYear,
+                  photoURL: fbUser.photoURL || '',
+                  createdAt: new Date().toISOString(),
+                  updatedAt: new Date().toISOString(),
+                }, { merge: true }).catch((err) => {
+                  handleFirestoreError(err, OperationType.WRITE, `users/${fbUser.uid}`);
+                });
+              }
+            }).catch((e) => {
+              handleFirestoreError(e, OperationType.GET, `users/${fbUser.uid}`);
             });
           }
-        }).catch((e) => {
-          handleFirestoreError(e, OperationType.GET, `users/${fbUser.uid}`);
-        });
-      } catch (err) {
-        handleFirestoreError(err, OperationType.GET, `users/${fbUser.uid}`);
-      }
+        } catch (err) {
+          handleFirestoreError(err, OperationType.GET, `users/${fbUser.uid}`);
+        }
+      }, 500);
     }
 
     return user;
@@ -268,8 +277,14 @@ export class AuthService {
           const user = await this.syncFromFirebaseUser(createResult.user);
           if (name && name.trim()) {
             user.name = name.trim();
-            const userDocRef = doc(db, 'users', createResult.user.uid);
-            await setDoc(userDocRef, { name: name.trim() }, { merge: true });
+            try {
+              const userDocRef = doc(db, 'users', createResult.user.uid);
+              setDoc(userDocRef, { name: name.trim() }, { merge: true }).catch((err) => {
+                handleFirestoreError(err, OperationType.WRITE, `users/${createResult.user.uid}`);
+              });
+            } catch (err) {
+              handleFirestoreError(err, OperationType.WRITE, `users/${createResult.user.uid}`);
+            }
           }
           this.user = user;
           localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(user));

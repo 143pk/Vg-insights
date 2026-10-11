@@ -1,0 +1,779 @@
+[
+  {
+    "id": "msl-mcq-126",
+    "questionNumber": 126,
+    "question": "Acceleration is defined mathematically as:",
+    "options": {
+      "A": "Rate of change of position with respect to time",
+      "B": "Rate of change of velocity with respect to time",
+      "C": "Rate of change of speed with respect to time",
+      "D": "Rate of change of displacement with respect to distance"
+    },
+    "optionsList": [
+      "Rate of change of position with respect to time",
+      "Rate of change of velocity with respect to time",
+      "Rate of change of speed with respect to time",
+      "Rate of change of displacement with respect to distance"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nAcceleration is a vector quantity defined as the rate of change of the velocity vector with respect to time: a\u20d7 = dv\u20d7/dt.\n\n2. GIVEN:\nDefinition of acceleration.\n\n3. FORMULA / PRINCIPLE:\na\u20d7 = dv\u20d7/dt = lim_{\u0394t -> 0} (\u0394v\u20d7 / \u0394t)\n\n4. STEP-BY-STEP SOLUTION:\n1. Velocity is the rate of change of position (v\u20d7 = dr\u20d7/dt).\n2. Acceleration is the rate of change of velocity: a\u20d7 = dv\u20d7/dt.\n3. Because velocity is a vector, acceleration can arise from a change in magnitude (speed), a change in direction, or both.\n4. Its SI unit is m/s\u00b2 and its dimensional formula is [M\u2070 L T\u207b\u00b2].\n\n5. FINAL ANSWER:\nOption B: Rate of change of velocity with respect to time\n\n6. QUICK TIP:\nAcceleration is rate of change of VELOCITY, not speed! In uniform circular motion, speed is constant but acceleration is non-zero because direction changes.",
+    "solutionStructured": {
+      "concept": "Acceleration is a vector quantity defined as the rate of change of the velocity vector with respect to time: a\u20d7 = dv\u20d7/dt.",
+      "given": "Definition of acceleration.",
+      "formula": "a\u20d7 = dv\u20d7/dt = lim_{\u0394t -> 0} (\u0394v\u20d7 / \u0394t)",
+      "stepByStep": "1. Velocity is the rate of change of position (v\u20d7 = dr\u20d7/dt).\n2. Acceleration is the rate of change of velocity: a\u20d7 = dv\u20d7/dt.\n3. Because velocity is a vector, acceleration can arise from a change in magnitude (speed), a change in direction, or both.\n4. Its SI unit is m/s\u00b2 and its dimensional formula is [M\u2070 L T\u207b\u00b2].",
+      "finalAnswer": "Option B: Rate of change of velocity with respect to time",
+      "whyOtherOptionsWrong": "Option A is velocity. Option C is tangential acceleration only, neglecting direction change. Option D is a dimensionless ratio."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-127",
+    "questionNumber": 127,
+    "question": "A car accelerates uniformly along a straight road from 18 km/h to 72 km/h in 5 seconds. What is the magnitude of its acceleration?",
+    "options": {
+      "A": "3 m/s\u00b2",
+      "B": "5.4 m/s\u00b2",
+      "C": "10.8 m/s\u00b2",
+      "D": "15 m/s\u00b2"
+    },
+    "optionsList": [
+      "3 m/s\u00b2",
+      "5.4 m/s\u00b2",
+      "10.8 m/s\u00b2",
+      "15 m/s\u00b2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nConvert speeds from km/h to m/s, then apply definition a = (v - u) / t.\n\n2. GIVEN:\nu = 18 km/h = 5 m/s, v = 72 km/h = 20 m/s, t = 5 s.\n\n3. FORMULA / PRINCIPLE:\na = (v - u) / t\n\n4. STEP-BY-STEP SOLUTION:\n1. Convert initial speed: u = 18 * (5/18) = 5 m/s.\n2. Convert final speed: v = 72 * (5/18) = 20 m/s.\n3. Change in velocity: \u0394v = 20 - 5 = 15 m/s.\n4. Acceleration: a = \u0394v / t = 15 m/s / 5 s = 3 m/s\u00b2.\n5. Therefore, the acceleration is 3 m/s\u00b2.\n\n5. FINAL ANSWER:\nOption A: 3 m/s\u00b2\n\n6. QUICK TIP:\nAlways convert km/h to m/s first: 18 km/h = 5 m/s and 72 km/h = 20 m/s. Then a = (20 - 5)/5 = 3 m/s\u00b2.",
+    "solutionStructured": {
+      "concept": "Convert speeds from km/h to m/s, then apply definition a = (v - u) / t.",
+      "given": "u = 18 km/h = 5 m/s, v = 72 km/h = 20 m/s, t = 5 s.",
+      "formula": "a = (v - u) / t",
+      "stepByStep": "1. Convert initial speed: u = 18 * (5/18) = 5 m/s.\n2. Convert final speed: v = 72 * (5/18) = 20 m/s.\n3. Change in velocity: \u0394v = 20 - 5 = 15 m/s.\n4. Acceleration: a = \u0394v / t = 15 m/s / 5 s = 3 m/s\u00b2.\n5. Therefore, the acceleration is 3 m/s\u00b2.",
+      "finalAnswer": "Option A: 3 m/s\u00b2",
+      "whyOtherOptionsWrong": "Option B forgets to convert units ((72 - 18)/10 = 5.4). Option C uses 54/5. Option D is \u0394v."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-128",
+    "questionNumber": 128,
+    "question": "Which of the following statements about retardation is strictly correct?",
+    "options": {
+      "A": "Retardation is always negative in all coordinate systems.",
+      "B": "Retardation means acceleration opposes the direction of velocity.",
+      "C": "Retardation occurs whenever acceleration is negative, regardless of the sign of velocity.",
+      "D": "Retardation increases the speed of an object moving in the negative direction."
+    },
+    "optionsList": [
+      "Retardation is always negative in all coordinate systems.",
+      "Retardation means acceleration opposes the direction of velocity.",
+      "Retardation occurs whenever acceleration is negative, regardless of the sign of velocity.",
+      "Retardation increases the speed of an object moving in the negative direction."
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nRetardation (deceleration) is the decrease of speed (|v|) with time. This occurs if and only if the acceleration vector is directed opposite to the velocity vector (v * a < 0).\n\n2. GIVEN:\nDefinition of retardation.\n\n3. FORMULA / PRINCIPLE:\nRetardation <=> d|v|/dt < 0 <=> v\u20d7 \u00b7 a\u20d7 < 0.\n\n4. STEP-BY-STEP SOLUTION:\n1. Speed is the magnitude |v| of velocity.\n2. For speed to decrease, acceleration must push against the direction of motion.\n3. Thus, acceleration opposes velocity.\n4. If v is positive, retardation requires a to be negative.\n5. If v is negative, retardation requires a to be POSITIVE!\n6. Therefore, retardation does NOT simply mean 'a is negative'; it means acceleration opposes velocity.\n\n5. FINAL ANSWER:\nOption B: Retardation means acceleration opposes the direction of velocity.\n\n6. QUICK TIP:\nCrucial NEET concept: If a car moves in the -x direction (v < 0), a positive acceleration (a > 0) causes it to slow down (retardation)!",
+    "solutionStructured": {
+      "concept": "Retardation (deceleration) is the decrease of speed (|v|) with time. This occurs if and only if the acceleration vector is directed opposite to the velocity vector (v * a < 0).",
+      "given": "Definition of retardation.",
+      "formula": "Retardation <=> d|v|/dt < 0 <=> v\u20d7 \u00b7 a\u20d7 < 0.",
+      "stepByStep": "1. Speed is the magnitude |v| of velocity.\n2. For speed to decrease, acceleration must push against the direction of motion.\n3. Thus, acceleration opposes velocity.\n4. If v is positive, retardation requires a to be negative.\n5. If v is negative, retardation requires a to be POSITIVE!\n6. Therefore, retardation does NOT simply mean 'a is negative'; it means acceleration opposes velocity.",
+      "finalAnswer": "Option B: Retardation means acceleration opposes the direction of velocity.",
+      "whyOtherOptionsWrong": "Option A is false because if v < 0, retardation has a > 0. Option C is false because if v < 0 and a < 0, the car speeds up. Option D contradicts the definition of retardation."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-129",
+    "questionNumber": 129,
+    "question": "The velocity of a particle at any time t is given by v = 20 - 4t (in m/s). What is its retardation?",
+    "options": {
+      "A": "4 m/s\u00b2",
+      "B": "-4 m/s\u00b2",
+      "C": "20 m/s\u00b2",
+      "D": "5 m/s\u00b2"
+    },
+    "optionsList": [
+      "4 m/s\u00b2",
+      "-4 m/s\u00b2",
+      "20 m/s\u00b2",
+      "5 m/s\u00b2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nAcceleration is a = dv/dt = -4 m/s\u00b2. Retardation is defined as the magnitude of deceleration (rate of decrease of speed), so Retardation = -a = +4 m/s\u00b2.\n\n2. GIVEN:\nv(t) = 20 - 4t m/s.\n\n3. FORMULA / PRINCIPLE:\na = dv/dt = -4 m/s\u00b2; Retardation = -a = 4 m/s\u00b2.\n\n4. STEP-BY-STEP SOLUTION:\n1. Differentiate velocity to find acceleration:\n   a = dv/dt = d(20 - 4t)/dt = -4 m/s\u00b2.\n2. Since the particle is moving in the positive direction (v > 0 for t < 5 s), the negative acceleration opposes motion, causing it to slow down.\n3. Retardation is defined as the negative of acceleration (the rate at which speed decreases):\n   Retardation = -a = -(-4) = 4 m/s\u00b2.\n4. Therefore, the retardation is 4 m/s\u00b2.\n\n5. FINAL ANSWER:\nOption A: 4 m/s\u00b2\n\n6. QUICK TIP:\n'Retardation' already implies slowing down; its value is stated as a positive magnitude (4 m/s\u00b2). Stating '-4 m/s\u00b2 retardation' is a double negative!",
+    "solutionStructured": {
+      "concept": "Acceleration is a = dv/dt = -4 m/s\u00b2. Retardation is defined as the magnitude of deceleration (rate of decrease of speed), so Retardation = -a = +4 m/s\u00b2.",
+      "given": "v(t) = 20 - 4t m/s.",
+      "formula": "a = dv/dt = -4 m/s\u00b2; Retardation = -a = 4 m/s\u00b2.",
+      "stepByStep": "1. Differentiate velocity to find acceleration:\n   a = dv/dt = d(20 - 4t)/dt = -4 m/s\u00b2.\n2. Since the particle is moving in the positive direction (v > 0 for t < 5 s), the negative acceleration opposes motion, causing it to slow down.\n3. Retardation is defined as the negative of acceleration (the rate at which speed decreases):\n   Retardation = -a = -(-4) = 4 m/s\u00b2.\n4. Therefore, the retardation is 4 m/s\u00b2.",
+      "finalAnswer": "Option A: 4 m/s\u00b2",
+      "whyOtherOptionsWrong": "Option B is the acceleration (which is -4 m/s\u00b2), whereas retardation is 4 m/s\u00b2. Option C is initial velocity. Option D is the time to stop (20/4 = 5 s)."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-130",
+    "questionNumber": 130,
+    "question": "A ball thrown vertically upwards reaches its maximum height and begins to fall back down. At the highest point of its trajectory, which of the following is true?",
+    "options": {
+      "A": "Both velocity and acceleration are zero",
+      "B": "Velocity is zero, but acceleration is non-zero and directed downwards",
+      "C": "Velocity is non-zero, but acceleration is zero",
+      "D": "Both velocity and acceleration are non-zero"
+    },
+    "optionsList": [
+      "Both velocity and acceleration are zero",
+      "Velocity is zero, but acceleration is non-zero and directed downwards",
+      "Velocity is non-zero, but acceleration is zero",
+      "Both velocity and acceleration are non-zero"
+    ],
+    "correctAnswer": "B",
+    "correctIndex": 1,
+    "explanation": "1. CONCEPT:\nAt the zenith of vertical projectile motion, instantaneous velocity is momentarily zero (turning point), but gravitational force mg continues to act downward uninterrupted, so acceleration is g downwards.\n\n2. GIVEN:\nHighest point of vertical throw.\n\n3. FORMULA / PRINCIPLE:\nv = 0, a = -g = 9.8 m/s\u00b2 downwards.\n\n4. STEP-BY-STEP SOLUTION:\n1. At the highest point, the ball momentarily reverses its direction of motion from upward to downward.\n2. Therefore, its instantaneous velocity is zero: v = 0.\n3. However, Earth's gravity still pulls on the ball with force F = mg downwards.\n4. By Newton's second law, a = F/m = -g downwards (approx 9.8 m/s\u00b2).\n5. If acceleration were also zero, the ball would remain suspended in mid-air forever!\n6. Hence, velocity is zero while acceleration is non-zero and directed downwards.\n\n5. FINAL ANSWER:\nOption B: Velocity is zero, but acceleration is non-zero and directed downwards\n\n6. QUICK TIP:\nNEET Favorite: A body CAN have zero velocity and non-zero acceleration simultaneously (e.g. at the highest point of throw, or at extreme positions of SHM).",
+    "solutionStructured": {
+      "concept": "At the zenith of vertical projectile motion, instantaneous velocity is momentarily zero (turning point), but gravitational force mg continues to act downward uninterrupted, so acceleration is g downwards.",
+      "given": "Highest point of vertical throw.",
+      "formula": "v = 0, a = -g = 9.8 m/s\u00b2 downwards.",
+      "stepByStep": "1. At the highest point, the ball momentarily reverses its direction of motion from upward to downward.\n2. Therefore, its instantaneous velocity is zero: v = 0.\n3. However, Earth's gravity still pulls on the ball with force F = mg downwards.\n4. By Newton's second law, a = F/m = -g downwards (approx 9.8 m/s\u00b2).\n5. If acceleration were also zero, the ball would remain suspended in mid-air forever!\n6. Hence, velocity is zero while acceleration is non-zero and directed downwards.",
+      "finalAnswer": "Option B: Velocity is zero, but acceleration is non-zero and directed downwards",
+      "whyOtherOptionsWrong": "Option A would mean the ball floats in the air forever. Option C reverses the quantities. Option D fails because vertical velocity must stop to reverse."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-131",
+    "questionNumber": 131,
+    "question": "The displacement of a particle moving along a straight line is given by x = 2t\u00b3 - 9t\u00b2 + 12t + 4 (in meters). What is the acceleration of the particle at the instant when its velocity is zero for the first time?",
+    "options": {
+      "A": "-6 m/s\u00b2",
+      "B": "+6 m/s\u00b2",
+      "C": "0 m/s\u00b2",
+      "D": "-12 m/s\u00b2"
+    },
+    "optionsList": [
+      "-6 m/s\u00b2",
+      "+6 m/s\u00b2",
+      "0 m/s\u00b2",
+      "-12 m/s\u00b2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFirst find the instants when velocity is zero by solving v(t) = dx/dt = 0. Then substitute the smaller time (first time) into the acceleration expression a(t) = dv/dt.\n\n2. GIVEN:\nx(t) = 2t\u00b3 - 9t\u00b2 + 12t + 4.\n\n3. FORMULA / PRINCIPLE:\nv = dx/dt = 6t\u00b2 - 18t + 12 = 0; a = dv/dt = 12t - 18.\n\n4. STEP-BY-STEP SOLUTION:\n1. Find velocity:\n   v(t) = dx/dt = 6t\u00b2 - 18t + 12 = 6(t\u00b2 - 3t + 2) = 6(t - 1)(t - 2).\n2. Velocity is zero at t = 1 s and t = 2 s.\n   The first time velocity is zero is t = 1 s.\n3. Find acceleration:\n   a(t) = dv/dt = 12t - 18.\n4. Substitute t = 1 s:\n   a(1) = 12(1) - 18 = -6 m/s\u00b2.\n5. Therefore, the acceleration at this instant is -6 m/s\u00b2.\n\n5. FINAL ANSWER:\nOption A: -6 m/s\u00b2\n\n6. QUICK TIP:\nAt t = 1 s, a = -6 m/s\u00b2 (particle is at a local maximum of x). At t = 2 s, a = +6 m/s\u00b2 (local minimum).",
+    "solutionStructured": {
+      "concept": "First find the instants when velocity is zero by solving v(t) = dx/dt = 0. Then substitute the smaller time (first time) into the acceleration expression a(t) = dv/dt.",
+      "given": "x(t) = 2t\u00b3 - 9t\u00b2 + 12t + 4.",
+      "formula": "v = dx/dt = 6t\u00b2 - 18t + 12 = 0; a = dv/dt = 12t - 18.",
+      "stepByStep": "1. Find velocity:\n   v(t) = dx/dt = 6t\u00b2 - 18t + 12 = 6(t\u00b2 - 3t + 2) = 6(t - 1)(t - 2).\n2. Velocity is zero at t = 1 s and t = 2 s.\n   The first time velocity is zero is t = 1 s.\n3. Find acceleration:\n   a(t) = dv/dt = 12t - 18.\n4. Substitute t = 1 s:\n   a(1) = 12(1) - 18 = -6 m/s\u00b2.\n5. Therefore, the acceleration at this instant is -6 m/s\u00b2.",
+      "finalAnswer": "Option A: -6 m/s\u00b2",
+      "whyOtherOptionsWrong": "Option B is the acceleration at the second stopping instant (t = 2 s). Option C is when t = 1.5 s. Option D is an arithmetic error."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-132",
+    "questionNumber": 132,
+    "question": "A body moving along the x-axis has its position related to time by t = \u03b1 x\u00b2 + \u03b2 x, where \u03b1 and \u03b2 are positive constants. What is the retardation of the body expressed in terms of its instantaneous velocity v?",
+    "options": {
+      "A": "2\u03b1 v\u00b3",
+      "B": "2\u03b1 v\u00b2",
+      "C": "\u03b1 v\u00b3",
+      "D": "2\u03b2 v\u00b3"
+    },
+    "optionsList": [
+      "2\u03b1 v\u00b3",
+      "2\u03b1 v\u00b2",
+      "\u03b1 v\u00b3",
+      "2\u03b2 v\u00b3"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDifferentiate t with respect to x to find 1/v = dt/dx, then differentiate velocity using the chain rule to find acceleration.\n\n2. GIVEN:\nt = \u03b1 x\u00b2 + \u03b2 x.\n\n3. FORMULA / PRINCIPLE:\ndt/dx = 2\u03b1 x + \u03b2 = 1/v => v = (2\u03b1 x + \u03b2)\u207b\u00b9; a = v (dv/dx).\n\n4. STEP-BY-STEP SOLUTION:\n1. Differentiate t with respect to x:\n   dt/dx = 2\u03b1 x + \u03b2.\n2. Since v = dx/dt = 1 / (dt/dx):\n   v = (2\u03b1 x + \u03b2)\u207b\u00b9.\n3. Differentiate v with respect to x using the chain rule:\n   dv/dx = -(2\u03b1 x + \u03b2)\u207b\u00b2 * (2\u03b1) = -2\u03b1 (2\u03b1 x + \u03b2)\u207b\u00b2 = -2\u03b1 v\u00b2.\n4. Compute acceleration using a = v (dv/dx):\n   a = v * (-2\u03b1 v\u00b2) = -2\u03b1 v\u00b3.\n5. The negative sign denotes retardation.\n6. Therefore, the retardation (magnitude of deceleration) is 2\u03b1 v\u00b3.\n\n5. FINAL ANSWER:\nOption A: 2\u03b1 v\u00b3\n\n6. QUICK TIP:\nTop NEET Classic Question! If t = \u03b1x\u00b2 + \u03b2x, then v = (2\u03b1x + \u03b2)\u207b\u00b9 and Retardation = 2\u03b1 v\u00b3.",
+    "solutionStructured": {
+      "concept": "Differentiate t with respect to x to find 1/v = dt/dx, then differentiate velocity using the chain rule to find acceleration.",
+      "given": "t = \u03b1 x\u00b2 + \u03b2 x.",
+      "formula": "dt/dx = 2\u03b1 x + \u03b2 = 1/v => v = (2\u03b1 x + \u03b2)\u207b\u00b9; a = v (dv/dx).",
+      "stepByStep": "1. Differentiate t with respect to x:\n   dt/dx = 2\u03b1 x + \u03b2.\n2. Since v = dx/dt = 1 / (dt/dx):\n   v = (2\u03b1 x + \u03b2)\u207b\u00b9.\n3. Differentiate v with respect to x using the chain rule:\n   dv/dx = -(2\u03b1 x + \u03b2)\u207b\u00b2 * (2\u03b1) = -2\u03b1 (2\u03b1 x + \u03b2)\u207b\u00b2 = -2\u03b1 v\u00b2.\n4. Compute acceleration using a = v (dv/dx):\n   a = v * (-2\u03b1 v\u00b2) = -2\u03b1 v\u00b3.\n5. The negative sign denotes retardation.\n6. Therefore, the retardation (magnitude of deceleration) is 2\u03b1 v\u00b3.",
+      "finalAnswer": "Option A: 2\u03b1 v\u00b3",
+      "whyOtherOptionsWrong": "Option B has power v\u00b2 instead of v\u00b3. Option C misses the factor of 2. Option D uses \u03b2 instead of \u03b1."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-133",
+    "questionNumber": 133,
+    "question": "A car moves along a straight line such that its velocity decreases uniformly from 25 m/s to 15 m/s while covering a distance of 80 m. What is the magnitude of its retardation, and how much further will it travel before stopping with the same retardation?",
+    "options": {
+      "A": "Retardation = 2.5 m/s\u00b2, Extra distance = 45 m",
+      "B": "Retardation = 5.0 m/s\u00b2, Extra distance = 30 m",
+      "C": "Retardation = 2.5 m/s\u00b2, Extra distance = 60 m",
+      "D": "Retardation = 1.25 m/s\u00b2, Extra distance = 90 m"
+    },
+    "optionsList": [
+      "Retardation = 2.5 m/s\u00b2, Extra distance = 45 m",
+      "Retardation = 5.0 m/s\u00b2, Extra distance = 30 m",
+      "Retardation = 2.5 m/s\u00b2, Extra distance = 60 m",
+      "Retardation = 1.25 m/s\u00b2, Extra distance = 90 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nApply v\u00b2 = u\u00b2 - 2as to find retardation a, then apply v_final\u00b2 = u'\u00b2 - 2as' to find the additional stopping distance.\n\n2. GIVEN:\nu = 25 m/s, v = 15 m/s, s = 80 m.\n\n3. FORMULA / PRINCIPLE:\nv\u00b2 = u\u00b2 - 2as => a = (u\u00b2 - v\u00b2) / (2s); Extra distance s' = v\u00b2 / (2a).\n\n4. STEP-BY-STEP SOLUTION:\n1. Find retardation from the first segment:\n   15\u00b2 = 25\u00b2 - 2a(80)\n   225 = 625 - 160a\n   160a = 625 - 225 = 400\n   a = 400 / 160 = 2.5 m/s\u00b2.\n2. Now the car is at 15 m/s and brakes to rest (v_final = 0):\n   0\u00b2 = 15\u00b2 - 2(2.5) s'\n   0 = 225 - 5 s'\n   5 s' = 225 => s' = 225 / 5 = 45 m.\n3. Therefore, Retardation = 2.5 m/s\u00b2 and Extra distance = 45 m.\n\n5. FINAL ANSWER:\nOption A: Retardation = 2.5 m/s\u00b2, Extra distance = 45 m\n\n6. QUICK TIP:\nCheck total distance from 25 m/s to rest: s_total = 25\u00b2 / (2 * 2.5) = 625 / 5 = 125 m. Extra distance = 125 - 80 = 45 m!",
+    "solutionStructured": {
+      "concept": "Apply v\u00b2 = u\u00b2 - 2as to find retardation a, then apply v_final\u00b2 = u'\u00b2 - 2as' to find the additional stopping distance.",
+      "given": "u = 25 m/s, v = 15 m/s, s = 80 m.",
+      "formula": "v\u00b2 = u\u00b2 - 2as => a = (u\u00b2 - v\u00b2) / (2s); Extra distance s' = v\u00b2 / (2a).",
+      "stepByStep": "1. Find retardation from the first segment:\n   15\u00b2 = 25\u00b2 - 2a(80)\n   225 = 625 - 160a\n   160a = 625 - 225 = 400\n   a = 400 / 160 = 2.5 m/s\u00b2.\n2. Now the car is at 15 m/s and brakes to rest (v_final = 0):\n   0\u00b2 = 15\u00b2 - 2(2.5) s'\n   0 = 225 - 5 s'\n   5 s' = 225 => s' = 225 / 5 = 45 m.\n3. Therefore, Retardation = 2.5 m/s\u00b2 and Extra distance = 45 m.",
+      "finalAnswer": "Option A: Retardation = 2.5 m/s\u00b2, Extra distance = 45 m",
+      "whyOtherOptionsWrong": "Option B overestimates retardation. Option C and D give incorrect extra distances."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-134",
+    "questionNumber": 134,
+    "question": "A particle starts from rest and moves along a straight line with an acceleration that increases linearly with time as a = 3t (in m/s\u00b2). What is the velocity of the particle after 4 seconds?",
+    "options": {
+      "A": "24 m/s",
+      "B": "12 m/s",
+      "C": "48 m/s",
+      "D": "6 m/s"
+    },
+    "optionsList": [
+      "24 m/s",
+      "12 m/s",
+      "48 m/s",
+      "6 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor non-uniform acceleration, velocity is obtained by integrating acceleration with respect to time: v = u + \u222b a dt.\n\n2. GIVEN:\nu = 0, a(t) = 3t, t = 4 s.\n\n3. FORMULA / PRINCIPLE:\nv(t) = \u222b_0^t a dt = \u222b_0^4 3t dt.\n\n4. STEP-BY-STEP SOLUTION:\n1. Integrate acceleration:\n   v(t) = \u222b_0^t 3t dt = [ (3/2) t\u00b2 ]_0^t = (3/2) t\u00b2.\n2. Substitute t = 4 s:\n   v(4) = (3/2) * (4\u00b2) = (3/2) * 16 = 3 * 8 = 24 m/s.\n3. Therefore, the velocity after 4 seconds is 24 m/s.\n\n5. FINAL ANSWER:\nOption A: 24 m/s\n\n6. QUICK TIP:\nCommon trap: Do not use v = a*t = 3(4)*4 = 48! Acceleration is varying, so you must integrate: v = (1/2) * 3 * t\u00b2 = 24 m/s.",
+    "solutionStructured": {
+      "concept": "For non-uniform acceleration, velocity is obtained by integrating acceleration with respect to time: v = u + \u222b a dt.",
+      "given": "u = 0, a(t) = 3t, t = 4 s.",
+      "formula": "v(t) = \u222b_0^t a dt = \u222b_0^4 3t dt.",
+      "stepByStep": "1. Integrate acceleration:\n   v(t) = \u222b_0^t 3t dt = [ (3/2) t\u00b2 ]_0^t = (3/2) t\u00b2.\n2. Substitute t = 4 s:\n   v(4) = (3/2) * (4\u00b2) = (3/2) * 16 = 3 * 8 = 24 m/s.\n3. Therefore, the velocity after 4 seconds is 24 m/s.",
+      "finalAnswer": "Option A: 24 m/s",
+      "whyOtherOptionsWrong": "Option B divides by 4. Option C simply multiplies a(4) * 4 = 12 * 4 = 48 (trap!). Option D is 24 / 4."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-135",
+    "questionNumber": 135,
+    "question": "The acceleration of a particle is given by a = 4 - 2t (in m/s\u00b2). If the particle starts from rest at t = 0, what is the maximum velocity attained by the particle?",
+    "options": {
+      "A": "4 m/s",
+      "B": "8 m/s",
+      "C": "2 m/s",
+      "D": "16 m/s"
+    },
+    "optionsList": [
+      "4 m/s",
+      "8 m/s",
+      "2 m/s",
+      "16 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nVelocity is maximum when acceleration becomes zero: a(t) = 0. Find this time and integrate acceleration up to that time.\n\n2. GIVEN:\na(t) = 4 - 2t, u = 0.\n\n3. FORMULA / PRINCIPLE:\na(t) = 0 => 4 - 2t = 0 => t = 2 s; v_max = \u222b_0^2 (4 - 2t) dt.\n\n4. STEP-BY-STEP SOLUTION:\n1. Find the instant when acceleration changes from positive to negative (turning point of velocity):\n   a(t) = 4 - 2t = 0 => 2t = 4 => t = 2 s.\n2. Before t = 2 s, a > 0, so velocity is increasing.\n   After t = 2 s, a < 0, so velocity decreases.\n3. Therefore, maximum velocity occurs at t = 2 s.\n4. Integrate acceleration from 0 to 2 s:\n   v_max = \u222b_0^2 (4 - 2t) dt = [ 4t - t\u00b2 ]_0^2 = 4(2) - 2\u00b2 = 8 - 4 = 4 m/s.\n5. Therefore, the maximum velocity attained is 4 m/s.\n\n5. FINAL ANSWER:\nOption A: 4 m/s\n\n6. QUICK TIP:\nv_max occurs when dv/dt = a = 0. Area of the triangle on the a-t graph from 0 to 2 s is (1/2)(2)(4) = 4 m/s!",
+    "solutionStructured": {
+      "concept": "Velocity is maximum when acceleration becomes zero: a(t) = 0. Find this time and integrate acceleration up to that time.",
+      "given": "a(t) = 4 - 2t, u = 0.",
+      "formula": "a(t) = 0 => 4 - 2t = 0 => t = 2 s; v_max = \u222b_0^2 (4 - 2t) dt.",
+      "stepByStep": "1. Find the instant when acceleration changes from positive to negative (turning point of velocity):\n   a(t) = 4 - 2t = 0 => 2t = 4 => t = 2 s.\n2. Before t = 2 s, a > 0, so velocity is increasing.\n   After t = 2 s, a < 0, so velocity decreases.\n3. Therefore, maximum velocity occurs at t = 2 s.\n4. Integrate acceleration from 0 to 2 s:\n   v_max = \u222b_0^2 (4 - 2t) dt = [ 4t - t\u00b2 ]_0^2 = 4(2) - 2\u00b2 = 8 - 4 = 4 m/s.\n5. Therefore, the maximum velocity attained is 4 m/s.",
+      "finalAnswer": "Option A: 4 m/s",
+      "whyOtherOptionsWrong": "Option B forgets to subtract t\u00b2 (gives 4*2 = 8). Option C is half of v_max. Option D is 4\u00b2."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-136",
+    "questionNumber": 136,
+    "question": "A bullet enters a wooden plank with a velocity of 100 m/s and emerges with a velocity of 60 m/s. If the plank provides a uniform resistive retardation, what is the velocity of the bullet after traversing the first half of the thickness of the plank?",
+    "options": {
+      "A": "20\u221a17 m/s \u2248 82.46 m/s",
+      "B": "80 m/s",
+      "C": "70 m/s",
+      "D": "40\u221a2 m/s"
+    },
+    "optionsList": [
+      "20\u221a17 m/s \u2248 82.46 m/s",
+      "80 m/s",
+      "70 m/s",
+      "40\u221a2 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor constant retardation across distance d, the velocity at the spatial midpoint d/2 is the root-mean-square: v_mid = \u221a((u\u00b2 + v\u00b2) / 2).\n\n2. GIVEN:\nu = 100 m/s, v = 60 m/s.\n\n3. FORMULA / PRINCIPLE:\nv_mid = \u221a((u\u00b2 + v\u00b2) / 2)\n\n4. STEP-BY-STEP SOLUTION:\n1. Using v\u00b2 = u\u00b2 - 2ad across the entire thickness d:\n   60\u00b2 = 100\u00b2 - 2ad => 2ad = 10000 - 3600 = 6400.\n2. Across the first half of the thickness (d/2):\n   v_mid\u00b2 = u\u00b2 - 2a(d/2) = u\u00b2 - ad.\n3. Since ad = 6400 / 2 = 3200:\n   v_mid\u00b2 = 10000 - 3200 = 6800.\n   (Notice this equals (100\u00b2 + 60\u00b2) / 2 = (10000 + 3600)/2 = 13600/2 = 6800!).\n4. Compute v_mid:\n   v_mid = \u221a6800 = \u221a(400 * 17) = 20\u221a17 m/s.\n5. Since \u221a17 \u2248 4.123:\n   v_mid \u2248 20 * 4.123 = 82.46 m/s.\n6. Hence, Option A is the exact answer.\n\n5. FINAL ANSWER:\nOption A: 20\u221a17 m/s \u2248 82.46 m/s\n\n6. QUICK TIP:\nAt the spatial midpoint of any uniformly retarding medium, v_mid = \u221a((u\u00b2 + v\u00b2)/2) = \u221a(6800) = 20\u221a17 m/s \u2248 82.5 m/s. Never take the arithmetic average (80 m/s)!",
+    "solutionStructured": {
+      "concept": "For constant retardation across distance d, the velocity at the spatial midpoint d/2 is the root-mean-square: v_mid = \u221a((u\u00b2 + v\u00b2) / 2).",
+      "given": "u = 100 m/s, v = 60 m/s.",
+      "formula": "v_mid = \u221a((u\u00b2 + v\u00b2) / 2)",
+      "stepByStep": "1. Using v\u00b2 = u\u00b2 - 2ad across the entire thickness d:\n   60\u00b2 = 100\u00b2 - 2ad => 2ad = 10000 - 3600 = 6400.\n2. Across the first half of the thickness (d/2):\n   v_mid\u00b2 = u\u00b2 - 2a(d/2) = u\u00b2 - ad.\n3. Since ad = 6400 / 2 = 3200:\n   v_mid\u00b2 = 10000 - 3200 = 6800.\n   (Notice this equals (100\u00b2 + 60\u00b2) / 2 = (10000 + 3600)/2 = 13600/2 = 6800!).\n4. Compute v_mid:\n   v_mid = \u221a6800 = \u221a(400 * 17) = 20\u221a17 m/s.\n5. Since \u221a17 \u2248 4.123:\n   v_mid \u2248 20 * 4.123 = 82.46 m/s.\n6. Hence, Option A is the exact answer.",
+      "finalAnswer": "Option A: 20\u221a17 m/s \u2248 82.46 m/s",
+      "whyOtherOptionsWrong": "Option B is the arithmetic average (100 + 60)/2 = 80 m/s (common trap!). Option C and D are incorrect guesses."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-137",
+    "questionNumber": 137,
+    "question": "A particle moves along a straight line such that its acceleration is given by a = -k \u221av, where k is a positive constant and v is velocity. If the initial velocity is v\u2080 at t = 0, how long does the particle take to come to a complete stop?",
+    "options": {
+      "A": "2 \u221av\u2080 / k",
+      "B": "\u221av\u2080 / k",
+      "C": "v\u2080 / (2k)",
+      "D": "2 v\u2080 / k"
+    },
+    "optionsList": [
+      "2 \u221av\u2080 / k",
+      "\u221av\u2080 / k",
+      "v\u2080 / (2k)",
+      "2 v\u2080 / k"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSeparate variables in dv/dt = -k \u221av and integrate from v\u2080 to 0.\n\n2. GIVEN:\ndv/dt = -k v^(1/2), v(0) = v\u2080, v(t_stop) = 0.\n\n3. FORMULA / PRINCIPLE:\n\u222b_{v\u2080}^0 dv / \u221av = -k \u222b_0^{t_stop} dt\n\n4. STEP-BY-STEP SOLUTION:\n1. Separate variables:\n   dv / \u221av = -k dt\n   v^(-1/2) dv = -k dt.\n2. Integrate from v\u2080 to 0:\n   \u222b_{v\u2080}^0 v^(-1/2) dv = -k \u222b_0^{t_stop} dt.\n3. Evaluate the antiderivative of v^(-1/2):\n   [ 2 v^(1/2) ]_{v\u2080}^0 = -k t_stop\n   0 - 2 \u221av\u2080 = -k t_stop\n   -2 \u221av\u2080 = -k t_stop.\n4. Solve for stopping time:\n   t_stop = 2 \u221av\u2080 / k.\n5. Therefore, the stopping time is 2 \u221av\u2080 / k.\n\n5. FINAL ANSWER:\nOption A: 2 \u221av\u2080 / k\n\n6. QUICK TIP:\nIntegration with power rule: \u222b v^(-1/2) dv = 2\u221av. Limits from v\u2080 to 0 yield \u0394t = 2\u221av\u2080 / k.",
+    "solutionStructured": {
+      "concept": "Separate variables in dv/dt = -k \u221av and integrate from v\u2080 to 0.",
+      "given": "dv/dt = -k v^(1/2), v(0) = v\u2080, v(t_stop) = 0.",
+      "formula": "\u222b_{v\u2080}^0 dv / \u221av = -k \u222b_0^{t_stop} dt",
+      "stepByStep": "1. Separate variables:\n   dv / \u221av = -k dt\n   v^(-1/2) dv = -k dt.\n2. Integrate from v\u2080 to 0:\n   \u222b_{v\u2080}^0 v^(-1/2) dv = -k \u222b_0^{t_stop} dt.\n3. Evaluate the antiderivative of v^(-1/2):\n   [ 2 v^(1/2) ]_{v\u2080}^0 = -k t_stop\n   0 - 2 \u221av\u2080 = -k t_stop\n   -2 \u221av\u2080 = -k t_stop.\n4. Solve for stopping time:\n   t_stop = 2 \u221av\u2080 / k.\n5. Therefore, the stopping time is 2 \u221av\u2080 / k.",
+      "finalAnswer": "Option A: 2 \u221av\u2080 / k",
+      "whyOtherOptionsWrong": "Option B forgets the factor of 2 from integrating v^(-1/2). Option C and D have wrong dimensions."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-138",
+    "questionNumber": 138,
+    "question": "For the particle in Q137 with a = -k \u221av and initial velocity v\u2080, what is the total distance covered before it comes to rest?",
+    "options": {
+      "A": "2 v\u2080^(3/2) / (3k)",
+      "B": "v\u2080^(3/2) / k",
+      "C": "v\u2080\u00b2 / (2k)",
+      "D": "4 v\u2080^(3/2) / (3k)"
+    },
+    "optionsList": [
+      "2 v\u2080^(3/2) / (3k)",
+      "v\u2080^(3/2) / k",
+      "v\u2080\u00b2 / (2k)",
+      "4 v\u2080^(3/2) / (3k)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nUse a = v (dv/dx) = -k \u221av to relate velocity directly to displacement x, then integrate.\n\n2. GIVEN:\na = v (dv/dx) = -k \u221av, v = v\u2080 at x = 0, v = 0 at x = s_total.\n\n3. FORMULA / PRINCIPLE:\nv (dv/dx) = -k \u221av => \u221av dv = -k dx.\n\n4. STEP-BY-STEP SOLUTION:\n1. Write acceleration in terms of position:\n   v (dv/dx) = -k v^(1/2).\n2. Divide both sides by v^(1/2) (for v > 0):\n   v^(1/2) dv = -k dx.\n3. Integrate from initial state (x = 0, v = v\u2080) to rest (x = s, v = 0):\n   \u222b_{v\u2080}^0 v^(1/2) dv = -k \u222b_0^s dx.\n4. Evaluate the antiderivative of v^(1/2):\n   [ (2/3) v^(3/2) ]_{v\u2080}^0 = -k s\n   0 - (2/3) v\u2080^(3/2) = -k s\n   -(2/3) v\u2080^(3/2) = -k s.\n5. Solve for total stopping distance s:\n   s = 2 v\u2080^(3/2) / (3k).\n6. Therefore, the total distance covered is 2 v\u2080^(3/2) / (3k).\n\n5. FINAL ANSWER:\nOption A: 2 v\u2080^(3/2) / (3k)\n\n6. QUICK TIP:\nUse a = v dv/dx to find stopping distance directly without finding time t first: \u222b \u221av dv = -k \u222b dx => s = 2 v\u2080^(3/2) / (3k).",
+    "solutionStructured": {
+      "concept": "Use a = v (dv/dx) = -k \u221av to relate velocity directly to displacement x, then integrate.",
+      "given": "a = v (dv/dx) = -k \u221av, v = v\u2080 at x = 0, v = 0 at x = s_total.",
+      "formula": "v (dv/dx) = -k \u221av => \u221av dv = -k dx.",
+      "stepByStep": "1. Write acceleration in terms of position:\n   v (dv/dx) = -k v^(1/2).\n2. Divide both sides by v^(1/2) (for v > 0):\n   v^(1/2) dv = -k dx.\n3. Integrate from initial state (x = 0, v = v\u2080) to rest (x = s, v = 0):\n   \u222b_{v\u2080}^0 v^(1/2) dv = -k \u222b_0^s dx.\n4. Evaluate the antiderivative of v^(1/2):\n   [ (2/3) v^(3/2) ]_{v\u2080}^0 = -k s\n   0 - (2/3) v\u2080^(3/2) = -k s\n   -(2/3) v\u2080^(3/2) = -k s.\n5. Solve for total stopping distance s:\n   s = 2 v\u2080^(3/2) / (3k).\n6. Therefore, the total distance covered is 2 v\u2080^(3/2) / (3k).",
+      "finalAnswer": "Option A: 2 v\u2080^(3/2) / (3k)",
+      "whyOtherOptionsWrong": "Option B misses the factor of 2/3. Option C is for constant acceleration. Option D has 4/3."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-139",
+    "questionNumber": 139,
+    "question": "A body moves in a straight line with an initial velocity of 5 m/s. Its acceleration is given by a = 2v\u00b2 (in m/s\u00b2), where v is velocity. What is its velocity after traveling a distance of 1 meter?",
+    "options": {
+      "A": "5 e\u00b2 m/s",
+      "B": "5 e m/s",
+      "C": "10 m/s",
+      "D": "25 m/s"
+    },
+    "optionsList": [
+      "5 e\u00b2 m/s",
+      "5 e m/s",
+      "10 m/s",
+      "25 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nExpress acceleration as v (dv/dx) = 2v\u00b2, simplify to dv/v = 2 dx, and integrate.\n\n2. GIVEN:\na = 2v\u00b2, u = 5 m/s, x = 1 m.\n\n3. FORMULA / PRINCIPLE:\nv (dv/dx) = 2v\u00b2 => dv / v = 2 dx.\n\n4. STEP-BY-STEP SOLUTION:\n1. Substitute a = v (dv/dx):\n   v (dv/dx) = 2v\u00b2.\n2. Divide both sides by v (v \u2260 0):\n   dv/dx = 2v.\n3. Separate variables:\n   dv / v = 2 dx.\n4. Integrate from x = 0 (v = 5) to x = 1 m (v):\n   \u222b_5^v (1/v) dv = 2 \u222b_0^1 dx.\n5. Evaluate:\n   ln(v / 5) = 2(1) = 2\n   v / 5 = e\u00b2\n   v = 5 e\u00b2 m/s.\n6. (Since e\u00b2 \u2248 7.389, v \u2248 36.95 m/s).\n\n5. FINAL ANSWER:\nOption A: 5 e\u00b2 m/s\n\n6. QUICK TIP:\nWhenever a = k v\u00b2, the spatial derivative dv/dx = kv, which integrates directly to an exponential in x: v = v\u2080 e^(kx).",
+    "solutionStructured": {
+      "concept": "Express acceleration as v (dv/dx) = 2v\u00b2, simplify to dv/v = 2 dx, and integrate.",
+      "given": "a = 2v\u00b2, u = 5 m/s, x = 1 m.",
+      "formula": "v (dv/dx) = 2v\u00b2 => dv / v = 2 dx.",
+      "stepByStep": "1. Substitute a = v (dv/dx):\n   v (dv/dx) = 2v\u00b2.\n2. Divide both sides by v (v \u2260 0):\n   dv/dx = 2v.\n3. Separate variables:\n   dv / v = 2 dx.\n4. Integrate from x = 0 (v = 5) to x = 1 m (v):\n   \u222b_5^v (1/v) dv = 2 \u222b_0^1 dx.\n5. Evaluate:\n   ln(v / 5) = 2(1) = 2\n   v / 5 = e\u00b2\n   v = 5 e\u00b2 m/s.\n6. (Since e\u00b2 \u2248 7.389, v \u2248 36.95 m/s).",
+      "finalAnswer": "Option A: 5 e\u00b2 m/s",
+      "whyOtherOptionsWrong": "Option B has power e\u00b9 instead of e\u00b2. Options C and D assume linear relationships."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-140",
+    "questionNumber": 140,
+    "question": "A particle moving along the x-axis experiences an acceleration given by a = -\u03c9\u00b2 x. If the particle is released from rest at x = A, what is its speed when it reaches x = A / 2?",
+    "options": {
+      "A": "(\u221a3 / 2) \u03c9 A",
+      "B": "(1 / 2) \u03c9 A",
+      "C": "\u03c9 A",
+      "D": "(\u221a2 / 2) \u03c9 A"
+    },
+    "optionsList": [
+      "(\u221a3 / 2) \u03c9 A",
+      "(1 / 2) \u03c9 A",
+      "\u03c9 A",
+      "(\u221a2 / 2) \u03c9 A"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn SHM with a = -\u03c9\u00b2 x, velocity as a function of position is given by v = \u03c9 \u221a(A\u00b2 - x\u00b2).\n\n2. GIVEN:\na = -\u03c9\u00b2 x, released from rest at x = A (amplitude), x = A/2.\n\n3. FORMULA / PRINCIPLE:\nv = \u03c9 \u221a(A\u00b2 - x\u00b2)\n\n4. STEP-BY-STEP SOLUTION:\n1. Integrate v dv = -\u03c9\u00b2 x dx from (x = A, v = 0) to (x, v):\n   \u222b_0^v v dv = -\u03c9\u00b2 \u222b_A^x x dx\n   v\u00b2 / 2 = -\u03c9\u00b2 [ x\u00b2 / 2 - A\u00b2 / 2 ] = (\u03c9\u00b2 / 2) (A\u00b2 - x\u00b2)\n   v\u00b2 = \u03c9\u00b2 (A\u00b2 - x\u00b2).\n2. Substitute x = A / 2:\n   v\u00b2 = \u03c9\u00b2 [ A\u00b2 - (A/2)\u00b2 ] = \u03c9\u00b2 [ A\u00b2 - A\u00b2/4 ] = \u03c9\u00b2 (3A\u00b2 / 4).\n3. Take the square root:\n   v = \u03c9 \u221a(3A\u00b2 / 4) = (\u221a3 / 2) \u03c9 A.\n4. Therefore, the speed at x = A/2 is (\u221a3 / 2) \u03c9 A \u2248 0.866 \u03c9A.\n\n5. FINAL ANSWER:\nOption A: (\u221a3 / 2) \u03c9 A\n\n6. QUICK TIP:\nStandard SHM relation: v = \u03c9\u221a(A\u00b2 - x\u00b2). At x = A/2, v = \u03c9\u221a(A\u00b2 - A\u00b2/4) = (\u221a3/2) \u03c9A.",
+    "solutionStructured": {
+      "concept": "In SHM with a = -\u03c9\u00b2 x, velocity as a function of position is given by v = \u03c9 \u221a(A\u00b2 - x\u00b2).",
+      "given": "a = -\u03c9\u00b2 x, released from rest at x = A (amplitude), x = A/2.",
+      "formula": "v = \u03c9 \u221a(A\u00b2 - x\u00b2)",
+      "stepByStep": "1. Integrate v dv = -\u03c9\u00b2 x dx from (x = A, v = 0) to (x, v):\n   \u222b_0^v v dv = -\u03c9\u00b2 \u222b_A^x x dx\n   v\u00b2 / 2 = -\u03c9\u00b2 [ x\u00b2 / 2 - A\u00b2 / 2 ] = (\u03c9\u00b2 / 2) (A\u00b2 - x\u00b2)\n   v\u00b2 = \u03c9\u00b2 (A\u00b2 - x\u00b2).\n2. Substitute x = A / 2:\n   v\u00b2 = \u03c9\u00b2 [ A\u00b2 - (A/2)\u00b2 ] = \u03c9\u00b2 [ A\u00b2 - A\u00b2/4 ] = \u03c9\u00b2 (3A\u00b2 / 4).\n3. Take the square root:\n   v = \u03c9 \u221a(3A\u00b2 / 4) = (\u221a3 / 2) \u03c9 A.\n4. Therefore, the speed at x = A/2 is (\u221a3 / 2) \u03c9 A \u2248 0.866 \u03c9A.",
+      "finalAnswer": "Option A: (\u221a3 / 2) \u03c9 A",
+      "whyOtherOptionsWrong": "Option B assumes linear speed change. Option C is maximum speed at origin x = 0. Option D is for x = A/\u221a2."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-141",
+    "questionNumber": 141,
+    "question": "The velocity of a particle moving in a straight line is given by v\u00b2 = 2 - 3x (in SI units). What is the acceleration of the particle?",
+    "options": {
+      "A": "-1.5 m/s\u00b2",
+      "B": "-3 m/s\u00b2",
+      "C": "+1.5 m/s\u00b2",
+      "D": "-0.75 m/s\u00b2"
+    },
+    "optionsList": [
+      "-1.5 m/s\u00b2",
+      "-3 m/s\u00b2",
+      "+1.5 m/s\u00b2",
+      "-0.75 m/s\u00b2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDifferentiating v\u00b2 with respect to x yields 2v (dv/dx) = 2a, so a = (1/2) d(v\u00b2)/dx.\n\n2. GIVEN:\nv\u00b2 = 2 - 3x.\n\n3. FORMULA / PRINCIPLE:\na = (1/2) * d(v\u00b2)/dx\n\n4. STEP-BY-STEP SOLUTION:\n1. Differentiate both sides of v\u00b2 = 2 - 3x with respect to x:\n   d(v\u00b2)/dx = d(2 - 3x)/dx = -3.\n2. By the chain rule: d(v\u00b2)/dx = 2v (dv/dx) = 2a.\n3. Therefore: 2a = -3 => a = -3 / 2 = -1.5 m/s\u00b2.\n4. Notice that acceleration is completely constant and negative (-1.5 m/s\u00b2).\n5. (Compare with v\u00b2 = u\u00b2 + 2as: 2a = -3 => a = -1.5 m/s\u00b2).\n\n5. FINAL ANSWER:\nOption A: -1.5 m/s\u00b2\n\n6. QUICK TIP:\nWhenever given v\u00b2 as a linear function of x (v\u00b2 = c\u2081 + c\u2082 x), acceleration is CONSTANT and equals c\u2082 / 2!",
+    "solutionStructured": {
+      "concept": "Differentiating v\u00b2 with respect to x yields 2v (dv/dx) = 2a, so a = (1/2) d(v\u00b2)/dx.",
+      "given": "v\u00b2 = 2 - 3x.",
+      "formula": "a = (1/2) * d(v\u00b2)/dx",
+      "stepByStep": "1. Differentiate both sides of v\u00b2 = 2 - 3x with respect to x:\n   d(v\u00b2)/dx = d(2 - 3x)/dx = -3.\n2. By the chain rule: d(v\u00b2)/dx = 2v (dv/dx) = 2a.\n3. Therefore: 2a = -3 => a = -3 / 2 = -1.5 m/s\u00b2.\n4. Notice that acceleration is completely constant and negative (-1.5 m/s\u00b2).\n5. (Compare with v\u00b2 = u\u00b2 + 2as: 2a = -3 => a = -1.5 m/s\u00b2).",
+      "finalAnswer": "Option A: -1.5 m/s\u00b2",
+      "whyOtherOptionsWrong": "Option B forgets to divide by 2. Option C has positive sign. Option D divides by 4."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-142",
+    "questionNumber": 142,
+    "question": "A body starts from rest and moves with uniform acceleration. If it covers a distance s\u2081 in the first 10 seconds and an additional distance s\u2082 in the next 10 seconds, what is the relation between s\u2081 and s\u2082?",
+    "options": {
+      "A": "s\u2082 = 3 s\u2081",
+      "B": "s\u2082 = 2 s\u2081",
+      "C": "s\u2082 = 4 s\u2081",
+      "D": "s\u2082 = s\u2081"
+    },
+    "optionsList": [
+      "s\u2082 = 3 s\u2081",
+      "s\u2082 = 2 s\u2081",
+      "s\u2082 = 4 s\u2081",
+      "s\u2082 = s\u2081"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nGalileo's law of odd numbers: The distances covered in successive equal time intervals by a body starting from rest under uniform acceleration are in the ratio 1 : 3 : 5 : 7...\n\n2. GIVEN:\nu = 0, constant acceleration a, t\u2081 = 10 s, t\u2082 = 20 s total.\n\n3. FORMULA / PRINCIPLE:\ns\u2081 = (1/2) a (10\u00b2); s_total(20) = (1/2) a (20\u00b2); s\u2082 = s_total - s\u2081.\n\n4. STEP-BY-STEP SOLUTION:\n1. Distance in first 10 seconds:\n   s\u2081 = (1/2) a (10)\u00b2 = 50a.\n2. Total distance in 20 seconds:\n   s_total = (1/2) a (20)\u00b2 = 200a.\n3. Distance covered in the next 10 seconds (from t = 10 s to t = 20 s):\n   s\u2082 = s_total - s\u2081 = 200a - 50a = 150a.\n4. Compare s\u2082 and s\u2081:\n   s\u2082 / s\u2081 = 150a / 50a = 3.\n5. Therefore: s\u2082 = 3 s\u2081.\n\n5. FINAL ANSWER:\nOption A: s\u2082 = 3 s\u2081\n\n6. QUICK TIP:\nGalileo's odd-number rule: 1st interval = 1 unit, 2nd interval = 3 units, 3rd interval = 5 units. So s\u2082 = 3 s\u2081 always!",
+    "solutionStructured": {
+      "concept": "Galileo's law of odd numbers: The distances covered in successive equal time intervals by a body starting from rest under uniform acceleration are in the ratio 1 : 3 : 5 : 7...",
+      "given": "u = 0, constant acceleration a, t\u2081 = 10 s, t\u2082 = 20 s total.",
+      "formula": "s\u2081 = (1/2) a (10\u00b2); s_total(20) = (1/2) a (20\u00b2); s\u2082 = s_total - s\u2081.",
+      "stepByStep": "1. Distance in first 10 seconds:\n   s\u2081 = (1/2) a (10)\u00b2 = 50a.\n2. Total distance in 20 seconds:\n   s_total = (1/2) a (20)\u00b2 = 200a.\n3. Distance covered in the next 10 seconds (from t = 10 s to t = 20 s):\n   s\u2082 = s_total - s\u2081 = 200a - 50a = 150a.\n4. Compare s\u2082 and s\u2081:\n   s\u2082 / s\u2081 = 150a / 50a = 3.\n5. Therefore: s\u2082 = 3 s\u2081.",
+      "finalAnswer": "Option A: s\u2082 = 3 s\u2081",
+      "whyOtherOptionsWrong": "Option B assumes doubling. Option C is the total distance s_total = 4 s\u2081. Option D assumes uniform speed."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-143",
+    "questionNumber": 143,
+    "question": "In the previous question, if the body continues to accelerate uniformly for another 10 seconds (from t = 20 s to t = 30 s) covering distance s\u2083, what is the ratio s\u2081 : s\u2082 : s\u2083?",
+    "options": {
+      "A": "1 : 3 : 5",
+      "B": "1 : 2 : 3",
+      "C": "1 : 4 : 9",
+      "D": "1 : 2 : 4"
+    },
+    "optionsList": [
+      "1 : 3 : 5",
+      "1 : 2 : 3",
+      "1 : 4 : 9",
+      "1 : 2 : 4"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nGalileo's law of odd numbers for equal time intervals starting from rest under constant acceleration: \u0394s_n \u221d (2n - 1).\n\n2. GIVEN:\nSuccessive equal time intervals of 10 s from rest.\n\n3. FORMULA / PRINCIPLE:\ns_n \u221d (2n - 1) => s\u2081 : s\u2082 : s\u2083 = 1 : 3 : 5.\n\n4. STEP-BY-STEP SOLUTION:\n1. For 1st interval (n = 1): 2(1) - 1 = 1.\n2. For 2nd interval (n = 2): 2(2) - 1 = 3.\n3. For 3rd interval (n = 3): 2(3) - 1 = 5.\n4. Therefore, the ratio of distances covered in successive equal time intervals is:\n   s\u2081 : s\u2082 : s\u2083 = 1 : 3 : 5.\n\n5. FINAL ANSWER:\nOption A: 1 : 3 : 5\n\n6. QUICK TIP:\nGalileo's odd number ratio: 1 : 3 : 5 : 7 : 9... The cumulative distances are 1 : 4 : 9 : 16 (squares of time)!",
+    "solutionStructured": {
+      "concept": "Galileo's law of odd numbers for equal time intervals starting from rest under constant acceleration: \u0394s_n \u221d (2n - 1).",
+      "given": "Successive equal time intervals of 10 s from rest.",
+      "formula": "s_n \u221d (2n - 1) => s\u2081 : s\u2082 : s\u2083 = 1 : 3 : 5.",
+      "stepByStep": "1. For 1st interval (n = 1): 2(1) - 1 = 1.\n2. For 2nd interval (n = 2): 2(2) - 1 = 3.\n3. For 3rd interval (n = 3): 2(3) - 1 = 5.\n4. Therefore, the ratio of distances covered in successive equal time intervals is:\n   s\u2081 : s\u2082 : s\u2083 = 1 : 3 : 5.",
+      "finalAnswer": "Option A: 1 : 3 : 5",
+      "whyOtherOptionsWrong": "Option B is linear ratio. Option C is the ratio of CUMULATIVE distances (1 : 4 : 9), not incremental intervals. Option D is powers of 2."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-144",
+    "questionNumber": 144,
+    "question": "A particle moving with uniform acceleration along a straight line passes three consecutive points A, B, and C with velocities u, v, and w respectively. If AB = BC, then which of the following relations is correct?",
+    "options": {
+      "A": "v\u00b2 = (u\u00b2 + w\u00b2) / 2",
+      "B": "v = (u + w) / 2",
+      "C": "v = \u221a(u w)",
+      "D": "2/v = 1/u + 1/w"
+    },
+    "optionsList": [
+      "v\u00b2 = (u\u00b2 + w\u00b2) / 2",
+      "v = (u + w) / 2",
+      "v = \u221a(u w)",
+      "2/v = 1/u + 1/w"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor constant acceleration, the velocity at the midpoint between two points of equal distance is the root-mean-square: v = \u221a((u\u00b2 + w\u00b2) / 2).\n\n2. GIVEN:\nAB = BC = s, constant acceleration a.\n\n3. FORMULA / PRINCIPLE:\nv\u00b2 = u\u00b2 + 2as; w\u00b2 = v\u00b2 + 2as => w\u00b2 - v\u00b2 = v\u00b2 - u\u00b2.\n\n4. STEP-BY-STEP SOLUTION:\n1. For segment AB: v\u00b2 - u\u00b2 = 2as.\n2. For segment BC: w\u00b2 - v\u00b2 = 2as.\n3. Since AB = BC = s and acceleration a is constant, both right-hand sides are equal:\n   v\u00b2 - u\u00b2 = w\u00b2 - v\u00b2.\n4. Rearrange:\n   2v\u00b2 = u\u00b2 + w\u00b2\n   v\u00b2 = (u\u00b2 + w\u00b2) / 2.\n5. Therefore: v = \u221a((u\u00b2 + w\u00b2) / 2).\n6. Hence, Option A is the correct relation.\n\n5. FINAL ANSWER:\nOption A: v\u00b2 = (u\u00b2 + w\u00b2) / 2\n\n6. QUICK TIP:\nEqual distances => v\u00b2 in arithmetic progression (v\u00b2 is average of u\u00b2 and w\u00b2). Equal times => v in arithmetic progression (v = (u+w)/2).",
+    "solutionStructured": {
+      "concept": "For constant acceleration, the velocity at the midpoint between two points of equal distance is the root-mean-square: v = \u221a((u\u00b2 + w\u00b2) / 2).",
+      "given": "AB = BC = s, constant acceleration a.",
+      "formula": "v\u00b2 = u\u00b2 + 2as; w\u00b2 = v\u00b2 + 2as => w\u00b2 - v\u00b2 = v\u00b2 - u\u00b2.",
+      "stepByStep": "1. For segment AB: v\u00b2 - u\u00b2 = 2as.\n2. For segment BC: w\u00b2 - v\u00b2 = 2as.\n3. Since AB = BC = s and acceleration a is constant, both right-hand sides are equal:\n   v\u00b2 - u\u00b2 = w\u00b2 - v\u00b2.\n4. Rearrange:\n   2v\u00b2 = u\u00b2 + w\u00b2\n   v\u00b2 = (u\u00b2 + w\u00b2) / 2.\n5. Therefore: v = \u221a((u\u00b2 + w\u00b2) / 2).\n6. Hence, Option A is the correct relation.",
+      "finalAnswer": "Option A: v\u00b2 = (u\u00b2 + w\u00b2) / 2",
+      "whyOtherOptionsWrong": "Option B applies when time intervals are equal (t_AB = t_BC). Option C is geometric mean. Option D is harmonic mean."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-145",
+    "questionNumber": 145,
+    "question": "A body accelerates uniformly from rest for time t\u2081 and then retards uniformly to rest in time t\u2082. What is the ratio of the distance traveled during acceleration to the distance traveled during retardation?",
+    "options": {
+      "A": "t\u2081 : t\u2082",
+      "B": "t\u2081\u00b2 : t\u2082\u00b2",
+      "C": "t\u2082 : t\u2081",
+      "D": "1 : 1 always"
+    },
+    "optionsList": [
+      "t\u2081 : t\u2082",
+      "t\u2081\u00b2 : t\u2082\u00b2",
+      "t\u2082 : t\u2081",
+      "1 : 1 always"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn both phases, motion is triangular on the v-t graph with the same peak velocity v_max. Distance is the area under each triangle.\n\n2. GIVEN:\nAccelerates from 0 to v_max in t\u2081, retards from v_max to 0 in t\u2082.\n\n3. FORMULA / PRINCIPLE:\ns\u2081 = (1/2) v_max t\u2081; s\u2082 = (1/2) v_max t\u2082; s\u2081 / s\u2082 = t\u2081 / t\u2082.\n\n4. STEP-BY-STEP SOLUTION:\n1. In the acceleration phase: initial speed = 0, final speed = v_max, time = t\u2081.\n   Distance s\u2081 = (1/2) v_max t\u2081.\n2. In the retardation phase: initial speed = v_max, final speed = 0, time = t\u2082.\n   Distance s\u2082 = (1/2) v_max t\u2082.\n3. Take the ratio of distances:\n   s\u2081 / s\u2082 = [ (1/2) v_max t\u2081 ] / [ (1/2) v_max t\u2082 ] = t\u2081 / t\u2082.\n4. Therefore, the ratio of distances is simply t\u2081 : t\u2082.\n\n5. FINAL ANSWER:\nOption A: t\u2081 : t\u2082\n\n6. QUICK TIP:\nSince both phases have the same peak velocity v_max, average speed in each phase is identical (v_max / 2). Distance = average speed * time \u221d time!",
+    "solutionStructured": {
+      "concept": "In both phases, motion is triangular on the v-t graph with the same peak velocity v_max. Distance is the area under each triangle.",
+      "given": "Accelerates from 0 to v_max in t\u2081, retards from v_max to 0 in t\u2082.",
+      "formula": "s\u2081 = (1/2) v_max t\u2081; s\u2082 = (1/2) v_max t\u2082; s\u2081 / s\u2082 = t\u2081 / t\u2082.",
+      "stepByStep": "1. In the acceleration phase: initial speed = 0, final speed = v_max, time = t\u2081.\n   Distance s\u2081 = (1/2) v_max t\u2081.\n2. In the retardation phase: initial speed = v_max, final speed = 0, time = t\u2082.\n   Distance s\u2082 = (1/2) v_max t\u2082.\n3. Take the ratio of distances:\n   s\u2081 / s\u2082 = [ (1/2) v_max t\u2081 ] / [ (1/2) v_max t\u2082 ] = t\u2081 / t\u2082.\n4. Therefore, the ratio of distances is simply t\u2081 : t\u2082.",
+      "finalAnswer": "Option A: t\u2081 : t\u2082",
+      "whyOtherOptionsWrong": "Option B assumes time-squared dependence (which only applies if acceleration was the same). Option C inverts the ratio. Option D requires t\u2081 = t\u2082."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-146",
+    "questionNumber": 146,
+    "question": "In the previous question, what is the ratio of the magnitude of acceleration a\u2081 to the magnitude of retardation a\u2082?",
+    "options": {
+      "A": "t\u2082 : t\u2081",
+      "B": "t\u2081 : t\u2082",
+      "C": "t\u2081\u00b2 : t\u2082\u00b2",
+      "D": "1 : 1"
+    },
+    "optionsList": [
+      "t\u2082 : t\u2081",
+      "t\u2081 : t\u2082",
+      "t\u2081\u00b2 : t\u2082\u00b2",
+      "1 : 1"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSince v_max = a\u2081 t\u2081 = a\u2082 t\u2082, the accelerations are inversely proportional to the respective time intervals.\n\n2. GIVEN:\nv_max = a\u2081 t\u2081 = a\u2082 t\u2082.\n\n3. FORMULA / PRINCIPLE:\na\u2081 / a\u2082 = t\u2082 / t\u2081\n\n4. STEP-BY-STEP SOLUTION:\n1. Acceleration: a\u2081 = v_max / t\u2081.\n2. Retardation: a\u2082 = v_max / t\u2082.\n3. Take the ratio:\n   a\u2081 / a\u2082 = (v_max / t\u2081) / (v_max / t\u2082) = t\u2082 / t\u2081.\n4. Therefore, acceleration and time are inversely proportional: a\u2081 : a\u2082 = t\u2082 : t\u2081.\n\n5. FINAL ANSWER:\nOption A: t\u2082 : t\u2081\n\n6. QUICK TIP:\nShort time means steep slope means large acceleration! a \u221d 1/t for the same \u0394v.",
+    "solutionStructured": {
+      "concept": "Since v_max = a\u2081 t\u2081 = a\u2082 t\u2082, the accelerations are inversely proportional to the respective time intervals.",
+      "given": "v_max = a\u2081 t\u2081 = a\u2082 t\u2082.",
+      "formula": "a\u2081 / a\u2082 = t\u2082 / t\u2081",
+      "stepByStep": "1. Acceleration: a\u2081 = v_max / t\u2081.\n2. Retardation: a\u2082 = v_max / t\u2082.\n3. Take the ratio:\n   a\u2081 / a\u2082 = (v_max / t\u2081) / (v_max / t\u2082) = t\u2082 / t\u2081.\n4. Therefore, acceleration and time are inversely proportional: a\u2081 : a\u2082 = t\u2082 : t\u2081.",
+      "finalAnswer": "Option A: t\u2082 : t\u2081",
+      "whyOtherOptionsWrong": "Option B inverts the ratio. Option C squares the times. Option D assumes equal times."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Acceleration and retardation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  }
+]

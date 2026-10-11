@@ -79,27 +79,27 @@ export function renderBeginnerRoadmapView(selectedStepId?: string): string {
       </nav>
 
       <!-- TOP NAVIGATION & SINGLE-TOPIC MASTERY PROGRESS BAR -->
-      <header class="p-4 sm:p-6 rounded-3xl bg-slate-900 text-white shadow-xl relative overflow-hidden border border-slate-800">
+      <header class="p-4 sm:p-6 rounded-3xl bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-sm dark:shadow-xl relative overflow-hidden border border-slate-200/90 dark:border-slate-800">
         <div class="flex flex-wrap items-center justify-between gap-3">
           <div class="space-y-1">
-            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-[11px] font-bold uppercase tracking-wider">
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-500/20 border border-emerald-200 dark:border-emerald-400/30 text-emerald-700 dark:text-emerald-300 text-[11px] font-bold uppercase tracking-wider">
               <span>🌱</span> Zero-Overwhelm Beginner Path
             </div>
-            <h1 class="text-xl sm:text-2xl font-black tracking-tight text-white">
+            <h1 class="text-xl sm:text-2xl font-black tracking-tight text-slate-900 dark:text-white">
               Topic ${activeStep.stepNumber} of ${ROADMAP_STEPS.length}
             </h1>
           </div>
 
           <div class="flex items-center gap-3">
             <div class="text-right">
-              <span class="text-xs text-slate-300 block font-medium">Roadmap Mastery</span>
-              <span class="text-lg font-black text-emerald-400">${metrics.percentage}% (${metrics.completedCount}/${metrics.total} Mastered)</span>
+              <span class="text-xs text-slate-500 dark:text-slate-300 block font-medium">Roadmap Mastery</span>
+              <span class="text-lg font-black text-emerald-600 dark:text-emerald-400">${metrics.percentage}% (${metrics.completedCount}/${metrics.total} Mastered)</span>
             </div>
           </div>
         </div>
 
         <!-- Linear Progress Tracker -->
-        <div class="w-full h-2.5 bg-slate-800 rounded-full overflow-hidden mt-4">
+        <div class="w-full h-2.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden mt-4">
           <div 
             class="h-full bg-gradient-to-r from-emerald-500 to-teal-400 rounded-full transition-all duration-700 ease-out" 
             style="width: ${metrics.percentage}%"
@@ -107,23 +107,23 @@ export function renderBeginnerRoadmapView(selectedStepId?: string): string {
         </div>
 
         <!-- Prev / Next quick jumps for previously unlocked topics -->
-        <div class="flex items-center justify-between mt-3 text-xs text-slate-400">
+        <div class="flex items-center justify-between mt-3 text-xs text-slate-500 dark:text-slate-400">
           <div>
             ${prevStep ? `
               <button 
                 type="button"
-                class="btn-nav-step text-slate-300 hover:text-white flex items-center gap-1 transition-colors cursor-pointer"
+                class="btn-nav-step text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white flex items-center gap-1 transition-colors cursor-pointer"
                 data-step-id="${prevStep.id}"
               >
                 <span>← Revisit Topic ${prevStep.stepNumber}: ${prevStep.topicTitle.substring(0, 24)}...</span>
               </button>
-            ` : '<span class="text-slate-600">Start of Journey</span>'}
+            ` : '<span class="text-slate-400 dark:text-slate-600">Start of Journey</span>'}
           </div>
           <div>
             ${isCurrentStepCompleted && nextStep ? `
               <button 
                 type="button"
-                class="btn-nav-step text-emerald-400 hover:text-emerald-300 font-bold flex items-center gap-1 transition-colors cursor-pointer"
+                class="btn-nav-step text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 dark:hover:text-emerald-300 font-bold flex items-center gap-1 transition-colors cursor-pointer"
                 data-step-id="${nextStep.id}"
               >
                 <span>Jump to Topic ${nextStep.stepNumber} →</span>
@@ -134,17 +134,17 @@ export function renderBeginnerRoadmapView(selectedStepId?: string): string {
       </header>
 
       <!-- DIRECT ACCESS TO COMPLETE TOPIC MODULE CALLOUT -->
-      <div class="p-4 sm:p-5 rounded-3xl bg-gradient-to-r from-blue-700 via-indigo-700 to-blue-800 text-white flex flex-col sm:flex-row items-center justify-between gap-4 shadow-lg border border-blue-600/40">
+      <div class="p-4 sm:p-5 rounded-3xl bg-blue-50 dark:bg-gradient-to-r dark:from-blue-700 dark:via-indigo-700 dark:to-blue-800 text-slate-900 dark:text-white flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm dark:shadow-lg border border-blue-200/80 dark:border-blue-600/40">
         <div class="flex items-center gap-3.5">
-          <div class="w-12 h-12 rounded-2xl bg-white/15 backdrop-blur flex items-center justify-center text-2xl shrink-0 border border-white/20">
+          <div class="w-12 h-12 rounded-2xl bg-blue-100 dark:bg-white/15 dark:backdrop-blur flex items-center justify-center text-2xl shrink-0 border border-blue-200 dark:border-white/20">
             📖
           </div>
           <div>
             <div class="flex items-center gap-2">
-              <span class="px-2 py-0.5 rounded-md bg-blue-400/30 text-blue-100 text-[10px] font-black uppercase tracking-wider">Full Learning Suite</span>
-              <span class="text-xs text-blue-200">Exhaustive NCERT Notes</span>
+              <span class="px-2 py-0.5 rounded-md bg-blue-100 dark:bg-blue-400/30 text-blue-800 dark:text-blue-100 text-[10px] font-black uppercase tracking-wider">Full Learning Suite</span>
+              <span class="text-xs text-blue-700 dark:text-blue-200">Exhaustive NCERT Notes</span>
             </div>
-            <div class="text-sm sm:text-base font-black text-white mt-0.5">
+            <div class="text-sm sm:text-base font-black text-slate-900 dark:text-white mt-0.5">
               Complete Chapter & In-Depth Notes for ${activeStep.topicTitle}
             </div>
           </div>
@@ -152,7 +152,7 @@ export function renderBeginnerRoadmapView(selectedStepId?: string): string {
         <a
           href="#topic/${activeStep.topicId}"
           id="btn-direct-topic-access"
-          class="w-full sm:w-auto px-5 py-3 rounded-2xl bg-white hover:bg-blue-50 text-blue-800 font-black text-xs sm:text-sm transition-all shadow-md hover:shadow-lg text-center shrink-0 flex items-center justify-center gap-2 cursor-pointer"
+          class="w-full sm:w-auto px-5 py-3 rounded-2xl bg-blue-600 hover:bg-blue-700 dark:bg-white dark:hover:bg-blue-50 text-white dark:text-blue-800 font-black text-xs sm:text-sm transition-all shadow-md hover:shadow-lg text-center shrink-0 flex items-center justify-center gap-2 cursor-pointer"
         >
           <span>Open Complete Topic Study Page →</span>
         </a>

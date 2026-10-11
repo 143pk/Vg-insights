@@ -1,0 +1,2275 @@
+=== PAGE 1 ===
+NATIONAL ELIGIBILITY CUM ENTRANCE   TEST
+Phase-2 (Code: AA-PP-WW )
+Answers & Solutions
+Physics
+1.   Planck's constant (h), speed of light in vacuum (c) and Newton's gravitational constant (G) are three
+fundamental constants. Which of the following combinations of these has the dimension of length?
+√୦ୋ
+(A)    య
+ୡ మ
+√୦ୋ
+(B)    ఱ
+ୡ మ
+୦ୡ
+(C)   ට
+ୋ
+ୋୡ
+(D)   ට  య
+୦ మ
+Solution: (A)
+ୟ ୠ ୡ
+L ∝ h c G
+ሾLሿ ଵ   ଵ ଶ ି ଵ   ୟ ି   ୠ ଵ ି ଷ ି ଶ   ୡ ൌ ሾM L T   ሿ ሾLT ଵ   ሿ ሾM     L T   ሿ
+Solving,
+ଵ ଵ ଷ
+a ൌ   , c ൌ   , b ൌ െ
+ଶ   ଶ   ଶ
+√୦ୋ
+⇒ L ൌ    య
+ୡ మ
+2.   Two cars P and Q start from a point at the same time in a straight line and their positions are
+ଶ   ଶ
+represented by   X ୔ ሺtሻ ൌ at ൅ bt and   X   ୕ ሺtሻ ൌ ft െ t . At what time do the cars have the same velocity?
+ୟି୤
+(A)
+ଵାୠ
+ୟା୤
+(B)
+ଶሺୠିଵ   ሻ
+ୟା୤
+(C)
+ଶሺଵାୠሻ
+୤ିୟ
+(D)
+ଶሺଵାୠሻ
+Solution: (D)
+୶ ୢ ౌ
+v ୔   ൌ   ൌ a ൅ 2bt
+୲ ୢ
+ୢ ୶ ్
+v ୕   ൌ   ൌ f െ 2t
+୲ ୢ
+v ୔   ൌ v ୕
+⇒ a ൅ 2bt ൌ f െ 2t
+
+=== PAGE 2 ===
+2t ൅ 2bt ൌ f െ a
+୤ିୟ
+⇒ t ൌ
+ଶሺୠାଵሻ
+ଶ
+3.   In the given figure,   a ൌ 15 m/s represents the total acceleration of a particle moving in the clockwise
+direction in a circle of radius   R ൌ 2.5   m at a given instant of time. The speed of the particle is
+(A) 4.5 m/s
+(B) 5.0 m/s
+(C) 5.7 m/s
+(D) 6.2 m/s
+Solution: (C)
+మ
+୭   ୴
+a cos 30 ൌ
+୰
+√ଷ ୴ మ
+⇒ 15   ൌ
+ଶ    ଶ.ହ
+⇒ v ൌ 5.7   m/s
+୭
+4.   A rigid ball of mass m strikes a rigid wall at   60 and gets reflected without loss of speed as shown in the
+figure below. The value of impulse imparted by the wall on the ball will be
+(A)   mV
+(B)   2mV
+୫୚
+(C)
+ଶ
+
+=== PAGE 3 ===
+୫୚
+(D)
+ଷ
+Solution: (A)
+หJ Ԧห ൌ หP ሬ ሬԦ ሬ ሬԦ ଶ   െ P ଵ ห ൌ 2mV cos θ ൌ mV
+ି ଵ
+5.   A bullet of mass 10 g moving horizontally with a velocity of   400 ms   strikes a wood block of mass 2 kg
+which is suspended by light inextensible string of length 5 m. As a result, the centre of gravity of the
+block found to rise a vertical distance of 10 cm. The speed of the bullet after it emerges out horizontally
+from the block will be
+ି ଵ
+(A)   100 ms
+ି ଵ
+(B)   80 ms
+ି ଵ
+(C)   120 ms
+ି ଵ
+(D)   160 ms
+Solution: (C)
+Apply conservation of linear momentum.
+CM rises through height h, so its velocity after collision   ൌ ඥ2gh
+0.01 ൈ 400 ൌ 2 ൈ ඥ2gh   ൅ 0.01 ൈ v
+⇒ v ൌ 120   m/s
+6.   Two identical balls A and B having velocities of 0.5 m/s and –0.3 m/s respectively collide elastically in
+one dimension. The velocities of B and A after the collision respectively will be
+(A) – 0.5 m/s and 0.3 m/s
+(B) 0.5 m/s and – 0.3 m/s
+(C) – 0.3 m/s and 0.5 m/s
+(D) 0.3 m/s and 0.5 m/s
+Solution: (B)
+They will exchange their velocity, so
+v ୆   ൌ 0.5   m/s and   v ୅   ൌ െ0.3   m/s
+7.   A particle moves from a point   ሺെ 2ı̂ ൅ 5ȷ̂ሻ   to   ൫4ȷ̂ ൅ 3k ෠൯   when a force of   ሺ4ı̂ ൅ 3ȷ̂ሻN   is applied. How much
+work has been done by the force?
+(A) 8 J
+(B) 11 J
+(C) 5 J
+
+=== PAGE 4 ===
+(D) 2 J
+Solution: (C)
+ሬԦ  S   ൌ r Ԧ
+ଶ   െ r Ԧ ଵ   ൌ ൫4ȷ̂ ൅ 3k
+෠൯ െ ሺെ 2ı̂ ൅ 5ȷ̂ሻ
+ൌ 2ı̂ െ ȷ̂ ൅ 3k ෠
+ሬԦ  F   ൌ 4ı̂ ൅ 3ȷ̂
+W ൌ F ሬԦ . s Ԧ ൌ 8 െ 3 ൌ 5 J
+8.   Two rotating bodies A and B of masses m and 2m with moments of inertia   I ୅   and   I ୆ ሺI ୆   ൐ I ୅ ሻ   have
+equal kinetic energy of rotation. If   L ୅   and   L ୆ be their angular momenta respectively, then
+୐ ా
+(A)   L ୅   ൌ
+ଶ
+(B)   L ୅   ൌ 2L ୆
+(C)   L ୆   ൐ L ୅
+(D)   L ୅   ൐ L ୆
+Solution: (C)
+୐ మ
+E ൌ
+ଶ୍
+⇒ E ୅   ൌ E ୆
+୐ మ ఽ ୐ మ ా
+⇒    ൌ
+ଶ୍   ఽ  ଶ୍ ా
+I ୆   ൐ I ୅   ⇒ L ୆   ൐ L ୅
+9. A solid sphere of mass m and radius R is rotating about its diameter. A solid cylinder of the same mass
+and   same   radius   is   also   rotating   about   its   geometrical   axis   with   an   angular   speed   twice   that   of   the
+୉ ౩ ౦ౢ ౞ ౛ ౨ ౛
+sphere. The ratio of their kinetic energies of rotation   ൬  ൰   will be
+୉  ౙ ౯ ౟ ౤ ౚ ౛ ౨
+(A) 2 : 3
+(B) 1 : 5
+(C) 1 : 4
+(D) 3 : 1
+Solution: (B)
+1 2 ଶ ଶ
+E ቀ mR ቁ ω ୱ୮୦ୣ୰ୣ 2   5   1
+ൌ  ൌ
+E ୡ୷୪୧୬ୢୣ୰  1 1
+ቀ mR ଶ ቁ ሺ2ωሻ ଶ
+5
+2   2
+
+=== PAGE 5 ===
+10. A light rod of length l has two masses   m ଵ   and   m ଶ   attached to its two ends. The moment of inertia of the
+system about an axis perpendicular to the rod and passing through the centre of mass is
+୫ భ ୫ మ ଶ
+(A)    l
+୫ భ ା୫ మ
+୫ భ ା୫ మ ଶ
+(B)    l
+୫ భ ୫ మ
+(C)   ሺm
+ଶ
+ଵ   ൅ m ଶ ሻl
+ଶ
+(D)   √m ଵ m ଶ l
+Solution: (A)
+୫ మ ୪ ୫ భ ୪
+x ଵ   ൌ    and   x ൌ
+୫   భ ା୫ ଶ
+మ ୫ భ ା୫ మ
+ଶ   ଶ   ୫ భ ୫ మ ଶ
+I ൌ m ଵ x ଵ ൅ m ଶ x ଶ ൌ    l
+୫ భ ା୫ మ
+11. Starting from the centre of the earth having radius R, the variation of g (acceleration due to gravity) is
+shown by
+(A)
+(B)
+(C)
+
+=== PAGE 6 ===
+(D)
+Solution: (B)
+ୋ୑୰ୖ
+g ୧୬   ൌ    య   ⇒ g ୧୬   ∝ r
+ୋ୑ ଵ
+g ୭୳୲   ൌ   ⇒ g
+୰ మ   ୭୳୲
+∝
+୰ మ
+12. A satellite of mass m is orbiting the earth (of radius R) at a height h from its surface. The total energy of
+the satellite in terms of   g ଴ , the value of acceleration due to gravity at the earth's surface, is
+୫୥ బ   ୖ మ
+(A)
+ଶሺୖା୦   ሻ
+୫୥ బ   ୖ మ
+(B)   െ
+ଶሺୖା୦   ሻ
+ଶ୫   మ బ   ୖ
+(C)
+ୖ ା୦
+ଶ୫   మ బ   ୖ
+(D)   െ
+ୖ ା୦
+Solution: (B)
+ୋ୑୫
+Total energy   ൌ െ
+ଶ୰
+ଶ
+Here,   r ൌ R ൅ h   and   GM ൌ g ଴ R
+
+=== PAGE 7 ===
+୫୥ బ   ୖ మ
+⇒ E ൌ െ
+ଶሺୖା୦   ሻ
+13. A rectangular film of liquid is extended from   ሺ4 cm ൈ 2 cmሻ   to   ሺ5 cm ൈ 4 cmሻ . If the work done is
+ି ସ
+3 ൈ 10   J , the value of the surface tension of the liquid is
+ି ଵ
+(A)   0.250 Nm
+ି ଵ
+(B)   0.125 Nm
+ି ଵ
+(C)   0.2 Nm
+ି ଵ
+(D)   8.0 Nm
+Solution: (B)
+W ൌ 2ሺA ୤   െ A ୧ ሻT
+୛
+⇒ T ൌ
+ሺ୅ ౜   ି ୅   ౟ ሻൈଶ
+ଷൈଵ଴ షర   ୎
+ൌ
+ଶሾହൈସൈଵ଴ షర   ି ସൈଶൈଵ଴   షర ሿ
+ି ଵ
+ൌ 0.125 Nm
+14. Three liquids of densities   ρ ଵ , ρ ଶ   and   ρ ଷ   (with   ρ ଵ   ൐ ρ ଶ   ൐ ρ ଷ ሻ   , having the same value of surface tension
+T, rise to the same height in three identical capillaries. The angles of contact   θ ଵ , θ ଶ   and   θ ଷ   obey
+஠
+(A)   ൐ θ ൐ θ
+ଶ   ଵ   ଶ
+൐ θ ଷ   ൒ 0
+஠
+(B)   0 ൑ θ ଵ   ൏ θ ଶ   ൏ θ ଷ   ൏
+ଶ
+஠
+(C)   ൏ θ ൏ θ
+ଶ   ଵ   ଶ
+൏ θ ଷ   ൏ π
+஠
+(D)   π ൐ θ ଵ   ൐ θ ଶ   ൐ θ ଷ   ൐
+ଶ
+Solution: (B)
+ଶ୘ ୡ୭ୱ ஘
+h ൌ
+୰஡୥
+⇒ r ∝ cos θ   (as T, h and r are constants)
+ρ ↑ ⇒ θ ↓
+θ ଵ   ൏ θ ଶ   ൏ θ ଷ
+஠
+Its rise so   0 ൑ θ ଵ   ൏ θ ଶ   ൏ θ ଷ   ൏
+ଶ
+
+=== PAGE 8 ===
+୭ ୭
+One of these is at   100 C , while the other one is at   0 C . If the two bodies are brought into contact, then
+assuming no heat loss, the final common temperature is
+୭
+(A)   50 C
+୭
+(B) More than   50 C
+୭ ୭
+(C) Less than   50 C   but greater than   0 C
+୭
+(D)   0 C
+Solution: (B)
+Loss of heat by hot body = Gain of heat by cold body
+T ୡ ∆θ ∆θ
+భ   ଵ
+ൌ T ୡ
+మ   ଶ
+T େ ൐ T ൏ ∆θ
+భ   ୡ
+⇒ ∆θ
+మ   ଵ   ଶ
+16. A body cools from a temperature 3T to 2T in 10 minutes. The room temperature is T. Assume that
+Newton's law of cooling is applicable. The temperature of the body at the end of next 10 minutes will be
+଻
+(A)   T
+ସ
+ଷ
+(B)   T
+ଶ
+ସ
+(C)   T
+ଷ
+(D)   T
+Solution: (B)
+୘ భ   ି ୘   మ ୘ భ ା୘ మ
+ൌ K ቀ െ T ቁ
+∆୲    ଶ   ଴
+ଷ୘ିଶ୘
+ൌ Kሺ2.5T െ Tሻ
+ଵ଴
+୘
+⇒   ൌ Kሺ1.5ሻT
+ଵ଴
+ଵ
+K ൌ
+ଵହ
+୘ି୶ ୘ା୶
+Now,   ൌ K ቀ െ Tቁ
+ଵ଴   ଶ
+ଷ୘
+Solving   x ൌ
+ଶ
+ଷ
+17. One mole of an ideal monatomic gas undergoes a process described by the equation   PV ൌ   constant.
+The heat capacity of the gas during this process is
+ଷ
+(A)   R
+ଶ
+
+=== PAGE 9 ===
+ହ
+(B)   R
+ଶ
+(C)   2R
+(D)   R
+Solution: (D)
+ଷ
+PV ൌ   constant polytropic process with   n ൌ 3
+ୖ
+C ൌ C ୴   ൅
+ଵି୬
+ୖ ୖ
+ൌ   ൅
+୰ିଵ   ଵି୬
+ୖ ୖ
+ൌ   ఱ ൅   ൌ R
+ି ଵ   ଵିଷ
+య
+୭ ୭
+18. The temperature inside a refrigerator is   t ଶ   C   and the room temperature is   t ଵ   C . The amount of
+heat delivered to the room for each joule of electrical energy consumed ideally will be
+୲ భ
+(A)
+୲ భ   ି ୲   మ
+୲ భ ାଶ଻ଷ
+(B)
+୰ భ   ି ୲   మ
+୲ మ ାଶ଻ଷ
+(C)
+୲ భ   ି ୲   మ
+୲ భ ା୲ మ
+(D)
+୲ భ ାଶ଻ଷ
+Solution: (B)
+୕ మ ଵ
+K ൌ   ൌ
+୛    ౪భ ି ଵ
+౪మ
+୲ మ ୛
+Q ଶ   ൌ
+୲ భ   ି ୲   మ
+୲ మ ୛
+Q ଵ   ൌ Q ଶ   ൅ W ൌ    ൅ W
+୲ భ   ି ୲   మ
+୲ భ ୛ ୲ భ ାଶ଻ଷ
+ൌ    ൌ
+୲ భ   ି ୲   మ ୲ భ   ି ୲   మ
+19. A given sample of an ideal gas occupies a volume V at a pressure P and absolute temperature T. The
+mass of each molecule of the gas is m. Which of the following gives the density of the gas?
+୔
+(A)
+ሺ୩୘ሻ
+
+=== PAGE 10 ===
+୔୫
+(B)
+ሺ୩୘ሻ
+୔
+(C)
+ሺ୩୘୚ሻ
+(D)   mkT
+Solution: (B)
+୔ ୩୘
+ൌ
+஡   ୫
+୔୫
+ρ ൌ
+୩୘
+20. A body of mass m is attached to the lower end of a spring whose upper end is fixed. The spring has
+negligible mass. When the mass m is slightly pulled down and released, it oscillates with a time period
+of 3 s. When the mass m is increased by 1 kg, the time period of oscillations becomes 5 s. The value of
+m in kg is
+ଷ
+(A)
+ସ
+ସ
+(B)
+ଷ
+ଵ଺
+(C)
+ଽ
+ଽ
+(D)
+ଵ଺
+Solution: (D)
+୫
+T ଵ   ൌ 3 ൌ 2πට
+୏
+୫ାଵ
+Then,   T ଶ   ൌ 5 ൌ 2πට
+୏
+ଷ ୫
+Dividing,   ൌ ට
+ହ   ୫ାଵ
+ଽ ୫
+ൌ
+ଶହ   ୫ାଵ
+9m ൅ 9 ൌ 25 m
+16m ൌ 9
+ଽ
+m ൌ
+ଵ଺
+21. The second overtone of an open organ pipe has the same frequency as the first overtone of a closed
+pipe L metre long. The length of the open pipe will be
+(A) L
+
+=== PAGE 11 ===
+(B) 2L
+୐
+(C)
+ଶ
+(D) 4L
+Solution: (B)
+ଷ୚ ଷ୚
+ൌ
+ଶ୐ భ ସ୐
+⇒ L ଵ   ൌ 2L
+22. Three sound waves of equal amplitudes have frequencies   ሺn – 1ሻ, n, ሺn ൅ 1ሻ . They superimpose to give
+beats. The number of beats produced per second will be
+(A) 1
+(B) 4
+(C) 3
+(D) 2
+Solution: (D)
+ሺn – 1ሻ   and   ሺn ൅ 1ሻ   suppose to form frequency n
+n and n will be at resonance
+n െ 1   and   n →   produce 1 beat
+n ൅ 1   and   n →   produce 1 beat
+Number of beats formed are ‘2’.
+୭   ହ
+23. An electric dipole is placed at an angle of   30 with an electric field intensity   2 ൈ 10 N/C. It experiences
+a torque equal to 4 N m. The charge on the dipole, if the dipole length is 2 cm, is
+(A) 8 mC
+(B) 2 mC
+(C) 5 mC
+(D)   7 μC
+Solution: (B)
+τ ൌ PE sin θ
+⇒ τ ൌ qIE sin θ
+த୍
+⇒ q ൌ
+୉ ୱ୧୬ ஘
+ସ
+ൌ
+ଶൈଵ଴ షమ
+ൌ 2 mC
+ൈ଴.ହൈଶൈଵ଴ ఱ
+
+=== PAGE 12 ===
+24. A parallel-plate capacitor of area A, plate separation d and capacitance C is filled with four dielectric
+materials having dielectric constants   k ଵ , k ଶ , k ଷ   and   k ସ   as shown in the figure below. If a single dielectric
+material is to be used to have the same capacitance C in this capacitor, then its dielectric constant k is
+given by
+(A)   k ൌ k ଵ   ൅ k ଶ   ൅ k ଷ   ൅ 3k ସ
+ଶ
+(B)   k ൌ   ሺk
+ଷ   ଵ
+൅ k ଶ   ൅ k ଷ ሻ ൅ 2k ସ
+ଶ ଷ ଵ
+(C)   ൌ    ൅
+୩   ୩ భ ା୩ మ ା୩ య ୩ ర
+ଵ ଵ ଵ ଵ ଷ
+(D)   ൌ    ൅    ൅    ൅
+୩   ୩ భ ୩ మ ୩ య ଶ୩ ర
+Solution: (C)
+k ଵ , k ଶ   and   k ଷ   are in parallel so Arithmetic mean.
+୩ భ ା୩ మ ା୩ య
+k   ୣ ୯   ൌ
+ଷ
+k   ୣ ୯   is in series with   k ସ . So harmonic mean.
+ଶ ଵ ଵ
+⇒   ൌ    ൅
+୩   ୩ ౛౧ ୩ ర
+ଶ ଷ ଵ
+⇒   ൌ    ൅
+୩   ୩ భ ା୩ మ ା୩ య ୩ ర
+25. The potential difference   ሺV ୅   െ V ୆ ሻ   between the points A and B in the given figure is
+(A)   െ3V
+(B)   ൅3V
+(C)   ൅6V
+(D)   ൅9V
+Solution: (D)
+
+=== PAGE 13 ===
+V ୅   െ V ୆   ൌ ሺ2 ൈ 2ሻ ൅ 3 ൅ ሺ2 ൈ 1ሻ
+ൌ 4 ൅ 3 ൅ 2
+ൌ 9V
+26. A filament bulb (500 W, 100 V) is to be used in a 230 V main supply. When a resistance R is connected in
+series, it works perfectly and the bulb consumes 500 W. The value of R is
+(A)   230 Ω
+(B)   46 Ω
+(C)   26 Ω
+(D)   13 Ω
+Solution: (C)
+୔ ହ଴଴
+I ൌ   ൌ   ൌ 5 A
+୚   ଵ଴଴
+Voltage across resistance R will be
+230 െ 100 ൌ 130 V
+ଵଷ଴
+R ൌ   ൌ 26 Ω
+ହ
+27. A long wire carrying a steady current is bent into a circular loop of one turn. The magnetic field at the
+centre of the loop is B. It is then bent into a circular coil of n turns. The magnetic field at the centre of
+this coil of n turns will be
+(A) nB
+ଶ
+(B)   n B
+(C) 2nB
+ଶ
+(D)   2n B
+Solution: (B)
+ஜ బ ୍ ᇱ
+B ൌ   , when made n turns radius becomes   r
+ଶ୰
+ᇱ   ᇱ   ୰
+n ൈ 2πr ൌ 2πr ⇒ r ൌ
+୬
+ᇱ   ஜ బ ୬୍ ଶ  ஜ బ ୍ ଶ
+Now,   B ൌ   ൌ n
+ଶ୰ ᇲ
+ൌ n B
+ଶ୰
+
+=== PAGE 14 ===
+28. A bar magnet is hung by a thin cotton thread in a uniform horizontal magnetic field and is in equilibrium
+୭
+state. The energy required to rotate it by   60 is W. Now the torque required to keep the magnet in this
+new position is
+୛
+(A)
+√ଷ
+(B)   √3 W
+√ଷ   ୛
+(C)
+ଶ
+ଶ୛
+(D)
+√ଷ
+Solution: (B)
+W ൌ PEሺcos θ ଵ   െ cos θ ଶ ሻ
+୭
+W ൌ PEሺcos 0 െ cos 60 ሻ
+୔୉
+ൌ
+ଶ
+⇒ PE ൌ 2W
+୭
+τ ൌ PE sin θ ൌ 2W sin 60 ൌ √3 W
+29. An electron is moving in a circular path under the influence of a transverse magnetic field of   3.57 ൈ
+ି ଶ   ଵଵ
+10   T . If the value of e/m is   1.76 ൈ 10 C/kg, the frequency of revolution of the electron is
+(A) 1 GHz
+(B) 100 MHz
+(C) 62.8 MHz
+(D) 6.28 MHz
+Solution: (A)
+୯୆ ଵ.଻଺ൈଵ଴ భభ ൈଷ.ହ଻ൈଵ଴ షమ
+f ൌ   ൌ
+ଶ஠୫    ଶൈଷ.ଵସ
+ଽ
+ൌ 10 Hz ൌ 1 GHz
+30. Which of the following combinations should be selected for better tuning of an L-C-R circuit used for
+communication?
+(A)   R ൌ 20 Ω, L ൌ 1.5 H, C ൌ 35 μF
+(B)   R ൌ 25 Ω, L ൌ 2.5 H, C ൌ 45 μF
+(C)   R ൌ 15 Ω, L ൌ 3.5 H, C ൌ 30 μF
+(D)   R ൌ 25 Ω, L ൌ 1.5 H, C ൌ 45 μF
+
+=== PAGE 15 ===
+Solution: (C)
+ୖ
+Better tuning means low bandwidth   ൌ
+୐
+31. A uniform magnetic field is restricted within a region of radius r. The magnetic field changes with time
+୆ሬሬԦୢ  ୢ
+at a rate   . Loop 1 of radius   R ൐ r   encloses the region r and loop 2 of radius R is outside the region of
+୲
+magnetic field as shown in the figure below. Then the e.m.f. generated is
+(A) Zero in loop 1 and zero in loop 2
+ୢ ୆ሬሬԦୢ ଶ   ୆ሬሬԦୢ ୢ ଶ
+(B)   െ   πr in loop 1 and   െ   πr in loop 2
+୲   ୲
+ୢ ୆ሬሬԦୢ ଶ
+(C)   െ   πr in loop 1 and zero in loop 2
+୲
+ୢ ୆ሬሬԦୢ ଶ
+(D)   െ   πr in loop 1 and zero in loop 2
+୲
+Solution: (D)
+ଶ
+Magnetic flux linked with area of loop 1 is   πr
+୆ ୢ ሬሬԦ ଶ
+So emf in loop 1 is   െ   πr .
+୲ ୢ
+Magnetic flux linked with area of loop 2 is zero
+So emf in loop 2 = 0
+32. The potential differences across the resistance, capacitance and inductance are 80 V, 40 V and 100 V
+respectively in an L-C-R circuit. The power factor of this circuit is
+(A) 0.4
+(B) 0.5
+(C) 0.8
+(D) 1.0
+Solution: (C)
+R V ୖ 80
+cos ϕ ൌ  ൌ  ൌ
+z    V   ඥ80 ଶ   ൅ ሺ100 െ 40ሻ ଶ
+80
+ൌ  ൌ 0.8
+100
+
+=== PAGE 16 ===
+33. A   100 Ω   resistance and a capacitor of   100 Ω   reactance are connected in series across a 220 V source.
+When the capacitor is 50% charged, the peak value of the displacement current is
+(A) 2.2 A
+(B) 11 A
+(C) 4.4A
+(D)   11√2 A
+Solution: (A)
+R ൌ 100 Ω, X ୡ   ൌ 100 Ω
+200 V 220 V
+I ୫ୟ୶   ൌ  ൌ  ൌ 2.2 A
+100   100 Ω
+ଷ
+34. Two identical glass   ቀμ ୥   ൌ   ቁ   equiconvex lenses of focal length f each are kept in contact. The space
+ଶ
+ସ
+between the two lenses is filled with water   ቀμ ୵   ൌ   ቁ . The focal length of the combination is
+ଷ
+୤
+(A)
+ଷ
+(B)   f
+ସ୤
+(C)
+ଷ
+ଷ୤
+(D)
+ସ
+Solution: (D)
+1 2 1 3
+ൌ ൫μ ୥   െ 1൯  ൌ  , ൬μ ୥   ൌ  ൰ , R ൌ f
+f   R   R   2
+1 2 2 2
+ൌ െሺμ ୵   െ 1ሻ  ൌ െ  ൌ െ
+f ଵ R   3R   3f
+1 1 1 1 1 1 2
+ൌ  ൅  ൅   ൌ  ൅  െ
+f ୣ ୯ f   f   f ଵ R   R   3R
+1 1 1 2
+ൌ  ൅  ൌ
+f ୣ ୯ f   f   3f
+1 2 2
+ൌ  െ
+f ୣ ୯ f   3f
+1 4
+ൌ
+f ୣ ୯ 3f
+3f
+f ୣ ୯   ൌ
+4
+
+=== PAGE 17 ===
+35. An air bubble in a glass slab with refractive index 1.5 (near normal incidence) is 5 cm deep when viewed
+from one surface and 3 cm deep when viewed from the opposite face. The thickness (in cm) of the slab
+is
+(A) 8
+(B) 10
+(C) 12
+(D) 16
+Solution: (C)
+d ൌ ሺd ଵ   ൅ d ଶ ሻμ
+ൌ 1.5ሺ5 ൅ 3ሻ ൌ 12   cm
+36. The interference pattern is obtained with two coherent light sources of intensity ratio n. In the
+୍ ౣ ౗౮   ି୍ ౣ ౟౤
+interference pattern, the ratio    will be
+୍ ౣ ౗౮   ା୍   ౣ ౟౤
+√୬
+(A)
+୬ାଵ
+ଶ√୬
+(B)
+୬ାଵ
+√௡
+(C)
+ሺ௡ାଵሻ మ
+ଶ√୬
+(D)
+ሺ୬ାଵሻ మ
+Solution: (B)
+୍  భ
+ൌ n
+୍  మ
+ଶ ଶ
+I ୫ୟ୶   ൌ ൫ඥI ଵ   ൅ ඥI ଶ ൯  ൌ ൫√n   ൅ 1൯ I ଶ
+ଶ ଶ
+I ୫୧୬   ൌ ൫ඥI ଵ   െ ඥI ଶ ൯  ൌ ൫√n   െ 1൯ I ଶ
+୍ ౣ ౗౮   ି୍ ౣ ౟౤ ସ√୬ ଶ√୬
+ൌ   ൌ
+୍ ౣ ౗౮   ା୍   ౣ ౟౤ ଶሺ୬ାଵሻ   ୬ାଵ
+37. A person can see clearly objects only when they lie between 50 cm and 400 cm from his eyes. In order
+to increase the maximum distance of distinct vision to infinity, the type and power of the correcting
+lens, the person has to use, will be
+(A) Convex, +2.25 diopter
+(B) Concave,   െ   0.25 diopter
+
+=== PAGE 18 ===
+(C) Concave,   െ   0.2 diopter
+(D) Convex, + 0.15 diopter
+Solution: (B)
+Maximum distance of distinct vision = 400 cm. So image of object at infinity is to be formed at 400
+cm.
+Use lens formula
+ଵ ଵ ଵ
+െ   ൌ
+୴   ୳   ୤
+ଵି ଵ ଵ
+െ   ൌ
+ସ଴   ஶ   ୤
+P ൌ െ0.25 D
+38. A linear aperture whose width is 0.02 cm is placed immediately in front of a lens of focal length 60 cm.
+ି ହ
+The aperture is illuminated normally by a parallel beam of wavelength   5 ൈ 10   cm . The distance of the
+first dark band of the diffraction pattern from the centre of the screen is
+(A) 0.10 cm
+(B) 0.25 cm
+(C) 0.20 cm
+(D) 0.15 cm
+Solution: (D)
+஛ ୷
+θ ൌ   ൌ
+ୟ   ୤
+୤஛
+y ൌ
+ୟ
+39. Electrons of mass m with de-Broglie wavelength   λ   fall on the target in an X-ray tube. The cutoff
+wavelength   ሺλ ଴ ሻ   of the emitted X-ray is
+ଶ୫ୡ஛ మ
+(A)   λ ଴   ൌ
+୦
+ଶ୦
+(B)   λ ଴   ൌ
+୫ୡ
+ଶ୫ మ ୡ మ ஛ య
+(C)   λ ଴   ൌ
+୦ మ
+(D)   λ ଴   ൌ λ
+
+=== PAGE 19 ===
+Solution: (A)
+୦ ୮ మ ୦ మ ୦ୡ
+Momentum   P ൌ   ⇒ E ൌ   ⇒   ൌ
+஛    ଶ୫    ଶ୫஛ మ   ஛ బ
+୦ୡ ଶ
+⇒ λ ଴   ൌ
+୦ మ
+2mλ
+ଶ୫ୡ஛ మ
+ൌ
+୦
+40. Photons with energy 5 eV are incident on a cathode C in a photoelectric cell. The maximum energy of
+emitted photoelectrons is 2 eV. When photons of energy 6 eV are incident on C, no photoelectrons will
+reach the anode A, if the stopping potential of A relative to C is
+(A)   ൅3 V
+(B)   ൅4 V
+(C)   െ1 V
+(D)   െ3 V
+Solution: (D)
+E ୫ୟ୶   ൌ E െ ϕ
+2 eV ൌ 5 eV െ ϕ ⇒ ϕ ൌ 3 eV
+Now   eV ଴   ൌ E െ ϕ
+ൌ 6 eV െ 3 eV ൌ 3 eV
+So stopping potential is   െ3 V
+41. If an electron in a hydrogen atom jumps from the 3rd orbit to the 2nd orbit, it emits a photon of
+wavelength   λ . When it jumps from the 4th orbit to the 3rd orbit, the corresponding wavelength of the
+photon will be
+ଵ଺
+(A)   λ
+ଶହ
+ଽ
+(B)   λ
+ଵ଺
+ଶ଴
+(C)   λ
+଻
+ଶ଴
+(D)   λ
+ଵଷ
+Solution: (C)
+ଵୖ
+λ ൌ   భ భ
+ቀ
+మ మ
+ି ቁ
+య మ
+ᇱ   ଵୖ
+λ ൌ   భ భ
+ቀ   ି
+య మ
+ቁ
+ర మ
+
+=== PAGE 20 ===
+భ భ
+஛ ᇲ ቀ   మ మ   ି య మ ቁ ᇱ   ଶ଴஛
+ൌ   ⇒ λ
+஛   భ భ
+ൌ
+ቀ
+య మ
+ି
+ర మ
+ቁ ଻
+42. The half-life of a radioactive substance is 30 minutes. The time (in minutes) taken between 40% decay
+and 85% decay of the same radioactive substance is
+(A) 15
+(B) 30
+(C) 45
+(D) 60
+Solution: (D)
+Number of active nuclei falls from 60% to 15%
+ଵ
+So sample becomes   th
+ସ
+1
+ൌ  th
+2 ଶ
+So number of half-lives = 2
+Time   t ൌ 2 ൈ 30 ൌ 60   minute
+43. For CE transistor amplifier, the audio signal voltage across the collector resistance of   2 kΩ   is 4 V. If the
+current amplification factor of the transistor is 100 and the base resistance is   1 k Ω   then the input signal
+voltage is
+(A) 10 mV
+(B) 20 mV
+(C) 30 mV
+(D) 15 mV
+Solution: (B)
+R େ   ൌ 2 kΩ V ଴   ൌ 4 V
+ସ୚ୖ ସ୚
+I େ   ൌ    ൌ   ൌ 2 mA
+ి ଶ୩
+୍ ి
+β ൌ   ൌ 100
+୍ ా
+୍ ి ି ହ
+⇒ I ୆   ൌ   ൌ 2 ൈ 10   A
+ଵ଴଴
+ି ହ
+V ୧୬   ൌ I ୆ R ୧   ൌ 2 ൈ 10   ൈ 1 kΩ ൌ 20 mV
+
+=== PAGE 21 ===
+44. The given circuit has two ideal diodes connected as shown in the figure below. The current flowing
+through the resistance   R ଵ   will be
+(A) 2.5 A
+(B) 10.0 A
+(C) 1.43 A
+(D) 3.13 A
+Solution: (A)
+D ଵ   is reverses biased
+D ଶ   is forward biased
+10V
+I ൌ   ൌ 2.5 A
+ሺ2 ൅ 2ሻΩ
+45. What is the output Y in the following circuit, when all the three inputs A, B, C are first 0 and then 1?
+(A) 0, 1
+(B) 0, 0
+(C) 1, 0
+(D) 1, 1
+Solution: (C)
+Output   Y ൌ ሺA ∙ Bሻ ∙ C   ൌ A   ൅ B   ൅ C
+When   A, B, C   are   0 → Y ൌ 1
+When   A, B, C   are   1 → Y ൌ 0
+Chemistry
+46. Which one of the following compounds shows the presence of intramolecular hydrogen bond?
+
+=== PAGE 22 ===
+(A)   H ଶ O ଶ
+(B) HCN
+(C) Cellulose
+(D) Concentrated acetic acid
+Solution: (C)
+Fact.
+୫୭୪ୢ
+47. The molar conductivity of a   0.5   solution of   AgNO   5.76 ൈ
+୫   య   ଷ
+with electrolytic conductivity of
+ି ଷ   ି ଵ
+10   S cm   at 298 K
+ଶ
+(A)   2.88 S cm /mol
+ଶ
+(B)   11.52 S cm /mol
+ଶ
+(C)   0.086 S cm /mol
+ଶ
+(D)   28.8 S cm /mol
+Solution: (B)
+୩ൈଵ଴଴ ହ.଻଺ൈଵ   షయ ൈଵ଴଴଴
+∧ ୫ ൌ   ൌ
+୑   ଴.ହ
+ଶ
+ൌ 11.52 S cm /mol
+48. The decomposition of phosphine   ሺPH ଷ ሻ   on tungsten at low pressure is a first-order reaction. It is
+because the
+(A) Rate is proportional to the surface coverage
+(B) Rate is inversely proportional to the surface coverage
+(C) Rate is independent of the surface coverage
+(D) Rate of decomposition is very slow
+Solution: (A)
+Rate is proportion to the surface coverage
+49. The coagulation values in millimoles per litre of the electrolytes used for the coagulation of   As ଶ S ଷ   are
+given below :
+I.   ሺNaClሻ ൌ 52
+II.   ሺBaCl ଶ ሻ ൌ 0.69
+III.   ሺMgSO ସ ሻ ൌ 0.22
+The <b>correct</b> order of their coagulating power is
+(A)   I ൐ II ൐ III
+
+=== PAGE 23 ===
+(B)   II ൐ I ൐ III
+(C)   III ൐ II ൐ I
+(D)   III ൐ I ൐ II
+Solution: (C)
+ଵ
+Coagulating power ∝
+େ୭ୟ୥୳୪ୟ୲୧୭୬ ୴ୟ୪୳ୣ
+50. During the electrolysis of molten sodium chloride, the time required to produce 0.10 mol of chlorine gas
+using a current of 3 amperes is
+(A) 55 minutes
+(B) 110 minutes
+(C) 220 minutes
+(D) 330 minutes
+Solution: (B)
+For 1 mole   Cl ଶ , 2F   electricity is required
+∴   For 0.1 mole   Cl ଶ , 0.2 F   electricity will be required
+∴ Q ൌ I ൈ t
+୕୍ ଴.ଶൈଽ଺ହ଴଴
+Or,   t ൌ   ൌ   ൎ 110 min .
+ଷൈ଺଴
+51. How many electrons can fit in the orbital for which   n ൌ 3   and   l ൌ 1 ?
+(A) 2
+(B) 6
+(C) 10
+(D) 14
+Solution: (A)
+An orbital can accommodate maximum of 2 electrons with anti-parallel spins.
+52. For a sample of perfect gas when its pressure is changed isothermally from   p ୧   to   p ୤ , the entropy change
+is given by
+୮ ౜
+(A)   ∆S ൌ nR ln ቀ  ቁ
+୮ ౟
+୮ ౟
+(B)   ∆S ൌ nR ln ቀ  ቁ
+୮ ౜
+୮ ౜
+(C)   ∆S ൌ nRT ln ቀ  ቁ
+୮ ౟
+
+=== PAGE 24 ===
+୮ ౟
+(D)   ∆S ൌ RT ln ቀ  ቁ
+୮ ౜
+Solution: (B)
+୮ ౟
+∆S ൌ nR ln ቀ  ቁ
+୮ ౜
+53. The van't Hoff factor (i) for a dilute aqueous solution of the strong electrolyte barium hydroxide is
+(A) 0
+(B) 1
+(C) 2
+(D) 3
+Solution: (D)
+ଶሺାሻ   ሺି   ሻ
+BaሺOHሻ ଶ   ⟶ Ba ൅ 2OH
+∴   van’t Hoff factor   ൌ 1 ൅ 2 ൌ 3
+ା
+54. The percentage of pyridine   ሺC ହ H ହ Nሻ   that forms pyridinium ion   ሺC ହ H ହ N Hሻ   in a 0.10 M aqueous
+ି ଽ
+pyridine solution   ሺK ୠ   for C ହ H ହ N ൌ 1.7 ൈ 10   is
+(A) 0.0060%
+(B) 0.013%
+(C) 0.77%
+(D) 1.6%
+Solution: (B)
+େ஑ మ ଶ
+∴ K ୠ   ൌ   ൎ Cα
+ଵି஑
+୏ షవ ౘ ଵ.଻ൈଵ଴
+∴ α ൌ ට ൌ ට
+େ    ଴.ଵ
+ି ସ
+∴ % α ൌ 1.3 ൈ 10   ൈ 100 ൌ 0.013%
+ଶା
+55. In calcium fluoride, having the fluorite structure, the coordination numbers for calcium ion   ሺCa ሻ   and
+ି
+fluoride ion   ሺF   ሻ   are
+
+=== PAGE 25 ===
+(A) 4 and 2
+(B) 6 and 6
+(C) 8 and 4
+(D) 4 and 8
+Solution: (C)
+ଶሺାሻ   ሺି   ሻ
+In   CaF ଶ , Ca has fcc arrangement and   F ions are present in all tetrahedral voids.
+ଶሺାሻ   ሺି   ሻ
+∴   Cp-ordination numbers for   Ca and   F ions are 8 and 4.
+୭
+56. If the   E ୡୣ୪୪ for a given reaction has a negative value, which of the following gives the <b>correct</b>
+୭
+relationships for the values of   ∆G and   K   ୣ ୯   ?
+୭
+(A)   ∆G ൐ 0; K   ୣ ୯   ൏ 1
+୭
+(B)   ∆G ൐ 0; K   ୣ ୯   ൐ 1
+୭
+(C)   ∆G ൏ 0; K   ୣ ୯   ൏ 1
+୭
+(D)   ∆G ൏ 0; K   ୣ ୯   ൏ 1
+Solution: (A)
+୭
+∵ E ୡୣ୪୪ ൌ െve
+୭
+∴ ∆G ൌ ൅ve   &   K   ୣ ୯   ൌ െve
+୭
+i.e.,   ∆G ൐ 0   &   K   ୣ ୯   ൏ 1
+57. Which one of the following is <b>incorrect</b> for ideal solution?
+(A)   ∆H ୫୧୶   ൌ 0
+(B)   ∆U ୫୧୶   ൌ 0
+(C)   ∆P ൌ O ୭ୠୱ   െ P ୡୟ୪ୡ୳୪ୟ୲ୣୢ ୠ୷ ୖ ୟ୧୳୪   ᇲ ୱ ୪ୟ୵   ൌ 0
+(D)   ∆G ୫୧୶   ൌ 0
+Solution: (D)
+∆G ୫୧୶   for ideal solution is positive.
+ି ଵ଴
+58. The solubility of   AgClሺsሻ   with solubility product   1.6 ൈ 10   in   0.1 M NaCl   solution would be
+ି ହ
+(A)   1.26 ൈ 10 M
+ି ଽ
+(B)   1.6 ൈ 10   M
+ି ଵଵ
+(C)   1.6 ൈ 10   M
+
+=== PAGE 26 ===
+(D) Zero
+Solution: (B)
+∴ K ୱ୮ሺ୅୥େ୪ሻ   ൌ SሺS ൅ 0.1ሻ
+∵ S ≪ 0.1
+∴ S ൅ 0.1 ൎ 0.1
+ି ଵ଴
+∴ 1.6 ൈ 10   ൌ S ൈ 0.1
+ି ଽ
+∴ S ൌ 1.6 ൈ 10   M
+59. Suppose the elements X and Y combine to form two compounds   XY ଶ   and   X ଷ Y ଶ . When 0.1 mole of   XY ଶ
+weighs 10 g and 0.05 mole of   X ଷ Y ଶ   weighs 9 g, the atomic weights of X and Y are
+(A) 40, 30
+(B) 60, 40
+(C) 20, 30
+(D) 30, 20
+Solution: (A)
+For   XY ଶ ,
+∵ 0.1 mole XY ଶ   ≡ 10 g
+∴ 1 mole XY ଶ   ≡ 100 g
+ൌ X ൅ 2Y ൌ 100   …(i)
+For   X ଷ Y ଶ ,
+∵ 0.05 mole X ଷ Y ଶ   ≡ 9 g
+∴ 1 mole X ଷ Y ଶ   ≡ 180 g   …(ii)
+On solving,
+X ൌ 40
+And   Y ൌ 30
+
+=== PAGE 27 ===
+60. The number of electrons delivered at the cathode during electrolysis by a current of 1 ampere in 60
+ି ଵଽ
+seconds is (charge on electron   ൌ 1.60 ൈ 10 C )
+ଶଷ
+(A)   6 ൈ 10
+ଶ଴
+(B)   6 ൈ 10
+ଶ଴
+(C)   3.75 ൈ 10
+ଶଷ
+(D)   7.48 ൈ 10
+Solution: (C)
+Q ൌ I ൈ t
+ൌ 1 A ൈ 60s
+ൌ 60 C
+଺଴
+∴   No. of electrons   ൌ
+ଵ.଺଴ଶൈଵ   షభ
+ଶ଴
+ൌ 3.75 ൈ 10
+61. Boric acid is an acid because its molecule
+ା
+(A) Contains replaceable   ܪ ion
+(B) Gives up a proton
+ି
+(C) Accepts   ܱ  ܪ   from water releasing proton
+(D) Combines with proton from water molecule
+Solution: (C)
+ሺିሻ
+Boric acid is an acid because its molecule accepts   ܱ  ܪ   from water releasing proton.
+ሺି   ሻ ሺାሻ
+ܪܱሺܤ   ሻ ଷ   ܪ ൅ ଶ   ܱ →   ܪܱሺܤሾ   ሻ ସ ሿ ܪ ൅ ሻ ݍܽሺ ሻݍܽሺ
+62.   ܨܫܣ ଷ   is soluble in HF only in presence of KF. It is due to the formation of
+(A)   ܭ ଷ ܨܫܣሾ ଷ ܪ ଷ ሿ
+(B)   ܭ ଷ ܨܫܣሾ ଺ ሿ
+(C)   ܪܫܣ ଷ
+(D)   ܫܣሺܭ   ଷ ሿܪ
+Solution: (B)
+Fact
+
+=== PAGE 28 ===
+63. Zinc can be coated on iron to produce galvanized iron but the reverse is not possible. It is because
+(A) Zinc is lighter than iron
+(B) Zinc has lower melting point than iron
+(C) Zinc has lower negative electrode potential than iron
+(D) Zinc has higher negative electrode potential than iron
+Solution: (D)
+௢
+ܧ ൌ െ0.76 ܸ
+௓௡ మሺశሻ
+௓௡
+௢
+ܧ
+ி௘ మሺశሻ
+ൌ െ0.44 ܸ
+ி௘
+64. The suspension of slaked lime in water is known as
+(A) Limewater
+(B) Quicklime
+(C) Milk of lime
+(D) Aqueous solution of slaked lime
+Solution: (C)
+Fact
+ା ା
+65. The hybridizations of atomic orbitals of nitrogen in   ܱܰ  ଶ ܱܰ,   ଷି   and   ܰ  ܪ   ସ respectively are
+ଶ   ଶ
+(A)   ݌ݏ ,݌ݏ ݌ݏ and
+ଶ ଷ
+(B)   ݌ݏ ݌ݏ , ݌ݏ and
+ଶ   ଷ
+(C)   ݌ݏ ,݌ݏ ݌ݏ and
+ଶ ଷ
+(D)   ݌ݏ ݌ݏ and ݌ݏ ,
+Solution: (C)
+
+=== PAGE 29 ===
+66. Which of the following fluoro – compounds is most likely to behave as a Lewis base?
+(A)   ܨܤ ଷ
+(B)   ܲ ܨ   ଷ
+(C)   ܨܥ ସ
+(D)   ݅ܵ ସ
+Solution: (B)
+In   ܲ  ܨ   ଷ , P h11as a lone pair of electrons.
+67. Which of the following pairs of ions is isoelectronic and isostructural?
+ଶି
+(A)   ܱܥ   ଷ ܱܰ,   ଷି
+ଶି
+(B)   ݈ܥ   ଷି   ܱܥ ,   ଷ
+ଶି
+(C)   ܱܵ ଷ ܱܰ,   ଷି
+ଶି
+(D)   ܱ݈ܥ   ଶି   ܱܵ,   ଷ
+Solution: (A)
+Both have 32 electrons with trigonal planar structure.
+68. In context with beryllium which one of the following statements is <b>incorrect</b>
+(A) It is rendered passive by nitric acid
+(B) It form   ݁ܤ   ଶ ܥ
+(C) Its salts rarely hydrolyze
+
+=== PAGE 30 ===
+(D) Its hydride is electron – deficient and polymeric
+Solution: (C)
+Salts of beryllium is readily hydrolysed due to presence of vacant p – orbital.
+69. Hot concentrated sulphuric acid is a moderately strong oxidizing agent. Which of the following reactions
+does not show oxidizing behaviour?
+(A)   ܪ2 ൅ ݑܥ ଶ   ܱܵ ସ   ܱܵݑܥ →   ସ   ܱܵ൅   ଶ   ܪ2 ൅ ଶ ܱ
+(B)   3 ܵ൅ 2ܪ   ଶ   ܱܵ ସ   ܱܵ3 →   ଶ   ܪ2 ൅ ଶ ܱ
+(C)   ܪ2 ൅ ܥ ଶ   ܱܵ ସ   ܱܥ →   ଶ   ܱܵ2 ൅   ଶ   ܪ2 ൅ ଶ ܱ
+(D)   ܽܥ   ଶ   ܪ ൅ ଶ   ܱܵ ସ   ܱܵܽܥ →   ସ   ܨܪ2 ൅
+Solution: (D)
+ܨܽܥ   ଶ   ܪ ൅ ଶ   ܱܵ ସ   ܱܵܽܥ →   ସ   ܨܪ2 ൅
+In this reaction there is no change in oxidation state of any atom.
+70. Which of the following pairs of d – orbitals will have electron density along the axes?
+(A)   ݀ ௭ మ   ݀,   ௫௭
+(B)   ݀ ௫௭ ݀,   ௬௭
+(C)   ݀ ௭ మ   ݀,   ௫ మ   ି ௬   మ
+(D)   ݀ ௫௬ ݀,   ௫ మ   ି ௬   మ
+Solution: (C)
+71. The correct geometry and hybridization for   ݁ܺ  ܨ   ସ   are
+ଷ   ଶ
+(A) Octahedral,   ݌ݏ ݀
+
+=== PAGE 31 ===
+ଷ
+(B) Trigonal bipyramidal,   ݌ݏ ݀
+ଷ   ଷ
+(C) Planar triangle,   ݌ݏ ݀
+ଷ   ଶ
+(D) Square planar,   ݌ݏ ݀
+Solution: (A)
+ଷ   ଶ
+݁ܺ  ܨ   ସ , has octahedral geometry where hybridization of   ݁ܺ  is   ݌ݏ ݀ .
+72. Among the following, which one is a wrong statement ?
+(A)   ܲ ܪ   ହ   and   ݈ܥ݅ܤ   ହ   do not exist
+(B)   ߨ ݀െ ߨ݌   bonds are present in   ܱܵ  ଶ
+(C)   ݁ܵ ܨ   ସ   and   ܪܥ ସ   have same shape
+ା
+(D)   ܫ ଷ has bent geometry
+Solution: (C)
+Shape of   ݁ܵ  ܨ   ସ   would be see saw where as that of   ܪܥ ସ   would be tetrahedral
+73. The correct increasing order of trans – effect of the following species is
+ି ି
+(A)   ܰ ܪ   ଷ   ܰܥ ൐   ݎܤ ൐   ܥ ൐ ଺ ܪ ହି
+ି ି
+(B)   ܰܥ   ܥ ൐ ଺ ܪ ହି   ݎܤ ൐   ܪ ܰ൐   ଷ
+ି ି
+(C)   ݎܤ   ܰܥ ൐   ܪ ܰ൐   ଷ   ܥ ൐ ଺ ܪ ହି
+ି ି
+(D)   ܰܥ   ݎܤ ൐   ܥ ൐ ଺ ܪ ହି   ܪ ܰ൐   ଷ
+Solution: (B)
+Fact
+74. Which one of the following statements related to lanthanons is incorrect?
+(A) Europium shows + 2 oxidation state
+(B) The basicity decreases as the ionic radius decreases from Pr to Lu
+(C) All the lanthanons are much more reactive than aluminium
+(D) Ce(+4) solutions are widely used as oxidizing agent in volumetric analysis
+Solution: (C)
+Fact.
+
+=== PAGE 32 ===
+75. Jahn – Teller effect is not observed in high spin complexes of
+଻
+(A)   ݀
+଼
+(B) ݀
+ସ
+(C)   ݀
+ଽ
+(D)   ݀
+Solution: (B)
+Fact.
+76. Which of the following can be used as the halide component for Friedel Crafts reaction?
+(A) Chlorobenzene
+(B) Bromobenzene
+(C) Chloroethene
+(D) Isopropyl chloride
+Solution: (D)
+Isopropyl chloride would form stable carbocation
+77. In which of the following molecules, all atoms are coplanar?
+(A)
+(B)
+
+=== PAGE 33 ===
+(C)
+(D)
+Solution: (A)
+Biphenyl is a planar system, where all the carbon atoms and H – atoms are in same plane.
+78. Which one of the following structures represents nylon 6,6 polymer ?
+(A)
+(B)
+(C)
+
+=== PAGE 34 ===
+(D)
+Solution: (D)
+Nylon – 6, 6 is the co – polymer of adipic acid and hexamethylene diamine.
+79. In pyrrole the electron density s maximum on
+(A) 2 and 3
+(B) 3 and 4
+(C) 2 and 4
+(D) 2 and 5
+Solution: (D)
+At 2 and 5 negative charge is more stable.
+
+=== PAGE 35 ===
+80. Which of the following compounds shall not produce propene by reaction with HBr followed by
+elimination or direct only elimination reaction ?
+(A)
+(B)
+(C)
+(D)
+Solution: (C)
+has only two carbon atom, cannot be converted into propene as the
+conditions are given.
+81. Which one of the following nitro – compounds does not react with nitrous acid ?
+(A)
+(B)
+
+=== PAGE 36 ===
+(C)
+(D)
+Solution: (C)
+No acidic H – atom on the carbon atom having   ܱܰ  ଶ   – group.
+82. The central dogma of molecular genetics states that the genetic information flows from
+(A) Amino acids   →   Proteins   →   DNA
+(B) DNA   →   Carbohydrates   →   Proteins
+(C) DNA   →   RNA   →   Proteins
+(D) DNA   →   RNA   →   Carbohydrates
+Solution: (C)
+Fact.
+83. The correct corresponding order of names of four aldoses with configuration given below respectively,
+is
+
+=== PAGE 37 ===
+(A) L – erythrose, L – threose, L – erythrose, D – threose
+(B) D – threose, D – erythrose, L – threose, L – erythrose
+(C) L – erythrose, L – threose, D – erythrose, D – threose
+(D) D – erythrose, D – threose, L – erythrose, L – threose
+Solution: (D)
+Fact.
+84. In the given reaction the product P is
+(A)
+(B)
+(C)
+
+=== PAGE 38 ===
+(D)
+Solution: (C)
+85. A given nitrogen – containing aromatic compound A reacts with   Sn HCl ⁄   , followed by   HNO ଶ   to give an
+unstable compound B.B, on treatment with phenol, forms a beautiful coloured compound C with the
+molecular formula   ܥ ଵଶ ܪ ଵ଴   ܰ ଶ   ܱ . The structure of compound A is
+(A)
+(B)
+(C)
+(D)
+
+=== PAGE 39 ===
+Solution: (B)
+86. Consider the reaction
+ܪܥ ଷ ܪܥ ଶ ܪܥ ଶ ܽܰ൅ ݎܤ   ܪܥ →   ଷ ܪܥ ଶ ܪܥ ଶ ݎܤ ܽܰ൅ ܰܥ
+This reaction will be the fastest in
+(A) Ethanol
+(B) Methanol
+(C) N, N’ – dimethylformamde (DMF)
+(D) Water
+Solution: (C)
+∵   The reaction is   ܵ  ே 2,   most suitable solvent should be polar aprotic i.e., DMF.
+87. The correct structure of the product A formed in the reaction is
+(A)
+
+=== PAGE 40 ===
+(B)
+(C)
+(D)
+Solution: (B)
+88. Which among the given molecules can exhibit tautomerism ?
+(A) III Only
+(B) Both I and III
+(C) Both I and II
+(D) Both II and III
+Solution: (A)
+
+=== PAGE 41 ===
+Bridge – head carbocation is unstable, therefore, tautomerism will be shown only by   and
+the enolic form would be   .
+89. The correct order of strengths of the carboxylic acids is
+(A) I > II > III
+(B) II > III > I
+(C) III > II > I
+(D) II > I > III
+Solution: (B)
+On the basis of –l effect, the correct acidic strength would be
+90. The compound that will react most readily with gaseous bromine has the formula
+(A)   ܥ ଷ ܪ ଺
+(B)   ܥ ଶ ܪ ଶ
+(C)   ܥ ସ ܪ ଵ଴
+(D)   ܥ ଶ ܪ ସ
+Solution: (A)
+In gas phase allylic substitution takes place.
+Biology
+91. Which one of the following is wrong for fungi?
+
+=== PAGE 42 ===
+(A) They are eukaryotic
+(B) All fungi possess a purely cellulosic cell wall
+(C) They are heterotrophic
+(D) They are both unicellular and multicellular
+Solution: (B)
+Cell wall of fungi is made up of chitin and polysaccharides.
+92. Methanogens belong to
+(A) Eubacteria
+(B) Archaebacteria
+(C) Dinoflagellates
+(D) Slime moulds
+Solution: (B)
+Methanogens, halophiles and thermoacidophiles are archaebacterial.
+93. Select the wrong statement.
+(A) The walls of diatoms are easily destructible
+(B) ‘Diatomaceous earth’ is formed by the cell walls of diatoms
+(C) Diatoms are chief producers in the oceans
+(D) Diatoms are microscopic and float passively in water
+Solution: (A)
+The cell walls of diatoms are embedded with silica and thus the walls are indestructible.
+94. The label of a herbarium sheet does not carry information on
+(A) Data of collection
+(B) Name of collector
+(C) Local names
+(D) Height of the plant
+Solution: (D)
+
+=== PAGE 43 ===
+The herbarium sheets carry a label providing information about date and place of collection, English,
+local and botanical names, family, collector’s name.
+95. Conifers are adapted to tolerate extreme environmental conditions because of
+(A) Broad hardy leaves
+(B) Superficial stomata
+(C) Thick cuticle
+(D) Presence of vessels
+Solution: (C)
+In conifers, the needle like leaves, thick cuticle and sunken stomata help to reduce water loss.
+96. Which one of the following statements is wrong?
+(A) Algae increase the level of dissolved oxygen in the immediate environment
+(B) Algin is obtained from red algae, and carrageenan from brown algae
+(C) Agar – agar is obtained from Gelidium and Gracilaria
+(D) Laminaria and Sargassum are used as food
+Solution: (B)
+Algin is obtained from brown algae, and carrageenan from red algae.
+97. The term ‘polyadelphous’ is related to
+(A) Gynoecium
+(B) Androecium
+(C) Corolla
+(D) Calyx
+Solution: (B)
+The stamens may be united into one bundle (monoadelphous), or two bundles (diadelphous) or into
+more than two bundles (polyadelphous).
+98. How many plants among Indigofera, Sesbania, Salvia, Allium, Aloe, mustard, groundnut, radish, gram
+and turnip have stamens with different lengths in their flowers ?
+
+=== PAGE 44 ===
+(A) Three
+(B) Four
+(C) Five
+(D) Six
+Solution: (B)
+Brassicaceae,   ܣ ଶାସ   →   Mustard, Radish, Turnip
+Lamiaceae,   ܣ ଶାଶ   →   Salvia
+99. Radial symmetry is found in the flowers of
+(A) Brassica
+(B) Trifolium
+(C) Pisum
+(D) Cassia
+Solution: (A)
+Radial or actinomorphic symmetry is found in flowers like mustard, Datura, Chilli.
+100. Free – central placentation is found in
+(A) Dianthus
+(B) Argemone
+(C) Brassica
+(D) Citrus
+Solution: (A)
+Dianthus, Primrose – Free central placentation.
+Argemone – Parietal placentation.
+Citrus – Axile placentation.
+101. Cortex is the region found between
+(A) Epidermis and stele
+(B) Pericycle and endodermis
+
+=== PAGE 45 ===
+(C) Endodermis and pith
+(D) Endodermis and vascular bundle
+Solution: (A)
+Cortex is the region present between epidermis and stele.
+102. The balloon – shaped structures called tyloses
+(A) Originate in the lumen of vessels
+(B) Characterize the sapwood
+(C) Are extensions of xylem parenchyma cells into vessels
+(D) Are linked to the ascent of sap through xylem vessels
+Solution: (C)
+Tyloses are balloon – shaped structures in xylem vessels developed by xylem parenchyma cells.
+103. A non – proteinaceous enzyme is
+(A) Lysozyme
+(B) Ribozyme
+(C) Ligase
+(D) Deoxyribonuclease
+Solution: (B)
+Ribozyme is RNA acting like an enzyme or biocatalyst.
+104. Select the mismatch.
+(A) Gas vacuoles – Green bacteria
+(B) Large central vacuoles – Animal cells
+(C) Protists – Eukaryotes
+(D) Methanogens – Prokaryotes
+Solution: (B)
+Large central vacuole is present in plant cells.
+
+=== PAGE 46 ===
+105. Select the wrong statement
+(A) Bacteria cell wall is made up of peptidoglycan
+(B) Pili and fimbriae are mainly involved in motility of bacterial cells
+(C) Cyanobacteria lack flagellated cells
+(D) Mycoplasma is a wall – less microorganism
+Solution: (B)
+Pili and fimbriae are surface structures of the bacteria that do not play a role in motility.
+106. A cell organelle containing hydrolytic enzymes is
+(A) Lysosome
+(B) Microsome
+(C) Ribosome
+(D) Mesosome
+Solution: (A)
+The isolated lysosomal vesicles have been found to be very rich in almost all types of hydrolytic
+enzymes.
+107. During cell growth, DNA synthesis takes place in
+(A) S phase
+(B)   ܩ ଵ   phase
+(C)   ܩ ଶ   phase
+(D)   ܯ   phase
+Solution: (A)
+DNA replication occurs in S – phase of cell cycle.
+108. Which of the following biomolecules is common to respiration – mediated breakdown of fats,
+carbohydrates and proteins ?
+(A) Glucose – 6 – phosphate
+(B) Fructose 1, 6 – bisphosphate
+(C) Pyruvic acid
+
+=== PAGE 47 ===
+(D) Acetyl CoA
+Solution: (D)
+Acetyl CoA is common to fat, carbohydrate and protein catabolism.
+109. A few drops of sap were collected by cutting across a plant stem by a suitable method. The sap was
+tested chemically. Which one of the following test results indicates that it is phloem sap ?
+(A) Acidic
+(B) Alkaline
+(C) Low refractive index
+(D) Absence of sugar
+Solution: (B)
+Alkaline pH (7.8 – 8.0) is present in phloem sap where as xylem sap is acidic.
+110. You are given a tissue with its potential for differentiation in an artificial culture. Which of the
+following pairs of hormones would you add to the medium to secure shoots as well as roots ?
+(A) IAA and gibberellin
+(B) Auxin and cytokinin
+(C) Auxin and abscisic acid
+(D) Gibberellin and abscisic acid
+Solution: (B)
+Auxins and cytokine in induce development of root and shoot in a culture medium (respectively).
+111. Phytochrome is a
+(A) Flavoprotein
+(B) Glycoprotein
+(C) Lipoprotein
+(D) Chromoprotein
+Solution: (D)
+Photochrome is a blue – green pigment which absorb red and far red light. It is a coloured protein
+i.e., chromoprotein.
+
+=== PAGE 48 ===
+112. Which is essential for the growth of root tip ?
+(A) Zn
+(B) Fe
+(C) Ca
+(D) Mn
+Solution: (C)
+Calcium is required by dividing and differentiating cells.
+113. The process which makes major difference between   ܥ ଷ   and   ܥ ସ   plants is
+(A) Glycolysis
+(B) Calvin cycle
+(C) Photorespiration
+(D) Respiration
+Solution: (C)
+Photorespiration is present in   ܥ ଷ   plants but absent in   ܥ ସ   plants.
+114. Which one of the following statements is not correct ?
+(A) Offspring produced by the asexual reproduction are called clone
+(B) Microscopic, motile asexual reproductive structures are called zoospores
+(C) In potato, banana and ginger, the plantlets arise from the internodes present in the modified
+stem
+(D) Water hyacinth, growing in the standing water, drains oxygen from water that leads to the death
+of fishes
+Solution: (C)
+In potato, banana and ginger, the plantlets arise from the nodes present on modified stem.
+115. Which one of the following generates new genetic combinations leading to variation ?
+(A) Vegetative reproduction
+(B) Parthenogenesis
+
+=== PAGE 49 ===
+(C) Sexual reproduction
+(D) Nucellar polyembryony
+Solution: (C)
+Sexual reproduction generates new genetic recombination leading to variations.
+116. Match Column – I with Column – II and select the correct option using the codes given below
+Column – I   Column – II
+a. Pistils fused together   (i)
+Gametogenesis
+b. Formation of (ii) Pistillate
+gametes
+c. Hyphae of higher   (iii) Syncarpous
+d. Unisexual female (iv) Dikaryotic
+flower
+(A)
+a   b   c   d
+(iv)   (iii)   (i)   (ii)
+(B)
+a   b   c   D
+(ii)   (i)   (iv)   (iii)
+(C)
+a   b   c   D
+(i)   (ii)   (iv)   (iii)
+(D)
+a   b   c   d
+(iii)   (i)   (iv)   (ii)
+Solution: (D)
+   Syncarpous – Pistils fused together.
+   Gametogenesis – Formation of gamete,
+   Dikaryotic hyphae – Hyphae of ascomycetes
+
+=== PAGE 50 ===
+   Pistillate flower – Unisexual female flower.
+117. In majority of angiosperms
+(A) Egg has a filiform apparatus
+(B) There are numerous antipodal cells
+(C) Reduction division occurs in the megaspore
+(D) A small central cell is present in the embryo sac
+Solution: (C)
+Megaspore Mother Cell (MMC) undergoes meiosis to form megaspore.
+118. Polllination in water hyacinth and water lily is brough about by the agency of
+(A) Water
+(B) Insects or wind
+(C) Birds
+(D) Bats
+Solution: (B)
+Water hyacinth and water lily are aquatic plants pollinated by insect or wind.
+119. The ovule of an angiosperm is technically equivalent to
+(A) Megasporangium
+(B) Megasporophyll
+(C) Megaspore mother cell
+(D) Megaspore
+Solution: (A)
+Integumented and stalked megasporangium is called ovule.
+120. Taylor conducted the experiments to prove semiconservative mode of chromosome replication on
+(A) Vinca rosea
+(B) Vicia faba
+
+=== PAGE 51 ===
+(C) Drosophila melanogaster
+(D) E. coli
+Solution: (B)
+Semiconservative mode of chromosome replication was proved by Taylor in Vicia faba.
+121. The mechanism that causes a gene to move from one linkage group to another is called
+(A) Inversion
+(B) Duplication
+(C) Translocation
+(D) Crossing-over
+Solution: (C)
+Translocation is a phenomenon of transfer of a gene segment between non-homologus
+chromosome, i.e., different linkage group.
+122. The equivalent of a structural gene is
+(A) Muton
+(B) Cistron
+(C) Operon
+(D) Recon
+Solution: (B)
+Cistron is a segment of DNA coding for a polypeptide.
+Eukaryotic structural gene is monocistronic whereas prokaryotic structural gene is polycistronic.
+123. A true breeding plant is
+(A) One that is able to breed on its own
+(B) Produced due to cross-pollination among unrelated plants
+(C) Near homozygous and produces offspring of its own kind
+(D) Always homozygous recessive in its genetic constitution
+Solutio  n  :  (C  )
+T  r u  e  breeding line is one that, hav i n g u n d e r g o n e c o n ti nu o u s s e lf p o ll i n a ti o n , s h o w s t h e st a b l e trait
+i n h er i t a n c e a n d e x p r e ss i o n f o r s e v e r al g e n e r a ti o n s . I t is b o t h h o m o z y g o u s r e c e s si v e a s w e ll a s
+d o m i n a n t i n g e n et i c c o n s ti t u ti o n .
+124. Which of the following rRNAs acts as structural RNA as well as ribozyme in bacteria?
+(A) 5 S rRNA
+(B) 18 S rRNA
+(C) 23 S rRNA
+(D) 5.8 S rRNA
+Solution: (C)
+23S rRNA is a component of larger subunit of ribosome and it act as peptidyl transferase
+(ribozyme).
+125. Stirred-tank bioreactors have been designed for
+
+=== PAGE 52 ===
+(A) Purification of product
+(B) Addition of preservatives to the product
+(C) Availability of oxygen throughout the process
+(D) Ensuring anaerobic conditions in the culture vessel
+Solution: (C)
+Stirred-tank bioreactor is provided with stirrer for availability of oxygen throughout the process.
+126. A foreign DNA and plasmid cut by the same restriction endonuclease can be joined to form a
+recombinant plasmid using
+(A) Eco RI
+(B) Taq polymerase
+(C) Polymerase III
+(D) Ligase
+Solution: (D)
+In DNA recombinant technology, linking of foreign DNA and plasmid is made possible by DNA ligase
+which is also called "molecular glue".
+127. Wh i c h o f t h e f o l lowing is not a component of downstream processing?
+( A ) S e p a ra t i o n
+( B ) P u ri f ic at i o n
+(C ) P r e s e rv a t io n
+(D) Expression
+Solutio  n  :  (  D  )
+A  f t e r  t h e c o m p le t io n o f b i o s y n t he t ic p a t h w a y , d o w n s t r ea m i n g p r o c e ss i n g i n cl u d e s a ll th e st e p s
+i n  v  o  l  v e d i n is o la ti o n , p u r if i c a ti o n a n d p r e s er v a ti o n o f p r o du c t s . A l l t h e s t e p s b e f or e t h e co m p l e t ion
+of pathway are included in upstreaming processing i.e., expression of genetic material.
+128. Which of the following restriction enzymes produces blunt ends?
+(A) Sal I
+(B) Eco RV
+(C) Xho I
+(D) Hind III
+Solution: (B)
+Eco RV cuts the DNA in the centre of restriction sites forming blunt ends. The pallindromic sequence
+for Eco RV is
+129. Which kind of therapy was given in 1990 to a fouryear- old girl with adenosine deaminase (ADA)
+deficiency?
+(A) Gene therapy
+
+=== PAGE 53 ===
+(B) Chemotherapy
+(C) Immunotherapy
+(D) Radiation therapy
+Solution: (A)
+Gene therapy was given in 1990 to a four year old girl child with ADA deficiency.
+130. How many hot spots of biodiversity in the world have been identified till date by Norman Myers?
+(A) 17
+(B) 25
+(C) 34
+(D 43
+Solution: (C)
+Today the number of hotspots identified by ecologists is 34 covering an area less than 2% of land
+surface with about 20% of human population living there.
+131.The p ri m ar y p r o d ucers of the deep-sea hydrothermal vent ecosystem are
+(A ) G re e n a l ga e
+( B ) C h e m o s y n th e ti c bacteria
+(C ) B l u e- g r e e n al g a e
+(D) Coral reefs
+Solution: (B)
+The primary producers of the deep  sea hydrothermal vent ecosystem are Archaebacteria, they have
+chemosynthetic mode of nutrition.
+132. Which of the following is correct for r-selected species?
+(A) Large number of progeny with small size
+(B) Large number of progeny with large size
+(C) Small number of progeny with small size
+(D) Small number of progeny with large size
+Solution: (A)
+R-selected species   ⇒   Species whose population growth is function of biotic potential (r). They have
+large number of progeny with small size.
+133. I f '  ൅ ' s i g n i s a s si g n e d t o b e n e f ic i a l in t e r ac t io n , '  – ' s i g n to detrimental and ' 0 ' sign to neutral interaction,
+then t h e p o p u l a ti o n i n t er a c ti o n r e p r e s e n t e d b y '+ ' ' –  ' r e f e rs to
+(A) Mutualism
+(B) Amensalism
+(C) Commensalism
+(D) Parasitism
+Solution: (D)
+Parasitism   ⇒   Parasite is benefitted (+) but host is harmed (–) so it is a (+, –) type of population
+interaction.
+134. Which of the following is correctly matched?
+(A) Aerenchyma – Opuntia
+(B) Age pyramid – Biome
+(C) Parthenium hysterophorus – Threat to Biodiversity
+
+=== PAGE 54 ===
+(D) Stratification – Population
+Solution: (C)
+Parthenium hysterophorus is an exotic or alien species which causes extinction of native (or)
+indegenous species.
+135. Red list contains data or information on
+(A) All economically important plants
+(B) Plants whose products are in international trade
+(C) Threatened species
+(D) Marine vertebrates only
+Solution: (C)
+IUCN [International Union Conservation of Nature and Natural Resources] (or) WCU [World
+Conservation Union] maintains red list which is a catalogue for threatened species.
+136. Which of the following sets of diseases is caused by bacteria?
+(A) Cholera and tetanus
+(B) Typhoid and smallpox
+(C) Tetanus and mumps
+(D) Herpes and influenza
+Solution: (A)
+Cholera is caused by a bacterium Vibrio cholera and tetanus is caused by a bacterium Clostridium
+tetani.
+137. Match Column-I with Column-II for housefly classification and select the correct option using the codes
+given below:
+Column – I   Column – II
+a. Family   (i)   Diplera
+b. Order   (ii)   Arthropoda
+c.   Class   (iii)   Muscidae
+d. Phylum   (iv) Insecta
+(A)
+a   b   c   d
+(iii)   (i)   (iv)   (ii)
+(B)
+a   b   c   d
+(iii)   (ii)   (iv)   (i)
+(C)
+a   b   c   d
+(iv)   (iii)   (ii)   (i)
+(D)
+a   b   c   d
+(iv)   (ii)   (i)   (iii)
+
+=== PAGE 55 ===
+Solution: (A)
+Housefly belongs to
+(i) Phylum - Arthropoda
+(ii) Class - Insecta
+(iii) Order - Diptera
+(iv) Family – Muscidae
+138. Ch o o s e th e c or re c t st a t e m e n t .
+( A ) A ll m a m m al s a r e v iv i p a r o u s
+( B ) A l l c yc l o s t o m e s d o n o t p o ss e ss j a w s a n d p aired fins.
+(C ) A l l r e p t il e s h a v e a th r e e - c h a m b e re d h e ar t.
+(D) All pisces have gills covered by an operculum.
+Solution  :  (  B  )
+C  y  cl  o  stomes belong to the division agnatha. They are jawless vertebrates without paired fins.
+139. Study the four statements   ሻܦ– ܣሺ   given below and select the two correct ones out of them:
+ܣ . Definition of biological species was given by Ernst Mayr.
+ܤ . Photoperiod does not affect reproduction in plants.
+ܥ  . B in o m i a l n o m e n c la t ur e sy s t e m w a s gi v e n b y R . H. W h itt a k er .
+ܦ . I n u n ic e l lu l ar o r g a n is m s, r e p ro d uc t io n i s sy n o n y mo u s w it h g rowth.
+The two correct statements are
+( A ) B a n d C
+(B ) C a n d D
+(C) A and D
+(  D )  A  and B
+Solutio  n:  ( C  )
+P hotoperiod affect reproduction in plants. Bionomial nomenclature system was given by Carolus
+Linnaeu s
+140. In m al e c o c k r o a c h e s , sperms are stored in which part of the reproductive system?
+( A) S e m i n a l v e s i cl e s
+( B ) M u s h room glands
+(C ) T e st e s
+(D) Vas deferens
+Solutio  n  :   (  A)
+I  n  m  a le cockroach, sperms are stored in seminal vesicle.
+141. Smooth muscles are
+(A) Involuntary, fusiform, non-striated
+(B) Voluntary, multinucleate, cylindrical
+(C) Involuntary, cylindrical, striated
+(D) Voluntary, spindle-shaped, uninucleate
+Solution: (A)
+Smooth muscles are involuntary, fusiform, nonstriated muscles.
+142. Oxidative phosphorylation is
+
+=== PAGE 56 ===
+(A) Formation of ATP by transfer of phosphate group from a substrate to ADP
+(B) Oxidation of phosphate group in ATP
+(C) Addition of phosphate group to ATP
+(D) Formation of ATP by energy released from electrons removed during substrate oxidation
+Solution: (D)
+Oxidative phosphorylation uses energy of oxidation reduction of substrate to generate ATP.
+143. Which of the following is the least likely to be involved in stabilizing the three-dimensional folding of
+most proteins?
+(A) Hydrogen bonds
+(B) Electrostatic interaction
+(C) Hydrophobic interaction
+(D) Ester bonds
+Solution: (D)
+Ester bond is formed between sugar and phosphate in a nucleotide.
+144. Which of the following describes the given graph correctly?
+(A) Endothermic reaction with energy A in presence of enzyme and B in absence of enzyme
+(B) Exothermic reaction with energy A in presence of enzyme and B in absence of enzyme
+(C) Endothermic reaction with energy A in absence of enzyme and B in presence of enzyme
+(D) Exothermic reaction with energy A in absence of enzyme and B in presence of enzyme
+Solution: (B)
+Potential energy of substrate is more than the product. So it is an exothermic reaction. 'A'
+represents the activation energy in the presence of enzyme while 'B' in the absence of enz yme i.e.,
+enzyme lowers down the activation energy.
+145. When cell has stalled DNA replication fork, which checkpoint should be predominantly activated?
+(A)   ܩ ଵ / S
+(B)   ܩ ଶ   / M
+(C) M
+(D) Both   ܩ ଶ   / M and M
+Solution: (A)
+ܩ ଵ   / S check point of cell cycle is a major check point.
+
+=== PAGE 57 ===
+146. Match the stages of meiosis of Column-I to their characteristic features in Column-II and select the
+correct option using the codes given below:
+Column - I   Column – II
+a.   Pachytene   (i)   Pairing of homologous chromosomes
+b.   Metaphase (ii)   Terminalization of chiasmata
+I
+c.   Diakinesis   (iii)   Crossing-over takes place
+d.   Zygotene   (iv)   Chromosomes align at equatorial plate
+(A)
+a   b   c   d
+(iii)   (iv)   (ii)   (i)
+(B)
+a   b   c   d
+(i)   (iv)   (ii)   (iii)
+(C)
+a   b   c   d
+(ii)   (iv)   (iii)   (i)
+(D)
+a   b   c   d
+(iv)   (iii)   (ii)   (i)
+Solution: (A)
+Pachy t e n e - S ta g e of c r o ss in g o v er
+Meta p h a s e -I - C h ro m o s o m e al ig n at equatorial plate
+D ia k i n e s is - T e r m i n a lis a ti o n o f c hi a s m at a
+Z y g o t e n e - P a ir i n g o f h o m o lo g o u s c h ro m osome
+147. Which hormones do stimulate the production of pancreatic juice and bicarbonate?
+(A) Angiotensin and epinephrine
+( B ) G as t r i n a n d i n s ul in
+(C ) C h o l e c ys t o ki n i n a nd secretin
+(D) Insulin and glucagon
+Solution: (C)
+Cholecystokinin and secretin both hormones increase the secretion of pancreatic juice.
+148. The partial pressure of oxygen in the alveoli of the lungs is
+(A) Equal to that in the blood
+(B) More than that in the blood
+(C) Less than that in the blood
+(D) Less than that of carbon dioxide
+Solution: (B)
+Partial pressure of oxygen in alveoli of lungs is 104 mm of Hg that is more than that of blood in
+
+=== PAGE 58 ===
+pulmonary artery (40 mm of Hg).
+149. Choose the correct statements.
+(A) Nociceptors respond to changes in pressure
+(B) Meissner's corpuscles are thermoreceptors
+(C) Photoreceptors in the human eye are depolarised during darkness and become hyperpolarized in
+response to the light stimulus
+(D) Receptors do not produce graded potentials
+Solution: (C)
+Photoreceptors (Rod cells) in human eye are depolarised during darkness and become
+hyperpolarised in response to the light stimulus
+150. Gr a v es ' d is e a s e i s ca u s e d d u e to
+( A ) H y p o s e c re t io n o f t h yr o id gland
+( B ) H y pe r s e c r e ti o n o f t h y r o i d g l a n d
+(C ) H y p o s e c r e ti o n o f a d r e n a l g l a n d
+(D) Hypersecretion of adrenal gland
+Solutio  n  :  (  B  )
+G  r  a  v  e 's disease is due to the hypersecretion of thyroid gland.
+1 5 1 . N a m e t h e i o n responsible for unmasking of active sites for myosin for cross-bridge activity during
+m u s cl e c o nt r a ct i o n.
+( A ) C a lc i u m
+(B ) M a g n e sium
+( C ) S o d i u m
+( D ) P o t a ss ium
+Solution: (A)
+Calcium ions bind with TpC unit of troponin which is respon  sible for unmasking of active sites for
+myosin for cross bridge activity during muscles contraction.
+1 52 . N a m e t h e b l o o d c e lls, whose reduction in number can cause clotting disorder, leading to excessive loss
+of b lo o d f r o m t h e b o d y .
+( A ) E r y t h r o c y t e s
+( B ) L e u c o c y t e s
+(C ) N e u t r o p h il s
+(D) Thrombocytes
+Solution: (D)
+Deduction in th  rombocytes (platelets) can cause clotting disorder, leading to excessive loss of blood
+from the body.
+153.   Name a peptide hormone which acts mainly on hepatocytes, adipocytes and enhances cellular
+glucose uptake and utilization.
+(A) Insulin
+(B) Glucagon
+(C) Secretin
+(D) Gastrin
+Solution: (A)
+
+=== PAGE 59 ===
+Insulin is a peptide hormone which acts mainly on hepatocytes, adipocytes and enhances cellular
+glucose uptake and utilization so it decreases the blood glucose level.
+154. Osteoporosis, an age-related disease of skeletal system, may occur due to
+(A) Immune disorder affecting neuromuscular junction leading to fatigue
+ାା   ା
+(B) High concentration of   ܽܥ   and   ܽܰ
+(C) Decreased level of estrogen
+(D) Accumulation of uric acid leading to inflammation of joints
+Solution  :  (  C  )
+O  s  t  e  o porosis in aged female after menopause is due to decreased level of estrogen.
+155. Ser u m di f f e r s f r o m b l o od in
+( A) La c k i n g g lo b ul i n s
+( B ) L a c k i n g a l b u m i n s
+(C ) L a c k i n g c l o t ti n g f a ctors
+(D) Lacking antibodie s
+Solution  :  (  C  )
+S  e  r  u  m is plasma without clotting factors. It never clot.
+1 5 6. L u ng s d o n o t collapse between breaths and someair always remains in the lungs which can never be
+e x p el le d b e c au s e
+( A ) T h e r e i s a n e g a t i v e p r e s s u r e in t h e l u n g s
+(B ) T h e r e i s a n e g a t i v e i n t r a p l e ur al p r e s s ur e pulling at the lung walls
+(C) There is a positive intrapleural pressure
+(  D  )  P  r  e s su r e i n t h e l u n gs is h i g he r th a n t h e a t m os p h er i c p r e ss ur e
+Solutio  n  :  (  B  )
+L u  n g s d o n o t c o ll a p s e b et w e e n b re at h s a n d s o m e a ir a l w a y s re m ains in the lung which can never be
+expelled because there is a negative intrapleural
+a
+157. Th e p o s t er i o r p i t ui ta r y gl an d is not  'true' endocrine gland because
+( A ) It i s p r o v i d e d w i th a d uc t
+or
+( B ) I t o n ly st o r e s a n d r e le a s es h m o n e s
+(C ) I t i s u nd e r t h e r e g ul a ti o n of h yp o t h a l amus pressure pulling at the lung walls.
+(D) It secretes enzymes
+Solution  :  (  B  )
+P  o  s  t  e rior pituitary gland is not a true endocrine gland because it only stores and releases hormones.
+158. Th e p a r t o f n e p h r o n i n v ol v e d in active reabsorption of sodium is
+( A ) D i st a l c o n v o lu t e d t u b u le
+( B ) P r o xi m a l co n v o l u t ed tubule
+(C ) B o w m a n 's c a p s u l e
+(D) Descending limb of Henle's loop
+Solution  :  (  B  )
+vo
+P  r  o  xi  mal convoluted tubule is in lved in active reabsorption of sodium.
+159. Which of the following is hormone releasing IUD?
+(A) LNG-20
+
+=== PAGE 60 ===
+(B) Multiload-375
+(C) Lippes loop
+(D) Cu7
+Solution: (A)
+LNG-20 (Levonorgestrel) is a hormone releasing IUDs.
+160. Which of the following is incorrect re g arding vasectomy?
+( A ) N o s p e r m o c c u r s i n s e m i n a l fl u i d
+( B ) N o s p e r m o c c u r s i n e pi d i d y m i s
+( C ) V a s a d e f e r e n ti a i s c u t a n d t i e d
+( D ) I r r e v e r s i b l e s t e ri l i t y
+Solution: (B)
+In vasectomy, sperms occur in epididymis. In this, vas deferens are cut so sperms are not present in
+semen.
+161. Em b r y o w it h more than 16 blastomeres formed due to in-vitro fertilization is transferred into
+( A ) U te r u s
+( B ) F al lo p i a n tube
+(C ) F i m br i a e
+(D) Cervix
+Solution: (A)
+In intrauterine transf  er (IUT), embryo more than 8 blastomeres formed due to in-vitro fertilization is
+transferred in uterus.
+162. Which of the following depicts the correct pathway of transport of sperms?
+(A) Rete testis   →   Efferent ductules   →   Epididymis   →   Vas deferens
+(B) Rate testis   →   Epididymis   →   Efferent ductules   →   Vas deferens
+(C) Rete testis   →   Vas deferens   →   Efferent ductules   →   Epididymis
+(D) Efferent ductules   →   Rete testis   →   Vas deferens   →   Epididymis
+Solutio  n  :  (  A  )
+P  a  t  h  w a y o f  tra n s p o r t o f s p e r m s i n h u m a n m a l e is
+R e t e t e s ti s  → Ef f e r e n t d u c t u le s ( V a sa e f fe re n t i a)  →   Epididymis   →   Vas deferens.
+163. Match Column-I with Column-II and select the correct option using the codes given below:
+Column – I   Column – II
+a.   Mons pubis   (i)   Embryo formation
+b.   Antrum   (ii)   Antrum
+c.   Trophectoderm   (iii)   Female external
+genitalia
+d.   Nebenkern   (iv)   Graafian follicle
+(A)
+a.   b.   c.   d.
+(iii)   (iv)   (ii)   (i)
+(B)
+a.   b.   c.   d.
+
+=== PAGE 61 ===
+(iii)   (iv)   (i)   (i)
+(C)
+a.   b.   c.   d.
+(iii)   (i)   (iv)   (ii)
+(D)
+a.   b.   c.   d.
+(i)   (iv)   (iii)   (ii)
+Solution: (B)
+Correct matching is:
+ሻܽሺ   Mons pubis - Female external genitalia
+ሻܾሺ   Antrum - Graafian follicle
+ሻܿሺ   Trophoectoderm - Embryo formation
+ሻ݀ሺ   Nebenkern – Sperm
+164. Several hormones like hCG, hPL, estrogen, progesterone are produced by
+(A) Ovary
+(B) Placenta
+(C) Fallopian tube
+(D) Pituitary
+Solution: (B)
+Hormones secreted by placenta are hCG, hPL, estrogen and progesterone.
+165. If a colour-blind man marries a woman who is homozygous for normal colour vision, the probability of
+their son being colour-blind is
+(A) 0
+(B) 0.5
+(C) 0.75
+(D) 1
+Solution: (A)
+Colourblindness is X-linked recessive disease and shows criss-cross inheritance.
+100% - carrier daughters (Phenotypically normal)
+100% - Normal son
+166. Genetic drift operates in
+(A) Small isolated population
+(B) Large isolated population
+(C) Non-reproductive population
+(D) Slow reproductive population
+Solution: (A)
+Genetic drift operates in small isolated inbreeding population.
+
+=== PAGE 62 ===
+167. In Hardy-Weinberg equation, the frequency of heterozygous individual is represented by
+ଶ
+(A)   ݌
+(B)   2pq
+(C)   pq
+ଶ
+(D)   ݍ
+Solution: (B)
+In Hardy Weinberg equation,
+ଶ
+݌ = Homozygous dominant individuals
+2pq = Heterozygous individuals
+ଶ
+ݍ = Homozygous recessive individuals
+168. The chronological order of human evolution from early to the recent is
+(A) Australopithecus   →   Ramapithecus   →   Homo habilis   →   Homo erectus
+(B) Ramapithecus   →   Australopithecus   →   Homo habilis   →   Homo erectus
+(C) Ramapithecus   →   Homo habilis   →   Australopithecus   →   Homo erectus
+(D) Australopithecus   →   Homo habilis   →   Ramapithecus   →   Homo erectus
+Solution: (B)
+T h e c h r o n o l o gic  al o r d e r o f h u m a n e  vo lu ti o n fr o m ea  rly t o t he r e c e n  t is
+R a m a p it h e c u s  → A u s tr a l o pi t he c u s  → H o m o h a bi lis  → H o m o er e c t u s
+1 69 . W h i c h of t h e f o l lo w i n g is the correct sequence of events in the origin of life?
+( i) F or m a t i on o f p r o t o bi o n t s
+(ii) Synthesis of organic monomers
+( i i i ) Sy nt h e s i s o f or g a n ic p o l ym e rs
+( i v ) F or m a t i o n o f D N A - ba s e d ge n etic systems
+(A)
+(i)   (ii)   (iii)   (iv)
+(B)
+(i)   (iii)   (ii)   (iv)
+(C)
+(ii)   (iii)   (i)   (iv)
+(D)
+(ii)   (iii)   (iv)   (i)
+Solution: (C)
+Correct sequence of events in the origin of life is
+Synthesis of organic monomers
+↓
+Synthesis of organic polymers
+↓
+Formation of protobionts
+Formation of DNA-based genetic systems
+
+=== PAGE 63 ===
+170. A molecule that can act as a genetic material must fulfill the traits given below, except
+(A) It should be able to express itself in the form of 'Mendelian characters'
+(B) It should be able to generate its replica
+(C) It should be unstable structurally and chemically
+(D) It should provide the scope for slow changes that are required for evolution
+Solution: (C)
+A molecule which is unstable structurally and chemically cannot act as a genetic material.
+171.   DNA-dependent RNA polymerase catalyzes transcription on one strand of the DNA which is called the
+( A ) T e m p l a t e s t r a nd
+( B ) C o d i n g s t r a n d
+( C ) A l p h a s t r a n d
+( D ) A n t i s t r a n d
+Solutio  n: (A)
+The DNA-dependent RNA polymerase catalyze the polymerisation in only one direction that is 5 →   3,
+the strand with polarity 5   →   3 act as template and is called as template strand.
+172. Interspecific hybridization is the mating of
+(A) Animals within same breed without having common ancestors
+(B) Two different related species
+(C) Superior males and females of different breeds
+(D) More closely related individuals within same breed for 4–6 generations
+Solution: (B)
+Interspecific hybridization is mating of animals of two different related species.
+173. Which of the following is correct regarding AIDS causative agent HIV?
+(A) HIV is enveloped virus containing one molecule of single-stranded RNA and one molecule of
+reverse transcriptase
+(B) HIV is enveloped virus that contains two identical molecules of single-stranded RNA and two
+molecules of reverse transcriptase
+(C) HIV is unenveloped retrovirus
+(D) HIV does not escape but attacks the acquired immune response
+Solution: (B)
+Causative agent of AIDS is HIV which is enveloped virus that contains two identical molecules of
+ssRNA and two molecules of reverse transcriptase.
+174. Among the following edible fishes, which one is a marine fish having rich source of omega-3 fatty
+acids?
+(A) Mystus
+(B) Mangur
+(C) Mrigala
+(D) Mackerel
+Solution: (D)
+Mackerel is a marine fish having rich source of omega-3 fatty acids
+175. Match Column-I with Column-II and select the correct option using the codes given below :
+
+=== PAGE 64 ===
+Column – I   Column – II
+a.   Citric acid   (i)   Trichoderma
+b.   Cyclosporin A   (ii)   Clostridium
+c.   Statins   (iii)   Aspergillus
+d.   Butyric acid   (iv)   Monascus
+(A)
+a.   b.   c.   d.
+(iii)   (i)   (ii)   (iv)
+(B)
+a.   b.   c.   d.
+(iii)   (i)   (iv)   (ii)
+(C)
+a.   b.   c.   d.
+(i)   (iv)   (ii)   (iii)
+(D)
+a.   b.   c.   d.
+(iii)   (iv)   (i)   (ii)
+Solution: (B)
+Microbe   Product
+Aspergillus niger   Citric acid
+Trichoderma Cyclosporin-
+polysporum A
+Monascus purpureus   Statins
+Clostridium butylicum   Butyric acid
+176. Biochemical Oxygen Demand (BOD) may not be a good index for pollution for water bodies receiving
+effluents from
+(A) Domestic sewage
+(B) Dairy industry
+(C) Petroleum industry
+(D) Sugar industry
+Solution: (C)
+Biochemical oxygen demand (BOD) is not a good index for pollution for water bodies receiving
+effluents from petroleum industry as the generated waste is mostly non-biodegradable in nature.
+177. The principle of competitive exclusion was stated by
+(A) C. Darwin
+(B) G. F. Gause
+
+=== PAGE 65 ===
+(C) MacArthur
+(D) Verhulst and Pearl
+Solution: (B)
+The principle of competitive exclusion was stated by G. F. Gause.
+178. Which of the following National Parks is home to the famous musk deer or hangul?
+(A) Keibul Lamjao National Park, Manipur
+(B) Bandhavgarh National Park, Madhya Pradesh
+(C) Eaglenest Wildlife Sanctuary, Arunachal Pradesh
+(D) Dachigam National Park, Jammu & Kashmir
+Solution: (D)
+Conservation of Musk deer or Hangul.
+179. A lake which is rich in organic waste may result in
+(A) Increased population of aquatic organisms due to minerals
+(B) Drying of the lake due to algal bloom
+(C) Increased population of fish due to lots of nutrients
+(D) Mortality of fish due to lack of oxygen
+Solution: (D)
+Micro-organisms involved in biodegradation of organic matter consume oxygen as a result there is a
+sharp decline in oxygen causing mortality of fish and other aquatic creatures.
+180. The highest DDT concentration in aquatic food chain shall occur in
+(A) Phytop lankton
+(B) Seagull
+(C) Crab
+(D) Eel
+Solution: (B)
+Maximum DDT concentration occurs in fish eating birds like   seagull   due to biomagnification. This
+happens because a toxic substance accumulated by an organism cannot be metabolised or excreted,
+thus passed to higher trophic level.
+

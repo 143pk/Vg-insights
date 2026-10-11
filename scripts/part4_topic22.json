@@ -1,0 +1,927 @@
+[
+  {
+    "id": "msl-mcq-476",
+    "questionNumber": 476,
+    "question": "Which of the following physical quantities can NEVER be negative in one-dimensional motion?",
+    "options": {
+      "A": "Total distance traveled",
+      "B": "Instantaneous acceleration",
+      "C": "Net displacement",
+      "D": "Average velocity"
+    },
+    "optionsList": [
+      "Total distance traveled",
+      "Instantaneous acceleration",
+      "Net displacement",
+      "Average velocity"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDistance is the total path length traversed by an object and is fundamentally a scalar quantity with non-negative values ($s \\geq 0$). Displacement, velocity, and acceleration are vector quantities along a 1D line and can be positive, negative, or zero.\n\n2. GIVEN:\nPhysical quantities in one-dimensional motion: distance, acceleration, displacement, velocity.\n\n3. FORMULA / PRINCIPLE:\nDistance $s = \\int |v(t)| dt \\geq 0$\n\n4. STEP-BY-STEP SOLUTION:\n1. In 1D kinematics, vectors are represented with algebraic signs (+ or -) denoting direction along the axis.\n2. Displacement, instantaneous acceleration, and average velocity can all be negative if directed along the -x axis.\n3. Distance represents the scalar length of the actual path traversed and can never decrease or take negative values.\n4. Therefore, total distance traveled is strictly non-negative.\n\n5. FINAL ANSWER:\nOption A: Total distance traveled\n\n6. QUICK TIP:\nDistance is scalar and cumulative (never negative); displacement is a directed vector (can be negative).",
+    "solutionStructured": {
+      "concept": "Distance is the total path length traversed by an object and is fundamentally a scalar quantity with non-negative values ($s \\geq 0$). Displacement, velocity, and acceleration are vector quantities along a 1D line and can be positive, negative, or zero.",
+      "given": "Physical quantities in one-dimensional motion: distance, acceleration, displacement, velocity.",
+      "formula": "Distance $s = \\int |v(t)| dt \\geq 0$",
+      "stepByStep": "1. In 1D kinematics, vectors are represented with algebraic signs (+ or -) denoting direction along the axis.\n2. Displacement, instantaneous acceleration, and average velocity can all be negative if directed along the -x axis.\n3. Distance represents the scalar length of the actual path traversed and can never decrease or take negative values.\n4. Therefore, total distance traveled is strictly non-negative.",
+      "finalAnswer": "Option A: Total distance traveled",
+      "whyOtherOptionsWrong": "Displacement and velocity are vectors that have negative values whenever motion is in the negative direction."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Conceptual and numerical mixed problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-477",
+    "questionNumber": 477,
+    "question": "Can an object have a constant speed along a straight line while having a non-zero acceleration?",
+    "options": {
+      "A": "No, in straight-line motion, constant speed implies zero acceleration",
+      "B": "Yes, if the direction of motion is constantly reversing",
+      "C": "Yes, if the object is in free fall",
+      "D": "Yes, if the object is experiencing uniform friction"
+    },
+    "optionsList": [
+      "No, in straight-line motion, constant speed implies zero acceleration",
+      "Yes, if the direction of motion is constantly reversing",
+      "Yes, if the object is in free fall",
+      "Yes, if the object is experiencing uniform friction"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn straight-line (1D) motion, velocity vector direction is fixed (or reverses only when speed drops to zero). If speed is constant along a line, velocity cannot change in magnitude or direction, meaning acceleration must be zero.\n\n2. GIVEN:\nStraight-line motion with constant speed.\n\n3. FORMULA / PRINCIPLE:\nIn 1D: $\\vec{a} = \\frac{d\\vec{v}}{dt} = \\frac{d(\\pm v\\hat{i})}{dt} = 0$\n\n4. STEP-BY-STEP SOLUTION:\n1. Acceleration is the time rate of change of velocity: a = dv/dt.\n2. In one-dimensional motion, velocity consists of speed and a sign (+ or -).\n3. If speed is constant and the particle moves in a straight line without reversing, velocity is constant.\n4. Hence dv/dt = 0, so acceleration must be zero.\n\n5. FINAL ANSWER:\nOption A: No, in straight-line motion, constant speed implies zero acceleration\n\n6. QUICK TIP:\nIn 2D motion (like uniform circular motion), constant speed can have acceleration. But in 1D straight-line motion, constant speed always means zero acceleration!",
+    "solutionStructured": {
+      "concept": "In straight-line (1D) motion, velocity vector direction is fixed (or reverses only when speed drops to zero). If speed is constant along a line, velocity cannot change in magnitude or direction, meaning acceleration must be zero.",
+      "given": "Straight-line motion with constant speed.",
+      "formula": "In 1D: $\\vec{a} = \\frac{d\\vec{v}}{dt} = \\frac{d(\\pm v\\hat{i})}{dt} = 0$",
+      "stepByStep": "1. Acceleration is the time rate of change of velocity: a = dv/dt.\n2. In one-dimensional motion, velocity consists of speed and a sign (+ or -).\n3. If speed is constant and the particle moves in a straight line without reversing, velocity is constant.\n4. Hence dv/dt = 0, so acceleration must be zero.",
+      "finalAnswer": "Option A: No, in straight-line motion, constant speed implies zero acceleration",
+      "whyOtherOptionsWrong": "Option B is impossible because direction reversal in 1D requires speed to drop to zero first."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Conceptual and numerical mixed problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-478",
+    "questionNumber": 478,
+    "question": "A body moves with uniform acceleration along a straight line. If the distances covered in the 3rd second and 5th second are 12 m and 20 m respectively, what was its initial velocity?",
+    "options": {
+      "A": "2 m/s",
+      "B": "4 m/s",
+      "C": "6 m/s",
+      "D": "1 m/s"
+    },
+    "optionsList": [
+      "2 m/s",
+      "4 m/s",
+      "6 m/s",
+      "1 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDistance traveled in the nth second is given by $s_n = u + \\frac{a}{2}(2n - 1)$.\n\n2. GIVEN:\ns\u2083 = 12 m, s\u2085 = 20 m.\n\n3. FORMULA / PRINCIPLE:\ns_n = u + \\frac{a}{2}(2n - 1)\n\n4. STEP-BY-STEP SOLUTION:\n1. For n = 3: s\u2083 = u + (a/2)(2(3) - 1) = u + 2.5 a = 12.\n2. For n = 5: s\u2085 = u + (a/2)(2(5) - 1) = u + 4.5 a = 20.\n3. Subtract equation (1) from (2): (u + 4.5 a) - (u + 2.5 a) = 20 - 12 => 2 a = 8 => a = 4 m/s\u00b2.\n4. Substitute a = 4 m/s\u00b2 into equation (1): u + 2.5(4) = 12 => u + 10 = 12 => u = 2 m/s.\n\n5. FINAL ANSWER:\nOption A: 2 m/s\n\n6. QUICK TIP:\nSubtracting successive nth second equations eliminates u instantly: $s_n - s_{n-k} = k \\cdot a$. Here $s_5 - s_3 = 2a = 8 \\implies a = 4$.",
+    "solutionStructured": {
+      "concept": "Distance traveled in the nth second is given by $s_n = u + \\frac{a}{2}(2n - 1)$.",
+      "given": "s\u2083 = 12 m, s\u2085 = 20 m.",
+      "formula": "s_n = u + \\frac{a}{2}(2n - 1)",
+      "stepByStep": "1. For n = 3: s\u2083 = u + (a/2)(2(3) - 1) = u + 2.5 a = 12.\n2. For n = 5: s\u2085 = u + (a/2)(2(5) - 1) = u + 4.5 a = 20.\n3. Subtract equation (1) from (2): (u + 4.5 a) - (u + 2.5 a) = 20 - 12 => 2 a = 8 => a = 4 m/s\u00b2.\n4. Substitute a = 4 m/s\u00b2 into equation (1): u + 2.5(4) = 12 => u + 10 = 12 => u = 2 m/s.",
+      "finalAnswer": "Option A: 2 m/s",
+      "whyOtherOptionsWrong": "4 m/s is the acceleration, not the initial velocity."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Conceptual and numerical mixed problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-479",
+    "questionNumber": 479,
+    "question": "A particle starts from rest with acceleration a = 2 m/s\u00b2. After reaching a certain speed, it immediately decelerates at \u03b2 = 4 m/s\u00b2 to come to rest. If the total distance covered is 300 m, what is the maximum speed attained by the particle?",
+    "options": {
+      "A": "20\u221a2 m/s",
+      "B": "20 m/s",
+      "C": "20\u221a3 m/s",
+      "D": "40 m/s"
+    },
+    "optionsList": [
+      "20\u221a2 m/s",
+      "20 m/s",
+      "20\u221a3 m/s",
+      "40 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nWhen a body starts from rest, accelerates at \u03b1, and then decelerates at \u03b2 to rest, total distance is $s = \\frac{v_{\\max}^2}{2} \\left(\\frac{1}{\\alpha} + \\frac{1}{\\beta}\\right)$.\n\n2. GIVEN:\n\u03b1 = 2 m/s\u00b2, \u03b2 = 4 m/s\u00b2, total distance s = 300 m.\n\n3. FORMULA / PRINCIPLE:\ns = \\frac{v_{\\max}^2}{2}\\left(\\frac{\\alpha + \\beta}{\\alpha\\beta}\\right)\n\n4. STEP-BY-STEP SOLUTION:\n1. Distance during acceleration: s\u2081 = v_max\u00b2 / (2\u03b1) = v_max\u00b2 / 4.\n2. Distance during deceleration: s\u2082 = v_max\u00b2 / (2\u03b2) = v_max\u00b2 / 8.\n3. Total distance: s = s\u2081 + s\u2082 = v_max\u00b2 (1/4 + 1/8) = v_max\u00b2 (3/8) = 300 m.\n4. v_max\u00b2 = 300 \u00d7 8 / 3 = 100 \u00d7 8 = 800.\n5. v_max = \u221a800 = \u221a(400 \u00d7 2) = 20\u221a2 m/s.\n\n5. FINAL ANSWER:\nOption A: 20\u221a2 m/s\n\n6. QUICK TIP:\nQuick NEET formula: $v_{\\max} = \\sqrt{\\frac{2 s \\alpha \\beta}{\\alpha + \\beta}} = \\sqrt{\\frac{2 \\times 300 \\times 8}{6}} = \\sqrt{800} = 20\\sqrt{2}\\text{ m/s}$.",
+    "solutionStructured": {
+      "concept": "When a body starts from rest, accelerates at \u03b1, and then decelerates at \u03b2 to rest, total distance is $s = \\frac{v_{\\max}^2}{2} \\left(\\frac{1}{\\alpha} + \\frac{1}{\\beta}\\right)$.",
+      "given": "\u03b1 = 2 m/s\u00b2, \u03b2 = 4 m/s\u00b2, total distance s = 300 m.",
+      "formula": "s = \\frac{v_{\\max}^2}{2}\\left(\\frac{\\alpha + \\beta}{\\alpha\\beta}\\right)",
+      "stepByStep": "1. Distance during acceleration: s\u2081 = v_max\u00b2 / (2\u03b1) = v_max\u00b2 / 4.\n2. Distance during deceleration: s\u2082 = v_max\u00b2 / (2\u03b2) = v_max\u00b2 / 8.\n3. Total distance: s = s\u2081 + s\u2082 = v_max\u00b2 (1/4 + 1/8) = v_max\u00b2 (3/8) = 300 m.\n4. v_max\u00b2 = 300 \u00d7 8 / 3 = 100 \u00d7 8 = 800.\n5. v_max = \u221a800 = \u221a(400 \u00d7 2) = 20\u221a2 m/s.",
+      "finalAnswer": "Option A: 20\u221a2 m/s",
+      "whyOtherOptionsWrong": "20 m/s misses the factor of 2 under the square root."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Conceptual and numerical mixed problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-480",
+    "questionNumber": 480,
+    "question": "The velocity-displacement equation of a particle moving along a straight line is given by v = \u221a(49 - 14x). What is the acceleration of the particle?",
+    "options": {
+      "A": "-7 m/s\u00b2",
+      "B": "-14 m/s\u00b2",
+      "C": "+7 m/s\u00b2",
+      "D": "-3.5 m/s\u00b2"
+    },
+    "optionsList": [
+      "-7 m/s\u00b2",
+      "-14 m/s\u00b2",
+      "+7 m/s\u00b2",
+      "-3.5 m/s\u00b2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nAcceleration in terms of velocity and displacement is given by $a = v \\frac{dv}{dx} = \\frac{1}{2} \\frac{d(v^2)}{dx}$.\n\n2. GIVEN:\nv = \u221a(49 - 14x) => v\u00b2 = 49 - 14x.\n\n3. FORMULA / PRINCIPLE:\na = \\frac{1}{2}\\frac{d(v^2)}{dx}\n\n4. STEP-BY-STEP SOLUTION:\n1. Square both sides: v\u00b2 = 49 - 14x.\n2. Compare with standard third equation of motion v\u00b2 = u\u00b2 + 2as.\n3. Here u\u00b2 = 49 and 2a = -14.\n4. Therefore, acceleration a = -14 / 2 = -7 m/s\u00b2.\n\n5. FINAL ANSWER:\nOption A: -7 m/s\u00b2\n\n6. QUICK TIP:\nWhenever you see $v^2$ as a linear function of $x$ ($v^2 = A + Bx$), acceleration is simply $B / 2$!",
+    "solutionStructured": {
+      "concept": "Acceleration in terms of velocity and displacement is given by $a = v \\frac{dv}{dx} = \\frac{1}{2} \\frac{d(v^2)}{dx}$.",
+      "given": "v = \u221a(49 - 14x) => v\u00b2 = 49 - 14x.",
+      "formula": "a = \\frac{1}{2}\\frac{d(v^2)}{dx}",
+      "stepByStep": "1. Square both sides: v\u00b2 = 49 - 14x.\n2. Compare with standard third equation of motion v\u00b2 = u\u00b2 + 2as.\n3. Here u\u00b2 = 49 and 2a = -14.\n4. Therefore, acceleration a = -14 / 2 = -7 m/s\u00b2.",
+      "finalAnswer": "Option A: -7 m/s\u00b2",
+      "whyOtherOptionsWrong": "-14 m/s\u00b2 forgets to divide the coefficient by 2."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Conceptual and numerical mixed problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-481",
+    "questionNumber": 481,
+    "question": "A bullet fired into a wooden block loses 20% of its velocity after penetrating 9 cm. How much further will the bullet penetrate before coming to rest, assuming the block offers constant resistance?",
+    "options": {
+      "A": "16 cm",
+      "B": "7 cm",
+      "C": "9 cm",
+      "D": "12 cm"
+    },
+    "optionsList": [
+      "16 cm",
+      "7 cm",
+      "9 cm",
+      "12 cm"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nConstant resistance implies uniform retardation a. Use $v^2 - u^2 = 2as$.\n\n2. GIVEN:\nInitial speed u, velocity after x\u2081 = 9 cm is v\u2081 = 0.8 u (since it loses 20%).\n\n3. FORMULA / PRINCIPLE:\nv\u00b2 = u\u00b2 + 2ax\n\n4. STEP-BY-STEP SOLUTION:\n1. After 9 cm: (0.8 u)\u00b2 = u\u00b2 - 2a(9) => 0.64 u\u00b2 = u\u00b2 - 18a => 18a = 0.36 u\u00b2 => 2a = 0.04 u\u00b2.\n2. Total penetration distance x_total to rest (v = 0): 0 = u\u00b2 - 2a(x_total) => x_total = u\u00b2 / (2a).\n3. x_total = u\u00b2 / (0.04 u\u00b2) = 1 / 0.04 = 25 cm.\n4. Further penetration distance = x_total - x\u2081 = 25 cm - 9 cm = 16 cm.\n\n5. FINAL ANSWER:\nOption A: 16 cm\n\n6. QUICK TIP:\nAlways distinguish between total penetration depth ($25\\text{ cm}$) and further penetration depth ($25 - 9 = 16\\text{ cm}$).",
+    "solutionStructured": {
+      "concept": "Constant resistance implies uniform retardation a. Use $v^2 - u^2 = 2as$.",
+      "given": "Initial speed u, velocity after x\u2081 = 9 cm is v\u2081 = 0.8 u (since it loses 20%).",
+      "formula": "v\u00b2 = u\u00b2 + 2ax",
+      "stepByStep": "1. After 9 cm: (0.8 u)\u00b2 = u\u00b2 - 2a(9) => 0.64 u\u00b2 = u\u00b2 - 18a => 18a = 0.36 u\u00b2 => 2a = 0.04 u\u00b2.\n2. Total penetration distance x_total to rest (v = 0): 0 = u\u00b2 - 2a(x_total) => x_total = u\u00b2 / (2a).\n3. x_total = u\u00b2 / (0.04 u\u00b2) = 1 / 0.04 = 25 cm.\n4. Further penetration distance = x_total - x\u2081 = 25 cm - 9 cm = 16 cm.",
+      "finalAnswer": "Option A: 16 cm",
+      "whyOtherOptionsWrong": "25 cm is the total penetration distance from the front face, not further distance."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Conceptual and numerical mixed problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-482",
+    "questionNumber": 482,
+    "question": "A body released from height H takes time T to reach the ground. What is the position of the body at time t = T / 2 from the ground?",
+    "options": {
+      "A": "3H / 4 above the ground",
+      "B": "H / 4 above the ground",
+      "C": "H / 2 above the ground",
+      "D": "H / \u221a2 above the ground"
+    },
+    "optionsList": [
+      "3H / 4 above the ground",
+      "H / 4 above the ground",
+      "H / 2 above the ground",
+      "H / \u221a2 above the ground"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDistance fallen from rest is proportional to $t^2$. In half the total time, the body falls one-fourth of the total height.\n\n2. GIVEN:\nTotal height H, total time T, time elapsed t = T / 2.\n\n3. FORMULA / PRINCIPLE:\nh_fallen = (1/2)gt\u00b2; Height from ground = H - h_fallen\n\n4. STEP-BY-STEP SOLUTION:\n1. Total height H = (1/2) g T\u00b2.\n2. Distance fallen in time t = T/2: h_fallen = (1/2) g (T/2)\u00b2 = (1/4) [(1/2) g T\u00b2] = H / 4.\n3. Height above the ground = H - h_fallen = H - H/4 = 3H / 4.\n\n5. FINAL ANSWER:\nOption A: 3H / 4 above the ground\n\n6. QUICK TIP:\nBe careful with wording: 'distance fallen' is $H/4$, but 'height above the ground' is $3H/4$!",
+    "solutionStructured": {
+      "concept": "Distance fallen from rest is proportional to $t^2$. In half the total time, the body falls one-fourth of the total height.",
+      "given": "Total height H, total time T, time elapsed t = T / 2.",
+      "formula": "h_fallen = (1/2)gt\u00b2; Height from ground = H - h_fallen",
+      "stepByStep": "1. Total height H = (1/2) g T\u00b2.\n2. Distance fallen in time t = T/2: h_fallen = (1/2) g (T/2)\u00b2 = (1/4) [(1/2) g T\u00b2] = H / 4.\n3. Height above the ground = H - h_fallen = H - H/4 = 3H / 4.",
+      "finalAnswer": "Option A: 3H / 4 above the ground",
+      "whyOtherOptionsWrong": "H / 4 is the distance fallen from the release point, not the height above ground."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Conceptual and numerical mixed problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-483",
+    "questionNumber": 483,
+    "question": "A ball is dropped from a balloon ascending with a constant velocity of 12 m/s when the balloon is at a height of 65 m above the ground. Taking g = 10 m/s\u00b2, how long does the ball take to reach the ground?",
+    "options": {
+      "A": "5 s",
+      "B": "4 s",
+      "C": "3 s",
+      "D": "6 s"
+    },
+    "optionsList": [
+      "5 s",
+      "4 s",
+      "3 s",
+      "6 s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe ball inherits the instantaneous velocity of the ascending balloon at the instant of release ($u = +12\\text{ m/s}$ upwards).\n\n2. GIVEN:\nu = +12 m/s (upward), displacement s = -65 m (downward to ground), a = -10 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\ns = ut + (1/2)at\u00b2\n\n4. STEP-BY-STEP SOLUTION:\n1. Sign convention: Upward positive (+), downward negative (-).\n2. Displacement to ground s = -65 m.\n3. Equation: -65 = 12 t - (1/2)(10) t\u00b2 = 12 t - 5 t\u00b2.\n4. Rearrange: 5 t\u00b2 - 12 t - 65 = 0.\n5. Factorize: (5 t - 25)(t + ...) => 5 t\u00b2 - 25 t + 13 t - 65 = 5t(t - 5) + 13(t - 5) = (t - 5)(5t + 13) = 0.\n6. Since t > 0, t = 5 s.\n\n5. FINAL ANSWER:\nOption A: 5 s\n\n6. QUICK TIP:\nAlways remember that a dropped object inherits the velocity of its carrier, NOT zero!",
+    "solutionStructured": {
+      "concept": "The ball inherits the instantaneous velocity of the ascending balloon at the instant of release ($u = +12\\text{ m/s}$ upwards).",
+      "given": "u = +12 m/s (upward), displacement s = -65 m (downward to ground), a = -10 m/s\u00b2.",
+      "formula": "s = ut + (1/2)at\u00b2",
+      "stepByStep": "1. Sign convention: Upward positive (+), downward negative (-).\n2. Displacement to ground s = -65 m.\n3. Equation: -65 = 12 t - (1/2)(10) t\u00b2 = 12 t - 5 t\u00b2.\n4. Rearrange: 5 t\u00b2 - 12 t - 65 = 0.\n5. Factorize: (5 t - 25)(t + ...) => 5 t\u00b2 - 25 t + 13 t - 65 = 5t(t - 5) + 13(t - 5) = (t - 5)(5t + 13) = 0.\n6. Since t > 0, t = 5 s.",
+      "finalAnswer": "Option A: 5 s",
+      "whyOtherOptionsWrong": "Assuming u = 0 gives t = \u221a(2h/g) = \u221a13 \u2248 3.6 s, ignoring the initial upward velocity."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Conceptual and numerical mixed problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-484",
+    "questionNumber": 484,
+    "question": "Water drops fall at regular intervals from a tap 5 m above the ground. The third drop is leaving the tap at the exact instant the first drop hits the ground. What is the height of the second drop from the ground at that instant? (Take g = 10 m/s\u00b2)",
+    "options": {
+      "A": "3.75 m",
+      "B": "1.25 m",
+      "C": "2.50 m",
+      "D": "4.00 m"
+    },
+    "optionsList": [
+      "3.75 m",
+      "1.25 m",
+      "2.50 m",
+      "4.00 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor drops falling at equal time intervals $\\Delta t$, the time elapsed for drop 1 is $2\\Delta t$ and for drop 2 is $\\Delta t$.\n\n2. GIVEN:\nTap height H = 5 m, g = 10 m/s\u00b2, drop 3 leaving (t = 0), drop 1 at ground.\n\n3. FORMULA / PRINCIPLE:\nH = (1/2) g (2\u0394t)\u00b2; h\u2082 = (1/2) g (\u0394t)\u00b2\n\n4. STEP-BY-STEP SOLUTION:\n1. Time for drop 1 to hit ground: 5 = (1/2)(10) T\u00b2 = 5 T\u00b2 => T = 1 s.\n2. Since drop 3 is leaving, two equal intervals have passed: 2 \u0394t = 1 s => \u0394t = 0.5 s.\n3. Drop 2 has been falling for time t = \u0394t = 0.5 s.\n4. Distance fallen by drop 2: y = (1/2)(10)(0.5)\u00b2 = 5 \u00d7 0.25 = 1.25 m from tap.\n5. Height of drop 2 above ground = 5 - 1.25 = 3.75 m.\n\n5. FINAL ANSWER:\nOption A: 3.75 m\n\n6. QUICK TIP:\nGalileo's ratio of distances in successive equal time intervals is 1 : 3. The lower section is 3 parts and upper is 1 part: height above ground = 3/4 of 5 m = 3.75 m.",
+    "solutionStructured": {
+      "concept": "For drops falling at equal time intervals $\\Delta t$, the time elapsed for drop 1 is $2\\Delta t$ and for drop 2 is $\\Delta t$.",
+      "given": "Tap height H = 5 m, g = 10 m/s\u00b2, drop 3 leaving (t = 0), drop 1 at ground.",
+      "formula": "H = (1/2) g (2\u0394t)\u00b2; h\u2082 = (1/2) g (\u0394t)\u00b2",
+      "stepByStep": "1. Time for drop 1 to hit ground: 5 = (1/2)(10) T\u00b2 = 5 T\u00b2 => T = 1 s.\n2. Since drop 3 is leaving, two equal intervals have passed: 2 \u0394t = 1 s => \u0394t = 0.5 s.\n3. Drop 2 has been falling for time t = \u0394t = 0.5 s.\n4. Distance fallen by drop 2: y = (1/2)(10)(0.5)\u00b2 = 5 \u00d7 0.25 = 1.25 m from tap.\n5. Height of drop 2 above ground = 5 - 1.25 = 3.75 m.",
+      "finalAnswer": "Option A: 3.75 m",
+      "whyOtherOptionsWrong": "1.25 m is the distance fallen from the tap, not height above ground."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Conceptual and numerical mixed problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-485",
+    "questionNumber": 485,
+    "question": "A stone dropped from the top of a tower traverses 24.5 m in the last second of its journey. Taking g = 9.8 m/s\u00b2, what is the height of the tower?",
+    "options": {
+      "A": "44.1 m",
+      "B": "78.4 m",
+      "C": "39.2 m",
+      "D": "49.0 m"
+    },
+    "optionsList": [
+      "44.1 m",
+      "78.4 m",
+      "39.2 m",
+      "49.0 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDistance covered in the nth second from rest: $s_n = \\frac{g}{2}(2n - 1)$.\n\n2. GIVEN:\ns_n = 24.5 m, g = 9.8 m/s\u00b2.\n\n3. FORMULA / PRINCIPLE:\ns_n = \\frac{g}{2}(2n - 1); H = \\frac{1}{2} g n\u00b2\n\n4. STEP-BY-STEP SOLUTION:\n1. 24.5 = (9.8 / 2)(2n - 1) = 4.9 (2n - 1).\n2. 2n - 1 = 24.5 / 4.9 = 5 => 2n = 6 => n = 3 s.\n3. Total time of fall is T = 3 s.\n4. Total height of the tower: H = (1/2) g T\u00b2 = (1/2)(9.8)(3)\u00b2 = 4.9 \u00d7 9 = 44.1 m.\n\n5. FINAL ANSWER:\nOption A: 44.1 m\n\n6. QUICK TIP:\nWhen $g = 9.8\\text{ m/s}^2$, distances in successive seconds are $4.9\\text{ m}, 14.7\\text{ m}, 24.5\\text{ m}, 34.3\\text{ m}$. Notice $24.5\\text{ m}$ is the 3rd second!",
+    "solutionStructured": {
+      "concept": "Distance covered in the nth second from rest: $s_n = \\frac{g}{2}(2n - 1)$.",
+      "given": "s_n = 24.5 m, g = 9.8 m/s\u00b2.",
+      "formula": "s_n = \\frac{g}{2}(2n - 1); H = \\frac{1}{2} g n\u00b2",
+      "stepByStep": "1. 24.5 = (9.8 / 2)(2n - 1) = 4.9 (2n - 1).\n2. 2n - 1 = 24.5 / 4.9 = 5 => 2n = 6 => n = 3 s.\n3. Total time of fall is T = 3 s.\n4. Total height of the tower: H = (1/2) g T\u00b2 = (1/2)(9.8)(3)\u00b2 = 4.9 \u00d7 9 = 44.1 m.",
+      "finalAnswer": "Option A: 44.1 m",
+      "whyOtherOptionsWrong": "78.4 m corresponds to a fall of 4 seconds."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Conceptual and numerical mixed problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-486",
+    "questionNumber": 486,
+    "question": "A body is thrown vertically upward with speed u. It passes a certain point P at height h at times t\u2081 and t\u2082 during its flight. What is the initial velocity u?",
+    "options": {
+      "A": "g (t\u2081 + t\u2082) / 2",
+      "B": "g \u221a(t\u2081 t\u2082)",
+      "C": "g (t\u2082 - t\u2081)",
+      "D": "2g / (t\u2081 + t\u2082)"
+    },
+    "optionsList": [
+      "g (t\u2081 + t\u2082) / 2",
+      "g \u221a(t\u2081 t\u2082)",
+      "g (t\u2082 - t\u2081)",
+      "2g / (t\u2081 + t\u2082)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe equation of motion $h = ut - \\frac{1}{2}gt^2$ is a quadratic in $t$ whose roots are $t_1$ and $t_2$. The sum of roots is $t_1 + t_2 = \\frac{2u}{g}$.\n\n2. GIVEN:\nHeight h reached at times t\u2081 (ascent) and t\u2082 (descent).\n\n3. FORMULA / PRINCIPLE:\nt\u2081 + t\u2082 = \\frac{2u}{g} => u = \\frac{g(t\u2081 + t\u2082)}{2}\n\n4. STEP-BY-STEP SOLUTION:\n1. Set up the vertical position equation: h = ut - (1/2) g t\u00b2.\n2. Rearrange as standard quadratic in t: (1/2) g t\u00b2 - u t + h = 0 => g t\u00b2 - 2u t + 2h = 0.\n3. The roots of this equation are the two times t\u2081 and t\u2082.\n4. By Vieta's formulas, sum of roots: t\u2081 + t\u2082 = -(-2u) / g = 2u / g.\n5. Solving for u gives: u = g(t\u2081 + t\u2082) / 2.\n\n5. FINAL ANSWER:\nOption A: g (t\u2081 + t\u2082) / 2\n\n6. QUICK TIP:\nUseful NEET relations: (1) $u = \\frac{g(t_1 + t_2)}{2}$, (2) $h = \\frac{1}{2}gt_1 t_2$.",
+    "solutionStructured": {
+      "concept": "The equation of motion $h = ut - \\frac{1}{2}gt^2$ is a quadratic in $t$ whose roots are $t_1$ and $t_2$. The sum of roots is $t_1 + t_2 = \\frac{2u}{g}$.",
+      "given": "Height h reached at times t\u2081 (ascent) and t\u2082 (descent).",
+      "formula": "t\u2081 + t\u2082 = \\frac{2u}{g} => u = \\frac{g(t\u2081 + t\u2082)}{2}",
+      "stepByStep": "1. Set up the vertical position equation: h = ut - (1/2) g t\u00b2.\n2. Rearrange as standard quadratic in t: (1/2) g t\u00b2 - u t + h = 0 => g t\u00b2 - 2u t + 2h = 0.\n3. The roots of this equation are the two times t\u2081 and t\u2082.\n4. By Vieta's formulas, sum of roots: t\u2081 + t\u2082 = -(-2u) / g = 2u / g.\n5. Solving for u gives: u = g(t\u2081 + t\u2082) / 2.",
+      "finalAnswer": "Option A: g (t\u2081 + t\u2082) / 2",
+      "whyOtherOptionsWrong": "g \u221a(t\u2081 t\u2082) is related to velocity at height h, not initial launch speed u."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Conceptual and numerical mixed problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-487",
+    "questionNumber": 487,
+    "question": "In the previous question, what is the height h of the point P in terms of t\u2081, t\u2082, and g?",
+    "options": {
+      "A": "(1/2) g t\u2081 t\u2082",
+      "B": "g (t\u2081 + t\u2082)\u00b2 / 8",
+      "C": "g t\u2081 t\u2082",
+      "D": "(1/4) g t\u2081 t\u2082"
+    },
+    "optionsList": [
+      "(1/2) g t\u2081 t\u2082",
+      "g (t\u2081 + t\u2082)\u00b2 / 8",
+      "g t\u2081 t\u2082",
+      "(1/4) g t\u2081 t\u2082"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nProduct of roots of the quadratic $g t^2 - 2u t + 2h = 0$ is $t_1 t_2 = \\frac{2h}{g}$.\n\n2. GIVEN:\nRoots t\u2081 and t\u2082 of equation g t\u00b2 - 2u t + 2h = 0.\n\n3. FORMULA / PRINCIPLE:\nt\u2081 t\u2082 = 2h / g => h = (1/2) g t\u2081 t\u2082\n\n4. STEP-BY-STEP SOLUTION:\n1. From the quadratic equation for time at height h: g t\u00b2 - 2u t + 2h = 0.\n2. The product of the roots is: t\u2081 t\u2082 = constant term / leading coefficient = 2h / g.\n3. Multiplying both sides by g/2 yields: h = (1/2) g t\u2081 t\u2082.\n\n5. FINAL ANSWER:\nOption A: (1/2) g t\u2081 t\u2082\n\n6. QUICK TIP:\nDirect memory trick for NEET: $h = \\frac{1}{2} g t_1 t_2$.",
+    "solutionStructured": {
+      "concept": "Product of roots of the quadratic $g t^2 - 2u t + 2h = 0$ is $t_1 t_2 = \\frac{2h}{g}$.",
+      "given": "Roots t\u2081 and t\u2082 of equation g t\u00b2 - 2u t + 2h = 0.",
+      "formula": "t\u2081 t\u2082 = 2h / g => h = (1/2) g t\u2081 t\u2082",
+      "stepByStep": "1. From the quadratic equation for time at height h: g t\u00b2 - 2u t + 2h = 0.\n2. The product of the roots is: t\u2081 t\u2082 = constant term / leading coefficient = 2h / g.\n3. Multiplying both sides by g/2 yields: h = (1/2) g t\u2081 t\u2082.",
+      "finalAnswer": "Option A: (1/2) g t\u2081 t\u2082",
+      "whyOtherOptionsWrong": "g t\u2081 t\u2082 misses the factor of 1/2 from the quadratic equation."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Conceptual and numerical mixed problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-488",
+    "questionNumber": 488,
+    "question": "A particle moves along a straight line with velocity v = k \u221ax, where k is a positive constant and x is the position. The acceleration of the particle is:",
+    "options": {
+      "A": "k\u00b2 / 2, independent of position",
+      "B": "k\u00b2 \u221ax",
+      "C": "k / (2\u221ax)",
+      "D": "k\u00b2 x"
+    },
+    "optionsList": [
+      "k\u00b2 / 2, independent of position",
+      "k\u00b2 \u221ax",
+      "k / (2\u221ax)",
+      "k\u00b2 x"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nUse $a = v \\frac{dv}{dx}$ to determine acceleration.\n\n2. GIVEN:\nv = k \u221ax = k x^{1/2}.\n\n3. FORMULA / PRINCIPLE:\na = v \\frac{dv}{dx}\n\n4. STEP-BY-STEP SOLUTION:\n1. Differentiate v with respect to x: dv/dx = k (1 / (2\u221ax)) = k / (2\u221ax).\n2. Multiply by velocity v: a = v (dv/dx) = (k \u221ax) \u00d7 (k / (2\u221ax)).\n3. \u221ax cancels out: a = k\u00b2 / 2.\n4. Since k is a constant, acceleration a is constant and independent of x.\n\n5. FINAL ANSWER:\nOption A: k\u00b2 / 2, independent of position\n\n6. QUICK TIP:\nIf $v \\propto x^{1/2}$, acceleration is constant! This is the hallmark of motion under uniform acceleration starting from rest ($v^2 = 2as \\implies v = \\sqrt{2a} \\sqrt{s}$).",
+    "solutionStructured": {
+      "concept": "Use $a = v \\frac{dv}{dx}$ to determine acceleration.",
+      "given": "v = k \u221ax = k x^{1/2}.",
+      "formula": "a = v \\frac{dv}{dx}",
+      "stepByStep": "1. Differentiate v with respect to x: dv/dx = k (1 / (2\u221ax)) = k / (2\u221ax).\n2. Multiply by velocity v: a = v (dv/dx) = (k \u221ax) \u00d7 (k / (2\u221ax)).\n3. \u221ax cancels out: a = k\u00b2 / 2.\n4. Since k is a constant, acceleration a is constant and independent of x.",
+      "finalAnswer": "Option A: k\u00b2 / 2, independent of position",
+      "whyOtherOptionsWrong": "k / (2\u221ax) is dv/dx, not acceleration v (dv/dx)."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Conceptual and numerical mixed problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-489",
+    "questionNumber": 489,
+    "question": "The displacement of a particle is given by x = (t - 2)\u00b2. What is the total distance traveled by the particle in the first 4 seconds?",
+    "options": {
+      "A": "8 m",
+      "B": "4 m",
+      "C": "0 m",
+      "D": "16 m"
+    },
+    "optionsList": [
+      "8 m",
+      "4 m",
+      "0 m",
+      "16 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nVelocity is $v = dx/dt = 2(t - 2)$. The particle reverses direction at $t = 2\\text{ s}$. Distance is the sum of magnitudes of displacements.\n\n2. GIVEN:\nx(t) = (t - 2)\u00b2, interval t = 0 to 4 s.\n\n3. FORMULA / PRINCIPLE:\nv = 2(t - 2) = 0 => t = 2 s. Distance = |x(2) - x(0)| + |x(4) - x(2)|\n\n4. STEP-BY-STEP SOLUTION:\n1. At t = 0: x(0) = (0 - 2)\u00b2 = 4 m.\n2. Turnaround point: v(t) = 2(t - 2) = 0 => t = 2 s. Position x(2) = (2 - 2)\u00b2 = 0 m.\n3. At t = 4: x(4) = (4 - 2)\u00b2 = 4 m.\n4. Distance in [0, 2]: |0 - 4| = 4 m.\n5. Distance in [2, 4]: |4 - 0| = 4 m.\n6. Total distance = 4 + 4 = 8 m.\n\n5. FINAL ANSWER:\nOption A: 8 m\n\n6. QUICK TIP:\nNet displacement is $x(4) - x(0) = 4 - 4 = 0\\text{ m}$, but distance is $8\\text{ m}$.",
+    "solutionStructured": {
+      "concept": "Velocity is $v = dx/dt = 2(t - 2)$. The particle reverses direction at $t = 2\\text{ s}$. Distance is the sum of magnitudes of displacements.",
+      "given": "x(t) = (t - 2)\u00b2, interval t = 0 to 4 s.",
+      "formula": "v = 2(t - 2) = 0 => t = 2 s. Distance = |x(2) - x(0)| + |x(4) - x(2)|",
+      "stepByStep": "1. At t = 0: x(0) = (0 - 2)\u00b2 = 4 m.\n2. Turnaround point: v(t) = 2(t - 2) = 0 => t = 2 s. Position x(2) = (2 - 2)\u00b2 = 0 m.\n3. At t = 4: x(4) = (4 - 2)\u00b2 = 4 m.\n4. Distance in [0, 2]: |0 - 4| = 4 m.\n5. Distance in [2, 4]: |4 - 0| = 4 m.\n6. Total distance = 4 + 4 = 8 m.",
+      "finalAnswer": "Option A: 8 m",
+      "whyOtherOptionsWrong": "0 m is the net displacement, not the distance."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Conceptual and numerical mixed problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-490",
+    "questionNumber": 490,
+    "question": "A body travels 200 cm in the first 2 s and 220 cm in the next 4 s with constant acceleration. What is the velocity of the body at the end of the 7th second from the start?",
+    "options": {
+      "A": "10 cm/s",
+      "B": "15 cm/s",
+      "C": "20 cm/s",
+      "D": "5 cm/s"
+    },
+    "optionsList": [
+      "10 cm/s",
+      "15 cm/s",
+      "20 cm/s",
+      "5 cm/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nUse equations of motion for multi-interval data: $s = ut + \\frac{1}{2}at^2$.\n\n2. GIVEN:\ns\u2081 = 200 cm in t\u2081 = 2 s; s\u2082 = 220 cm in next 4 s (total s = 420 cm in t = 6 s).\n\n3. FORMULA / PRINCIPLE:\ns = ut + (1/2)at\u00b2; v = u + at\n\n4. STEP-BY-STEP SOLUTION:\n1. For first 2 s: 200 = u(2) + (1/2) a (2)\u00b2 = 2u + 2a => u + a = 100  --- (Eq 1).\n2. For total 6 s: total distance = 200 + 220 = 420 cm.\n420 = u(6) + (1/2) a (6)\u00b2 = 6u + 18a => u + 3a = 70  --- (Eq 2).\n3. Subtract (Eq 1) from (Eq 2): 2a = -30 => a = -15 cm/s\u00b2.\n4. Substitute into (Eq 1): u + (-15) = 100 => u = 115 cm/s.\n5. Velocity at t = 7 s: v = u + at = 115 + (-15)(7) = 115 - 105 = 10 cm/s.\n\n5. FINAL ANSWER:\nOption A: 10 cm/s\n\n6. QUICK TIP:\nAlways measure time and total distance from $t = 0$ rather than setting a new origin to avoid algebraic pitfalls.",
+    "solutionStructured": {
+      "concept": "Use equations of motion for multi-interval data: $s = ut + \\frac{1}{2}at^2$.",
+      "given": "s\u2081 = 200 cm in t\u2081 = 2 s; s\u2082 = 220 cm in next 4 s (total s = 420 cm in t = 6 s).",
+      "formula": "s = ut + (1/2)at\u00b2; v = u + at",
+      "stepByStep": "1. For first 2 s: 200 = u(2) + (1/2) a (2)\u00b2 = 2u + 2a => u + a = 100  --- (Eq 1).\n2. For total 6 s: total distance = 200 + 220 = 420 cm.\n420 = u(6) + (1/2) a (6)\u00b2 = 6u + 18a => u + 3a = 70  --- (Eq 2).\n3. Subtract (Eq 1) from (Eq 2): 2a = -30 => a = -15 cm/s\u00b2.\n4. Substitute into (Eq 1): u + (-15) = 100 => u = 115 cm/s.\n5. Velocity at t = 7 s: v = u + at = 115 + (-15)(7) = 115 - 105 = 10 cm/s.",
+      "finalAnswer": "Option A: 10 cm/s",
+      "whyOtherOptionsWrong": "15 cm/s is the magnitude of acceleration, not the velocity."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Conceptual and numerical mixed problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-491",
+    "questionNumber": 491,
+    "question": "A car accelerates from rest at a constant rate a\u2081 for some time, after which it decelerates at a constant rate a\u2082 to come to rest. If the total time elapsed is t, the maximum velocity acquired by the car is:",
+    "options": {
+      "A": "(a\u2081 a\u2082 / (a\u2081 + a\u2082)) t",
+      "B": "((a\u2081 + a\u2082) / (a\u2081 a\u2082)) t",
+      "C": "(a\u2081\u00b2 + a\u2082\u00b2) t / 2",
+      "D": "\u221a(a\u2081 a\u2082) t"
+    },
+    "optionsList": [
+      "(a\u2081 a\u2082 / (a\u2081 + a\u2082)) t",
+      "((a\u2081 + a\u2082) / (a\u2081 a\u2082)) t",
+      "(a\u2081\u00b2 + a\u2082\u00b2) t / 2",
+      "\u221a(a\u2081 a\u2082) t"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTotal time $t = t_1 + t_2 = \\frac{v_{\\max}}{a_1} + \\frac{v_{\\max}}{a_2} = v_{\\max}\\left(\\frac{1}{a_1} + \\frac{1}{a_2}\\right)$.\n\n2. GIVEN:\nAcceleration a\u2081, deceleration a\u2082, total time t.\n\n3. FORMULA / PRINCIPLE:\nt = v_max (1/a\u2081 + 1/a\u2082)\n\n4. STEP-BY-STEP SOLUTION:\n1. Acceleration stage: v_max = a\u2081 t\u2081 => t\u2081 = v_max / a\u2081.\n2. Deceleration stage: 0 = v_max - a\u2082 t\u2082 => t\u2082 = v_max / a\u2082.\n3. Total time: t = t\u2081 + t\u2082 = v_max (1/a\u2081 + 1/a\u2082) = v_max (a\u2081 + a\u2082) / (a\u2081 a\u2082).\n4. Solving for v_max gives: v_max = (a\u2081 a\u2082 / (a\u2081 + a\u2082)) t.\n\n5. FINAL ANSWER:\nOption A: (a\u2081 a\u2082 / (a\u2081 + a\u2082)) t\n\n6. QUICK TIP:\nThis expression $(a_1 a_2 / (a_1 + a_2))$ is the reduced harmonic mean acceleration $\\frac{1}{1/a_1 + 1/a_2}$.",
+    "solutionStructured": {
+      "concept": "Total time $t = t_1 + t_2 = \\frac{v_{\\max}}{a_1} + \\frac{v_{\\max}}{a_2} = v_{\\max}\\left(\\frac{1}{a_1} + \\frac{1}{a_2}\\right)$.",
+      "given": "Acceleration a\u2081, deceleration a\u2082, total time t.",
+      "formula": "t = v_max (1/a\u2081 + 1/a\u2082)",
+      "stepByStep": "1. Acceleration stage: v_max = a\u2081 t\u2081 => t\u2081 = v_max / a\u2081.\n2. Deceleration stage: 0 = v_max - a\u2082 t\u2082 => t\u2082 = v_max / a\u2082.\n3. Total time: t = t\u2081 + t\u2082 = v_max (1/a\u2081 + 1/a\u2082) = v_max (a\u2081 + a\u2082) / (a\u2081 a\u2082).\n4. Solving for v_max gives: v_max = (a\u2081 a\u2082 / (a\u2081 + a\u2082)) t.",
+      "finalAnswer": "Option A: (a\u2081 a\u2082 / (a\u2081 + a\u2082)) t",
+      "whyOtherOptionsWrong": "Option B has the dimensional units inverted."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Conceptual and numerical mixed problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-492",
+    "questionNumber": 492,
+    "question": "For the motion described in the previous question, what is the total distance traveled by the car?",
+    "options": {
+      "A": "(1/2) [a\u2081 a\u2082 / (a\u2081 + a\u2082)] t\u00b2",
+      "B": "[a\u2081 a\u2082 / (a\u2081 + a\u2082)] t\u00b2",
+      "C": "(1/2) (a\u2081 + a\u2082) t\u00b2",
+      "D": "(1/4) [a\u2081 a\u2082 / (a\u2081 + a\u2082)] t\u00b2"
+    },
+    "optionsList": [
+      "(1/2) [a\u2081 a\u2082 / (a\u2081 + a\u2082)] t\u00b2",
+      "[a\u2081 a\u2082 / (a\u2081 + a\u2082)] t\u00b2",
+      "(1/2) (a\u2081 + a\u2082) t\u00b2",
+      "(1/4) [a\u2081 a\u2082 / (a\u2081 + a\u2082)] t\u00b2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTotal distance under a triangular v-t graph is the area of the triangle: $s = \\frac{1}{2} \\times \\text{base} \\times \\text{height} = \\frac{1}{2} t v_{\\max}$.\n\n2. GIVEN:\nTotal time t, peak velocity v_max = [a\u2081 a\u2082 / (a\u2081 + a\u2082)] t.\n\n3. FORMULA / PRINCIPLE:\ns = (1/2) t v_max\n\n4. STEP-BY-STEP SOLUTION:\n1. On a velocity-time graph, the curve forms a triangle with base = total time t and height = peak velocity v_max.\n2. Total distance s = Area under v-t graph = (1/2) \u00d7 base \u00d7 height = (1/2) t v_max.\n3. Substitute v_max = [a\u2081 a\u2082 / (a\u2081 + a\u2082)] t:\n4. s = (1/2) [a\u2081 a\u2082 / (a\u2081 + a\u2082)] t\u00b2.\n\n5. FINAL ANSWER:\nOption A: (1/2) [a\u2081 a\u2082 / (a\u2081 + a\u2082)] t\u00b2\n\n6. QUICK TIP:\nUse the triangular v-t graph method for any two-stage motion starting and ending at rest. Area is simply $\\frac{1}{2} t v_{\\max}$!",
+    "solutionStructured": {
+      "concept": "Total distance under a triangular v-t graph is the area of the triangle: $s = \\frac{1}{2} \\times \\text{base} \\times \\text{height} = \\frac{1}{2} t v_{\\max}$.",
+      "given": "Total time t, peak velocity v_max = [a\u2081 a\u2082 / (a\u2081 + a\u2082)] t.",
+      "formula": "s = (1/2) t v_max",
+      "stepByStep": "1. On a velocity-time graph, the curve forms a triangle with base = total time t and height = peak velocity v_max.\n2. Total distance s = Area under v-t graph = (1/2) \u00d7 base \u00d7 height = (1/2) t v_max.\n3. Substitute v_max = [a\u2081 a\u2082 / (a\u2081 + a\u2082)] t:\n4. s = (1/2) [a\u2081 a\u2082 / (a\u2081 + a\u2082)] t\u00b2.",
+      "finalAnswer": "Option A: (1/2) [a\u2081 a\u2082 / (a\u2081 + a\u2082)] t\u00b2",
+      "whyOtherOptionsWrong": "Option B forgets the factor of 1/2 from the area of the triangle."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Conceptual and numerical mixed problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-493",
+    "questionNumber": 493,
+    "question": "A particle moves along a straight line such that its deceleration is proportional to its displacement x: a = -k x (where k > 0). If its velocity at x = 0 is v\u2080, at what displacement does the particle momentarily come to rest?",
+    "options": {
+      "A": "v\u2080 / \u221ak",
+      "B": "v\u2080\u00b2 / k",
+      "C": "v\u2080 / k",
+      "D": "\u221a(v\u2080 / k)"
+    },
+    "optionsList": [
+      "v\u2080 / \u221ak",
+      "v\u2080\u00b2 / k",
+      "v\u2080 / k",
+      "\u221a(v\u2080 / k)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDeceleration varying with displacement: use $a = v \\frac{dv}{dx} = -k x$. Integrate to find $v(x)$.\n\n2. GIVEN:\na = -kx, v(0) = v\u2080.\n\n3. FORMULA / PRINCIPLE:\nv dv = -k x dx\n\n4. STEP-BY-STEP SOLUTION:\n1. Express acceleration as v (dv/dx) = -kx.\n2. Separate variables and integrate from x = 0 (v = v\u2080) to x = x_max (v = 0):\n\u222b_{v\u2080}^0 v dv = -k \u222b_0^{x_max} x dx.\n3. [v\u00b2 / 2]_{v\u2080}^0 = -k [x\u00b2 / 2]_0^{x_max}.\n4. -v\u2080\u00b2 / 2 = -k x_max\u00b2 / 2 => x_max\u00b2 = v\u2080\u00b2 / k.\n5. x_max = v\u2080 / \u221ak.\n\n5. FINAL ANSWER:\nOption A: v\u2080 / \u221ak\n\n6. QUICK TIP:\nThis is simple harmonic motion where $\\omega = \\sqrt{k}$ and $v_0 = \\omega A \\implies A = v_0 / \\sqrt{k}$!",
+    "solutionStructured": {
+      "concept": "Deceleration varying with displacement: use $a = v \\frac{dv}{dx} = -k x$. Integrate to find $v(x)$.",
+      "given": "a = -kx, v(0) = v\u2080.",
+      "formula": "v dv = -k x dx",
+      "stepByStep": "1. Express acceleration as v (dv/dx) = -kx.\n2. Separate variables and integrate from x = 0 (v = v\u2080) to x = x_max (v = 0):\n\u222b_{v\u2080}^0 v dv = -k \u222b_0^{x_max} x dx.\n3. [v\u00b2 / 2]_{v\u2080}^0 = -k [x\u00b2 / 2]_0^{x_max}.\n4. -v\u2080\u00b2 / 2 = -k x_max\u00b2 / 2 => x_max\u00b2 = v\u2080\u00b2 / k.\n5. x_max = v\u2080 / \u221ak.",
+      "finalAnswer": "Option A: v\u2080 / \u221ak",
+      "whyOtherOptionsWrong": "v\u2080\u00b2 / k forgets that the relation is between x\u00b2 and v\u2080\u00b2."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Conceptual and numerical mixed problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-494",
+    "questionNumber": 494,
+    "question": "A particle moves along the x-axis with acceleration a(t) = 6t - 18 m/s\u00b2. At t = 0, its position is x(0) = 0 and velocity is v(0) = 24 m/s. What is the total distance traveled by the particle in the time interval t = 0 to t = 4 s?",
+    "options": {
+      "A": "24 m",
+      "B": "16 m",
+      "C": "20 m",
+      "D": "28 m"
+    },
+    "optionsList": [
+      "24 m",
+      "16 m",
+      "20 m",
+      "28 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFind velocity $v(t) = \\int a dt$ and identify zeros of $v(t)$ to find direction changes.\n\n2. GIVEN:\na(t) = 6t - 18, v(0) = 24, x(0) = 0, interval [0, 4] s.\n\n3. FORMULA / PRINCIPLE:\nv(t) = 3t\u00b2 - 18t + 24 = 3(t - 2)(t - 4) = 0\n\n4. STEP-BY-STEP SOLUTION:\n1. Velocity: v(t) = \u222b (6t - 18) dt = 3t\u00b2 - 18t + C. Since v(0) = 24, v(t) = 3t\u00b2 - 18t + 24.\n2. Roots of v(t): 3(t\u00b2 - 6t + 8) = 3(t - 2)(t - 4) = 0 => t = 2 s and t = 4 s.\n3. Position x(t) = \u222b (3t\u00b2 - 18t + 24) dt = t\u00b3 - 9t\u00b2 + 24t (with x(0) = 0).\n4. At t = 0: x(0) = 0.\n5. At t = 2: x(2) = 2\u00b3 - 9(4) + 24(2) = 8 - 36 + 48 = 20 m.\n6. At t = 4: x(4) = 4\u00b3 - 9(16) + 24(4) = 64 - 144 + 96 = 16 m.\n7. Distance from t = 0 to 2 s: |20 - 0| = 20 m.\n8. Distance from t = 2 to 4 s: |16 - 20| = 4 m (turning back).\n9. Total distance = 20 + 4 = 24 m.\n\n5. FINAL ANSWER:\nOption A: 24 m\n\n6. QUICK TIP:\nAlways find the zeros of velocity to split into monotonic intervals for distance calculation.",
+    "solutionStructured": {
+      "concept": "Find velocity $v(t) = \\int a dt$ and identify zeros of $v(t)$ to find direction changes.",
+      "given": "a(t) = 6t - 18, v(0) = 24, x(0) = 0, interval [0, 4] s.",
+      "formula": "v(t) = 3t\u00b2 - 18t + 24 = 3(t - 2)(t - 4) = 0",
+      "stepByStep": "1. Velocity: v(t) = \u222b (6t - 18) dt = 3t\u00b2 - 18t + C. Since v(0) = 24, v(t) = 3t\u00b2 - 18t + 24.\n2. Roots of v(t): 3(t\u00b2 - 6t + 8) = 3(t - 2)(t - 4) = 0 => t = 2 s and t = 4 s.\n3. Position x(t) = \u222b (3t\u00b2 - 18t + 24) dt = t\u00b3 - 9t\u00b2 + 24t (with x(0) = 0).\n4. At t = 0: x(0) = 0.\n5. At t = 2: x(2) = 2\u00b3 - 9(4) + 24(2) = 8 - 36 + 48 = 20 m.\n6. At t = 4: x(4) = 4\u00b3 - 9(16) + 24(4) = 64 - 144 + 96 = 16 m.\n7. Distance from t = 0 to 2 s: |20 - 0| = 20 m.\n8. Distance from t = 2 to 4 s: |16 - 20| = 4 m (turning back).\n9. Total distance = 20 + 4 = 24 m.",
+      "finalAnswer": "Option A: 24 m",
+      "whyOtherOptionsWrong": "16 m is displacement, not total distance."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Conceptual and numerical mixed problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-495",
+    "questionNumber": 495,
+    "question": "A body starts from rest at x = 0 and moves along the x-axis with an acceleration given by a = \u03b1 \u221av, where \u03b1 is a positive constant. What is the position x of the body as a function of velocity v?",
+    "options": {
+      "A": "(2 / (3\u03b1)) v^{3/2}",
+      "B": "(1 / \u03b1) v^2",
+      "C": "(2 / \u03b1) \u221av",
+      "D": "(3 / (2\u03b1)) v^{3/2}"
+    },
+    "optionsList": [
+      "(2 / (3\u03b1)) v^{3/2}",
+      "(1 / \u03b1) v^2",
+      "(2 / \u03b1) \u221av",
+      "(3 / (2\u03b1)) v^{3/2}"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nUse $a = v \\frac{dv}{dx}$ to relate velocity and position directly.\n\n2. GIVEN:\na = \u03b1 \u221av, initial condition x = 0 when v = 0.\n\n3. FORMULA / PRINCIPLE:\nv \\frac{dv}{dx} = \\alpha \\sqrt{v} => \\sqrt{v} dv = \\alpha dx\n\n4. STEP-BY-STEP SOLUTION:\n1. Write acceleration as: v (dv/dx) = \u03b1 v^{1/2}.\n2. Separate variables: (v / v^{1/2}) dv = \u03b1 dx => v^{1/2} dv = \u03b1 dx.\n3. Integrate both sides from 0 to v and 0 to x:\n\u222b_0^v v^{1/2} dv = \u03b1 \u222b_0^x dx.\n4. (2/3) v^{3/2} = \u03b1 x.\n5. Solving for x: x = (2 / (3\u03b1)) v^{3/2}.\n\n5. FINAL ANSWER:\nOption A: (2 / (3\u03b1)) v^{3/2}\n\n6. QUICK TIP:\nUse $v \\frac{dv}{dx}$ whenever time $t$ is not involved in the relation between $a$, $v$, and $x$.",
+    "solutionStructured": {
+      "concept": "Use $a = v \\frac{dv}{dx}$ to relate velocity and position directly.",
+      "given": "a = \u03b1 \u221av, initial condition x = 0 when v = 0.",
+      "formula": "v \\frac{dv}{dx} = \\alpha \\sqrt{v} => \\sqrt{v} dv = \\alpha dx",
+      "stepByStep": "1. Write acceleration as: v (dv/dx) = \u03b1 v^{1/2}.\n2. Separate variables: (v / v^{1/2}) dv = \u03b1 dx => v^{1/2} dv = \u03b1 dx.\n3. Integrate both sides from 0 to v and 0 to x:\n\u222b_0^v v^{1/2} dv = \u03b1 \u222b_0^x dx.\n4. (2/3) v^{3/2} = \u03b1 x.\n5. Solving for x: x = (2 / (3\u03b1)) v^{3/2}.",
+      "finalAnswer": "Option A: (2 / (3\u03b1)) v^{3/2}",
+      "whyOtherOptionsWrong": "Option D inverts the numerical coefficient."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Conceptual and numerical mixed problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-496",
+    "questionNumber": 496,
+    "question": "A stone is dropped into a well of depth h = 80 m. The splash sound is heard at the top after a time t. If g = 10 m/s\u00b2 and the speed of sound in air is 320 m/s, what is the value of t?",
+    "options": {
+      "A": "4.25 s",
+      "B": "4.00 s",
+      "C": "4.50 s",
+      "D": "3.75 s"
+    },
+    "optionsList": [
+      "4.25 s",
+      "4.00 s",
+      "4.50 s",
+      "3.75 s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTotal time is the sum of time taken by the stone to fall ($t_1$) and time taken by sound to travel up ($t_2$): $t = t_1 + t_2$.\n\n2. GIVEN:\nDepth h = 80 m, g = 10 m/s\u00b2, speed of sound v_s = 320 m/s.\n\n3. FORMULA / PRINCIPLE:\nt\u2081 = \u221a(2h / g), t\u2082 = h / v_s, t = t\u2081 + t\u2082\n\n4. STEP-BY-STEP SOLUTION:\n1. Time for stone to fall to the water surface: t\u2081 = \u221a(2h / g) = \u221a(2 \u00d7 80 / 10) = \u221a16 = 4 s.\n2. Time for the splash sound to travel up the well: t\u2082 = h / v_s = 80 / 320 = 0.25 s.\n3. Total time heard by observer at top: t = t\u2081 + t\u2082 = 4 + 0.25 = 4.25 s.\n\n5. FINAL ANSWER:\nOption A: 4.25 s\n\n6. QUICK TIP:\nClassic NEET trap: Don't forget that sound travels at a finite speed and takes time $h / v_s$ to reach the listener!",
+    "solutionStructured": {
+      "concept": "Total time is the sum of time taken by the stone to fall ($t_1$) and time taken by sound to travel up ($t_2$): $t = t_1 + t_2$.",
+      "given": "Depth h = 80 m, g = 10 m/s\u00b2, speed of sound v_s = 320 m/s.",
+      "formula": "t\u2081 = \u221a(2h / g), t\u2082 = h / v_s, t = t\u2081 + t\u2082",
+      "stepByStep": "1. Time for stone to fall to the water surface: t\u2081 = \u221a(2h / g) = \u221a(2 \u00d7 80 / 10) = \u221a16 = 4 s.\n2. Time for the splash sound to travel up the well: t\u2082 = h / v_s = 80 / 320 = 0.25 s.\n3. Total time heard by observer at top: t = t\u2081 + t\u2082 = 4 + 0.25 = 4.25 s.",
+      "finalAnswer": "Option A: 4.25 s",
+      "whyOtherOptionsWrong": "4.00 s neglects the time taken by the sound wave to propagate up the well."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Conceptual and numerical mixed problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-497",
+    "questionNumber": 497,
+    "question": "A ball is dropped from a height H onto a horizontal floor. After each bounce, it rebounds with a speed that is a fraction e (coefficient of restitution) of its impact speed. What is the total distance traveled by the ball before coming to rest?",
+    "options": {
+      "A": "H (1 + e\u00b2) / (1 - e\u00b2)",
+      "B": "H (1 + e) / (1 - e)",
+      "C": "H / (1 - e\u00b2)",
+      "D": "2H / (1 - e\u00b2)"
+    },
+    "optionsList": [
+      "H (1 + e\u00b2) / (1 - e\u00b2)",
+      "H (1 + e) / (1 - e)",
+      "H / (1 - e\u00b2)",
+      "2H / (1 - e\u00b2)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTotal distance is the initial drop plus twice the height of every subsequent bounce, forming an infinite geometric series.\n\n2. GIVEN:\nDrop height H, coefficient of restitution e (0 < e < 1).\n\n3. FORMULA / PRINCIPLE:\nTotal distance = H + 2 e\u00b2 H + 2 e\u2074 H + ... = H + 2H e\u00b2 / (1 - e\u00b2)\n\n4. STEP-BY-STEP SOLUTION:\n1. Initial drop: distance = H.\n2. Speed before 1st bounce: v\u2081 = \u221a(2gH). Rebound speed: v\u2081' = e v\u2081.\n3. Height of 1st bounce: h\u2081 = (v\u2081')\u00b2 / (2g) = e\u00b2 H.\n4. Ball ascends and descends h\u2081, contributing 2 h\u2081 = 2 e\u00b2 H to total distance.\n5. Similarly, nth bounce contributes 2 e^{2n} H.\n6. Total distance: D = H + 2H (e\u00b2 + e\u2074 + e\u2076 + ...) = H + 2H [e\u00b2 / (1 - e\u00b2)].\n7. D = H [1 + 2e\u00b2 / (1 - e\u00b2)] = H [(1 - e\u00b2 + 2e\u00b2) / (1 - e\u00b2)] = H (1 + e\u00b2) / (1 - e\u00b2).\n\n5. FINAL ANSWER:\nOption A: H (1 + e\u00b2) / (1 - e\u00b2)\n\n6. QUICK TIP:\nDirect NEET standard result: Total distance $= H \\left(\\frac{1 + e^2}{1 - e^2}\\right)$. Total time $= T \\left(\\frac{1 + e}{1 - e}\\right)$.",
+    "solutionStructured": {
+      "concept": "Total distance is the initial drop plus twice the height of every subsequent bounce, forming an infinite geometric series.",
+      "given": "Drop height H, coefficient of restitution e (0 < e < 1).",
+      "formula": "Total distance = H + 2 e\u00b2 H + 2 e\u2074 H + ... = H + 2H e\u00b2 / (1 - e\u00b2)",
+      "stepByStep": "1. Initial drop: distance = H.\n2. Speed before 1st bounce: v\u2081 = \u221a(2gH). Rebound speed: v\u2081' = e v\u2081.\n3. Height of 1st bounce: h\u2081 = (v\u2081')\u00b2 / (2g) = e\u00b2 H.\n4. Ball ascends and descends h\u2081, contributing 2 h\u2081 = 2 e\u00b2 H to total distance.\n5. Similarly, nth bounce contributes 2 e^{2n} H.\n6. Total distance: D = H + 2H (e\u00b2 + e\u2074 + e\u2076 + ...) = H + 2H [e\u00b2 / (1 - e\u00b2)].\n7. D = H [1 + 2e\u00b2 / (1 - e\u00b2)] = H [(1 - e\u00b2 + 2e\u00b2) / (1 - e\u00b2)] = H (1 + e\u00b2) / (1 - e\u00b2).",
+      "finalAnswer": "Option A: H (1 + e\u00b2) / (1 - e\u00b2)",
+      "whyOtherOptionsWrong": "Option B is the formula for total time of motion, not total distance."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Conceptual and numerical mixed problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-498",
+    "questionNumber": 498,
+    "question": "In the bouncing ball problem above, what is the total time elapsed from the initial release until the ball stops bouncing?",
+    "options": {
+      "A": "\u221a(2H / g) \u00d7 ((1 + e) / (1 - e))",
+      "B": "\u221a(2H / g) \u00d7 ((1 + e\u00b2) / (1 - e\u00b2))",
+      "C": "\u221a(2H / g) / (1 - e)",
+      "D": "2 \u221a(2H / g) / (1 - e)"
+    },
+    "optionsList": [
+      "\u221a(2H / g) \u00d7 ((1 + e) / (1 - e))",
+      "\u221a(2H / g) \u00d7 ((1 + e\u00b2) / (1 - e\u00b2))",
+      "\u221a(2H / g) / (1 - e)",
+      "2 \u221a(2H / g) / (1 - e)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nInitial drop time is $t_0 = \\sqrt{2H/g}$. Each subsequent bounce has time of flight $T_n = 2 e^n t_0$, forming a geometric series in $e$.\n\n2. GIVEN:\nDrop height H, coefficient of restitution e.\n\n3. FORMULA / PRINCIPLE:\nTotal time = t\u2080 + 2 e t\u2080 + 2 e\u00b2 t\u2080 + ... = t\u2080 (1 + 2e/(1 - e)) = t\u2080 (1 + e)/(1 - e)\n\n4. STEP-BY-STEP SOLUTION:\n1. Time for initial drop: t\u2080 = \u221a(2H / g).\n2. Time of flight for first bounce: T\u2081 = 2 v\u2081' / g = 2 e v\u2081 / g = 2 e t\u2080.\n3. Time of flight for nth bounce: T_n = 2 e^n t\u2080.\n4. Total time T = t\u2080 + 2 t\u2080 (e + e\u00b2 + e\u00b3 + ...).\n5. The geometric series sum is e / (1 - e).\n6. T = t\u2080 [1 + 2e / (1 - e)] = t\u2080 [(1 - e + 2e) / (1 - e)] = t\u2080 (1 + e) / (1 - e).\n\n5. FINAL ANSWER:\nOption A: \u221a(2H / g) \u00d7 ((1 + e) / (1 - e))\n\n6. QUICK TIP:\nNotice the exponent: distance involves $e^2$ because height $\\propto v^2$, while time involves $e$ because time $\\propto v$!",
+    "solutionStructured": {
+      "concept": "Initial drop time is $t_0 = \\sqrt{2H/g}$. Each subsequent bounce has time of flight $T_n = 2 e^n t_0$, forming a geometric series in $e$.",
+      "given": "Drop height H, coefficient of restitution e.",
+      "formula": "Total time = t\u2080 + 2 e t\u2080 + 2 e\u00b2 t\u2080 + ... = t\u2080 (1 + 2e/(1 - e)) = t\u2080 (1 + e)/(1 - e)",
+      "stepByStep": "1. Time for initial drop: t\u2080 = \u221a(2H / g).\n2. Time of flight for first bounce: T\u2081 = 2 v\u2081' / g = 2 e v\u2081 / g = 2 e t\u2080.\n3. Time of flight for nth bounce: T_n = 2 e^n t\u2080.\n4. Total time T = t\u2080 + 2 t\u2080 (e + e\u00b2 + e\u00b3 + ...).\n5. The geometric series sum is e / (1 - e).\n6. T = t\u2080 [1 + 2e / (1 - e)] = t\u2080 [(1 - e + 2e) / (1 - e)] = t\u2080 (1 + e) / (1 - e).",
+      "finalAnswer": "Option A: \u221a(2H / g) \u00d7 ((1 + e) / (1 - e))",
+      "whyOtherOptionsWrong": "Option B wrongly uses e\u00b2 instead of e."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Conceptual and numerical mixed problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-499",
+    "questionNumber": 499,
+    "question": "A body moves in a straight line with uniform acceleration. If its displacements in the pth, qth, and rth seconds are in arithmetic progression (AP), then p, q, and r must:",
+    "options": {
+      "A": "Also be in arithmetic progression (AP)",
+      "B": "Be in geometric progression (GP)",
+      "C": "Be in harmonic progression (HP)",
+      "D": "Satisfy p + r = 2q only if acceleration is zero"
+    },
+    "optionsList": [
+      "Also be in arithmetic progression (AP)",
+      "Be in geometric progression (GP)",
+      "Be in harmonic progression (HP)",
+      "Satisfy p + r = 2q only if acceleration is zero"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDisplacement in the nth second is a linear function of $n$: $s_n = u - \\frac{a}{2} + a n$. Any linear transformation of an AP is also an AP.\n\n2. GIVEN:\ns_p, s_q, s_r are in AP for uniformly accelerated motion.\n\n3. FORMULA / PRINCIPLE:\ns_n = A + B n where B = a \u2260 0\n\n4. STEP-BY-STEP SOLUTION:\n1. Displacement in the nth second is s_n = u + (a/2)(2n - 1) = (u - a/2) + a n.\n2. This is a linear function of n: s_n = C + a n (with a \u2260 0).\n3. Since s_p, s_q, s_r are in AP: s_q - s_p = s_r - s_q.\n4. Substitute: (C + a q) - (C + a p) = (C + a r) - (C + a q).\n5. a(q - p) = a(r - q). Since a \u2260 0, divide by a: q - p = r - q.\n6. This means 2q = p + r, which proves that p, q, and r are in arithmetic progression.\n\n5. FINAL ANSWER:\nOption A: Also be in arithmetic progression (AP)\n\n6. QUICK TIP:\nA linear function $f(n) = A + Bn$ maps an AP to an AP and vice-versa!",
+    "solutionStructured": {
+      "concept": "Displacement in the nth second is a linear function of $n$: $s_n = u - \\frac{a}{2} + a n$. Any linear transformation of an AP is also an AP.",
+      "given": "s_p, s_q, s_r are in AP for uniformly accelerated motion.",
+      "formula": "s_n = A + B n where B = a \u2260 0",
+      "stepByStep": "1. Displacement in the nth second is s_n = u + (a/2)(2n - 1) = (u - a/2) + a n.\n2. This is a linear function of n: s_n = C + a n (with a \u2260 0).\n3. Since s_p, s_q, s_r are in AP: s_q - s_p = s_r - s_q.\n4. Substitute: (C + a q) - (C + a p) = (C + a r) - (C + a q).\n5. a(q - p) = a(r - q). Since a \u2260 0, divide by a: q - p = r - q.\n6. This means 2q = p + r, which proves that p, q, and r are in arithmetic progression.",
+      "finalAnswer": "Option A: Also be in arithmetic progression (AP)",
+      "whyOtherOptionsWrong": "They are strictly in AP, not GP or HP."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Conceptual and numerical mixed problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-500",
+    "questionNumber": 500,
+    "question": "A particle starts from the origin at t = 0 and moves along the positive x-axis such that its speed v depends on position x as v = b x^{-n}, where b and n are positive constants. For what range of values of n does the particle reach infinity in a finite time?",
+    "options": {
+      "A": "n < -1 (i.e., not possible for positive n; for v = b x^m, finite time requires m > 1)",
+      "B": "n > 1",
+      "C": "0 < n < 1",
+      "D": "n = 1"
+    },
+    "optionsList": [
+      "n < -1 (i.e., not possible for positive n; for v = b x^m, finite time requires m > 1)",
+      "n > 1",
+      "0 < n < 1",
+      "n = 1"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTime to travel from $x_0$ to $\\infty$ is $T = \\int_{x_0}^\\infty \\frac{dx}{v(x)} = \\int_{x_0}^\\infty \\frac{x^n}{b} dx$. For $n > 0$, the integral $\\int^\\infty x^n dx$ diverges to infinity, so it takes infinite time.\n\n2. GIVEN:\nv = b x^{-n} with b > 0, n > 0.\n\n3. FORMULA / PRINCIPLE:\ndt = \\frac{dx}{v} = \\frac{x^n}{b} dx => T = \\frac{1}{b} \\int_{x_0}^\\infty x^n dx\n\n4. STEP-BY-STEP SOLUTION:\n1. Express time element: dt = dx / v = (1/b) x^n dx.\n2. Total time to reach infinity from some initial point x\u2080 > 0:\nT = (1/b) \u222b_{x\u2080}^\u221e x^n dx.\n3. The integral \u222b_{x\u2080}^\u221e x^n dx converges if and only if the exponent n < -1 (meaning speed must grow faster than linearly with x, i.e., v \u221d x^m with m > 1).\n4. Since n is given as a positive constant (n > 0), x^n increases as x \u2192 \u221e, meaning the integral diverges to infinity.\n5. Thus, for any positive n, it takes infinite time to reach infinity (it cannot reach infinity in finite time for positive n).\n\n5. FINAL ANSWER:\nOption A: n < -1 (i.e., not possible for positive n; for v = b x^m, finite time requires m > 1)\n\n6. QUICK TIP:\nDimensional & integral check: $\\int^\\infty x^n dx$ converges at $\\infty$ only when exponent is less than $-1$.",
+    "solutionStructured": {
+      "concept": "Time to travel from $x_0$ to $\\infty$ is $T = \\int_{x_0}^\\infty \\frac{dx}{v(x)} = \\int_{x_0}^\\infty \\frac{x^n}{b} dx$. For $n > 0$, the integral $\\int^\\infty x^n dx$ diverges to infinity, so it takes infinite time.",
+      "given": "v = b x^{-n} with b > 0, n > 0.",
+      "formula": "dt = \\frac{dx}{v} = \\frac{x^n}{b} dx => T = \\frac{1}{b} \\int_{x_0}^\\infty x^n dx",
+      "stepByStep": "1. Express time element: dt = dx / v = (1/b) x^n dx.\n2. Total time to reach infinity from some initial point x\u2080 > 0:\nT = (1/b) \u222b_{x\u2080}^\u221e x^n dx.\n3. The integral \u222b_{x\u2080}^\u221e x^n dx converges if and only if the exponent n < -1 (meaning speed must grow faster than linearly with x, i.e., v \u221d x^m with m > 1).\n4. Since n is given as a positive constant (n > 0), x^n increases as x \u2192 \u221e, meaning the integral diverges to infinity.\n5. Thus, for any positive n, it takes infinite time to reach infinity (it cannot reach infinity in finite time for positive n).",
+      "finalAnswer": "Option A: n < -1 (i.e., not possible for positive n; for v = b x^m, finite time requires m > 1)",
+      "whyOtherOptionsWrong": "n > 1 would make the integrand diverge even faster to +infinity."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Conceptual and numerical mixed problems",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  }
+]

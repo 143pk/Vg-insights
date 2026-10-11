@@ -1,0 +1,779 @@
+[
+  {
+    "id": "msl-mcq-168",
+    "questionNumber": 168,
+    "question": "The slope of a position-time (x-t) graph at any given instant represents:",
+    "options": {
+      "A": "Instantaneous velocity",
+      "B": "Instantaneous acceleration",
+      "C": "Total distance traveled",
+      "D": "Average acceleration"
+    },
+    "optionsList": [
+      "Instantaneous velocity",
+      "Instantaneous acceleration",
+      "Total distance traveled",
+      "Average acceleration"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIn an x-t graph, the vertical axis is position and the horizontal axis is time. The slope of the tangent is dx/dt, which is the instantaneous velocity.\n\n2. GIVEN:\nPosition-time graph.\n\n3. FORMULA / PRINCIPLE:\nSlope = tan \u03b8 = dx/dt = v.\n\n4. STEP-BY-STEP SOLUTION:\n1. Slope of a curve y vs x is dy/dx.\n2. For an x vs t graph, y = x and x = t.\n3. Slope = dx/dt.\n4. By definition, dx/dt is the instantaneous velocity.\n5. Therefore, the slope of the tangent at any point on an x-t graph gives the instantaneous velocity.\n\n5. FINAL ANSWER:\nOption A: Instantaneous velocity\n\n6. QUICK TIP:\nSlope of x-t graph = Velocity. Slope of v-t graph = Acceleration. Area of v-t graph = Displacement.",
+    "solutionStructured": {
+      "concept": "In an x-t graph, the vertical axis is position and the horizontal axis is time. The slope of the tangent is dx/dt, which is the instantaneous velocity.",
+      "given": "Position-time graph.",
+      "formula": "Slope = tan \u03b8 = dx/dt = v.",
+      "stepByStep": "1. Slope of a curve y vs x is dy/dx.\n2. For an x vs t graph, y = x and x = t.\n3. Slope = dx/dt.\n4. By definition, dx/dt is the instantaneous velocity.\n5. Therefore, the slope of the tangent at any point on an x-t graph gives the instantaneous velocity.",
+      "finalAnswer": "Option A: Instantaneous velocity",
+      "whyOtherOptionsWrong": "Option B is the second derivative (curvature) or slope of v-t graph. Option C is path length. Option D is \u0394v/\u0394t."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-169",
+    "questionNumber": 169,
+    "question": "A horizontal straight line parallel to the time axis on a position-time graph represents an object that is:",
+    "options": {
+      "A": "At rest",
+      "B": "Moving with uniform velocity",
+      "C": "Moving with constant acceleration",
+      "D": "Moving with increasing speed"
+    },
+    "optionsList": [
+      "At rest",
+      "Moving with uniform velocity",
+      "Moving with constant acceleration",
+      "Moving with increasing speed"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nA horizontal line has zero slope: dx/dt = 0, meaning position does not change with time, so the object is at rest.\n\n2. GIVEN:\nx-t graph is a horizontal line (x = constant).\n\n3. FORMULA / PRINCIPLE:\nSlope = dx/dt = 0 => v = 0.\n\n4. STEP-BY-STEP SOLUTION:\n1. The graph is a line parallel to the time axis, so x(t) = constant.\n2. Slope = dx/dt = 0.\n3. Since velocity is zero, the position coordinate remains unchanged as time elapses.\n4. Therefore, the object is at rest.\n\n5. FINAL ANSWER:\nOption A: At rest\n\n6. QUICK TIP:\nHorizontal line on x-t graph: v = 0 (At rest). Horizontal line on v-t graph: a = 0 (Uniform motion).",
+    "solutionStructured": {
+      "concept": "A horizontal line has zero slope: dx/dt = 0, meaning position does not change with time, so the object is at rest.",
+      "given": "x-t graph is a horizontal line (x = constant).",
+      "formula": "Slope = dx/dt = 0 => v = 0.",
+      "stepByStep": "1. The graph is a line parallel to the time axis, so x(t) = constant.\n2. Slope = dx/dt = 0.\n3. Since velocity is zero, the position coordinate remains unchanged as time elapses.\n4. Therefore, the object is at rest.",
+      "finalAnswer": "Option A: At rest",
+      "whyOtherOptionsWrong": "Option B requires an inclined line (non-zero constant slope). Option C requires a parabola. Option D requires steepening curve."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-170",
+    "questionNumber": 170,
+    "question": "Two straight lines on an x-t graph make angles of 30\u00b0 and 60\u00b0 with the time axis. What is the ratio of their velocities v\u2081 : v\u2082?",
+    "options": {
+      "A": "1 : 3",
+      "B": "1 : \u221a3",
+      "C": "\u221a3 : 1",
+      "D": "3 : 1"
+    },
+    "optionsList": [
+      "1 : 3",
+      "1 : \u221a3",
+      "\u221a3 : 1",
+      "3 : 1"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nVelocity equals the tangent of the angle made by the straight-line x-t graph with the time axis: v = tan \u03b8.\n\n2. GIVEN:\n\u03b8\u2081 = 30\u00b0, \u03b8\u2082 = 60\u00b0 with the time axis.\n\n3. FORMULA / PRINCIPLE:\nv = tan \u03b8 => v\u2081 / v\u2082 = tan \u03b8\u2081 / tan \u03b8\u2082.\n\n4. STEP-BY-STEP SOLUTION:\n1. For the first line: v\u2081 = tan 30\u00b0 = 1 / \u221a3.\n2. For the second line: v\u2082 = tan 60\u00b0 = \u221a3.\n3. Take the ratio:\n   v\u2081 / v\u2082 = (1 / \u221a3) / (\u221a3) = 1 / (\u221a3 * \u221a3) = 1 / 3.\n4. Therefore, the ratio of their velocities is 1 : 3.\n\n5. FINAL ANSWER:\nOption A: 1 : 3\n\n6. QUICK TIP:\nClassic NEET question: tan 30\u00b0 / tan 60\u00b0 = (1/\u221a3) / \u221a3 = 1/3.",
+    "solutionStructured": {
+      "concept": "Velocity equals the tangent of the angle made by the straight-line x-t graph with the time axis: v = tan \u03b8.",
+      "given": "\u03b8\u2081 = 30\u00b0, \u03b8\u2082 = 60\u00b0 with the time axis.",
+      "formula": "v = tan \u03b8 => v\u2081 / v\u2082 = tan \u03b8\u2081 / tan \u03b8\u2082.",
+      "stepByStep": "1. For the first line: v\u2081 = tan 30\u00b0 = 1 / \u221a3.\n2. For the second line: v\u2082 = tan 60\u00b0 = \u221a3.\n3. Take the ratio:\n   v\u2081 / v\u2082 = (1 / \u221a3) / (\u221a3) = 1 / (\u221a3 * \u221a3) = 1 / 3.\n4. Therefore, the ratio of their velocities is 1 : 3.",
+      "finalAnswer": "Option A: 1 : 3",
+      "whyOtherOptionsWrong": "Option B is 1 : \u221a3 (takes tan 30\u00b0 directly). Option C and D invert the ratio."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-171",
+    "questionNumber": 171,
+    "question": "Can a position-time graph be a straight line perpendicular to the time axis?",
+    "options": {
+      "A": "No, because that would imply infinite velocity and multiple positions at a single instant of time.",
+      "B": "Yes, it represents an object moving at the speed of light.",
+      "C": "Yes, it represents an object with infinite acceleration.",
+      "D": "Yes, it represents an object at the origin."
+    },
+    "optionsList": [
+      "No, because that would imply infinite velocity and multiple positions at a single instant of time.",
+      "Yes, it represents an object moving at the speed of light.",
+      "Yes, it represents an object with infinite acceleration.",
+      "Yes, it represents an object at the origin."
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nA vertical line has slope tan 90\u00b0 = \u221e (infinite velocity) and violates the single-valued nature of physical time (an object cannot be in infinitely many places at the exact same instant).\n\n2. GIVEN:\nVertical line on x-t graph.\n\n3. FORMULA / PRINCIPLE:\nSlope = tan 90\u00b0 = \u221e => v = \u221e (physically impossible).\n\n4. STEP-BY-STEP SOLUTION:\n1. A line perpendicular to the time axis corresponds to a single time t with an infinite range of position values x.\n2. In classical and relativistic physics, a particle can only occupy one unique position at any given instant.\n3. Furthermore, the slope of such a line would be tan(90\u00b0) = \u221e, implying infinite speed.\n4. Therefore, such a graph is physically impossible.\n\n5. FINAL ANSWER:\nOption A: No, because that would imply infinite velocity and multiple positions at a single instant of time.\n\n6. QUICK TIP:\nA real physical graph can never be vertical (infinite speed) and can never double back on the time axis (time only flows forward).",
+    "solutionStructured": {
+      "concept": "A vertical line has slope tan 90\u00b0 = \u221e (infinite velocity) and violates the single-valued nature of physical time (an object cannot be in infinitely many places at the exact same instant).",
+      "given": "Vertical line on x-t graph.",
+      "formula": "Slope = tan 90\u00b0 = \u221e => v = \u221e (physically impossible).",
+      "stepByStep": "1. A line perpendicular to the time axis corresponds to a single time t with an infinite range of position values x.\n2. In classical and relativistic physics, a particle can only occupy one unique position at any given instant.\n3. Furthermore, the slope of such a line would be tan(90\u00b0) = \u221e, implying infinite speed.\n4. Therefore, such a graph is physically impossible.",
+      "finalAnswer": "Option A: No, because that would imply infinite velocity and multiple positions at a single instant of time.",
+      "whyOtherOptionsWrong": "Options B, C, and D are physically impossible in kinematics."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-172",
+    "questionNumber": 172,
+    "question": "If a position-time graph is a parabola opening upwards (convex downwards), the motion is:",
+    "options": {
+      "A": "Uniformly accelerated with positive acceleration",
+      "B": "Uniformly retarded with negative acceleration",
+      "C": "Uniform motion with zero acceleration",
+      "D": "At rest"
+    },
+    "optionsList": [
+      "Uniformly accelerated with positive acceleration",
+      "Uniformly retarded with negative acceleration",
+      "Uniform motion with zero acceleration",
+      "At rest"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nParabola opening upwards has positive second derivative: d\u00b2x/dt\u00b2 = a > 0, which means positive acceleration.\n\n2. GIVEN:\nx-t graph is a parabola opening upwards (concave up).\n\n3. FORMULA / PRINCIPLE:\nx(t) \u221d +t\u00b2 => a = d\u00b2x/dt\u00b2 > 0.\n\n4. STEP-BY-STEP SOLUTION:\n1. A parabola opening upwards has the equation x(t) = (1/2) a t\u00b2 with a > 0.\n2. As time increases, the slope dx/dt increases continuously (becomes steeper and steeper).\n3. Since slope is velocity, velocity is increasing with time.\n4. Rate of change of velocity is acceleration: a = dv/dt > 0.\n5. Therefore, the motion has constant positive acceleration.\n\n5. FINAL ANSWER:\nOption A: Uniformly accelerated with positive acceleration\n\n6. QUICK TIP:\nSmiling curve (concave up) = positive acceleration (a > 0). Frowning curve (concave down) = negative acceleration (a < 0).",
+    "solutionStructured": {
+      "concept": "Parabola opening upwards has positive second derivative: d\u00b2x/dt\u00b2 = a > 0, which means positive acceleration.",
+      "given": "x-t graph is a parabola opening upwards (concave up).",
+      "formula": "x(t) \u221d +t\u00b2 => a = d\u00b2x/dt\u00b2 > 0.",
+      "stepByStep": "1. A parabola opening upwards has the equation x(t) = (1/2) a t\u00b2 with a > 0.\n2. As time increases, the slope dx/dt increases continuously (becomes steeper and steeper).\n3. Since slope is velocity, velocity is increasing with time.\n4. Rate of change of velocity is acceleration: a = dv/dt > 0.\n5. Therefore, the motion has constant positive acceleration.",
+      "finalAnswer": "Option A: Uniformly accelerated with positive acceleration",
+      "whyOtherOptionsWrong": "Option B corresponds to a parabola opening downwards (frowning curve). Option C is a straight line. Option D is a horizontal line."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-173",
+    "questionNumber": 173,
+    "question": "The position-time graph of a moving particle is a curve whose slope decreases continuously with time until it becomes zero. What does this indicate about the particle's motion?",
+    "options": {
+      "A": "The particle is slowing down (retarding) and eventually comes to rest.",
+      "B": "The particle is speeding up and reaches maximum speed.",
+      "C": "The particle is moving with uniform velocity.",
+      "D": "The particle is moving backwards with increasing speed."
+    },
+    "optionsList": [
+      "The particle is slowing down (retarding) and eventually comes to rest.",
+      "The particle is speeding up and reaches maximum speed.",
+      "The particle is moving with uniform velocity.",
+      "The particle is moving backwards with increasing speed."
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSlope of x-t graph is velocity. A decreasing slope means velocity is decreasing (retardation). When slope becomes zero, velocity is zero (at rest).\n\n2. GIVEN:\nSlope dx/dt decreases to 0 as time increases.\n\n3. FORMULA / PRINCIPLE:\nv = dx/dt; dv/dt < 0; v_final = 0.\n\n4. STEP-BY-STEP SOLUTION:\n1. The slope of the tangent to an x-t graph at any point gives the instantaneous velocity v.\n2. A decreasing slope means the velocity v is decreasing with time (dv/dt < 0).\n3. This represents retardation (deceleration).\n4. When the slope becomes zero (tangent is horizontal), instantaneous velocity is zero.\n5. Therefore, the particle is slowing down and eventually comes to rest.\n\n5. FINAL ANSWER:\nOption A: The particle is slowing down (retarding) and eventually comes to rest.\n\n6. QUICK TIP:\nAlways translate slope behavior into velocity: Slope decreasing -> Velocity decreasing -> Retardation. Slope = 0 -> Rest.",
+    "solutionStructured": {
+      "concept": "Slope of x-t graph is velocity. A decreasing slope means velocity is decreasing (retardation). When slope becomes zero, velocity is zero (at rest).",
+      "given": "Slope dx/dt decreases to 0 as time increases.",
+      "formula": "v = dx/dt; dv/dt < 0; v_final = 0.",
+      "stepByStep": "1. The slope of the tangent to an x-t graph at any point gives the instantaneous velocity v.\n2. A decreasing slope means the velocity v is decreasing with time (dv/dt < 0).\n3. This represents retardation (deceleration).\n4. When the slope becomes zero (tangent is horizontal), instantaneous velocity is zero.\n5. Therefore, the particle is slowing down and eventually comes to rest.",
+      "finalAnswer": "Option A: The particle is slowing down (retarding) and eventually comes to rest.",
+      "whyOtherOptionsWrong": "Option B would require slope to increase. Option C requires constant slope. Option D would require negative slope."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-174",
+    "questionNumber": 174,
+    "question": "On an x-t graph, two particles A and B start from the same position at t = 0. Curve A is a straight line of constant slope, while curve B is a parabola opening upwards that starts with zero slope and intersects line A at time t = T. At time t = T:",
+    "options": {
+      "A": "Particle B has twice the velocity of particle A",
+      "B": "Particle B has the same velocity as particle A",
+      "C": "Particle B has half the velocity of particle A",
+      "D": "Particle B has four times the velocity of particle A"
+    },
+    "optionsList": [
+      "Particle B has twice the velocity of particle A",
+      "Particle B has the same velocity as particle A",
+      "Particle B has half the velocity of particle A",
+      "Particle B has four times the velocity of particle A"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nParticle A moves with uniform velocity v_A: x_A = v_A t. Particle B moves with uniform acceleration a from rest: x_B = (1/2) a t\u00b2. At intersection, x_A(T) = x_B(T), so v_B(T) = 2 v_A.\n\n2. GIVEN:\nx_A(t) = v_A t; x_B(t) = (1/2) a t\u00b2; at t = T, x_A(T) = x_B(T).\n\n3. FORMULA / PRINCIPLE:\nv_A T = (1/2) a T\u00b2 => a T = 2 v_A; v_B(T) = a T = 2 v_A.\n\n4. STEP-BY-STEP SOLUTION:\n1. Particle A has constant velocity v_A, so its position is x_A(t) = v_A t.\n2. Particle B starts from rest with constant acceleration a, so x_B(t) = (1/2) a t\u00b2.\n3. At the point of intersection t = T:\n   v_A T = (1/2) a T\u00b2.\n4. Cancel T (since T > 0):\n   v_A = (1/2) a T => a T = 2 v_A.\n5. The velocity of particle B at time T is:\n   v_B(T) = a T.\n6. Since a T = 2 v_A:\n   v_B(T) = 2 v_A.\n7. Therefore, particle B is moving at twice the velocity of particle A at the moment they intersect!\n\n5. FINAL ANSWER:\nOption A: Particle B has twice the velocity of particle A\n\n6. QUICK TIP:\nGeometric insight: At the intersection of a line from origin and a parabola from origin, the slope of the parabola is exactly DOUBLE the slope of the line!",
+    "solutionStructured": {
+      "concept": "Particle A moves with uniform velocity v_A: x_A = v_A t. Particle B moves with uniform acceleration a from rest: x_B = (1/2) a t\u00b2. At intersection, x_A(T) = x_B(T), so v_B(T) = 2 v_A.",
+      "given": "x_A(t) = v_A t; x_B(t) = (1/2) a t\u00b2; at t = T, x_A(T) = x_B(T).",
+      "formula": "v_A T = (1/2) a T\u00b2 => a T = 2 v_A; v_B(T) = a T = 2 v_A.",
+      "stepByStep": "1. Particle A has constant velocity v_A, so its position is x_A(t) = v_A t.\n2. Particle B starts from rest with constant acceleration a, so x_B(t) = (1/2) a t\u00b2.\n3. At the point of intersection t = T:\n   v_A T = (1/2) a T\u00b2.\n4. Cancel T (since T > 0):\n   v_A = (1/2) a T => a T = 2 v_A.\n5. The velocity of particle B at time T is:\n   v_B(T) = a T.\n6. Since a T = 2 v_A:\n   v_B(T) = 2 v_A.\n7. Therefore, particle B is moving at twice the velocity of particle A at the moment they intersect!",
+      "finalAnswer": "Option A: Particle B has twice the velocity of particle A",
+      "whyOtherOptionsWrong": "Option B assumes equal velocities (they have equal positions, NOT equal slopes!). Options C and D are incorrect multiples."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-175",
+    "questionNumber": 175,
+    "question": "The position-time graph of a particle is given by x(t) = 4t - t\u00b2. At what time is the slope of the graph zero, and what is the physical meaning of this point?",
+    "options": {
+      "A": "t = 2 s; the particle momentarily stops and reverses its direction of motion",
+      "B": "t = 4 s; the particle crosses the origin",
+      "C": "t = 2 s; the particle has maximum acceleration",
+      "D": "t = 0 s; the particle starts from rest"
+    },
+    "optionsList": [
+      "t = 2 s; the particle momentarily stops and reverses its direction of motion",
+      "t = 4 s; the particle crosses the origin",
+      "t = 2 s; the particle has maximum acceleration",
+      "t = 0 s; the particle starts from rest"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe slope of the x-t graph is the velocity v = dx/dt. A zero slope corresponds to a peak (turning point) where v = 0 and direction of motion reverses.\n\n2. GIVEN:\nx(t) = 4t - t\u00b2.\n\n3. FORMULA / PRINCIPLE:\nSlope = dx/dt = 4 - 2t = 0 => t = 2 s.\n\n4. STEP-BY-STEP SOLUTION:\n1. Find the slope of the tangent:\n   Slope = dx/dt = 4 - 2t.\n2. Set slope equal to zero:\n   4 - 2t = 0 => 2t = 4 => t = 2 s.\n3. At t = 2 s, the tangent to the curve is horizontal (slope = 0), meaning instantaneous velocity is zero.\n4. Before t = 2 s, slope is positive (moving forward). After t = 2 s, slope is negative (moving backward).\n5. Therefore, at t = 2 s the particle momentarily stops at its maximum displacement (x = 4 m) and reverses its direction.\n\n5. FINAL ANSWER:\nOption A: t = 2 s; the particle momentarily stops and reverses its direction of motion\n\n6. QUICK TIP:\nZero slope on an x-t graph always marks a turning point (crest or trough of the curve).",
+    "solutionStructured": {
+      "concept": "The slope of the x-t graph is the velocity v = dx/dt. A zero slope corresponds to a peak (turning point) where v = 0 and direction of motion reverses.",
+      "given": "x(t) = 4t - t\u00b2.",
+      "formula": "Slope = dx/dt = 4 - 2t = 0 => t = 2 s.",
+      "stepByStep": "1. Find the slope of the tangent:\n   Slope = dx/dt = 4 - 2t.\n2. Set slope equal to zero:\n   4 - 2t = 0 => 2t = 4 => t = 2 s.\n3. At t = 2 s, the tangent to the curve is horizontal (slope = 0), meaning instantaneous velocity is zero.\n4. Before t = 2 s, slope is positive (moving forward). After t = 2 s, slope is negative (moving backward).\n5. Therefore, at t = 2 s the particle momentarily stops at its maximum displacement (x = 4 m) and reverses its direction.",
+      "finalAnswer": "Option A: t = 2 s; the particle momentarily stops and reverses its direction of motion",
+      "whyOtherOptionsWrong": "Option B is when x = 0 (t = 4 s, crossing origin). Option C is incorrect because acceleration is constant (-2 m/s\u00b2). Option D is false because initial velocity is 4 m/s."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-176",
+    "questionNumber": 176,
+    "question": "An object's x-t graph consists of two straight segments: from t = 0 to 4 s, it goes from x = 0 to 20 m; from t = 4 to 10 s, it goes from x = 20 m to 20 m. What are the velocities in these two intervals?",
+    "options": {
+      "A": "5 m/s and 0 m/s",
+      "B": "5 m/s and 2 m/s",
+      "C": "4 m/s and 0 m/s",
+      "D": "20 m/s and 0 m/s"
+    },
+    "optionsList": [
+      "5 m/s and 0 m/s",
+      "5 m/s and 2 m/s",
+      "4 m/s and 0 m/s",
+      "20 m/s and 0 m/s"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSlope of each straight segment gives the velocity during that interval: v = \u0394x / \u0394t.\n\n2. GIVEN:\nSegment 1: \u0394x = 20 m, \u0394t = 4 s. Segment 2: \u0394x = 0 m, \u0394t = 6 s.\n\n3. FORMULA / PRINCIPLE:\nv\u2081 = \u0394x\u2081 / \u0394t\u2081; v\u2082 = \u0394x\u2082 / \u0394t\u2082.\n\n4. STEP-BY-STEP SOLUTION:\n1. For the first segment (0 to 4 s):\n   v\u2081 = (20 - 0) / (4 - 0) = 20 / 4 = 5 m/s.\n2. For the second segment (4 to 10 s):\n   v\u2082 = (20 - 20) / (10 - 4) = 0 / 6 = 0 m/s (object is stationary).\n3. Therefore, the velocities are 5 m/s and 0 m/s.\n\n5. FINAL ANSWER:\nOption A: 5 m/s and 0 m/s\n\n6. QUICK TIP:\nSegment with slope = moving; flat segment = resting.",
+    "solutionStructured": {
+      "concept": "Slope of each straight segment gives the velocity during that interval: v = \u0394x / \u0394t.",
+      "given": "Segment 1: \u0394x = 20 m, \u0394t = 4 s. Segment 2: \u0394x = 0 m, \u0394t = 6 s.",
+      "formula": "v\u2081 = \u0394x\u2081 / \u0394t\u2081; v\u2082 = \u0394x\u2082 / \u0394t\u2082.",
+      "stepByStep": "1. For the first segment (0 to 4 s):\n   v\u2081 = (20 - 0) / (4 - 0) = 20 / 4 = 5 m/s.\n2. For the second segment (4 to 10 s):\n   v\u2082 = (20 - 20) / (10 - 4) = 0 / 6 = 0 m/s (object is stationary).\n3. Therefore, the velocities are 5 m/s and 0 m/s.",
+      "finalAnswer": "Option A: 5 m/s and 0 m/s",
+      "whyOtherOptionsWrong": "Option B gives non-zero velocity for the flat section. Option C and D use wrong divisions."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-177",
+    "questionNumber": 177,
+    "question": "Which of the following features on a position-time graph indicates that acceleration is negative?",
+    "options": {
+      "A": "The graph is concave downward (frowning curve)",
+      "B": "The graph has a positive slope",
+      "C": "The graph is a straight line inclined at 45\u00b0",
+      "D": "The graph is concave upward (smiling curve)"
+    },
+    "optionsList": [
+      "The graph is concave downward (frowning curve)",
+      "The graph has a positive slope",
+      "The graph is a straight line inclined at 45\u00b0",
+      "The graph is concave upward (smiling curve)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nCurvature of x-t graph corresponds to the second derivative d\u00b2x/dt\u00b2 = a. Concave downward means d\u00b2x/dt\u00b2 < 0 (negative acceleration).\n\n2. GIVEN:\nCriterion for negative acceleration on x-t graph.\n\n3. FORMULA / PRINCIPLE:\na = d\u00b2x/dt\u00b2 < 0 <=> Concave downward (frowning curve).\n\n4. STEP-BY-STEP SOLUTION:\n1. Acceleration is the rate of change of slope: a = d(slope)/dt = d\u00b2x/dt\u00b2.\n2. If acceleration is negative (a < 0), the slope decreases as time progresses.\n3. A curve whose slope decreases from left to right is concave downward (frowning shape).\n4. Conversely, a curve whose slope increases is concave upward (a > 0).\n5. Therefore, concave downward indicates negative acceleration.\n\n5. FINAL ANSWER:\nOption A: The graph is concave downward (frowning curve)\n\n6. QUICK TIP:\nMemory trick: 'Cup holds water' (concave up) -> Positive (+). 'Cup spills water' (concave down) -> Negative (-).",
+    "solutionStructured": {
+      "concept": "Curvature of x-t graph corresponds to the second derivative d\u00b2x/dt\u00b2 = a. Concave downward means d\u00b2x/dt\u00b2 < 0 (negative acceleration).",
+      "given": "Criterion for negative acceleration on x-t graph.",
+      "formula": "a = d\u00b2x/dt\u00b2 < 0 <=> Concave downward (frowning curve).",
+      "stepByStep": "1. Acceleration is the rate of change of slope: a = d(slope)/dt = d\u00b2x/dt\u00b2.\n2. If acceleration is negative (a < 0), the slope decreases as time progresses.\n3. A curve whose slope decreases from left to right is concave downward (frowning shape).\n4. Conversely, a curve whose slope increases is concave upward (a > 0).\n5. Therefore, concave downward indicates negative acceleration.",
+      "finalAnswer": "Option A: The graph is concave downward (frowning curve)",
+      "whyOtherOptionsWrong": "Option B only means velocity is positive. Option C means acceleration is zero. Option D means positive acceleration."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-178",
+    "questionNumber": 178,
+    "question": "The x-t graph of a particle is shown to be a circle of radius R. Why is such a graph physically impossible for a real particle?",
+    "options": {
+      "A": "It gives two distinct positions at the same instant of time, and has infinite slopes at the extremities.",
+      "B": "A particle cannot move in a circle.",
+      "C": "The radius R would have mixed units of meters and seconds.",
+      "D": "Both A and C are correct physical and dimensional reasons."
+    },
+    "optionsList": [
+      "It gives two distinct positions at the same instant of time, and has infinite slopes at the extremities.",
+      "A particle cannot move in a circle.",
+      "The radius R would have mixed units of meters and seconds.",
+      "Both A and C are correct physical and dimensional reasons."
+    ],
+    "correctAnswer": "D",
+    "correctIndex": 3,
+    "explanation": "1. CONCEPT:\nAn x-t graph cannot be a circle because: 1) time cannot have multiple position values (fails vertical line test), 2) vertical tangents imply infinite velocity, and 3) the x and t axes have different units (meters vs seconds), so a 'circle' has no well-defined metric.\n\n2. GIVEN:\nA closed circular curve in the x-t plane.\n\n3. FORMULA / PRINCIPLE:\nx\u00b2 + t\u00b2 = R\u00b2 fails the function definition x(t).\n\n4. STEP-BY-STEP SOLUTION:\n1. A closed circle fails the vertical line test: for a given time t, there are two different position values x. A single particle cannot be in two places at once!\n2. At the left and right extremities, the tangent is vertical, implying infinite velocity.\n3. The x-axis is in meters and the t-axis is in seconds, so an equation like x\u00b2 + t\u00b2 = R\u00b2 is dimensionally inconsistent unless multiplied by dimensional constants.\n4. Therefore, both A and C are valid reasons why an x-t graph can never be a circle.\n\n5. FINAL ANSWER:\nOption D: Both A and C are correct physical and dimensional reasons.\n\n6. QUICK TIP:\nRemember: In an x-t graph, a particle cannot move backwards in time, and can never have two positions at one instant.",
+    "solutionStructured": {
+      "concept": "An x-t graph cannot be a circle because: 1) time cannot have multiple position values (fails vertical line test), 2) vertical tangents imply infinite velocity, and 3) the x and t axes have different units (meters vs seconds), so a 'circle' has no well-defined metric.",
+      "given": "A closed circular curve in the x-t plane.",
+      "formula": "x\u00b2 + t\u00b2 = R\u00b2 fails the function definition x(t).",
+      "stepByStep": "1. A closed circle fails the vertical line test: for a given time t, there are two different position values x. A single particle cannot be in two places at once!\n2. At the left and right extremities, the tangent is vertical, implying infinite velocity.\n3. The x-axis is in meters and the t-axis is in seconds, so an equation like x\u00b2 + t\u00b2 = R\u00b2 is dimensionally inconsistent unless multiplied by dimensional constants.\n4. Therefore, both A and C are valid reasons why an x-t graph can never be a circle.",
+      "finalAnswer": "Option D: Both A and C are correct physical and dimensional reasons.",
+      "whyOtherOptionsWrong": "Options A and C are each partially correct, but Option D correctly encompasses both."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-179",
+    "questionNumber": 179,
+    "question": "The position-time graph of a ball thrown vertically upwards from the ground and caught again upon return (neglecting air resistance) is best represented by:",
+    "options": {
+      "A": "An inverted parabola opening downwards with apex at maximum height",
+      "B": "A parabola opening upwards with vertex at the ground",
+      "C": "Two straight lines forming a triangle",
+      "D": "A semicircle"
+    },
+    "optionsList": [
+      "An inverted parabola opening downwards with apex at maximum height",
+      "A parabola opening upwards with vertex at the ground",
+      "Two straight lines forming a triangle",
+      "A semicircle"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor vertical motion under gravity, y(t) = u t - (1/2) g t\u00b2. This is a quadratic equation with a negative t\u00b2 coefficient, representing an inverted parabola opening downwards.\n\n2. GIVEN:\nVertical motion under gravity: y(t) = u t - (1/2) g t\u00b2.\n\n3. FORMULA / PRINCIPLE:\ny(t) = - (g/2) t\u00b2 + u t (quadratic with negative leading coefficient).\n\n4. STEP-BY-STEP SOLUTION:\n1. Equation of vertical motion: y(t) = u t - (1/2) g t\u00b2.\n2. The coefficient of t\u00b2 is -g/2 < 0.\n3. In coordinate geometry, a quadratic y = -A t\u00b2 + B t represents a parabola opening downwards (inverted parabola).\n4. The apex (vertex) occurs at t = u/g, where y_max = u\u00b2 / (2g).\n5. The ball returns to ground (y = 0) at t = 2u/g.\n6. Therefore, the graph is an inverted parabola opening downwards.\n\n5. FINAL ANSWER:\nOption A: An inverted parabola opening downwards with apex at maximum height\n\n6. QUICK TIP:\nFree fall / gravity problems ALWAYS produce parabolic x-t curves with downward curvature (a = -g).",
+    "solutionStructured": {
+      "concept": "For vertical motion under gravity, y(t) = u t - (1/2) g t\u00b2. This is a quadratic equation with a negative t\u00b2 coefficient, representing an inverted parabola opening downwards.",
+      "given": "Vertical motion under gravity: y(t) = u t - (1/2) g t\u00b2.",
+      "formula": "y(t) = - (g/2) t\u00b2 + u t (quadratic with negative leading coefficient).",
+      "stepByStep": "1. Equation of vertical motion: y(t) = u t - (1/2) g t\u00b2.\n2. The coefficient of t\u00b2 is -g/2 < 0.\n3. In coordinate geometry, a quadratic y = -A t\u00b2 + B t represents a parabola opening downwards (inverted parabola).\n4. The apex (vertex) occurs at t = u/g, where y_max = u\u00b2 / (2g).\n5. The ball returns to ground (y = 0) at t = 2u/g.\n6. Therefore, the graph is an inverted parabola opening downwards.",
+      "finalAnswer": "Option A: An inverted parabola opening downwards with apex at maximum height",
+      "whyOtherOptionsWrong": "Option B has positive acceleration (+g). Option C assumes constant velocity. Option D is not a quadratic."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-180",
+    "questionNumber": 180,
+    "question": "On an x-t graph, the secant line joining two points (t\u2081, x\u2081) and (t\u2082, x\u2082) has a slope equal to:",
+    "options": {
+      "A": "The average velocity over the time interval [t\u2081, t\u2082]",
+      "B": "The instantaneous velocity at t = (t\u2081 + t\u2082)/2",
+      "C": "The average acceleration over the interval",
+      "D": "The instantaneous speed at t\u2081"
+    },
+    "optionsList": [
+      "The average velocity over the time interval [t\u2081, t\u2082]",
+      "The instantaneous velocity at t = (t\u2081 + t\u2082)/2",
+      "The average acceleration over the interval",
+      "The instantaneous speed at t\u2081"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nSlope of secant line = \u0394x / \u0394t = [x(t\u2082) - x(t\u2081)] / (t\u2082 - t\u2081), which by definition is the average velocity over the interval.\n\n2. GIVEN:\nSecant line between (t\u2081, x\u2081) and (t\u2082, x\u2082).\n\n3. FORMULA / PRINCIPLE:\nSlope of secant = (x\u2082 - x\u2081) / (t\u2082 - t\u2081) = \u0394x / \u0394t = v_avg.\n\n4. STEP-BY-STEP SOLUTION:\n1. By coordinate geometry, the slope of the straight line joining two points (t\u2081, x\u2081) and (t\u2082, x\u2082) is:\n   m = (x\u2082 - x\u2081) / (t\u2082 - t\u2081) = \u0394x / \u0394t.\n2. In physics, \u0394x / \u0394t is the definition of average velocity over the interval [t\u2081, t\u2082].\n3. (As t\u2082 approaches t\u2081, the secant line becomes the tangent line, whose slope is instantaneous velocity).\n4. Therefore, the slope of the secant line represents the average velocity.\n\n5. FINAL ANSWER:\nOption A: The average velocity over the time interval [t\u2081, t\u2082]\n\n6. QUICK TIP:\nSecant slope = Average velocity. Tangent slope = Instantaneous velocity.",
+    "solutionStructured": {
+      "concept": "Slope of secant line = \u0394x / \u0394t = [x(t\u2082) - x(t\u2081)] / (t\u2082 - t\u2081), which by definition is the average velocity over the interval.",
+      "given": "Secant line between (t\u2081, x\u2081) and (t\u2082, x\u2082).",
+      "formula": "Slope of secant = (x\u2082 - x\u2081) / (t\u2082 - t\u2081) = \u0394x / \u0394t = v_avg.",
+      "stepByStep": "1. By coordinate geometry, the slope of the straight line joining two points (t\u2081, x\u2081) and (t\u2082, x\u2082) is:\n   m = (x\u2082 - x\u2081) / (t\u2082 - t\u2081) = \u0394x / \u0394t.\n2. In physics, \u0394x / \u0394t is the definition of average velocity over the interval [t\u2081, t\u2082].\n3. (As t\u2082 approaches t\u2081, the secant line becomes the tangent line, whose slope is instantaneous velocity).\n4. Therefore, the slope of the secant line represents the average velocity.",
+      "finalAnswer": "Option A: The average velocity over the time interval [t\u2081, t\u2082]",
+      "whyOtherOptionsWrong": "Option B is only true for uniform acceleration (special case), whereas Option A is universally true. Option C is \u0394v/\u0394t. Option D is tangent at t\u2081."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-181",
+    "questionNumber": 181,
+    "question": "A particle's x-t graph has positive slope that is increasing with time. This implies that:",
+    "options": {
+      "A": "Velocity is positive and acceleration is positive (speeding up)",
+      "B": "Velocity is positive and acceleration is negative (slowing down)",
+      "C": "Velocity is negative and acceleration is positive",
+      "D": "Velocity is constant"
+    },
+    "optionsList": [
+      "Velocity is positive and acceleration is positive (speeding up)",
+      "Velocity is positive and acceleration is negative (slowing down)",
+      "Velocity is negative and acceleration is positive",
+      "Velocity is constant"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nPositive slope => v > 0. Increasing slope => dv/dt = a > 0. Both have the same sign, so the particle is speeding up in the positive direction.\n\n2. GIVEN:\nSlope > 0 and d(slope)/dt > 0.\n\n3. FORMULA / PRINCIPLE:\nv = slope > 0; a = d(slope)/dt > 0.\n\n4. STEP-BY-STEP SOLUTION:\n1. Slope of x-t graph represents velocity: Slope > 0 => v > 0.\n2. The slope is increasing with time: d(slope)/dt > 0 => dv/dt = a > 0.\n3. Since both velocity and acceleration are positive, they act in the same direction.\n4. Therefore, the particle is moving in the positive direction and speeding up.\n\n5. FINAL ANSWER:\nOption A: Velocity is positive and acceleration is positive (speeding up)\n\n6. QUICK TIP:\nPositive slope getting steeper = moving forward and accelerating!",
+    "solutionStructured": {
+      "concept": "Positive slope => v > 0. Increasing slope => dv/dt = a > 0. Both have the same sign, so the particle is speeding up in the positive direction.",
+      "given": "Slope > 0 and d(slope)/dt > 0.",
+      "formula": "v = slope > 0; a = d(slope)/dt > 0.",
+      "stepByStep": "1. Slope of x-t graph represents velocity: Slope > 0 => v > 0.\n2. The slope is increasing with time: d(slope)/dt > 0 => dv/dt = a > 0.\n3. Since both velocity and acceleration are positive, they act in the same direction.\n4. Therefore, the particle is moving in the positive direction and speeding up.",
+      "finalAnswer": "Option A: Velocity is positive and acceleration is positive (speeding up)",
+      "whyOtherOptionsWrong": "Option B would have slope decreasing (flattening curve). Option C would have negative slope. Option D would have constant slope."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-182",
+    "questionNumber": 182,
+    "question": "A particle's x-t graph has negative slope that is becoming steeper (more negative) with time. This indicates that the particle is:",
+    "options": {
+      "A": "Moving in the negative direction with increasing speed",
+      "B": "Moving in the negative direction with decreasing speed",
+      "C": "Moving in the positive direction with increasing speed",
+      "D": "At rest"
+    },
+    "optionsList": [
+      "Moving in the negative direction with increasing speed",
+      "Moving in the negative direction with decreasing speed",
+      "Moving in the positive direction with increasing speed",
+      "At rest"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nNegative slope => moving in -x direction (v < 0). Steeper slope => magnitude of slope (|v|) is increasing => speed is increasing.\n\n2. GIVEN:\nSlope < 0, |slope| increasing with time.\n\n3. FORMULA / PRINCIPLE:\nv < 0; |v| increasing => speeding up in the negative direction.\n\n4. STEP-BY-STEP SOLUTION:\n1. Negative slope means velocity is directed along the negative axis: v < 0.\n2. The curve is becoming steeper, which means the absolute value of the slope (|dx/dt|) is growing.\n3. Absolute value of velocity is speed.\n4. Since speed is increasing in the negative direction, acceleration is also negative (a < 0).\n5. Therefore, the particle is moving in the negative direction with increasing speed.\n\n5. FINAL ANSWER:\nOption A: Moving in the negative direction with increasing speed\n\n6. QUICK TIP:\nSteeper curve ALWAYS means higher speed, regardless of whether slope is positive or negative!",
+    "solutionStructured": {
+      "concept": "Negative slope => moving in -x direction (v < 0). Steeper slope => magnitude of slope (|v|) is increasing => speed is increasing.",
+      "given": "Slope < 0, |slope| increasing with time.",
+      "formula": "v < 0; |v| increasing => speeding up in the negative direction.",
+      "stepByStep": "1. Negative slope means velocity is directed along the negative axis: v < 0.\n2. The curve is becoming steeper, which means the absolute value of the slope (|dx/dt|) is growing.\n3. Absolute value of velocity is speed.\n4. Since speed is increasing in the negative direction, acceleration is also negative (a < 0).\n5. Therefore, the particle is moving in the negative direction with increasing speed.",
+      "finalAnswer": "Option A: Moving in the negative direction with increasing speed",
+      "whyOtherOptionsWrong": "Option B would have the curve flattening out towards horizontal. Options C and D contradict negative slope."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-183",
+    "questionNumber": 183,
+    "question": "The x-t graphs of two cars A and B are shown. Car A starts from x = 0 at t = 0 with constant speed v_A = 15 m/s. Car B starts from x = 100 m at t = 0 and moves in the negative direction with constant speed v_B = 10 m/s. At what time and position do their x-t graphs intersect?",
+    "options": {
+      "A": "t = 4 s, x = 60 m",
+      "B": "t = 5 s, x = 75 m",
+      "C": "t = 4 s, x = 40 m",
+      "D": "t = 10 s, x = 150 m"
+    },
+    "optionsList": [
+      "t = 4 s, x = 60 m",
+      "t = 5 s, x = 75 m",
+      "t = 4 s, x = 40 m",
+      "t = 10 s, x = 150 m"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nIntersection of two x-t graphs corresponds to the meeting point where x_A(t) = x_B(t).\n\n2. GIVEN:\nx_A(t) = 15t; x_B(t) = 100 - 10t.\n\n3. FORMULA / PRINCIPLE:\nx_A(t) = x_B(t) => 15t = 100 - 10t.\n\n4. STEP-BY-STEP SOLUTION:\n1. Write position equations for both cars:\n   Car A: x_A(t) = 0 + 15t = 15t.\n   Car B: x_B(t) = 100 - 10t.\n2. Equate the two positions to find the point of intersection:\n   15t = 100 - 10t\n   25t = 100\n   t = 100 / 25 = 4 seconds.\n3. Find the position of intersection:\n   x = 15 * 4 = 60 m.\n   (Check with Car B: 100 - 10(4) = 100 - 40 = 60 m. Perfect!).\n4. Therefore, the graphs intersect at t = 4 s and x = 60 m.\n\n5. FINAL ANSWER:\nOption A: t = 4 s, x = 60 m\n\n6. QUICK TIP:\nRelative speed approach: Closing speed = 15 + 10 = 25 m/s. Time = 100 / 25 = 4 s. Position = 15 * 4 = 60 m.",
+    "solutionStructured": {
+      "concept": "Intersection of two x-t graphs corresponds to the meeting point where x_A(t) = x_B(t).",
+      "given": "x_A(t) = 15t; x_B(t) = 100 - 10t.",
+      "formula": "x_A(t) = x_B(t) => 15t = 100 - 10t.",
+      "stepByStep": "1. Write position equations for both cars:\n   Car A: x_A(t) = 0 + 15t = 15t.\n   Car B: x_B(t) = 100 - 10t.\n2. Equate the two positions to find the point of intersection:\n   15t = 100 - 10t\n   25t = 100\n   t = 100 / 25 = 4 seconds.\n3. Find the position of intersection:\n   x = 15 * 4 = 60 m.\n   (Check with Car B: 100 - 10(4) = 100 - 40 = 60 m. Perfect!).\n4. Therefore, the graphs intersect at t = 4 s and x = 60 m.",
+      "finalAnswer": "Option A: t = 4 s, x = 60 m",
+      "whyOtherOptionsWrong": "Option B uses closing speed 20 m/s. Option C has wrong position. Option D assumes same direction."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-184",
+    "questionNumber": 184,
+    "question": "The position-time graph of a particle is an ellipse given by x\u00b2 / a\u00b2 + t\u00b2 / b\u00b2 = 1 for t \u2265 0. At what time t is the velocity of the particle equal to -a / b?",
+    "options": {
+      "A": "b / \u221a2",
+      "B": "b / 2",
+      "C": "b \u221a3 / 2",
+      "D": "b"
+    },
+    "optionsList": [
+      "b / \u221a2",
+      "b / 2",
+      "b \u221a3 / 2",
+      "b"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDifferentiate the ellipse equation implicitly with respect to t to find dx/dt = v, then set v = -a/b.\n\n2. GIVEN:\nx\u00b2 / a\u00b2 + t\u00b2 / b\u00b2 = 1, condition v = dx/dt = -a / b.\n\n3. FORMULA / PRINCIPLE:\n(2x / a\u00b2) (dx/dt) + 2t / b\u00b2 = 0 => dx/dt = -(a\u00b2 t) / (b\u00b2 x).\n\n4. STEP-BY-STEP SOLUTION:\n1. Differentiate implicitly with respect to t:\n   (2x / a\u00b2) (dx/dt) + 2t / b\u00b2 = 0\n   (x / a\u00b2) v = -t / b\u00b2\n   v = -(a\u00b2 t) / (b\u00b2 x).\n2. Set velocity equal to -a / b:\n   -(a\u00b2 t) / (b\u00b2 x) = -a / b\n   (a t) / (b x) = 1 => x = (a / b) t.\n3. Substitute x = (a / b) t back into the ellipse equation:\n   [ (a / b) t ]\u00b2 / a\u00b2 + t\u00b2 / b\u00b2 = 1\n   (t\u00b2 / b\u00b2) + (t\u00b2 / b\u00b2) = 1\n   2 (t\u00b2 / b\u00b2) = 1\n   t\u00b2 = b\u00b2 / 2\n   t = b / \u221a2.\n4. Therefore, the velocity equals -a/b at t = b / \u221a2.\n\n5. FINAL ANSWER:\nOption A: b / \u221a2\n\n6. QUICK TIP:\nImplicit differentiation makes geometric graph problems straightforward: v = -(a\u00b2t)/(b\u00b2x).",
+    "solutionStructured": {
+      "concept": "Differentiate the ellipse equation implicitly with respect to t to find dx/dt = v, then set v = -a/b.",
+      "given": "x\u00b2 / a\u00b2 + t\u00b2 / b\u00b2 = 1, condition v = dx/dt = -a / b.",
+      "formula": "(2x / a\u00b2) (dx/dt) + 2t / b\u00b2 = 0 => dx/dt = -(a\u00b2 t) / (b\u00b2 x).",
+      "stepByStep": "1. Differentiate implicitly with respect to t:\n   (2x / a\u00b2) (dx/dt) + 2t / b\u00b2 = 0\n   (x / a\u00b2) v = -t / b\u00b2\n   v = -(a\u00b2 t) / (b\u00b2 x).\n2. Set velocity equal to -a / b:\n   -(a\u00b2 t) / (b\u00b2 x) = -a / b\n   (a t) / (b x) = 1 => x = (a / b) t.\n3. Substitute x = (a / b) t back into the ellipse equation:\n   [ (a / b) t ]\u00b2 / a\u00b2 + t\u00b2 / b\u00b2 = 1\n   (t\u00b2 / b\u00b2) + (t\u00b2 / b\u00b2) = 1\n   2 (t\u00b2 / b\u00b2) = 1\n   t\u00b2 = b\u00b2 / 2\n   t = b / \u221a2.\n4. Therefore, the velocity equals -a/b at t = b / \u221a2.",
+      "finalAnswer": "Option A: b / \u221a2",
+      "whyOtherOptionsWrong": "Option B gives t = b/2. Option C gives t = b\u221a3/2. Option D gives t = b (where slope is vertical/infinite)."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-185",
+    "questionNumber": 185,
+    "question": "A body moves along a straight line such that its x-t graph is a curve with an inflection point at t = t\u2080 (where d\u00b2x/dt\u00b2 = 0, changing from concave down to concave up). At t = t\u2080, which of the following is true?",
+    "options": {
+      "A": "Velocity has a local extremum (minimum), and acceleration is zero.",
+      "B": "Velocity is zero, and acceleration is maximum.",
+      "C": "Position is zero, and speed is maximum.",
+      "D": "The body momentarily reverses its direction of motion."
+    },
+    "optionsList": [
+      "Velocity has a local extremum (minimum), and acceleration is zero.",
+      "Velocity is zero, and acceleration is maximum.",
+      "Position is zero, and speed is maximum.",
+      "The body momentarily reverses its direction of motion."
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nAn inflection point on an x-t graph is where d\u00b2x/dt\u00b2 = 0. Since d\u00b2x/dt\u00b2 = dv/dt = a, zero acceleration means velocity has a local extremum.\n\n2. GIVEN:\nInflection point on x-t curve at t = t\u2080.\n\n3. FORMULA / PRINCIPLE:\nd\u00b2x/dt\u00b2 = a = 0 => dv/dt = 0 (velocity is stationary/extremized).\n\n4. STEP-BY-STEP SOLUTION:\n1. At an inflection point of a curve y = f(x), the second derivative is zero: f''(x) = 0.\n2. For an x-t curve, the second derivative is acceleration: d\u00b2x/dt\u00b2 = a = 0.\n3. Since a = dv/dt, dv/dt = 0 means velocity has a local extremum (maximum or minimum).\n4. Because the curve changes from concave down (a < 0) to concave up (a > 0), the slope (velocity) was decreasing and now begins increasing.\n5. Therefore, velocity reaches a local minimum at t = t\u2080, and acceleration is zero.\n6. Hence, Option A is correct.\n\n5. FINAL ANSWER:\nOption A: Velocity has a local extremum (minimum), and acceleration is zero.\n\n6. QUICK TIP:\nInflection point on x-t graph <=> a = 0 <=> Extremum of velocity. Peak/trough on x-t graph <=> v = 0 <=> Turning point of motion.",
+    "solutionStructured": {
+      "concept": "An inflection point on an x-t graph is where d\u00b2x/dt\u00b2 = 0. Since d\u00b2x/dt\u00b2 = dv/dt = a, zero acceleration means velocity has a local extremum.",
+      "given": "Inflection point on x-t curve at t = t\u2080.",
+      "formula": "d\u00b2x/dt\u00b2 = a = 0 => dv/dt = 0 (velocity is stationary/extremized).",
+      "stepByStep": "1. At an inflection point of a curve y = f(x), the second derivative is zero: f''(x) = 0.\n2. For an x-t curve, the second derivative is acceleration: d\u00b2x/dt\u00b2 = a = 0.\n3. Since a = dv/dt, dv/dt = 0 means velocity has a local extremum (maximum or minimum).\n4. Because the curve changes from concave down (a < 0) to concave up (a > 0), the slope (velocity) was decreasing and now begins increasing.\n5. Therefore, velocity reaches a local minimum at t = t\u2080, and acceleration is zero.\n6. Hence, Option A is correct.",
+      "finalAnswer": "Option A: Velocity has a local extremum (minimum), and acceleration is zero.",
+      "whyOtherOptionsWrong": "Option B confuses inflection point with peak of curve. Option C is unrelated to origin. Option D requires v = 0, not a = 0."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-186",
+    "questionNumber": 186,
+    "question": "The position-time graph of a particle is given by x = 2t\u00b3 - 15t\u00b2 + 36t (in meters). Over the interval t \u2208 [0, 5] s, at how many points is the tangent to the graph parallel to the time axis?",
+    "options": {
+      "A": "2 points",
+      "B": "1 point",
+      "C": "3 points",
+      "D": "0 points"
+    },
+    "optionsList": [
+      "2 points",
+      "1 point",
+      "3 points",
+      "0 points"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTangent parallel to time axis means slope is zero: dx/dt = v = 0.\n\n2. GIVEN:\nx(t) = 2t\u00b3 - 15t\u00b2 + 36t, interval [0, 5] s.\n\n3. FORMULA / PRINCIPLE:\nSlope = dx/dt = 6t\u00b2 - 30t + 36 = 0.\n\n4. STEP-BY-STEP SOLUTION:\n1. Differentiate position with respect to time:\n   Slope = dx/dt = 6t\u00b2 - 30t + 36.\n2. Set slope equal to zero (horizontal tangent):\n   6(t\u00b2 - 5t + 6) = 0\n   6(t - 2)(t - 3) = 0.\n3. Roots are t = 2 s and t = 3 s.\n4. Both values lie within the interval [0, 5] s.\n5. Therefore, the tangent is parallel to the time axis at exactly 2 points (t = 2 s and t = 3 s).\n\n5. FINAL ANSWER:\nOption A: 2 points\n\n6. QUICK TIP:\nHorizontal tangent <=> Slope = 0 <=> v = 0. Factor the quadratic derivative: 6(t - 2)(t - 3) = 0 => 2 roots.",
+    "solutionStructured": {
+      "concept": "Tangent parallel to time axis means slope is zero: dx/dt = v = 0.",
+      "given": "x(t) = 2t\u00b3 - 15t\u00b2 + 36t, interval [0, 5] s.",
+      "formula": "Slope = dx/dt = 6t\u00b2 - 30t + 36 = 0.",
+      "stepByStep": "1. Differentiate position with respect to time:\n   Slope = dx/dt = 6t\u00b2 - 30t + 36.\n2. Set slope equal to zero (horizontal tangent):\n   6(t\u00b2 - 5t + 6) = 0\n   6(t - 2)(t - 3) = 0.\n3. Roots are t = 2 s and t = 3 s.\n4. Both values lie within the interval [0, 5] s.\n5. Therefore, the tangent is parallel to the time axis at exactly 2 points (t = 2 s and t = 3 s).",
+      "finalAnswer": "Option A: 2 points",
+      "whyOtherOptionsWrong": "Option B finds only one root. Option C assumes degree 3 has 3 critical points. Option D claims no stationary points."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-187",
+    "questionNumber": 187,
+    "question": "A ball is dropped from height h onto a hard horizontal floor. It bounces elastically repeatedly between the floor and height h. What is the nature of the height-time (y-t) graph?",
+    "options": {
+      "A": "A series of inverted parabolas meeting at sharp cusps (points of impact) on the time axis",
+      "B": "A continuous smooth sine wave",
+      "C": "A series of triangles",
+      "D": "A series of semicircles"
+    },
+    "optionsList": [
+      "A series of inverted parabolas meeting at sharp cusps (points of impact) on the time axis",
+      "A continuous smooth sine wave",
+      "A series of triangles",
+      "A series of semicircles"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nBetween bounces, motion is under gravity: y(t) = - (1/2) g t\u00b2 + ..., which is an inverted parabola. At the floor, velocity instantaneously reverses sign from -v to +v, creating a sharp cusp (discontinuous derivative) on the time axis.\n\n2. GIVEN:\nElastic bouncing ball from height h.\n\n3. FORMULA / PRINCIPLE:\ny(t) is piecewise parabolic with sharp cusps at y = 0.\n\n4. STEP-BY-STEP SOLUTION:\n1. Between bounces, the ball moves under constant gravitational acceleration a = -g.\n2. The position-time equation is a quadratic with negative t\u00b2 term: an inverted parabola.\n3. When the ball strikes the floor (y = 0), an ideal elastic bounce instantly reverses the velocity from -\u221a(2gh) to +\u221a(2gh).\n4. Because velocity (the slope of the y-t curve) changes sign instantaneously, the tangent is discontinuous at y = 0.\n5. This creates sharp pointed cusps (V-shaped rebounds) touching the time axis at intervals of 2\u221a(2h/g).\n6. Therefore, the graph is a series of inverted parabolas with sharp cusps on the time axis.\n\n5. FINAL ANSWER:\nOption A: A series of inverted parabolas meeting at sharp cusps (points of impact) on the time axis\n\n6. QUICK TIP:\nBouncing ball graph: smooth curves in the air (parabolas), sharp pointed cusps at the floor (instant velocity reversal).",
+    "solutionStructured": {
+      "concept": "Between bounces, motion is under gravity: y(t) = - (1/2) g t\u00b2 + ..., which is an inverted parabola. At the floor, velocity instantaneously reverses sign from -v to +v, creating a sharp cusp (discontinuous derivative) on the time axis.",
+      "given": "Elastic bouncing ball from height h.",
+      "formula": "y(t) is piecewise parabolic with sharp cusps at y = 0.",
+      "stepByStep": "1. Between bounces, the ball moves under constant gravitational acceleration a = -g.\n2. The position-time equation is a quadratic with negative t\u00b2 term: an inverted parabola.\n3. When the ball strikes the floor (y = 0), an ideal elastic bounce instantly reverses the velocity from -\u221a(2gh) to +\u221a(2gh).\n4. Because velocity (the slope of the y-t curve) changes sign instantaneously, the tangent is discontinuous at y = 0.\n5. This creates sharp pointed cusps (V-shaped rebounds) touching the time axis at intervals of 2\u221a(2h/g).\n6. Therefore, the graph is a series of inverted parabolas with sharp cusps on the time axis.",
+      "finalAnswer": "Option A: A series of inverted parabolas meeting at sharp cusps (points of impact) on the time axis",
+      "whyOtherOptionsWrong": "Option B requires smooth derivative everywhere (no instantaneous velocity change). Option C assumes constant speed. Option D is not parabolic."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "msl-mcq-188",
+    "questionNumber": 188,
+    "question": "In the bouncing ball scenario of Q187, what is the time period T between two successive bounces on the floor from height h?",
+    "options": {
+      "A": "2 \u221a(2h / g)",
+      "B": "\u221a(2h / g)",
+      "C": "4 \u221a(2h / g)",
+      "D": "\u221a(h / 2g)"
+    },
+    "optionsList": [
+      "2 \u221a(2h / g)",
+      "\u221a(2h / g)",
+      "4 \u221a(2h / g)",
+      "\u221a(h / 2g)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTime between bounces is the time to rise to height h plus the time to fall back from height h: T = t_rise + t_fall = 2 * \u221a(2h/g).\n\n2. GIVEN:\nBounce height h, acceleration g.\n\n3. FORMULA / PRINCIPLE:\nt_fall = \u221a(2h / g); T = 2 t_fall = 2 \u221a(2h / g).\n\n4. STEP-BY-STEP SOLUTION:\n1. The ball rebounds from the floor with speed v = \u221a(2gh).\n2. Time taken to reach maximum height h:\n   t_rise = v / g = \u221a(2gh) / g = \u221a(2h / g).\n3. Time taken to fall back from height h to the floor:\n   t_fall = \u221a(2h / g).\n4. Total time between successive bounces:\n   T = t_rise + t_fall = \u221a(2h / g) + \u221a(2h / g) = 2 \u221a(2h / g).\n5. Hence, the period of the bouncing motion is 2 \u221a(2h / g).\n\n5. FINAL ANSWER:\nOption A: 2 \u221a(2h / g)\n\n6. QUICK TIP:\nTime of flight for bounce to height h is 2 * \u221a(2h/g).",
+    "solutionStructured": {
+      "concept": "Time between bounces is the time to rise to height h plus the time to fall back from height h: T = t_rise + t_fall = 2 * \u221a(2h/g).",
+      "given": "Bounce height h, acceleration g.",
+      "formula": "t_fall = \u221a(2h / g); T = 2 t_fall = 2 \u221a(2h / g).",
+      "stepByStep": "1. The ball rebounds from the floor with speed v = \u221a(2gh).\n2. Time taken to reach maximum height h:\n   t_rise = v / g = \u221a(2gh) / g = \u221a(2h / g).\n3. Time taken to fall back from height h to the floor:\n   t_fall = \u221a(2h / g).\n4. Total time between successive bounces:\n   T = t_rise + t_fall = \u221a(2h / g) + \u221a(2h / g) = 2 \u221a(2h / g).\n5. Hence, the period of the bouncing motion is 2 \u221a(2h / g).",
+      "finalAnswer": "Option A: 2 \u221a(2h / g)",
+      "whyOtherOptionsWrong": "Option B is only the one-way fall time. Option C is four times. Option D has 2 in denominator."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Straight Line",
+    "chapterId": "motion-straight-line",
+    "topic": "Position-time graphs",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  }
+]

@@ -1,17 +1,12 @@
-import { SUBJECTS, TOPICS, CHAPTERS } from '../data/neetData'
+import { SUBJECTS, TOPICS } from '../data/neetData'
 import { StorageService } from '../services/storageService'
-import { WeaknessDoctorService } from '../services/weaknessDoctorService'
 import { WeeklyMockService } from '../services/weeklyMockService'
 import { MistakeBookService } from '../services/mistakeBookService'
 
 export function renderHomeDashboard(): string {
   const progress = StorageService.getProgress();
-  const lastVisitedTopic = progress.lastVisitedTopicId ? TOPICS[progress.lastVisitedTopicId] : null;
-  const lastVisitedChapter = lastVisitedTopic ? CHAPTERS[lastVisitedTopic.chapterId] : null;
-  const metrics = WeaknessDoctorService.getDashboardMetrics();
   const personalBests = WeeklyMockService.getPersonalBests();
   const mistakeState = MistakeBookService.getState();
-  const { weekNumber } = WeeklyMockService.getCurrentYearAndWeek();
 
   const totalTopics = Object.keys(TOPICS).length;
   const completedTopicsCount = progress.completedTopics.length;
@@ -40,15 +35,6 @@ export function renderHomeDashboard(): string {
           </p>
 
           <div class="pt-2 flex flex-wrap items-center gap-3">
-            <a href="#start-here" class="px-5 py-3 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold shadow-sm transition-all flex items-center gap-2 text-sm">
-              <span>🌱</span> Start Here (Beginner Path)
-            </a>
-            <a href="#weekly-mock" class="px-5 py-3 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-bold shadow-sm transition-all flex items-center gap-2 text-sm">
-              <span>📝</span> Start Week ${weekNumber} Mock
-            </a>
-            <a href="#weakness-doctor" class="px-5 py-3 rounded-2xl bg-rose-50 dark:bg-rose-950/40 hover:bg-rose-100 text-rose-700 dark:text-rose-300 font-bold border border-rose-200 dark:border-rose-800 transition-all text-sm flex items-center gap-2">
-              <span>🩺</span> AI Weakness Doctor
-            </a>
             <button id="hero-search-trigger" class="px-5 py-3 rounded-2xl bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-semibold border border-slate-200 dark:border-slate-700 transition-colors text-sm flex items-center gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
@@ -110,93 +96,6 @@ export function renderHomeDashboard(): string {
 
       </section>
 
-      <!-- AI Weakness Doctor Status Card -->
-      <section class="p-5 sm:p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 hover-card-lift animate-card-enter stagger-5">
-        <div class="flex items-start sm:items-center gap-4">
-          <div class="w-12 h-12 rounded-2xl bg-rose-50 dark:bg-rose-950/50 border border-rose-200 dark:border-rose-900/50 text-rose-600 dark:text-rose-400 flex items-center justify-center font-bold text-2xl shrink-0">
-            🩺
-          </div>
-          <div>
-            <div class="flex items-center gap-2">
-              <span class="text-xs font-bold text-rose-600 dark:text-rose-400 uppercase tracking-wider">
-                AI Weakness Doctor
-              </span>
-              <span class="px-2 py-0.5 rounded-full bg-rose-50 dark:bg-rose-950/40 text-rose-700 dark:text-rose-300 text-[10px] font-bold border border-rose-200 dark:border-rose-800">
-                Diagnostic Engine
-              </span>
-            </div>
-            <h3 class="text-base font-bold text-slate-900 dark:text-slate-100 mt-0.5">
-              ${metrics.nextTopicToFix ? `Priority Fix: ${metrics.nextTopicToFix.topicTitle}` : (metrics.totalQuestionsAttempted < 3 ? 'Complete 3+ questions to generate your diagnostic profile' : 'Consistent performance across evaluated topics')}
-            </h3>
-            <p class="text-xs text-slate-500 dark:text-slate-400">
-              ${metrics.totalQuestionsAttempted} Questions Tracked • ${metrics.weakTopicsCount} Weak Topics • ${metrics.masteredTopicsCount} Mastered
-            </p>
-          </div>
-        </div>
-        
-        <div class="flex items-center gap-2 w-full sm:w-auto">
-          <a href="#weakness-doctor" class="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-bold transition-all text-center shrink-0 shadow-sm">
-            Open AI Doctor →
-          </a>
-        </div>
-      </section>
-
-      <!-- Beginner Sequential Roadmap Banner -->
-      <section class="p-5 sm:p-6 rounded-3xl bg-gradient-to-r from-emerald-900/90 via-slate-900 to-teal-950 border border-emerald-500/30 text-white shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 hover-card-lift">
-        <div class="flex items-start sm:items-center gap-4">
-          <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 flex items-center justify-center font-bold text-2xl shrink-0">
-            🌱
-          </div>
-          <div>
-            <div class="flex items-center gap-2">
-              <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider">
-                Beginner Learning Path
-              </span>
-              <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px] font-bold border border-emerald-500/30">
-                0 to 720 Sequence
-              </span>
-            </div>
-            <h3 class="text-base font-bold text-white mt-0.5">
-              New to NEET prep? Master topics one by one in structured order.
-            </h3>
-            <p class="text-xs text-slate-300">
-              Start with Step 1 (Cell Biology & Mole Concept) with NCERT concepts, key formulas, traps & PYQs.
-            </p>
-          </div>
-        </div>
-        
-        <div class="flex items-center gap-2 w-full sm:w-auto">
-          <a href="#start-here" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-black text-xs transition-all text-center shrink-0 shadow-sm">
-            Start Step 1 Now →
-          </a>
-        </div>
-      </section>
-
-      <!-- Continue Learning Banner (if user has studied a topic) -->
-      ${lastVisitedTopic && lastVisitedChapter ? `
-        <div class="p-5 rounded-2xl bg-blue-50/60 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-900/50 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div class="flex items-center gap-3.5">
-            <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-lg shrink-0">
-              📖
-            </div>
-            <div>
-              <span class="text-xs font-bold text-blue-700 dark:text-blue-400 uppercase tracking-wider">
-                Resume Learning
-              </span>
-              <h3 class="text-sm sm:text-base font-bold text-slate-900 dark:text-slate-100">
-                ${lastVisitedTopic.title}
-              </h3>
-              <p class="text-xs text-slate-500 dark:text-slate-400">
-                Chapter: ${lastVisitedChapter.title} • ${lastVisitedTopic.estimatedReadTimeMinutes} min read
-              </p>
-            </div>
-          </div>
-          <a href="#topic/${lastVisitedTopic.id}" class="w-full sm:w-auto px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition-colors text-center shrink-0">
-            Continue Reading →
-          </a>
-        </div>
-      ` : ''}
-
       <!-- NEET UG Subjects -->
       <section class="space-y-4">
         <div class="flex items-center justify-between">
@@ -226,6 +125,23 @@ export function renderHomeDashboard(): string {
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           
+          <a href="#chapterwise-mcqs" class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 hover:border-blue-500/50 shadow-sm transition-all group block space-y-2 hover-card-lift animate-card-enter">
+            <div class="flex items-center justify-between">
+              <span class="w-9 h-9 rounded-xl bg-blue-50 dark:bg-blue-950/50 text-blue-600 dark:text-blue-400 flex items-center justify-center text-lg">
+                📚
+              </span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-100 text-blue-800 dark:bg-blue-900/60 dark:text-blue-300">
+                MCQs
+              </span>
+            </div>
+            <h3 class="font-bold text-base text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+              Chapterwise MCQs
+            </h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400">
+              Practice chapter-wise MCQs and identify your weak areas.
+            </p>
+          </a>
+
           <a href="#weekly-mock" class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 hover:border-blue-500/50 shadow-sm transition-all group block space-y-2 hover-card-lift animate-card-enter stagger-1">
             <div class="flex items-center justify-between">
               <span class="w-9 h-9 rounded-xl bg-blue-50 dark:bg-blue-950/50 text-blue-600 dark:text-blue-400 flex items-center justify-center text-lg">
@@ -277,24 +193,7 @@ export function renderHomeDashboard(): string {
             </p>
           </a>
 
-          <a href="#chapter-tests" class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 hover:border-indigo-500/50 shadow-sm transition-all group block space-y-2 hover-card-lift animate-card-enter stagger-4">
-            <div class="flex items-center justify-between">
-              <span class="w-9 h-9 rounded-xl bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-lg">
-                📑
-              </span>
-              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-indigo-100 text-indigo-800 dark:bg-indigo-900/60 dark:text-indigo-300">
-                Chapter Tests
-              </span>
-            </div>
-            <h3 class="font-bold text-base text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
-              Chapter-Wise Test Series
-            </h3>
-            <p class="text-xs text-slate-500 dark:text-slate-400">
-              Targeted 20-30 question chapter tests to solidify individual subject units.
-            </p>
-          </a>
-
-          <a href="#revision" class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 hover:border-purple-500/50 shadow-sm transition-all group block space-y-2 hover-card-lift animate-card-enter stagger-5">
+          <a href="#revision" class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 hover:border-purple-500/50 shadow-sm transition-all group block space-y-2 hover-card-lift animate-card-enter stagger-4">
             <div class="flex items-center justify-between">
               <span class="w-9 h-9 rounded-xl bg-purple-50 dark:bg-purple-950/50 text-purple-600 dark:text-purple-400 flex items-center justify-center text-lg">
                 ⚡
@@ -308,23 +207,6 @@ export function renderHomeDashboard(): string {
             </h3>
             <p class="text-xs text-slate-500 dark:text-slate-400">
               Rapid-fire formula cards and fundamental NCERT principles for last-minute review.
-            </p>
-          </a>
-
-          <a href="#custom-test" class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 hover:border-blue-500/50 shadow-sm transition-all group block space-y-2 hover-card-lift animate-card-enter stagger-6">
-            <div class="flex items-center justify-between">
-              <span class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center text-lg">
-                ⚙️
-              </span>
-              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-200 text-slate-800 dark:bg-slate-700 dark:text-slate-300">
-                Configurable
-              </span>
-            </div>
-            <h3 class="font-bold text-base text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-              Custom Test Builder
-            </h3>
-            <p class="text-xs text-slate-500 dark:text-slate-400">
-              Configure question volume, subject focus, and timer for customized self-assessment.
             </p>
           </a>
 
@@ -343,10 +225,7 @@ function renderSubjectCard(subject: typeof SUBJECTS[0]): string {
       
       <div class="p-6 space-y-4">
         
-        <div class="flex items-center justify-between">
-          <div class="w-12 h-12 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200/60 dark:border-slate-700 flex items-center justify-center text-2xl group-hover:scale-105 transition-transform">
-            ${subject.icon}
-          </div>
+        <div class="flex items-center justify-end">
           <span class="px-2.5 py-1 rounded-full text-[11px] font-bold border ${subject.badgeColor}">
             NCERT Aligned
           </span>

@@ -249,15 +249,17 @@ export class WeeklyMockService {
     const bioPool = allQuestions.filter(q => q.subject === 'biology');
 
     const selectForSubject = (pool: MockQuestion[], targetCount: number, subjectName: string): MockQuestion[] => {
-      if (pool.length === 0) return [];
+      const validPool = pool.filter(q => q && typeof q.questionId === 'string' && q.questionId.trim().length > 0);
+      if (validPool.length === 0) return [];
 
       // Sort questions: prioritize questions not recently used
-      const unused = pool.filter(q => !recentIds.has(q.questionId));
-      const candidates = unused.length >= targetCount ? unused : pool;
+      const unused = validPool.filter(q => !recentIds.has(q.questionId));
+      const candidates = unused.length >= targetCount ? unused : validPool;
 
       // Group candidates by chapter for balanced chapter distribution
       const chapterBuckets: Record<string, MockQuestion[]> = {};
       candidates.forEach(q => {
+        if (!q || !q.questionId) return;
         const cKey = q.chapterId || 'default';
         if (!chapterBuckets[cKey]) chapterBuckets[cKey] = [];
         chapterBuckets[cKey].push(q);
@@ -273,19 +275,21 @@ export class WeeklyMockService {
       // Round-robin chapter distribution
       let chapterIdx = 0;
       let safetyLoop = 0;
-      while (selected.length < targetCount && safetyLoop < targetCount * 5) {
+      while (selected.length < targetCount && safetyLoop < targetCount * 5 && chapterKeys.length > 0) {
         safetyLoop++;
         const chKey = chapterKeys[chapterIdx % chapterKeys.length];
         const bucket = chapterBuckets[chKey] || [];
         
         // Find an unselected question from this chapter
-        const availableInBucket = bucket.filter(q => !selectedIds.has(q.questionId));
+        const availableInBucket = bucket.filter(q => q && q.questionId && !selectedIds.has(q.questionId));
         if (availableInBucket.length > 0) {
           // Pick one
-          const pickIdx = Math.floor(rng() * availableInBucket.length);
+          const pickIdx = Math.floor(Math.abs(rng()) * availableInBucket.length) % availableInBucket.length;
           const picked = availableInBucket[pickIdx];
-          selected.push(picked);
-          selectedIds.add(picked.questionId);
+          if (picked && picked.questionId) {
+            selected.push(picked);
+            selectedIds.add(picked.questionId);
+          }
         }
 
         chapterIdx++;
@@ -293,12 +297,14 @@ export class WeeklyMockService {
 
       // If still need more to reach targetCount, pick from remaining pool
       if (selected.length < targetCount) {
-        const remaining = pool.filter(q => !selectedIds.has(q.questionId));
+        const remaining = validPool.filter(q => q && q.questionId && !selectedIds.has(q.questionId));
         remaining.sort(() => rng() - 0.5);
         for (const rem of remaining) {
           if (selected.length >= targetCount) break;
-          selected.push(rem);
-          selectedIds.add(rem.questionId);
+          if (rem && rem.questionId) {
+            selected.push(rem);
+            selectedIds.add(rem.questionId);
+          }
         }
       }
 
@@ -306,10 +312,12 @@ export class WeeklyMockService {
       let loopCounter = 1;
       while (selected.length < targetCount && selected.length > 0) {
         const base = selected[loopCounter % selected.length];
-        selected.push({
-          ...base,
-          questionId: `${base.questionId}_rep_${loopCounter}`
-        });
+        if (base && base.questionId) {
+          selected.push({
+            ...base,
+            questionId: `${base.questionId}_rep_${loopCounter}`
+          });
+        }
         loopCounter++;
       }
 
@@ -401,6 +409,9 @@ export class WeeklyMockService {
     activeAttempt: NonNullable<WeeklyMockState['activeAttempt']>;
     paper: WeeklyMockPaper;
   } {
+    if (!paper || !Array.isArray(paper.questions) || paper.questions.length === 0) {
+      paper = this.getOrCreateCurrentWeeklyMock();
+    }
     const state = this.getState();
 
     // Check if there is already an active unfinished attempt for this mockId
@@ -410,6 +421,7 @@ export class WeeklyMockService {
         // Auto-submit
         this.submitActiveMock(paper);
       } else {
+        if (!state.activeAttempt.answers) state.activeAttempt.answers = {};
         return {
           activeAttempt: state.activeAttempt,
           paper
@@ -427,20 +439,27 @@ export class WeeklyMockService {
     activeAttempt: NonNullable<WeeklyMockState['activeAttempt']>;
     paper: WeeklyMockPaper;
   } {
+    if (!paper || !Array.isArray(paper.questions) || paper.questions.length === 0) {
+      paper = this.getOrCreateCurrentWeeklyMock();
+    }
     const state = this.getState();
     const startTimestamp = Date.now();
-    const endTimestamp = startTimestamp + (paper.config.durationMinutes * 60 * 1000);
+    const duration = (paper.config && typeof paper.config.durationMinutes === 'number') ? paper.config.durationMinutes : 180;
+    const endTimestamp = startTimestamp + (duration * 60 * 1000);
 
     const initialAnswers: Record<string, MockUserAnswer> = {};
-    paper.questions.forEach(q => {
-      initialAnswers[q.questionId] = {
-        questionId: q.questionId,
-        selectedOption: null,
-        isMarkedForReview: false,
-        timeSpentSeconds: 0,
-        timestamp: 0
-      };
-    });
+    if (Array.isArray(paper.questions)) {
+      paper.questions.forEach(q => {
+        if (!q || !q.questionId) return;
+        initialAnswers[q.questionId] = {
+          questionId: q.questionId,
+          selectedOption: null,
+          isMarkedForReview: false,
+          timeSpentSeconds: 0,
+          timestamp: 0
+        };
+      });
+    }
 
     state.activeAttempt = {
       mockId: paper.id,
@@ -702,46 +721,49 @@ export class WeeklyMockService {
     const result = this.calculateMockScore(paper, answers, totalTimeSeconds, startTimestamp, submissionTimestamp);
 
     // 1. Integration: Update Mistake Book and AI Weakness Doctor
-    paper.questions.forEach(q => {
-      const userAns = answers[q.questionId];
-      const selected = userAns ? userAns.selectedOption : null;
-      const isCorrect = selected === q.correctAnswer;
-      const timeSpent = userAns ? userAns.timeSpentSeconds : 45;
+    if (Array.isArray(paper.questions)) {
+      paper.questions.forEach(q => {
+        if (!q || !q.questionId) return;
+        const userAns = answers ? answers[q.questionId] : undefined;
+        const selected = userAns ? userAns.selectedOption : null;
+        const isCorrect = selected === q.correctAnswer;
+        const timeSpent = userAns ? userAns.timeSpentSeconds : 45;
 
-      // Always record in AI Weakness Doctor engine if attempted
-      if (selected !== null && selected !== undefined) {
-        WeaknessDoctorService.recordQuestionAttempt({
-          questionId: q.questionId,
-          topicId: q.topicId,
-          status: isCorrect ? 'correct' : 'incorrect',
-          selectedOption: selected,
-          correctOption: q.correctAnswer,
-          timeSpentSeconds: timeSpent,
-          source: 'weekly_mock'
-        });
-      }
+        // Always record in AI Weakness Doctor engine if attempted
+        if (selected !== null && selected !== undefined) {
+          WeaknessDoctorService.recordQuestionAttempt({
+            questionId: q.questionId,
+            topicId: q.topicId,
+            status: isCorrect ? 'correct' : 'incorrect',
+            selectedOption: selected,
+            correctOption: q.correctAnswer,
+            timeSpentSeconds: timeSpent,
+            source: 'weekly_mock'
+          });
+        }
 
-      // If incorrect, automatically add to Mistake Book
-      if (selected !== null && selected !== undefined && !isCorrect) {
-        MistakeBookService.recordMistake({
-          questionId: q.questionId,
-          sourceMockId: paper!.id,
-          sourceType: 'weekly_mock',
-          subject: q.subject,
-          subjectName: q.subjectName,
-          chapterId: q.chapterId,
-          chapterTitle: q.chapterTitle,
-          topicId: q.topicId,
-          topicTitle: q.topicTitle,
-          question: q.question,
-          options: q.options,
-          studentAnswer: selected,
-          correctAnswer: q.correctAnswer,
-          explanation: q.explanation,
-          conceptTested: q.conceptTested
-        });
-      }
-    });
+        // If incorrect, automatically add to Mistake Book
+        if (selected !== null && selected !== undefined && !isCorrect) {
+          MistakeBookService.recordMistake({
+            questionId: q.questionId,
+            sourceMockId: paper!.id,
+            sourceType: 'weekly_mock',
+            subject: q.subject,
+            subjectName: q.subjectName,
+            chapterId: q.chapterId,
+            chapterTitle: q.chapterTitle,
+            topicId: q.topicId,
+            topicTitle: q.topicTitle,
+            question: q.question,
+            options: q.options,
+            studentAnswer: selected,
+            correctAnswer: q.correctAnswer,
+            explanation: q.explanation,
+            conceptTested: q.conceptTested
+          });
+        }
+      });
+    }
 
     // 2. Update Streak & Recent Questions
     if (paper.id.startsWith('WEEKLY_MOCK_')) {
@@ -804,7 +826,16 @@ export class WeeklyMockService {
   public static getActiveMock(): any {
     const state = this.getState();
     if (!state.activeAttempt || state.activeAttempt.isSubmitted) return null;
-    const paper = state.savedMocks[state.activeAttempt.mockId] || this.getOrCreateCurrentWeeklyMock();
+    let paper = state.savedMocks[state.activeAttempt.mockId];
+    if (!paper || !Array.isArray(paper.questions) || paper.questions.length === 0) {
+      paper = this.getOrCreateCurrentWeeklyMock();
+    }
+    if (!paper || !Array.isArray(paper.questions) || paper.questions.length === 0) {
+      // Clear corrupt attempt from state so it does not persist and throw errors
+      state.activeAttempt = null;
+      this.saveState(state);
+      return null;
+    }
     const timeRemainingSeconds = Math.max(0, Math.round((state.activeAttempt.endTimestamp - Date.now()) / 1000));
     return {
       mockId: state.activeAttempt.mockId,
@@ -812,7 +843,7 @@ export class WeeklyMockService {
       timeRemainingSeconds,
       currentQuestionIndex: state.activeAttempt.currentQuestionIndex,
       questions: paper.questions,
-      answers: state.activeAttempt.answers,
+      answers: state.activeAttempt.answers || {},
       paper,
       activeAttempt: state.activeAttempt
     };
@@ -844,10 +875,11 @@ export class WeeklyMockService {
     const state = this.getState();
     if (!state.activeAttempt) return;
     const paper = state.savedMocks[state.activeAttempt.mockId] || this.getOrCreateCurrentWeeklyMock();
-    if (!paper) return;
+    if (!paper || !Array.isArray(paper.questions)) return;
     const q = paper.questions[qIndex];
-    if (!q) return;
-    const current = state.activeAttempt.answers[q.questionId];
+    if (!q || !q.questionId) return;
+    const answers = state.activeAttempt.answers || {};
+    const current = answers[q.questionId];
     const isMarked = current ? !!current.isMarkedForReview : false;
     this.recordQuestionResponse(q.questionId, optIndex, isMarked);
   }
@@ -856,10 +888,11 @@ export class WeeklyMockService {
     const state = this.getState();
     if (!state.activeAttempt) return;
     const paper = state.savedMocks[state.activeAttempt.mockId] || this.getOrCreateCurrentWeeklyMock();
-    if (!paper) return;
+    if (!paper || !Array.isArray(paper.questions)) return;
     const q = paper.questions[qIndex];
-    if (!q) return;
-    const current = state.activeAttempt.answers[q.questionId];
+    if (!q || !q.questionId) return;
+    const answers = state.activeAttempt.answers || {};
+    const current = answers[q.questionId];
     const isMarked = current ? !current.isMarkedForReview : true;
     const selected = current ? current.selectedOption : null;
     this.recordQuestionResponse(q.questionId, selected, isMarked);
@@ -869,10 +902,11 @@ export class WeeklyMockService {
     const state = this.getState();
     if (!state.activeAttempt) return;
     const paper = state.savedMocks[state.activeAttempt.mockId] || this.getOrCreateCurrentWeeklyMock();
-    if (!paper) return;
+    if (!paper || !Array.isArray(paper.questions)) return;
     const q = paper.questions[qIndex];
-    if (!q) return;
-    const current = state.activeAttempt.answers[q.questionId];
+    if (!q || !q.questionId) return;
+    const answers = state.activeAttempt.answers || {};
+    const current = answers[q.questionId];
     const isMarked = current ? current.isMarkedForReview : false;
     this.recordQuestionResponse(q.questionId, null, isMarked);
   }
@@ -948,7 +982,7 @@ export class WeeklyMockService {
       bestAccuracy,
       bestSubject,
       totalTestsCompleted: history.length,
-      weeklyStreak: state.weeklyStreak || 1,
+      weeklyStreak: state.weeklyStreak || 0,
       averageScore,
       latestScore,
       scoreImprovement

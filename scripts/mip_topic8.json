@@ -1,0 +1,668 @@
+[
+  {
+    "id": "mip-mcq-126",
+    "questionNumber": 126,
+    "question": "What is a unit vector, and what are its dimensions and physical units?",
+    "options": {
+      "A": "A vector of unit magnitude; it is dimensionless and has no units",
+      "B": "A vector of unit magnitude; its unit is always meters",
+      "C": "A vector whose components are all equal to 1; unit is dimensionless",
+      "D": "A scalar with value 1 and no units"
+    },
+    "optionsList": [
+      "A vector of unit magnitude; it is dimensionless and has no units",
+      "A vector of unit magnitude; its unit is always meters",
+      "A vector whose components are all equal to 1; unit is dimensionless",
+      "A scalar with value 1 and no units"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nA unit vector $\\hat{A} = \\frac{\\vec{A}}{|\\vec{A}|}$ is defined as a vector divided by its own magnitude. Since the numerator and denominator have the same physical units and dimensions, the unit vector is dimensionless and unitless, serving purely to specify direction in space.\n\n2. GIVEN:\nDefinition of a unit vector.\n\n3. FORMULA / PRINCIPLE:\n$\\hat{A} = \\frac{\\vec{A}}{|\\vec{A}|}$; $[\\hat{A}] = \\frac{[\\vec{A}]}{[|\\vec{A}|]} = [M^0 L^0 T^0]$\n\n4. STEP-BY-STEP SOLUTION:\n1. By definition, a unit vector specifies a direction in space.\n2. It is constructed by dividing any non-zero vector $\\vec{A}$ by its scalar magnitude $|\\vec{A}|$.\n3. Since both $\\vec{A}$ and $|\\vec{A}|$ carry identical units (e.g., m/s for velocity or N for force), the units cancel out completely.\n4. Therefore, a unit vector has magnitude 1, is completely dimensionless, and has no physical units.\n\n5. FINAL ANSWER:\nOption A: A vector of unit magnitude; it is dimensionless and has no units\n\n6. QUICK TIP:\nGolden NEET rule: Unit vectors ($\\hat{i}, \\hat{j}, \\hat{k}$) have NO physical units and NO dimensions!",
+    "solutionStructured": {
+      "concept": "A unit vector $\\hat{A} = \\frac{\\vec{A}}{|\\vec{A}|}$ is defined as a vector divided by its own magnitude. Since the numerator and denominator have the same physical units and dimensions, the unit vector is dimensionless and unitless, serving purely to specify direction in space.",
+      "given": "Definition of a unit vector.",
+      "formula": "$\\hat{A} = \\frac{\\vec{A}}{|\\vec{A}|}$; $[\\hat{A}] = \\frac{[\\vec{A}]}{[|\\vec{A}|]} = [M^0 L^0 T^0]$",
+      "stepByStep": "1. By definition, a unit vector specifies a direction in space.\n2. It is constructed by dividing any non-zero vector $\\vec{A}$ by its scalar magnitude $|\\vec{A}|$.\n3. Since both $\\vec{A}$ and $|\\vec{A}|$ carry identical units (e.g., m/s for velocity or N for force), the units cancel out completely.\n4. Therefore, a unit vector has magnitude 1, is completely dimensionless, and has no physical units.",
+      "finalAnswer": "Option A: A vector of unit magnitude; it is dimensionless and has no units",
+      "whyOtherOptionsWrong": "Option B incorrectly assigns meters; Option C confuses unit magnitude with all components being 1."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Unit vectors and vector notation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-127",
+    "questionNumber": 127,
+    "question": "In a right-handed Cartesian coordinate system, what are the standard unit vectors along the positive x, y, and z axes?",
+    "options": {
+      "A": "\u00ee, \u0135, and k\u0302 respectively",
+      "B": "x\u0302, y\u0302, and z\u0302 with magnitudes equal to x, y, and z",
+      "C": "\u00ee, \u0135, and k\u0302 with magnitudes dependent on the scale of axes",
+      "D": "\u00ee, \u0135, and k\u0302 where \u00ee \u00d7 \u0135 = -k\u0302"
+    },
+    "optionsList": [
+      "\u00ee, \u0135, and k\u0302 respectively",
+      "x\u0302, y\u0302, and z\u0302 with magnitudes equal to x, y, and z",
+      "\u00ee, \u0135, and k\u0302 with magnitudes dependent on the scale of axes",
+      "\u00ee, \u0135, and k\u0302 where \u00ee \u00d7 \u0135 = -k\u0302"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe standard orthogonal base vectors are denoted by $\\hat{i}, \\hat{j}, \\hat{k}$ along the $+x, +y, +z$ axes respectively, each having magnitude 1.\n\n2. GIVEN:\nCartesian coordinate system.\n\n3. FORMULA / PRINCIPLE:\n$|\\hat{i}| = |\\hat{j}| = |\\hat{k}| = 1$; $\\hat{i} \\cdot \\hat{j} = \\hat{j} \\cdot \\hat{k} = \\hat{k} \\cdot \\hat{i} = 0$\n\n4. STEP-BY-STEP SOLUTION:\n1. The unit vectors along the three mutually perpendicular coordinate axes are conventionally designated as $\\hat{i}$ (x-axis), $\\hat{j}$ (y-axis), and $\\hat{k}$ (z-axis).\n2. In a right-handed system, they satisfy $\\hat{i} \\times \\hat{j} = \\hat{k}$.\n3. Each has magnitude strictly equal to 1, independent of any scaling of the physical system.\n4. Therefore, option A is correct.\n\n5. FINAL ANSWER:\nOption A: \u00ee, \u0135, and k\u0302 respectively\n\n6. QUICK TIP:\nRight-hand cyclic order: $\\hat{i} \\to \\hat{j} \\to \\hat{k} \\to \\hat{i}$.",
+    "solutionStructured": {
+      "concept": "The standard orthogonal base vectors are denoted by $\\hat{i}, \\hat{j}, \\hat{k}$ along the $+x, +y, +z$ axes respectively, each having magnitude 1.",
+      "given": "Cartesian coordinate system.",
+      "formula": "$|\\hat{i}| = |\\hat{j}| = |\\hat{k}| = 1$; $\\hat{i} \\cdot \\hat{j} = \\hat{j} \\cdot \\hat{k} = \\hat{k} \\cdot \\hat{i} = 0$",
+      "stepByStep": "1. The unit vectors along the three mutually perpendicular coordinate axes are conventionally designated as $\\hat{i}$ (x-axis), $\\hat{j}$ (y-axis), and $\\hat{k}$ (z-axis).\n2. In a right-handed system, they satisfy $\\hat{i} \\times \\hat{j} = \\hat{k}$.\n3. Each has magnitude strictly equal to 1, independent of any scaling of the physical system.\n4. Therefore, option A is correct.",
+      "finalAnswer": "Option A: \u00ee, \u0135, and k\u0302 respectively",
+      "whyOtherOptionsWrong": "Option D has $\\hat{i} \\times \\hat{j} = -\\hat{k}$, which would be a left-handed coordinate system."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Unit vectors and vector notation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-128",
+    "questionNumber": 128,
+    "question": "What is the unit vector in the direction of the vector $\\vec{A} = 3\\hat{i} + 4\\hat{j}$?",
+    "options": {
+      "A": "0.6 \u00ee + 0.8 \u0135",
+      "B": "0.8 \u00ee + 0.6 \u0135",
+      "C": "3 \u00ee + 4 \u0135",
+      "D": "0.5 \u00ee + 0.5 \u0135"
+    },
+    "optionsList": [
+      "0.6 \u00ee + 0.8 \u0135",
+      "0.8 \u00ee + 0.6 \u0135",
+      "3 \u00ee + 4 \u0135",
+      "0.5 \u00ee + 0.5 \u0135"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\n$\\hat{A} = \\frac{\\vec{A}}{|\\vec{A}|} = \\frac{3\\hat{i} + 4\\hat{j}}{\\sqrt{3^2 + 4^2}} = \\frac{3\\hat{i} + 4\\hat{j}}{5} = 0.6\\hat{i} + 0.8\\hat{j}$.\n\n2. GIVEN:\n$\\vec{A} = 3\\hat{i} + 4\\hat{j}$.\n\n3. FORMULA / PRINCIPLE:\n$\\hat{A} = \\frac{A_x\\hat{i} + A_y\\hat{j}}{\\sqrt{A_x^2 + A_y^2}}$\n\n4. STEP-BY-STEP SOLUTION:\n1. Magnitude: $|\\vec{A}| = \\sqrt{3^2 + 4^2} = \\sqrt{25} = 5$.\n2. Divide each component by 5:\n   $3/5 = 0.6$\n   $4/5 = 0.8$\n3. Unit vector: $\\hat{A} = 0.6\\hat{i} + 0.8\\hat{j}$.\n4. Magnitude verification: $\\sqrt{(0.6)^2 + (0.8)^2} = \\sqrt{0.36 + 0.64} = 1$.\n\n5. FINAL ANSWER:\nOption A: 0.6 \u00ee + 0.8 \u0135\n\n6. QUICK TIP:\n0.6 and 0.8 are the most common unit vector coefficients in NEET!",
+    "solutionStructured": {
+      "concept": "$\\hat{A} = \\frac{\\vec{A}}{|\\vec{A}|} = \\frac{3\\hat{i} + 4\\hat{j}}{\\sqrt{3^2 + 4^2}} = \\frac{3\\hat{i} + 4\\hat{j}}{5} = 0.6\\hat{i} + 0.8\\hat{j}$.",
+      "given": "$\\vec{A} = 3\\hat{i} + 4\\hat{j}$.",
+      "formula": "$\\hat{A} = \\frac{A_x\\hat{i} + A_y\\hat{j}}{\\sqrt{A_x^2 + A_y^2}}$",
+      "stepByStep": "1. Magnitude: $|\\vec{A}| = \\sqrt{3^2 + 4^2} = \\sqrt{25} = 5$.\n2. Divide each component by 5:\n   $3/5 = 0.6$\n   $4/5 = 0.8$\n3. Unit vector: $\\hat{A} = 0.6\\hat{i} + 0.8\\hat{j}$.\n4. Magnitude verification: $\\sqrt{(0.6)^2 + (0.8)^2} = \\sqrt{0.36 + 0.64} = 1$.",
+      "finalAnswer": "Option A: 0.6 \u00ee + 0.8 \u0135",
+      "whyOtherOptionsWrong": "Option B swaps the x and y components."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Unit vectors and vector notation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-129",
+    "questionNumber": 129,
+    "question": "A vector $\\vec{A}$ has magnitude 15 and points in the direction of the unit vector $\\hat{u} = \\frac{2}{3}\\hat{i} + \\frac{1}{3}\\hat{j} - \\frac{2}{3}\\hat{k}$. What is the vector $\\vec{A}$?",
+    "options": {
+      "A": "10 \u00ee + 5 \u0135 - 10 k\u0302",
+      "B": "5 \u00ee + 10 \u0135 - 5 k\u0302",
+      "C": "2 \u00ee + \u0135 - 2 k\u0302",
+      "D": "30 \u00ee + 15 \u0135 - 30 k\u0302"
+    },
+    "optionsList": [
+      "10 \u00ee + 5 \u0135 - 10 k\u0302",
+      "5 \u00ee + 10 \u0135 - 5 k\u0302",
+      "2 \u00ee + \u0135 - 2 k\u0302",
+      "30 \u00ee + 15 \u0135 - 30 k\u0302"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nAny vector is the product of its scalar magnitude and its unit vector: $\\vec{A} = |\\vec{A}| \\hat{u}$.\n\n2. GIVEN:\n$|\\vec{A}| = 15$, $\\hat{u} = \\frac{2}{3}\\hat{i} + \\frac{1}{3}\\hat{j} - \\frac{2}{3}\\hat{k}$.\n\n3. FORMULA / PRINCIPLE:\n$\\vec{A} = 15 \\times \\left(\\frac{2}{3}\\hat{i} + \\frac{1}{3}\\hat{j} - \\frac{2}{3}\\hat{k}\\right)$\n\n4. STEP-BY-STEP SOLUTION:\n1. First verify that $\\hat{u}$ is indeed a unit vector:\n   $|\\hat{u}| = \\sqrt{(2/3)^2 + (1/3)^2 + (-2/3)^2} = \\sqrt{4/9 + 1/9 + 4/9} = \\sqrt{9/9} = 1$.\n2. Multiply each component by magnitude 15:\n   $A_x = 15 \\times (2/3) = 10$\n   $A_y = 15 \\times (1/3) = 5$\n   $A_z = 15 \\times (-2/3) = -10$\n3. Therefore, $\\vec{A} = 10\\hat{i} + 5\\hat{j} - 10\\hat{k}$.\n\n5. FINAL ANSWER:\nOption A: 10 \u00ee + 5 \u0135 - 10 k\u0302\n\n6. QUICK TIP:\nVector = Magnitude $\\times$ Direction (Unit vector).",
+    "solutionStructured": {
+      "concept": "Any vector is the product of its scalar magnitude and its unit vector: $\\vec{A} = |\\vec{A}| \\hat{u}$.",
+      "given": "$|\\vec{A}| = 15$, $\\hat{u} = \\frac{2}{3}\\hat{i} + \\frac{1}{3}\\hat{j} - \\frac{2}{3}\\hat{k}$.",
+      "formula": "$\\vec{A} = 15 \\times \\left(\\frac{2}{3}\\hat{i} + \\frac{1}{3}\\hat{j} - \\frac{2}{3}\\hat{k}\\right)$",
+      "stepByStep": "1. First verify that $\\hat{u}$ is indeed a unit vector:\n   $|\\hat{u}| = \\sqrt{(2/3)^2 + (1/3)^2 + (-2/3)^2} = \\sqrt{4/9 + 1/9 + 4/9} = \\sqrt{9/9} = 1$.\n2. Multiply each component by magnitude 15:\n   $A_x = 15 \\times (2/3) = 10$\n   $A_y = 15 \\times (1/3) = 5$\n   $A_z = 15 \\times (-2/3) = -10$\n3. Therefore, $\\vec{A} = 10\\hat{i} + 5\\hat{j} - 10\\hat{k}$.",
+      "finalAnswer": "Option A: 10 \u00ee + 5 \u0135 - 10 k\u0302",
+      "whyOtherOptionsWrong": "Option C is just the unscaled integer ratios $(2, 1, -2)$."
+    },
+    "difficulty": "Easy",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Unit vectors and vector notation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-130",
+    "questionNumber": 130,
+    "question": "If $\\vec{A} = 2\\hat{i} + 3\\hat{j} - \\hat{k}$ and $\\vec{B} = -\\hat{i} + 2\\hat{j} + 4\\hat{k}$, what is the unit vector parallel to $\\vec{A} + \\vec{B}$?",
+    "options": {
+      "A": "(\u00ee + 5 \u0135 + 3 k\u0302) / \u221a35",
+      "B": "(\u00ee + 5 \u0135 + 3 k\u0302) / 35",
+      "C": "(3 \u00ee + \u0135 - 5 k\u0302) / \u221a35",
+      "D": "(\u00ee + 5 \u0135 + 3 k\u0302) / 9"
+    },
+    "optionsList": [
+      "(\u00ee + 5 \u0135 + 3 k\u0302) / \u221a35",
+      "(\u00ee + 5 \u0135 + 3 k\u0302) / 35",
+      "(3 \u00ee + \u0135 - 5 k\u0302) / \u221a35",
+      "(\u00ee + 5 \u0135 + 3 k\u0302) / 9"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFirst find the sum vector $\\vec{R} = \\vec{A} + \\vec{B}$, then normalize it by dividing by $|\\vec{R}|$.\n\n2. GIVEN:\n$\\vec{A} = 2\\hat{i} + 3\\hat{j} - 1\\hat{k}$, $\\vec{B} = -1\\hat{i} + 2\\hat{j} + 4\\hat{k}$.\n\n3. FORMULA / PRINCIPLE:\n$\\vec{R} = \\vec{A} + \\vec{B}$; $\\hat{R} = \\frac{\\vec{R}}{|\\vec{R}|}$\n\n4. STEP-BY-STEP SOLUTION:\n1. Sum components:\n   $R_x = 2 + (-1) = 1$\n   $R_y = 3 + 2 = 5$\n   $R_z = -1 + 4 = 3$\n   So $\\vec{R} = \\hat{i} + 5\\hat{j} + 3\\hat{k}$.\n2. Compute magnitude of $\\vec{R}$:\n   $|\\vec{R}| = \\sqrt{1^2 + 5^2 + 3^2} = \\sqrt{1 + 25 + 9} = \\sqrt{35}$.\n3. Unit vector:\n   $\\hat{R} = \\frac{\\hat{i} + 5\\hat{j} + 3\\hat{k}}{\\sqrt{35}}$.\n\n5. FINAL ANSWER:\nOption A: (\u00ee + 5 \u0135 + 3 k\u0302) / \u221a35\n\n6. QUICK TIP:\nAlways check that you divide by the SQUARE ROOT of the sum of squares, not the sum of squares itself!",
+    "solutionStructured": {
+      "concept": "First find the sum vector $\\vec{R} = \\vec{A} + \\vec{B}$, then normalize it by dividing by $|\\vec{R}|$.",
+      "given": "$\\vec{A} = 2\\hat{i} + 3\\hat{j} - 1\\hat{k}$, $\\vec{B} = -1\\hat{i} + 2\\hat{j} + 4\\hat{k}$.",
+      "formula": "$\\vec{R} = \\vec{A} + \\vec{B}$; $\\hat{R} = \\frac{\\vec{R}}{|\\vec{R}|}$",
+      "stepByStep": "1. Sum components:\n   $R_x = 2 + (-1) = 1$\n   $R_y = 3 + 2 = 5$\n   $R_z = -1 + 4 = 3$\n   So $\\vec{R} = \\hat{i} + 5\\hat{j} + 3\\hat{k}$.\n2. Compute magnitude of $\\vec{R}$:\n   $|\\vec{R}| = \\sqrt{1^2 + 5^2 + 3^2} = \\sqrt{1 + 25 + 9} = \\sqrt{35}$.\n3. Unit vector:\n   $\\hat{R} = \\frac{\\hat{i} + 5\\hat{j} + 3\\hat{k}}{\\sqrt{35}}$.",
+      "finalAnswer": "Option A: (\u00ee + 5 \u0135 + 3 k\u0302) / \u221a35",
+      "whyOtherOptionsWrong": "Option B divides by 35 instead of $\\sqrt{35}$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Unit vectors and vector notation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-131",
+    "questionNumber": 131,
+    "question": "What is the unit vector along the direction of $\\vec{A} - \\vec{B}$ if $\\vec{A} = 4\\hat{i} + 3\\hat{j}$ and $\\vec{B} = \\hat{i} - \\hat{j}$?",
+    "options": {
+      "A": "0.6 \u00ee + 0.8 \u0135",
+      "B": "0.8 \u00ee + 0.6 \u0135",
+      "C": "3 \u00ee + 4 \u0135",
+      "D": "(3 \u00ee + 2 \u0135) / \u221a13"
+    },
+    "optionsList": [
+      "0.6 \u00ee + 0.8 \u0135",
+      "0.8 \u00ee + 0.6 \u0135",
+      "3 \u00ee + 4 \u0135",
+      "(3 \u00ee + 2 \u0135) / \u221a13"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nCompute difference $\\vec{D} = \\vec{A} - \\vec{B}$, then divide by $|\\vec{D}|$.\n\n2. GIVEN:\n$\\vec{A} = 4\\hat{i} + 3\\hat{j}$, $\\vec{B} = 1\\hat{i} - 1\\hat{j}$.\n\n3. FORMULA / PRINCIPLE:\n$\\vec{D} = (4 - 1)\\hat{i} + (3 - (-1))\\hat{j} = 3\\hat{i} + 4\\hat{j}$; $|\\vec{D}| = 5$\n\n4. STEP-BY-STEP SOLUTION:\n1. Subtract components:\n   $D_x = 4 - 1 = 3$\n   $D_y = 3 - (-1) = 3 + 1 = 4$\n   So $\\vec{D} = 3\\hat{i} + 4\\hat{j}$.\n2. Magnitude: $|\\vec{D}| = \\sqrt{3^2 + 4^2} = 5$.\n3. Unit vector: $\\hat{D} = \\frac{3\\hat{i} + 4\\hat{j}}{5} = 0.6\\hat{i} + 0.8\\hat{j}$.\n\n5. FINAL ANSWER:\nOption A: 0.6 \u00ee + 0.8 \u0135\n\n6. QUICK TIP:\nWatch the double minus: $3 - (-1) = 4$, forming the classic 3-4-5 triangle!",
+    "solutionStructured": {
+      "concept": "Compute difference $\\vec{D} = \\vec{A} - \\vec{B}$, then divide by $|\\vec{D}|$.",
+      "given": "$\\vec{A} = 4\\hat{i} + 3\\hat{j}$, $\\vec{B} = 1\\hat{i} - 1\\hat{j}$.",
+      "formula": "$\\vec{D} = (4 - 1)\\hat{i} + (3 - (-1))\\hat{j} = 3\\hat{i} + 4\\hat{j}$; $|\\vec{D}| = 5$",
+      "stepByStep": "1. Subtract components:\n   $D_x = 4 - 1 = 3$\n   $D_y = 3 - (-1) = 3 + 1 = 4$\n   So $\\vec{D} = 3\\hat{i} + 4\\hat{j}$.\n2. Magnitude: $|\\vec{D}| = \\sqrt{3^2 + 4^2} = 5$.\n3. Unit vector: $\\hat{D} = \\frac{3\\hat{i} + 4\\hat{j}}{5} = 0.6\\hat{i} + 0.8\\hat{j}$.",
+      "finalAnswer": "Option A: 0.6 \u00ee + 0.8 \u0135",
+      "whyOtherOptionsWrong": "Option D incorrectly computes $3 - 1 = 2$ for the y-component."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Unit vectors and vector notation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-132",
+    "questionNumber": 132,
+    "question": "A vector $\\vec{F} = a\\hat{i} + b\\hat{j} + c\\hat{k}$ is perpendicular to $\\hat{k}$ and has magnitude 5. If $a = 3$, what are the possible values of b and c?",
+    "options": {
+      "A": "b = \u00b1 4, c = 0",
+      "B": "b = 4, c = 3",
+      "C": "b = \u00b1 2, c = \u00b1 4",
+      "D": "b = 0, c = \u00b1 4"
+    },
+    "optionsList": [
+      "b = \u00b1 4, c = 0",
+      "b = 4, c = 3",
+      "b = \u00b1 2, c = \u00b1 4",
+      "b = 0, c = \u00b1 4"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nPerpendicular to $\\hat{k}$ means the dot product with $\\hat{k}$ is zero: $\\vec{F} \\cdot \\hat{k} = c = 0$. Then $a^2 + b^2 = 5^2$.\n\n2. GIVEN:\n$\\vec{F} \\perp \\hat{k} \\implies c = 0$, $a = 3$, $|\\vec{F}| = 5$.\n\n3. FORMULA / PRINCIPLE:\n$a^2 + b^2 + c^2 = 5^2 \\implies 3^2 + b^2 + 0 = 25 \\implies b = \\pm 4$\n\n4. STEP-BY-STEP SOLUTION:\n1. The vector is perpendicular to the z-axis ($\\hat{k}$):\n   $\\vec{F} \\cdot \\hat{k} = 0 \\implies c = 0$.\n2. Magnitude condition:\n   $a^2 + b^2 + c^2 = 5^2$.\n3. Substitute $a = 3$ and $c = 0$:\n   $3^2 + b^2 + 0 = 25 \\implies 9 + b^2 = 25 \\implies b^2 = 16$.\n4. Taking square root: $b = \\pm 4$.\n5. Therefore, $b = \\pm 4$ and $c = 0$.\n\n5. FINAL ANSWER:\nOption A: b = \u00b1 4, c = 0\n\n6. QUICK TIP:\nPerpendicular to $\\hat{k}$ $\\implies$ vector lies entirely in the xy-plane $\\implies z\\text{-component} = 0$.",
+    "solutionStructured": {
+      "concept": "Perpendicular to $\\hat{k}$ means the dot product with $\\hat{k}$ is zero: $\\vec{F} \\cdot \\hat{k} = c = 0$. Then $a^2 + b^2 = 5^2$.",
+      "given": "$\\vec{F} \\perp \\hat{k} \\implies c = 0$, $a = 3$, $|\\vec{F}| = 5$.",
+      "formula": "$a^2 + b^2 + c^2 = 5^2 \\implies 3^2 + b^2 + 0 = 25 \\implies b = \\pm 4$",
+      "stepByStep": "1. The vector is perpendicular to the z-axis ($\\hat{k}$):\n   $\\vec{F} \\cdot \\hat{k} = 0 \\implies c = 0$.\n2. Magnitude condition:\n   $a^2 + b^2 + c^2 = 5^2$.\n3. Substitute $a = 3$ and $c = 0$:\n   $3^2 + b^2 + 0 = 25 \\implies 9 + b^2 = 25 \\implies b^2 = 16$.\n4. Taking square root: $b = \\pm 4$.\n5. Therefore, $b = \\pm 4$ and $c = 0$.",
+      "finalAnswer": "Option A: b = \u00b1 4, c = 0",
+      "whyOtherOptionsWrong": "Option B has $c = 3 \\neq 0$, which is not perpendicular to $\\hat{k}$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Unit vectors and vector notation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-133",
+    "questionNumber": 133,
+    "question": "The position vectors of two points P and Q are $\\vec{r}_P = \\hat{i} + 2\\hat{j} + 3\\hat{k}$ and $\\vec{r}_Q = 4\\hat{i} + 6\\hat{j} + 3\\hat{k}$ respectively. What is the unit vector directed from P towards Q?",
+    "options": {
+      "A": "0.6 \u00ee + 0.8 \u0135",
+      "B": "0.8 \u00ee + 0.6 \u0135",
+      "C": "(3 \u00ee + 4 \u0135 + 6 k\u0302) / \u221a61",
+      "D": "0.6 \u00ee - 0.8 \u0135"
+    },
+    "optionsList": [
+      "0.6 \u00ee + 0.8 \u0135",
+      "0.8 \u00ee + 0.6 \u0135",
+      "(3 \u00ee + 4 \u0135 + 6 k\u0302) / \u221a61",
+      "0.6 \u00ee - 0.8 \u0135"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nThe displacement vector from P to Q is $\\vec{r}_{PQ} = \\vec{r}_Q - \\vec{r}_P$. The unit vector is $\\hat{r}_{PQ} = \\frac{\\vec{r}_{PQ}}{|\\vec{r}_{PQ}|}$.\n\n2. GIVEN:\n$\\vec{r}_P = 1\\hat{i} + 2\\hat{j} + 3\\hat{k}$, $\\vec{r}_Q = 4\\hat{i} + 6\\hat{j} + 3\\hat{k}$.\n\n3. FORMULA / PRINCIPLE:\n$\\vec{r}_{PQ} = (4 - 1)\\hat{i} + (6 - 2)\\hat{j} + (3 - 3)\\hat{k} = 3\\hat{i} + 4\\hat{j} + 0\\hat{k}$\n\n4. STEP-BY-STEP SOLUTION:\n1. Compute displacement vector $\\vec{r}_{PQ} = \\vec{r}_Q - \\vec{r}_P$:\n   $\\Delta x = 4 - 1 = 3$\n   $\\Delta y = 6 - 2 = 4$\n   $\\Delta z = 3 - 3 = 0$\n   So $\\vec{r}_{PQ} = 3\\hat{i} + 4\\hat{j}$.\n2. Magnitude: $|\\vec{r}_{PQ}| = \\sqrt{3^2 + 4^2 + 0^2} = 5$.\n3. Unit vector: $\\hat{r}_{PQ} = \\frac{3\\hat{i} + 4\\hat{j}}{5} = 0.6\\hat{i} + 0.8\\hat{j}$.\n\n5. FINAL ANSWER:\nOption A: 0.6 \u00ee + 0.8 \u0135\n\n6. QUICK TIP:\nVector from P to Q is always FINAL minus INITIAL: $\\vec{r}_Q - \\vec{r}_P$!",
+    "solutionStructured": {
+      "concept": "The displacement vector from P to Q is $\\vec{r}_{PQ} = \\vec{r}_Q - \\vec{r}_P$. The unit vector is $\\hat{r}_{PQ} = \\frac{\\vec{r}_{PQ}}{|\\vec{r}_{PQ}|}$.",
+      "given": "$\\vec{r}_P = 1\\hat{i} + 2\\hat{j} + 3\\hat{k}$, $\\vec{r}_Q = 4\\hat{i} + 6\\hat{j} + 3\\hat{k}$.",
+      "formula": "$\\vec{r}_{PQ} = (4 - 1)\\hat{i} + (6 - 2)\\hat{j} + (3 - 3)\\hat{k} = 3\\hat{i} + 4\\hat{j} + 0\\hat{k}$",
+      "stepByStep": "1. Compute displacement vector $\\vec{r}_{PQ} = \\vec{r}_Q - \\vec{r}_P$:\n   $\\Delta x = 4 - 1 = 3$\n   $\\Delta y = 6 - 2 = 4$\n   $\\Delta z = 3 - 3 = 0$\n   So $\\vec{r}_{PQ} = 3\\hat{i} + 4\\hat{j}$.\n2. Magnitude: $|\\vec{r}_{PQ}| = \\sqrt{3^2 + 4^2 + 0^2} = 5$.\n3. Unit vector: $\\hat{r}_{PQ} = \\frac{3\\hat{i} + 4\\hat{j}}{5} = 0.6\\hat{i} + 0.8\\hat{j}$.",
+      "finalAnswer": "Option A: 0.6 \u00ee + 0.8 \u0135",
+      "whyOtherOptionsWrong": "Option C adds the position vectors instead of subtracting."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Unit vectors and vector notation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-134",
+    "questionNumber": 134,
+    "question": "A vector $\\vec{A}$ has magnitude 6 and is equally inclined to the coordinate axes $\\hat{i}, \\hat{j}, \\hat{k}$. What is $\\vec{A}$?",
+    "options": {
+      "A": "\u00b1 2\u221a3 (\u00ee + \u0135 + k\u0302)",
+      "B": "\u00b1 2 (\u00ee + \u0135 + k\u0302)",
+      "C": "\u00b1 6 (\u00ee + \u0135 + k\u0302)",
+      "D": "\u00b1 \u221a2 (\u00ee + \u0135 + k\u0302)"
+    },
+    "optionsList": [
+      "\u00b1 2\u221a3 (\u00ee + \u0135 + k\u0302)",
+      "\u00b1 2 (\u00ee + \u0135 + k\u0302)",
+      "\u00b1 6 (\u00ee + \u0135 + k\u0302)",
+      "\u00b1 \u221a2 (\u00ee + \u0135 + k\u0302)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor equal inclination, direction cosines are $l = m = n = \\pm 1/\\sqrt{3}$. Unit vector is $\\hat{u} = \\pm \\frac{\\hat{i} + \\hat{j} + \\hat{k}}{\\sqrt{3}}$. Then $\\vec{A} = A\\hat{u} = \\pm 6 \\frac{\\hat{i} + \\hat{j} + \\hat{k}}{\\sqrt{3}} = \\pm 2\\sqrt{3}(\\hat{i} + \\hat{j} + \\hat{k})$.\n\n2. GIVEN:\n$A = 6$, $\\cos\\alpha = \\cos\\beta = \\cos\\gamma = \\pm 1/\\sqrt{3}$.\n\n3. FORMULA / PRINCIPLE:\n$\\vec{A} = A\\hat{u} = 6 \\left(\\pm \\frac{\\hat{i} + \\hat{j} + \\hat{k}}{\\sqrt{3}}\\right) = \\pm 2\\sqrt{3}(\\hat{i} + \\hat{j} + \\hat{k})$\n\n4. STEP-BY-STEP SOLUTION:\n1. Let the direction cosines be $l, m, n$. Since the vector is equally inclined: $l = m = n$.\n2. Condition: $l^2 + m^2 + n^2 = 1 \\implies 3l^2 = 1 \\implies l = \\pm 1/\\sqrt{3}$.\n3. The unit vector is $\\hat{u} = \\pm \\frac{1}{\\sqrt{3}}(\\hat{i} + \\hat{j} + \\hat{k})$.\n4. Multiply by magnitude $A = 6$:\n   $\\vec{A} = 6 \\left(\\pm \\frac{1}{\\sqrt{3}}\\right)(\\hat{i} + \\hat{j} + \\hat{k}) = \\pm \\frac{6\\sqrt{3}}{3}(\\hat{i} + \\hat{j} + \\hat{k}) = \\pm 2\\sqrt{3}(\\hat{i} + \\hat{j} + \\hat{k})$.\n5. Verify magnitude: $|\\vec{A}| = 2\\sqrt{3} \\times \\sqrt{1^2 + 1^2 + 1^2} = 2\\sqrt{3} \\times \\sqrt{3} = 6$.\n\n5. FINAL ANSWER:\nOption A: \u00b1 2\u221a3 (\u00ee + \u0135 + k\u0302)\n\n6. QUICK TIP:\nRationalizing: $6 / \\sqrt{3} = 2\\sqrt{3}$. Magnitude check: $2\\sqrt{3} \\times \\sqrt{3} = 6$!",
+    "solutionStructured": {
+      "concept": "For equal inclination, direction cosines are $l = m = n = \\pm 1/\\sqrt{3}$. Unit vector is $\\hat{u} = \\pm \\frac{\\hat{i} + \\hat{j} + \\hat{k}}{\\sqrt{3}}$. Then $\\vec{A} = A\\hat{u} = \\pm 6 \\frac{\\hat{i} + \\hat{j} + \\hat{k}}{\\sqrt{3}} = \\pm 2\\sqrt{3}(\\hat{i} + \\hat{j} + \\hat{k})$.",
+      "given": "$A = 6$, $\\cos\\alpha = \\cos\\beta = \\cos\\gamma = \\pm 1/\\sqrt{3}$.",
+      "formula": "$\\vec{A} = A\\hat{u} = 6 \\left(\\pm \\frac{\\hat{i} + \\hat{j} + \\hat{k}}{\\sqrt{3}}\\right) = \\pm 2\\sqrt{3}(\\hat{i} + \\hat{j} + \\hat{k})$",
+      "stepByStep": "1. Let the direction cosines be $l, m, n$. Since the vector is equally inclined: $l = m = n$.\n2. Condition: $l^2 + m^2 + n^2 = 1 \\implies 3l^2 = 1 \\implies l = \\pm 1/\\sqrt{3}$.\n3. The unit vector is $\\hat{u} = \\pm \\frac{1}{\\sqrt{3}}(\\hat{i} + \\hat{j} + \\hat{k})$.\n4. Multiply by magnitude $A = 6$:\n   $\\vec{A} = 6 \\left(\\pm \\frac{1}{\\sqrt{3}}\\right)(\\hat{i} + \\hat{j} + \\hat{k}) = \\pm \\frac{6\\sqrt{3}}{3}(\\hat{i} + \\hat{j} + \\hat{k}) = \\pm 2\\sqrt{3}(\\hat{i} + \\hat{j} + \\hat{k})$.\n5. Verify magnitude: $|\\vec{A}| = 2\\sqrt{3} \\times \\sqrt{1^2 + 1^2 + 1^2} = 2\\sqrt{3} \\times \\sqrt{3} = 6$.",
+      "finalAnswer": "Option A: \u00b1 2\u221a3 (\u00ee + \u0135 + k\u0302)",
+      "whyOtherOptionsWrong": "Option B has magnitude $2\\sqrt{3} \\approx 3.46 \\neq 6$."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Unit vectors and vector notation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-135",
+    "questionNumber": 135,
+    "question": "Find a unit vector perpendicular to BOTH $\\vec{A} = 2\\hat{i} + \\hat{j} - \\hat{k}$ and $\\vec{B} = \\hat{i} - \\hat{j} + 2\\hat{k}$.",
+    "options": {
+      "A": "(\u00ee - 5 \u0135 - 3 k\u0302) / \u221a35",
+      "B": "(\u00ee + 5 \u0135 + 3 k\u0302) / \u221a35",
+      "C": "(3 \u00ee + \u0135 - k\u0302) / \u221a11",
+      "D": "(\u00ee - \u0135 + k\u0302) / \u221a3"
+    },
+    "optionsList": [
+      "(\u00ee - 5 \u0135 - 3 k\u0302) / \u221a35",
+      "(\u00ee + 5 \u0135 + 3 k\u0302) / \u221a35",
+      "(3 \u00ee + \u0135 - k\u0302) / \u221a11",
+      "(\u00ee - \u0135 + k\u0302) / \u221a3"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nA vector perpendicular to two vectors is along their cross product $\\vec{A} \\times \\vec{B}$. A unit vector is obtained by dividing by $|\\vec{A} \\times \\vec{B}|$.\n\n2. GIVEN:\n$\\vec{A} = 2\\hat{i} + 1\\hat{j} - 1\\hat{k}$, $\\vec{B} = 1\\hat{i} - 1\\hat{j} + 2\\hat{k}$.\n\n3. FORMULA / PRINCIPLE:\n$\\vec{C} = \\vec{A} \\times \\vec{B}$; $\\hat{n} = \\pm \\frac{\\vec{A} \\times \\vec{B}}{|\\vec{A} \\times \\vec{B}|}$\n\n4. STEP-BY-STEP SOLUTION:\n1. Compute the cross product using a $3 \\times 3$ determinant:\n   $\\vec{A} \\times \\vec{B} = \\begin{vmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\ 2 & 1 & -1 \\\\ 1 & -1 & 2 \\end{vmatrix}$.\n2. x-component: $\\hat{i}[(1)(2) - (-1)(-1)] = \\hat{i}[2 - 1] = +1\\hat{i}$.\n3. y-component: $-\\hat{j}[(2)(2) - (-1)(1)] = -\\hat{j}[4 - (-1)] = -5\\hat{j}$.\n4. z-component: $\\hat{k}[(2)(-1) - (1)(1)] = \\hat{k}[-2 - 1] = -3\\hat{k}$.\n5. So $\\vec{A} \\times \\vec{B} = \\hat{i} - 5\\hat{j} - 3\\hat{k}$.\n6. Compute magnitude: $|\\vec{A} \\times \\vec{B}| = \\sqrt{1^2 + (-5)^2 + (-3)^2} = \\sqrt{1 + 25 + 9} = \\sqrt{35}$.\n7. Unit vector: $\\hat{n} = \\frac{\\hat{i} - 5\\hat{j} - 3\\hat{k}}{\\sqrt{35}}$.\n8. Check dot product with $\\vec{A}$: $(1)(2) + (-5)(1) + (-3)(-1) = 2 - 5 + 3 = 0$. Orthogonal!\n\n5. FINAL ANSWER:\nOption A: (\u00ee - 5 \u0135 - 3 k\u0302) / \u221a35\n\n6. QUICK TIP:\nAlways verify with dot product: $\\vec{C} \\cdot \\vec{A} = 0$ and $\\vec{C} \\cdot \\vec{B} = 0$ takes 5 seconds and guarantees 100% accuracy!",
+    "solutionStructured": {
+      "concept": "A vector perpendicular to two vectors is along their cross product $\\vec{A} \\times \\vec{B}$. A unit vector is obtained by dividing by $|\\vec{A} \\times \\vec{B}|$.",
+      "given": "$\\vec{A} = 2\\hat{i} + 1\\hat{j} - 1\\hat{k}$, $\\vec{B} = 1\\hat{i} - 1\\hat{j} + 2\\hat{k}$.",
+      "formula": "$\\vec{C} = \\vec{A} \\times \\vec{B}$; $\\hat{n} = \\pm \\frac{\\vec{A} \\times \\vec{B}}{|\\vec{A} \\times \\vec{B}|}$",
+      "stepByStep": "1. Compute the cross product using a $3 \\times 3$ determinant:\n   $\\vec{A} \\times \\vec{B} = \\begin{vmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\ 2 & 1 & -1 \\\\ 1 & -1 & 2 \\end{vmatrix}$.\n2. x-component: $\\hat{i}[(1)(2) - (-1)(-1)] = \\hat{i}[2 - 1] = +1\\hat{i}$.\n3. y-component: $-\\hat{j}[(2)(2) - (-1)(1)] = -\\hat{j}[4 - (-1)] = -5\\hat{j}$.\n4. z-component: $\\hat{k}[(2)(-1) - (1)(1)] = \\hat{k}[-2 - 1] = -3\\hat{k}$.\n5. So $\\vec{A} \\times \\vec{B} = \\hat{i} - 5\\hat{j} - 3\\hat{k}$.\n6. Compute magnitude: $|\\vec{A} \\times \\vec{B}| = \\sqrt{1^2 + (-5)^2 + (-3)^2} = \\sqrt{1 + 25 + 9} = \\sqrt{35}$.\n7. Unit vector: $\\hat{n} = \\frac{\\hat{i} - 5\\hat{j} - 3\\hat{k}}{\\sqrt{35}}$.\n8. Check dot product with $\\vec{A}$: $(1)(2) + (-5)(1) + (-3)(-1) = 2 - 5 + 3 = 0$. Orthogonal!",
+      "finalAnswer": "Option A: (\u00ee - 5 \u0135 - 3 k\u0302) / \u221a35",
+      "whyOtherOptionsWrong": "Option B has the wrong sign on the y-component."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Unit vectors and vector notation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-136",
+    "questionNumber": 136,
+    "question": "If $\\hat{n}_1$ and $\\hat{n}_2$ are two unit vectors such that the angle between them is $\\theta$, what is the value of $|\\hat{n}_1 - \\hat{n}_2|$?",
+    "options": {
+      "A": "2 sin(\u03b8 / 2)",
+      "B": "2 cos(\u03b8 / 2)",
+      "C": "sin(\u03b8 / 2)",
+      "D": "cos(\u03b8 / 2)"
+    },
+    "optionsList": [
+      "2 sin(\u03b8 / 2)",
+      "2 cos(\u03b8 / 2)",
+      "sin(\u03b8 / 2)",
+      "cos(\u03b8 / 2)"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nFor any two unit vectors, $|\\hat{n}_1 - \\hat{n}_2|^2 = 1^2 + 1^2 - 2(1)(1)\\cos\\theta = 2(1 - \\cos\\theta) = 4\\sin^2(\\theta/2)$.\n\n2. GIVEN:\n$|\\hat{n}_1| = 1$, $|\\hat{n}_2| = 1$, angle $\\theta$.\n\n3. FORMULA / PRINCIPLE:\n$|\\hat{n}_1 - \\hat{n}_2| = \\sqrt{2(1 - \\cos\\theta)} = 2\\sin(\\theta/2)$\n\n4. STEP-BY-STEP SOLUTION:\n1. Expand the square of the difference:\n   $|\\hat{n}_1 - \\hat{n}_2|^2 = |\\hat{n}_1|^2 + |\\hat{n}_2|^2 - 2\\hat{n}_1\\cdot\\hat{n}_2$.\n2. Substitute unit magnitudes:\n   $= 1 + 1 - 2\\cos\\theta = 2(1 - \\cos\\theta)$.\n3. Use trigonometric identity $1 - \\cos\\theta = 2\\sin^2(\\theta/2)$:\n   $= 2 \\times 2\\sin^2(\\theta/2) = 4\\sin^2(\\theta/2)$.\n4. Take square root:\n   $|\\hat{n}_1 - \\hat{n}_2| = 2\\sin(\\theta/2)$.\n\n5. FINAL ANSWER:\nOption A: 2 sin(\u03b8 / 2)\n\n6. QUICK TIP:\nGolden NEET formula: $|\\hat{a} - \\hat{b}| = 2\\sin(\\theta/2)$ and $|\\hat{a} + \\hat{b}| = 2\\cos(\\theta/2)$!",
+    "solutionStructured": {
+      "concept": "For any two unit vectors, $|\\hat{n}_1 - \\hat{n}_2|^2 = 1^2 + 1^2 - 2(1)(1)\\cos\\theta = 2(1 - \\cos\\theta) = 4\\sin^2(\\theta/2)$.",
+      "given": "$|\\hat{n}_1| = 1$, $|\\hat{n}_2| = 1$, angle $\\theta$.",
+      "formula": "$|\\hat{n}_1 - \\hat{n}_2| = \\sqrt{2(1 - \\cos\\theta)} = 2\\sin(\\theta/2)$",
+      "stepByStep": "1. Expand the square of the difference:\n   $|\\hat{n}_1 - \\hat{n}_2|^2 = |\\hat{n}_1|^2 + |\\hat{n}_2|^2 - 2\\hat{n}_1\\cdot\\hat{n}_2$.\n2. Substitute unit magnitudes:\n   $= 1 + 1 - 2\\cos\\theta = 2(1 - \\cos\\theta)$.\n3. Use trigonometric identity $1 - \\cos\\theta = 2\\sin^2(\\theta/2)$:\n   $= 2 \\times 2\\sin^2(\\theta/2) = 4\\sin^2(\\theta/2)$.\n4. Take square root:\n   $|\\hat{n}_1 - \\hat{n}_2| = 2\\sin(\\theta/2)$.",
+      "finalAnswer": "Option A: 2 sin(\u03b8 / 2)",
+      "whyOtherOptionsWrong": "Option B is for the sum $|\\hat{n}_1 + \\hat{n}_2|$."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Unit vectors and vector notation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-137",
+    "questionNumber": 137,
+    "question": "Using the result of the previous question, if $|\\hat{n}_1 - \\hat{n}_2| = \\sqrt{2}$, what is the angle $\\theta$ between the unit vectors?",
+    "options": {
+      "A": "90\u00b0",
+      "B": "60\u00b0",
+      "C": "45\u00b0",
+      "D": "120\u00b0"
+    },
+    "optionsList": [
+      "90\u00b0",
+      "60\u00b0",
+      "45\u00b0",
+      "120\u00b0"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nEquate $2\\sin(\\theta/2) = \\sqrt{2} \\implies \\sin(\\theta/2) = \\sqrt{2}/2 = 1/\\sqrt{2} \\implies \\theta/2 = 45^\\circ \\implies \\theta = 90^\\circ$.\n\n2. GIVEN:\n$|\\hat{n}_1 - \\hat{n}_2| = \\sqrt{2}$.\n\n3. FORMULA / PRINCIPLE:\n$2\\sin(\\theta/2) = \\sqrt{2} \\implies \\sin(\\theta/2) = \\frac{1}{\\sqrt{2}}$\n\n4. STEP-BY-STEP SOLUTION:\n1. From the established formula: $|\\hat{n}_1 - \\hat{n}_2| = 2\\sin(\\theta/2)$.\n2. Set equal to $\\sqrt{2}$:\n   $2\\sin(\\theta/2) = \\sqrt{2}$.\n3. Divide by 2:\n   $\\sin(\\theta/2) = \\frac{\\sqrt{2}}{2} = \\frac{1}{\\sqrt{2}}$.\n4. Therefore, $\\theta/2 = 45^\\circ$.\n5. Multiply by 2: $\\theta = 90^\\circ$.\n\n5. FINAL ANSWER:\nOption A: 90\u00b0\n\n6. QUICK TIP:\nDirect check: If $\\theta = 90^\\circ$, $|\\hat{i} - \\hat{j}| = \\sqrt{1^2 + (-1)^2} = \\sqrt{2}$! Instant confirmation.",
+    "solutionStructured": {
+      "concept": "Equate $2\\sin(\\theta/2) = \\sqrt{2} \\implies \\sin(\\theta/2) = \\sqrt{2}/2 = 1/\\sqrt{2} \\implies \\theta/2 = 45^\\circ \\implies \\theta = 90^\\circ$.",
+      "given": "$|\\hat{n}_1 - \\hat{n}_2| = \\sqrt{2}$.",
+      "formula": "$2\\sin(\\theta/2) = \\sqrt{2} \\implies \\sin(\\theta/2) = \\frac{1}{\\sqrt{2}}$",
+      "stepByStep": "1. From the established formula: $|\\hat{n}_1 - \\hat{n}_2| = 2\\sin(\\theta/2)$.\n2. Set equal to $\\sqrt{2}$:\n   $2\\sin(\\theta/2) = \\sqrt{2}$.\n3. Divide by 2:\n   $\\sin(\\theta/2) = \\frac{\\sqrt{2}}{2} = \\frac{1}{\\sqrt{2}}$.\n4. Therefore, $\\theta/2 = 45^\\circ$.\n5. Multiply by 2: $\\theta = 90^\\circ$.",
+      "finalAnswer": "Option A: 90\u00b0",
+      "whyOtherOptionsWrong": "60\u00b0 gives $|\\hat{n}_1 - \\hat{n}_2| = 2\\sin 30^\\circ = 1$."
+    },
+    "difficulty": "Hard",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Unit vectors and vector notation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-138",
+    "questionNumber": 138,
+    "question": "A force of magnitude 26 N acts along the line connecting point A(1, 2, 3) to point B(5, -1, 15). What is the vector representation of this force?",
+    "options": {
+      "A": "8 \u00ee - 6 \u0135 + 24 k\u0302",
+      "B": "4 \u00ee - 3 \u0135 + 12 k\u0302",
+      "C": "10 \u00ee - 8 \u0135 + 26 k\u0302",
+      "D": "16 \u00ee - 12 \u0135 + 48 k\u0302"
+    },
+    "optionsList": [
+      "8 \u00ee - 6 \u0135 + 24 k\u0302",
+      "4 \u00ee - 3 \u0135 + 12 k\u0302",
+      "10 \u00ee - 8 \u0135 + 26 k\u0302",
+      "16 \u00ee - 12 \u0135 + 48 k\u0302"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDisplacement vector $\\vec{AB} = (5-1)\\hat{i} + (-1-2)\\hat{j} + (15-3)\\hat{k} = 4\\hat{i} - 3\\hat{j} + 12\\hat{k}$. Find unit vector and scale by 26 N.\n\n2. GIVEN:\n$A = (1, 2, 3)$, $B = (5, -1, 15)$, $F = 26\\text{ N}$.\n\n3. FORMULA / PRINCIPLE:\n$\\vec{F} = F \\frac{\\vec{AB}}{|\\vec{AB}|}$\n\n4. STEP-BY-STEP SOLUTION:\n1. Compute displacement vector $\\vec{AB} = \\vec{r}_B - \\vec{r}_A$:\n   $\\Delta x = 5 - 1 = 4$\n   $\\Delta y = -1 - 2 = -3$\n   $\\Delta z = 15 - 3 = 12$\n   So $\\vec{AB} = 4\\hat{i} - 3\\hat{j} + 12\\hat{k}$.\n2. Compute magnitude of $\\vec{AB}$:\n   $|\\vec{AB}| = \\sqrt{4^2 + (-3)^2 + 12^2} = \\sqrt{16 + 9 + 144} = \\sqrt{169} = 13$.\n3. Find the force vector:\n   $\\vec{F} = 26 \\left(\\frac{4\\hat{i} - 3\\hat{j} + 12\\hat{k}}{13}\\right) = 2(4\\hat{i} - 3\\hat{j} + 12\\hat{k}) = 8\\hat{i} - 6\\hat{j} + 24\\hat{k}$.\n4. Check magnitude: $\\sqrt{8^2 + (-6)^2 + 24^2} = \\sqrt{64 + 36 + 576} = \\sqrt{676} = 26\\text{ N}$.\n\n5. FINAL ANSWER:\nOption A: 8 \u00ee - 6 \u0135 + 24 k\u0302\n\n6. QUICK TIP:\nThe factor is $26 / 13 = 2$. Just multiply the vector $(4, -3, 12)$ by 2!",
+    "solutionStructured": {
+      "concept": "Displacement vector $\\vec{AB} = (5-1)\\hat{i} + (-1-2)\\hat{j} + (15-3)\\hat{k} = 4\\hat{i} - 3\\hat{j} + 12\\hat{k}$. Find unit vector and scale by 26 N.",
+      "given": "$A = (1, 2, 3)$, $B = (5, -1, 15)$, $F = 26\\text{ N}$.",
+      "formula": "$\\vec{F} = F \\frac{\\vec{AB}}{|\\vec{AB}|}$",
+      "stepByStep": "1. Compute displacement vector $\\vec{AB} = \\vec{r}_B - \\vec{r}_A$:\n   $\\Delta x = 5 - 1 = 4$\n   $\\Delta y = -1 - 2 = -3$\n   $\\Delta z = 15 - 3 = 12$\n   So $\\vec{AB} = 4\\hat{i} - 3\\hat{j} + 12\\hat{k}$.\n2. Compute magnitude of $\\vec{AB}$:\n   $|\\vec{AB}| = \\sqrt{4^2 + (-3)^2 + 12^2} = \\sqrt{16 + 9 + 144} = \\sqrt{169} = 13$.\n3. Find the force vector:\n   $\\vec{F} = 26 \\left(\\frac{4\\hat{i} - 3\\hat{j} + 12\\hat{k}}{13}\\right) = 2(4\\hat{i} - 3\\hat{j} + 12\\hat{k}) = 8\\hat{i} - 6\\hat{j} + 24\\hat{k}$.\n4. Check magnitude: $\\sqrt{8^2 + (-6)^2 + 24^2} = \\sqrt{64 + 36 + 576} = \\sqrt{676} = 26\\text{ N}$.",
+      "finalAnswer": "Option A: 8 \u00ee - 6 \u0135 + 24 k\u0302",
+      "whyOtherOptionsWrong": "Option B has magnitude 13 N, not 26 N."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Unit vectors and vector notation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-139",
+    "questionNumber": 139,
+    "question": "What is the unit vector coplanar with $\\hat{i}$ and $\\hat{j}$ that makes an angle of 30\u00b0 with the x-axis?",
+    "options": {
+      "A": "(\u221a3/2) \u00ee + (1/2) \u0135",
+      "B": "(1/2) \u00ee + (\u221a3/2) \u0135",
+      "C": "(1/\u221a2) \u00ee + (1/\u221a2) \u0135",
+      "D": "(\u221a3/2) \u00ee - (1/2) \u0135"
+    },
+    "optionsList": [
+      "(\u221a3/2) \u00ee + (1/2) \u0135",
+      "(1/2) \u00ee + (\u221a3/2) \u0135",
+      "(1/\u221a2) \u00ee + (1/\u221a2) \u0135",
+      "(\u221a3/2) \u00ee - (1/2) \u0135"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nAny unit vector in the xy-plane making angle $\\theta$ with the positive x-axis can be written as $\\hat{u} = \\cos\\theta\\hat{i} + \\sin\\theta\\hat{j}$.\n\n2. GIVEN:\nAngle $\\theta = 30^\\circ$ with x-axis in xy-plane.\n\n3. FORMULA / PRINCIPLE:\n$\\hat{u} = \\cos(30^\\circ)\\hat{i} + \\sin(30^\\circ)\\hat{j} = \\frac{\\sqrt{3}}{2}\\hat{i} + \\frac{1}{2}\\hat{j}$\n\n4. STEP-BY-STEP SOLUTION:\n1. In the xy-plane, the parametric form of a unit vector is:\n   $\\hat{u} = \\cos\\theta\\hat{i} + \\sin\\theta\\hat{j}$.\n2. Substitute $\\theta = 30^\\circ$:\n   $\\cos 30^\\circ = \\frac{\\sqrt{3}}{2}$\n   $\\sin 30^\\circ = \\frac{1}{2}$\n3. Therefore, $\\hat{u} = \\frac{\\sqrt{3}}{2}\\hat{i} + \\frac{1}{2}\\hat{j}$.\n4. Magnitude check: $(\\sqrt{3}/2)^2 + (1/2)^2 = 3/4 + 1/4 = 1$.\n\n5. FINAL ANSWER:\nOption A: (\u221a3/2) \u00ee + (1/2) \u0135\n\n6. QUICK TIP:\nStandard unit circle representation: $(\\cos\\theta)\\hat{i} + (\\sin\\theta)\\hat{j}$.",
+    "solutionStructured": {
+      "concept": "Any unit vector in the xy-plane making angle $\\theta$ with the positive x-axis can be written as $\\hat{u} = \\cos\\theta\\hat{i} + \\sin\\theta\\hat{j}$.",
+      "given": "Angle $\\theta = 30^\\circ$ with x-axis in xy-plane.",
+      "formula": "$\\hat{u} = \\cos(30^\\circ)\\hat{i} + \\sin(30^\\circ)\\hat{j} = \\frac{\\sqrt{3}}{2}\\hat{i} + \\frac{1}{2}\\hat{j}$",
+      "stepByStep": "1. In the xy-plane, the parametric form of a unit vector is:\n   $\\hat{u} = \\cos\\theta\\hat{i} + \\sin\\theta\\hat{j}$.\n2. Substitute $\\theta = 30^\\circ$:\n   $\\cos 30^\\circ = \\frac{\\sqrt{3}}{2}$\n   $\\sin 30^\\circ = \\frac{1}{2}$\n3. Therefore, $\\hat{u} = \\frac{\\sqrt{3}}{2}\\hat{i} + \\frac{1}{2}\\hat{j}$.\n4. Magnitude check: $(\\sqrt{3}/2)^2 + (1/2)^2 = 3/4 + 1/4 = 1$.",
+      "finalAnswer": "Option A: (\u221a3/2) \u00ee + (1/2) \u0135",
+      "whyOtherOptionsWrong": "Option B corresponds to $\\theta = 60^\\circ$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Unit vectors and vector notation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-140",
+    "questionNumber": 140,
+    "question": "If $\\vec{A} = 3\\hat{i} + 4\\hat{j}$ and $\\vec{B} = 7\\hat{i} + 24\\hat{j}$, what is the vector having the same magnitude as $\\vec{B}$ and parallel to $\\vec{A}$?",
+    "options": {
+      "A": "15 \u00ee + 20 \u0135",
+      "B": "25 \u00ee + 25 \u0135",
+      "C": "7 \u00ee + 24 \u0135",
+      "D": "9 \u00ee + 12 \u0135"
+    },
+    "optionsList": [
+      "15 \u00ee + 20 \u0135",
+      "25 \u00ee + 25 \u0135",
+      "7 \u00ee + 24 \u0135",
+      "9 \u00ee + 12 \u0135"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nDesired vector has magnitude equal to $|\\vec{B}| = \\sqrt{7^2 + 24^2} = 25$, and direction equal to $\\hat{A} = \\frac{3\\hat{i} + 4\\hat{j}}{5}$.\n\n2. GIVEN:\n$\\vec{A} = 3\\hat{i} + 4\\hat{j}$, $\\vec{B} = 7\\hat{i} + 24\\hat{j}$.\n\n3. FORMULA / PRINCIPLE:\n$\\vec{C} = |\\vec{B}| \\hat{A} = 25 \\left(\\frac{3\\hat{i} + 4\\hat{j}}{5}\\right) = 5(3\\hat{i} + 4\\hat{j}) = 15\\hat{i} + 20\\hat{j}$\n\n4. STEP-BY-STEP SOLUTION:\n1. Calculate magnitude of $\\vec{B}$:\n   $|\\vec{B}| = \\sqrt{7^2 + 24^2} = \\sqrt{49 + 576} = \\sqrt{625} = 25$.\n2. Calculate unit vector along $\\vec{A}$:\n   $|\\vec{A}| = \\sqrt{3^2 + 4^2} = 5$.\n   $\\hat{A} = \\frac{3\\hat{i} + 4\\hat{j}}{5} = 0.6\\hat{i} + 0.8\\hat{j}$.\n3. Construct the required vector:\n   $\\vec{C} = |\\vec{B}| \\hat{A} = 25 \\times (0.6\\hat{i} + 0.8\\hat{j}) = 15\\hat{i} + 20\\hat{j}$.\n4. Check magnitude: $\\sqrt{15^2 + 20^2} = \\sqrt{225 + 400} = \\sqrt{625} = 25 = |\\vec{B}|$.\n\n5. FINAL ANSWER:\nOption A: 15 \u00ee + 20 \u0135\n\n6. QUICK TIP:\nTwo Pythagorean triples in one problem: (7, 24, 25) gives magnitude 25, and (3, 4, 5) gives direction!",
+    "solutionStructured": {
+      "concept": "Desired vector has magnitude equal to $|\\vec{B}| = \\sqrt{7^2 + 24^2} = 25$, and direction equal to $\\hat{A} = \\frac{3\\hat{i} + 4\\hat{j}}{5}$.",
+      "given": "$\\vec{A} = 3\\hat{i} + 4\\hat{j}$, $\\vec{B} = 7\\hat{i} + 24\\hat{j}$.",
+      "formula": "$\\vec{C} = |\\vec{B}| \\hat{A} = 25 \\left(\\frac{3\\hat{i} + 4\\hat{j}}{5}\\right) = 5(3\\hat{i} + 4\\hat{j}) = 15\\hat{i} + 20\\hat{j}$",
+      "stepByStep": "1. Calculate magnitude of $\\vec{B}$:\n   $|\\vec{B}| = \\sqrt{7^2 + 24^2} = \\sqrt{49 + 576} = \\sqrt{625} = 25$.\n2. Calculate unit vector along $\\vec{A}$:\n   $|\\vec{A}| = \\sqrt{3^2 + 4^2} = 5$.\n   $\\hat{A} = \\frac{3\\hat{i} + 4\\hat{j}}{5} = 0.6\\hat{i} + 0.8\\hat{j}$.\n3. Construct the required vector:\n   $\\vec{C} = |\\vec{B}| \\hat{A} = 25 \\times (0.6\\hat{i} + 0.8\\hat{j}) = 15\\hat{i} + 20\\hat{j}$.\n4. Check magnitude: $\\sqrt{15^2 + 20^2} = \\sqrt{225 + 400} = \\sqrt{625} = 25 = |\\vec{B}|$.",
+      "finalAnswer": "Option A: 15 \u00ee + 20 \u0135",
+      "whyOtherOptionsWrong": "Option D has magnitude 15, not 25."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Unit vectors and vector notation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-141",
+    "questionNumber": 141,
+    "question": "Which of the following vectors is NOT a unit vector?",
+    "options": {
+      "A": "(\u00ee + \u0135 + k\u0302)",
+      "B": "(\u00ee + \u0135 + k\u0302) / \u221a3",
+      "C": "(\u00ee + \u0135) / \u221a2",
+      "D": "0.6 \u00ee + 0.8 \u0135"
+    },
+    "optionsList": [
+      "(\u00ee + \u0135 + k\u0302)",
+      "(\u00ee + \u0135 + k\u0302) / \u221a3",
+      "(\u00ee + \u0135) / \u221a2",
+      "0.6 \u00ee + 0.8 \u0135"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nA unit vector must have magnitude strictly equal to 1. The magnitude of $\\hat{i} + \\hat{j} + \\hat{k}$ is $\\sqrt{1^2 + 1^2 + 1^2} = \\sqrt{3} \\neq 1$.\n\n2. GIVEN:\nFour candidate vectors.\n\n3. FORMULA / PRINCIPLE:\n$|\\vec{v}| = \\sqrt{v_x^2 + v_y^2 + v_z^2} = 1$\n\n4. STEP-BY-STEP SOLUTION:\n1. For option A: $|\\hat{i} + \\hat{j} + \\hat{k}| = \\sqrt{1 + 1 + 1} = \\sqrt{3} \\approx 1.732 \\neq 1$. Hence, it is NOT a unit vector.\n2. For option B: $|(\\hat{i} + \\hat{j} + \\hat{k})/\\sqrt{3}| = \\sqrt{3}/\\sqrt{3} = 1$ (unit vector).\n3. For option C: $|(\\hat{i} + \\hat{j})/\\sqrt{2}| = \\sqrt{2}/\\sqrt{2} = 1$ (unit vector).\n4. For option D: $\\sqrt{0.6^2 + 0.8^2} = \\sqrt{0.36 + 0.64} = 1$ (unit vector).\n5. Therefore, option A is the only non-unit vector.\n\n5. FINAL ANSWER:\nOption A: (\u00ee + \u0135 + k\u0302)\n\n6. QUICK TIP:\nBeginner trap: $\\hat{i} + \\hat{j} + \\hat{k}$ is NOT a unit vector! You must divide by $\\sqrt{3}$.",
+    "solutionStructured": {
+      "concept": "A unit vector must have magnitude strictly equal to 1. The magnitude of $\\hat{i} + \\hat{j} + \\hat{k}$ is $\\sqrt{1^2 + 1^2 + 1^2} = \\sqrt{3} \\neq 1$.",
+      "given": "Four candidate vectors.",
+      "formula": "$|\\vec{v}| = \\sqrt{v_x^2 + v_y^2 + v_z^2} = 1$",
+      "stepByStep": "1. For option A: $|\\hat{i} + \\hat{j} + \\hat{k}| = \\sqrt{1 + 1 + 1} = \\sqrt{3} \\approx 1.732 \\neq 1$. Hence, it is NOT a unit vector.\n2. For option B: $|(\\hat{i} + \\hat{j} + \\hat{k})/\\sqrt{3}| = \\sqrt{3}/\\sqrt{3} = 1$ (unit vector).\n3. For option C: $|(\\hat{i} + \\hat{j})/\\sqrt{2}| = \\sqrt{2}/\\sqrt{2} = 1$ (unit vector).\n4. For option D: $\\sqrt{0.6^2 + 0.8^2} = \\sqrt{0.36 + 0.64} = 1$ (unit vector).\n5. Therefore, option A is the only non-unit vector.",
+      "finalAnswer": "Option A: (\u00ee + \u0135 + k\u0302)",
+      "whyOtherOptionsWrong": "Options B, C, and D all have magnitude exactly 1."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Unit vectors and vector notation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-142",
+    "questionNumber": 142,
+    "question": "If $\\vec{A} = 2\\hat{i} + 3\\hat{j}$ and $\\vec{B} = p\\hat{i} + 6\\hat{j}$ are parallel vectors, what is the value of p?",
+    "options": {
+      "A": "4",
+      "B": "6",
+      "C": "9",
+      "D": "1"
+    },
+    "optionsList": [
+      "4",
+      "6",
+      "9",
+      "1"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\nTwo vectors are parallel if and only if their corresponding components are proportional: $\\frac{A_x}{B_x} = \\frac{A_y}{B_y}$.\n\n2. GIVEN:\n$\\vec{A} = 2\\hat{i} + 3\\hat{j}$, $\\vec{B} = p\\hat{i} + 6\\hat{j}$, $\\vec{A} \\parallel \\vec{B}$.\n\n3. FORMULA / PRINCIPLE:\n$\\frac{2}{p} = \\frac{3}{6} \\implies p = \\frac{2 \\times 6}{3} = 4$\n\n4. STEP-BY-STEP SOLUTION:\n1. Condition for parallel vectors: $\\vec{B} = k\\vec{A}$.\n2. Equating components:\n   $B_y = k A_y \\implies 6 = k(3) \\implies k = 2$.\n3. Now find the x-component:\n   $B_x = k A_x \\implies p = 2(2) = 4$.\n4. Check: $\\vec{B} = 4\\hat{i} + 6\\hat{j} = 2(2\\hat{i} + 3\\hat{j}) = 2\\vec{A}$. Parallel!\n\n5. FINAL ANSWER:\nOption A: 4\n\n6. QUICK TIP:\nParallel vectors test: $\\frac{A_x}{B_x} = \\frac{A_y}{B_y} = \\frac{A_z}{B_z}$.",
+    "solutionStructured": {
+      "concept": "Two vectors are parallel if and only if their corresponding components are proportional: $\\frac{A_x}{B_x} = \\frac{A_y}{B_y}$.",
+      "given": "$\\vec{A} = 2\\hat{i} + 3\\hat{j}$, $\\vec{B} = p\\hat{i} + 6\\hat{j}$, $\\vec{A} \\parallel \\vec{B}$.",
+      "formula": "$\\frac{2}{p} = \\frac{3}{6} \\implies p = \\frac{2 \\times 6}{3} = 4$",
+      "stepByStep": "1. Condition for parallel vectors: $\\vec{B} = k\\vec{A}$.\n2. Equating components:\n   $B_y = k A_y \\implies 6 = k(3) \\implies k = 2$.\n3. Now find the x-component:\n   $B_x = k A_x \\implies p = 2(2) = 4$.\n4. Check: $\\vec{B} = 4\\hat{i} + 6\\hat{j} = 2(2\\hat{i} + 3\\hat{j}) = 2\\vec{A}$. Parallel!",
+      "finalAnswer": "Option A: 4",
+      "whyOtherOptionsWrong": "9 would give $p / 2 = 4.5 \\neq 2$."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Unit vectors and vector notation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  },
+  {
+    "id": "mip-mcq-143",
+    "questionNumber": 143,
+    "question": "A vector $\\vec{A}$ has magnitude 10 and points along $\\hat{i}$. A vector $\\vec{B}$ has magnitude 10 and points along $\\hat{j}$. What is the unit vector along $\\vec{A} + \\vec{B}$?",
+    "options": {
+      "A": "(\u00ee + \u0135) / \u221a2",
+      "B": "(\u00ee - \u0135) / \u221a2",
+      "C": "\u00ee + \u0135",
+      "D": "(\u00ee + \u0135) / 2"
+    },
+    "optionsList": [
+      "(\u00ee + \u0135) / \u221a2",
+      "(\u00ee - \u0135) / \u221a2",
+      "\u00ee + \u0135",
+      "(\u00ee + \u0135) / 2"
+    ],
+    "correctAnswer": "A",
+    "correctIndex": 0,
+    "explanation": "1. CONCEPT:\n$\\vec{A} + \\vec{B} = 10\\hat{i} + 10\\hat{j} = 10(\\hat{i} + \\hat{j})$. The unit vector is $\\frac{10(\\hat{i} + \\hat{j})}{10\\sqrt{2}} = \\frac{\\hat{i} + \\hat{j}}{\\sqrt{2}}$.\n\n2. GIVEN:\n$\\vec{A} = 10\\hat{i}$, $\\vec{B} = 10\\hat{j}$.\n\n3. FORMULA / PRINCIPLE:\n$\\hat{R} = \\frac{\\vec{A} + \\vec{B}}{|\\vec{A} + \\vec{B}|} = \\frac{10\\hat{i} + 10\\hat{j}}{10\\sqrt{2}} = \\frac{\\hat{i} + \\hat{j}}{\\sqrt{2}}$\n\n4. STEP-BY-STEP SOLUTION:\n1. Sum vector: $\\vec{R} = 10\\hat{i} + 10\\hat{j}$.\n2. Magnitude: $|\\vec{R}| = \\sqrt{10^2 + 10^2} = \\sqrt{200} = 10\\sqrt{2}$.\n3. Unit vector: $\\hat{R} = \\frac{10\\hat{i} + 10\\hat{j}}{10\\sqrt{2}} = \\frac{\\hat{i} + \\hat{j}}{\\sqrt{2}}$.\n4. This points at $45^\\circ$ to both axes.\n\n5. FINAL ANSWER:\nOption A: (\u00ee + \u0135) / \u221a2\n\n6. QUICK TIP:\nBisector of $+x$ and $+y$ is always $\\frac{\\hat{i} + \\hat{j}}{\\sqrt{2}}$.",
+    "solutionStructured": {
+      "concept": "$\\vec{A} + \\vec{B} = 10\\hat{i} + 10\\hat{j} = 10(\\hat{i} + \\hat{j})$. The unit vector is $\\frac{10(\\hat{i} + \\hat{j})}{10\\sqrt{2}} = \\frac{\\hat{i} + \\hat{j}}{\\sqrt{2}}$.",
+      "given": "$\\vec{A} = 10\\hat{i}$, $\\vec{B} = 10\\hat{j}$.",
+      "formula": "$\\hat{R} = \\frac{\\vec{A} + \\vec{B}}{|\\vec{A} + \\vec{B}|} = \\frac{10\\hat{i} + 10\\hat{j}}{10\\sqrt{2}} = \\frac{\\hat{i} + \\hat{j}}{\\sqrt{2}}$",
+      "stepByStep": "1. Sum vector: $\\vec{R} = 10\\hat{i} + 10\\hat{j}$.\n2. Magnitude: $|\\vec{R}| = \\sqrt{10^2 + 10^2} = \\sqrt{200} = 10\\sqrt{2}$.\n3. Unit vector: $\\hat{R} = \\frac{10\\hat{i} + 10\\hat{j}}{10\\sqrt{2}} = \\frac{\\hat{i} + \\hat{j}}{\\sqrt{2}}$.\n4. This points at $45^\\circ$ to both axes.",
+      "finalAnswer": "Option A: (\u00ee + \u0135) / \u221a2",
+      "whyOtherOptionsWrong": "Option C is not a unit vector (magnitude is $\\sqrt{2}$)."
+    },
+    "difficulty": "Medium",
+    "subject": "Physics",
+    "class": "11",
+    "chapter": "Motion in a Plane",
+    "chapterId": "motion-plane",
+    "topic": "Unit vectors and vector notation",
+    "source": "VG Insights Practice",
+    "isPYQ": false,
+    "pyqYear": null
+  }
+]
