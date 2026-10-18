@@ -25,6 +25,6 @@ export const MOTION_STRAIGHT_LINE_STATS = {
   easyCount: 125,
   mediumCount: 250,
   hardCount: 125,
-  pyqCount: 10,
-  practiceCount: 490,
+  pyqCount: 13,
+  practiceCount: 487,
 };

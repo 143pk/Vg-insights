@@ -104,10 +104,10 @@ export function renderMistakeBookView(currentFilter: string = 'all', searchQuery
                       ${m.subjectName}
                     </span>
                     <span class="font-bold text-xs text-slate-700 dark:text-slate-300">
-                      ${m.chapterTitle}
+                      ${m.chapterTitle || 'Chapter Practice'}
                     </span>
                     <span class="text-xs text-slate-400 truncate max-w-[180px]">
-                      • ${m.topicTitle}
+                      • ${m.topicTitle && m.topicTitle !== 'undefined' && m.topicTitle !== 'null' ? m.topicTitle : 'Core Concept'}
                     </span>
                   </div>
 

@@ -1,0 +1,222 @@
+{
+  "class": "11",
+  "subject": "Biology",
+  "targetChapters": 19,
+  "completedChapters": [
+    {
+      "id": "living-world",
+      "title": "The Living World",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "batches": 4,
+      "status": "completed",
+      "answerDistribution": {
+        "A": 128,
+        "B": 124,
+        "C": 124,
+        "D": 124
+      }
+    },
+    {
+      "id": "biological-classification",
+      "title": "Biological Classification",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "batches": 4,
+      "status": "completed",
+      "answerDistribution": {
+        "A": 128,
+        "B": 124,
+        "C": 124,
+        "D": 124
+      }
+    },
+    {
+      "id": "plant-kingdom",
+      "title": "Plant Kingdom",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "batches": 4,
+      "status": "completed",
+      "answerDistribution": {
+        "A": 128,
+        "B": 124,
+        "C": 124,
+        "D": 124
+      }
+    },
+    {
+      "id": "animal-kingdom",
+      "title": "Animal Kingdom",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "batches": 4,
+      "status": "completed",
+      "answerDistribution": {
+        "A": 128,
+        "B": 124,
+        "C": 124,
+        "D": 124
+      }
+    },
+    {
+      "id": "morphology-flowering-plants",
+      "title": "Morphology of Flowering Plants",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "batches": 4,
+      "status": "completed",
+      "answerDistribution": {
+        "A": 128,
+        "B": 124,
+        "C": 124,
+        "D": 124
+      }
+    },
+    {
+      "id": "anatomy-flowering-plants",
+      "title": "Anatomy of Flowering Plants",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "batches": 4,
+      "status": "completed",
+      "answerDistribution": {
+        "A": 128,
+        "B": 124,
+        "C": 124,
+        "D": 124
+      }
+    },
+    {
+      "id": "structural-org-animals",
+      "title": "Structural Organisation in Animals",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "batches": 4,
+      "status": "completed",
+      "answerDistribution": {
+        "A": 128,
+        "B": 124,
+        "C": 124,
+        "D": 124
+      }
+    },
+    {
+      "id": "cell-unit-of-life",
+      "title": "Cell: The Unit of Life",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "batches": 4,
+      "status": "completed",
+      "answerDistribution": {
+        "A": 125,
+        "B": 125,
+        "C": 125,
+        "D": 125
+      }
+    },
+    {
+      "id": "biomolecules-bio",
+      "title": "Biomolecules",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "batches": 4,
+      "status": "completed",
+      "answerDistribution": {
+        "A": 125,
+        "B": 125,
+        "C": 125,
+        "D": 125
+      }
+    },
+    {
+      "id": "cell-cycle-division",
+      "title": "Cell Cycle and Cell Division",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "batches": 4,
+      "status": "completed",
+      "answerDistribution": {
+        "A": 125,
+        "B": 125,
+        "C": 125,
+        "D": 125
+      }
+    },
+    {
+      "id": "photosynthesis-higher-plants",
+      "title": "Photosynthesis in Higher Plants",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "batches": 4,
+      "status": "completed",
+      "answerDistribution": {
+        "A": 125,
+        "B": 125,
+        "C": 125,
+        "D": 125
+      }
+    },
+    {
+      "id": "respiration-plants",
+      "title": "Respiration in Plants",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "batches": 4,
+      "status": "completed",
+      "answerDistribution": {
+        "A": 125,
+        "B": 125,
+        "C": 125,
+        "D": 125
+      }
+    },
+    {
+      "id": "plant-growth-development",
+      "title": "Plant Growth and Development",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "batches": 4,
+      "status": "completed",
+      "answerDistribution": {
+        "A": 125,
+        "B": 125,
+        "C": 125,
+        "D": 125
+      }
+    }
+  ],
+  "totalCompletedQuestions": 6500,
+  "nextChapter": {
+    "id": "breathing-exchange-gases",
+    "title": "Breathing and Exchange of Gases",
+    "nextBatch": "Part 1 (Q1 to Q125 - Easy)"
+  },
+  "lastUpdated": "2026-10-17T10:38:00Z"
+}

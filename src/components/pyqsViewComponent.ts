@@ -1,3 +1,5 @@
+import { PaymentService } from '../services/paymentService';
+import { PricingComponent } from './pricingComponent';
 import { PYQ_DATABASE, PYQQuestion } from '../data/pyqDatabase';
 import { renderInlineMathHTML } from '../utils/mathRenderer';
 
@@ -94,7 +96,7 @@ export function renderPYQsView(): string {
               class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl px-3 py-2 text-xs font-bold text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500">
               <option value="all" ${currentFilter.year === 'all' ? 'selected' : ''}>All Years (2014 - 2026)</option>
               ${years.map(y => `
-                <option value="${y}" ${currentFilter.year === y.toString() ? 'selected' : ''}>${y <= 2015 ? `AIPMT ${y}` : `NEET UG ${y}`}</option>
+                <option value="${y}" ${currentFilter.year === y.toString() ? 'selected' : ''}>${y === 2026 ? `NEET UG 2026 (Free - Latest)` : (!PaymentService.isPremiumActive() ? `🔒 ${y <= 2015 ? `AIPMT ${y}` : `NEET UG ${y}`} (Pro)` : `${y <= 2015 ? `AIPMT ${y}` : `NEET UG ${y}`}`)}</option>
               `).join('')}
             </select>
           </div>
@@ -115,6 +117,13 @@ export function renderPYQsView(): string {
 
       <!-- Question List -->
       <div class="space-y-5">
+        ${!PaymentService.isPremiumActive() && currentFilter.year !== 'all' && currentFilter.year !== '2026' ? `
+          ${PricingComponent.renderLockPrompt({
+            badgeText: 'Pro PYQ Archive • Locked for Free Plan',
+            title: `NEET UG ${currentFilter.year} Past Exam Paper Requires Pro Pass`,
+            description: `Free student access includes the latest authentic NEET 2026 paper. Upgrade to VG Insights Pro to unlock all 10+ years (2014–2026) with detailed step-by-step KaTeX NCERT solutions, mistake tracking, and formula references.`
+          })}
+        ` : ''}
         ${filtered.length === 0 ? `
           <div class="p-12 text-center rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
             <p class="text-sm font-bold text-slate-600 dark:text-slate-400">No past year questions match the selected criteria.</p>
@@ -132,6 +141,35 @@ export function renderPYQsView(): string {
             : q.subject === 'chemistry'
             ? 'bg-amber-50 dark:bg-amber-950/50 text-amber-700 dark:text-amber-300 border-amber-200 dark:border-amber-800'
             : 'bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800';
+
+          const isQuestionAllowed = PaymentService.isPyqYearAllowed(q.year);
+          if (!isQuestionAllowed) {
+            return `
+              <div id="card-${q.id}" class="p-5 rounded-3xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/90 dark:border-slate-800 shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div class="space-y-1.5">
+                  <div class="flex items-center gap-2 flex-wrap">
+                    <span class="px-2.5 py-0.5 rounded-full text-[11px] font-extrabold border ${subjectColorBadge} capitalize">
+                      ${q.subject}
+                    </span>
+                    <span class="px-2.5 py-0.5 rounded-full bg-amber-50 dark:bg-amber-950/50 text-amber-700 dark:text-amber-300 font-extrabold text-[11px] border border-amber-200 dark:border-amber-800">
+                      🔒 ${q.exam ? `${q.exam} ${q.year}` : `NEET ${q.year}`} (Pro)
+                    </span>
+                    <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">${renderInlineMathHTML(q.chapterTitle)}</span>
+                  </div>
+                  <p class="text-xs text-slate-500 dark:text-slate-400">
+                    This past exam question is part of the 10+ Years NEET Archive. Upgrade to Pro to view question, options, and full KaTeX explanation.
+                  </p>
+                </div>
+                <a
+                  href="#pricing"
+                  class="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs shrink-0 shadow-sm flex items-center gap-1.5 transition-all"
+                >
+                  <span>Unlock Question</span>
+                  <span>→</span>
+                </a>
+              </div>
+            `;
+          }
 
           return `
             <div id="card-${q.id}" class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm space-y-4">

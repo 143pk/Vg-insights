@@ -374,36 +374,6 @@ export const CHEMISTRY_CHAPTERS: Record<string, Chapter> = {
       "chem-electronic-effects-intermediates",
       "chem-basic-reaction-mechanisms"
     ]
-  },
-  "purification-organic": {
-    "id": "organic-chemistry-basic-principles",
-    "title": "Organic Chemistry: Some Basic Principles & Techniques",
-    "classificationId": "chem-11-organic",
-    "chapterNumber": 8,
-    "description": "Purification and characterisation of organic compounds, classification, IUPAC nomenclature, isomerism, electronic effects, reaction intermediates, and basic organic reaction mechanisms.",
-    "estimatedHours": 12,
-    "topicIds": [
-      "chem-purification-characterisation",
-      "chem-classification-iupac",
-      "chem-isomerism",
-      "chem-electronic-effects-intermediates",
-      "chem-basic-reaction-mechanisms"
-    ]
-  },
-  "goc-principles": {
-    "id": "organic-chemistry-basic-principles",
-    "title": "Organic Chemistry: Some Basic Principles & Techniques",
-    "classificationId": "chem-11-organic",
-    "chapterNumber": 8,
-    "description": "Purification and characterisation of organic compounds, classification, IUPAC nomenclature, isomerism, electronic effects, reaction intermediates, and basic organic reaction mechanisms.",
-    "estimatedHours": 12,
-    "topicIds": [
-      "chem-purification-characterisation",
-      "chem-classification-iupac",
-      "chem-isomerism",
-      "chem-electronic-effects-intermediates",
-      "chem-basic-reaction-mechanisms"
-    ]
   }
 };
 

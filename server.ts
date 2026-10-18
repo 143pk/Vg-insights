@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import express from 'express';
 import path from 'path';
 import { createServer as createViteServer } from 'vite';
@@ -8,12 +9,22 @@ import checkEmailHandler from './api/auth/check-email';
 import requestOtpHandler from './api/auth/request-otp';
 import verifyOtpHandler from './api/auth/verify-otp';
 import userMeHandler from './api/auth/me';
+import paymentConfigHandler from './api/payment/config';
+import createOrderHandler from './api/payment/create-order';
+import verifyPaymentHandler from './api/payment/verify';
+import webhookHandler from './api/payment/webhook';
+import paymentStatusHandler from './api/payment/status';
 
 async function startServer() {
   const app = express();
   const PORT = 3000;
 
-  app.use(express.json());
+  // Preserve rawBody for webhook HMAC verification
+  app.use(express.json({
+    verify: (req: any, _res, buf) => {
+      req.rawBody = buf.toString();
+    }
+  }));
 
   // API Health Endpoint
   app.get('/api/health', (req, res) => {
@@ -37,12 +48,20 @@ async function startServer() {
   app.post('/api/auth/verify-otp', (req, res) => verifyOtpHandler(req, res));
   app.get('/api/auth/me', (req, res) => userMeHandler(req, res));
 
+  // Razorpay Premium Payment Endpoints
+  app.get('/api/payment/config', (req, res) => paymentConfigHandler(req, res));
+  app.post('/api/payment/create-order', (req, res) => createOrderHandler(req, res));
+  app.post('/api/payment/verify', (req, res) => verifyPaymentHandler(req, res));
+  app.post('/api/payment/webhook', (req, res) => webhookHandler(req, res));
+  app.post('/wp-admin/admin-post.php', (req, res) => webhookHandler(req, res));
+  app.get('/api/payment/status', (req, res) => paymentStatusHandler(req, res));
+  app.post('/api/payment/status', (req, res) => paymentStatusHandler(req, res));
+
   // AI Weakness Questions Batch Generator Endpoint
   // Performs ONE batch call per requested topic drill, never per-question calls
   app.post('/api/generate-weakness-questions', async (req, res) => {
     const { subject, chapter, topic, count = 5 } = req.body || {};
     const questionCount = Math.min(10, Math.max(3, Number(count) || 5));
-
     const apiKey = process.env.GEMINI_API_KEY;
 
     if (apiKey) {
@@ -50,7 +69,6 @@ async function startServer() {
       const ai = new GoogleGenAI({ apiKey });
       const prompt = `You are a Senior NEET UG (Medical Entrance) Faculty and Exam Specialist.
 Generate exactly ${questionCount} high-yield, authentic NEET UG multiple-choice practice questions focused strictly on the following concept:
-
 Subject: ${subject || 'General Science'}
 Chapter: ${chapter || 'Core Chapter'}
 Topic / Concept: ${topic || 'Key Formula & Principle'}
@@ -78,7 +96,6 @@ Requirements:
         let attempts = 0;
         const maxAttempts = 2;
         let success = false;
-
         while (attempts < maxAttempts && !success) {
           attempts++;
           try {
@@ -89,10 +106,8 @@ Requirements:
                 responseMimeType: 'application/json'
               }
             });
-
             const text = response.text?.trim() || '{}';
             const parsed = JSON.parse(text);
-
             if (Array.isArray(parsed.questions) && parsed.questions.length > 0) {
               return res.json({ questions: parsed.questions, source: 'gemini-ai' });
             }

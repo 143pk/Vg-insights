@@ -45,6 +45,7 @@ export function renderSidebar(currentPath: string = '#home'): string {
       items: [
         { label: 'Revision Sheets', path: '#revision', icon: '⚡', badge: 'High Yield' },
         { label: 'Study Stopwatch', path: '#test-history', icon: '⏱️' },
+        { label: 'VG Insights Pro', path: '#pricing', icon: '💎', badge: 'Upgrade', badgeColor: 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white' },
       ]
     }
   ];

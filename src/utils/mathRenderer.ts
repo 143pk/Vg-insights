@@ -252,136 +252,100 @@ export function renderFormulaHTML(formulaStr: string | undefined | null, options
 }
 
 /**
- * Render inline text (for explanations, steps, descriptions, practice questions, PYQs).
- * Processes $...$ math blocks with KaTeX and converts explicit backslashed LaTeX commands (\Delta, \rightarrow, etc.)
- * while PRESERVING ordinary prose 100% intact!
+ * Helper to check if a string is entirely or predominantly a mathematical formula or expression
+ */
+function isEntireMathExpression(str: string): boolean {
+  const s = str.trim();
+  if (!s) return false;
+  // If starts with math command or sign + math command
+  if (/^[-+±]?\\(?:frac|sqrt|vec|hat|dot|ddot|bar|theta|alpha|beta|gamma|delta|Delta|lambda|mu|nu|pi|rho|sigma|tau|omega|Omega|phi|eta|varepsilon|times|cdot|pm|approx|propto|le|ge|neq|sum|int|degree|left|right|begin|quad)\b/.test(s)) {
+    return true;
+  }
+  // If contains LaTeX commands and no multi-letter English prose words (4+ letters) outside \text / \mathrm
+  if (/\\[a-zA-Z]+/.test(s)) {
+    const withoutCommands = s
+      .replace(/\\(?:text|mathrm|mathbf|mathit)\{[^{}]*\}/g, '')
+      .replace(/\\[a-zA-Z]+/g, '');
+    const englishWords = withoutCommands.match(/\b[a-zA-Z]{4,}\b/g);
+    if (!englishWords || englishWords.length === 0) {
+      return true;
+    }
+  }
+  return false;
+}
+
+/**
+ * Regex to match un-delimited LaTeX expressions in prose
+ */
+const rawLatexRegex = /(?:[a-zA-Z](?:_[a-zA-Z0-9]+)?\s*=\s*)?(?:[-+±]\s*)?\\(?:frac|sqrt|vec|hat|dot|ddot|bar|theta|alpha|beta|gamma|delta|Delta|lambda|mu|nu|pi|rho|sigma|tau|omega|Omega|phi|eta|varepsilon|times|cdot|pm|approx|propto|le|ge|neq|sum|int|degree|left|right|begin|quad)\b(?:\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\}|[\^°+\-*\/=()[\]]|_[0-9a-zA-Z]|_\{[^{}]*\}|\^[0-9a-zA-Z]|\^\{[^{}]*\}|\s*[-+*=<>]+\s*|\s*\\(?:[a-zA-Z]+)(?:\{[^{}]*\})*|\s*[0-9]+(?:\.[0-9]+)?|\s*[a-zA-Z](?![a-zA-Z]))*/g;
+
+/**
+ * Render inline text (for explanations, steps, descriptions, practice questions, PYQs, options).
+ * Processes explicit $...$ and $$...$$ math blocks, as well as un-delimited raw LaTeX commands
+ * (\frac, \vec, \sqrt, \theta, etc.) using KaTeX while PRESERVING ordinary prose 100% intact!
  */
 export function renderInlineMathHTML(text: string | undefined | null): string {
   if (!text) return '';
-  let s = String(text);
+  let s = String(text).trim();
+  if (!s) return '';
 
-  // 1. Process explicit $$...$$ display math blocks
-  s = s.replace(/\$\$([\s\S]+?)\$\$/g, (_, mathStr) => {
-    try {
-      const rendered = katex.renderToString(toKaTeXLatex(mathStr), { displayMode: true, throwOnError: false });
-      const visibleText = rendered
-        .replace(/<annotation[^>]*>[\s\S]*?<\/annotation>/gi, '')
-        .replace(/<[^>]*>/g, '')
-        .trim();
-
-      if (visibleText.length > 0) {
-        return rendered;
-      }
-      return formatSubSupFallback(mathStr);
-    } catch {
-      return formatSubSupFallback(mathStr);
-    }
-  });
-
-  // 2. Process explicit $...$ or \(...\) inline math blocks with KaTeX
-  s = s.replace(/\$([^\$]+)\$/g, (_, mathStr) => {
-    try {
-      const rendered = katex.renderToString(toKaTeXLatex(mathStr), { displayMode: false, throwOnError: false });
-      const visibleText = rendered
-        .replace(/<annotation[^>]*>[\s\S]*?<\/annotation>/gi, '')
-        .replace(/<[^>]*>/g, '')
-        .trim();
-
-      if (visibleText.length > 0) {
-        return rendered;
-      }
-      return formatSubSupFallback(mathStr);
-    } catch {
-      return formatSubSupFallback(mathStr);
-    }
-  });
-
-  s = s.replace(/\\\(([\s\S]+?)\\\)/g, (_, mathStr) => {
-    try {
-      const rendered = katex.renderToString(toKaTeXLatex(mathStr), { displayMode: false, throwOnError: false });
-      return rendered || formatSubSupFallback(mathStr);
-    } catch {
-      return formatSubSupFallback(mathStr);
-    }
-  });
-
-  // 3. Strip \text{...}, \mathrm{...}, \mathbf{...}, \mathit{...} wrappers in remaining text
-  for (let i = 0; i < 5; i++) {
-    s = s.replace(/\\+(?:text|mathrm|mathbf|mathit)\{([^{}]+)\}/g, '$1');
+  // Avoid double-rendering if string already contains rendered KaTeX HTML markup
+  if (s.includes('class="katex"') || s.includes('class="katex-html"')) {
+    return s;
   }
 
-  // 4. Convert fractions \frac{num}{den} -> num / den
-  for (let i = 0; i < 5; i++) {
-    s = s.replace(/\\+frac\{([^{}]+)\}\{([^{}]+)\}/g, (_, num, den) => {
-      let cleanNum = num.trim();
-      let cleanDen = den.trim();
-      if (cleanNum.includes(' + ') || cleanNum.includes(' - ')) cleanNum = `(${cleanNum})`;
-      if (cleanDen.includes(' + ') || cleanDen.includes(' - ')) cleanDen = `(${cleanDen})`;
-      return `${cleanNum} / ${cleanDen}`;
-    });
+  const renderKaTeXToken = (raw: string, displayMode: boolean): string => {
+    try {
+      const latex = toKaTeXLatex(raw);
+      const rendered = katex.renderToString(latex, { displayMode, throwOnError: false });
+      if (rendered.includes('katex-html')) {
+        return rendered;
+      }
+      return formatSubSupFallback(raw);
+    } catch {
+      return formatSubSupFallback(raw);
+    }
+  };
+
+  // Check prefix like "Option A: ", "(a) ", "Ans: ", "Q1. "
+  const prefixMatch = s.match(/^(Option\s+[A-D]:\s*|\([a-d]\)\s*|Ans:\s*|Q\d+\.\s*)([\s\S]+)$/i);
+  if (prefixMatch) {
+    const prefix = prefixMatch[1];
+    const rest = prefixMatch[2].trim();
+    if (isEntireMathExpression(rest)) {
+      return prefix + renderKaTeXToken(rest, false);
+    }
   }
 
-  // 5. Square roots \sqrt{...}
-  s = s.replace(/\\sqrt\{([^{}]+)\}/g, '√($1)');
+  // If the entire string is a math formula or expression, render directly
+  if (isEntireMathExpression(s)) {
+    return renderKaTeXToken(s, false);
+  }
 
-  // 6. Convert Greek letters and math symbols
-  s = s.replace(/\\Delta\b/g, 'Δ');
-  s = s.replace(/\\delta\b/g, 'δ');
-  s = s.replace(/\\sum\b/g, 'Σ');
-  s = s.replace(/\\int\b/g, '∫');
-  s = s.replace(/\\alpha\b/g, 'α');
-  s = s.replace(/\\beta\b/g, 'β');
-  s = s.replace(/\\gamma\b/g, 'γ');
-  s = s.replace(/\\lambda\b/g, 'λ');
-  s = s.replace(/\\nu\b/g, 'ν');
-  s = s.replace(/\\mu_0\b|\\mu_\{0\}/g, 'μ₀');
-  s = s.replace(/\\mu\b/g, 'μ');
-  s = s.replace(/\\varepsilon_0\b|\\varepsilon_\{0\}/g, 'ε₀');
-  s = s.replace(/\\varepsilon\b|\\epsilon\b/g, 'ε');
-  s = s.replace(/\\pi\b/g, 'π');
-  s = s.replace(/\\theta\b/g, 'θ');
-  s = s.replace(/\\rho\b/g, 'ρ');
-  s = s.replace(/\\sigma\b/g, 'σ');
-  s = s.replace(/\\tau\b/g, 'τ');
-  s = s.replace(/\\omega\b/g, 'ω');
-  s = s.replace(/\\Omega\b/g, 'Ω');
-  s = s.replace(/\\phi\b/g, 'φ');
-  s = s.replace(/\\eta\b/g, 'η');
-  s = s.replace(/\\infty\b/g, '∞');
-  s = s.replace(/\\pm\b/g, '±');
-  s = s.replace(/\\approx\b/g, '≈');
-  s = s.replace(/\\propto\b/g, '∝');
-  s = s.replace(/\\ge(?:q)?\b/g, '≥');
-  s = s.replace(/\\le(?:q)?\b/g, '≤');
-  s = s.replace(/\\times\b/g, '×');
-  s = s.replace(/\\cdot\b/g, '·');
-  s = s.replace(/\\(?:rightarrow|longrightarrow|to)\b/g, '→');
-  s = s.replace(/\\rightleftharpoons\b/g, '⇌');
-  s = s.replace(/\\implies\b/g, '⇒');
-  s = s.replace(/\^circ|\^\circ/g, '°');
-  s = s.replace(/\\(?:dots|ldots|cdots)/g, '...');
-  s = s.replace(/\\log_\{10\}|\\log_10/g, 'log₁₀');
-  s = s.replace(/\\log\b/g, 'log');
-  s = s.replace(/\\ln\b/g, 'ln');
-  s = s.replace(/\\degree\b/g, '°');
+  const tokens: string[] = [];
+  const makeToken = (html: string) => {
+    const idx = tokens.length;
+    tokens.push(html);
+    return `@@MATH_TOKEN_${idx}@@`;
+  };
 
-  // 7. Convert Ionic Charges, Superscripts, and Subscripts
-  s = s.replace(/\^\{2\+\}|\^2\+/g, '²⁺').replace(/\^\{3\+\}|\^3\+/g, '³⁺').replace(/\^\+|\^\{\+\}/g, '⁺');
-  s = s.replace(/\^\{2\-\}|\^2\-/g, '²⁻').replace(/\^\{3\-\}|\^3\-/g, '³⁻').replace(/\^\-|\^\{\-\}/g, '⁻');
-  s = s.replace(/\^\{([0-9]+)\}/g, (_, d) => d.split('').map((c: string) => SUP_MAP[c] || c).join(''));
-  s = s.replace(/\^([0-9])/g, (_, d) => SUP_MAP[d] || d);
+  // 1. Process explicit $$...$$ and \[...\] display math blocks
+  s = s.replace(/\$\$([\s\S]+?)\$\$/g, (_, mathStr) => makeToken(renderKaTeXToken(mathStr, true)));
+  s = s.replace(/\\\[([\s\S]+?)\\\]/g, (_, mathStr) => makeToken(renderKaTeXToken(mathStr, true)));
 
-  s = s.replace(/_\{([0-9]+)\}/g, (_, d) => d.split('').map((c: string) => SUB_MAP[c] || c).join(''));
-  s = s.replace(/_([0-9])/g, (_, d) => SUB_MAP[d] || d);
-  s = s.replace(/_\{([a-zA-Z0-9_\-\s\.]+)\}/g, '<sub>$1</sub>');
+  // 2. Process explicit $...$ and \(...\) inline math blocks
+  s = s.replace(/\$([^\$\n]+)\$/g, (_, mathStr) => makeToken(renderKaTeXToken(mathStr, false)));
+  s = s.replace(/\\\(([\s\S]+?)\\\)/g, (_, mathStr) => makeToken(renderKaTeXToken(mathStr, false)));
 
-  // 8. Units
-  s = s.replace(/\|?kJ\s*mol\^{-1}|\|?kJ\s*mol-1/gi, 'kJ mol⁻¹');
-  s = s.replace(/\|?g\s*mol\^{-1}|\|?g\s*mol-1/gi, 'g mol⁻¹');
-  s = s.replace(/\|?L\s*mol\^{-1}|\|?L\s*mol-1/gi, 'L mol⁻¹');
+  // 3. Process un-delimited raw LaTeX math expressions embedded in prose
+  s = s.replace(rawLatexRegex, (match) => {
+    const clean = match.trim();
+    if (!clean) return match;
+    return makeToken(renderKaTeXToken(clean, false));
+  });
 
-  // 9. Clean leftover isolated backslashes from simple tokens
-  s = s.replace(/\\([a-zA-Z]+)/g, '$1');
+  // 4. Restore math tokens
+  s = s.replace(/@@MATH_TOKEN_(\d+)@@/g, (_, idx) => tokens[Number(idx)] || '');
 
   return s;
 }
@@ -401,25 +365,46 @@ export function renderMath(rootElement?: HTMLElement | Document | null): void {
   targetedElements.forEach((el) => {
     if (el.getAttribute('data-math-rendered') === 'true') return;
 
-    const rawLatex = el.getAttribute('data-latex') || el.textContent || '';
-    const isDisplay = el.getAttribute('data-display') === 'true' || el.classList.contains('block') || el.tagName === 'DIV';
-
-    if (!rawLatex || !rawLatex.trim()) {
-      el.style.display = 'none';
+    // If element already contains rendered KaTeX HTML, mark as rendered and skip
+    if (el.querySelector('.katex')) {
+      el.setAttribute('data-math-rendered', 'true');
       return;
     }
 
-    try {
-      const latex = toKaTeXLatex(decodeURIComponent(rawLatex));
-      katex.render(latex, el, {
-        displayMode: isDisplay,
-        throwOnError: false,
-      });
-      el.setAttribute('data-math-rendered', 'true');
-    } catch {
-      el.innerHTML = formatSubSupFallback(rawLatex);
-      el.setAttribute('data-math-rendered', 'true');
+    if (el.hasAttribute('data-latex')) {
+      const rawLatex = el.getAttribute('data-latex') || '';
+      const isDisplay = el.getAttribute('data-display') === 'true' || el.classList.contains('block') || el.tagName === 'DIV';
+
+      if (!rawLatex.trim()) {
+        el.style.display = 'none';
+        return;
+      }
+
+      try {
+        const latex = toKaTeXLatex(decodeURIComponent(rawLatex));
+        katex.render(latex, el, {
+          displayMode: isDisplay,
+          throwOnError: false,
+        });
+        el.setAttribute('data-math-rendered', 'true');
+      } catch {
+        el.innerHTML = formatSubSupFallback(rawLatex);
+        el.setAttribute('data-math-rendered', 'true');
+      }
+      return;
     }
+
+    // For .katex-render-target without data-latex:
+    if (el.querySelector('.katex')) {
+      el.setAttribute('data-math-rendered', 'true');
+      return;
+    }
+
+    const html = el.innerHTML;
+    if (!html || !html.trim()) return;
+
+    el.innerHTML = renderInlineMathHTML(html);
+    el.setAttribute('data-math-rendered', 'true');
   });
 
   // 2. Process .formula-passage-target elements that may contain unrendered LaTeX or empty boxes
@@ -427,7 +412,6 @@ export function renderMath(rootElement?: HTMLElement | Document | null): void {
   passageTargets.forEach((el) => {
     if (el.getAttribute('data-math-rendered') === 'true') return;
 
-    // If already contains rendered KaTeX html
     if (el.querySelector('.katex')) {
       el.setAttribute('data-math-rendered', 'true');
       return;
@@ -439,7 +423,6 @@ export function renderMath(rootElement?: HTMLElement | Document | null): void {
       return;
     }
 
-    // Check if text looks like LaTeX or math expression
     if (text.includes('\\') || text.includes('^') || text.includes('_') || text.includes('=') || text.includes('+')) {
       try {
         const latex = toKaTeXLatex(text);
@@ -482,40 +465,22 @@ export function renderMath(rootElement?: HTMLElement | Document | null): void {
     }
   });
 
-  // 4. Scan for any raw unrendered LaTeX strings in paragraphs or code elements
-  // e.g. text containing $...$, \frac{, \Delta, E_{\text{cell}}
-  const candidateTexts = container.querySelectorAll<HTMLElement>('p, span.font-mono, div.font-mono');
+  // 4. Scan for any raw unrendered LaTeX strings in MCQ content or paragraphs
+  const candidateTexts = container.querySelectorAll<HTMLElement>('.mcq-question-text, .mcq-option-text, .math-container, p, span.font-mono, div.font-mono');
   candidateTexts.forEach((el) => {
     if (el.getAttribute('data-math-scanned') === 'true' || el.querySelector('.katex') || el.closest('.katex')) {
+      el.setAttribute('data-math-scanned', 'true');
       return;
     }
 
     const html = el.innerHTML;
-    // Check if contains math indicators like $, $$, \frac, \text{, \Delta, \times, \log_{10}
     if (
       html.includes('$') ||
-      html.includes('\\frac') ||
-      html.includes('\\text{') ||
-      html.includes('E_{\\text{cell}}') ||
-      html.includes('\\Delta') ||
-      html.includes('\\log_{10}') ||
-      html.includes('\\rightarrow')
+      html.includes('\\') ||
+      html.includes('^') ||
+      html.includes('E_{\\text{cell}}')
     ) {
-      // Check if it's a standalone raw formula without dollar signs
-      if (!html.includes('$') && html.includes('\\frac')) {
-        try {
-          const latex = toKaTeXLatex(el.textContent || '');
-          katex.render(latex, el, {
-            displayMode: false,
-            throwOnError: false,
-          });
-          el.setAttribute('data-math-rendered', 'true');
-        } catch {
-          el.innerHTML = renderInlineMathHTML(html);
-        }
-      } else {
-        el.innerHTML = renderInlineMathHTML(html);
-      }
+      el.innerHTML = renderInlineMathHTML(html);
       el.setAttribute('data-math-scanned', 'true');
     }
   });

@@ -1,4 +1,5 @@
 import { SUBJECTS, CLASSIFICATIONS, CHAPTERS, TOPICS, getTopicById } from '../data/neetData';
+import { normalizeChapterId } from './chapterwiseMcqService';
 
 export interface BreadcrumbItem {
   label: string;
@@ -36,7 +37,8 @@ export interface RouteState {
     | 'revision'
     | 'chapters'
     | 'chapterwise-mcqs'
-    | 'my-progress';
+    | 'my-progress'
+    | 'pricing';
   mockId?: string;
   subFilter?: string;
   stepId?: string;
@@ -65,6 +67,16 @@ export class RouterService {
       return {
         type: 'login',
         breadcrumbs: []
+      };
+    }
+
+    if (cleanHash === 'pricing' || cleanHash === 'pro' || cleanHash === 'upgrade') {
+      return {
+        type: 'pricing',
+        breadcrumbs: [
+          { label: 'Home', path: '#home' },
+          { label: 'VG Insights Pro', path: '#pricing' }
+        ]
       };
     }
 
@@ -276,19 +288,26 @@ export class RouterService {
       let chapterId: string | undefined = undefined;
 
       if (p1 === 'chapter' && p2) {
-        chapterId = p2;
+        chapterId = normalizeChapterId(p2);
       } else if (p1 === 'physics' || p1 === 'chemistry' || p1 === 'biology') {
         subjectId = p1;
         if (p2 === 'class-11' || p2 === 'class-12') {
           classLevel = p2;
           if (p3) {
-            chapterId = p3;
+            chapterId = normalizeChapterId(p3);
           }
         } else if (p2) {
-          chapterId = p2;
+          chapterId = normalizeChapterId(p2);
         }
-      } else if (p1 && CHAPTERS[p1]) {
-        chapterId = p1;
+      } else if (p1) {
+        const norm = normalizeChapterId(p1);
+        if (CHAPTERS[norm] || CHAPTERS[p1]) {
+          chapterId = norm;
+        }
+      }
+
+      if (chapterId) {
+        chapterId = normalizeChapterId(chapterId);
       }
 
       // If chapterId is present, resolve subject and classLevel from chapter

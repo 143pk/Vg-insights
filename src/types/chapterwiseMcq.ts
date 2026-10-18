@@ -7,8 +7,8 @@ export interface ChapterwiseMCQOptions {
 
 export interface ChapterwiseMCQSolutionStructured {
   concept: string;
-  given: string;
-  formula: string;
+  given?: string;
+  formula?: string;
   stepByStep: string;
   finalAnswer: string;
   whyOtherOptionsWrong?: string;
@@ -16,23 +16,36 @@ export interface ChapterwiseMCQSolutionStructured {
 
 export interface ChapterwiseMCQ {
   id: string;
-  questionNumber: number;
+  questionNumber?: number;
   question: string;
-  options: ChapterwiseMCQOptions;
-  optionsList: string[]; // [options.A, options.B, options.C, options.D]
-  correctAnswer: 'A' | 'B' | 'C' | 'D';
-  correctIndex: number; // 0, 1, 2, 3
+  options: ChapterwiseMCQOptions | string[];
+  optionsList?: string[]; // [options.A, options.B, options.C, options.D]
+  correctAnswer?: 'A' | 'B' | 'C' | 'D';
+  correctOption?: 'A' | 'B' | 'C' | 'D' | number;
+  correctIndex?: number; // 0, 1, 2, 3
   explanation: string;
   solutionStructured?: ChapterwiseMCQSolutionStructured;
   difficulty: 'Easy' | 'Medium' | 'Hard';
-  subject: 'Physics' | 'Chemistry' | 'Biology' | string;
-  class: '11' | '12' | string;
-  chapter: string;
-  chapterId: string;
-  topic: string;
-  source: string;
-  isPYQ: boolean;
-  pyqYear?: number;
+  subject?: 'Physics' | 'Chemistry' | 'Biology' | string;
+  class?: '11' | '12' | string;
+  chapter?: string;
+  chapterId?: string;
+  topic?: string;
+  topicId?: string;
+  subtopic?: string;
+  source?: string;
+  isPYQ?: boolean | string;
+  isPyq?: boolean | string;
+  isVerifiedPyq?: boolean | string;
+  pyqYear?: number | string;
+  pyqDetails?: {
+    exam?: string;
+    year?: string | number;
+    shift?: string;
+    questionNumber?: number;
+    verifiedBy?: string;
+  };
+  [key: string]: any;
 }
 
 export interface ChapterMCQProgress {

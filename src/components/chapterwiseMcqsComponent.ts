@@ -1,8 +1,10 @@
-import { SUBJECTS, CLASSIFICATIONS, CHAPTERS } from '../data/neetData';
+import { PaymentService } from '../services/paymentService';
+import { PricingComponent } from './pricingComponent';
+import { SUBJECTS, CLASSIFICATIONS, CHAPTERS, TOPICS } from '../data/neetData';
 import { RouteState } from '../services/routerService';
 import { Chapter } from '../types/neet';
 import { ChapterwiseMCQ, ChapterMCQProgress } from '../types/chapterwiseMcq';
-import { ChapterwiseMcqService } from '../services/chapterwiseMcqService';
+import { ChapterwiseMcqService, CHAPTER_STATS_REGISTRY, formatTopicIdToTitle } from '../services/chapterwiseMcqService';
 import { renderMath, renderInlineMathHTML } from '../utils/mathRenderer';
 
 function renderMCQText(text: string | undefined | null): string {
@@ -25,13 +27,157 @@ let engineState: McqEngineState = {
   selectedOptions: {}
 };
 
+// Virtualization constants and variable-height configuration
+const DEFAULT_CARD_HEIGHT = 520;
+const CHECKED_CARD_HEIGHT = 980;
+const BUFFER_BEFORE = 6;
+const BUFFER_AFTER = 8;
+const INITIAL_RENDER_COUNT = 16;
+
+interface VirtualState {
+  startIndex: number;
+  endIndex: number;
+  filteredQuestions: ChapterwiseMCQ[];
+  scrollListener: (() => void) | null;
+  resizeObserver: ResizeObserver | null;
+  measuredHeights: Map<string, number>;
+  offsets: number[];
+  totalHeight: number;
+}
+
+let activeVirtualState: VirtualState = {
+  startIndex: 0,
+  endIndex: INITIAL_RENDER_COUNT,
+  filteredQuestions: [],
+  scrollListener: null,
+  resizeObserver: null,
+  measuredHeights: new Map(),
+  offsets: [0],
+  totalHeight: 0
+};
+
+function getCardEstimatedHeight(q: ChapterwiseMCQ, checkedMap: Record<string, boolean>): number {
+  if (activeVirtualState.measuredHeights.has(q.id)) {
+    return activeVirtualState.measuredHeights.get(q.id)!;
+  }
+  return checkedMap[q.id] ? CHECKED_CARD_HEIGHT : DEFAULT_CARD_HEIGHT;
+}
+
+function recalculateVirtualOffsets(chapterId: string): void {
+  const questions = activeVirtualState.filteredQuestions;
+  const n = questions.length;
+  const progress = ChapterwiseMcqService.getProgress(chapterId);
+  const checkedMap = progress.checkedQuestions || {};
+
+  const offsets = new Array<number>(n + 1);
+  offsets[0] = 0;
+  for (let i = 0; i < n; i++) {
+    offsets[i + 1] = offsets[i] + getCardEstimatedHeight(questions[i], checkedMap);
+  }
+  activeVirtualState.offsets = offsets;
+  activeVirtualState.totalHeight = n > 0 ? offsets[n] : 0;
+}
+
+function findIndexAtOffset(targetOffset: number): number {
+  const offsets = activeVirtualState.offsets;
+  if (!offsets || offsets.length <= 1) return 0;
+  let low = 0;
+  let high = offsets.length - 2;
+  let ans = 0;
+  while (low <= high) {
+    const mid = (low + high) >> 1;
+    if (offsets[mid] <= targetOffset) {
+      ans = mid;
+      low = mid + 1;
+    } else {
+      high = mid - 1;
+    }
+  }
+  return ans;
+}
+
+/**
+ * High-fidelity, zero-layout-shift loading skeleton while chapter chunk downloads
+ */
+function renderChapterLoadingSkeleton(chapterId: string): string {
+  const stats = ChapterwiseMcqService.getStats(chapterId);
+  const chapter = CHAPTERS[chapterId];
+  const title = stats?.chapterTitle || chapter?.title || 'Chapter Practice';
+
+  return `
+    <div class="max-w-5xl mx-auto space-y-6 pb-24 animate-pulse">
+      <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <div class="h-6 w-20 rounded-full bg-slate-200 dark:bg-slate-800"></div>
+            <div class="h-6 w-20 rounded-full bg-slate-200 dark:bg-slate-800"></div>
+            <div class="h-6 w-32 rounded-full bg-slate-200 dark:bg-slate-800"></div>
+          </div>
+          <div class="h-8 w-28 rounded-xl bg-slate-200 dark:bg-slate-800"></div>
+        </div>
+        <div class="space-y-2">
+          <h1 class="text-2xl sm:text-3xl font-black text-slate-800 dark:text-slate-200">${title}</h1>
+          <div class="h-4 w-96 max-w-full rounded-lg bg-slate-100 dark:bg-slate-800/60"></div>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-5 gap-2.5 pt-3 border-t border-slate-100 dark:border-slate-800">
+          <div class="h-14 rounded-xl bg-slate-100 dark:bg-slate-800/60"></div>
+          <div class="h-14 rounded-xl bg-slate-100 dark:bg-slate-800/60"></div>
+          <div class="h-14 rounded-xl bg-slate-100 dark:bg-slate-800/60"></div>
+          <div class="h-14 rounded-xl bg-slate-100 dark:bg-slate-800/60"></div>
+          <div class="h-14 rounded-xl bg-slate-100 dark:bg-slate-800/60 col-span-2 sm:col-span-1"></div>
+        </div>
+      </div>
+
+      <div class="space-y-6">
+        ${[1, 2, 3].map(() => `
+          <div class="rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 p-6 space-y-4">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <div class="h-6 w-12 rounded-xl bg-blue-100 dark:bg-blue-950/60"></div>
+                <div class="h-6 w-16 rounded-full bg-slate-200 dark:bg-slate-800"></div>
+                <div class="h-6 w-28 rounded-full bg-slate-100 dark:bg-slate-800/60"></div>
+              </div>
+              <div class="h-8 w-24 rounded-xl bg-slate-100 dark:bg-slate-800/60"></div>
+            </div>
+            <div class="h-12 w-full rounded-xl bg-slate-100 dark:bg-slate-800/60"></div>
+            <div class="space-y-2.5 pt-2">
+              <div class="h-12 w-full rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-800"></div>
+              <div class="h-12 w-full rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-800"></div>
+              <div class="h-12 w-full rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-800"></div>
+              <div class="h-12 w-full rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-800"></div>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}
+
 export function renderChapterwiseMcqsView(routeState: RouteState): string {
-  const { subjectId, classLevel, chapterId } = routeState;
+  const { subjectId, classLevel, chapterId: rawChapterId } = routeState;
+  const chapterId = rawChapterId ? ChapterwiseMcqService.normalizeId(rawChapterId) : undefined;
 
   // 1. Chapter MCQ Practice View
   if (chapterId && CHAPTERS[chapterId]) {
-    if (chapterId === 'units-measurements' || chapterId === 'motion-straight-line' || chapterId === 'motion-plane' || chapterId === 'laws-of-motion') {
+    if (ChapterwiseMcqService.getQuestionCount(chapterId) > 0) {
       engineState.chapterId = chapterId;
+      if (!ChapterwiseMcqService.isChapterLoaded(chapterId)) {
+        ChapterwiseMcqService.loadChapterQuestions(chapterId).then(() => {
+          if (typeof window !== 'undefined') {
+            const currentHash = window.location.hash;
+            if (currentHash.includes(chapterId) || (rawChapterId && currentHash.includes(rawChapterId))) {
+              const appContent = document.getElementById('app-content') || document.getElementById('root');
+              if (appContent) {
+                appContent.innerHTML = renderUnitsPracticeEngine(chapterId);
+                attachChapterwiseMcqsEvents();
+              }
+            }
+          }
+        }).catch(err => {
+          console.error('[ChapterwiseMcqService] Async load error:', err);
+        });
+        return renderChapterLoadingSkeleton(chapterId);
+      }
       return renderUnitsPracticeEngine(chapterId);
     }
     return renderEmptyChapterPracticeView(chapterId);
@@ -49,6 +195,12 @@ export function renderChapterwiseMcqsView(routeState: RouteState): string {
 /**
  * Checks if a question is numerical or conceptual based on topic and content.
  */
+function getSafeTopic(q: ChapterwiseMCQ): string {
+  const raw = q.topic || (q as any).subtopic || (q as any).subTopic;
+  if (!raw || raw === 'undefined' || raw === 'null') return '';
+  return String(raw).trim();
+}
+
 function isNumericalQuestion(q: ChapterwiseMCQ): boolean {
   const numericalTopics = [
     'Propagation of errors',
@@ -63,11 +215,12 @@ function isNumericalQuestion(q: ChapterwiseMCQ): boolean {
     'Significant figures',
     'Rounding off'
   ];
-  if (numericalTopics.includes(q.topic)) {
+  const topic = getSafeTopic(q);
+  if (topic && numericalTopics.includes(topic)) {
     return true;
   }
-  const hasNumbersInOptions = Object.values(q.options).some(opt => /\d/.test(opt));
-  const hasMathKeywords = /(%|\/|\*|\+|\-|\=|\^|least count|pitch|divisions|rotations|advance|percentage error|measured|calculated|radius|diameter|density)/i.test(q.question);
+  const hasNumbersInOptions = q.options && Object.values(q.options).some(opt => /\d/.test(opt));
+  const hasMathKeywords = /(%|\/|\*|\+|\-|\=|\^|least count|pitch|divisions|rotations|advance|percentage error|measured|calculated|radius|diameter|density|joule|kelvin|mol|mass|pressure|volume)/i.test(q.question);
   if (hasNumbersInOptions && hasMathKeywords) {
     return true;
   }
@@ -78,86 +231,131 @@ function isNumericalQuestion(q: ChapterwiseMCQ): boolean {
 }
 
 function getWhatWeNeed(q: ChapterwiseMCQ): string {
-  if (q.topic === 'Propagation of errors' || q.topic === 'Percentage error') {
+  const topic = getSafeTopic(q);
+  if (topic === 'Propagation of errors' || topic === 'Percentage error') {
     return 'Find the maximum percentage error / relative error in the calculated quantity.';
   }
-  if (q.topic === 'Vernier calipers' || q.topic === 'Least count') {
+  if (topic === 'Vernier calipers' || topic === 'Least count') {
     return 'Calculate the least count of the instrument in the required unit (cm or mm).';
   }
-  if (q.topic === 'Screw gauge') {
+  if (topic === 'Screw gauge') {
     return 'Determine the pitch and least count or true reading of the screw gauge.';
   }
-  if (q.topic === 'Significant figures') {
+  if (topic === 'Significant figures') {
     return 'Determine the total number of significant figures in the given measurement.';
   }
-  if (q.topic === 'Rounding off') {
+  if (topic === 'Rounding off') {
     return 'Round off the number to the specified number of significant digits using standard rules.';
   }
-  if (q.topic.includes('Dimensions')) {
-    return `Derive the correct dimensional formula of ${q.topic} and match with given options.`;
+  if (topic.includes('Dimensions')) {
+    return `Derive the correct dimensional formula of ${topic} and match with given options.`;
+  }
+  if (topic.includes('Bond') || topic.includes('Hybridization') || topic.includes('VSEPR')) {
+    return 'Determine the geometry, bond order, or orbital hybridization for the given species.';
+  }
+  if (topic.includes('Enthalpy') || topic.includes('Thermodynamic') || topic.includes('Entropy') || topic.includes('Hess')) {
+    return 'Calculate the requested thermodynamic state function change (ΔH, ΔS, or ΔG) and verify reaction spontaneity.';
+  }
+  if (topic.includes('Mole') || topic.includes('Molarity') || topic.includes('Stoichiometry')) {
+    return 'Calculate the required amount of substance, molar mass, or concentration in the reaction.';
+  }
+  if (topic.includes('Periodic') || topic.includes('Ionization') || topic.includes('Radii')) {
+    return 'Identify the correct periodic trend, valence electronic configuration, or property variation.';
   }
   return 'Calculate the requested value and select the matching option.';
 }
 
 function getQuickTip(q: ChapterwiseMCQ): string {
-  if (q.topic === 'Propagation of errors' || q.topic === 'Percentage error') {
+  const topic = getSafeTopic(q);
+  if (topic === 'Propagation of errors' || topic === 'Percentage error') {
     return 'NEET Shortcut: In maximum error estimation, powers become multipliers and errors ALWAYS ADD up. Terms in the denominator are never subtracted: Δ(a/b) = Δa/a + Δb/b!';
   }
-  if (q.topic === 'Vernier calipers') {
+  if (topic === 'Vernier calipers') {
     return 'NEET Shortcut: Least Count = 1 MSD - 1 VSD = (1 - n/m) MSD. Always check whether options are in mm or cm before choosing!';
   }
-  if (q.topic === 'Screw gauge') {
+  if (topic === 'Screw gauge') {
     return 'NEET Shortcut: Least Count = Pitch / Total circular scale divisions. Corrected Reading = Observed Reading - (± Zero error).';
   }
-  if (q.topic === 'Significant figures') {
+  if (topic === 'Significant figures') {
     return 'NEET Shortcut: Trailing zeroes without a decimal point are NOT significant (e.g., 500 has 1 sig fig; 500.0 has 4 sig figs). Power of 10 in scientific notation has no effect!';
   }
-  if (q.topic === 'Rounding off') {
+  if (topic === 'Rounding off') {
     return 'NEET Shortcut: If the dropped digit is 5 followed by zeros, round to the nearest EVEN digit (e.g., 2.75 rounds to 2.8, but 2.65 rounds to 2.6).';
   }
-  if (q.topic.includes('Dimensions')) {
+  if (topic.includes('Dimensions')) {
     return 'NEET Shortcut: Principle of Homogeneity: Only quantities with identical dimensions can be added or subtracted. Use dimensional elimination on [M] or [T] to quickly rule out options!';
+  }
+  if (topic.includes('Kinetic Theory') || topic.includes('Gas Laws') || topic.includes('Mean Free Path')) {
+    return 'NEET Physics Shortcut: v_rms = √(3RT/M), v_avg = √(8RT/πM), v_mp = √(2RT/M). Mean free path λ ∝ 1/(P) and λ ∝ T!';
+  }
+  if (topic.includes('Oscillations') || topic.includes('SHM') || topic.includes('Pendulum')) {
+    return 'NEET Physics Shortcut: For simple pendulum, T = 2π√(L/g). For spring-mass, T = 2π√(m/k). Total mechanical energy E = (1/2)mω²A² is constant!';
+  }
+  if (topic.includes('Waves') || topic.includes('Doppler') || topic.includes('Organ Pipe')) {
+    return 'NEET Physics Shortcut: Closed pipe has only ODD harmonics: f_n = (2n-1)v/(4L). Open pipe has ALL harmonics: f_n = nv/(2L).';
+  }
+  if (topic.includes('Gravitation') || topic.includes('Kepler') || topic.includes('Escape Velocity')) {
+    return 'NEET Physics Shortcut: Escape speed v_e = √(2gR) ≈ 11.2 km/s. Orbital speed v_o = √(gR). Relationship: v_e = √2 · v_o!';
+  }
+  if (q.subject === 'Chemistry') {
+    if (topic.includes('Bond') || topic.includes('Hybridization')) {
+      return 'NEET Chemistry Shortcut: Steric Number = (Valence e⁻ on central atom + Monovalent atoms - Positive charge + Negative charge) / 2. Lone pairs compress bond angles!';
+    }
+    if (topic.includes('Thermodynamics') || topic.includes('Enthalpy') || topic.includes('Entropy')) {
+      return 'NEET Chemistry Shortcut: ΔG = ΔH - TΔS. At equilibrium, ΔG = 0 so T_eq = ΔH / ΔS. Always check units: ΔH is in kJ while ΔS is in J/K!';
+    }
+    if (topic.includes('Periodic') || topic.includes('Atomic')) {
+      return 'NEET Chemistry Shortcut: Watch for half-filled (p³, d⁵) and fully-filled (p⁶, d¹⁰) configurations—they exhibit unusually high ionization enthalpy!';
+    }
+    return 'NEET Chemistry Tip: Pay close attention to standard states, signs (+/- for ΔH and ΔG), stoichiometry, and units (kJ vs J).';
+  }
+  if (q.subject === 'Biology') {
+    return 'NEET Biology Tip: Focus strictly on NCERT line-by-line definitions, scientific naming, diagrams, and historical scientist contributions.';
   }
   return 'NEET Tip: Keep units uniform (SI system) before substituting numerical values into formulas.';
 }
 
 function getCommonMistake(q: ChapterwiseMCQ): string {
-  if (q.topic.includes('Dimensions')) {
+  const topic = getSafeTopic(q);
+  if (topic.includes('Dimensions')) {
     return 'Common Student Trap: Forgetting that arguments of trigonometric (sin, cos), logarithmic, and exponential functions are dimensionless [M⁰ L⁰ T⁰].';
   }
-  if (q.topic === 'SI base units' || q.topic === 'Physical quantities and units') {
+  if (topic === 'SI base units' || topic === 'Physical quantities and units') {
     return 'Common Student Trap: Confusing supplementary units (plane angle, solid angle) which have units (radian, steradian) but zero dimensions!';
   }
-  if (q.topic === 'Accuracy and precision') {
+  if (topic === 'Accuracy and precision') {
     return 'Common Student Trap: Confusing precision (closeness of repeated measurements, limited by least count) with accuracy (closeness to the true value).';
   }
-  if (q.topic === 'Zero error') {
+  if (topic === 'Zero error') {
     return 'Common Student Trap: Forgetting to subtract zero error algebraically: True Reading = Observed Reading - (Zero Error with sign).';
   }
   return 'Common Student Trap: Rushing through NCERT definitions. Keep basic definitions and formulas clear.';
 }
 
 function getNeetTakeaway(q: ChapterwiseMCQ): string {
-  if (q.topic.includes('Dimensions')) {
+  const topic = getSafeTopic(q);
+  if (topic.includes('Dimensions')) {
     return 'NCERT Gold Line: Physical quantities having different dimensions can NEVER be added or subtracted, only multiplied or divided.';
   }
-  if (q.topic === 'SI base units') {
+  if (topic === 'SI base units') {
     return 'NCERT Gold Line: There are strictly 7 SI base units (m, kg, s, A, K, mol, cd) and 2 supplementary dimensionless units (rad, sr).';
   }
-  if (q.topic === 'Significant figures') {
+  if (topic === 'Significant figures') {
     return 'NCERT Gold Line: In multiplication and division, the final answer must have the same number of significant figures as the least precise quantity.';
   }
-  if (q.topic === 'Zero error') {
+  if (topic === 'Zero error') {
     return 'NCERT Gold Line: If the zero mark of circular scale is below the reference line, the error is positive; if above, it is negative.';
   }
-  return 'NCERT Gold Line: Units and Measurements is a guaranteed 8–12 marks scoring chapter in NEET Physics—master NCERT formulas thoroughly.';
+  const chapterId = q.chapterId || engineState.chapterId || 'units-measurements';
+  const chTitle = CHAPTERS[chapterId]?.title || CHAPTER_STATS_REGISTRY[chapterId]?.chapterTitle || 'Chapter Practice';
+  return `NCERT Gold Line: ${chTitle} is a high-yield scoring chapter in NEET—master NCERT formulas and conceptual definitions thoroughly.`;
 }
 
 /**
  * Formats a student-friendly Detailed Solution according to exact NEET specifications:
  * 1. CONCEPT: Explain what concept the question tests in very simple language.
- * 2. GIVEN: List the information provided.
- * 3. WHAT WE NEED: Clearly state what we need to find.
+ * 2. GIVEN: List the information provided (when applicable).
+ * 3. WHAT WE NEED: Clearly state what we need to find (when applicable).
  * 4. FORMULA / PRINCIPLE: Show the relevant formula or principle.
  * 5. STEP-BY-STEP SOLUTION: Explain every step simply with calculations or substitutions.
  * 6. FINAL ANSWER: Clearly state the correct option and answer.
@@ -165,14 +363,43 @@ function getNeetTakeaway(q: ChapterwiseMCQ): string {
  */
 function renderDetailedStudentSolution(q: ChapterwiseMCQ): string {
   const isNumerical = isNumericalQuestion(q);
-  const concept = q.solutionStructured?.concept || `Testing fundamental principles of ${q.topic} in NEET Physics.`;
-  const given = q.solutionStructured?.given || 'Information and values given in the question.';
+  const chapterId = q.chapterId || engineState.chapterId || 'units-measurements';
+  let rawTopic = q.topic || (q as any).subtopic || (q as any).subTopic;
+  if (!rawTopic || rawTopic === 'undefined' || rawTopic === 'null' || String(rawTopic).trim().length === 0) {
+    const tid = (q as any).topicId;
+    if (tid && TOPICS[tid]?.title) {
+      rawTopic = TOPICS[tid].title;
+    } else if (tid && tid !== 'undefined' && tid !== 'null') {
+      rawTopic = formatTopicIdToTitle(tid);
+    } else {
+      rawTopic = CHAPTERS[chapterId]?.title || CHAPTER_STATS_REGISTRY[chapterId]?.chapterTitle || 'Core Concept';
+    }
+  }
+  rawTopic = String(rawTopic);
+  if (rawTopic.startsWith('phys-') || rawTopic.startsWith('chem-') || rawTopic.startsWith('bio-')) {
+    rawTopic = formatTopicIdToTitle(rawTopic);
+  }
+  let topic = rawTopic.trim();
+  if (topic === '' || topic === 'undefined' || topic === 'null') {
+    topic = CHAPTERS[chapterId]?.title || CHAPTER_STATS_REGISTRY[chapterId]?.chapterTitle || 'Core Concept';
+  }
+  const subject = q.subject || CHAPTER_STATS_REGISTRY[chapterId]?.subject || 'NEET';
+
+  const concept = q.solutionStructured?.concept || `Testing fundamental principles of ${topic} in NEET ${subject}.`;
+  const given = q.solutionStructured?.given;
   const whatWeNeed = getWhatWeNeed(q);
-  const formula = q.solutionStructured?.formula || (isNumerical ? 'Standard physics equation' : 'Governing NCERT principle / Dimensional relation');
-  const stepByStep = q.solutionStructured?.stepByStep || q.explanation;
-  const finalAnswer = q.solutionStructured?.finalAnswer || `Option ${q.correctAnswer}: ${q.options[q.correctAnswer]}`;
+  const formula = q.solutionStructured?.formula || (isNumerical ? 'Standard mathematical equation / relation' : 'Governing NCERT principle / Scientific law');
+  const stepByStep = q.solutionStructured?.stepByStep || q.explanation || 'Detailed step-by-step solution provided in the question guide.';
+  const correctLetter = q.correctAnswer || (q as any).correctOption || 'A';
+  const correctText = q.options?.[correctLetter] || q.optionsList?.[['A', 'B', 'C', 'D'].indexOf(correctLetter)] || '';
+  const safeFinalAnswer = `Option ${correctLetter}: ${correctText}`;
+  const finalAnswer = (q.solutionStructured?.finalAnswer && !q.solutionStructured.finalAnswer.includes('undefined'))
+    ? q.solutionStructured.finalAnswer
+    : safeFinalAnswer;
   const whyOtherWrong = q.solutionStructured?.whyOtherOptionsWrong || '';
   const quickTip = getQuickTip(q);
+
+  let sectionNum = 1;
 
   return `
     <div class="mt-4 p-5 sm:p-6 rounded-3xl bg-slate-50 dark:bg-slate-850/70 border border-slate-200/90 dark:border-slate-800 space-y-5 max-w-full box-border overflow-hidden">
@@ -186,69 +413,87 @@ function renderDetailedStudentSolution(q: ChapterwiseMCQ): string {
         </span>
       </div>
 
-      <!-- 1. CONCEPT -->
+      <!-- CONCEPT -->
       <div class="space-y-1">
         <span class="text-[11px] font-black uppercase tracking-wider text-blue-600 dark:text-blue-400 block">
-          1. CONCEPT
+          ${sectionNum++}. CONCEPT
         </span>
-        <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed" style="word-break: break-word; overflow-wrap: anywhere;">
+        <p class="katex-render-target text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed" style="word-break: break-word; overflow-wrap: anywhere;">
           ${renderMCQText(concept)}
         </p>
       </div>
 
-      <!-- 2. GIVEN -->
+      ${
+        given && given !== 'Information and values given in the question.' && !given.startsWith('Parameters, values')
+          ? `
+      <!-- GIVEN -->
       <div class="space-y-1">
         <span class="text-[11px] font-black uppercase tracking-wider text-amber-600 dark:text-amber-400 block">
-          2. GIVEN
+          ${sectionNum++}. GIVEN
         </span>
-        <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed" style="word-break: break-word; overflow-wrap: anywhere;">
+        <p class="katex-render-target text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed" style="word-break: break-word; overflow-wrap: anywhere;">
           ${renderMCQText(given)}
         </p>
       </div>
+      `
+          : ''
+      }
 
-      <!-- 3. WHAT WE NEED -->
+      ${
+        whatWeNeed && !whatWeNeed.startsWith('Calculate the requested value')
+          ? `
+      <!-- WHAT WE NEED -->
       <div class="space-y-1">
         <span class="text-[11px] font-black uppercase tracking-wider text-indigo-600 dark:text-indigo-400 block">
-          3. WHAT WE NEED
+          ${sectionNum++}. WHAT WE NEED
         </span>
-        <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed" style="word-break: break-word; overflow-wrap: anywhere;">
+        <p class="katex-render-target text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed" style="word-break: break-word; overflow-wrap: anywhere;">
           ${renderMCQText(whatWeNeed)}
         </p>
       </div>
+      `
+          : ''
+      }
 
-      <!-- 4. FORMULA / PRINCIPLE -->
+      ${
+        formula && formula !== 'Standard mathematical equation / relation' && formula !== 'Governing NCERT principle / Scientific law' && !formula.startsWith('Core governing')
+          ? `
+      <!-- FORMULA / PRINCIPLE -->
       <div class="space-y-1">
         <span class="text-[11px] font-black uppercase tracking-wider text-purple-600 dark:text-purple-400 block">
-          4. FORMULA / PRINCIPLE
+          ${sectionNum++}. ${isNumerical ? 'FORMULA / RELATION' : 'GOVERNING PRINCIPLE / LAW'}
         </span>
-        <div class="math-container p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs sm:text-sm font-mono text-purple-950 dark:text-purple-200 max-w-full overflow-x-auto overflow-y-hidden" style="-webkit-overflow-scrolling: touch;">
+        <div class="math-container katex-render-target p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs sm:text-sm font-mono text-purple-950 dark:text-purple-200 max-w-full overflow-x-auto overflow-y-hidden" style="-webkit-overflow-scrolling: touch;">
           ${renderMCQText(formula)}
         </div>
       </div>
+      `
+          : ''
+      }
 
-      <!-- 5. STEP-BY-STEP SOLUTION -->
+      <!-- STEP-BY-STEP SOLUTION -->
       <div class="space-y-1">
         <span class="text-[11px] font-black uppercase tracking-wider text-blue-600 dark:text-blue-400 block">
-          5. STEP-BY-STEP SOLUTION
+          ${sectionNum++}. STEP-BY-STEP SOLUTION
         </span>
-        <div class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed whitespace-pre-line pl-3 border-l-2 border-blue-500/50" style="word-break: break-word; overflow-wrap: anywhere;">
+        <div class="katex-render-target text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed whitespace-pre-line pl-3 border-l-2 border-blue-500/50" style="word-break: break-word; overflow-wrap: anywhere;">
           ${renderMCQText(stepByStep)}
         </div>
       </div>
 
-      <!-- 6. FINAL ANSWER -->
+      <!-- FINAL ANSWER -->
       <div class="space-y-1 pt-1">
         <span class="text-[11px] font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-400 block">
-          6. FINAL ANSWER
+          ${sectionNum++}. FINAL ANSWER
         </span>
         <div class="p-3.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 space-y-1.5">
-          <p class="text-xs sm:text-sm font-bold text-emerald-900 dark:text-emerald-200" style="word-break: break-word; overflow-wrap: anywhere;">
+          <p class="katex-render-target text-xs sm:text-sm font-bold text-emerald-900 dark:text-emerald-200" style="word-break: break-word; overflow-wrap: anywhere;">
             ${renderMCQText(finalAnswer)}
           </p>
           ${
             whyOtherWrong
               ? `
-            <p class="text-xs text-emerald-800 dark:text-emerald-300 pt-1.5 border-t border-emerald-200/60 dark:border-emerald-800/60 leading-relaxed" style="word-break: break-word; overflow-wrap: anywhere;">
+            <p class="katex-render-target text-xs text-emerald-800 dark:text-emerald-300 pt-1.5 border-t border-emerald-200/60 dark:border-emerald-800/60 leading-relaxed" style="word-break: break-word; overflow-wrap: anywhere;">
               <span class="font-bold">Option Analysis:</span> ${renderMCQText(whyOtherWrong)}
             </p>
           `
@@ -257,13 +502,13 @@ function renderDetailedStudentSolution(q: ChapterwiseMCQ): string {
         </div>
       </div>
 
-      <!-- 7. QUICK TIP -->
+      <!-- QUICK TIP -->
       <div class="space-y-1 pt-2 border-t border-slate-200 dark:border-slate-800">
         <span class="text-[11px] font-black uppercase tracking-wider text-cyan-600 dark:text-cyan-400 flex items-center gap-1.5">
           <span>⚡</span>
-          <span>7. QUICK TIP (NEET TAKEAWAY)</span>
+          <span>${sectionNum++}. QUICK TIP (NEET TAKEAWAY)</span>
         </span>
-        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed italic" style="word-break: break-word; overflow-wrap: anywhere;">
+        <p class="katex-render-target text-xs text-slate-600 dark:text-slate-400 leading-relaxed italic" style="word-break: break-word; overflow-wrap: anywhere;">
           ${renderMCQText(quickTip)}
         </p>
       </div>
@@ -275,6 +520,10 @@ function renderDetailedStudentSolution(q: ChapterwiseMCQ): string {
  * Renders the inline Result Banner + Detailed Solution directly below the question.
  */
 function renderCheckedResultAndSolution(q: ChapterwiseMCQ, isCorrect: boolean): string {
+  const normQ = ChapterwiseMcqService.normalizeQuestion(q, q.chapterId || engineState.chapterId);
+  const correctLetter = normQ.correctAnswer || (normQ as any).correctOption || 'A';
+  const correctText = normQ.options?.[correctLetter] || normQ.optionsList?.[['A', 'B', 'C', 'D'].indexOf(correctLetter)] || '';
+
   return `
     <div class="pt-4 space-y-4 border-t border-slate-100 dark:border-slate-800 max-w-full box-border">
       
@@ -299,8 +548,8 @@ function renderCheckedResultAndSolution(q: ChapterwiseMCQ, isCorrect: boolean): 
             <p class="text-xs ${
               isCorrect ? 'text-emerald-700 dark:text-emerald-400' : 'text-rose-700 dark:text-rose-400'
             } mt-0.5">
-              Correct Answer: <strong class="underline font-bold">Option ${q.correctAnswer} — ${renderMCQText(
-    q.options[q.correctAnswer]
+              Correct Answer: <strong class="underline font-bold katex-render-target">Option ${correctLetter} — ${renderMCQText(
+    correctText
   )}</strong>
             </p>
           </div>
@@ -327,7 +576,7 @@ function renderCheckedResultAndSolution(q: ChapterwiseMCQ, isCorrect: boolean): 
       </div>
 
       <!-- DETAILED SOLUTION (Teacher-Style Student-Friendly Solution) -->
-      ${renderDetailedStudentSolution(q)}
+      ${renderDetailedStudentSolution(normQ)}
 
     </div>
   `;
@@ -391,10 +640,9 @@ function renderUnitsPracticeEngine(chapterId: string): string {
   const progress = ChapterwiseMcqService.getProgress(chapterId);
   const checkedMap = progress.checkedQuestions || {};
 
-  // Sync draft selections from progress if not locally populated
-  if (progress.draftSelections && Object.keys(progress.draftSelections).length > 0 && Object.keys(engineState.selectedOptions).length === 0) {
-    engineState.selectedOptions = { ...progress.draftSelections };
-  }
+  // Always initialize draft selections strictly from the active chapter's saved progress
+  engineState.chapterId = chapterId;
+  engineState.selectedOptions = { ...(progress.draftSelections || {}) };
 
   // Filter questions based on difficulty and source
   const filteredQuestions = allQuestions.filter(q => {
@@ -436,27 +684,102 @@ function renderUnitsPracticeEngine(chapterId: string): string {
   const accuracyPct = attemptedCount > 0 ? Math.round((correctCount / attemptedCount) * 100) : 0;
   const score = correctCount * 4 - incorrectCount * 1;
 
-  const difficultyColors = {
+  const difficultyColors: Record<string, string> = {
     Easy: 'bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800',
     Medium: 'bg-amber-50 text-amber-700 dark:bg-amber-950/40 dark:text-amber-300 border-amber-200 dark:border-amber-800',
     Hard: 'bg-rose-50 text-rose-700 dark:bg-rose-950/40 dark:text-rose-300 border-rose-200 dark:border-rose-800'
   };
 
+  const chapter = CHAPTERS[chapterId];
+  const stats = ChapterwiseMcqService.getStats(chapterId);
+  const chapterTitle = stats?.chapterTitle || chapter?.title || 'Chapter Practice';
+  const chapterNum = chapter?.chapterNumber || (chapterId === 'laws-of-motion' ? '4' : (chapterId === 'motion-plane' ? '3' : (chapterId === 'motion-straight-line' ? '2' : '1')));
+  const subjectName = stats?.subject || 'Physics';
+  const classText = stats?.class ? `Class ${stats.class}` : 'Class 11';
+
+  // Enforce access control rule: first chapter of Physics, Chemistry & Biology is free; all others require premium
+  const isChapterAllowed = PaymentService.isChapterAllowed(subjectName, chapterId);
+  if (!isChapterAllowed) {
+    return `
+      <div class="mcq-engine-wrapper max-w-5xl mx-auto space-y-6 pb-24 w-full" id="mcq-engine-wrapper">
+        <!-- Top Header & Breadcrumbs Info -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm space-y-4">
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="px-2.5 py-1 rounded-full text-xs font-bold border bg-blue-50 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300 border-blue-200 dark:border-blue-800">
+                ${subjectName}
+              </span>
+              <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700">
+                ${classText}
+              </span>
+              <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-slate-50 dark:bg-slate-800/60 text-slate-500 dark:text-slate-400 border border-slate-200/60 dark:border-slate-700/60">
+                Chapter ${chapterNum}
+              </span>
+              <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-700 dark:bg-amber-950/50 dark:text-amber-400 border border-amber-200 dark:border-amber-800">
+                🔒 Pro Chapter
+              </span>
+            </div>
+            <a
+              href="#chapterwise-mcqs/${subjectName.toLowerCase()}"
+              class="px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-bold transition-colors"
+            >
+              ← Back to Chapters
+            </a>
+          </div>
+
+          <div>
+            <h1 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">
+              ${chapterTitle}
+            </h1>
+            <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
+              Complete question bank containing ${totalQuestions} MCQs with step-by-step KaTeX NCERT solutions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Upgrade Lock Prompt -->
+        ${PricingComponent.renderLockPrompt({
+          badgeText: 'Pro Chapter Question Bank',
+          title: `Unlock All MCQs for ${chapterTitle}`,
+          description: `Chapter 1 of Physics (Units & Measurements), Chemistry (Some Basic Concepts), and Biology (The Living World) is 100% free for all students. To practice all 38 NEET UG chapters (${totalQuestions}+ questions with step-by-step NCERT solutions and mistake tracking), upgrade to VG Insights Pro.`
+        })}
+
+        <div class="text-center pt-4">
+          <a href="#chapterwise-mcqs" class="text-xs font-bold text-blue-600 dark:text-blue-400 hover:underline">
+            ← Explore Free Chapters in Directory
+          </a>
+        </div>
+      </div>
+    `;
+  }
+
+  // Setup variable-height virtualization window
+  activeVirtualState.filteredQuestions = filteredQuestions;
+  activeVirtualState.startIndex = 0;
+  activeVirtualState.endIndex = Math.min(filteredQuestions.length, INITIAL_RENDER_COUNT);
+
+  recalculateVirtualOffsets(chapterId);
+
+  const totalHeight = activeVirtualState.totalHeight;
+  const topSpacerHeight = 0;
+  const bottomSpacerHeight = Math.max(0, totalHeight - (activeVirtualState.offsets[activeVirtualState.endIndex] || 0));
+  const visibleSlice = filteredQuestions.slice(activeVirtualState.startIndex, activeVirtualState.endIndex);
+
   return `
-    <div class="mcq-engine-wrapper max-w-5xl mx-auto space-y-6 pb-24 w-full overflow-x-hidden box-border">
+    <div class="mcq-engine-wrapper max-w-5xl mx-auto space-y-6 pb-24 w-full overflow-x-hidden box-border" id="mcq-engine-wrapper">
 
       <!-- Top Header & Breadcrumbs Info -->
       <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm space-y-5">
         <div class="flex flex-wrap items-center justify-between gap-3">
           <div class="flex flex-wrap items-center gap-2">
             <span class="px-2.5 py-1 rounded-full text-xs font-bold border bg-blue-50 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300 border-blue-200 dark:border-blue-800">
-              Physics
+              ${subjectName}
             </span>
             <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700">
-              Class 11
+              ${classText}
             </span>
             <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-slate-50 dark:bg-slate-800/60 text-slate-500 dark:text-slate-400 border border-slate-200/60 dark:border-slate-700/60">
-              Chapter ${chapterId === 'laws-of-motion' ? '4' : (chapterId === 'motion-plane' ? '3' : (chapterId === 'motion-straight-line' ? '2' : '1'))}
+              Chapter ${chapterNum}
             </span>
             <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800">
               Total Questions: ${totalQuestions}
@@ -474,7 +797,7 @@ function renderUnitsPracticeEngine(chapterId: string): string {
               <span>Reset Chapter</span>
             </button>
             <a
-              href="#chapterwise-mcqs/physics"
+              href="#chapterwise-mcqs/${subjectName.toLowerCase()}"
               class="px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-bold transition-colors"
             >
               ← Back to Chapters
@@ -484,7 +807,7 @@ function renderUnitsPracticeEngine(chapterId: string): string {
 
         <div>
           <h1 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">
-            ${chapterId === 'laws-of-motion' ? 'Laws of Motion' : (chapterId === 'motion-plane' ? 'Motion in a Plane' : (chapterId === 'motion-straight-line' ? 'Motion in a Straight Line' : 'Units and Measurements'))}
+            ${chapterTitle}
           </h1>
           <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
             Continuous question bank (${totalQuestions} MCQs) • Select an option and click <strong>Check Answer</strong> on any question to evaluate and reveal its step-by-step solution.
@@ -607,8 +930,8 @@ function renderUnitsPracticeEngine(chapterId: string): string {
         </div>
       </div>
 
-      <!-- CONTINUOUS QUESTIONS LIST (ALL QUESTIONS ON ONE PAGE) -->
-      <div class="space-y-6 w-full max-w-full box-border" id="mcq-continuous-list">
+      <!-- CONTINUOUS VIRTUALIZED QUESTIONS LIST (ALL QUESTIONS ON ONE PAGE) -->
+      <div class="w-full max-w-full box-border" id="mcq-continuous-list">
         ${
           filteredQuestions.length === 0
             ? `
@@ -619,223 +942,17 @@ function renderUnitsPracticeEngine(chapterId: string): string {
             </button>
           </div>
         `
-            : filteredQuestions
-                .map(q => {
-                  const isChecked = !!checkedMap[q.id];
-                  const studentAnswer = progress.userAnswers?.[q.id] || engineState.selectedOptions[q.id];
-                  const draftSelection = engineState.selectedOptions[q.id] || progress.draftSelections?.[q.id];
-                  const isCorrect = isChecked && studentAnswer === q.correctAnswer;
-                  const isBookmarked = !!progress.bookmarked?.[q.id];
-
-                  // Card border styling based on check state
-                  let cardBorderClasses = 'border border-slate-200/90 dark:border-slate-800';
-                  let statusBadge = '';
-
-                  if (isChecked) {
-                    if (isCorrect) {
-                      cardBorderClasses = 'border-2 border-emerald-500/80 dark:border-emerald-500/80 shadow-xs';
-                      statusBadge = `
-                        <span class="mcq-status-badge px-3 py-1 rounded-full text-xs font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950/80 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-700">
-                          ✓ Correct
-                        </span>
-                      `;
-                    } else {
-                      cardBorderClasses = 'border-2 border-rose-500/80 dark:border-rose-500/80 shadow-xs';
-                      statusBadge = `
-                        <span class="mcq-status-badge px-3 py-1 rounded-full text-xs font-black bg-rose-100 text-rose-800 dark:bg-rose-950/80 dark:text-rose-300 border border-rose-300 dark:border-rose-700">
-                          ✗ Incorrect
-                        </span>
-                      `;
-                    }
-                  }
-
-                  return `
-            <div
-              id="question-block-${q.id}"
-              data-question-id="${q.id}"
-              class="mcq-card-container mcq-question-card w-full max-w-full rounded-3xl bg-white dark:bg-slate-900 ${cardBorderClasses} shadow-sm overflow-hidden box-border"
-              style="touch-action: pan-y;"
-            >
-              
-              <!-- Question Header Bar: ONLY Number, Difficulty, Topic, Badge, Bookmark (NO answers or preview) -->
-              <div class="p-5 sm:p-6 border-b border-slate-100 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-850/40 flex flex-wrap items-center justify-between gap-3">
-                <div class="mcq-header-badges flex flex-wrap items-center gap-2">
-                  <span class="px-3 py-1 rounded-xl text-xs font-black bg-blue-600 text-white shadow-xs">
-                    Q${q.questionNumber}
-                  </span>
-
-                  <span class="px-2.5 py-1 rounded-full text-[11px] font-bold border ${difficultyColors[q.difficulty]}">
-                    ${q.difficulty}
-                  </span>
-
-                  <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200/60 dark:border-slate-700/60">
-                    ${q.topic}
-                  </span>
-
-                  ${
-                    q.isPYQ
-                      ? `
-                    <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-amber-50 text-amber-700 dark:bg-amber-950/40 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
-                      ★ ${q.source} Verified PYQ
-                    </span>
-                  `
-                      : `
-                    <span class="px-2.5 py-1 rounded-full text-[11px] font-medium bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400">
-                      VG Insights Practice
-                    </span>
-                  `
-                  }
-
-                  ${statusBadge}
-                </div>
-
-                <!-- Bookmark Button -->
-                <button
-                  type="button"
-                  data-bookmark-id="${q.id}"
-                  class="mcq-bookmark-btn p-2 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 text-xs font-bold transition-colors cursor-pointer flex items-center gap-1.5 ${
-                    isBookmarked ? 'text-amber-500 bg-amber-50 dark:bg-amber-950/40' : 'text-slate-400'
-                  }"
-                  title="${isBookmarked ? 'Remove Bookmark' : 'Bookmark Question'}"
-                >
-                  <span>${isBookmarked ? '★' : '☆'}</span>
-                  <span class="hidden sm:inline">${isBookmarked ? 'Bookmarked' : 'Bookmark'}</span>
-                </button>
-              </div>
-
-              <!-- Question Body -->
-              <div class="p-6 sm:p-8 space-y-6 max-w-full box-border">
-                <div class="mcq-question-text text-base sm:text-lg font-medium text-slate-900 dark:text-slate-100 leading-relaxed max-w-full box-border" style="word-break: break-word; overflow-wrap: anywhere; white-space: normal;">
-                  <span class="font-bold text-slate-900 dark:text-white mr-1.5">Q${q.questionNumber}.</span>${renderMCQText(q.question)}
-                </div>
-
-                <!-- Options A, B, C, D -->
-                <div class="space-y-3 max-w-full box-border mcq-options-container" data-question-id="${q.id}">
-                  ${(['A', 'B', 'C', 'D'] as const)
-                    .map(optKey => {
-                      const optText = q.options[optKey];
-                      const isSelectedOption = isChecked ? studentAnswer === optKey : draftSelection === optKey;
-                      const isCorrectAnswer = q.correctAnswer === optKey;
-
-                      let optionClasses =
-                        'w-full min-h-[52px] text-left p-4 sm:p-5 rounded-2xl border transition-all flex items-start gap-3.5 sm:gap-4 box-border max-w-full ';
-                      let badgeClasses =
-                        'w-8 h-8 min-w-[32px] rounded-xl flex items-center justify-center shrink-0 font-bold text-sm pointer-events-none ';
-
-                      if (isChecked) {
-                        // Question is evaluated/checked
-                        optionClasses += 'cursor-default ';
-                        if (isCorrectAnswer) {
-                          // Correct option marked green
-                          optionClasses +=
-                            'bg-emerald-50 dark:bg-emerald-950/40 border-emerald-500 text-emerald-900 dark:text-emerald-200 font-medium shadow-xs';
-                          badgeClasses += 'bg-emerald-600 text-white shadow-xs';
-                        } else if (isSelectedOption && !isCorrect) {
-                          // User's wrong option marked red
-                          optionClasses +=
-                            'bg-rose-50 dark:bg-rose-950/40 border-rose-500 text-rose-900 dark:text-rose-200 font-medium';
-                          badgeClasses += 'bg-rose-600 text-white shadow-xs';
-                        } else {
-                          // Other unchosen options
-                          optionClasses +=
-                            'bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 opacity-60 text-slate-600 dark:text-slate-400';
-                          badgeClasses +=
-                            'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300';
-                        }
-                      } else {
-                        // BEFORE CHECK ANSWER: Clean interactive state (NO answer hints revealed)
-                        optionClasses += 'cursor-pointer ';
-                        if (isSelectedOption) {
-                          optionClasses +=
-                            'bg-blue-50 dark:bg-blue-950/50 border-blue-500 text-blue-900 dark:text-blue-100 shadow-xs ring-2 ring-blue-500/20 font-medium';
-                          badgeClasses += 'bg-blue-600 text-white shadow-xs';
-                        } else {
-                          optionClasses +=
-                            'bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 hover:border-blue-400 dark:hover:border-blue-600 text-slate-800 dark:text-slate-200';
-                          badgeClasses +=
-                            'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300';
-                        }
-                      }
-
-                      return `
-                    <button
-                      type="button"
-                      data-question-id="${q.id}"
-                      data-option-key="${optKey}"
-                      class="mcq-option-btn ${optionClasses}"
-                      style="touch-action: manipulation; user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent;"
-                      ${isChecked ? 'disabled' : ''}
-                    >
-                      <span class="mcq-option-badge ${badgeClasses}">
-                        ${optKey}
-                      </span>
-                      <span class="mcq-option-text pt-1 text-sm sm:text-base leading-relaxed flex-1 max-w-full box-border pointer-events-none" style="word-break: break-word; overflow-wrap: anywhere; white-space: normal;">
-                        ${renderMCQText(optText)}
-                      </span>
-                      ${
-                        isChecked && isCorrectAnswer
-                          ? `
-                        <span class="text-emerald-600 dark:text-emerald-400 font-bold text-sm pt-1 pointer-events-none shrink-0">
-                          ✓ Correct
-                        </span>
-                      `
-                          : ''
-                      }
-                      ${
-                        isChecked && isSelectedOption && !isCorrect
-                          ? `
-                        <span class="text-rose-600 dark:text-rose-400 font-bold text-sm pt-1 pointer-events-none shrink-0">
-                          ✗ Your Choice (-1)
-                        </span>
-                      `
-                          : ''
-                      }
-                    </button>
-                  `;
-                    })
-                    .join('')}
-                </div>
-
-                <!-- ACTION OR EVALUATION CONTAINER -->
-                <div class="mcq-action-container max-w-full box-border" data-action-for="${q.id}">
-                  ${
-                    !isChecked
-                      ? `
-                    <!-- BEFORE CHECK ANSWER: Small Check Answer Button -->
-                    <div class="pt-2 flex flex-wrap items-center justify-between gap-3">
-                      <button
-                        type="button"
-                        data-check-answer="${q.id}"
-                        class="mcq-check-answer-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center gap-2 ${
-                          draftSelection
-                            ? 'bg-blue-600 hover:bg-blue-700 active:scale-95 text-white shadow-sm cursor-pointer'
-                            : 'bg-slate-100 dark:bg-slate-800 text-slate-400 dark:text-slate-500 cursor-not-allowed opacity-60'
-                        }"
-                        ${draftSelection ? '' : 'disabled'}
-                      >
-                        <span>✓</span>
-                        <span>Check Answer</span>
-                      </button>
-
-                      <span class="mcq-status-helper-text text-xs text-slate-400">
-                        ${
-                          draftSelection
-                            ? `Option ${draftSelection} selected — click Check Answer to evaluate`
-                            : 'Select an option above, then click Check Answer'
-                        }
-                      </span>
-                    </div>
-                  `
-                      : renderCheckedResultAndSolution(q, isCorrect)
-                  }
-                </div>
-
-              </div>
-
+            : `
+          <div id="mcq-virtual-scroll-container" class="relative w-full" style="min-height: ${totalHeight}px; overflow-anchor: none;">
+            <div id="mcq-virtual-top-spacer" style="height: ${topSpacerHeight}px; width: 100%; overflow-anchor: none;"></div>
+            <div id="mcq-virtual-items-wrapper" class="space-y-6 w-full max-w-full box-border" style="overflow-anchor: none;">
+              ${visibleSlice
+                .map(q => renderQuestionCard(q, progress, checkedMap, engineState, difficultyColors))
+                .join('')}
             </div>
-          `;
-                })
-                .join('')
+            <div id="mcq-virtual-bottom-spacer" style="height: ${bottomSpacerHeight}px; width: 100%; overflow-anchor: none;"></div>
+          </div>
+        `
         }
       </div>
 
@@ -852,6 +969,246 @@ function renderUnitsPracticeEngine(chapterId: string): string {
         <p id="mcq-bottom-summary" class="text-xs text-slate-400 text-center">
           ${attemptedCount} of ${totalQuestions} questions checked • ${correctCount} correct • ${incorrectCount} incorrect
         </p>
+      </div>
+
+    </div>
+  `;
+}
+
+/**
+ * Renders an individual Question Card with high performance and zero DOM bloat.
+ */
+function renderQuestionCard(
+  rawQ: ChapterwiseMCQ,
+  progress: ChapterMCQProgress,
+  checkedMap: Record<string, boolean>,
+  engineState: McqEngineState,
+  difficultyColors: Record<string, string>
+): string {
+  const chapterId = rawQ.chapterId || engineState.chapterId || 'units-measurements';
+  const q = ChapterwiseMcqService.normalizeQuestion(rawQ, chapterId);
+  const isChecked = !!checkedMap[q.id];
+  const studentAnswer = progress.userAnswers?.[q.id] || engineState.selectedOptions[q.id];
+  const draftSelection = engineState.selectedOptions[q.id] || progress.draftSelections?.[q.id];
+  const isCorrect = isChecked && studentAnswer === q.correctAnswer;
+  const isBookmarked = !!progress.bookmarked?.[q.id];
+  let rawDisplayTopic = q.topic || (q as any).subtopic || (q as any).subTopic;
+  if (!rawDisplayTopic || rawDisplayTopic === 'undefined' || rawDisplayTopic === 'null' || String(rawDisplayTopic).trim().length === 0) {
+    const tid = (q as any).topicId;
+    if (tid && TOPICS[tid]?.title) {
+      rawDisplayTopic = TOPICS[tid].title;
+    } else if (tid && tid !== 'undefined' && tid !== 'null') {
+      rawDisplayTopic = formatTopicIdToTitle(tid);
+    } else {
+      rawDisplayTopic = CHAPTERS[chapterId]?.title || CHAPTER_STATS_REGISTRY[chapterId]?.chapterTitle || 'Core Concept';
+    }
+  }
+  rawDisplayTopic = String(rawDisplayTopic);
+  if (rawDisplayTopic.startsWith('phys-') || rawDisplayTopic.startsWith('chem-') || rawDisplayTopic.startsWith('bio-')) {
+    rawDisplayTopic = formatTopicIdToTitle(rawDisplayTopic);
+  }
+  let displayTopic = rawDisplayTopic.trim();
+  if (displayTopic === '' || displayTopic === 'undefined' || displayTopic === 'null') {
+    displayTopic = CHAPTERS[chapterId]?.title || CHAPTER_STATS_REGISTRY[chapterId]?.chapterTitle || 'Core Concept';
+  }
+
+  // Card border styling based on check state
+  let cardBorderClasses = 'border border-slate-200/90 dark:border-slate-800';
+  let statusBadge = '';
+
+  if (isChecked) {
+    if (isCorrect) {
+      cardBorderClasses = 'border-2 border-emerald-500/80 dark:border-emerald-500/80 shadow-xs';
+      statusBadge = `
+        <span class="mcq-status-badge px-3 py-1 rounded-full text-xs font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950/80 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-700">
+          ✓ Correct
+        </span>
+      `;
+    } else {
+      cardBorderClasses = 'border-2 border-rose-500/80 dark:border-rose-500/80 shadow-xs';
+      statusBadge = `
+        <span class="mcq-status-badge px-3 py-1 rounded-full text-xs font-black bg-rose-100 text-rose-800 dark:bg-rose-950/80 dark:text-rose-300 border border-rose-300 dark:border-rose-700">
+          ✗ Incorrect
+        </span>
+      `;
+    }
+  }
+
+  return `
+    <div
+      id="question-block-${q.id}"
+      data-question-id="${q.id}"
+      class="mcq-card-container mcq-question-card w-full max-w-full rounded-3xl bg-white dark:bg-slate-900 ${cardBorderClasses} shadow-sm overflow-hidden box-border"
+      style="touch-action: pan-y;"
+    >
+      
+      <!-- Question Header Bar -->
+      <div class="p-5 sm:p-6 border-b border-slate-100 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-850/40 flex flex-wrap items-center justify-between gap-3">
+        <div class="mcq-header-badges flex flex-wrap items-center gap-2">
+          <span class="px-3 py-1 rounded-xl text-xs font-black bg-blue-600 text-white shadow-xs">
+            Q${q.questionNumber}
+          </span>
+
+          <span class="px-2.5 py-1 rounded-full text-[11px] font-bold border ${difficultyColors[q.difficulty] || difficultyColors['Medium']}">
+            ${q.difficulty || 'Medium'}
+          </span>
+
+          <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200/60 dark:border-slate-700/60">
+            ${displayTopic}
+          </span>
+
+          ${
+            q.isPYQ
+              ? `
+            <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-amber-50 text-amber-700 dark:bg-amber-950/40 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
+              ★ ${q.source && q.source !== 'undefined' && q.source !== 'null' ? q.source : 'NEET Verified PYQ'}
+            </span>
+          `
+              : `
+            <span class="px-2.5 py-1 rounded-full text-[11px] font-medium bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400">
+              ${q.source && q.source !== 'undefined' && q.source !== 'null' ? q.source : 'VG Insights Practice'}
+            </span>
+          `
+          }
+
+          ${statusBadge}
+        </div>
+
+        <!-- Bookmark Button -->
+        <button
+          type="button"
+          data-bookmark-id="${q.id}"
+          class="mcq-bookmark-btn p-2 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 text-xs font-bold transition-colors cursor-pointer flex items-center gap-1.5 ${
+            isBookmarked ? 'text-amber-500 bg-amber-50 dark:bg-amber-950/40' : 'text-slate-400'
+          }"
+          title="${isBookmarked ? 'Remove Bookmark' : 'Bookmark Question'}"
+        >
+          <span>${isBookmarked ? '★' : '☆'}</span>
+          <span class="hidden sm:inline">${isBookmarked ? 'Bookmarked' : 'Bookmark'}</span>
+        </button>
+      </div>
+
+      <!-- Question Body -->
+      <div class="p-6 sm:p-8 space-y-6 max-w-full box-border">
+        <div class="mcq-question-text katex-render-target text-base sm:text-lg font-medium text-slate-900 dark:text-slate-100 leading-relaxed max-w-full box-border" style="word-break: break-word; overflow-wrap: anywhere; white-space: normal;">
+          <span class="font-bold text-slate-900 dark:text-white mr-1.5">Q${q.questionNumber}.</span>${renderMCQText(q.question)}
+        </div>
+
+        <!-- Options A, B, C, D -->
+        <div class="space-y-3 max-w-full box-border mcq-options-container" data-question-id="${q.id}">
+          ${(['A', 'B', 'C', 'D'] as const)
+            .map(optKey => {
+              const optText = q.options?.[optKey] || q.optionsList?.[['A', 'B', 'C', 'D'].indexOf(optKey)] || '';
+              const isSelectedOption = isChecked ? studentAnswer === optKey : draftSelection === optKey;
+              const isCorrectAnswer = q.correctAnswer === optKey;
+
+              let optionClasses =
+                'w-full min-h-[52px] text-left p-4 sm:p-5 rounded-2xl border transition-all flex items-start gap-3.5 sm:gap-4 box-border max-w-full ';
+              let badgeClasses =
+                'w-8 h-8 min-w-[32px] rounded-xl flex items-center justify-center shrink-0 font-bold text-sm pointer-events-none ';
+
+              if (isChecked) {
+                optionClasses += 'cursor-default ';
+                if (isCorrectAnswer) {
+                  optionClasses +=
+                    'bg-emerald-50 dark:bg-emerald-950/40 border-emerald-500 text-emerald-900 dark:text-emerald-200 font-medium shadow-xs';
+                  badgeClasses += 'bg-emerald-600 text-white shadow-xs';
+                } else if (isSelectedOption && !isCorrect) {
+                  optionClasses +=
+                    'bg-rose-50 dark:bg-rose-950/40 border-rose-500 text-rose-900 dark:text-rose-200 font-medium';
+                  badgeClasses += 'bg-rose-600 text-white shadow-xs';
+                } else {
+                  optionClasses +=
+                    'bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 opacity-60 text-slate-600 dark:text-slate-400';
+                  badgeClasses +=
+                    'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300';
+                }
+              } else {
+                optionClasses += 'cursor-pointer ';
+                if (isSelectedOption) {
+                  optionClasses +=
+                    'bg-blue-50 dark:bg-blue-950/50 border-blue-500 text-blue-900 dark:text-blue-100 shadow-xs ring-2 ring-blue-500/20 font-medium';
+                  badgeClasses += 'bg-blue-600 text-white shadow-xs';
+                } else {
+                  optionClasses +=
+                    'bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 hover:border-blue-400 dark:hover:border-blue-600 text-slate-800 dark:text-slate-200';
+                  badgeClasses +=
+                    'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300';
+                }
+              }
+
+              return `
+            <button
+              type="button"
+              data-question-id="${q.id}"
+              data-option-key="${optKey}"
+              class="mcq-option-btn ${optionClasses}"
+              style="touch-action: manipulation; user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent;"
+              ${isChecked ? 'disabled' : ''}
+            >
+              <span class="mcq-option-badge ${badgeClasses}">
+                ${optKey}
+              </span>
+              <span class="mcq-option-text katex-render-target pt-1 text-sm sm:text-base leading-relaxed flex-1 max-w-full box-border pointer-events-none" style="word-break: break-word; overflow-wrap: anywhere; white-space: normal;">
+                ${renderMCQText(optText)}
+              </span>
+              ${
+                isChecked && isCorrectAnswer
+                  ? `
+                <span class="text-emerald-600 dark:text-emerald-400 font-bold text-sm pt-1 pointer-events-none shrink-0">
+                  ✓ Correct
+                </span>
+              `
+                  : ''
+              }
+              ${
+                isChecked && isSelectedOption && !isCorrect
+                  ? `
+                <span class="text-rose-600 dark:text-rose-400 font-bold text-sm pt-1 pointer-events-none shrink-0">
+                  ✗ Your Choice (-1)
+                </span>
+              `
+                  : ''
+              }
+            </button>
+          `;
+            })
+            .join('')}
+        </div>
+
+        <!-- ACTION OR EVALUATION CONTAINER -->
+        <div class="mcq-action-container max-w-full box-border" data-action-for="${q.id}">
+          ${
+            !isChecked
+              ? `
+            <div class="pt-2 flex flex-wrap items-center justify-between gap-3">
+              <button
+                type="button"
+                data-check-answer="${q.id}"
+                class="mcq-check-answer-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center gap-2 ${
+                  draftSelection
+                    ? 'bg-blue-600 hover:bg-blue-700 active:scale-95 text-white shadow-sm cursor-pointer'
+                    : 'bg-slate-100 dark:bg-slate-800 text-slate-400 dark:text-slate-500 cursor-not-allowed opacity-60'
+                }"
+                ${draftSelection ? '' : 'disabled'}
+              >
+                <span>✓</span>
+                <span>Check Answer</span>
+              </button>
+
+              <span class="mcq-status-helper-text text-xs text-slate-400">
+                ${
+                  draftSelection
+                    ? `Option ${draftSelection} selected — click Check Answer to evaluate`
+                    : 'Select an option above, then click Check Answer'
+                }
+              </span>
+            </div>
+          `
+              : renderCheckedResultAndSolution(q, isCorrect)
+          }
+        </div>
+
       </div>
 
     </div>
@@ -960,14 +1317,93 @@ function renderEmptyChapterPracticeView(chapterId: string): string {
           </div>
 
           <!-- Informational Notice Box -->
-          <div class="max-w-lg mx-auto p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/70 text-left text-xs space-y-2">
+          <div class="max-w-xl mx-auto p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/70 text-left text-xs space-y-3">
             <div class="flex items-center gap-2 text-slate-800 dark:text-slate-200 font-bold">
               <span>💡</span>
-              <span>Available Chapter:</span>
+              <span>Available Live Chapters (500 MCQs Each):</span>
             </div>
-            <p class="text-slate-600 dark:text-slate-400">
-              <span class="font-bold text-blue-600 dark:text-blue-400">Physics → Class 11 → Units and Measurements</span> is live with ${ChapterwiseMcqService.getQuestionCount('units-measurements')} MCQs!
-            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
+              <a href="#chapterwise-mcqs/physics/class-11/units-measurements" class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-500 text-blue-600 dark:text-blue-400 font-semibold flex items-center justify-between transition-colors">
+                <span>Units & Measurements</span>
+                <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300">${ChapterwiseMcqService.getQuestionCount('units-measurements')} MCQs</span>
+              </a>
+              <a href="#chapterwise-mcqs/physics/class-11/motion-straight-line" class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-500 text-blue-600 dark:text-blue-400 font-semibold flex items-center justify-between transition-colors">
+                <span>Motion in a Straight Line</span>
+                <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300">${ChapterwiseMcqService.getQuestionCount('motion-straight-line')} MCQs</span>
+              </a>
+              <a href="#chapterwise-mcqs/physics/class-11/motion-plane" class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-500 text-blue-600 dark:text-blue-400 font-semibold flex items-center justify-between transition-colors">
+                <span>Motion in a Plane</span>
+                <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300">${ChapterwiseMcqService.getQuestionCount('motion-plane')} MCQs</span>
+              </a>
+              <a href="#chapterwise-mcqs/physics/class-11/laws-of-motion" class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-500 text-blue-600 dark:text-blue-400 font-semibold flex items-center justify-between transition-colors">
+                <span>Laws of Motion</span>
+                <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300">${ChapterwiseMcqService.getQuestionCount('laws-of-motion')} MCQs</span>
+              </a>
+              <a href="#chapterwise-mcqs/physics/class-11/mechanical-properties-solids" class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-500 text-blue-600 dark:text-blue-400 font-semibold flex items-center justify-between transition-colors">
+                <span>Mechanical Properties of Solids</span>
+                <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300">${ChapterwiseMcqService.getQuestionCount('mechanical-properties-solids')} MCQs</span>
+              </a>
+              <a href="#chapterwise-mcqs/physics/class-11/mechanical-properties-fluids" class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-500 text-blue-600 dark:text-blue-400 font-semibold flex items-center justify-between transition-colors">
+                <span>Mechanical Properties of Fluids</span>
+                <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300">${ChapterwiseMcqService.getQuestionCount('mechanical-properties-fluids')} MCQs</span>
+              </a>
+              <a href="#chapterwise-mcqs/physics/class-11/thermal-properties-matter" class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-500 text-blue-600 dark:text-blue-400 font-semibold flex items-center justify-between transition-colors">
+                <span>Thermal Properties of Matter</span>
+                <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300">${ChapterwiseMcqService.getQuestionCount('thermal-properties-matter')} MCQs</span>
+              </a>
+              <a href="#chapterwise-mcqs/physics/class-11/thermodynamics-ch" class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-500 text-blue-600 dark:text-blue-400 font-semibold flex items-center justify-between transition-colors">
+                <span>Thermodynamics</span>
+                <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300">${ChapterwiseMcqService.getQuestionCount('thermodynamics-ch')} MCQs</span>
+              </a>
+              <a href="#chapterwise-mcqs/physics/class-11/kinetic-theory" class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-500 text-blue-600 dark:text-blue-400 font-semibold flex items-center justify-between transition-colors">
+                <span>Kinetic Theory of Gases</span>
+                <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300">${ChapterwiseMcqService.getQuestionCount('kinetic-theory')} MCQs</span>
+              </a>
+              <a href="#chapterwise-mcqs/physics/class-11/oscillations" class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-500 text-blue-600 dark:text-blue-400 font-semibold flex items-center justify-between transition-colors">
+                <span>Oscillations</span>
+                <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300">${ChapterwiseMcqService.getQuestionCount('oscillations')} MCQs</span>
+              </a>
+              <a href="#chapterwise-mcqs/physics/class-11/waves" class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-500 text-blue-600 dark:text-blue-400 font-semibold flex items-center justify-between transition-colors">
+                <span>Waves</span>
+                <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300">${ChapterwiseMcqService.getQuestionCount('waves')} MCQs</span>
+              </a>
+              <a href="#chapterwise-mcqs/chemistry/class-11/mole-concept" class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-emerald-500 text-emerald-600 dark:text-emerald-400 font-semibold flex items-center justify-between transition-colors">
+                <span>Some Basic Concepts of Chemistry</span>
+                <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300">${ChapterwiseMcqService.getQuestionCount('mole-concept')} MCQs</span>
+              </a>
+              <a href="#chapterwise-mcqs/chemistry/class-11/atomic-structure" class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-emerald-500 text-emerald-600 dark:text-emerald-400 font-semibold flex items-center justify-between transition-colors">
+                <span>Structure of Atom</span>
+                <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300">${ChapterwiseMcqService.getQuestionCount('atomic-structure')} MCQs</span>
+              </a>
+              <a href="#chapterwise-mcqs/chemistry/class-11/periodic-classification" class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-emerald-500 text-emerald-600 dark:text-emerald-400 font-semibold flex items-center justify-between transition-colors">
+                <span>Classification of Elements</span>
+                <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300">${ChapterwiseMcqService.getQuestionCount('periodic-classification')} MCQs</span>
+              </a>
+              <a href="#chapterwise-mcqs/chemistry/class-11/chemical-bonding" class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-emerald-500 text-emerald-600 dark:text-emerald-400 font-semibold flex items-center justify-between transition-colors">
+                <span>Chemical Bonding</span>
+                <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300">${ChapterwiseMcqService.getQuestionCount('chemical-bonding')} MCQs</span>
+              </a>
+              <a href="#chapterwise-mcqs/chemistry/class-11/thermodynamics-chem" class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-emerald-500 text-emerald-600 dark:text-emerald-400 font-semibold flex items-center justify-between transition-colors">
+                <span>Chemical Thermodynamics</span>
+                <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300">${ChapterwiseMcqService.getQuestionCount('thermodynamics-chem')} MCQs</span>
+              </a>
+              <a href="#chapterwise-mcqs/chemistry/class-11/redox-reactions" class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-emerald-500 text-emerald-600 dark:text-emerald-400 font-semibold flex items-center justify-between transition-colors">
+                <span>Redox Reactions</span>
+                <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300">${ChapterwiseMcqService.getQuestionCount('redox-reactions')} MCQs</span>
+              </a>
+              <a href="#chapterwise-mcqs/chemistry/class-11/p-block-11" class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-emerald-500 text-emerald-600 dark:text-emerald-400 font-semibold flex items-center justify-between transition-colors">
+                <span>p-Block Elements (Group 13 & 14)</span>
+                <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300">${ChapterwiseMcqService.getQuestionCount('p-block-11')} MCQs</span>
+              </a>
+              <a href="#chapterwise-mcqs/chemistry/class-11/organic-chemistry-basic-principles" class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-emerald-500 text-emerald-600 dark:text-emerald-400 font-semibold flex items-center justify-between transition-colors">
+                <span>Organic Chemistry: Basic Principles</span>
+                <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300">${ChapterwiseMcqService.getQuestionCount('organic-chemistry-basic-principles')} MCQs</span>
+              </a>
+              <a href="#chapterwise-mcqs/chemistry/class-11/hydrocarbons" class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-emerald-500 text-emerald-600 dark:text-emerald-400 font-semibold flex items-center justify-between transition-colors">
+                <span>Hydrocarbons</span>
+                <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300">${ChapterwiseMcqService.getQuestionCount('hydrocarbons')} MCQs</span>
+              </a>
+            </div>
           </div>
 
           <!-- Quick Navigation Actions -->
@@ -1138,7 +1574,7 @@ function renderSubjectChaptersView(subjectId: string, activeClassLevel?: 'class-
                     isPopulatedChapter
                       ? `
                     <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800">
-                      ✓ ${chapterQCount} MCQs Ready
+                      ✓ ${chapterQCount} MCQs Ready</span> ${PaymentService.isChapterAllowed(subjectId, chapter.id) ? '<span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-400 border border-emerald-200">✓ Free</span>' : '<span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-amber-50 text-amber-700 dark:bg-amber-950/40 dark:text-amber-400 border border-amber-200">🔒 Pro</span>'}
                     </span>
                   `
                       : `
@@ -1236,6 +1672,10 @@ function renderMainChapterwiseOverview(): string {
             <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-300 text-xs font-bold">
               <span>🎯</span>
               <span>Units & Measurements is live with ${unitsCount} MCQs!</span>
+            </span>
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800 text-blue-800 dark:text-blue-300 text-xs font-bold">
+              <span>⚡</span>
+              <span>4 Physics Chapters Live (2,000 MCQs)</span>
             </span>
             <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 text-amber-800 dark:text-amber-300 text-xs font-medium">
               <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
@@ -1519,12 +1959,29 @@ function renderAllChaptersCards(filterSubject: string = 'all', searchKeyword: st
  * Attaches all event listeners for Chapterwise MCQ view and interactive practice engine
  */
 export function attachChapterwiseMcqsEvents(): void {
-  // Always trigger math rendering
-  setTimeout(() => {
-    renderMath();
-  }, 50);
+  // Clean up any existing window scroll listener and resize observer from prior chapter/view
+  if (activeVirtualState.scrollListener) {
+    window.removeEventListener('scroll', activeVirtualState.scrollListener);
+    activeVirtualState.scrollListener = null;
+  }
+  if (activeVirtualState.resizeObserver) {
+    activeVirtualState.resizeObserver.disconnect();
+    activeVirtualState.resizeObserver = null;
+  }
 
-  // 1. Directory Search and Subject Filter Tabs
+  // 1. Initial math rendering for visible items
+  const itemsWrapper = document.getElementById('mcq-virtual-items-wrapper');
+  if (itemsWrapper) {
+    setTimeout(() => {
+      renderMath(itemsWrapper);
+    }, 30);
+  } else {
+    setTimeout(() => {
+      renderMath();
+    }, 50);
+  }
+
+  // 2. Directory Search and Subject Filter Tabs
   const searchInput = document.getElementById('mcq-chapter-search-input') as HTMLInputElement | null;
   const grid = document.getElementById('mcq-chapters-grid');
   const filterBtns = document.querySelectorAll('.mcq-subject-filter-btn');
@@ -1535,7 +1992,21 @@ export function attachChapterwiseMcqsEvents(): void {
   const updateGrid = () => {
     if (!grid) return;
     grid.innerHTML = renderAllChaptersCards(currentSubject, currentSearch);
+    attachCardHoverPrefetch();
   };
+
+  const attachCardHoverPrefetch = () => {
+    document.querySelectorAll<HTMLAnchorElement>('.mcq-chapter-card').forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        const href = card.getAttribute('href') || '';
+        const match = href.match(/class-\d+\/([a-z0-9\-]+)/);
+        if (match && match[1]) {
+          ChapterwiseMcqService.loadChapterQuestions(match[1]);
+        }
+      }, { once: true });
+    });
+  };
+  attachCardHoverPrefetch();
 
   if (searchInput) {
     searchInput.addEventListener('input', e => {
@@ -1560,197 +2031,423 @@ export function attachChapterwiseMcqsEvents(): void {
     });
   });
 
-  // 2. Practice Engine Interactive Events (When on units-measurements)
+  const updateSpacersOnly = () => {
+    const cont = document.getElementById('mcq-virtual-scroll-container');
+    const topSpacer = document.getElementById('mcq-virtual-top-spacer');
+    const bottomSpacer = document.getElementById('mcq-virtual-bottom-spacer');
+    if (!cont || !topSpacer || !bottomSpacer) return;
+
+    const offsets = activeVirtualState.offsets;
+    const start = activeVirtualState.startIndex;
+    const end = activeVirtualState.endIndex;
+    const total = activeVirtualState.totalHeight;
+
+    topSpacer.style.height = `${offsets[start] || 0}px`;
+    bottomSpacer.style.height = `${Math.max(0, total - (offsets[end] || 0))}px`;
+    cont.style.minHeight = `${total}px`;
+  };
+
+  // 3. Precision Variable-Height Virtual Scrolling for Continuous MCQ Bank
+  const container = document.getElementById('mcq-virtual-scroll-container');
+  if (container) {
+    // Clean up any existing window scroll listener and resize observer
+    if (activeVirtualState.scrollListener) {
+      window.removeEventListener('scroll', activeVirtualState.scrollListener);
+      activeVirtualState.scrollListener = null;
+    }
+    if (activeVirtualState.resizeObserver) {
+      activeVirtualState.resizeObserver.disconnect();
+      activeVirtualState.resizeObserver = null;
+    }
+
+    const difficultyColors: Record<string, string> = {
+      Easy: 'bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800',
+      Medium: 'bg-amber-50 text-amber-700 dark:bg-amber-950/40 dark:text-amber-300 border-amber-200 dark:border-amber-800',
+      Hard: 'bg-rose-50 text-rose-700 dark:bg-rose-950/40 dark:text-rose-300 border-rose-200 dark:border-rose-800'
+    };
+
+    // ResizeObserver to dynamically record question card heights and keep offsets precise
+    const ro = new ResizeObserver((entries) => {
+      let anyChanged = false;
+      for (const entry of entries) {
+        const el = entry.target as HTMLElement;
+        const qId = el.getAttribute('data-question-id');
+        if (qId) {
+          const h = Math.round(el.getBoundingClientRect().height);
+          const prev = activeVirtualState.measuredHeights.get(qId);
+          if (h > 100 && (!prev || Math.abs(prev - h) > 3)) {
+            activeVirtualState.measuredHeights.set(qId, h);
+            anyChanged = true;
+          }
+        }
+      }
+      if (anyChanged) {
+        recalculateVirtualOffsets(engineState.chapterId);
+        updateSpacersOnly();
+      }
+    });
+    activeVirtualState.resizeObserver = ro;
+
+    // Observe initially rendered cards
+    const initialCards = container.querySelectorAll<HTMLElement>('.mcq-question-card');
+    initialCards.forEach(card => ro.observe(card));
+
+    let ticking = false;
+    const updateVirtualSlice = () => {
+      const cont = document.getElementById('mcq-virtual-scroll-container');
+      const wrapper = document.getElementById('mcq-virtual-items-wrapper');
+      const topSpacer = document.getElementById('mcq-virtual-top-spacer');
+      const bottomSpacer = document.getElementById('mcq-virtual-bottom-spacer');
+      if (!cont || !wrapper || !topSpacer || !bottomSpacer) return;
+
+      const total = activeVirtualState.filteredQuestions.length;
+      if (total === 0) return;
+
+      // Calculate container document top coordinate
+      const contRect = cont.getBoundingClientRect();
+      const contDocTop = contRect.top + window.scrollY;
+      const relativeScroll = Math.max(0, window.scrollY - contDocTop);
+      const viewportHeight = window.innerHeight || 800;
+
+      // Use precision binary search across offsets
+      const firstVisible = findIndexAtOffset(relativeScroll);
+      const lastVisible = findIndexAtOffset(relativeScroll + viewportHeight);
+
+      // Buffer window calculation
+      const targetStart = Math.max(0, firstVisible - BUFFER_BEFORE);
+      const targetEnd = Math.min(total, lastVisible + 1 + BUFFER_AFTER);
+
+      const curStart = activeVirtualState.startIndex;
+      const curEnd = activeVirtualState.endIndex;
+
+      // Hysteresis: only adjust window if visible questions get within 2 items of rendered boundary
+      const needsAdjustment =
+        (firstVisible < curStart + 2 && curStart > 0) ||
+        (lastVisible > curEnd - 3 && curEnd < total) ||
+        (targetStart !== curStart && Math.abs(targetStart - curStart) >= 3) ||
+        (targetEnd !== curEnd && Math.abs(targetEnd - curEnd) >= 3);
+
+      if (!needsAdjustment) return;
+
+      activeVirtualState.startIndex = targetStart;
+      activeVirtualState.endIndex = targetEnd;
+
+      const progress = ChapterwiseMcqService.getProgress(engineState.chapterId);
+      const checkedMap = progress.checkedQuestions || {};
+      const newSlice = activeVirtualState.filteredQuestions.slice(targetStart, targetEnd);
+
+      // Check if old window and new window overlap
+      const hasOverlap = targetStart < curEnd && targetEnd > curStart;
+
+      if (!hasOverlap) {
+        // Complete jump: full replacement
+        ro.disconnect();
+        wrapper.innerHTML = newSlice
+          .map(q => renderQuestionCard(q, progress, checkedMap, engineState, difficultyColors))
+          .join('');
+        wrapper.querySelectorAll<HTMLElement>('.mcq-question-card').forEach(card => ro.observe(card));
+        renderMath(wrapper);
+      } else {
+        // Incremental smooth slide: preserve existing DOM nodes to prevent jumps and layout thrashing
+        // 1. Remove cards that slid out of top
+        if (targetStart > curStart) {
+          for (let i = curStart; i < targetStart; i++) {
+            const q = activeVirtualState.filteredQuestions[i];
+            if (q) {
+              const el = document.getElementById(`question-block-${q.id}`);
+              if (el) {
+                ro.unobserve(el);
+                el.remove();
+              }
+            }
+          }
+        }
+
+        // 2. Remove cards that slid out of bottom
+        if (targetEnd < curEnd) {
+          for (let i = targetEnd; i < curEnd; i++) {
+            const q = activeVirtualState.filteredQuestions[i];
+            if (q) {
+              const el = document.getElementById(`question-block-${q.id}`);
+              if (el) {
+                ro.unobserve(el);
+                el.remove();
+              }
+            }
+          }
+        }
+
+        const newlyAddedCards: HTMLElement[] = [];
+
+        // 3. Prepend cards that entered from top
+        if (targetStart < curStart) {
+          const firstOldCard = wrapper.firstElementChild;
+          for (let i = targetStart; i < curStart; i++) {
+            const q = activeVirtualState.filteredQuestions[i];
+            if (q && !document.getElementById(`question-block-${q.id}`)) {
+              const cardHTML = renderQuestionCard(q, progress, checkedMap, engineState, difficultyColors);
+              const tempDiv = document.createElement('div');
+              tempDiv.innerHTML = cardHTML;
+              const newCard = tempDiv.firstElementChild as HTMLElement;
+              if (newCard) {
+                if (firstOldCard) {
+                  wrapper.insertBefore(newCard, firstOldCard);
+                } else {
+                  wrapper.appendChild(newCard);
+                }
+                ro.observe(newCard);
+                newlyAddedCards.push(newCard);
+              }
+            }
+          }
+        }
+
+        // 4. Append cards that entered from bottom
+        if (targetEnd > curEnd) {
+          for (let i = curEnd; i < targetEnd; i++) {
+            const q = activeVirtualState.filteredQuestions[i];
+            if (q && !document.getElementById(`question-block-${q.id}`)) {
+              const cardHTML = renderQuestionCard(q, progress, checkedMap, engineState, difficultyColors);
+              const tempDiv = document.createElement('div');
+              tempDiv.innerHTML = cardHTML;
+              const newCard = tempDiv.firstElementChild as HTMLElement;
+              if (newCard) {
+                wrapper.appendChild(newCard);
+                ro.observe(newCard);
+                newlyAddedCards.push(newCard);
+              }
+            }
+          }
+        }
+
+        // Render math only for newly inserted cards
+        newlyAddedCards.forEach(card => renderMath(card));
+      }
+
+      updateSpacersOnly();
+    };
+
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        ticking = false;
+        updateVirtualSlice();
+      });
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    activeVirtualState.scrollListener = onScroll;
+  }
+
+  // 4. Delegated Event Handler for all interactive MCQ components inside the continuous view
+  const engineWrapper = document.getElementById('mcq-engine-wrapper');
+  if (engineWrapper) {
+    engineWrapper.addEventListener('click', (e) => {
+      const target = e.target as HTMLElement;
+
+      // A. Option Button Clicked
+      const optBtn = target.closest<HTMLButtonElement>('.mcq-option-btn');
+      if (optBtn) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const qId = optBtn.getAttribute('data-question-id');
+        const optKey = optBtn.getAttribute('data-option-key') as 'A' | 'B' | 'C' | 'D';
+        if (!qId || !optKey) return;
+
+        const currentChapterId = engineState.chapterId || 'units-measurements';
+        const progress = ChapterwiseMcqService.getProgress(currentChapterId);
+        if (progress.checkedQuestions?.[qId] || optBtn.disabled) return;
+
+        // Persist draft selection
+        engineState.selectedOptions[qId] = optKey;
+        ChapterwiseMcqService.saveDraftSelection(currentChapterId, qId, optKey);
+
+        // Update option buttons state in this card
+        const parentContainer = optBtn.closest('.mcq-options-container');
+        if (parentContainer) {
+          const siblingButtons = parentContainer.querySelectorAll<HTMLButtonElement>('.mcq-option-btn');
+          siblingButtons.forEach(sBtn => {
+            const sKey = sBtn.getAttribute('data-option-key');
+            const badge = sBtn.querySelector('.mcq-option-badge');
+            if (sKey === optKey) {
+              sBtn.className =
+                'mcq-option-btn w-full min-h-[52px] text-left p-4 sm:p-5 rounded-2xl border transition-all flex items-start gap-3.5 sm:gap-4 box-border max-w-full cursor-pointer bg-blue-50 dark:bg-blue-950/50 border-blue-500 text-blue-900 dark:text-blue-100 shadow-xs ring-2 ring-blue-500/20 font-medium';
+              if (badge) {
+                badge.className =
+                  'mcq-option-badge w-8 h-8 min-w-[32px] rounded-xl flex items-center justify-center shrink-0 font-bold text-sm pointer-events-none bg-blue-600 text-white shadow-xs';
+              }
+            } else {
+              sBtn.className =
+                'mcq-option-btn w-full min-h-[52px] text-left p-4 sm:p-5 rounded-2xl border transition-all flex items-start gap-3.5 sm:gap-4 box-border max-w-full cursor-pointer bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 hover:border-blue-400 dark:hover:border-blue-600 text-slate-800 dark:text-slate-200';
+              if (badge) {
+                badge.className =
+                  'mcq-option-badge w-8 h-8 min-w-[32px] rounded-xl flex items-center justify-center shrink-0 font-bold text-sm pointer-events-none bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300';
+              }
+            }
+          });
+        }
+
+        // Activate Check Answer button
+        const questionCard = optBtn.closest('.mcq-question-card');
+        if (questionCard) {
+          const checkBtn = questionCard.querySelector<HTMLButtonElement>('.mcq-check-answer-btn');
+          if (checkBtn) {
+            checkBtn.disabled = false;
+            checkBtn.className =
+              'mcq-check-answer-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center gap-2 bg-blue-600 hover:bg-blue-700 active:scale-95 text-white shadow-sm cursor-pointer';
+            const helperText = questionCard.querySelector('.mcq-status-helper-text');
+            if (helperText) {
+              helperText.textContent = `Option ${optKey} selected — click Check Answer to evaluate`;
+            }
+          }
+        }
+        return;
+      }
+
+      // B. Check Answer Button Clicked
+      const checkBtn = target.closest<HTMLButtonElement>('.mcq-check-answer-btn');
+      if (checkBtn) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const qId = checkBtn.getAttribute('data-check-answer');
+        if (!qId) return;
+
+        const currentChapterId = engineState.chapterId || 'units-measurements';
+        const allQuestions = ChapterwiseMcqService.getQuestions(currentChapterId);
+        let questionData = allQuestions.find(item => item.id === qId);
+        if (!questionData) return;
+        questionData = ChapterwiseMcqService.normalizeQuestion(questionData, currentChapterId);
+
+        const progress = ChapterwiseMcqService.getProgress(currentChapterId);
+        const chosenOption = engineState.selectedOptions[qId] || progress.draftSelections?.[qId];
+        if (!chosenOption) return;
+
+        try {
+          // Evaluate question and sync to mistake book
+          const checkResult = ChapterwiseMcqService.checkAnswer(currentChapterId, qId, chosenOption);
+          const isCorrect = checkResult.isCorrect;
+          const updatedProgress = checkResult.progress;
+
+          const questionCard = document.getElementById(`question-block-${qId}`);
+          if (questionCard) {
+            questionCard.className = `mcq-card-container mcq-question-card w-full max-w-full rounded-3xl bg-white dark:bg-slate-900 ${
+              isCorrect
+                ? 'border-2 border-emerald-500/80 dark:border-emerald-500/80 shadow-xs'
+                : 'border-2 border-rose-500/80 dark:border-rose-500/80 shadow-xs'
+            } shadow-sm overflow-hidden box-border`;
+
+            const headerBadges = questionCard.querySelector('.mcq-header-badges');
+            if (headerBadges) {
+              const oldStatusBadge = headerBadges.querySelector('.mcq-status-badge');
+              if (oldStatusBadge) oldStatusBadge.remove();
+              headerBadges.insertAdjacentHTML(
+                'beforeend',
+                `<span class="mcq-status-badge px-3 py-1 rounded-full text-xs font-black ${
+                  isCorrect
+                    ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950/80 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-700'
+                    : 'bg-rose-100 text-rose-800 dark:bg-rose-950/80 dark:text-rose-300 border border-rose-300 dark:border-rose-700'
+                }">${isCorrect ? '✓ Correct' : '✗ Incorrect'}</span>`
+              );
+            }
+
+            const optBtns = questionCard.querySelectorAll<HTMLButtonElement>('.mcq-option-btn');
+            optBtns.forEach(optB => {
+              optB.disabled = true;
+              const optK = optB.getAttribute('data-option-key');
+              const isThisSelected = optK === chosenOption;
+              const isThisCorrect = optK === questionData.correctAnswer;
+              const badge = optB.querySelector('.mcq-option-badge');
+
+              if (isThisCorrect) {
+                optB.className =
+                  'mcq-option-btn w-full min-h-[52px] text-left p-4 sm:p-5 rounded-2xl border transition-all flex items-start gap-3.5 sm:gap-4 box-border max-w-full cursor-default bg-emerald-50 dark:bg-emerald-950/40 border-emerald-500 text-emerald-900 dark:text-emerald-200 font-medium shadow-xs';
+                if (badge) {
+                  badge.className =
+                    'mcq-option-badge w-8 h-8 min-w-[32px] rounded-xl flex items-center justify-center shrink-0 font-bold text-sm pointer-events-none bg-emerald-600 text-white shadow-xs';
+                }
+                if (!optB.querySelector('.mcq-indicator-correct')) {
+                  optB.insertAdjacentHTML(
+                    'beforeend',
+                    '<span class="mcq-indicator-correct text-emerald-600 dark:text-emerald-400 font-bold text-sm pt-1 pointer-events-none shrink-0">✓ Correct</span>'
+                  );
+                }
+              } else if (isThisSelected && !isCorrect) {
+                optB.className =
+                  'mcq-option-btn w-full min-h-[52px] text-left p-4 sm:p-5 rounded-2xl border transition-all flex items-start gap-3.5 sm:gap-4 box-border max-w-full cursor-default bg-rose-50 dark:bg-rose-950/40 border-rose-500 text-rose-900 dark:text-rose-200 font-medium';
+                if (badge) {
+                  badge.className =
+                    'mcq-option-badge w-8 h-8 min-w-[32px] rounded-xl flex items-center justify-center shrink-0 font-bold text-sm pointer-events-none bg-rose-600 text-white shadow-xs';
+                }
+                if (!optB.querySelector('.mcq-indicator-wrong')) {
+                  optB.insertAdjacentHTML(
+                    'beforeend',
+                    '<span class="mcq-indicator-wrong text-rose-600 dark:text-rose-400 font-bold text-sm pt-1 pointer-events-none shrink-0">✗ Your Choice (-1)</span>'
+                  );
+                }
+              } else {
+                optB.className =
+                  'mcq-option-btn w-full min-h-[52px] text-left p-4 sm:p-5 rounded-2xl border transition-all flex items-start gap-3.5 sm:gap-4 box-border max-w-full cursor-default bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 opacity-60 text-slate-600 dark:text-slate-400';
+                if (badge) {
+                  badge.className =
+                    'mcq-option-badge w-8 h-8 min-w-[32px] rounded-xl flex items-center justify-center shrink-0 font-bold text-sm pointer-events-none bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300';
+                }
+              }
+            });
+
+            const actionContainer = questionCard.querySelector('.mcq-action-container');
+            if (actionContainer) {
+              actionContainer.innerHTML = renderCheckedResultAndSolution(questionData, isCorrect);
+              renderMath(actionContainer as HTMLElement);
+            }
+
+            // Immediately remeasure card height and update virtualizer spacers
+            const cardHeight = Math.round(questionCard.getBoundingClientRect().height);
+            if (cardHeight > 100) {
+              activeVirtualState.measuredHeights.set(qId, cardHeight);
+              recalculateVirtualOffsets(currentChapterId);
+              updateSpacersOnly();
+            }
+          }
+
+          updateLiveStatsInDOM(updatedProgress, allQuestions.length);
+        } catch (err) {
+          console.error('[Chapterwise MCQs] Error evaluating answer for question', qId, err);
+        }
+        return;
+      }
+
+      // C. Bookmark Button Clicked
+      const bookmarkBtn = target.closest<HTMLButtonElement>('.mcq-bookmark-btn');
+      if (bookmarkBtn) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const qId = bookmarkBtn.getAttribute('data-bookmark-id');
+        if (qId) {
+          const currentChapterId = engineState.chapterId || 'units-measurements';
+          const isNowBookmarked = ChapterwiseMcqService.toggleBookmark(currentChapterId, qId);
+          bookmarkBtn.className = `mcq-bookmark-btn p-2 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 text-xs font-bold transition-colors cursor-pointer flex items-center gap-1.5 ${
+            isNowBookmarked ? 'text-amber-500 bg-amber-50 dark:bg-amber-950/40' : 'text-slate-400'
+          }`;
+          bookmarkBtn.innerHTML = `<span>${isNowBookmarked ? '★' : '☆'}</span><span class="hidden sm:inline">${
+            isNowBookmarked ? 'Bookmarked' : 'Bookmark'
+          }</span>`;
+        }
+        return;
+      }
+    });
+  }
+
+  // 5. Engine View Re-renderer for filter switches
   const refreshEngineView = () => {
     const appContent = document.getElementById('app-content') || document.getElementById('root');
     if (!appContent) return;
     appContent.innerHTML = renderUnitsPracticeEngine(engineState.chapterId || 'units-measurements');
     attachChapterwiseMcqsEvents();
-    renderMath();
   };
-
-  // Option selection on continuous scroll page:
-  // Independent selection per question, clear visual active state, no scroll jump, no question transition
-  const optionButtons = document.querySelectorAll<HTMLButtonElement>('.mcq-option-btn');
-  optionButtons.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-
-      // If already submitted and evaluated, options are disabled
-      const qId = btn.getAttribute('data-question-id');
-      const optKey = btn.getAttribute('data-option-key') as 'A' | 'B' | 'C' | 'D';
-      if (!qId || !optKey) return;
-
-      const currentChapterId = engineState.chapterId || 'units-measurements';
-      const progress = ChapterwiseMcqService.getProgress(currentChapterId);
-      // If question is already checked, options cannot be changed
-      if (progress.checkedQuestions?.[qId] || btn.disabled) return;
-
-      // Update engine state and persist draft selection
-      engineState.selectedOptions[qId] = optKey;
-      ChapterwiseMcqService.saveDraftSelection(engineState.chapterId || 'units-measurements', qId, optKey);
-
-      // Update UI for this question's options in-place with zero page jump
-      const parentContainer = btn.closest('.mcq-options-container');
-      if (parentContainer) {
-        const siblingButtons = parentContainer.querySelectorAll<HTMLButtonElement>('.mcq-option-btn');
-        siblingButtons.forEach(sBtn => {
-          const sKey = sBtn.getAttribute('data-option-key');
-          const badge = sBtn.querySelector('.mcq-option-badge');
-
-          if (sKey === optKey) {
-            // Selected state
-            sBtn.className =
-              'mcq-option-btn w-full min-h-[52px] text-left p-4 sm:p-5 rounded-2xl border transition-all flex items-start gap-3.5 sm:gap-4 box-border max-w-full cursor-pointer bg-blue-50 dark:bg-blue-950/50 border-blue-500 text-blue-900 dark:text-blue-100 shadow-xs ring-2 ring-blue-500/20 font-medium';
-            if (badge) {
-              badge.className =
-                'mcq-option-badge w-8 h-8 min-w-[32px] rounded-xl flex items-center justify-center shrink-0 font-bold text-sm pointer-events-none bg-blue-600 text-white shadow-xs';
-            }
-          } else {
-            // Unselected state
-            sBtn.className =
-              'mcq-option-btn w-full min-h-[52px] text-left p-4 sm:p-5 rounded-2xl border transition-all flex items-start gap-3.5 sm:gap-4 box-border max-w-full cursor-pointer bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 hover:border-blue-400 dark:hover:border-blue-600 text-slate-800 dark:text-slate-200';
-            if (badge) {
-              badge.className =
-                'mcq-option-badge w-8 h-8 min-w-[32px] rounded-xl flex items-center justify-center shrink-0 font-bold text-sm pointer-events-none bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300';
-            }
-          }
-        });
-      }
-
-      // Enable and activate Check Answer button for this question
-      const questionCard = btn.closest('.mcq-question-card');
-      if (questionCard) {
-        const checkBtn = questionCard.querySelector<HTMLButtonElement>('.mcq-check-answer-btn');
-        if (checkBtn) {
-          checkBtn.disabled = false;
-          checkBtn.className =
-            'mcq-check-answer-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center gap-2 bg-blue-600 hover:bg-blue-700 active:scale-95 text-white shadow-sm cursor-pointer';
-          const helperText = questionCard.querySelector('.mcq-status-helper-text');
-          if (helperText) {
-            helperText.textContent = `Option ${optKey} selected — click Check Answer to evaluate`;
-          }
-        }
-      }
-    });
-  });
-
-  // CHECK ANSWER PER QUESTION (Evaluates individual question and reveals solution INLINE)
-  const checkAnswerButtons = document.querySelectorAll<HTMLButtonElement>('.mcq-check-answer-btn');
-  checkAnswerButtons.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-
-      const qId = btn.getAttribute('data-check-answer');
-      if (!qId) return;
-
-      const currentChapterId = engineState.chapterId || 'units-measurements';
-      const allQuestions = ChapterwiseMcqService.getQuestions(currentChapterId);
-      const questionData = allQuestions.find(item => item.id === qId);
-      if (!questionData) return;
-
-      const progress = ChapterwiseMcqService.getProgress(currentChapterId);
-      const chosenOption = engineState.selectedOptions[qId] || progress.draftSelections?.[qId];
-      if (!chosenOption) return;
-
-      // 1. Evaluate question and persist in service + mistake book
-      const checkResult = ChapterwiseMcqService.checkAnswer(currentChapterId, qId, chosenOption);
-      const isCorrect = checkResult.isCorrect;
-      const updatedProgress = checkResult.progress;
-
-      // 2. Inline update on the question card (no page jump, no scrolling away)
-      const questionCard = document.getElementById(`question-block-${qId}`);
-      if (questionCard) {
-        // Border update
-        questionCard.className = `mcq-card-container mcq-question-card w-full max-w-full rounded-3xl bg-white dark:bg-slate-900 ${
-          isCorrect
-            ? 'border-2 border-emerald-500/80 dark:border-emerald-500/80 shadow-xs'
-            : 'border-2 border-rose-500/80 dark:border-rose-500/80 shadow-xs'
-        } shadow-sm overflow-hidden box-border`;
-
-        // Update header status badge
-        const headerBadges = questionCard.querySelector('.mcq-header-badges');
-        if (headerBadges) {
-          const oldStatusBadge = headerBadges.querySelector('.mcq-status-badge');
-          if (oldStatusBadge) oldStatusBadge.remove();
-          headerBadges.insertAdjacentHTML(
-            'beforeend',
-            `<span class="mcq-status-badge px-3 py-1 rounded-full text-xs font-black ${
-              isCorrect
-                ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950/80 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-700'
-                : 'bg-rose-100 text-rose-800 dark:bg-rose-950/80 dark:text-rose-300 border border-rose-300 dark:border-rose-700'
-            }">${isCorrect ? '✓ Correct' : '✗ Incorrect'}</span>`
-          );
-        }
-
-        // Lock options and mark them
-        const optBtns = questionCard.querySelectorAll<HTMLButtonElement>('.mcq-option-btn');
-        optBtns.forEach(optBtn => {
-          optBtn.disabled = true;
-          const optKey = optBtn.getAttribute('data-option-key');
-          const isThisSelected = optKey === chosenOption;
-          const isThisCorrect = optKey === questionData.correctAnswer;
-          const badge = optBtn.querySelector('.mcq-option-badge');
-
-          if (isThisCorrect) {
-            optBtn.className =
-              'mcq-option-btn w-full min-h-[52px] text-left p-4 sm:p-5 rounded-2xl border transition-all flex items-start gap-3.5 sm:gap-4 box-border max-w-full cursor-default bg-emerald-50 dark:bg-emerald-950/40 border-emerald-500 text-emerald-900 dark:text-emerald-200 font-medium shadow-xs';
-            if (badge) {
-              badge.className =
-                'mcq-option-badge w-8 h-8 min-w-[32px] rounded-xl flex items-center justify-center shrink-0 font-bold text-sm pointer-events-none bg-emerald-600 text-white shadow-xs';
-            }
-            if (!optBtn.querySelector('.mcq-indicator-correct')) {
-              optBtn.insertAdjacentHTML(
-                'beforeend',
-                '<span class="mcq-indicator-correct text-emerald-600 dark:text-emerald-400 font-bold text-sm pt-1 pointer-events-none shrink-0">✓ Correct</span>'
-              );
-            }
-          } else if (isThisSelected && !isCorrect) {
-            optBtn.className =
-              'mcq-option-btn w-full min-h-[52px] text-left p-4 sm:p-5 rounded-2xl border transition-all flex items-start gap-3.5 sm:gap-4 box-border max-w-full cursor-default bg-rose-50 dark:bg-rose-950/40 border-rose-500 text-rose-900 dark:text-rose-200 font-medium';
-            if (badge) {
-              badge.className =
-                'mcq-option-badge w-8 h-8 min-w-[32px] rounded-xl flex items-center justify-center shrink-0 font-bold text-sm pointer-events-none bg-rose-600 text-white shadow-xs';
-            }
-            if (!optBtn.querySelector('.mcq-indicator-wrong')) {
-              optBtn.insertAdjacentHTML(
-                'beforeend',
-                '<span class="mcq-indicator-wrong text-rose-600 dark:text-rose-400 font-bold text-sm pt-1 pointer-events-none shrink-0">✗ Your Choice (-1)</span>'
-              );
-            }
-          } else {
-            optBtn.className =
-              'mcq-option-btn w-full min-h-[52px] text-left p-4 sm:p-5 rounded-2xl border transition-all flex items-start gap-3.5 sm:gap-4 box-border max-w-full cursor-default bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 opacity-60 text-slate-600 dark:text-slate-400';
-            if (badge) {
-              badge.className =
-                'mcq-option-badge w-8 h-8 min-w-[32px] rounded-xl flex items-center justify-center shrink-0 font-bold text-sm pointer-events-none bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300';
-            }
-          }
-        });
-
-        // Replace Check Answer button area with Result Banner + Detailed Solution inline
-        const actionContainer = questionCard.querySelector('.mcq-action-container');
-        if (actionContainer) {
-          actionContainer.innerHTML = renderCheckedResultAndSolution(questionData, isCorrect);
-        }
-
-        // Render any math formulas inside this card
-        setTimeout(() => {
-          renderMath();
-        }, 20);
-      } else {
-        // Fallback: Re-render preserving exact vertical scroll position
-        const scrollY = window.scrollY;
-        refreshEngineView();
-        window.scrollTo({ top: scrollY, behavior: 'instant' });
-      }
-
-      // 3. Update live score counters in DOM
-      updateLiveStatsInDOM(updatedProgress, allQuestions.length);
-    });
-  });
 
   // Toast banner for feedback
   const showResetToast = (message: string) => {
@@ -1773,17 +2470,18 @@ export function attachChapterwiseMcqsEvents(): void {
 
   // Execution of the reset: wipes all questions tested back to 0 (fresh state)
   const executeResetChapter = () => {
-    ChapterwiseMcqService.resetProgress(engineState.chapterId || 'units-measurements');
+    const currentChapterId = engineState.chapterId || 'units-measurements';
+    ChapterwiseMcqService.resetProgress(currentChapterId);
     engineState.selectedOptions = {};
     engineState.difficultyFilter = 'all';
     engineState.sourceFilter = 'all';
     refreshEngineView();
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    const resetTotalQ = ChapterwiseMcqService.getQuestionCount(engineState.chapterId || 'units-measurements');
+    const resetTotalQ = ChapterwiseMcqService.getQuestionCount(currentChapterId);
     showResetToast(`Chapter reset to fresh! All tested questions reset to zero (0/${resetTotalQ}).`);
   };
 
-  // Direct 1-click Reset Chapter handlers (no blocking or hidden modal)
+  // Reset Chapter Handlers (Top and Bottom)
   const retryBtnTop = document.getElementById('mcq-retry-chapter-btn-top');
   if (retryBtnTop) {
     retryBtnTop.addEventListener('click', (e) => {
@@ -1809,6 +2507,7 @@ export function attachChapterwiseMcqsEvents(): void {
       const diff = btn.getAttribute('data-diff-filter') as 'all' | 'Easy' | 'Medium' | 'Hard';
       if (diff) {
         engineState.difficultyFilter = diff;
+        window.scrollTo({ top: 0, behavior: 'instant' });
         refreshEngineView();
       }
     });
@@ -1821,6 +2520,7 @@ export function attachChapterwiseMcqsEvents(): void {
       const src = btn.getAttribute('data-source-filter') as 'all' | 'pyq' | 'practice';
       if (src) {
         engineState.sourceFilter = src;
+        window.scrollTo({ top: 0, behavior: 'instant' });
         refreshEngineView();
       }
     });
@@ -1832,28 +2532,10 @@ export function attachChapterwiseMcqsEvents(): void {
     resetFiltersBtn.addEventListener('click', () => {
       engineState.difficultyFilter = 'all';
       engineState.sourceFilter = 'all';
+      window.scrollTo({ top: 0, behavior: 'instant' });
       refreshEngineView();
     });
   }
-
-  // Bookmark Toggle
-  const bookmarkButtons = document.querySelectorAll('.mcq-bookmark-btn');
-  bookmarkButtons.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      const qId = btn.getAttribute('data-bookmark-id');
-      if (qId) {
-        const isNowBookmarked = ChapterwiseMcqService.toggleBookmark(engineState.chapterId || 'units-measurements', qId);
-        btn.className = `mcq-bookmark-btn p-2 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 text-xs font-bold transition-colors cursor-pointer flex items-center gap-1.5 ${
-          isNowBookmarked ? 'text-amber-500 bg-amber-50 dark:bg-amber-950/40' : 'text-slate-400'
-        }`;
-        btn.innerHTML = `<span>${isNowBookmarked ? '★' : '☆'}</span><span class="hidden sm:inline">${
-          isNowBookmarked ? 'Bookmarked' : 'Bookmark'
-        }</span>`;
-      }
-    });
-  });
 }
 
 function escapeHtml(str: string): string {

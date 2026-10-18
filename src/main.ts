@@ -1,3 +1,5 @@
+import { PaymentService } from './services/paymentService';
+import { PricingComponent } from './components/pricingComponent';
 import 'katex/dist/katex.min.css';
 import './index.css';
 import { StorageService } from './services/storageService';
@@ -37,6 +39,7 @@ import { renderPYQsView, attachPYQsEvents } from './components/pyqsViewComponent
 import { renderRevisionView } from './components/revisionViewComponent';
 import { renderChaptersDirectoryView } from './components/chaptersDirectoryComponent';
 import { renderChapterwiseMcqsView, attachChapterwiseMcqsEvents } from './components/chapterwiseMcqsComponent';
+import { ChapterwiseMcqService } from './services/chapterwiseMcqService';
 import { renderBeginnerRoadmapView } from './components/beginnerRoadmapComponent';
 import { renderAssessmentFailureLearnReview, attachAssessmentLearnReviewEvents, MissedQuestionDetail } from './components/assessmentLearnReviewComponent';
 import { LearningRoadmapService, ROADMAP_STEPS } from './data/learningRoadmapData';
@@ -78,6 +81,12 @@ class App {
     StudyTimerService.updateRoute(initialRoute);
 
     // Initialize AuthService observer to re-render when student logs in or logs out
+    // Initialize PaymentService & Entitlements
+    PaymentService.init();
+    PaymentService.onEntitlementChange(() => {
+      this.refreshHeader();
+    });
+
     AuthService.init();
     AuthService.onAuthChanged(() => {
       const currentRoute = RouterService.parseHash(window.location.hash);
@@ -97,6 +106,13 @@ class App {
           console.log('SW registration skipped or failed:', err);
         });
       });
+    }
+
+    // Idle prefetch for instant chapter access
+    if (typeof window !== 'undefined') {
+      setTimeout(() => {
+        ChapterwiseMcqService.loadChapterQuestions('units-measurements');
+      }, 1200);
     }
 
     // Scroll listener for sticky header visual height & translucency refinement
@@ -470,6 +486,10 @@ class App {
     }
 
     switch (routeState.type) {
+      case 'pricing':
+        appContent.innerHTML = PricingComponent.render();
+        PricingComponent.attachEvents();
+        break;
       case 'home':
         appContent.innerHTML = renderHomeDashboard();
         this.attachHomeEvents();

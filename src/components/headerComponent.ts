@@ -1,3 +1,4 @@
+import { PaymentService } from '../services/paymentService';
 import { StorageService } from '../services/storageService';
 import { AuthService } from '../services/authService';
 import { BreadcrumbItem } from '../types/neet';
@@ -8,6 +9,7 @@ export function renderHeader(
   _onOpenBookmarks?: () => void,
   _onOpenProgress?: () => void
 ): string {
+  const entitlement = PaymentService.getEntitlement();
   const currentTheme = StorageService.getTheme();
   const isDark = currentTheme === 'dark';
   const currentUser = AuthService.getCurrentUser();
@@ -114,6 +116,28 @@ export function renderHeader(
             <span class="hidden md:inline">Install App</span>
           </button>
 
+          <!-- Pro Upgrade / Active Badge -->
+          ${entitlement.isPremium && entitlement.status === 'active' ? `
+            <a
+              href="#pricing"
+              class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-amber-300 dark:border-amber-700/60 bg-amber-50 dark:bg-amber-950/40 text-amber-800 dark:text-amber-300 text-xs font-bold shrink-0 hover:bg-amber-100 dark:hover:bg-amber-900/40 transition-colors shadow-xs"
+              title="VG Insights Pro Active (${entitlement.remainingDays} days left)"
+            >
+              <span>⭐</span>
+              <span class="hidden sm:inline">Pro Active</span>
+              <span class="text-[10px] font-semibold text-amber-700 dark:text-amber-400">(${entitlement.remainingDays}d)</span>
+            </a>
+          ` : `
+            <a
+              href="#pricing"
+              class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-xs font-bold shrink-0 shadow-sm transition-all shadow-blue-500/20"
+              title="Upgrade to VG Insights Pro"
+            >
+              <span>⚡</span>
+              <span>Upgrade to Pro</span>
+            </a>
+          `}
+
           <!-- Theme Toggle (Clean, minimal icon) -->
           <button
             id="btn-theme-toggle"
@@ -159,6 +183,16 @@ export function renderHeader(
                 <div class="px-3 py-2 border-b border-slate-100 dark:border-slate-800 mb-1">
                   <p class="text-xs font-semibold text-slate-900 dark:text-white truncate">${currentUser.name}</p>
                   <p class="text-[11px] text-slate-500 dark:text-slate-400 truncate">${currentUser.email}</p>
+                ${entitlement.isPremium && entitlement.status === 'active' ? `
+                  <div class="mt-1 pt-1 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-[10px]">
+                    <span class="font-bold text-amber-600 dark:text-amber-400 flex items-center gap-1">⭐ ${entitlement.planName || 'Pro Plan'}</span>
+                    <span class="text-slate-400">${entitlement.remainingDays}d left</span>
+                  </div>
+                ` : `
+                  <div class="mt-1 pt-1 border-t border-slate-100 dark:border-slate-800/80 text-[10px]">
+                    <a href="#pricing" class="font-bold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1">⚡ Upgrade to Pro (₹199) →</a>
+                  </div>
+                `}
                 </div>
                 <button
                   id="btn-dropdown-edit-name"
@@ -170,6 +204,13 @@ export function renderHeader(
                   </svg>
                   <span>Change Full Name</span>
                 </button>
+                <a
+                  href="#pricing"
+                  class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-medium text-amber-600 dark:text-amber-400 hover:bg-amber-50 dark:hover:bg-amber-950/40 transition-colors"
+                >
+                  <span>💎</span>
+                  <span>${entitlement.isPremium ? 'My Pro Membership' : 'Upgrade to Pro'}</span>
+                </a>
                 <a
                   href="#my-progress"
                   class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"

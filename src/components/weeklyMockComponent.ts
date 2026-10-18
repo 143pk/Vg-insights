@@ -1,3 +1,5 @@
+import { PaymentService } from '../services/paymentService';
+import { PricingComponent } from './pricingComponent';
 import { WeeklyMockService } from '../services/weeklyMockService';
 import { MistakeBookService } from '../services/mistakeBookService';
 import { WeaknessDoctorService } from '../services/weaknessDoctorService';
@@ -62,6 +64,15 @@ export class WeeklyMockUI {
             </p>
           </div>
 
+          <!-- Upgrade Prompt for Free Users -->
+          ${!PaymentService.isWeeklyMockAllowed() ? `
+            ${PricingComponent.renderLockPrompt({
+              badgeText: 'Pro Pass Feature • Locked for Free Plan',
+              title: 'Weekly 720-Mark Simulation Mock Series',
+              description: 'Weekly mock tests simulate authentic NTA NEET UG examination conditions: 180 questions across Physics, Chemistry & Biology, strict +4/-1 marking, instant AI analysis, and All-India percentile. Upgrade to VG Insights Pro to unlock all weekly mocks.'
+            })}
+          ` : ''}
+
           <!-- Key Test Metrics Bar -->
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
             <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80">
@@ -102,9 +113,15 @@ export class WeeklyMockUI {
                 <span>▶ Resume Active Mock Test →</span>
               </a>
             ` : `
-              <a href="#weekly-mock/instructions/${mockId}" class="px-6 py-3 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm sm:text-base shadow-sm transition-all flex items-center gap-2">
-                <span>🚀 Start Weekly NEET Mock →</span>
-              </a>
+              ${PaymentService.isWeeklyMockAllowed() ? `
+                <a href="#weekly-mock/instructions/${mockId}" class="px-6 py-3 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm sm:text-base shadow-sm transition-all flex items-center gap-2">
+                  <span>🚀 Start Weekly NEET Mock →</span>
+                </a>
+              ` : `
+                <a href="#pricing" class="px-6 py-3 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold text-sm sm:text-base shadow-md shadow-blue-500/20 transition-all flex items-center gap-2">
+                  <span>🔒 Unlock Pro to Take Week ${weekNumber} Mock →</span>
+                </a>
+              `}
             `}
             
             <a href="#test-history" class="px-4 py-3 rounded-2xl bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-semibold text-xs sm:text-sm border border-slate-200 dark:border-slate-700 transition-all flex items-center gap-1.5">

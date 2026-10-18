@@ -961,4 +961,22 @@ body {
   max-width: 100% !important;
 }
 
+/* Chapterwise MCQ Virtual Scroll Container & Elements */
+#mcq-virtual-scroll-container,
+#mcq-virtual-top-spacer,
+#mcq-virtual-bottom-spacer,
+#mcq-virtual-items-wrapper,
+.mcq-question-card {
+  overflow-anchor: none !important;
+}
+
+#mcq-virtual-items-wrapper {
+  contain: layout style;
+}
+
+.mcq-question-card {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 520px;
+}
+
 
