@@ -254,6 +254,14 @@ export function renderHeader(
               </div>
             </div>
           ` : `
+            <button
+              id="btn-header-login"
+              type="button"
+              class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 text-xs font-bold transition-all shadow-xs cursor-pointer"
+            >
+              <span>👤</span>
+              <span>Sign In</span>
+            </button>
             <a
               href="#landing"
               class="hidden sm:inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"

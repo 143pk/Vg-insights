@@ -679,6 +679,12 @@ class App {
       userProfileBtn.setAttribute('aria-expanded', isHidden ? 'false' : 'true');
     });
 
+    // Sign in button
+    document.getElementById('btn-header-login')?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      this.openAuthModal();
+    });
+
     // Sign out button
     document.getElementById('btn-header-logout')?.addEventListener('click', (e) => {
       e.stopPropagation();

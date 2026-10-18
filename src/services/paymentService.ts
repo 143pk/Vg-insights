@@ -218,11 +218,7 @@ export class PaymentService {
   }): Promise<void> {
     const user = AuthService.getCurrentUser();
     if (!user || !user.email) {
-      options?.onError?.('Please sign in or create an account to proceed with subscription.');
-      const authBtn = document.getElementById('btn-header-login') || document.querySelector('[data-auth-trigger]');
-      if (authBtn instanceof HTMLElement) {
-        authBtn.click();
-      }
+      this.promptEmailForCheckout(planId, options);
       return;
     }
 
@@ -521,6 +517,103 @@ export class PaymentService {
         div.remove();
         params.onError?.(err?.message || 'Payment verification failed on the server.');
       }
+    });
+  }
+
+  private static promptEmailForCheckout(planId: string, options?: {
+    onSuccess?: (entitlement: PremiumEntitlement) => void;
+    onError?: (error: string) => void;
+    onCancel?: () => void;
+  }): void {
+    const existing = document.getElementById('modal-email-checkout');
+    if (existing) existing.remove();
+
+    const div = document.createElement('div');
+    div.id = 'modal-email-checkout';
+    div.className = 'fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-sm animate-fade-in';
+    div.innerHTML = `
+      <div class="w-full max-w-md rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl p-6 sm:p-7 space-y-5 animate-scale-up text-left">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="text-xl">⚡</span>
+            <h3 class="font-black text-lg text-slate-900 dark:text-white">Student Account & Payment</h3>
+          </div>
+          <button id="btn-close-email-checkout" class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-slate-800 dark:hover:text-white flex items-center justify-center font-bold cursor-pointer">✕</button>
+        </div>
+
+        <div class="p-3.5 rounded-2xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200/80 dark:border-blue-800/80 text-xs text-blue-900 dark:text-blue-300">
+          <p class="font-bold">Enter your email address to continue</p>
+          <p class="text-[11px] text-blue-700 dark:text-blue-400 mt-0.5">
+            Your Pro access and payment receipt will be securely linked to this email.
+          </p>
+        </div>
+
+        <form id="form-email-checkout" class="space-y-4">
+          <div>
+            <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">
+              Student Email <span class="text-rose-500">*</span>
+            </label>
+            <input
+              type="email"
+              id="input-checkout-email"
+              required
+              placeholder="e.g. aspirant@gmail.com"
+              class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-xs sm:text-sm font-medium focus:ring-2 focus:ring-blue-600 focus:outline-none"
+            />
+          </div>
+          <div>
+            <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">
+              Full Name (Optional)
+            </label>
+            <input
+              type="text"
+              id="input-checkout-name"
+              placeholder="e.g. Amit Kumar"
+              class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-xs sm:text-sm font-medium focus:ring-2 focus:ring-blue-600 focus:outline-none"
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="w-full py-3.5 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm shadow-lg shadow-blue-500/25 transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-98"
+          >
+            <span>Proceed to Razorpay Checkout →</span>
+          </button>
+        </form>
+
+        <div class="text-center pt-1 border-t border-slate-100 dark:border-slate-800">
+          <button id="btn-trigger-full-auth" type="button" class="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline cursor-pointer">
+            Or sign in with Google / Mobile OTP →
+          </button>
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(div);
+
+    document.getElementById('btn-close-email-checkout')?.addEventListener('click', () => {
+      div.remove();
+      options?.onCancel?.();
+    });
+
+    document.getElementById('btn-trigger-full-auth')?.addEventListener('click', () => {
+      div.remove();
+      (window as any).openAuthModal?.();
+    });
+
+    document.getElementById('form-email-checkout')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const emailInput = document.getElementById('input-checkout-email') as HTMLInputElement;
+      const nameInput = document.getElementById('input-checkout-name') as HTMLInputElement;
+      const email = emailInput?.value?.trim();
+      const name = nameInput?.value?.trim();
+      if (!email) return;
+
+      AuthService.loginWithDirectEmail(email, name);
+      div.remove();
+
+      // Proceed immediately with checkout!
+      PaymentService.checkout(planId, options);
     });
   }
 

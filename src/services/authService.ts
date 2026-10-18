@@ -329,6 +329,25 @@ export class AuthService {
     return authenticatedUser;
   }
 
+  public static loginWithDirectEmail(email: string, name?: string): AuthUser {
+    const cleanEmail = email.trim().toLowerCase();
+    const cleanName = (name || '').trim() || cleanEmail.split('@')[0];
+    const user: AuthUser = {
+      id: `usr_${cleanEmail.replace(/[^a-z0-9]/g, '_')}`,
+      uid: `usr_${cleanEmail.replace(/[^a-z0-9]/g, '_')}`,
+      email: cleanEmail,
+      name: cleanName,
+      targetYear: 2026,
+      loggedInAt: Date.now(),
+      isEmailVerified: true
+    };
+    this.user = user;
+    localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(user));
+    this.saveUserToLocalRegistry(user);
+    this.notifyListeners();
+    return user;
+  }
+
   public static async logout(): Promise<void> {
     try {
       await signOut(auth);

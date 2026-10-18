@@ -335,22 +335,27 @@ export class PricingComponent {
         `;
         target.setAttribute('disabled', 'true');
 
-        await PaymentService.checkout(planId, {
-          onSuccess: (entitlement) => {
-            target.innerHTML = originalText;
-            target.removeAttribute('disabled');
-            PricingComponent.showSuccessModal(entitlement);
-          },
-          onError: (errMsg) => {
-            target.innerHTML = originalText;
-            target.removeAttribute('disabled');
-            PricingComponent.showFailureModal(errMsg);
-          },
-          onCancel: () => {
-            target.innerHTML = originalText;
-            target.removeAttribute('disabled');
-          }
-        });
+        try {
+          await PaymentService.checkout(planId, {
+            onSuccess: (entitlement) => {
+              target.innerHTML = originalText;
+              target.removeAttribute('disabled');
+              PricingComponent.showSuccessModal(entitlement);
+            },
+            onError: (errMsg) => {
+              target.innerHTML = originalText;
+              target.removeAttribute('disabled');
+              PricingComponent.showFailureModal(errMsg);
+            },
+            onCancel: () => {
+              target.innerHTML = originalText;
+              target.removeAttribute('disabled');
+            }
+          });
+        } finally {
+          target.innerHTML = originalText;
+          target.removeAttribute('disabled');
+        }
       });
     });
   }
