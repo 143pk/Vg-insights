@@ -69,38 +69,67 @@ class App {
   private roadmapSubjectFilter: string = 'all';
 
   public init(): void {
-    // Initialize Theme synchronously
-    StorageService.initTheme();
+    // 1. Initialize Theme synchronously
+    try {
+      StorageService.initTheme();
+    } catch (e) {
+      console.warn('[Theme] Fallback:', e);
+    }
 
-    // Initial Layout Render immediately to populate DOM and eliminate white screens
-    this.renderApp();
-
-    // Initialize Study Session Timer
-    StudyTimerService.init();
-    const initialRoute = RouterService.parseHash(window.location.hash);
-    StudyTimerService.updateRoute(initialRoute);
-
-    // Initialize AuthService observer to re-render when student logs in or logs out
-    // Initialize PaymentService & Entitlements
-    PaymentService.init();
-    PaymentService.onEntitlementChange(() => {
-      this.refreshHeader();
-    });
-
-    AuthService.init();
-    AuthService.onAuthChanged(() => {
-      const currentRoute = RouterService.parseHash(window.location.hash);
-      if (currentRoute.type !== 'landing' && currentRoute.type !== 'login') {
-        this.refreshHeader();
-        this.renderMainContent();
+    // 2. Initial Layout Render immediately to populate DOM and eliminate white screens
+    try {
+      this.renderApp();
+    } catch (e) {
+      console.error('[App] Initial render failed:', e);
+      try {
+        this.renderLandingLayout(false);
+      } catch (err2) {
+        console.error('[App] Fallback landing render failed:', err2);
       }
-    });
+    }
 
-    // Initialize PWA / Android WebAPK Installation Manager
-    PWAInstallService.init();
+    // 3. Initialize Study Session Timer
+    try {
+      StudyTimerService.init();
+      const initialRoute = RouterService.parseHash(window.location.hash);
+      StudyTimerService.updateRoute(initialRoute);
+    } catch (e) {
+      console.warn('[StudyTimer] Init skipped:', e);
+    }
 
-    // Register PWA Service Worker if supported
-    if ('serviceWorker' in navigator) {
+    // 4. Initialize PaymentService & Entitlements
+    try {
+      PaymentService.init();
+      PaymentService.onEntitlementChange(() => {
+        this.refreshHeader();
+      });
+    } catch (e) {
+      console.warn('[PaymentService] Init skipped:', e);
+    }
+
+    // 5. Initialize AuthService observer
+    try {
+      AuthService.init();
+      AuthService.onAuthChanged(() => {
+        const currentRoute = RouterService.parseHash(window.location.hash);
+        if (currentRoute.type !== 'landing' && currentRoute.type !== 'login') {
+          this.refreshHeader();
+          this.renderMainContent();
+        }
+      });
+    } catch (e) {
+      console.warn('[AuthService] Init skipped:', e);
+    }
+
+    // 6. Initialize PWA / Android WebAPK Installation Manager
+    try {
+      PWAInstallService.init();
+    } catch (e) {
+      console.warn('[PWA] Init skipped:', e);
+    }
+
+    // 7. Register PWA Service Worker if supported
+    if (typeof navigator !== 'undefined' && 'serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js').catch(err => {
           console.log('SW registration skipped or failed:', err);
@@ -108,11 +137,13 @@ class App {
       });
     }
 
-    // Idle prefetch for instant chapter access
+    // 8. Idle prefetch for instant chapter access
     if (typeof window !== 'undefined') {
       setTimeout(() => {
-        ChapterwiseMcqService.loadChapterQuestions('units-measurements');
-      }, 1200);
+        try {
+          ChapterwiseMcqService.loadChapterQuestions('units-measurements');
+        } catch {}
+      }, 1500);
     }
 
     // Scroll listener for sticky header visual height & translucency refinement
@@ -2093,21 +2124,34 @@ class App {
   }
 }
 
+let isAppInitialized = false;
+
 // Instantiate and initialize app when DOM is ready
 function startApp(): void {
+  if (isAppInitialized) return;
+  isAppInitialized = true;
+
   try {
     const app = new App();
     app.init();
   } catch (err) {
     console.error('[VG Insights] Failed to initialize app:', err);
     const root = document.getElementById('root');
-    if (root && root.innerHTML.trim() === '') {
+    if (root) {
       root.innerHTML = `
-        <div style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; text-align: center; background: #0f172a; color: #f8fafc;">
-          <div style="max-width: 480px; background: #1e293b; padding: 32px; border-radius: 16px; border: 1px solid #334155;">
-            <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: #60a5fa;">VG Insights – Initializing</h2>
-            <p style="font-size: 14px; color: #94a3b8; margin-bottom: 20px;">Please refresh or click below to enter the portal.</p>
-            <button onclick="window.location.reload()" style="background: #2563eb; color: white; border: none; padding: 10px 24px; border-radius: 8px; font-weight: 600; cursor: pointer;">Reload Application</button>
+        <div class="min-h-screen flex items-center justify-center p-6 bg-[#0f172a] text-[#f8fafc] text-center font-sans">
+          <div class="max-w-md w-full bg-[#1e293b] p-8 rounded-2xl border border-slate-700/60 shadow-2xl">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white font-black text-2xl">VG</div>
+            <h2 class="text-xl font-bold mb-2 text-white">VG Insights Workspace</h2>
+            <p class="text-sm text-slate-400 mb-6 leading-relaxed">Your NEET preparation portal is ready to launch.</p>
+            <div class="flex flex-col gap-3">
+              <a href="#landing" onclick="window.location.hash='#landing'; window.location.reload();" class="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 px-6 rounded-xl transition">
+                Enter Landing Page
+              </a>
+              <a href="#home" onclick="window.location.hash='#home'; window.location.reload();" class="inline-flex items-center justify-center bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold py-3 px-6 rounded-xl transition border border-slate-700">
+                Open Student Dashboard
+              </a>
+            </div>
           </div>
         </div>
       `;
@@ -2115,8 +2159,20 @@ function startApp(): void {
   }
 }
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', startApp);
+// Expose startApp globally
+if (typeof window !== 'undefined') {
+  (window as any).startApp = startApp;
+}
+
+// Multi-trigger startup to ensure instantaneous execution across mobile iframes, WebViews, and dev previews
+if (typeof document !== 'undefined') {
+  if (document.getElementById('root') || document.readyState === 'complete' || document.readyState === 'interactive') {
+    startApp();
+  } else {
+    document.addEventListener('DOMContentLoaded', startApp);
+    window.addEventListener('load', startApp);
+    setTimeout(startApp, 30);
+  }
 } else {
   startApp();
 }

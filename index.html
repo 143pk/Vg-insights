@@ -199,12 +199,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
-    <!-- Theme Pre-Initializer Script (Zero-Flicker Synchronous Theme Application) -->
+    <!-- Theme Pre-Initializer & Safe Polyfills Script -->
     <script>
       (function() {
+        if (typeof window !== 'undefined') {
+          window.requestAnimationFrame = window.requestAnimationFrame || function(cb) { return setTimeout(cb, 16); };
+          window.cancelAnimationFrame = window.cancelAnimationFrame || function(id) { clearTimeout(id); };
+        }
         try {
-          var saved = localStorage.getItem('vg_neet_theme');
-          var isDark = saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          var saved = typeof localStorage !== 'undefined' ? localStorage.getItem('vg_neet_theme') : null;
+          var isDark = saved === 'dark' || (!saved && typeof window.matchMedia === 'function' && window.matchMedia('(prefers-color-scheme: dark)').matches);
           if (isDark) {
             document.documentElement.classList.add('dark');
             document.documentElement.setAttribute('data-theme', 'dark');
@@ -217,8 +221,8 @@
         } catch (e) {}
       })();
     </script>
-    <!-- Razorpay Checkout SDK for Fast Secure UPI, Cards, NetBanking -->
-    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <!-- Razorpay Checkout SDK for Fast Secure UPI, Cards, NetBanking (Deferred to prevent render blocking) -->
+    <script defer src="https://checkout.razorpay.com/v1/checkout.js"></script>
   </head>
   <body class="bg-[#F8FAFC] dark:bg-[#0B1120] text-slate-900 dark:text-slate-100 min-h-screen font-sans antialiased selection:bg-blue-600 selection:text-white transition-colors duration-200">
     <div id="root" class="min-h-screen flex flex-col">
@@ -234,15 +238,27 @@
           <h1 class="text-lg sm:text-xl font-bold tracking-tight text-slate-900 dark:text-white mb-2">
             VG Insights
           </h1>
-          <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-6 font-medium">
+          <p id="app-loader-text" class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-6 font-medium">
             Loading NEET Preparation Workspace...
           </p>
-          <div class="w-36 h-1.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+          <div class="w-36 h-1.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden mb-4">
             <div class="h-full bg-blue-600 rounded-full animate-[pulse_1s_ease-in-out_infinite] w-full"></div>
           </div>
+          <button id="app-loader-action" onclick="window.location.hash='#landing'; window.location.reload();" class="hidden text-xs text-blue-600 dark:text-blue-400 font-semibold underline mt-2 py-1 px-3">
+            Tap here if loading takes longer than 3s
+          </button>
         </div>
       </div>
     </div>
+    <script>
+      // Watchdog timer to ensure mobile preview never gets permanently stuck
+      setTimeout(function() {
+        var loaderText = document.getElementById('app-loader-text');
+        var loaderBtn = document.getElementById('app-loader-action');
+        if (loaderBtn) loaderBtn.classList.remove('hidden');
+        if (loaderText) loaderText.textContent = 'Preparing interactive study environment...';
+      }, 2500);
+    </script>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

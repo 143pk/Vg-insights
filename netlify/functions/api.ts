@@ -256,6 +256,23 @@ export const handler = async (event: any, context: any) => {
       });
     }
 
+    // 9. Razorpay Payment Endpoints (/payment/*)
+    if (cleanPath.startsWith('/payment') || cleanPath === '/wp-admin/admin-post.php') {
+      const fullUrl = `https://vginsights.in/api${cleanPath}${event.queryStringParameters ? '?' + new URLSearchParams(event.queryStringParameters).toString() : ''}`;
+      const standardReq = new Request(fullUrl, {
+        method: event.httpMethod,
+        headers: event.headers || {},
+        body: ['GET', 'HEAD'].includes(event.httpMethod) ? undefined : (typeof event.body === 'string' ? event.body : JSON.stringify(body)),
+      });
+      const response = await (await import('../../src/server/universalApi')).handleUniversalApiRequest(standardReq, process.env);
+      const resText = await response.text();
+      return {
+        statusCode: response.status,
+        headers: CORS_HEADERS,
+        body: resText,
+      };
+    }
+
     return jsonResponse(404, { success: false, error: `Route not found: ${cleanPath}` });
   } catch (globalErr: any) {
     console.error('[Netlify Function Global Error]:', globalErr);

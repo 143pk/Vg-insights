@@ -12,12 +12,14 @@ export class PWAInstallService {
     if (typeof window === 'undefined') return;
 
     // Check if already running in standalone mode (already installed as APK/PWA)
-    if (
-      window.matchMedia('(display-mode: standalone)').matches ||
-      (window.navigator as any).standalone === true
-    ) {
-      isInstalled = true;
-    }
+    try {
+      if (
+        (typeof window.matchMedia === 'function' && window.matchMedia('(display-mode: standalone)').matches) ||
+        (window.navigator as any)?.standalone === true
+      ) {
+        isInstalled = true;
+      }
+    } catch {}
 
     window.addEventListener('beforeinstallprompt', (e: Event) => {
       // Prevent automatic browser mini-infobar on mobile
@@ -57,12 +59,16 @@ export class PWAInstallService {
   }
 
   public static isAppAlreadyInstalled(): boolean {
-    return (
-      isInstalled ||
-      (typeof window !== 'undefined' &&
-        (window.matchMedia('(display-mode: standalone)').matches ||
-          (window.navigator as any).standalone === true))
-    );
+    if (isInstalled) return true;
+    if (typeof window === 'undefined') return false;
+    try {
+      return Boolean(
+        (typeof window.matchMedia === 'function' && window.matchMedia('(display-mode: standalone)').matches) ||
+        (window.navigator as any)?.standalone === true
+      );
+    } catch {
+      return false;
+    }
   }
 
   /**

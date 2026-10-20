@@ -7,34 +7,94 @@ const STORAGE_KEYS = {
 };
 
 export class StorageService {
+  private static memoryStore: Record<string, string> = {};
+
+  /**
+   * Safe getter that never throws in sandboxed iframes, partitioned storage, or private browsing
+   */
+  public static safeGetItem(key: string): string | null {
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        const val = window.localStorage.getItem(key);
+        if (val !== null) return val;
+      }
+    } catch {
+      // Storage access blocked or restricted by iframe sandbox
+    }
+    return this.memoryStore[key] || null;
+  }
+
+  /**
+   * Safe setter that never throws in sandboxed iframes, partitioned storage, or private browsing
+   */
+  public static safeSetItem(key: string, value: string): void {
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        window.localStorage.setItem(key, value);
+      }
+    } catch {
+      // Storage access blocked or restricted
+    }
+    this.memoryStore[key] = value;
+  }
+
+  /**
+   * Safe remover that never throws in sandboxed iframes, partitioned storage, or private browsing
+   */
+  public static safeRemoveItem(key: string): void {
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        window.localStorage.removeItem(key);
+      }
+    } catch {}
+    delete this.memoryStore[key];
+  }
+
   static getTheme(): 'light' | 'dark' {
-    const saved = localStorage.getItem(STORAGE_KEYS.THEME);
-    if (saved === 'dark' || saved === 'light') return saved;
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    try {
+      const saved = this.safeGetItem(STORAGE_KEYS.THEME);
+      if (saved === 'dark' || saved === 'light') return saved;
+      if (typeof window !== 'undefined' && typeof window.matchMedia === 'function') {
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+    } catch {
+      // Default to dark mode for modern high-contrast reading
+    }
+    return 'dark';
   }
 
   static setTheme(theme: 'light' | 'dark'): void {
-    localStorage.setItem(STORAGE_KEYS.THEME, theme);
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
-      document.documentElement.setAttribute('data-theme', 'dark');
-      document.documentElement.style.colorScheme = 'dark';
-    } else {
-      document.documentElement.classList.remove('dark');
-      document.documentElement.setAttribute('data-theme', 'light');
-      document.documentElement.style.colorScheme = 'light';
+    this.safeSetItem(STORAGE_KEYS.THEME, theme);
+    try {
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.documentElement.style.colorScheme = 'dark';
+      } else {
+        document.documentElement.classList.remove('dark');
+        document.documentElement.setAttribute('data-theme', 'light');
+        document.documentElement.style.colorScheme = 'light';
+      }
+      if (typeof window !== 'undefined') {
+        window.dispatchEvent(new CustomEvent('vg-theme-change', { detail: { theme } }));
+      }
+    } catch (e) {
+      console.warn('[StorageService] Error applying theme classes:', e);
     }
-    window.dispatchEvent(new CustomEvent('vg-theme-change', { detail: { theme } }));
   }
 
   static initTheme(): void {
-    const currentTheme = this.getTheme();
-    this.setTheme(currentTheme);
+    try {
+      const currentTheme = this.getTheme();
+      this.setTheme(currentTheme);
+    } catch (e) {
+      console.warn('[StorageService] initTheme failed safely:', e);
+    }
   }
 
   static getProgress(): UserProgress {
     try {
-      const data = localStorage.getItem(STORAGE_KEYS.PROGRESS);
+      const data = this.safeGetItem(STORAGE_KEYS.PROGRESS);
       if (data) {
         return JSON.parse(data);
       }
@@ -49,7 +109,11 @@ export class StorageService {
   }
 
   static saveProgress(progress: UserProgress): void {
-    localStorage.setItem(STORAGE_KEYS.PROGRESS, JSON.stringify(progress));
+    try {
+      this.safeSetItem(STORAGE_KEYS.PROGRESS, JSON.stringify(progress));
+    } catch (e) {
+      console.warn('[StorageService] saveProgress failed:', e);
+    }
   }
 
   static toggleBookmark(topicId: string): boolean {

@@ -16,6 +16,7 @@ import {
   OperationType,
   type FirebaseUser 
 } from './firebase';
+import { StorageService } from './storageService';
 
 export interface AuthUser {
   id?: string;
@@ -54,7 +55,7 @@ export class AuthService {
   public static init(): void {
     if (this.isInitialized) return;
     try {
-      const stored = localStorage.getItem(AUTH_STORAGE_KEY);
+      const stored = StorageService.safeGetItem(AUTH_STORAGE_KEY);
       if (stored) {
         this.user = JSON.parse(stored);
       }
@@ -68,7 +69,7 @@ export class AuthService {
         if (fbUser) {
           const syncedUser = this.syncFromFirebaseUser(fbUser);
           this.user = syncedUser;
-          localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(syncedUser));
+          StorageService.safeSetItem(AUTH_STORAGE_KEY, JSON.stringify(syncedUser));
           this.saveUserToLocalRegistry(syncedUser);
         }
         this.notifyListeners();
@@ -80,7 +81,7 @@ export class AuthService {
           if (result && result.user) {
             const syncedUser = this.syncFromFirebaseUser(result.user);
             this.user = syncedUser;
-            localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(syncedUser));
+            StorageService.safeSetItem(AUTH_STORAGE_KEY, JSON.stringify(syncedUser));
             this.saveUserToLocalRegistry(syncedUser);
             this.notifyListeners();
           }
@@ -151,7 +152,7 @@ export class AuthService {
                   updated = true;
                 }
                 if (updated) {
-                  localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(user));
+                  StorageService.safeSetItem(AUTH_STORAGE_KEY, JSON.stringify(user));
                   this.notifyListeners();
                 }
               } else {
@@ -182,7 +183,7 @@ export class AuthService {
 
   private static getLocalRegistry(): Record<string, AuthUser> {
     try {
-      const data = localStorage.getItem(REGISTRY_STORAGE_KEY);
+      const data = StorageService.safeGetItem(REGISTRY_STORAGE_KEY);
       return data ? JSON.parse(data) : {};
     } catch {
       return {};
@@ -193,7 +194,7 @@ export class AuthService {
     try {
       const registry = this.getLocalRegistry();
       registry[user.email.toLowerCase()] = user;
-      localStorage.setItem(REGISTRY_STORAGE_KEY, JSON.stringify(registry));
+      StorageService.safeSetItem(REGISTRY_STORAGE_KEY, JSON.stringify(registry));
     } catch {
       // Storage quota safety
     }
@@ -218,7 +219,7 @@ export class AuthService {
       const user = this.syncFromFirebaseUser(result.user);
       
       this.user = user;
-      localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(user));
+      StorageService.safeSetItem(AUTH_STORAGE_KEY, JSON.stringify(user));
       this.saveUserToLocalRegistry(user);
       this.notifyListeners();
 
@@ -266,7 +267,7 @@ export class AuthService {
         const result = await signInWithEmailAndPassword(auth, cleanEmail, password);
         const user = await this.syncFromFirebaseUser(result.user);
         this.user = user;
-        localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(user));
+        StorageService.safeSetItem(AUTH_STORAGE_KEY, JSON.stringify(user));
         this.saveUserToLocalRegistry(user);
         this.notifyListeners();
         return { success: true, user, isNewUser: false };
@@ -287,7 +288,7 @@ export class AuthService {
             }
           }
           this.user = user;
-          localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(user));
+          StorageService.safeSetItem(AUTH_STORAGE_KEY, JSON.stringify(user));
           this.saveUserToLocalRegistry(user);
           this.notifyListeners();
           return { success: true, user, isNewUser: true };
@@ -322,7 +323,7 @@ export class AuthService {
     };
 
     this.user = authenticatedUser;
-    localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(authenticatedUser));
+    StorageService.safeSetItem(AUTH_STORAGE_KEY, JSON.stringify(authenticatedUser));
     this.saveUserToLocalRegistry(authenticatedUser);
     this.notifyListeners();
 
@@ -342,7 +343,7 @@ export class AuthService {
       isEmailVerified: true
     };
     this.user = user;
-    localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(user));
+    StorageService.safeSetItem(AUTH_STORAGE_KEY, JSON.stringify(user));
     this.saveUserToLocalRegistry(user);
     this.notifyListeners();
     return user;
@@ -355,7 +356,7 @@ export class AuthService {
       console.warn('[AuthService] Firebase signout:', e);
     }
     this.user = null;
-    localStorage.removeItem(AUTH_STORAGE_KEY);
+    StorageService.safeRemoveItem(AUTH_STORAGE_KEY);
     this.notifyListeners();
   }
 
@@ -365,7 +366,7 @@ export class AuthService {
       ...this.user,
       ...updates,
     };
-    localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(this.user));
+    StorageService.safeSetItem(AUTH_STORAGE_KEY, JSON.stringify(this.user));
     this.saveUserToLocalRegistry(this.user);
 
     if (this.user.uid && (typeof navigator === 'undefined' || navigator.onLine)) {

@@ -1150,48 +1150,68 @@ export function initLandingPageEvents(onOpenAuthModal: () => void): void {
   }
 
   // 3. Scroll Reveal IntersectionObserver & Counter Animation
-  const observerOptions: IntersectionObserverInit = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.12,
-  };
+  if (typeof window !== 'undefined' && typeof IntersectionObserver !== 'undefined') {
+    try {
+      const observerOptions: IntersectionObserverInit = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.12,
+      };
 
-  const scrollObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-revealed');
-        
-        // Check for child counters to animate count-up
-        const counters = entry.target.querySelectorAll('.counter-val');
-        counters.forEach((counterEl) => {
-          const targetStr = counterEl.getAttribute('data-target');
-          const suffix = counterEl.getAttribute('data-suffix') || '';
-          if (targetStr && !counterEl.hasAttribute('data-counted')) {
-            counterEl.setAttribute('data-counted', 'true');
-            const targetNum = parseInt(targetStr, 10);
-            if (!isNaN(targetNum)) {
-              animateCountUp(counterEl as HTMLElement, targetNum, suffix);
-            }
+      const scrollObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-revealed');
+            
+            // Check for child counters to animate count-up
+            const counters = entry.target.querySelectorAll('.counter-val');
+            counters.forEach((counterEl) => {
+              const targetStr = counterEl.getAttribute('data-target');
+              const suffix = counterEl.getAttribute('data-suffix') || '';
+              if (targetStr && !counterEl.hasAttribute('data-counted')) {
+                counterEl.setAttribute('data-counted', 'true');
+                const targetNum = parseInt(targetStr, 10);
+                if (!isNaN(targetNum)) {
+                  animateCountUp(counterEl as HTMLElement, targetNum, suffix);
+                }
+              }
+            });
+
+            observer.unobserve(entry.target);
           }
         });
+      }, observerOptions);
 
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  document.querySelectorAll('.reveal-on-scroll').forEach((el) => {
-    scrollObserver.observe(el);
-  });
+      document.querySelectorAll('.reveal-on-scroll').forEach((el) => {
+        scrollObserver.observe(el);
+      });
+    } catch (e) {
+      document.querySelectorAll('.reveal-on-scroll').forEach((el) => el.classList.add('is-revealed'));
+    }
+  } else {
+    document.querySelectorAll('.reveal-on-scroll').forEach((el) => el.classList.add('is-revealed'));
+  }
 
   // 4. Hero Section Mockup Scale & Floating Cards Stagger Entrance
-  initHeroEntranceAnimation();
+  try {
+    initHeroEntranceAnimation();
+  } catch (e) {
+    console.warn('[LandingPage] Entrance animation error:', e);
+  }
 
   // 5. Hero Section Scroll Parallax Effect
-  initHeroScrollParallax();
+  try {
+    initHeroScrollParallax();
+  } catch (e) {
+    console.warn('[LandingPage] Scroll parallax error:', e);
+  }
 
   // 6. Render KaTeX Formulas across targets
-  renderAllKaTeXFormulas();
+  try {
+    renderAllKaTeXFormulas();
+  } catch (e) {
+    console.warn('[LandingPage] KaTeX render error:', e);
+  }
 }
 
 /**
@@ -1200,7 +1220,9 @@ export function initLandingPageEvents(onOpenAuthModal: () => void): void {
 function initHeroEntranceAnimation(): void {
   const mockup = document.getElementById('hero-mockup-device');
   const cards = document.querySelectorAll<HTMLElement>('.hero-parallax-card');
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const prefersReducedMotion = typeof window !== 'undefined' && typeof window.matchMedia === 'function'
+    ? window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    : false;
 
   if (prefersReducedMotion) {
     if (mockup) mockup.classList.add('hero-mockup-entered');
@@ -1236,7 +1258,9 @@ function initHeroScrollParallax(): void {
   const heroContainer = document.getElementById('hero-visual-container');
   const mockup = document.getElementById('hero-mockup-device');
   const cards = document.querySelectorAll<HTMLElement>('.hero-parallax-card');
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const prefersReducedMotion = typeof window !== 'undefined' && typeof window.matchMedia === 'function'
+    ? window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    : false;
 
   if (prefersReducedMotion || !heroContainer) return;
 

@@ -1,6 +1,7 @@
 import 'dotenv/config';
 import express from 'express';
 import path from 'path';
+import fs from 'fs';
 import { createServer as createViteServer } from 'vite';
 import { GoogleGenAI } from '@google/genai';
 import sendEmailHandler from './api/send-email';
@@ -17,9 +18,21 @@ import paymentStatusHandler from './api/payment/status';
 
 async function startServer() {
   const app = express();
+  // Dev server must strictly run on port 3000 as required by AI Studio runtime environment
   const PORT = 3000;
 
-  // Preserve rawBody for webhook HMAC verification
+  // Cross-Origin Resource Sharing (CORS) headers for custom domain (vginsights.in), Cloud Run, and mobile
+  app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, x-razorpay-signature, x-razorpay-event-id');
+    if (req.method === 'OPTIONS') {
+      return res.sendStatus(200);
+    }
+    next();
+  });
+
+  // Preserve rawBody for webhook HMAC signature verification
   app.use(express.json({
     verify: (req: any, _res, buf) => {
       req.rawBody = buf.toString();
@@ -28,7 +41,12 @@ async function startServer() {
 
   // API Health Endpoint
   app.get('/api/health', (req, res) => {
-    res.json({ status: 'ok', service: 'VG NEET AI Weakness Doctor' });
+    res.json({
+      status: 'ok',
+      service: 'VG NEET AI Weakness Doctor',
+      timestamp: new Date().toISOString(),
+      env: process.env.NODE_ENV || 'development'
+    });
   });
 
   // Google AdSense ads.txt verification endpoint
@@ -58,7 +76,6 @@ async function startServer() {
   app.post('/api/payment/status', (req, res) => paymentStatusHandler(req, res));
 
   // AI Weakness Questions Batch Generator Endpoint
-  // Performs ONE batch call per requested topic drill, never per-question calls
   app.post('/api/generate-weakness-questions', async (req, res) => {
     const { subject, chapter, topic, count = 5 } = req.body || {};
     const questionCount = Math.min(10, Math.max(3, Number(count) || 5));
@@ -75,68 +92,52 @@ Topic / Concept: ${topic || 'Key Formula & Principle'}
 
 Requirements:
 1. Every question must match the exact NEET UG standard (conceptual clarity, numerical rigor, formula application, or NCERT-based biological/chemical fact).
-2. Exactly 4 distinct options (A, B, C, D) per question.
-3. correctAnswer MUST be the index (0 for A, 1 for B, 2 for C, 3 for D).
-4. Provide a clear step-by-step NCERT-based explanation highlighting the exact formula, concept tested, and common student trap.
-5. Return ONLY a valid JSON object matching this schema with NO markdown wrapping or preamble:
-{
-  "questions": [
-    {
-      "question": "string with LaTeX math if applicable (e.g. $E_{cell} = E^0_{cell} - \\frac{0.059}{n} \\log Q$)",
-      "options": ["Option A", "Option B", "Option C", "Option D"],
-      "correctAnswer": 0,
-      "explanation": "Clear step-by-step solution with formula and key takeaway",
-      "difficulty": "Medium",
-      "conceptTested": "Core Concept Name"
-    }
-  ]
-}`;
+2. Format as a strict JSON array of objects with keys:
+- "question": string (include LaTeX enclosed in $ or $$ for math/chemical equations)
+- "options": array of 4 distinct string choices
+- "correctAnswer": number (index 0, 1, 2, or 3)
+- "explanation": string (step-by-step NCERT-grounded pedagogical solution)
+- "difficulty": "Easy" | "Medium" | "Hard"
+- "conceptTested": string
+Return ONLY the raw JSON array without markdown code blocks.`;
 
-      for (const modelName of candidateModels) {
-        let attempts = 0;
-        const maxAttempts = 2;
-        let success = false;
-        while (attempts < maxAttempts && !success) {
-          attempts++;
-          try {
-            const response = await ai.models.generateContent({
-              model: modelName,
-              contents: prompt,
-              config: {
-                responseMimeType: 'application/json'
-              }
-            });
-            const text = response.text?.trim() || '{}';
-            const parsed = JSON.parse(text);
-            if (Array.isArray(parsed.questions) && parsed.questions.length > 0) {
-              return res.json({ questions: parsed.questions, source: 'gemini-ai' });
+      for (const model of candidateModels) {
+        try {
+          const response = await ai.models.generateContent({
+            model,
+            contents: prompt,
+            config: {
+              temperature: 0.3,
+              responseMimeType: 'application/json',
             }
-          } catch (err: any) {
-            const isTransient = err?.status === 503 || err?.code === 503 || err?.message?.includes('503') || err?.message?.includes('high demand') || err?.message?.includes('429');
-            if (isTransient && attempts < maxAttempts) {
-              // Wait 600ms backoff before retrying
-              await new Promise(r => setTimeout(r, 600));
-            } else {
-              // Move to next candidate model
-              break;
+          });
+
+          const rawText = response.text?.trim() || '';
+          if (rawText) {
+            const cleanJson = rawText.replace(/^```json\s*/, '').replace(/\s*```$/, '').trim();
+            const parsed = JSON.parse(cleanJson);
+            if (Array.isArray(parsed) && parsed.length > 0) {
+              return res.json({ questions: parsed, modelUsed: model, source: 'ai-generated' });
             }
           }
+        } catch {
+          continue;
         }
       }
     }
 
-    // High quality offline fallback questions if Gemini API key is missing or errored
+    // High-yield fallback NEET diagnostic questions
     const fallbackQuestions = [
       {
-        question: `In NEET UG problem solving for ${topic || 'this concept'}, which of the following statements represents the fundamental NCERT principle?`,
+        question: `In standard NEET problems on ${topic || chapter || 'this topic'}, what is the primary NCERT governing law or principle?`,
         options: [
-          `It is governed directly by the fundamental thermodynamic and kinetic relations outlined in NCERT.`,
-          `It operates independently of standard equilibrium and conservation principles.`,
-          `It is valid only at absolute zero temperature under ideal conditions.`,
-          `It has no direct numerical significance in standard competitive assessments.`
+          `Conservation of energy and fundamental state equations`,
+          `Spontaneous creation of mass during steady-state dynamics`,
+          `Arbitrary variation independent of medium properties`,
+          `Constant acceleration regardless of net applied force`
         ],
         correctAnswer: 0,
-        explanation: `According to standard NCERT syllabus guidelines for ${chapter || 'this chapter'}, the fundamental governing principle strictly adheres to the core laws of physics/chemistry/biology.`,
+        explanation: `Under NCERT syllabus specifications for NEET UG, fundamental conservation principles and foundational state equations govern all physical, chemical, and biological steady states.`,
         difficulty: 'Medium',
         conceptTested: `${topic || 'Fundamental Concept'}`
       },
@@ -171,23 +172,47 @@ Requirements:
     res.json({ questions: fallbackQuestions, source: 'offline-verified' });
   });
 
-  // Vite Middleware for Development vs Static for Production
-  if (process.env.NODE_ENV !== 'production') {
-    const vite = await createViteServer({
-      server: { middlewareMode: true },
-      appType: 'spa',
+  // Safety JSON fallback for all /api routes so they NEVER return HTML or 0-byte responses
+  app.all('/api/*', (req, res) => {
+    res.status(404).json({
+      success: false,
+      error: true,
+      message: `API endpoint ${req.method} ${req.path} not found.`
     });
-    app.use(vite.middlewares);
-  } else {
-    const distPath = path.join(process.cwd(), 'dist');
+  });
+
+  // Global JSON error handler for API
+  app.use((err: any, req: any, res: any, next: any) => {
+    if (req.path.startsWith('/api')) {
+      console.error('[API Error]:', err);
+      return res.status(err.status || 500).json({
+        success: false,
+        error: true,
+        message: err.message || 'Internal Server Error'
+      });
+    }
+    next(err);
+  });
+
+  // Vite Middleware for Development vs Static for Production
+  const distPath = path.join(process.cwd(), 'dist');
+  const hasDist = fs.existsSync(path.join(distPath, 'index.html'));
+
+  if (hasDist && process.env.NODE_ENV === 'production') {
     app.use(express.static(distPath));
     app.get('*', (req, res) => {
       res.sendFile(path.join(distPath, 'index.html'));
     });
+  } else {
+    const vite = await createViteServer({
+      server: { middlewareMode: true, hmr: false },
+      appType: 'spa',
+    });
+    app.use(vite.middlewares);
   }
 
   app.listen(PORT, '0.0.0.0', () => {
-    console.log(`AI Weakness Doctor Server active on http://0.0.0.0:${PORT}`);
+    console.log(`VG Insights Server active on http://0.0.0.0:${PORT}`);
   });
 }
 

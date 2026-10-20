@@ -1,9 +1,11 @@
 import { AuthService } from './authService';
+import { StorageService } from './storageService';
 import { PaymentPlan, PremiumEntitlement } from '../types/payment';
 
 declare global {
   interface Window {
     Razorpay?: any;
+    __VG_API_BASE__?: string;
   }
 }
 
@@ -24,7 +26,7 @@ export class PaymentService {
 
     // Load locally cached entitlement
     try {
-      const stored = localStorage.getItem(ENTITLEMENT_KEY);
+      const stored = StorageService.safeGetItem(ENTITLEMENT_KEY);
       if (stored) {
         this.cachedEntitlement = JSON.parse(stored);
       }
@@ -156,20 +158,96 @@ export class PaymentService {
   }
 
   /**
+   * Safely posts JSON to backend with fallback handling, text parsing, and actionable error messages.
+   * Completely prevents "Failed to execute 'json' on 'Response': Unexpected end of JSON input" errors.
+   */
+  private static async requestBackendJson(endpoint: string, payload: any, contextName: string): Promise<any> {
+    const urlsToTry = [endpoint];
+
+    // Support optional custom backend API proxy if configured
+    const customApiBase = typeof window !== 'undefined' ? (window as any).__VG_API_BASE__ : undefined;
+    if (customApiBase && typeof customApiBase === 'string' && customApiBase.startsWith('http')) {
+      urlsToTry.unshift(`${customApiBase.replace(/\/+$/, '')}${endpoint}`);
+    }
+
+    let lastError: Error | null = null;
+
+    for (const url of urlsToTry) {
+      try {
+        console.log(`[PaymentService] Initiating ${contextName} to: ${url}`);
+        const res = await fetch(url, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+          },
+          body: JSON.stringify(payload),
+        });
+
+        const rawText = await res.text();
+
+        // Check for empty body
+        if (!rawText || !rawText.trim()) {
+          if (res.status === 405) {
+            lastError = new Error(
+              `The payment endpoint returned HTTP 405 (Method Not Allowed). ` +
+              `This occurs when a static host (e.g. Cloudflare Pages without Functions) intercepts POST requests. ` +
+              `Ensure Cloudflare Pages Functions or backend proxy is deployed for ${window.location.hostname}.`
+            );
+            continue;
+          }
+          throw new Error(
+            `Payment server returned an empty response (HTTP ${res.status} ${res.statusText || 'Error'}) during ${contextName}.`
+          );
+        }
+
+        // Parse JSON safely
+        let data: any;
+        try {
+          data = JSON.parse(rawText);
+        } catch {
+          const preview = rawText.slice(0, 100).replace(/<[^>]*>/g, '').trim();
+          throw new Error(
+            `Payment server returned an unexpected non-JSON response (HTTP ${res.status}): "${preview || 'HTML error page'}".`
+          );
+        }
+
+        if (!res.ok || data.success === false) {
+          throw new Error(
+            data.message || data.error || `Payment server error during ${contextName} (HTTP ${res.status}).`
+          );
+        }
+
+        return data;
+      } catch (err: any) {
+        lastError = err;
+        if (urlsToTry.indexOf(url) < urlsToTry.length - 1) {
+          continue;
+        }
+      }
+    }
+
+    throw lastError || new Error(`Could not communicate with payment server during ${contextName}.`);
+  }
+
+  /**
    * Fetches latest verified entitlement from server
    */
   public static async syncWithServer(email: string, userId?: string): Promise<PremiumEntitlement> {
     try {
       const query = new URLSearchParams({ email, userId: userId || '' }).toString();
       const res = await fetch(`/api/payment/status?${query}`);
-      if (res.ok) {
-        const data = await res.json();
-        if (data && data.success && data.entitlement) {
-          this.cachedEntitlement = data.entitlement;
-          localStorage.setItem(ENTITLEMENT_KEY, JSON.stringify(data.entitlement));
-          this.notifyListeners();
-          return this.getEntitlement();
-        }
+      const rawText = await res.text();
+      if (rawText && rawText.trim()) {
+        try {
+          const data = JSON.parse(rawText);
+          if (data && data.success && data.entitlement) {
+            this.cachedEntitlement = data.entitlement;
+            StorageService.safeSetItem(ENTITLEMENT_KEY, JSON.stringify(data.entitlement));
+            this.notifyListeners();
+            return this.getEntitlement();
+          }
+        } catch {}
       }
     } catch (err) {
       console.warn('[PaymentService] Failed to sync entitlement with server:', err);
@@ -223,22 +301,13 @@ export class PaymentService {
     }
 
     try {
-      // 1. Create order or subscription securely on backend
-      const orderRes = await fetch('/api/payment/create-order', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          planId,
-          userEmail: user.email,
-          userName: user.name || '',
-          userId: user.id || user.uid || ''
-        })
-      });
-
-      const orderData = await orderRes.json();
-      if (!orderRes.ok || !orderData.success) {
-        throw new Error(orderData.message || 'Failed to initialize payment order');
-      }
+      // 1. Create order or subscription securely on backend using safe JSON handling
+      const orderData = await this.requestBackendJson('/api/payment/create-order', {
+        planId,
+        userEmail: user.email,
+        userName: user.name || '',
+        userId: user.id || user.uid || ''
+      }, 'order creation');
 
       const { order, keyId, plan, isSubscription, subscriptionId, isSandbox } = orderData;
 
@@ -297,30 +366,21 @@ export class PaymentService {
           razorpay_signature: string;
         }) => {
           try {
-            // 4. Server-side signature and payment verification
-            const verifyRes = await fetch('/api/payment/verify', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({
-                razorpay_order_id: response.razorpay_order_id,
-                razorpay_subscription_id: response.razorpay_subscription_id,
-                razorpay_payment_id: response.razorpay_payment_id,
-                razorpay_signature: response.razorpay_signature,
-                planId: plan.id,
-                userEmail: user.email,
-                userName: user.name,
-                userId: user.id || user.uid
-              })
-            });
-
-            const verifyData = await verifyRes.json();
-            if (!verifyRes.ok || !verifyData.success) {
-              throw new Error(verifyData.message || 'Payment signature verification failed.');
-            }
+            // 4. Server-side signature and payment verification using safe JSON handling
+            const verifyData = await PaymentService.requestBackendJson('/api/payment/verify', {
+              razorpay_order_id: response.razorpay_order_id,
+              razorpay_subscription_id: response.razorpay_subscription_id,
+              razorpay_payment_id: response.razorpay_payment_id,
+              razorpay_signature: response.razorpay_signature,
+              planId: plan.id,
+              userEmail: user.email,
+              userName: user.name,
+              userId: user.id || user.uid
+            }, 'payment verification');
 
             // 5. Store verified entitlement locally and trigger reactive UI refresh
             this.cachedEntitlement = verifyData.entitlement;
-            localStorage.setItem(ENTITLEMENT_KEY, JSON.stringify(verifyData.entitlement));
+            StorageService.safeSetItem(ENTITLEMENT_KEY, JSON.stringify(verifyData.entitlement));
             this.notifyListeners();
 
             options?.onSuccess?.(verifyData.entitlement);
@@ -497,20 +557,11 @@ export class PaymentService {
           payload.razorpay_order_id = params.order.id;
         }
 
-        const verifyRes = await fetch('/api/payment/verify', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
-        });
-
-        const verifyData = await verifyRes.json();
-        if (!verifyRes.ok || !verifyData.success) {
-          throw new Error(verifyData.message || 'Payment verification failed.');
-        }
+        const verifyData = await PaymentService.requestBackendJson('/api/payment/verify', payload, 'sandbox payment verification');
 
         div.remove();
         PaymentService.cachedEntitlement = verifyData.entitlement;
-        localStorage.setItem(ENTITLEMENT_KEY, JSON.stringify(verifyData.entitlement));
+        StorageService.safeSetItem(ENTITLEMENT_KEY, JSON.stringify(verifyData.entitlement));
         PaymentService.notifyListeners();
         params.onSuccess?.(verifyData.entitlement);
       } catch (err: any) {
