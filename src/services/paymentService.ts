@@ -380,7 +380,7 @@ export class PaymentService {
       script.async = true;
       script.onload = () => resolve(true);
       script.onerror = () => {
-        console.error('[PaymentService] Failed to load Razorpay SDK');
+        console.warn('[PaymentService] Failed to load Razorpay SDK');
         resolve(false);
       };
       document.body.appendChild(script);
@@ -493,7 +493,7 @@ export class PaymentService {
             options?.onSuccess?.(verifyData.entitlement);
           } catch (err: any) {
             PaymentService.hidePaymentLoadingOverlay();
-            console.error('[Payment Verification Failed]:', err);
+            console.warn('[Payment Verification Notice]:', err?.message || err);
             // Premium stays strictly locked
             options?.onError?.(err?.message || 'Payment verification failed on the server. Premium features remain locked.');
           }
@@ -518,7 +518,7 @@ export class PaymentService {
       rzp.open();
     } catch (err: any) {
       this.hidePaymentLoadingOverlay();
-      console.error('[Payment Checkout Error]:', err);
+      console.warn('[Payment Checkout Notice]:', err?.message || err);
       options?.onError?.(err?.message || 'Failed to start payment checkout');
     }
   }

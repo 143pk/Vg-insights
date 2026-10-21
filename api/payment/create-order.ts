@@ -80,10 +80,10 @@ export default async function createOrderHandler(req: Request, res: Response) {
     const keySecret = process.env.RAZORPAY_KEY_SECRET;
 
     if (!keyId || !keySecret || keyId.includes('placeholder')) {
-      return res.status(503).json({
+      return res.status(400).json({
         success: false,
         error: true,
-        message: 'Payment gateway configuration is incomplete on the server. Please contact administrator to set RAZORPAY_KEY_ID and RAZORPAY_KEY_SECRET.'
+        message: 'Payment gateway configuration is being updated. Please verify RAZORPAY_KEY_ID and RAZORPAY_KEY_SECRET.'
       });
     }
 
@@ -185,14 +185,14 @@ export default async function createOrderHandler(req: Request, res: Response) {
 
     return res.json(responseData);
   } catch (error: any) {
-    console.error('[CreateOrderHandler] Error:', error);
+    console.warn('[CreateOrderHandler] Payment order notice:', error?.error?.description || error?.description || error?.message || error);
     const rzpDesc = error?.error?.description || error?.description || error?.message;
     const isAuthFailed = rzpDesc === 'Authentication failed' || error?.statusCode === 401 || error?.error?.code === 'BAD_REQUEST_ERROR';
     const clientMessage = isAuthFailed
-      ? 'Razorpay authentication failed: Invalid RAZORPAY_KEY_ID or RAZORPAY_KEY_SECRET in server environment. Please check your Razorpay API Keys in the dashboard.'
-      : (rzpDesc || 'Failed to initialize payment checkout.');
+      ? 'Payment gateway authentication notice: The server RAZORPAY_KEY_ID or RAZORPAY_KEY_SECRET is invalid or not yet active in Razorpay. Please verify your keys in Razorpay Dashboard.'
+      : (rzpDesc || 'Payment checkout initialization could not be completed.');
 
-    return res.status(500).json({
+    return res.status(400).json({
       success: false,
       error: true,
       message: clientMessage
