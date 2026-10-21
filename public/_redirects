@@ -1,2 +1,4 @@
-/api/*  /api/:splat  200
-/*      /index.html  200
+# No redirect rules needed: /api/* is handled by the Worker (src/server/worker.ts)
+# and the SPA fallback is configured in wrangler.json (not_found_handling).
+# The previous "/* /index.html 200" rule was rejected by Cloudflare as an
+# infinite loop and broke every deploy.
