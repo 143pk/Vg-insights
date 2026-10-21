@@ -47,6 +47,158 @@ function getEnvVar(key: string, env?: Record<string, any>): string {
   return '';
 }
 
+type RazorpayResult = { ok: boolean; status: number; data: any };
+
+async function razorpayApi(
+  authHeader: string,
+  apiPath: string,
+  init?: { method?: string; body?: any }
+): Promise<RazorpayResult> {
+  const res = await fetch(`https://api.razorpay.com${apiPath}`, {
+    method: init?.method || 'GET',
+    headers: {
+      Authorization: authHeader,
+      'Content-Type': 'application/json',
+    },
+    body: init?.body ? JSON.stringify(init.body) : undefined,
+  });
+  const data: any = await res.json().catch(() => ({}));
+  return { ok: res.ok, status: res.status, data };
+}
+
+function razorpayErrorText(result: RazorpayResult): string {
+  return result.data?.error?.description || `Razorpay API error (HTTP ${result.status})`;
+}
+
+// Cached id of the real monthly plan in the Razorpay account (resolved once per instance)
+let resolvedMonthlyPlanId = '';
+
+/**
+ * Returns a real Razorpay plan id for the monthly subscription.
+ * Uses RAZORPAY_MONTHLY_PLAN_ID when set; otherwise finds (or creates once)
+ * the matching monthly plan in the Razorpay account via the API, so
+ * subscriptions work even when the env var is not configured on the host.
+ */
+async function resolveMonthlyPlanId(authHeader: string, envPlanId: string): Promise<string> {
+  if (envPlanId) return envPlanId;
+  if (resolvedMonthlyPlanId) return resolvedMonthlyPlanId;
+
+  const monthly = PAYMENT_PLANS['plan_1_month'];
+
+  const listed = await razorpayApi(authHeader, '/v1/plans?count=100');
+  if (listed.ok && Array.isArray(listed.data?.items)) {
+    const match = listed.data.items.find(
+      (p: any) =>
+        p?.period === 'monthly' &&
+        p?.item?.amount === monthly.amountInPaise &&
+        (p?.item?.currency || 'INR') === 'INR'
+    );
+    if (match?.id) {
+      resolvedMonthlyPlanId = match.id;
+      return resolvedMonthlyPlanId;
+    }
+  }
+
+  const created = await razorpayApi(authHeader, '/v1/plans', {
+    method: 'POST',
+    body: {
+      period: 'monthly',
+      interval: 1,
+      item: {
+        name: 'VG Insights Monthly Pro AutoPay',
+        amount: monthly.amountInPaise,
+        currency: 'INR',
+        description: 'Monthly NEET UG preparation pass with AutoPay',
+      },
+    },
+  });
+  if (created.ok && created.data?.id) {
+    resolvedMonthlyPlanId = created.data.id;
+    return resolvedMonthlyPlanId;
+  }
+
+  throw new Error(`Could not find or create the monthly plan in Razorpay: ${razorpayErrorText(created)}`);
+}
+
+/**
+ * Rebuilds a user's entitlement from Razorpay itself (the durable record of who
+ * actually paid), so paid access survives serverless instance restarts.
+ */
+async function lookupEntitlementFromRazorpay(
+  authHeader: string,
+  email: string,
+  uid: string
+): Promise<any | null> {
+  const matchesUser = (notes: any) => {
+    const noteEmail = (notes?.userEmail || '').trim().toLowerCase();
+    const noteUid = (notes?.userId || '').trim();
+    return (email && noteEmail === email) || (uid && noteUid && noteUid === uid);
+  };
+
+  let best: any = null;
+  const consider = (candidate: any) => {
+    if (candidate && candidate.expiresAt > Date.now() && (!best || candidate.expiresAt > best.expiresAt)) {
+      best = candidate;
+    }
+  };
+
+  // Subscriptions (monthly AutoPay) that have at least one successful charge
+  const subs = await razorpayApi(authHeader, '/v1/subscriptions?count=100');
+  if (!subs.ok) throw new Error(razorpayErrorText(subs));
+  for (const sub of subs.data?.items || []) {
+    if (!matchesUser(sub?.notes)) continue;
+    if (!['authenticated', 'active', 'completed', 'cancelled'].includes(sub?.status)) continue;
+    if (!sub?.paid_count || sub.paid_count < 1) continue;
+    const endSec = sub?.current_end || sub?.charge_at || 0;
+    if (!endSec) continue;
+    const plan = PAYMENT_PLANS['plan_1_month'];
+    consider({
+      userId: sub.notes?.userId || email,
+      userEmail: email || (sub.notes?.userEmail || '').toLowerCase(),
+      isPremium: true,
+      status: sub.status === 'cancelled' ? 'cancelled' : 'active',
+      planId: plan.id,
+      planName: plan.name,
+      billingType: plan.billingType,
+      subscriptionId: sub.id,
+      expiresAt: endSec * 1000,
+      updatedAt: Date.now(),
+    });
+  }
+
+  // Paid one-time orders
+  const orders = await razorpayApi(authHeader, '/v1/orders?count=100');
+  if (!orders.ok) throw new Error(razorpayErrorText(orders));
+  for (const order of orders.data?.items || []) {
+    if (order?.status !== 'paid' || !matchesUser(order?.notes)) continue;
+    const plan = PAYMENT_PLANS[order.notes?.planId];
+    if (!plan) continue;
+    const activatedAt = (order.created_at || 0) * 1000;
+    consider({
+      userId: order.notes?.userId || email,
+      userEmail: email || (order.notes?.userEmail || '').toLowerCase(),
+      isPremium: true,
+      status: 'active',
+      planId: plan.id,
+      planName: plan.name,
+      billingType: plan.billingType,
+      activatedAt,
+      expiresAt: activatedAt + plan.durationDays * 24 * 60 * 60 * 1000,
+      lastOrderId: order.id,
+      updatedAt: Date.now(),
+    });
+  }
+
+  if (best) {
+    best.remainingDays = Math.ceil((best.expiresAt - Date.now()) / (24 * 60 * 60 * 1000));
+  }
+  return best;
+}
+
+// Avoid hitting the Razorpay API on every /status call for free users
+const statusCheckedAt = new Map<string, number>();
+const STATUS_RECHECK_MS = 5 * 60 * 1000;
+
 /**
  * Unified request handler for API endpoints across Cloudflare Workers, Pages Functions, Netlify, and Node
  */
@@ -154,6 +306,18 @@ export async function handleUniversalApiRequest(request: Request, env?: Record<s
 
         try {
           if (isSubscription) {
+            // Resolve a real plan id even when RAZORPAY_MONTHLY_PLAN_ID is not set
+            let planIdForRazorpay: string;
+            try {
+              planIdForRazorpay = await resolveMonthlyPlanId(authHeader, monthlyPlanId);
+            } catch (planErr: any) {
+              return jsonResponse(502, {
+                success: false,
+                error: true,
+                message: planErr?.message || 'Could not resolve the Razorpay subscription plan.',
+              });
+            }
+
             // Call Razorpay Subscriptions API
             const rzpSubRes = await fetch('https://api.razorpay.com/v1/subscriptions', {
               method: 'POST',
@@ -162,7 +326,7 @@ export async function handleUniversalApiRequest(request: Request, env?: Record<s
                 'Content-Type': 'application/json',
               },
               body: JSON.stringify({
-                plan_id: monthlyPlanId,
+                plan_id: planIdForRazorpay,
                 total_count: 60,
                 quantity: 1,
                 customer_notify: 1,
@@ -341,6 +505,18 @@ export async function handleUniversalApiRequest(request: Request, env?: Record<s
         });
       }
 
+      // Confirm with the Razorpay API that the payment really went through
+      const verifyAuthHeader = 'Basic ' + btoa(`${keyId}:${keySecret}`);
+      const paymentRes = await razorpayApi(verifyAuthHeader, `/v1/payments/${razorpay_payment_id}`);
+      const paymentStatus = paymentRes.data?.status;
+      if (!paymentRes.ok || !['authorized', 'captured'].includes(paymentStatus)) {
+        return jsonResponse(400, {
+          success: false,
+          error: true,
+          message: `Razorpay has not confirmed this payment yet (status: ${paymentStatus || 'unknown'}). If money was deducted, it will be refunded automatically by your bank.`,
+        });
+      }
+
       // Calculate entitlement
       const now = Date.now();
       const expiresAt = now + plan.durationDays * 24 * 60 * 60 * 1000;
@@ -452,6 +628,38 @@ export async function handleUniversalApiRequest(request: Request, env?: Record<s
       if (cached && cached.expiresAt && cached.expiresAt > Date.now()) {
         cached.remainingDays = Math.ceil((cached.expiresAt - Date.now()) / (24 * 60 * 60 * 1000));
         return jsonResponse(200, { success: true, entitlement: cached });
+      }
+
+      // Not in this instance's memory: rebuild from Razorpay, the durable record
+      // of who actually paid, so Pro access survives serverless cold starts.
+      if (keyId && keySecret && identifier) {
+        const lastChecked = statusCheckedAt.get(identifier) || 0;
+        if (Date.now() - lastChecked > STATUS_RECHECK_MS) {
+          try {
+            const statusAuthHeader = 'Basic ' + btoa(`${keyId}:${keySecret}`);
+            const rebuilt = await lookupEntitlementFromRazorpay(
+              statusAuthHeader,
+              email.trim().toLowerCase(),
+              uid.trim()
+            );
+            statusCheckedAt.set(identifier, Date.now());
+            if (rebuilt) {
+              edgeEntitlements.set(identifier, rebuilt);
+              if (rebuilt.userEmail) {
+                edgeEntitlements.set(String(rebuilt.userEmail).toLowerCase(), rebuilt);
+              }
+              return jsonResponse(200, { success: true, entitlement: rebuilt });
+            }
+          } catch (lookupErr: any) {
+            // Don't tell the client "free" when we simply couldn't check —
+            // it would wipe a paying user's locally cached entitlement.
+            console.error('[PaymentStatus] Razorpay lookup failed:', lookupErr);
+            return jsonResponse(503, {
+              success: false,
+              message: 'Could not confirm subscription status right now. Please try again shortly.',
+            });
+          }
+        }
       }
 
       return jsonResponse(200, {
