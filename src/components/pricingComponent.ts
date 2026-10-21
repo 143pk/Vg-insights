@@ -144,23 +144,23 @@ export class PricingComponent {
 
                   <!-- Price & Savings Section -->
                   <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800/80 space-y-1.5">
-                    <div class="flex items-baseline gap-2">
-                      <span class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white">
+                    <div class="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
+                      <span class="whitespace-nowrap text-3xl sm:text-4xl font-black text-slate-900 dark:text-white">
                         ₹${plan.priceInr}
                       </span>
                       ${isSubscription ? `
-                        <span class="text-xs font-bold text-slate-500 dark:text-slate-400">/ month</span>
+                        <span class="whitespace-nowrap text-xs font-bold text-slate-500 dark:text-slate-400">/ month</span>
                       ` : `
-                        <span class="text-sm font-semibold line-through text-slate-400">
+                        <span class="whitespace-nowrap text-sm font-semibold line-through text-slate-400">
                           ₹${plan.originalPriceInr}
                         </span>
                       `}
                     </div>
-                    <div class="flex items-center justify-between text-xs">
-                      <span class="font-bold text-slate-700 dark:text-slate-300">
+                    <div class="flex flex-wrap items-center justify-between gap-1 text-xs">
+                      <span class="whitespace-nowrap font-bold text-slate-700 dark:text-slate-300">
                         ${isSubscription ? 'Billed monthly' : `₹${plan.pricePerMonthInr}/month`}
                       </span>
-                      <span class="font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-2 py-0.5 rounded-md">
+                      <span class="whitespace-nowrap font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-2 py-0.5 rounded-md">
                         Save ${plan.savingsPercent}% (₹${plan.savingsInr})
                       </span>
                     </div>

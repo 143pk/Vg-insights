@@ -93,14 +93,14 @@ export function renderHeader(
           <button
             id="btn-header-search"
             type="button"
-            class="hidden lg:flex items-center gap-2 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-800/60 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-colors text-xs font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+            class="hidden lg:flex shrink-0 whitespace-nowrap items-center gap-2 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-800/60 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-colors text-xs font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
             title="Search Topics & Formulas (Cmd+K)"
           >
             <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
             </svg>
-            <span>Search</span>
-            <kbd class="ml-1 px-1.5 py-0.5 text-[10px] font-mono text-slate-400 dark:text-slate-500 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded">⌘K</kbd>
+            <span class="hidden xl:inline">Search</span>
+            <kbd class="hidden xl:inline-block ml-1 px-1.5 py-0.5 text-[10px] font-mono text-slate-400 dark:text-slate-500 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded">⌘K</kbd>
           </button>
 
           <!-- Install Mobile/Android App Button -->
