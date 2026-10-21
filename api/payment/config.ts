@@ -8,7 +8,7 @@ export default async function paymentConfigHandler(req: Request, res: Response) 
 
     return res.json({
       success: true,
-      keyId: hasLiveKey ? keyId : (keyId || 'rzp_test_vginsights_neet'),
+      keyId: hasLiveKey ? keyId : '',
       isConfigured: hasLiveKey,
       currency: 'INR',
       plans: Object.values(PAYMENT_PLANS),

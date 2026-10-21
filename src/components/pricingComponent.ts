@@ -1,6 +1,6 @@
 import { PaymentService } from '../services/paymentService';
 import { AuthService } from '../services/authService';
-import { PAYMENT_PLANS, PaymentPlan } from '../../api/payment/plans';
+import { PAYMENT_PLANS, PaymentPlan } from '../data/paymentPlans';
 
 export class PricingComponent {
   public static render(): string {

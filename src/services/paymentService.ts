@@ -1,5 +1,7 @@
 import { AuthService } from './authService';
 import { StorageService } from './storageService';
+import { auth, db } from './firebase';
+import { doc, onSnapshot } from 'firebase/firestore';
 import { PaymentPlan, PremiumEntitlement } from '../types/payment';
 
 declare global {
@@ -20,11 +22,12 @@ export class PaymentService {
   private static cachedEntitlement: PremiumEntitlement | null = null;
   private static listeners: Array<(entitlement: PremiumEntitlement) => void> = [];
   private static isInitialized = false;
+  private static unsubscribeFirestoreListener: (() => void) | null = null;
 
   public static init(): void {
     if (this.isInitialized) return;
 
-    // Load locally cached entitlement
+    // Load locally cached verified entitlement
     try {
       const stored = StorageService.safeGetItem(ENTITLEMENT_KEY);
       if (stored) {
@@ -34,16 +37,87 @@ export class PaymentService {
       this.cachedEntitlement = null;
     }
 
-    // Subscribe to auth changes to sync entitlement with server
+    // Subscribe to auth changes to attach real-time Firestore entitlement listener
     AuthService.onAuthChanged((user) => {
-      if (user && user.email) {
-        this.syncWithServer(user.email, user.id || user.uid);
+      if (user && (user.uid || user.id)) {
+        const uid = user.uid || user.id!;
+        this.attachFirestoreEntitlementListener(uid);
+        this.syncWithServer();
       } else {
+        if (this.unsubscribeFirestoreListener) {
+          this.unsubscribeFirestoreListener();
+          this.unsubscribeFirestoreListener = null;
+        }
+        this.cachedEntitlement = null;
+        StorageService.safeRemoveItem(ENTITLEMENT_KEY);
         this.notifyListeners();
       }
     });
 
     this.isInitialized = true;
+  }
+
+  /**
+   * Attaches real-time listener to Firestore user document for instant, trusted entitlement updates
+   */
+  private static attachFirestoreEntitlementListener(uid: string): void {
+    if (this.unsubscribeFirestoreListener) {
+      this.unsubscribeFirestoreListener();
+      this.unsubscribeFirestoreListener = null;
+    }
+
+    try {
+      const userDocRef = doc(db, 'users', uid);
+      this.unsubscribeFirestoreListener = onSnapshot(userDocRef, (snap) => {
+        if (snap.exists()) {
+          const data = snap.data();
+          const now = Date.now();
+          const expiresAt = data.premiumExpiresAt ? Number(data.premiumExpiresAt) : null;
+          const isWithinValidPeriod = expiresAt !== null && now <= expiresAt;
+
+          if (data.isPremium && isWithinValidPeriod) {
+            const remainingDays = Math.ceil((expiresAt - now) / (1000 * 60 * 60 * 24));
+            this.cachedEntitlement = {
+              userId: uid,
+              userEmail: data.email || '',
+              isPremium: true,
+              status: data.premiumStatus === 'cancelled' ? 'cancelled' : 'active',
+              planId: data.planId,
+              planName: data.planName,
+              subscriptionId: data.subscriptionId,
+              expiresAt,
+              remainingDays,
+              updatedAt: data.updatedAt ? new Date(data.updatedAt).getTime() : now
+            };
+          } else if (data.isPremium && !isWithinValidPeriod) {
+            this.cachedEntitlement = {
+              userId: uid,
+              userEmail: data.email || '',
+              isPremium: false,
+              status: 'expired',
+              remainingDays: 0,
+              updatedAt: now
+            };
+          } else {
+            this.cachedEntitlement = {
+              userId: uid,
+              userEmail: data.email || '',
+              isPremium: false,
+              status: 'free',
+              remainingDays: 0,
+              updatedAt: now
+            };
+          }
+
+          StorageService.safeSetItem(ENTITLEMENT_KEY, JSON.stringify(this.cachedEntitlement));
+          this.notifyListeners();
+        }
+      }, (err) => {
+        console.warn('[PaymentService] Real-time entitlement listener warning:', err);
+      });
+    } catch (e) {
+      console.warn('[PaymentService] Failed to attach Firestore listener:', e);
+    }
   }
 
   public static onEntitlementChange(callback: (entitlement: PremiumEntitlement) => void): () => void {
@@ -66,15 +140,15 @@ export class PaymentService {
   }
 
   /**
-   * Evaluates current user's entitlement and handles expiration / paid-through dates automatically
+   * Evaluates current user's entitlement based strictly on server truth and timestamp
    */
   public static getEntitlement(): PremiumEntitlement {
     const user = AuthService.getCurrentUser();
     const stored = this.cachedEntitlement;
 
     const now = Date.now();
-    if (stored && stored.expiresAt) {
-      if (now <= stored.expiresAt) {
+    if (stored && stored.expiresAt && stored.userId === (user?.uid || user?.id)) {
+      if (now <= stored.expiresAt && stored.isPremium) {
         const remainingMs = stored.expiresAt - now;
         const remainingDays = Math.ceil(remainingMs / (1000 * 60 * 60 * 24));
         return {
@@ -109,7 +183,7 @@ export class PaymentService {
 
   public static isPremiumActive(): boolean {
     const ent = this.getEntitlement();
-    return ent.isPremium && (ent.status === 'active' || ent.status === 'cancelled');
+    return Boolean(ent.isPremium && (ent.status === 'active' || ent.status === 'cancelled'));
   }
 
   /**
@@ -158,57 +232,74 @@ export class PaymentService {
   }
 
   /**
-   * Safely posts JSON to backend with fallback handling, text parsing, and actionable error messages.
-   * Completely prevents "Failed to execute 'json' on 'Response': Unexpected end of JSON input" errors.
+   * Safely posts JSON to backend with Firebase ID Token authentication and structured error messages
    */
   private static async requestBackendJson(endpoint: string, payload: any, contextName: string): Promise<any> {
     const urlsToTry = [endpoint];
 
-    // Support optional custom backend API proxy if configured
+    // Support Firebase Cloud Functions direct URL or custom API proxy
+    const functionsBase = (typeof import.meta !== 'undefined' && (import.meta as any).env?.VITE_FIREBASE_FUNCTIONS_URL)
+      || (typeof window !== 'undefined' ? (window as any).__VG_FUNCTIONS_BASE__ : undefined);
+
+    if (functionsBase && typeof functionsBase === 'string' && functionsBase.startsWith('http')) {
+      const cleanBase = functionsBase.replace(/\/+$/, '');
+      if (endpoint === '/api/payment/create-order') {
+        urlsToTry.unshift(`${cleanBase}/createSubscription`);
+      } else if (endpoint === '/api/payment/verify') {
+        urlsToTry.unshift(`${cleanBase}/verifyPayment`);
+      } else {
+        urlsToTry.unshift(`${cleanBase}${endpoint}`);
+      }
+    }
+
     const customApiBase = typeof window !== 'undefined' ? (window as any).__VG_API_BASE__ : undefined;
     if (customApiBase && typeof customApiBase === 'string' && customApiBase.startsWith('http')) {
       urlsToTry.unshift(`${customApiBase.replace(/\/+$/, '')}${endpoint}`);
+    }
+
+    // Get fresh Firebase ID Token
+    let idToken = '';
+    try {
+      if (auth.currentUser) {
+        idToken = await auth.currentUser.getIdToken(true);
+      }
+    } catch (tokenErr) {
+      console.warn('[PaymentService] Failed to retrieve fresh ID token:', tokenErr);
     }
 
     let lastError: Error | null = null;
 
     for (const url of urlsToTry) {
       try {
-        console.log(`[PaymentService] Initiating ${contextName} to: ${url}`);
+        const headers: Record<string, string> = {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        };
+        if (idToken) {
+          headers['Authorization'] = `Bearer ${idToken}`;
+        }
+
         const res = await fetch(url, {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json',
-          },
+          headers,
           body: JSON.stringify(payload),
         });
 
         const rawText = await res.text();
 
-        // Check for empty body
         if (!rawText || !rawText.trim()) {
-          if (res.status === 405) {
-            lastError = new Error(
-              `The payment endpoint returned HTTP 405 (Method Not Allowed). ` +
-              `This occurs when a static host (e.g. Cloudflare Pages without Functions) intercepts POST requests. ` +
-              `Ensure Cloudflare Pages Functions or backend proxy is deployed for ${window.location.hostname}.`
-            );
-            continue;
-          }
           throw new Error(
-            `Payment server returned an empty response (HTTP ${res.status} ${res.statusText || 'Error'}) during ${contextName}.`
+            `Payment server returned an empty response (HTTP ${res.status}).`
           );
         }
 
-        // Parse JSON safely
         let data: any;
         try {
           data = JSON.parse(rawText);
         } catch {
           const preview = rawText.slice(0, 100).replace(/<[^>]*>/g, '').trim();
           throw new Error(
-            `Payment server returned an unexpected non-JSON response (HTTP ${res.status}): "${preview || 'HTML error page'}".`
+            `Payment server error (HTTP ${res.status}): "${preview || 'Unexpected response'}".`
           );
         }
 
@@ -231,23 +322,28 @@ export class PaymentService {
   }
 
   /**
-   * Fetches latest verified entitlement from server
+   * Fetches latest verified entitlement from server using authenticated request
    */
-  public static async syncWithServer(email: string, userId?: string): Promise<PremiumEntitlement> {
+  public static async syncWithServer(): Promise<PremiumEntitlement> {
     try {
-      const query = new URLSearchParams({ email, userId: userId || '' }).toString();
-      const res = await fetch(`/api/payment/status?${query}`);
-      const rawText = await res.text();
-      if (rawText && rawText.trim()) {
-        try {
-          const data = JSON.parse(rawText);
-          if (data && data.success && data.entitlement) {
-            this.cachedEntitlement = data.entitlement;
-            StorageService.safeSetItem(ENTITLEMENT_KEY, JSON.stringify(data.entitlement));
-            this.notifyListeners();
-            return this.getEntitlement();
-          }
-        } catch {}
+      let idToken = '';
+      if (auth.currentUser) {
+        idToken = await auth.currentUser.getIdToken();
+      }
+      if (!idToken) return this.getEntitlement();
+
+      const res = await fetch('/api/payment/status', {
+        headers: {
+          'Authorization': `Bearer ${idToken}`,
+          'Accept': 'application/json'
+        }
+      });
+      const data = await res.json();
+      if (data && data.success && data.entitlement) {
+        this.cachedEntitlement = data.entitlement;
+        StorageService.safeSetItem(ENTITLEMENT_KEY, JSON.stringify(data.entitlement));
+        this.notifyListeners();
+        return this.getEntitlement();
       }
     } catch (err) {
       console.warn('[PaymentService] Failed to sync entitlement with server:', err);
@@ -287,7 +383,8 @@ export class PaymentService {
   }
 
   /**
-   * Initiates payment order / subscription creation on server and opens Razorpay Checkout
+   * Initiates payment order / subscription creation on server and opens Razorpay Checkout.
+   * Under ZERO circumstances does this grant premium access without verified server signature!
    */
   public static async checkout(planId: string, options?: {
     onSuccess?: (entitlement: PremiumEntitlement) => void;
@@ -296,41 +393,37 @@ export class PaymentService {
   }): Promise<void> {
     const user = AuthService.getCurrentUser();
     if (!user || !user.email) {
-      this.promptEmailForCheckout(planId, options);
+      // Require authenticated sign-in before starting payment
+      if ((window as any).openAuthModal) {
+        (window as any).openAuthModal();
+      }
+      options?.onError?.('Please sign in or create an account to activate your subscription.');
       return;
     }
 
     try {
-      // 1. Create order or subscription securely on backend using safe JSON handling
+      this.showPaymentLoadingOverlay('Initializing secure subscription with Razorpay...');
+
+      // 1. Create order or subscription securely on backend with Firebase ID Token
       const orderData = await this.requestBackendJson('/api/payment/create-order', {
-        planId,
-        userEmail: user.email,
-        userName: user.name || '',
-        userId: user.id || user.uid || ''
+        planId
       }, 'order creation');
 
-      const { order, keyId, plan, isSubscription, subscriptionId, isSandbox } = orderData;
+      const { order, keyId, plan, isSubscription, subscriptionId } = orderData;
 
-      // Sandbox or fallback test checkout
-      if (isSandbox || !keyId || keyId.includes('placeholder')) {
-        this.openSandboxCheckoutModal({
-          order,
-          plan,
-          user,
-          isSubscription: !!isSubscription,
-          subscriptionId,
-          onSuccess: options?.onSuccess,
-          onError: options?.onError,
-          onCancel: options?.onCancel
-        });
-        return;
+      if (!keyId || keyId.includes('placeholder')) {
+        this.hidePaymentLoadingOverlay();
+        throw new Error('Payment gateway is currently being configured on the server. Please contact administrator.');
       }
 
-      // 2. Load Razorpay SDK for live payments
+      // 2. Load Razorpay Checkout SDK
       const isLoaded = await this.loadRazorpayScript();
       if (!isLoaded || typeof window.Razorpay !== 'function') {
+        this.hidePaymentLoadingOverlay();
         throw new Error('Could not load Razorpay payment gateway. Please check your internet connection.');
       }
+
+      this.hidePaymentLoadingOverlay();
 
       // 3. Configure Razorpay Checkout options
       const rzpOptions: any = {
@@ -347,8 +440,8 @@ export class PaymentService {
         },
         notes: {
           planId: plan.id,
-          userEmail: user.email,
-          userId: user.id || user.uid || ''
+          userId: user.id || user.uid || '',
+          userEmail: user.email
         },
         theme: {
           color: '#2563eb'
@@ -366,36 +459,37 @@ export class PaymentService {
           razorpay_signature: string;
         }) => {
           try {
-            // 4. Server-side signature and payment verification using safe JSON handling
+            // 4. Show cryptographic verification state
+            PaymentService.showPaymentLoadingOverlay('Verifying payment cryptographically with server...');
+
             const verifyData = await PaymentService.requestBackendJson('/api/payment/verify', {
               razorpay_order_id: response.razorpay_order_id,
-              razorpay_subscription_id: response.razorpay_subscription_id,
+              razorpay_subscription_id: response.razorpay_subscription_id || subscriptionId,
               razorpay_payment_id: response.razorpay_payment_id,
               razorpay_signature: response.razorpay_signature,
-              planId: plan.id,
-              userEmail: user.email,
-              userName: user.name,
-              userId: user.id || user.uid
+              planId: plan.id
             }, 'payment verification');
 
+            PaymentService.hidePaymentLoadingOverlay();
+
             // 5. Store verified entitlement locally and trigger reactive UI refresh
-            this.cachedEntitlement = verifyData.entitlement;
+            PaymentService.cachedEntitlement = verifyData.entitlement;
             StorageService.safeSetItem(ENTITLEMENT_KEY, JSON.stringify(verifyData.entitlement));
-            this.notifyListeners();
+            PaymentService.notifyListeners();
 
             options?.onSuccess?.(verifyData.entitlement);
           } catch (err: any) {
+            PaymentService.hidePaymentLoadingOverlay();
             console.error('[Payment Verification Failed]:', err);
-            options?.onError?.(err?.message || 'Payment verification failed on the server.');
+            // Premium stays strictly locked
+            options?.onError?.(err?.message || 'Payment verification failed on the server. Premium features remain locked.');
           }
         }
       };
 
       if (isSubscription && subscriptionId) {
-        // Razorpay Subscription mode
         rzpOptions.subscription_id = subscriptionId;
-      } else {
-        // One-time order mode
+      } else if (order) {
         rzpOptions.amount = order.amount;
         rzpOptions.currency = order.currency || 'INR';
         rzpOptions.order_id = order.id;
@@ -410,274 +504,49 @@ export class PaymentService {
 
       rzp.open();
     } catch (err: any) {
+      this.hidePaymentLoadingOverlay();
       console.error('[Payment Checkout Error]:', err);
       options?.onError?.(err?.message || 'Failed to start payment checkout');
     }
   }
 
-  private static openSandboxCheckoutModal(params: {
-    order: any;
-    plan: any;
-    user: any;
-    isSubscription?: boolean;
-    subscriptionId?: string;
-    onSuccess?: (entitlement: PremiumEntitlement) => void;
-    onError?: (error: string) => void;
-    onCancel?: () => void;
-  }): void {
-    const existing = document.getElementById('modal-sandbox-checkout');
-    if (existing) existing.remove();
+  private static showPaymentLoadingOverlay(message: string): void {
+    let overlay = document.getElementById('vg-payment-loading-overlay');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.id = 'vg-payment-loading-overlay';
+      overlay.className = 'fixed inset-0 z-[100] flex items-center justify-center bg-slate-900/70 backdrop-blur-sm p-4';
+      document.body.appendChild(overlay);
+    }
 
-    const div = document.createElement('div');
-    div.id = 'modal-sandbox-checkout';
-    div.className = 'fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-sm animate-fade-in';
-    div.innerHTML = `
-      <div class="w-full max-w-md rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl overflow-hidden animate-scale-up">
-        <!-- Razorpay Header -->
-        <div class="bg-gradient-to-r from-blue-700 to-indigo-800 p-5 text-white flex items-center justify-between">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-xs flex items-center justify-center font-black text-sm">
-              VG
-            </div>
-            <div>
-              <h3 class="font-bold text-sm">VG Insights • Razorpay</h3>
-              <p class="text-[11px] text-blue-200">${params.plan.name} (${params.plan.durationLabel})</p>
-            </div>
-          </div>
-          <div class="text-right">
-            <span class="text-xs uppercase font-bold text-blue-200 block">${params.isSubscription ? 'Monthly AutoPay' : 'Amount'}</span>
-            <span class="text-lg font-black">₹${params.plan.priceInr}${params.isSubscription ? '/mo' : ''}</span>
-          </div>
-        </div>
-
-        <!-- Body & Payment Methods -->
-        <div class="p-6 space-y-5">
-          <div class="p-3 rounded-2xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200/80 dark:border-blue-900 text-xs text-blue-900 dark:text-blue-300 flex items-start gap-2.5">
-            <span class="text-base shrink-0">${params.isSubscription ? '🔄' : '💳'}</span>
-            <div class="leading-relaxed">
-              <span class="font-bold">${params.isSubscription ? 'Razorpay Subscription Mode' : 'Razorpay One-Time Payment'}</span>
-              <p class="text-[11px] text-blue-700 dark:text-blue-400 mt-0.5">
-                ${params.isSubscription 
-                  ? 'Simulating UPI AutoPay / e-Mandate authorization for <strong>' + params.user.email + '</strong> (cancel anytime).'
-                  : 'Verifying one-time payment for <strong>' + params.user.email + '</strong>.'}
-              </p>
-            </div>
-          </div>
-
-          <!-- Method Selector -->
-          <div class="space-y-2">
-            <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-400">Payment Option</label>
-            <div class="grid grid-cols-3 gap-2 text-center text-xs">
-              <div class="p-3 rounded-xl border-2 border-blue-600 bg-blue-50/50 dark:bg-blue-950/40 font-bold text-blue-600 dark:text-blue-400">
-                <span>📱 UPI / AutoPay</span>
-                <span class="block text-[10px] text-slate-500 font-normal">GPay / PhonePe</span>
-              </div>
-              <div class="p-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 font-medium text-slate-700 dark:text-slate-300">
-                <span>💳 Card Mandate</span>
-                <span class="block text-[10px] text-slate-400 font-normal">Visa / Master</span>
-              </div>
-              <div class="p-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 font-medium text-slate-700 dark:text-slate-300">
-                <span>🏦 NetBanking</span>
-                <span class="block text-[10px] text-slate-400 font-normal">All Banks</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Order Summary -->
-          <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800 space-y-1.5 text-xs">
-            <div class="flex justify-between text-slate-500 dark:text-slate-400">
-              <span>Reference ID:</span>
-              <span class="font-mono text-[11px] text-slate-700 dark:text-slate-300">${params.subscriptionId || params.order.id}</span>
-            </div>
-            <div class="flex justify-between text-slate-500 dark:text-slate-400">
-              <span>Billing Model:</span>
-              <span class="font-semibold text-slate-800 dark:text-slate-200">${params.isSubscription ? 'Monthly Recurring AutoPay' : 'Fixed Duration (One-Time)'}</span>
-            </div>
-            <div class="flex justify-between text-slate-500 dark:text-slate-400">
-              <span>Access Period:</span>
-              <span class="font-semibold text-emerald-600 dark:text-emerald-400">${params.plan.durationDays} Days</span>
-            </div>
-          </div>
-
-          <!-- Action Buttons -->
-          <div class="space-y-2 pt-2">
-            <button
-              type="button"
-              id="btn-confirm-sandbox-payment"
-              class="w-full py-3.5 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm shadow-lg shadow-blue-500/25 transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-98"
-            >
-              <span>${params.isSubscription ? `Authorize AutoPay & Pay ₹${params.plan.priceInr}` : `Confirm & Complete Payment (₹${params.plan.priceInr})`}</span>
-              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-            </button>
-            <button
-              type="button"
-              id="btn-cancel-sandbox-payment"
-              class="w-full py-2.5 rounded-xl text-xs font-semibold text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-colors cursor-pointer"
-            >
-              Cancel Payment
-            </button>
-          </div>
-        </div>
-      </div>
-    `;
-
-    document.body.appendChild(div);
-
-    document.getElementById('btn-cancel-sandbox-payment')?.addEventListener('click', () => {
-      div.remove();
-      params.onCancel?.();
-    });
-
-    document.getElementById('btn-confirm-sandbox-payment')?.addEventListener('click', async () => {
-      const confirmBtn = document.getElementById('btn-confirm-sandbox-payment') as HTMLButtonElement;
-      if (confirmBtn) {
-        confirmBtn.disabled = true;
-        confirmBtn.innerHTML = `
-          <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
+    overlay.innerHTML = `
+      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 max-w-sm w-full text-center shadow-2xl space-y-4">
+        <div class="w-14 h-14 mx-auto rounded-2xl bg-blue-50 dark:bg-blue-950/60 flex items-center justify-center text-blue-600">
+          <svg class="animate-spin h-7 w-7" viewBox="0 0 24 24" fill="none">
             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
             <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
           </svg>
-          <span>Verifying with Server...</span>
-        `;
-      }
-
-      try {
-        const payload: any = {
-          razorpay_payment_id: `pay_test_${Date.now().toString(36)}${Math.random().toString(36).slice(2, 6)}`,
-          razorpay_signature: 'test_signature_verified',
-          planId: params.plan.id,
-          userEmail: params.user.email,
-          userName: params.user.name,
-          userId: params.user.id || params.user.uid
-        };
-
-        if (params.isSubscription && params.subscriptionId) {
-          payload.razorpay_subscription_id = params.subscriptionId;
-        } else {
-          payload.razorpay_order_id = params.order.id;
-        }
-
-        const verifyData = await PaymentService.requestBackendJson('/api/payment/verify', payload, 'sandbox payment verification');
-
-        div.remove();
-        PaymentService.cachedEntitlement = verifyData.entitlement;
-        StorageService.safeSetItem(ENTITLEMENT_KEY, JSON.stringify(verifyData.entitlement));
-        PaymentService.notifyListeners();
-        params.onSuccess?.(verifyData.entitlement);
-      } catch (err: any) {
-        div.remove();
-        params.onError?.(err?.message || 'Payment verification failed on the server.');
-      }
-    });
-  }
-
-  private static promptEmailForCheckout(planId: string, options?: {
-    onSuccess?: (entitlement: PremiumEntitlement) => void;
-    onError?: (error: string) => void;
-    onCancel?: () => void;
-  }): void {
-    const existing = document.getElementById('modal-email-checkout');
-    if (existing) existing.remove();
-
-    const div = document.createElement('div');
-    div.id = 'modal-email-checkout';
-    div.className = 'fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-sm animate-fade-in';
-    div.innerHTML = `
-      <div class="w-full max-w-md rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl p-6 sm:p-7 space-y-5 animate-scale-up text-left">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center gap-2">
-            <span class="text-xl">⚡</span>
-            <h3 class="font-black text-lg text-slate-900 dark:text-white">Student Account & Payment</h3>
-          </div>
-          <button id="btn-close-email-checkout" class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-slate-800 dark:hover:text-white flex items-center justify-center font-bold cursor-pointer">✕</button>
         </div>
-
-        <div class="p-3.5 rounded-2xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200/80 dark:border-blue-800/80 text-xs text-blue-900 dark:text-blue-300">
-          <p class="font-bold">Enter your email address to continue</p>
-          <p class="text-[11px] text-blue-700 dark:text-blue-400 mt-0.5">
-            Your Pro access and payment receipt will be securely linked to this email.
-          </p>
-        </div>
-
-        <form id="form-email-checkout" class="space-y-4">
-          <div>
-            <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">
-              Student Email <span class="text-rose-500">*</span>
-            </label>
-            <input
-              type="email"
-              id="input-checkout-email"
-              required
-              placeholder="e.g. aspirant@gmail.com"
-              class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-xs sm:text-sm font-medium focus:ring-2 focus:ring-blue-600 focus:outline-none"
-            />
-          </div>
-          <div>
-            <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">
-              Full Name (Optional)
-            </label>
-            <input
-              type="text"
-              id="input-checkout-name"
-              placeholder="e.g. Amit Kumar"
-              class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-xs sm:text-sm font-medium focus:ring-2 focus:ring-blue-600 focus:outline-none"
-            />
-          </div>
-
-          <button
-            type="submit"
-            class="w-full py-3.5 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm shadow-lg shadow-blue-500/25 transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-98"
-          >
-            <span>Proceed to Razorpay Checkout →</span>
-          </button>
-        </form>
-
-        <div class="text-center pt-1 border-t border-slate-100 dark:border-slate-800">
-          <button id="btn-trigger-full-auth" type="button" class="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline cursor-pointer">
-            Or sign in with Google / Mobile OTP →
-          </button>
-        </div>
+        <h4 class="font-bold text-base text-slate-900 dark:text-white">Securing Your Subscription</h4>
+        <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">${message}</p>
       </div>
     `;
-
-    document.body.appendChild(div);
-
-    document.getElementById('btn-close-email-checkout')?.addEventListener('click', () => {
-      div.remove();
-      options?.onCancel?.();
-    });
-
-    document.getElementById('btn-trigger-full-auth')?.addEventListener('click', () => {
-      div.remove();
-      (window as any).openAuthModal?.();
-    });
-
-    document.getElementById('form-email-checkout')?.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const emailInput = document.getElementById('input-checkout-email') as HTMLInputElement;
-      const nameInput = document.getElementById('input-checkout-name') as HTMLInputElement;
-      const email = emailInput?.value?.trim();
-      const name = nameInput?.value?.trim();
-      if (!email) return;
-
-      AuthService.loginWithDirectEmail(email, name);
-      div.remove();
-
-      // Proceed immediately with checkout!
-      PaymentService.checkout(planId, options);
-    });
+    overlay.style.display = 'flex';
   }
 
-  /**
-   * Helper to format an expiry date nicely
-   */
   public static formatExpiry(timestamp?: number): string {
     if (!timestamp) return 'N/A';
-    const date = new Date(timestamp);
-    return date.toLocaleDateString('en-IN', {
+    return new Date(timestamp).toLocaleDateString('en-IN', {
       day: 'numeric',
       month: 'short',
       year: 'numeric'
     });
+  }
+
+  private static hidePaymentLoadingOverlay(): void {
+    const overlay = document.getElementById('vg-payment-loading-overlay');
+    if (overlay) {
+      overlay.style.display = 'none';
+    }
   }
 }

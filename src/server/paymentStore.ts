@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
-import { PAYMENT_PLANS } from '../../api/payment/plans';
+import { PAYMENT_PLANS } from '../data/paymentPlans';
 import { FirebaseSync } from './firebaseSync';
 
 export interface PaymentRecord {
@@ -23,7 +23,7 @@ export interface PaymentRecord {
   durationDays: number;
   createdAt: number;
   updatedAt: number;
-  source: 'checkout' | 'webhook' | 'simulation';
+  source: 'checkout' | 'webhook';
   errorDetails?: string;
 }
 
@@ -212,7 +212,7 @@ export class PaymentStore {
     paymentId: string;
     subscriptionId?: string;
     billingType?: 'subscription' | 'one_time';
-    source?: 'checkout' | 'webhook' | 'simulation';
+    source?: 'checkout' | 'webhook';
   }): UserEntitlement {
     this.init();
     const plan = PAYMENT_PLANS[params.planId];

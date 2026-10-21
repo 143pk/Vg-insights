@@ -1,38 +1,80 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
+    // Global Default Deny
     match /{document=**} {
       allow read, write: if false;
     }
+
+    // Webhook idempotency events (Server-Admin SDK only)
+    match /webhookEvents/{eventId} {
+      allow read, write: if false;
+    }
+
+    // User Accounts & Security Boundaries
     match /users/{userId} {
+      // Authenticated users can only read their own profile
       allow read: if request.auth != null && request.auth.uid == userId;
-      // Prevent unauthorized users from modifying premium status through client-side state or direct database writes
+
+      // Users can register their profile, but CANNOT grant themselves premium access or active subscription
       allow create: if request.auth != null && request.auth.uid == userId
         && (!('isPremium' in request.resource.data) || request.resource.data.isPremium == false)
-        && (!('premiumExpiresAt' in request.resource.data) || request.resource.data.premiumExpiresAt == null);
+        && (!('premiumStatus' in request.resource.data) || request.resource.data.premiumStatus == 'free' || request.resource.data.premiumStatus == null)
+        && (!('premiumExpiresAt' in request.resource.data) || request.resource.data.premiumExpiresAt == null)
+        && (!('planId' in request.resource.data) || request.resource.data.planId == null)
+        && (!('planName' in request.resource.data) || request.resource.data.planName == null)
+        && (!('subscriptionId' in request.resource.data) || request.resource.data.subscriptionId == null)
+        && (!('lastPaymentId' in request.resource.data) || request.resource.data.lastPaymentId == null)
+        && (!('entitlement' in request.resource.data) || request.resource.data.entitlement == null);
+
+      allow delete: if false;
+
+      // Users can update their learning metadata, but CANNOT modify any entitlement fields
       allow update: if request.auth != null && request.auth.uid == userId
-        && (!request.resource.data.diff(resource.data).affectedKeys().hasAny(['isPremium', 'premiumExpiresAt', 'planId', 'entitlement', 'subscriptionId']));
-      
+        && (!request.resource.data.diff(resource.data).affectedKeys().hasAny([
+          'isPremium',
+          'premiumExpiresAt',
+          'premiumStatus',
+          'planId',
+          'planName',
+          'entitlement',
+          'subscriptionId',
+          'lastPaymentId'
+        ]));
+
+      // Server-controlled verified payments subcollection
       match /payments/{paymentId} {
         allow read: if request.auth != null && request.auth.uid == userId;
         allow write: if false;
       }
 
+      // Server-controlled verified subscriptions subcollection
+      match /subscriptions/{subscriptionId} {
+        allow read: if request.auth != null && request.auth.uid == userId;
+        allow write: if false;
+      }
+
+      // Test History, Bookmarks, and Chapterwise Progress
       match /testHistory/{historyId} {
         allow read, write: if request.auth != null && request.auth.uid == userId;
       }
-      
+
       match /bookmarks/{bookmarkId} {
         allow read, write: if request.auth != null && request.auth.uid == userId;
       }
+
       match /chapterwiseProgress/{chapterId} {
         allow read, write: if request.auth != null && request.auth.uid == userId;
       }
     }
+
+    // Public MCQ catalog (read-only for students, admin writes)
     match /chapterwise_mcqs/{document=**} {
       allow read: if true;
-      allow write: if request.auth != null;
+      allow write: if false;
     }
+
+    // Connection testing
     match /test/connection {
       allow read: if true;
     }

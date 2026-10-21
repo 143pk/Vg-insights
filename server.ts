@@ -16,6 +16,14 @@ import verifyPaymentHandler from './api/payment/verify';
 import webhookHandler from './api/payment/webhook';
 import paymentStatusHandler from './api/payment/status';
 
+// Prevent dev server process from dying on unexpected errors
+process.on('uncaughtException', (err) => {
+  console.error('[Process Uncaught Exception]:', err);
+});
+process.on('unhandledRejection', (reason) => {
+  console.error('[Process Unhandled Rejection]:', reason);
+});
+
 async function startServer() {
   const app = express();
   // Dev server must strictly run on port 3000 as required by AI Studio runtime environment
@@ -173,7 +181,11 @@ Return ONLY the raw JSON array without markdown code blocks.`;
   });
 
   // Safety JSON fallback for all /api routes so they NEVER return HTML or 0-byte responses
-  app.all('/api/*', (req, res) => {
+  app.all('/api/*', (req, res, next) => {
+    // If request has a source file extension, let Vite middleware handle it
+    if (/\.(ts|js|mjs|css|json|map)(\?|$)/.test(req.url)) {
+      return next();
+    }
     res.status(404).json({
       success: false,
       error: true,

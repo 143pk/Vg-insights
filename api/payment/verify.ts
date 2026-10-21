@@ -1,160 +1,193 @@
 import { Request, Response } from 'express';
 import crypto from 'crypto';
-import { PAYMENT_PLANS } from './plans';
-import { PaymentStore } from '../../src/server/paymentStore';
+import { PAYMENT_PLANS } from '../../src/data/paymentPlans';
+import { authenticateFirebaseRequest, getAdminFirestore } from '../../src/server/firebaseAdmin';
 
 export default async function verifyPaymentHandler(req: Request, res: Response) {
   try {
+    // 1. Authenticate caller with Firebase Auth ID Token
+    let authUser: { uid: string; email: string; name?: string };
+    try {
+      authUser = await authenticateFirebaseRequest(req.headers.authorization);
+    } catch (authErr: any) {
+      return res.status(401).json({
+        success: false,
+        error: true,
+        message: authErr.message || 'Authentication required to verify payment.'
+      });
+    }
+
     const {
+      razorpay_payment_id,
       razorpay_order_id,
       razorpay_subscription_id,
-      razorpay_payment_id,
       razorpay_signature,
-      planId,
-      userId,
-      userEmail,
-      userName
+      planId
     } = req.body || {};
 
-    const trackingId = razorpay_subscription_id || razorpay_order_id;
-
-    if (!trackingId) {
+    if (!razorpay_payment_id || !razorpay_signature) {
       return res.status(400).json({
         success: false,
-        message: 'Order ID or Subscription ID is required.'
-      });
-    }
-
-    if (!userEmail) {
-      return res.status(400).json({
-        success: false,
-        message: 'User email is required.'
-      });
-    }
-
-    const plan = PAYMENT_PLANS[planId];
-    if (!plan) {
-      return res.status(400).json({
-        success: false,
-        message: 'Invalid plan selected.'
+        error: true,
+        message: 'Missing payment ID or signature for verification.'
       });
     }
 
     const keySecret = process.env.RAZORPAY_KEY_SECRET;
-    const isSandboxOrder = trackingId.startsWith('order_test_') || trackingId.startsWith('sub_test_');
-
-    if (keySecret && !isSandboxOrder) {
-      // Cryptographic verification using Razorpay Key Secret
-      let expectedData: string;
-      if (razorpay_subscription_id) {
-        // Razorpay Subscription verification formula: payment_id|subscription_id
-        expectedData = `${razorpay_payment_id}|${razorpay_subscription_id}`;
-      } else {
-        // Razorpay Order verification formula: order_id|payment_id
-        expectedData = `${razorpay_order_id}|${razorpay_payment_id}`;
-      }
-
-      const generatedSignature = crypto
-        .createHmac('sha256', keySecret)
-        .update(expectedData)
-        .digest('hex');
-
-      if (generatedSignature !== razorpay_signature) {
-        console.warn('[PaymentVerify] Signature mismatch for trackingId:', trackingId);
-        return res.status(400).json({
-          success: false,
-          message: 'Payment verification failed: Invalid cryptographic signature.'
-        });
-      }
-    } else {
-      // In sandbox mode, verify that the order or subscription was created in our server PaymentStore
-      const recorded = PaymentStore.getPaymentByOrderId(trackingId) || PaymentStore.getPaymentBySubscriptionId(trackingId);
-      if (!recorded) {
-        return res.status(400).json({
-          success: false,
-          message: 'Unknown or forged order ID.'
-        });
-      }
-    }
-
-    // Payment is valid! Check if payment was already captured (idempotency check)
-    const existingPayment = PaymentStore.getPaymentByPaymentId(razorpay_payment_id);
-    if (existingPayment && existingPayment.status === 'captured') {
-      const entitlement = PaymentStore.getEntitlement(userEmail);
-      return res.json({
-        success: true,
-        message: 'Payment already verified and active.',
-        entitlement,
-        receipt: {
-          orderId: razorpay_order_id || '',
-          subscriptionId: razorpay_subscription_id || '',
-          paymentId: razorpay_payment_id,
-          planName: plan.name,
-          amountInr: plan.priceInr,
-          durationDays: plan.durationDays,
-          billingType: plan.billingType,
-          activatedAt: entitlement.activatedAt,
-          expiresAt: entitlement.expiresAt
-        }
+    if (!keySecret) {
+      return res.status(503).json({
+        success: false,
+        error: true,
+        message: 'Payment verification secret is not configured on the server.'
       });
     }
 
-    // Record verified payment
-    PaymentStore.recordPayment({
-      id: razorpay_payment_id,
-      orderId: razorpay_order_id || '',
-      subscriptionId: razorpay_subscription_id || '',
-      paymentId: razorpay_payment_id,
-      signature: razorpay_signature,
-      userId: userId || userEmail,
-      userEmail: userEmail.trim().toLowerCase(),
-      userName: userName || '',
-      planId: plan.id,
-      planName: plan.name,
-      billingType: plan.billingType,
-      amountInPaise: plan.amountInPaise,
-      amountInInr: plan.priceInr,
-      currency: 'INR',
-      status: 'captured',
-      durationDays: plan.durationDays,
-      createdAt: Date.now(),
-      updatedAt: Date.now(),
-      source: isSandboxOrder ? 'simulation' : 'checkout'
-    });
+    const selectedPlan = PAYMENT_PLANS[planId || 'plan_1_month'];
+    if (!selectedPlan) {
+      return res.status(400).json({
+        success: false,
+        error: true,
+        message: 'Invalid plan associated with payment.'
+      });
+    }
 
-    // Activate or extend user's entitlement
-    const entitlement = PaymentStore.activateEntitlement({
-      userId: userId || userEmail,
-      userEmail: userEmail.trim().toLowerCase(),
-      planId: plan.id,
-      orderId: razorpay_order_id,
-      subscriptionId: razorpay_subscription_id,
-      paymentId: razorpay_payment_id,
-      billingType: plan.billingType,
-      source: isSandboxOrder ? 'simulation' : 'checkout'
-    });
+    // 2. Cryptographic signature calculation as documented by Razorpay
+    let expectedData: string;
+    if (razorpay_subscription_id) {
+      // Subscriptions formula: payment_id|subscription_id
+      expectedData = `${razorpay_payment_id}|${razorpay_subscription_id}`;
+    } else if (razorpay_order_id) {
+      // Orders formula: order_id|payment_id
+      expectedData = `${razorpay_order_id}|${razorpay_payment_id}`;
+    } else {
+      return res.status(400).json({
+        success: false,
+        error: true,
+        message: 'Either razorpay_subscription_id or razorpay_order_id must be provided.'
+      });
+    }
+
+    const expectedSignature = crypto
+      .createHmac('sha256', keySecret)
+      .update(expectedData)
+      .digest('hex');
+
+    const bufA = Buffer.from(expectedSignature, 'utf-8');
+    const bufB = Buffer.from(razorpay_signature || '', 'utf-8');
+    const isValidSignature = bufA.length === bufB.length && crypto.timingSafeEqual(bufA, bufB);
+
+    if (!isValidSignature) {
+      console.warn('[PaymentVerify] Cryptographic signature mismatch for user:', authUser.uid);
+      return res.status(400).json({
+        success: false,
+        error: true,
+        message: 'Cryptographic signature verification failed. Premium access not granted.'
+      });
+    }
+
+    // 3. Calculate verified paid-through date
+    const now = Date.now();
+    const durationDays = selectedPlan.durationDays || 30;
+    const expiresAt = now + (durationDays * 24 * 60 * 60 * 1000);
+
+    const entitlement = {
+      userId: authUser.uid,
+      userEmail: authUser.email,
+      isPremium: true,
+      status: 'active' as const,
+      planId: selectedPlan.id,
+      planName: selectedPlan.name,
+      billingType: selectedPlan.billingType,
+      subscriptionId: razorpay_subscription_id || undefined,
+      lastPaymentId: razorpay_payment_id,
+      lastOrderId: razorpay_order_id || undefined,
+      activatedAt: now,
+      expiresAt,
+      remainingDays: durationDays,
+      updatedAt: now
+    };
+
+    // 4. Update local PaymentStore with cryptographically verified entitlement
+    try {
+      const { PaymentStore } = await import('../../src/server/paymentStore');
+      PaymentStore.activateEntitlement({
+        userId: authUser.uid,
+        userEmail: authUser.email,
+        planId: selectedPlan.id,
+        orderId: razorpay_order_id,
+        subscriptionId: razorpay_subscription_id,
+        paymentId: razorpay_payment_id,
+        billingType: selectedPlan.billingType,
+        source: 'checkout'
+      });
+    } catch (storeErr) {
+      console.warn('[PaymentVerify] Local PaymentStore update note:', storeErr);
+    }
+
+    // 5. Update Firestore directly via Firebase Admin SDK
+    try {
+      const firestore = getAdminFirestore();
+      const batch = firestore.batch();
+
+      const userDocRef = firestore.collection('users').doc(authUser.uid);
+      batch.set(userDocRef, {
+        email: authUser.email,
+        isPremium: true,
+        premiumStatus: 'active',
+        planId: selectedPlan.id,
+        planName: selectedPlan.name,
+        subscriptionId: razorpay_subscription_id || null,
+        premiumExpiresAt: expiresAt,
+        lastPaymentId: razorpay_payment_id,
+        updatedAt: new Date().toISOString()
+      }, { merge: true });
+
+      const paymentDocRef = userDocRef.collection('payments').doc(razorpay_payment_id);
+      batch.set(paymentDocRef, {
+        paymentId: razorpay_payment_id,
+        orderId: razorpay_order_id || null,
+        subscriptionId: razorpay_subscription_id || null,
+        planId: selectedPlan.id,
+        planName: selectedPlan.name,
+        amountInPaise: selectedPlan.amountInPaise,
+        amountInInr: selectedPlan.priceInr,
+        currency: 'INR',
+        status: 'captured',
+        verifiedAt: new Date().toISOString()
+      }, { merge: true });
+
+      if (razorpay_subscription_id) {
+        const subDocRef = userDocRef.collection('subscriptions').doc(razorpay_subscription_id);
+        batch.set(subDocRef, {
+          id: razorpay_subscription_id,
+          planId: selectedPlan.id,
+          planName: selectedPlan.name,
+          status: 'active',
+          billingType: 'subscription',
+          activatedAt: new Date().toISOString(),
+          expiresAt: new Date(expiresAt).toISOString(),
+          lastPaymentId: razorpay_payment_id,
+          updatedAt: new Date().toISOString()
+        }, { merge: true });
+      }
+
+      await batch.commit();
+      console.log(`[PaymentVerify] Successfully synced entitlement to Firestore for UID: ${authUser.uid}`);
+    } catch (firestoreErr: any) {
+      console.warn('[PaymentVerify] Firestore sync skipped (API disabled or pending in GCP):', firestoreErr?.message || firestoreErr);
+    }
 
     return res.json({
       success: true,
-      message: `Congratulations! ${plan.name} has been activated successfully.`,
-      entitlement,
-      receipt: {
-        orderId: razorpay_order_id || '',
-        subscriptionId: razorpay_subscription_id || '',
-        paymentId: razorpay_payment_id,
-        planName: plan.name,
-        amountInr: plan.priceInr,
-        durationDays: plan.durationDays,
-        billingType: plan.billingType,
-        activatedAt: entitlement.activatedAt,
-        expiresAt: entitlement.expiresAt
-      }
+      message: 'Payment signature verified successfully. Premium features unlocked.',
+      entitlement
     });
   } catch (error: any) {
-    console.error('[PaymentVerify Error]:', error);
+    console.error('[VerifyPaymentHandler] Exception:', error);
     return res.status(500).json({
       success: false,
-      message: 'Failed to verify payment. Please contact support.'
+      error: true,
+      message: error?.message || 'Internal error during payment verification.'
     });
   }
 }

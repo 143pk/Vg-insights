@@ -221,6 +221,8 @@
         } catch (e) {}
       })();
     </script>
+    <!-- Primary Application & Tailwind Stylesheet -->
+    <link rel="stylesheet" href="/src/index.css" />
     <!-- Razorpay Checkout SDK for Fast Secure UPI, Cards, NetBanking (Deferred to prevent render blocking) -->
     <script defer src="https://checkout.razorpay.com/v1/checkout.js"></script>
   </head>
@@ -251,12 +253,26 @@
       </div>
     </div>
     <script>
-      // Watchdog timer to ensure mobile preview never gets permanently stuck
-      setTimeout(function() {
+      // Global error listener to guarantee errors are displayed meaningfully rather than an infinite loader
+      window.addEventListener('error', function(e) {
         var loaderText = document.getElementById('app-loader-text');
         var loaderBtn = document.getElementById('app-loader-action');
+        if (loaderText) {
+          loaderText.textContent = (e && e.message) ? e.message : 'Notice: Launching study workspace...';
+        }
+        if (loaderBtn) {
+          loaderBtn.textContent = 'Enter VG Insights Workspace';
+          loaderBtn.classList.remove('hidden');
+        }
+      });
+
+      // Watchdog timer to ensure preview never gets permanently stuck
+      setTimeout(function() {
+        if (typeof window.startApp === 'function') {
+          try { window.startApp(); } catch (err) {}
+        }
+        var loaderBtn = document.getElementById('app-loader-action');
         if (loaderBtn) loaderBtn.classList.remove('hidden');
-        if (loaderText) loaderText.textContent = 'Preparing interactive study environment...';
       }, 2500);
     </script>
     <script type="module" src="/src/main.ts"></script>

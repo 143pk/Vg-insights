@@ -12,11 +12,61 @@
         "photoURL": { "type": "string" },
         "isPremium": { "type": "boolean" },
         "planId": { "type": "string" },
+        "planName": { "type": "string" },
+        "subscriptionId": { "type": "string" },
+        "premiumStatus": { "type": "string", "enum": ["active", "cancelled", "halted", "expired", "free"] },
         "premiumExpiresAt": { "type": "number" },
+        "lastPaymentId": { "type": "string" },
         "createdAt": { "type": "string", "format": "date-time" },
         "updatedAt": { "type": "string", "format": "date-time" }
       },
       "required": ["email", "name"]
+    },
+    "PaymentRecord": {
+      "title": "PaymentRecord",
+      "description": "Cryptographically verified server payment record",
+      "type": "object",
+      "properties": {
+        "paymentId": { "type": "string" },
+        "orderId": { "type": "string" },
+        "subscriptionId": { "type": "string" },
+        "planId": { "type": "string" },
+        "planName": { "type": "string" },
+        "amountInPaise": { "type": "number" },
+        "amountInInr": { "type": "number" },
+        "currency": { "type": "string" },
+        "status": { "type": "string", "enum": ["created", "authorized", "captured", "failed", "refunded"] },
+        "verifiedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["paymentId", "planId", "status"]
+    },
+    "SubscriptionRecord": {
+      "title": "SubscriptionRecord",
+      "description": "Server-tracked Razorpay recurring subscription state",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "planId": { "type": "string" },
+        "planName": { "type": "string" },
+        "status": { "type": "string", "enum": ["created", "authenticated", "active", "pending", "halted", "cancelled", "completed", "expired"] },
+        "billingType": { "type": "string" },
+        "activatedAt": { "type": "string", "format": "date-time" },
+        "expiresAt": { "type": "string", "format": "date-time" },
+        "lastPaymentId": { "type": "string" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "planId", "status"]
+    },
+    "WebhookEvent": {
+      "title": "WebhookEvent",
+      "description": "Idempotency audit log for signed Razorpay webhooks",
+      "type": "object",
+      "properties": {
+        "eventId": { "type": "string" },
+        "event": { "type": "string" },
+        "processedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["eventId", "event", "processedAt"]
     },
     "UserTestHistory": {
       "title": "UserTestHistory",
@@ -73,6 +123,18 @@
     "/users/{userId}": {
       "schema": "UserProfile",
       "description": "Stores student user profiles with verified premium status"
+    },
+    "/users/{userId}/payments/{paymentId}": {
+      "schema": "PaymentRecord",
+      "description": "Cryptographically verified server payment records"
+    },
+    "/users/{userId}/subscriptions/{subscriptionId}": {
+      "schema": "SubscriptionRecord",
+      "description": "Server-controlled Razorpay recurring subscription state"
+    },
+    "/webhookEvents/{eventId}": {
+      "schema": "WebhookEvent",
+      "description": "Idempotency log of verified Razorpay webhook events"
     },
     "/users/{userId}/testHistory/{historyId}": {
       "schema": "UserTestHistory",

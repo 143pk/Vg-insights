@@ -1,4 +1,4 @@
-import { PAYMENT_PLANS, PaymentPlan } from '../../api/payment/plans';
+import { PAYMENT_PLANS, PaymentPlan } from '../data/paymentPlans';
 
 const CORS_HEADERS: Record<string, string> = {
   'Access-Control-Allow-Origin': '*',
@@ -68,10 +68,10 @@ export async function handleUniversalApiRequest(request: Request, env?: Record<s
   path = path.replace(/^\/\.netlify\/functions\/api/, '/api');
 
   // Read environment keys
-  const keyId = getEnvVar('RAZORPAY_KEY_ID', env) || 'rzp_live_Tp0IXVbjqWO30i8';
+  const keyId = getEnvVar('RAZORPAY_KEY_ID', env);
   const keySecret = getEnvVar('RAZORPAY_KEY_SECRET', env);
-  const webhookSecret = getEnvVar('RAZORPAY_WEBHOOK_SECRET', env) || 'RAZORPAY_WEBHOOK_SECRET';
-  const monthlyPlanId = getEnvVar('RAZORPAY_MONTHLY_PLAN_ID', env) || 'plan_monthly_vginsights_199';
+  const webhookSecret = getEnvVar('RAZORPAY_WEBHOOK_SECRET', env);
+  const monthlyPlanId = getEnvVar('RAZORPAY_MONTHLY_PLAN_ID', env);
 
   try {
     // ----------------------------------------------------
@@ -93,7 +93,7 @@ export async function handleUniversalApiRequest(request: Request, env?: Record<s
       const hasLiveKey = Boolean(keyId && !keyId.includes('placeholder') && !keyId.includes('YOUR_'));
       return jsonResponse(200, {
         success: true,
-        keyId: hasLiveKey ? keyId : 'rzp_test_vginsights_neet',
+        keyId: hasLiveKey ? keyId : '',
         isConfigured: hasLiveKey,
         currency: 'INR',
         plans: Object.values(PAYMENT_PLANS),
@@ -187,23 +187,11 @@ export async function handleUniversalApiRequest(request: Request, env?: Record<s
                 notes: rzpSubData.notes || {},
               };
             } else {
-              // Handle authentication or plan rejection safely
-              console.warn('[Razorpay API Rejection]:', rzpSubData?.error?.description || 'Sub create failed');
-              isSandbox = true;
-              authWarning = 'Razorpay credentials rejected live subscription. Running in test checkout mode.';
-              subscriptionId = `sub_test_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`;
-              orderData = {
-                id: subscriptionId,
-                amount: selectedPlan.amountInPaise,
-                currency: 'INR',
-                notes: {
-                  planId: selectedPlan.id,
-                  planName: selectedPlan.name,
-                  userEmail: userEmail.trim().toLowerCase(),
-                  userId: userId || '',
-                  isSandbox: true,
-                },
-              };
+              return jsonResponse(400, {
+                success: false,
+                error: true,
+                message: rzpSubData?.error?.description || 'Failed to create Razorpay subscription.',
+              });
             }
           } else {
             // One-time order via Razorpay Orders API
@@ -239,63 +227,27 @@ export async function handleUniversalApiRequest(request: Request, env?: Record<s
                 notes: rzpOrderData.notes || {},
               };
             } else {
-              console.warn('[Razorpay API Order Rejection]:', rzpOrderData?.error?.description || 'Order create failed');
-              isSandbox = true;
-              authWarning = 'Razorpay credentials rejected live order. Running in test checkout mode.';
-              const generatedId = `order_test_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`;
-              orderData = {
-                id: generatedId,
-                amount: selectedPlan.amountInPaise,
-                currency: 'INR',
-                receipt,
-                notes: {
-                  planId: selectedPlan.id,
-                  planName: selectedPlan.name,
-                  durationDays: String(selectedPlan.durationDays),
-                  userEmail: userEmail.trim().toLowerCase(),
-                  userId: userId || '',
-                  isSandbox: true,
-                },
-              };
+              return jsonResponse(400, {
+                success: false,
+                error: true,
+                message: rzpOrderData?.error?.description || 'Failed to create Razorpay order.',
+              });
             }
           }
         } catch (apiErr: any) {
           console.error('[Razorpay API Call Exception]:', apiErr);
-          isSandbox = true;
-          authWarning = 'Could not contact Razorpay servers directly. Operating in test checkout mode.';
-          const generatedId = isSubscription
-            ? `sub_test_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`
-            : `order_test_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`;
-          if (isSubscription) subscriptionId = generatedId;
-          orderData = {
-            id: generatedId,
-            amount: selectedPlan.amountInPaise,
-            currency: 'INR',
-            receipt,
-            notes: {
-              planId: selectedPlan.id,
-              userEmail: userEmail.trim().toLowerCase(),
-              isSandbox: true,
-            },
-          };
+          return jsonResponse(500, {
+            success: false,
+            error: true,
+            message: apiErr?.message || 'Could not communicate with Razorpay servers.',
+          });
         }
       } else {
-        isSandbox = true;
-        const generatedId = isSubscription
-          ? `sub_test_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`
-          : `order_test_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`;
-        if (isSubscription) subscriptionId = generatedId;
-        orderData = {
-          id: generatedId,
-          amount: selectedPlan.amountInPaise,
-          currency: 'INR',
-          receipt,
-          notes: {
-            planId: selectedPlan.id,
-            userEmail: userEmail.trim().toLowerCase(),
-            isSandbox: true,
-          },
-        };
+        return jsonResponse(503, {
+          success: false,
+          error: true,
+          message: 'Payment gateway credentials are not configured on server.',
+        });
       }
 
       // Record in memory store
@@ -316,7 +268,7 @@ export async function handleUniversalApiRequest(request: Request, env?: Record<s
         isSubscription,
         subscriptionId,
         plan: selectedPlan,
-        keyId: keyId || 'rzp_test_vginsights_neet',
+        keyId: keyId || '',
         isSandbox,
         authWarning: authWarning || undefined,
       });
@@ -358,23 +310,35 @@ export async function handleUniversalApiRequest(request: Request, env?: Record<s
         return jsonResponse(400, { success: false, message: 'Invalid plan selected.' });
       }
 
-      const isSandboxOrder = trackingId.startsWith('order_test_') || trackingId.startsWith('sub_test_');
+      if (!keySecret) {
+        return jsonResponse(503, {
+          success: false,
+          error: true,
+          message: 'Payment verification secret is not configured on server.',
+        });
+      }
 
-      // Server-side cryptographic signature verification
-      if (keySecret && !isSandboxOrder) {
-        const expectedData = razorpay_subscription_id
-          ? `${razorpay_payment_id}|${razorpay_subscription_id}`
-          : `${razorpay_order_id}|${razorpay_payment_id}`;
+      if (!razorpay_payment_id || !razorpay_signature) {
+        return jsonResponse(400, {
+          success: false,
+          error: true,
+          message: 'Payment ID and signature are required for verification.',
+        });
+      }
 
-        const generatedSignature = await computeHmacSha256(keySecret, expectedData);
+      const expectedData = razorpay_subscription_id
+        ? `${razorpay_payment_id}|${razorpay_subscription_id}`
+        : `${razorpay_order_id}|${razorpay_payment_id}`;
 
-        if (generatedSignature !== razorpay_signature) {
-          console.warn('[PaymentVerify] Cryptographic signature mismatch for trackingId:', trackingId);
-          return jsonResponse(400, {
-            success: false,
-            message: 'Payment verification failed: Invalid cryptographic signature.',
-          });
-        }
+      const generatedSignature = await computeHmacSha256(keySecret, expectedData);
+
+      if (generatedSignature !== razorpay_signature) {
+        console.warn('[PaymentVerify] Cryptographic signature mismatch for trackingId:', trackingId);
+        return jsonResponse(400, {
+          success: false,
+          error: true,
+          message: 'Payment verification failed: Invalid cryptographic signature.',
+        });
       }
 
       // Calculate entitlement
@@ -400,6 +364,65 @@ export async function handleUniversalApiRequest(request: Request, env?: Record<s
 
       edgeEntitlements.set(userEmail.trim().toLowerCase(), entitlement);
       if (userId) edgeEntitlements.set(userId, entitlement);
+
+      // Persist to Firebase Firestore if admin credentials are available
+      try {
+        const { getAdminFirestore } = await import('./firebaseAdmin');
+        const firestore = getAdminFirestore();
+        const targetUid = userId || userEmail;
+        if (targetUid) {
+          const userDocRef = firestore.collection('users').doc(targetUid);
+          await userDocRef.set({
+            isPremium: true,
+            premiumStatus: 'active',
+            planId: plan.id,
+            planName: plan.name,
+            subscriptionId: razorpay_subscription_id || null,
+            premiumExpiresAt: expiresAt,
+            lastPaymentId: razorpay_payment_id || null,
+            updatedAt: new Date().toISOString()
+          }, { merge: true });
+
+          if (razorpay_payment_id) {
+            await userDocRef.collection('payments').doc(razorpay_payment_id).set({
+              paymentId: razorpay_payment_id,
+              orderId: razorpay_order_id || null,
+              subscriptionId: razorpay_subscription_id || null,
+              planId: plan.id,
+              planName: plan.name,
+              amountInPaise: plan.amountInPaise,
+              amountInInr: plan.priceInr,
+              status: 'captured',
+              verifiedAt: new Date().toISOString()
+            }, { merge: true });
+          }
+        }
+      } catch (dbErr) {
+        // Fallback for Cloudflare Workers edge runtime using native Firestore REST API
+        const serviceAccountRaw = getEnvVar('FIREBASE_SERVICE_ACCOUNT', env) || getEnvVar('FIREBASE_ADMIN_CREDENTIALS', env);
+        const targetUid = userId || userEmail;
+        if (serviceAccountRaw && targetUid) {
+          try {
+            const raw = serviceAccountRaw.trim();
+            const parsedSa = raw.startsWith('{') ? JSON.parse(raw) : JSON.parse(atob(raw));
+            const { updateFirestoreEntitlementViaRest } = await import('./firestoreRest');
+            await updateFirestoreEntitlementViaRest({
+              serviceAccount: parsedSa,
+              projectId: parsedSa.project_id || getEnvVar('FIREBASE_PROJECT_ID', env) || 'vginsights-bed28',
+              userId: targetUid,
+              isPremium: true,
+              status: 'active',
+              planId: plan.id,
+              planName: plan.name,
+              subscriptionId: razorpay_subscription_id || undefined,
+              lastPaymentId: razorpay_payment_id || undefined,
+              expiresAt
+            });
+          } catch (restErr) {
+            console.warn('[UniversalApi] Cloudflare Firestore REST sync note:', restErr);
+          }
+        }
+      }
 
       return jsonResponse(200, {
         success: true,
@@ -508,6 +531,78 @@ export async function handleUniversalApiRequest(request: Request, env?: Record<s
             updatedAt: now,
           };
           edgeEntitlements.set(userEmail, entitlement);
+
+          try {
+            const { getAdminFirestore } = await import('./firebaseAdmin');
+            const firestore = getAdminFirestore();
+            const targetUid = notes.userId || userEmail;
+            if (targetUid) {
+              const userRef = firestore.collection('users').doc(targetUid);
+              await userRef.set({
+                isPremium: true,
+                premiumStatus: 'active',
+                planId: plan.id,
+                planName: plan.name,
+                subscriptionId: subEntity?.id || null,
+                premiumExpiresAt: expiresAt,
+                lastPaymentId: paymentEntity?.id || null,
+                updatedAt: new Date().toISOString()
+              }, { merge: true });
+            }
+          } catch (syncErr) {
+            // Cloudflare REST fallback for webhook charge events
+            const serviceAccountRaw = getEnvVar('FIREBASE_SERVICE_ACCOUNT', env) || getEnvVar('FIREBASE_ADMIN_CREDENTIALS', env);
+            const targetUid = notes.userId || userEmail;
+            if (serviceAccountRaw && targetUid) {
+              try {
+                const raw = serviceAccountRaw.trim();
+                const parsedSa = raw.startsWith('{') ? JSON.parse(raw) : JSON.parse(atob(raw));
+                const { updateFirestoreEntitlementViaRest } = await import('./firestoreRest');
+                await updateFirestoreEntitlementViaRest({
+                  serviceAccount: parsedSa,
+                  projectId: parsedSa.project_id || getEnvVar('FIREBASE_PROJECT_ID', env) || 'vginsights-bed28',
+                  userId: targetUid,
+                  isPremium: true,
+                  status: 'active',
+                  planId: plan.id,
+                  planName: plan.name,
+                  subscriptionId: subEntity?.id || undefined,
+                  lastPaymentId: paymentEntity?.id || undefined,
+                  expiresAt
+                });
+              } catch (restErr) {
+                console.warn('[Webhook] Cloudflare REST sync note:', restErr);
+              }
+            }
+          }
+        }
+      }
+
+      // Handle subscription cancellations and halts
+      if (event === 'subscription.halted' || event === 'subscription.cancelled') {
+        const subEntity = payload?.subscription?.entity;
+        const notes = subEntity?.notes || {};
+        const userId = notes.userId;
+        if (userId) {
+          try {
+            const { getAdminFirestore } = await import('./firebaseAdmin');
+            const firestore = getAdminFirestore();
+            const userRef = firestore.collection('users').doc(userId);
+            if (event === 'subscription.halted') {
+              await userRef.set({
+                isPremium: false,
+                premiumStatus: 'halted',
+                updatedAt: new Date().toISOString()
+              }, { merge: true });
+            } else {
+              await userRef.set({
+                premiumStatus: 'cancelled',
+                updatedAt: new Date().toISOString()
+              }, { merge: true });
+            }
+          } catch (err) {
+            console.warn('[Webhook] Status update error:', err);
+          }
         }
       }
 
