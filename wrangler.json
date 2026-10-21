@@ -1,6 +1,11 @@
 {
   "name": "vg-insights",
   "main": "./src/server/worker.ts",
+  "alias": {
+    "firebase-admin/app": "./src/server/firebaseAdminWorkersStub.ts",
+    "firebase-admin/firestore": "./src/server/firebaseAdminWorkersStub.ts",
+    "firebase-admin/auth": "./src/server/firebaseAdminWorkersStub.ts"
+  },
   "compatibility_date": "2024-09-23",
   "compatibility_flags": [
     "nodejs_compat"
