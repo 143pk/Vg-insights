@@ -105,7 +105,11 @@ export function initPwaInstallModal() {
         }
       } else {
         if (feedback) {
-          feedback.textContent = 'Follow the Android installation steps below in your browser menu (⋮ > Install app).';
+          const ua = navigator.userAgent || '';
+          const isIOS = /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/i.test(ua) && 'ontouchend' in document);
+          feedback.textContent = isIOS
+            ? 'On iPhone/iPad: open vginsights.in in Safari, tap the Share button, then choose "Add to Home Screen".'
+            : 'On Android: open vginsights.in in Chrome, tap the ⋮ menu (top right), then choose "Add to Home screen" or "Install app".';
           feedback.classList.remove('hidden');
         }
       }

@@ -1044,7 +1044,7 @@ export function renderLandingPage(): string {
             <div class="space-y-2">
               <p class="font-bold text-slate-900 dark:text-white uppercase tracking-wider text-[11px]">Apps & Platform</p>
               <ul class="space-y-1.5 text-slate-600 dark:text-slate-400">
-                <li><a href="/vg-insights.apk" download="vg-insights.apk" class="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline flex items-center gap-1"><span>📥 Download Android APK</span></a></li>
+                <li><button type="button" id="btn-footer-install-app" class="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline flex items-center gap-1 cursor-pointer"><span>📥 Install Android App</span></button></li>
                 <li><a href="#home" class="hover:text-blue-600 dark:hover:text-blue-400">Direct App Access</a></li>
                 <li><a href="#landing" class="hover:text-blue-600 dark:hover:text-blue-400">Privacy & Terms</a></li>
                 <li><a href="https://vginsights.in/" class="hover:text-blue-600 dark:hover:text-blue-400">vginsights.in</a></li>

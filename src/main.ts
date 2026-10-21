@@ -753,6 +753,14 @@ class App {
       userProfileBtn?.setAttribute('aria-expanded', 'false');
       PWAInstallService.openInstallModal();
     });
+
+    // Footer "Install Android App" link renders later than this init, so use
+    // delegation instead of a direct listener.
+    document.addEventListener('click', (e) => {
+      if ((e.target as HTMLElement | null)?.closest?.('#btn-footer-install-app')) {
+        PWAInstallService.openInstallModal();
+      }
+    });
   }
 
   private refreshHeader(): void {
