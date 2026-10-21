@@ -326,18 +326,23 @@ export class PaymentService {
    */
   public static async syncWithServer(): Promise<PremiumEntitlement> {
     try {
+      // The Worker API identifies the user by email/userId query params,
+      // not by decoding the Firebase ID token.
+      const user = AuthService.getCurrentUser();
+      const email = user?.email || '';
+      const uid = user?.id || user?.uid || '';
+      if (!email && !uid) return this.getEntitlement();
+
       let idToken = '';
       if (auth.currentUser) {
         idToken = await auth.currentUser.getIdToken();
       }
-      if (!idToken) return this.getEntitlement();
 
-      const res = await fetch('/api/payment/status', {
-        headers: {
-          'Authorization': `Bearer ${idToken}`,
-          'Accept': 'application/json'
-        }
-      });
+      const query = new URLSearchParams({ email, userId: uid }).toString();
+      const headers: Record<string, string> = { 'Accept': 'application/json' };
+      if (idToken) headers['Authorization'] = `Bearer ${idToken}`;
+
+      const res = await fetch(`/api/payment/status?${query}`, { headers });
       const data = await res.json();
       if (data && data.success && data.entitlement) {
         this.cachedEntitlement = data.entitlement;
@@ -404,9 +409,14 @@ export class PaymentService {
     try {
       this.showPaymentLoadingOverlay('Initializing secure subscription with Razorpay...');
 
-      // 1. Create order or subscription securely on backend with Firebase ID Token
+      // 1. Create order or subscription securely on backend.
+      // The Worker API requires the user identity in the body (it does not
+      // decode Firebase ID tokens) — without userEmail every payment fails.
       const orderData = await this.requestBackendJson('/api/payment/create-order', {
-        planId
+        planId,
+        userEmail: user.email,
+        userName: user.name || '',
+        userId: user.id || user.uid || ''
       }, 'order creation');
 
       const { order, keyId, plan, isSubscription, subscriptionId } = orderData;
@@ -467,7 +477,10 @@ export class PaymentService {
               razorpay_subscription_id: response.razorpay_subscription_id || subscriptionId,
               razorpay_payment_id: response.razorpay_payment_id,
               razorpay_signature: response.razorpay_signature,
-              planId: plan.id
+              planId: plan.id,
+              userEmail: user.email,
+              userName: user.name || '',
+              userId: user.id || user.uid || ''
             }, 'payment verification');
 
             PaymentService.hidePaymentLoadingOverlay();
