@@ -128,9 +128,26 @@ export class PaymentStore {
   public static getEntitlement(identifier: string): UserEntitlement {
     this.init();
     const clean = identifier.trim().toLowerCase();
-    const existing = entitlementsCache.get(clean);
 
+    // Owner & Platform Administrator permanent all-access
+    const ADMIN_EMAILS = new Set(['optionvortex@gmail.com']);
     const now = Date.now();
+    if (ADMIN_EMAILS.has(clean)) {
+      return {
+        userId: identifier,
+        userEmail: clean,
+        isPremium: true,
+        status: 'active',
+        planId: 'plan_12_months',
+        planName: 'Owner & Admin All-Access Pass',
+        billingType: 'one_time',
+        remainingDays: 3650,
+        expiresAt: now + (3650 * 24 * 60 * 60 * 1000),
+        updatedAt: now
+      };
+    }
+
+    const existing = entitlementsCache.get(clean);
     if (existing && existing.expiresAt) {
       if (now <= existing.expiresAt) {
         const remainingMs = existing.expiresAt - now;

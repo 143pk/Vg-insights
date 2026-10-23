@@ -3,6 +3,7 @@ import { StorageService } from './storageService';
 import { auth, db } from './firebase';
 import { doc, onSnapshot } from 'firebase/firestore';
 import { PaymentPlan, PremiumEntitlement } from '../types/payment';
+import { MetaPixelService } from './metaPixelService';
 
 declare global {
   interface Window {
@@ -144,6 +145,25 @@ export class PaymentService {
    */
   public static getEntitlement(): PremiumEntitlement {
     const user = AuthService.getCurrentUser();
+    const cleanEmail = (user?.email || '').trim().toLowerCase();
+
+    // Permanent Developer & Owner All-Access Pass
+    if (cleanEmail === 'optionvortex@gmail.com') {
+      const now = Date.now();
+      return {
+        userId: user?.id || user?.uid || 'admin_optionvortex',
+        userEmail: 'optionvortex@gmail.com',
+        isPremium: true,
+        status: 'active',
+        planId: 'plan_12_months',
+        planName: 'Developer & Admin Full Access',
+        billingType: 'one_time',
+        remainingDays: 3650,
+        expiresAt: now + (3650 * 24 * 60 * 60 * 1000),
+        updatedAt: now
+      };
+    }
+
     const stored = this.cachedEntitlement;
 
     const now = Date.now();
@@ -435,6 +455,18 @@ export class PaymentService {
 
       this.hidePaymentLoadingOverlay();
 
+      // Track Meta Pixel InitiateCheckout Event
+      try {
+        MetaPixelService.trackInitiateCheckout({
+          id: plan.id,
+          name: plan.name,
+          price: plan.price,
+          currency: 'INR'
+        });
+      } catch (err) {
+        console.warn('[MetaPixel] InitiateCheckout tracking error:', err);
+      }
+
       // 3. Configure Razorpay Checkout options
       const rzpOptions: any = {
         key: keyId,
@@ -489,6 +521,19 @@ export class PaymentService {
             PaymentService.cachedEntitlement = verifyData.entitlement;
             StorageService.safeSetItem(ENTITLEMENT_KEY, JSON.stringify(verifyData.entitlement));
             PaymentService.notifyListeners();
+
+            // Track Meta Pixel Purchase Event
+            try {
+              MetaPixelService.trackPurchase({
+                planId: plan.id,
+                planName: plan.name,
+                amount: plan.price,
+                currency: 'INR',
+                transactionId: response.razorpay_payment_id
+              });
+            } catch (err) {
+              console.warn('[MetaPixel] Purchase tracking error:', err);
+            }
 
             options?.onSuccess?.(verifyData.entitlement);
           } catch (err: any) {

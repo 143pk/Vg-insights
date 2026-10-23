@@ -623,6 +623,25 @@ export async function handleUniversalApiRequest(request: Request, env?: Record<s
       }
 
       const identifier = (email || uid).trim().toLowerCase();
+
+      // Owner & Platform Administrator permanent all-access
+      const ADMIN_EMAILS = new Set(['optionvortex@gmail.com']);
+      if (ADMIN_EMAILS.has(identifier) || ADMIN_EMAILS.has(email.trim().toLowerCase())) {
+        const adminEntitlement = {
+          userId: uid || 'admin_optionvortex',
+          userEmail: 'optionvortex@gmail.com',
+          isPremium: true,
+          status: 'active',
+          planId: 'plan_12_months',
+          planName: 'Owner & Admin All-Access Pass',
+          billingType: 'one_time',
+          remainingDays: 3650,
+          expiresAt: Date.now() + (3650 * 24 * 60 * 60 * 1000),
+          updatedAt: Date.now()
+        };
+        return jsonResponse(200, { success: true, entitlement: adminEntitlement });
+      }
+
       const cached = edgeEntitlements.get(identifier);
 
       if (cached && cached.expiresAt && cached.expiresAt > Date.now()) {

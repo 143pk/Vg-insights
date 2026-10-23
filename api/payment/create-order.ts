@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import Razorpay from 'razorpay';
 import { PAYMENT_PLANS } from '../../src/data/paymentPlans';
-import { authenticateFirebaseRequest, getAdminFirestore } from '../../src/server/firebaseAdmin';
+import { authenticateFirebaseRequest, getAdminFirestore, isFirestoreAvailable, markFirestoreUnavailable } from '../../src/server/firebaseAdmin';
 
 let cachedMonthlyPlanId: string | null = null;
 
@@ -112,24 +112,27 @@ export default async function createOrderHandler(req: Request, res: Response) {
         }
       });
 
-      // 4. Record pending subscription in Firestore under the authenticated user's profile
-      try {
-        const firestore = getAdminFirestore();
-        await firestore.collection('users').doc(authUser.uid).collection('subscriptions').doc(subscription.id).set({
-          id: subscription.id,
-          planId: selectedPlan.id,
-          planName: selectedPlan.name,
-          billingType: 'subscription',
-          status: 'created',
-          amountInPaise: selectedPlan.amountInPaise,
-          amountInInr: selectedPlan.priceInr,
-          userId: authUser.uid,
-          userEmail: authUser.email,
-          createdAt: adminTimestamp(),
-          updatedAt: adminTimestamp()
-        }, { merge: true });
-      } catch (dbErr) {
-        console.warn('[Firestore] Could not record pending subscription:', dbErr);
+      // 4. Record pending subscription in Firestore if database is available
+      if (isFirestoreAvailable()) {
+        try {
+          const firestore = getAdminFirestore();
+          await firestore.collection('users').doc(authUser.uid).collection('subscriptions').doc(subscription.id).set({
+            id: subscription.id,
+            planId: selectedPlan.id,
+            planName: selectedPlan.name,
+            billingType: 'subscription',
+            status: 'created',
+            amountInPaise: selectedPlan.amountInPaise,
+            amountInInr: selectedPlan.priceInr,
+            userId: authUser.uid,
+            userEmail: authUser.email,
+            createdAt: adminTimestamp(),
+            updatedAt: adminTimestamp()
+          }, { merge: true });
+        } catch {
+          markFirestoreUnavailable();
+          console.log('[Firestore] Remote Firestore offline or API pending in GCP project; using local store.');
+        }
       }
 
       responseData = {
@@ -155,23 +158,26 @@ export default async function createOrderHandler(req: Request, res: Response) {
         }
       });
 
-      try {
-        const firestore = getAdminFirestore();
-        await firestore.collection('users').doc(authUser.uid).collection('payments').doc(order.id).set({
-          orderId: order.id,
-          planId: selectedPlan.id,
-          planName: selectedPlan.name,
-          billingType: 'one_time',
-          status: 'created',
-          amountInPaise: selectedPlan.amountInPaise,
-          amountInInr: selectedPlan.priceInr,
-          userId: authUser.uid,
-          userEmail: authUser.email,
-          createdAt: adminTimestamp(),
-          updatedAt: adminTimestamp()
-        }, { merge: true });
-      } catch (dbErr) {
-        console.warn('[Firestore] Could not record pending order:', dbErr);
+      if (isFirestoreAvailable()) {
+        try {
+          const firestore = getAdminFirestore();
+          await firestore.collection('users').doc(authUser.uid).collection('payments').doc(order.id).set({
+            orderId: order.id,
+            planId: selectedPlan.id,
+            planName: selectedPlan.name,
+            billingType: 'one_time',
+            status: 'created',
+            amountInPaise: selectedPlan.amountInPaise,
+            amountInInr: selectedPlan.priceInr,
+            userId: authUser.uid,
+            userEmail: authUser.email,
+            createdAt: adminTimestamp(),
+            updatedAt: adminTimestamp()
+          }, { merge: true });
+        } catch {
+          markFirestoreUnavailable();
+          console.log('[Firestore] Remote Firestore offline or API pending in GCP project; using local store.');
+        }
       }
 
       responseData = {

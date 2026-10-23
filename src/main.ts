@@ -54,6 +54,7 @@ import { renderMobileBottomNav } from './components/mobileNavComponent';
 import { AuthService } from './services/authService';
 import { PWAInstallService } from './services/pwaInstallService';
 import { SEOService } from './services/seoService';
+import { MetaPixelService } from './services/metaPixelService';
 
 class App {
   private currentSearchFilter: string = 'all';
@@ -144,6 +145,21 @@ class App {
           ChapterwiseMcqService.loadChapterQuestions('units-measurements');
         } catch {}
       }, 1500);
+    }
+
+    // 9. Initialize Meta Pixel Tracking & Advanced Matching
+    try {
+      MetaPixelService.init();
+      const currentUser = AuthService.getCurrentUser();
+      if (currentUser) {
+        MetaPixelService.identifyUser({
+          email: currentUser.email,
+          name: currentUser.name,
+          id: currentUser.id || currentUser.uid
+        });
+      }
+    } catch (e) {
+      console.warn('[MetaPixel] Init skipped:', e);
     }
 
     // Scroll listener for sticky header visual height & translucency refinement
@@ -251,6 +267,11 @@ class App {
 
     // Dynamic SEO, OpenGraph and Schema.org tag updates for Google rankings
     SEOService.updateMetaForRoute(routeState);
+
+    // Track Meta Pixel PageView on route change
+    try {
+      MetaPixelService.trackPageView(window.location.hash || '#home', document.title);
+    } catch {}
 
     // Sync study timer with navigated subject/topic/chapter
     StudyTimerService.updateRoute(routeState);
@@ -757,7 +778,8 @@ class App {
     // Footer "Install Android App" link renders later than this init, so use
     // delegation instead of a direct listener.
     document.addEventListener('click', (e) => {
-      if ((e.target as HTMLElement | null)?.closest?.('#btn-footer-install-app')) {
+      const target = e.target as HTMLElement | null;
+      if (target?.closest?.('#btn-footer-install-app')) {
         PWAInstallService.openInstallModal();
       }
     });
@@ -860,6 +882,20 @@ class App {
 
       // Start new attempt
       WeeklyMockService.startNewAttempt(paper, 'weekly');
+
+      // Track Meta Pixel test initiation
+      try {
+        MetaPixelService.trackLead('Weekly Mock Test 720-Mark', {
+          mock_id: paper.mockId,
+          total_questions: paper.questions?.length || 180
+        });
+        MetaPixelService.trackCustom('StartMockTest', {
+          mock_id: paper.mockId,
+          test_title: paper.title || 'NEET Full Length Mock'
+        });
+      } catch (err) {
+        console.warn('[MetaPixel] Start test tracking error:', err);
+      }
 
       // Navigate to test interface
       RouterService.navigateTo(`weekly-mock/test/${paper.mockId}`);
@@ -1059,6 +1095,18 @@ class App {
       try {
         this.stopMockTimer();
         const result = WeeklyMockService.submitActiveMock(paper);
+
+        // Track Meta Pixel test completion
+        try {
+          MetaPixelService.trackCustom('SubmitMockTest', {
+            mock_id: paper.mockId,
+            score: result?.totalScore ?? 0,
+            accuracy: result?.accuracyPercentage ?? 0
+          });
+        } catch (err) {
+          console.warn('[MetaPixel] Submit test tracking error:', err);
+        }
+
         if (result && result.mockId) {
           RouterService.navigateTo(`weekly-mock/result/${result.mockId}`);
         } else {
@@ -2043,12 +2091,23 @@ class App {
     const searchInput = document.getElementById('input-modal-search') as HTMLInputElement;
     const resultsList = document.getElementById('search-results-list');
 
+    let searchDebounce: any = null;
     const updateSearch = () => {
       if (searchInput && resultsList) {
-        resultsList.innerHTML = handleSearchInput(searchInput.value, this.currentSearchFilter);
+        const query = searchInput.value;
+        resultsList.innerHTML = handleSearchInput(query, this.currentSearchFilter);
         resultsList.querySelectorAll('a').forEach(link => {
           link.addEventListener('click', () => this.closeModal('modal-search'));
         });
+
+        if (query.trim().length >= 3) {
+          clearTimeout(searchDebounce);
+          searchDebounce = setTimeout(() => {
+            try {
+              MetaPixelService.trackSearch(query.trim());
+            } catch {}
+          }, 800);
+        }
       }
     };
 

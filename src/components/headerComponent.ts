@@ -116,6 +116,7 @@ export function renderHeader(
             <span class="hidden md:inline">Install App</span>
           </button>
 
+
           <!-- Pro Upgrade / Active Badge -->
           ${entitlement.isPremium && entitlement.status === 'active' ? `
             <a

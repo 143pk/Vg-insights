@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { authenticateFirebaseRequest, getAdminFirestore } from '../../src/server/firebaseAdmin';
+import { authenticateFirebaseRequest, getAdminFirestore, isFirestoreAvailable, markFirestoreUnavailable } from '../../src/server/firebaseAdmin';
 
 export default async function paymentStatusHandler(req: Request, res: Response) {
   try {
@@ -17,16 +17,18 @@ export default async function paymentStatusHandler(req: Request, res: Response) 
     let userData: Record<string, any> = {};
     let firestoreConnected = false;
 
-    try {
-      const firestore = getAdminFirestore();
-      const userDoc = await firestore.collection('users').doc(authUser.uid).get();
-      if (userDoc && userDoc.exists) {
-        userData = userDoc.data() || {};
-        firestoreConnected = true;
+    if (isFirestoreAvailable()) {
+      try {
+        const firestore = getAdminFirestore();
+        const userDoc = await firestore.collection('users').doc(authUser.uid).get();
+        if (userDoc && userDoc.exists) {
+          userData = userDoc.data() || {};
+          firestoreConnected = true;
+        }
+      } catch {
+        markFirestoreUnavailable();
+        console.log('[PaymentStatusHandler] Remote Firestore offline, checking verified payment store.');
       }
-    } catch (firestoreErr: any) {
-      // If Cloud Firestore API is disabled or permissions are pending in GCP project, gracefully fallback
-      console.warn('[PaymentStatusHandler] Firestore unavailable, checking verified payment store:', firestoreErr?.message || firestoreErr);
     }
 
     const now = Date.now();

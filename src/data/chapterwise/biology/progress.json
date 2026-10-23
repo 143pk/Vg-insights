@@ -210,13 +210,105 @@
         "C": 125,
         "D": 125
       }
+    },
+    {
+      "id": "breathing-exchange-gases",
+      "title": "Breathing and Exchange of Gases",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "batches": 4,
+      "status": "completed",
+      "answerDistribution": {
+        "A": 125,
+        "B": 125,
+        "C": 125,
+        "D": 125
+      }
+    },
+    {
+      "id": "body-fluids-circulation",
+      "title": "Body Fluids and Circulation",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "batches": 4,
+      "status": "completed",
+      "answerDistribution": {
+        "A": 125,
+        "B": 125,
+        "C": 125,
+        "D": 125
+      }
+    },
+    {
+      "id": "excretory-products",
+      "title": "Excretory Products and Their Elimination",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "batches": 4,
+      "status": "completed",
+      "answerDistribution": {
+        "A": 125,
+        "B": 125,
+        "C": 125,
+        "D": 125
+      }
+    },
+    {
+      "id": "locomotion-movement",
+      "title": "Locomotion and Movement",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "batches": 4,
+      "status": "completed",
+      "answerDistribution": {
+        "A": 125,
+        "B": 125,
+        "C": 125,
+        "D": 125
+      }
+    },
+    {
+      "id": "neural-control-coordination",
+      "title": "Neural Control and Coordination",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "batches": 4,
+      "status": "completed",
+      "answerDistribution": {
+        "A": 125,
+        "B": 125,
+        "C": 125,
+        "D": 125
+      }
+    },
+    {
+      "id": "chemical-coordination-integration",
+      "title": "Chemical Coordination and Integration",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "batches": 4,
+      "status": "completed",
+      "answerDistribution": {
+        "A": 125,
+        "B": 125,
+        "C": 125,
+        "D": 125
+      }
     }
   ],
-  "totalCompletedQuestions": 6500,
-  "nextChapter": {
-    "id": "breathing-exchange-gases",
-    "title": "Breathing and Exchange of Gases",
-    "nextBatch": "Part 1 (Q1 to Q125 - Easy)"
-  },
-  "lastUpdated": "2026-10-17T10:38:00Z"
+  "totalCompletedQuestions": 9500,
+  "status": "completed",
+  "lastUpdated": "2026-10-21T17:50:00Z"
 }

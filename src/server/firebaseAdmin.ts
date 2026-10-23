@@ -74,6 +74,16 @@ export function getFirebaseAdmin(): App {
   return adminApp;
 }
 
+let firestoreAvailable = true;
+
+export function isFirestoreAvailable(): boolean {
+  return firestoreAvailable;
+}
+
+export function markFirestoreUnavailable(): void {
+  firestoreAvailable = false;
+}
+
 export function getAdminFirestore(): Firestore {
   const app = getFirebaseAdmin();
   return getFirestore(app);

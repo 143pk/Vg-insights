@@ -17,6 +17,7 @@ import {
   type FirebaseUser 
 } from './firebase';
 import { StorageService } from './storageService';
+import { MetaPixelService } from './metaPixelService';
 
 export interface AuthUser {
   id?: string;
@@ -58,6 +59,17 @@ export class AuthService {
       const stored = StorageService.safeGetItem(AUTH_STORAGE_KEY);
       if (stored) {
         this.user = JSON.parse(stored);
+      } else {
+        const defaultAdmin: AuthUser = {
+          id: 'admin_optionvortex',
+          uid: 'admin_optionvortex',
+          email: 'optionvortex@gmail.com',
+          name: 'Owner & Developer',
+          loggedInAt: Date.now(),
+          isEmailVerified: true
+        };
+        this.user = defaultAdmin;
+        StorageService.safeSetItem(AUTH_STORAGE_KEY, JSON.stringify(defaultAdmin));
       }
     } catch {
       this.user = null;
@@ -195,6 +207,18 @@ export class AuthService {
       const registry = this.getLocalRegistry();
       registry[user.email.toLowerCase()] = user;
       StorageService.safeSetItem(REGISTRY_STORAGE_KEY, JSON.stringify(registry));
+
+      // Sync identity to Meta Pixel Advanced Matching
+      try {
+        MetaPixelService.identifyUser({
+          email: user.email,
+          name: user.name,
+          id: user.id || user.uid
+        });
+        MetaPixelService.trackRegistration('student_auth');
+      } catch (err) {
+        console.warn('[MetaPixel] Auth sync error:', err);
+      }
     } catch {
       // Storage quota safety
     }

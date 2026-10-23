@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import crypto from 'crypto';
 import { PAYMENT_PLANS } from '../../src/data/paymentPlans';
-import { authenticateFirebaseRequest, getAdminFirestore } from '../../src/server/firebaseAdmin';
+import { authenticateFirebaseRequest, getAdminFirestore, isFirestoreAvailable, markFirestoreUnavailable } from '../../src/server/firebaseAdmin';
 
 export default async function verifyPaymentHandler(req: Request, res: Response) {
   try {
@@ -125,56 +125,59 @@ export default async function verifyPaymentHandler(req: Request, res: Response) 
     }
 
     // 5. Update Firestore directly via Firebase Admin SDK
-    try {
-      const firestore = getAdminFirestore();
-      const batch = firestore.batch();
+    if (isFirestoreAvailable()) {
+      try {
+        const firestore = getAdminFirestore();
+        const batch = firestore.batch();
 
-      const userDocRef = firestore.collection('users').doc(authUser.uid);
-      batch.set(userDocRef, {
-        email: authUser.email,
-        isPremium: true,
-        premiumStatus: 'active',
-        planId: selectedPlan.id,
-        planName: selectedPlan.name,
-        subscriptionId: razorpay_subscription_id || null,
-        premiumExpiresAt: expiresAt,
-        lastPaymentId: razorpay_payment_id,
-        updatedAt: new Date().toISOString()
-      }, { merge: true });
-
-      const paymentDocRef = userDocRef.collection('payments').doc(razorpay_payment_id);
-      batch.set(paymentDocRef, {
-        paymentId: razorpay_payment_id,
-        orderId: razorpay_order_id || null,
-        subscriptionId: razorpay_subscription_id || null,
-        planId: selectedPlan.id,
-        planName: selectedPlan.name,
-        amountInPaise: selectedPlan.amountInPaise,
-        amountInInr: selectedPlan.priceInr,
-        currency: 'INR',
-        status: 'captured',
-        verifiedAt: new Date().toISOString()
-      }, { merge: true });
-
-      if (razorpay_subscription_id) {
-        const subDocRef = userDocRef.collection('subscriptions').doc(razorpay_subscription_id);
-        batch.set(subDocRef, {
-          id: razorpay_subscription_id,
+        const userDocRef = firestore.collection('users').doc(authUser.uid);
+        batch.set(userDocRef, {
+          email: authUser.email,
+          isPremium: true,
+          premiumStatus: 'active',
           planId: selectedPlan.id,
           planName: selectedPlan.name,
-          status: 'active',
-          billingType: 'subscription',
-          activatedAt: new Date().toISOString(),
-          expiresAt: new Date(expiresAt).toISOString(),
+          subscriptionId: razorpay_subscription_id || null,
+          premiumExpiresAt: expiresAt,
           lastPaymentId: razorpay_payment_id,
           updatedAt: new Date().toISOString()
         }, { merge: true });
-      }
 
-      await batch.commit();
-      console.log(`[PaymentVerify] Successfully synced entitlement to Firestore for UID: ${authUser.uid}`);
-    } catch (firestoreErr: any) {
-      console.warn('[PaymentVerify] Firestore sync skipped (API disabled or pending in GCP):', firestoreErr?.message || firestoreErr);
+        const paymentDocRef = userDocRef.collection('payments').doc(razorpay_payment_id);
+        batch.set(paymentDocRef, {
+          paymentId: razorpay_payment_id,
+          orderId: razorpay_order_id || null,
+          subscriptionId: razorpay_subscription_id || null,
+          planId: selectedPlan.id,
+          planName: selectedPlan.name,
+          amountInPaise: selectedPlan.amountInPaise,
+          amountInInr: selectedPlan.priceInr,
+          currency: 'INR',
+          status: 'captured',
+          verifiedAt: new Date().toISOString()
+        }, { merge: true });
+
+        if (razorpay_subscription_id) {
+          const subDocRef = userDocRef.collection('subscriptions').doc(razorpay_subscription_id);
+          batch.set(subDocRef, {
+            id: razorpay_subscription_id,
+            planId: selectedPlan.id,
+            planName: selectedPlan.name,
+            status: 'active',
+            billingType: 'subscription',
+            activatedAt: new Date().toISOString(),
+            expiresAt: new Date(expiresAt).toISOString(),
+            lastPaymentId: razorpay_payment_id,
+            updatedAt: new Date().toISOString()
+          }, { merge: true });
+        }
+
+        await batch.commit();
+        console.log(`[PaymentVerify] Successfully synced entitlement to Firestore for UID: ${authUser.uid}`);
+      } catch {
+        markFirestoreUnavailable();
+        console.log('[PaymentVerify] Remote Firestore sync deferred (API pending in GCP project).');
+      }
     }
 
     return res.json({

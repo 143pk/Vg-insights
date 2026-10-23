@@ -5,7 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    plugins: [tailwindcss()],
+    plugins: [tailwindcss(), react()],
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
@@ -20,6 +20,21 @@ export default defineConfig(() => {
         maxParallelFileOps: 2,
         output: {
           compact: true,
+          manualChunks(id) {
+            if (id.includes('node_modules')) {
+              if (id.includes('katex')) return 'vendor-katex';
+              if (id.includes('lucide-react')) return 'vendor-lucide';
+              if (id.includes('react') || id.includes('react-dom')) return 'vendor-react';
+              return 'vendor';
+            }
+            if (id.includes('/data/chapterwise/')) {
+              const match = id.match(/\/data\/chapterwise\/[^\/]+\/([a-zA-Z0-9]+)/);
+              if (match) {
+                return `ch-${match[1]}`;
+              }
+              return 'chapterwise-data';
+            }
+          },
         },
       },
     },

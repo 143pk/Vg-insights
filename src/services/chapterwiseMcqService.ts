@@ -471,6 +471,186 @@ export const CHAPTER_STATS_REGISTRY: Record<string, ChapterwiseStats> = {
     pyqCount: 24,
     practiceCount: 476,
   },
+  'electric-charges-fields': {
+    chapterId: 'electric-charges-fields',
+    chapterTitle: 'Electric Charges and Fields',
+    subject: 'Physics',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 0,
+    practiceCount: 500,
+  },
+  'electrostatic-potential-capacitance': {
+    chapterId: 'electrostatic-potential-capacitance',
+    chapterTitle: 'Electrostatic Potential and Capacitance',
+    subject: 'Physics',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 0,
+    practiceCount: 500,
+  },
+  'current-electricity': {
+    chapterId: 'current-electricity',
+    chapterTitle: 'Current Electricity',
+    subject: 'Physics',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 0,
+    practiceCount: 500,
+  },
+  'moving-charges-magnetism': {
+    chapterId: 'moving-charges-magnetism',
+    chapterTitle: 'Moving Charges and Magnetism',
+    subject: 'Physics',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 0,
+    practiceCount: 500,
+  },
+  'magnetism-matter': {
+    chapterId: 'magnetism-matter',
+    chapterTitle: 'Magnetism and Matter',
+    subject: 'Physics',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 0,
+    practiceCount: 500,
+  },
+  'electromagnetic-induction': {
+    chapterId: 'electromagnetic-induction',
+    chapterTitle: 'Electromagnetic Induction',
+    subject: 'Physics',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 0,
+    practiceCount: 500,
+  },
+  'alternating-current': {
+    chapterId: 'alternating-current',
+    chapterTitle: 'Alternating Current',
+    subject: 'Physics',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 0,
+    practiceCount: 500,
+  },
+  'electromagnetic-waves': {
+    chapterId: 'electromagnetic-waves',
+    chapterTitle: 'Electromagnetic Waves',
+    subject: 'Physics',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 0,
+    practiceCount: 500,
+  },
+  'ray-optics': {
+    chapterId: 'ray-optics',
+    chapterTitle: 'Ray Optics and Optical Instruments',
+    subject: 'Physics',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 0,
+    practiceCount: 500,
+  },
+  'wave-optics': {
+    chapterId: 'wave-optics',
+    chapterTitle: 'Wave Optics',
+    subject: 'Physics',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 0,
+    practiceCount: 500,
+  },
+  'dual-nature': {
+    chapterId: 'dual-nature',
+    chapterTitle: 'Dual Nature of Radiation and Matter',
+    subject: 'Physics',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 0,
+    practiceCount: 500,
+  },
+  atoms: {
+    chapterId: 'atoms',
+    chapterTitle: 'Atoms',
+    subject: 'Physics',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 0,
+    practiceCount: 500,
+  },
+  nuclei: {
+    chapterId: 'nuclei',
+    chapterTitle: 'Nuclei',
+    subject: 'Physics',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 0,
+    practiceCount: 500,
+  },
+  semiconductors: {
+    chapterId: 'semiconductors',
+    chapterTitle: 'Semiconductor Electronics',
+    subject: 'Physics',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 0,
+    practiceCount: 500,
+  },
+  'experimental-skills': {
+    chapterId: 'experimental-skills',
+    chapterTitle: 'Unit 20: Experimental Skills',
+    subject: 'Physics',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 0,
+    practiceCount: 500,
+  },
   'mole-concept': {
     chapterId: 'mole-concept',
     chapterTitle: 'Some Basic Concepts of Chemistry',
@@ -578,6 +758,162 @@ export const CHAPTER_STATS_REGISTRY: Record<string, ChapterwiseStats> = {
     hardCount: 125,
     pyqCount: 24,
     practiceCount: 476,
+  },
+  'solutions': {
+    chapterId: 'solutions',
+    chapterTitle: 'Solutions',
+    subject: 'Chemistry',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 30,
+    practiceCount: 470,
+  },
+  'equilibrium': {
+    chapterId: 'equilibrium',
+    chapterTitle: 'Equilibrium',
+    subject: 'Chemistry',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 33,
+    practiceCount: 467,
+  },
+  'electrochemistry': {
+    chapterId: 'electrochemistry',
+    chapterTitle: 'Redox Reactions & Electrochemistry',
+    subject: 'Chemistry',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 31,
+    practiceCount: 469,
+  },
+  'chemical-kinetics': {
+    chapterId: 'chemical-kinetics',
+    chapterTitle: 'Chemical Kinetics',
+    subject: 'Chemistry',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 35,
+    practiceCount: 465,
+  },
+  'p-block-12': {
+    chapterId: 'p-block-12',
+    chapterTitle: 'p-Block Elements (Group 15 to 18)',
+    subject: 'Chemistry',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 38,
+    practiceCount: 462,
+  },
+  'd-f-block-elements': {
+    chapterId: 'd-f-block-elements',
+    chapterTitle: 'd- and f-Block Elements',
+    subject: 'Chemistry',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 33,
+    practiceCount: 467,
+  },
+  'coordination-compounds': {
+    chapterId: 'coordination-compounds',
+    chapterTitle: 'Coordination Compounds',
+    subject: 'Chemistry',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 35,
+    practiceCount: 465,
+  },
+  'haloalkanes-haloarenes': {
+    chapterId: 'haloalkanes-haloarenes',
+    chapterTitle: 'Haloalkanes and Haloarenes',
+    subject: 'Chemistry',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 35,
+    practiceCount: 465,
+  },
+  'alcohols-phenols-ethers': {
+    chapterId: 'alcohols-phenols-ethers',
+    chapterTitle: 'Alcohols, Phenols and Ethers',
+    subject: 'Chemistry',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 33,
+    practiceCount: 467,
+  },
+  'aldehydes-ketones': {
+    chapterId: 'aldehydes-ketones',
+    chapterTitle: 'Aldehydes, Ketones and Carboxylic Acids',
+    subject: 'Chemistry',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 31,
+    practiceCount: 469,
+  },
+  'amines': {
+    chapterId: 'amines',
+    chapterTitle: 'Amines & Diazonium Salts',
+    subject: 'Chemistry',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 33,
+    practiceCount: 467,
+  },
+  'biomolecules': {
+    chapterId: 'biomolecules',
+    chapterTitle: 'Biomolecules',
+    subject: 'Chemistry',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 38,
+    practiceCount: 462,
+  },
+  'practical-chemistry': {
+    chapterId: 'practical-chemistry',
+    chapterTitle: 'Principles Related to Practical Chemistry',
+    subject: 'Chemistry',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 33,
+    practiceCount: 467,
   },
   'living-world': {
     chapterId: 'living-world',
@@ -735,6 +1071,78 @@ export const CHAPTER_STATS_REGISTRY: Record<string, ChapterwiseStats> = {
     pyqCount: 0,
     practiceCount: 500,
   },
+  'breathing-exchange-gases': {
+    chapterId: 'breathing-exchange-gases',
+    chapterTitle: 'Breathing and Exchange of Gases',
+    subject: 'Biology',
+    class: '11',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 0,
+    practiceCount: 500,
+  },
+  'body-fluids-circulation': {
+    chapterId: 'body-fluids-circulation',
+    chapterTitle: 'Body Fluids and Circulation',
+    subject: 'Biology',
+    class: '11',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 0,
+    practiceCount: 500,
+  },
+  'excretory-products': {
+    chapterId: 'excretory-products',
+    chapterTitle: 'Excretory Products and Their Elimination',
+    subject: 'Biology',
+    class: '11',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 0,
+    practiceCount: 500,
+  },
+  'locomotion-movement': {
+    chapterId: 'locomotion-movement',
+    chapterTitle: 'Locomotion and Movement',
+    subject: 'Biology',
+    class: '11',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 0,
+    practiceCount: 500,
+  },
+  'neural-control-coordination': {
+    chapterId: 'neural-control-coordination',
+    chapterTitle: 'Neural Control and Coordination',
+    subject: 'Biology',
+    class: '11',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 0,
+    practiceCount: 500,
+  },
+  'chemical-coordination-integration': {
+    chapterId: 'chemical-coordination-integration',
+    chapterTitle: 'Chemical Coordination and Integration',
+    subject: 'Biology',
+    class: '11',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 0,
+    practiceCount: 500,
+  },
 };
 
 // In-memory cache for loaded chapter datasets
@@ -799,6 +1207,66 @@ export const CHAPTER_LOADERS: Record<string, () => Promise<ChapterwiseMCQ[]>> = 
     const mod = await import('../data/chapterwise/physics/wavesData');
     return mod.WAVES_MCQS;
   },
+  'electric-charges-fields': async () => {
+    const mod = await import('../data/chapterwise/physics/electricChargesFieldsData');
+    return mod.ELECTRIC_CHARGES_FIELDS_MCQS;
+  },
+  'electrostatic-potential-capacitance': async () => {
+    const mod = await import('../data/chapterwise/physics/electrostaticPotentialCapacitanceData');
+    return mod.ELECTROSTATIC_POTENTIAL_CAPACITANCE_MCQS;
+  },
+  'current-electricity': async () => {
+    const mod = await import('../data/chapterwise/physics/currentElectricityData');
+    return mod.CURRENT_ELECTRICITY_MCQS;
+  },
+  'moving-charges-magnetism': async () => {
+    const mod = await import('../data/chapterwise/physics/movingChargesMagnetismData');
+    return mod.MOVING_CHARGES_MAGNETISM_MCQS;
+  },
+  'magnetism-matter': async () => {
+    const mod = await import('../data/chapterwise/physics/magnetismMatterData');
+    return mod.MAGNETISM_MATTER_MCQS;
+  },
+  'electromagnetic-induction': async () => {
+    const mod = await import('../data/chapterwise/physics/electromagneticInductionData');
+    return mod.ELECTROMAGNETIC_INDUCTION_MCQS;
+  },
+  'alternating-current': async () => {
+    const mod = await import('../data/chapterwise/physics/alternatingCurrentData');
+    return mod.ALTERNATING_CURRENT_MCQS;
+  },
+  'electromagnetic-waves': async () => {
+    const mod = await import('../data/chapterwise/physics/electromagneticWavesData');
+    return mod.ELECTROMAGNETIC_WAVES_MCQS;
+  },
+  'ray-optics': async () => {
+    const mod = await import('../data/chapterwise/physics/rayOpticsData');
+    return mod.RAY_OPTICS_MCQS;
+  },
+  'wave-optics': async () => {
+    const mod = await import('../data/chapterwise/physics/waveOpticsData');
+    return mod.WAVE_OPTICS_MCQS;
+  },
+  'dual-nature': async () => {
+    const mod = await import('../data/chapterwise/physics/dualNatureData');
+    return mod.DUAL_NATURE_MCQS;
+  },
+  atoms: async () => {
+    const mod = await import('../data/chapterwise/physics/atomsData');
+    return mod.ATOMS_MCQS;
+  },
+  nuclei: async () => {
+    const mod = await import('../data/chapterwise/physics/nucleiData');
+    return mod.NUCLEI_MCQS;
+  },
+  semiconductors: async () => {
+    const mod = await import('../data/chapterwise/physics/semiconductorsData');
+    return mod.SEMICONDUCTORS_MCQS;
+  },
+  'experimental-skills': async () => {
+    const mod = await import('../data/chapterwise/physics/experimentalSkillsData');
+    return mod.EXPERIMENTAL_SKILLS_MCQS;
+  },
   'mole-concept': async () => {
     const mod = await import('../data/chapterwise/chemistry/moleConceptData');
     return mod.MOLE_CONCEPT_MCQS;
@@ -834,6 +1302,58 @@ export const CHAPTER_LOADERS: Record<string, () => Promise<ChapterwiseMCQ[]>> = 
   'hydrocarbons': async () => {
     const mod = await import('../data/chapterwise/chemistry/hydrocarbonsData');
     return mod.HYDROCARBONS_MCQS;
+  },
+  'solutions': async () => {
+    const mod = await import('../data/chapterwise/chemistry/solutionsData');
+    return mod.SOLUTIONS_MCQS;
+  },
+  'equilibrium': async () => {
+    const mod = await import('../data/chapterwise/chemistry/equilibriumData');
+    return mod.EQUILIBRIUM_MCQS;
+  },
+  'electrochemistry': async () => {
+    const mod = await import('../data/chapterwise/chemistry/electrochemistryData');
+    return mod.ELECTROCHEMISTRY_MCQS;
+  },
+  'chemical-kinetics': async () => {
+    const mod = await import('../data/chapterwise/chemistry/chemicalKineticsData');
+    return mod.CHEMICAL_KINETICS_MCQS;
+  },
+  'p-block-12': async () => {
+    const mod = await import('../data/chapterwise/chemistry/pBlock12Data');
+    return mod.P_BLOCK_12_MCQS;
+  },
+  'd-f-block-elements': async () => {
+    const mod = await import('../data/chapterwise/chemistry/dFBlockElementsData');
+    return mod.DF_BLOCK_ELEMENTS_MCQS;
+  },
+  'coordination-compounds': async () => {
+    const mod = await import('../data/chapterwise/chemistry/coordinationCompoundsData');
+    return mod.COORDINATION_COMPOUNDS_MCQS;
+  },
+  'haloalkanes-haloarenes': async () => {
+    const mod = await import('../data/chapterwise/chemistry/haloalkanesHaloarenesData');
+    return mod.HALOALKANES_HALOARENES_MCQS;
+  },
+  'alcohols-phenols-ethers': async () => {
+    const mod = await import('../data/chapterwise/chemistry/alcoholsPhenolsEthersData');
+    return mod.ALCOHOLS_PHENOLS_ETHERS_MCQS;
+  },
+  'aldehydes-ketones': async () => {
+    const mod = await import('../data/chapterwise/chemistry/aldehydesKetonesData');
+    return mod.ALDEHYDES_KETONES_MCQS;
+  },
+  'amines': async () => {
+    const mod = await import('../data/chapterwise/chemistry/aminesData');
+    return mod.AMINES_MCQS;
+  },
+  'biomolecules': async () => {
+    const mod = await import('../data/chapterwise/chemistry/biomoleculesData');
+    return mod.BIOMOLECULES_MCQS;
+  },
+  'practical-chemistry': async () => {
+    const mod = await import('../data/chapterwise/chemistry/practicalChemistryData');
+    return mod.PRACTICAL_CHEMISTRY_MCQS;
   },
   'living-world': async () => {
     const mod = await import('../data/chapterwise/biology/livingWorldData');
@@ -887,14 +1407,45 @@ export const CHAPTER_LOADERS: Record<string, () => Promise<ChapterwiseMCQ[]>> = 
     const mod = await import('../data/chapterwise/biology/plantGrowthDevelopmentData');
     return mod.PLANT_GROWTH_DEVELOPMENT_MCQS;
   },
+  'breathing-exchange-gases': async () => {
+    const mod = await import('../data/chapterwise/biology/breathingExchangeGasesData');
+    return mod.BREATHING_EXCHANGE_GASES_MCQS;
+  },
+  'body-fluids-circulation': async () => {
+    const mod = await import('../data/chapterwise/biology/bodyFluidsCirculationData');
+    return mod.BODY_FLUIDS_CIRCULATION_MCQS;
+  },
+  'excretory-products': async () => {
+    const mod = await import('../data/chapterwise/biology/excretoryProductsData');
+    return mod.EXCRETORY_PRODUCTS_MCQS;
+  },
+  'locomotion-movement': async () => {
+    const mod = await import('../data/chapterwise/biology/locomotionMovementData');
+    return mod.LOCOMOTION_MOVEMENT_MCQS;
+  },
+  'neural-control-coordination': async () => {
+    const mod = await import('../data/chapterwise/biology/neuralControlCoordinationData');
+    return mod.NEURAL_CONTROL_COORDINATION_MCQS;
+  },
+  'chemical-coordination-integration': async () => {
+    const mod = await import('../data/chapterwise/biology/chemicalCoordinationIntegrationData');
+    return mod.CHEMICAL_COORDINATION_INTEGRATION_MCQS;
+  },
 };
 
 function normalizeChapterId(id: string): string {
+  if (id === 'breathing-exchange-gases' || id === 'breathing_exchange_gases' || id === 'breathing-and-exchange-of-gases' || id === 'breathing_and_exchange_of_gases' || id === 'breathing-exchange-of-gases' || id === 'respiration-breathing' || id === 'breathing-exchange-gases-11') return 'breathing-exchange-gases';
+  if (id === 'body-fluids-circulation' || id === 'body_fluids_circulation' || id === 'body-fluids-and-circulation' || id === 'body_fluids_and_circulation' || id === 'circulation' || id === 'body-fluids' || id === 'body-fluids-circulation-11') return 'body-fluids-circulation';
+  if (id === 'excretory-products' || id === 'excretory_products' || id === 'excretory-products-and-their-elimination' || id === 'excretory_products_and_their_elimination' || id === 'excretory-products-elimination' || id === 'excretion' || id === 'excretory-products-11') return 'excretory-products';
+  if (id === 'locomotion-movement' || id === 'locomotion_movement' || id === 'locomotion-and-movement' || id === 'locomotion_and_movement' || id === 'locomotion' || id === 'movement' || id === 'locomotion-movement-11') return 'locomotion-movement';
+  if (id === 'neural-control-coordination' || id === 'neural_control_coordination' || id === 'neural-control-and-coordination' || id === 'neural_control_and_coordination' || id === 'neural-control' || id === 'nervous-system' || id === 'neural-control-coordination-11') return 'neural-control-coordination';
+  if (id === 'chemical-coordination-integration' || id === 'chemical_coordination_integration' || id === 'chemical-coordination-and-integration' || id === 'chemical_coordination_and_integration' || id === 'chemical-coordination' || id === 'endocrine-system' || id === 'chemical-coordination-integration-11') return 'chemical-coordination-integration';
   if (id === 'plant-growth-development' || id === 'plant_growth_development' || id === 'plant-growth-and-development' || id === 'plant_growth_and_development' || id === 'plant-growth' || id === 'plant-growth-11') return 'plant-growth-development';
   if (id === 'respiration-plants' || id === 'respiration_plants' || id === 'respiration-in-plants' || id === 'respiration_in_plants' || id === 'respiration' || id === 'respiration-11') return 'respiration-plants';
   if (id === 'photosynthesis-higher-plants' || id === 'photosynthesis_higher_plants' || id === 'photosynthesis-in-higher-plants' || id === 'photosynthesis_in_higher_plants' || id === 'photosynthesis' || id === 'photosynthesis-11') return 'photosynthesis-higher-plants';
   if (id === 'cell-cycle-division' || id === 'cell_cycle_division' || id === 'cell-cycle-and-cell-division' || id === 'cell-cycle' || id === 'cell_cycle' || id === 'cell-division' || id === 'cell-cycle-division-11') return 'cell-cycle-division';
-  if (id === 'biomolecules-bio' || id === 'biomolecules_bio' || id === 'biomolecules-11' || id === 'biomolecules_11' || id === 'biomolecule' || id === 'biomolecules') return 'biomolecules-bio';
+  if (id === 'biomolecules-bio' || id === 'biomolecules_bio' || id === 'biomolecules-11' || id === 'biomolecules_11' || id === 'biomolecules-biology') return 'biomolecules-bio';
+  if (id === 'biomolecules' || id === 'biomolecules-chem' || id === 'biomolecules-12' || id === 'biomolecules_12' || id === 'biomolecule') return 'biomolecules';
   if (id === 'cell_the_unit_of_life' || id === 'cell-the-unit-of-life' || id === 'cell-unit-life' || id === 'cell-unit-of-life' || id === 'cell_unit_of_life' || id === 'cell-biology' || id === 'cell' || id === 'cell-unit-of-life-11') return 'cell-unit-of-life';
   if (id === 'the-living-world' || id === 'living-world-11' || id === 'livingworld' || id === 'the_living_world') return 'living-world';
   if (id === 'biological_classification' || id === 'biologicalclassification' || id === 'bio-classification' || id === 'biological-classification-11' || id === 'bio-class') return 'biological-classification';
@@ -920,6 +1471,33 @@ function normalizeChapterId(id: string): string {
   if (id === 'p-block' || id === 'p-block-elements' || id === 'pblock-11' || id === 'pblock') return 'p-block-11';
   if (id === 'organic-chemistry' || id === 'general-organic-chemistry' || id === 'goc' || id === 'organic-chemistry-basic' || id === 'purification-organic' || id === 'goc-principles') return 'organic-chemistry-basic-principles';
   if (id === 'hydrocarbon' || id === 'hydrocarbons-11') return 'hydrocarbons';
+  if (id === 'solutions' || id === 'solution' || id === 'solutions-12' || id === 'solutions_12') return 'solutions';
+  if (id === 'equilibrium' || id === 'chemical-equilibrium' || id === 'ionic-equilibrium' || id === 'equilibrium-12') return 'equilibrium';
+  if (id === 'electrochemistry' || id === 'redox-reactions-electrochemistry' || id === 'redox-electrochemistry' || id === 'electrochem') return 'electrochemistry';
+  if (id === 'chemical-kinetics' || id === 'kinetics' || id === 'chemical_kinetics') return 'chemical-kinetics';
+  if (id === 'p-block-12' || id === 'pblock-12' || id === 'p-block-elements-12' || id === 'p-block-elements-group-15-to-18' || id === 'p-block-group-15-to-18') return 'p-block-12';
+  if (id === 'd-f-block-elements' || id === 'd-and-f-block-elements' || id === 'df-block' || id === 'd-f-block' || id === 'transition-elements') return 'd-f-block-elements';
+  if (id === 'coordination-compounds' || id === 'coordination_compounds' || id === 'coordination-chemistry' || id === 'coordination') return 'coordination-compounds';
+  if (id === 'haloalkanes-haloarenes' || id === 'haloalkanes_haloarenes' || id === 'haloalkanes-and-haloarenes' || id === 'haloalkanes') return 'haloalkanes-haloarenes';
+  if (id === 'alcohols-phenols-ethers' || id === 'alcohols_phenols_ethers' || id === 'alcohols-phenols-and-ethers' || id === 'alcohols') return 'alcohols-phenols-ethers';
+  if (id === 'aldehydes-ketones' || id === 'aldehydes_ketones' || id === 'aldehydes-ketones-carboxylic-acids' || id === 'aldehydes-ketones-and-carboxylic-acids' || id === 'carbonyl-compounds') return 'aldehydes-ketones';
+  if (id === 'amines' || id === 'amines-diazonium-salts' || id === 'amines-and-diazonium-salts' || id === 'amines_diazonium_salts') return 'amines';
+  if (id === 'practical-chemistry' || id === 'practical_chemistry' || id === 'principles-related-to-practical-chemistry' || id === 'practical-chemistry-12') return 'practical-chemistry';
+  if (id === 'electric-charges-and-fields' || id === 'electric_charges_fields' || id === 'electric-charges-fields' || id === 'electrostatics-1' || id === 'electric-charges') return 'electric-charges-fields';
+  if (id === 'electrostatic-potential-and-capacitance' || id === 'electrostatic_potential_capacitance' || id === 'electrostatic-potential-capacitance' || id === 'potential-capacitance' || id === 'capacitance') return 'electrostatic-potential-capacitance';
+  if (id === 'current-electricity' || id === 'current_electricity' || id === 'current' || id === 'electricity') return 'current-electricity';
+  if (id === 'moving-charges-and-magnetism' || id === 'moving_charges_magnetism' || id === 'moving-charges-magnetism' || id === 'magnetic-effects-of-current') return 'moving-charges-magnetism';
+  if (id === 'magnetism-and-matter' || id === 'magnetism_matter' || id === 'magnetism-matter' || id === 'magnetism') return 'magnetism-matter';
+  if (id === 'electromagnetic-induction' || id === 'electromagnetic_induction' || id === 'emi') return 'electromagnetic-induction';
+  if (id === 'alternating-current' || id === 'alternating_current' || id === 'ac' || id === 'ac-circuits') return 'alternating-current';
+  if (id === 'electromagnetic-waves' || id === 'electromagnetic_waves' || id === 'em-waves' || id === 'emw') return 'electromagnetic-waves';
+  if (id === 'ray-optics-and-optical-instruments' || id === 'ray_optics' || id === 'ray-optics' || id === 'optics' || id === 'geometrical-optics') return 'ray-optics';
+  if (id === 'wave-optics' || id === 'wave_optics' || id === 'physical-optics') return 'wave-optics';
+  if (id === 'dual-nature-of-radiation-and-matter' || id === 'dual_nature' || id === 'dual-nature' || id === 'photoelectric-effect') return 'dual-nature';
+  if (id === 'atoms' || id === 'atom' || id === 'atomic-physics' || id === 'bohr-atom') return 'atoms';
+  if (id === 'nuclei' || id === 'nucleus' || id === 'nuclear-physics' || id === 'radioactivity') return 'nuclei';
+  if (id === 'semiconductor-electronics' || id === 'semiconductors' || id === 'semiconductor' || id === 'electronic-devices') return 'semiconductors';
+  if (id === 'experimental-skills' || id === 'unit-20-experimental-skills' || id === 'practical-physics' || id === 'experiments') return 'experimental-skills';
   return id;
 }
 

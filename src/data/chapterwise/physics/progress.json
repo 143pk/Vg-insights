@@ -1,0 +1,161 @@
+{
+  "subject": "Physics",
+  "standard": "500 MCQs per chapter (125 Easy, 250 Medium, 125 Hard, 125 A/B/C/D balanced)",
+  "class11Completed": 14,
+  "class12Completed": 15,
+  "class12TotalTarget": 15,
+  "class12Status": "100% COMPLETE",
+  "lastUpdated": "2026-10-22",
+  "chapters": {
+    "electric-charges-fields": {
+      "chapterNumber": 1,
+      "title": "Electric Charges and Fields",
+      "status": "Completed",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "optionBalance": { "A": 125, "B": 125, "C": 125, "D": 125 }
+    },
+    "electrostatic-potential-capacitance": {
+      "chapterNumber": 2,
+      "title": "Electrostatic Potential and Capacitance",
+      "status": "Completed",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "optionBalance": { "A": 125, "B": 125, "C": 125, "D": 125 }
+    },
+    "current-electricity": {
+      "chapterNumber": 3,
+      "title": "Current Electricity",
+      "status": "Completed",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "optionBalance": { "A": 125, "B": 125, "C": 125, "D": 125 }
+    },
+    "moving-charges-magnetism": {
+      "chapterNumber": 4,
+      "title": "Moving Charges and Magnetism",
+      "status": "Completed",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "optionBalance": { "A": 125, "B": 125, "C": 125, "D": 125 }
+    },
+    "magnetism-matter": {
+      "chapterNumber": 5,
+      "title": "Magnetism and Matter",
+      "status": "Completed",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "optionBalance": { "A": 125, "B": 125, "C": 125, "D": 125 }
+    },
+    "electromagnetic-induction": {
+      "chapterNumber": 6,
+      "title": "Electromagnetic Induction",
+      "status": "Completed",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "optionBalance": { "A": 125, "B": 125, "C": 125, "D": 125 }
+    },
+    "alternating-current": {
+      "chapterNumber": 7,
+      "title": "Alternating Current",
+      "status": "Completed",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "optionBalance": { "A": 125, "B": 125, "C": 125, "D": 125 }
+    },
+    "electromagnetic-waves": {
+      "chapterNumber": 8,
+      "title": "Electromagnetic Waves",
+      "status": "Completed",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "optionBalance": { "A": 125, "B": 125, "C": 125, "D": 125 }
+    },
+    "ray-optics": {
+      "chapterNumber": 9,
+      "title": "Ray Optics and Optical Instruments",
+      "status": "Completed",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "optionBalance": { "A": 125, "B": 125, "C": 125, "D": 125 }
+    },
+    "wave-optics": {
+      "chapterNumber": 10,
+      "title": "Wave Optics",
+      "status": "Completed",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "optionBalance": { "A": 125, "B": 125, "C": 125, "D": 125 }
+    },
+    "dual-nature": {
+      "chapterNumber": 11,
+      "title": "Dual Nature of Radiation and Matter",
+      "status": "Completed",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "optionBalance": { "A": 125, "B": 125, "C": 125, "D": 125 }
+    },
+    "atoms": {
+      "chapterNumber": 12,
+      "title": "Atoms",
+      "status": "Completed",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "optionBalance": { "A": 125, "B": 125, "C": 125, "D": 125 }
+    },
+    "nuclei": {
+      "chapterNumber": 13,
+      "title": "Nuclei",
+      "status": "Completed",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "optionBalance": { "A": 125, "B": 125, "C": 125, "D": 125 }
+    },
+    "semiconductors": {
+      "chapterNumber": 14,
+      "title": "Semiconductor Electronics",
+      "status": "Completed",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "optionBalance": { "A": 125, "B": 125, "C": 125, "D": 125 }
+    },
+    "experimental-skills": {
+      "chapterNumber": 15,
+      "title": "Unit 20: Experimental Skills",
+      "status": "Completed",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "optionBalance": { "A": 125, "B": 125, "C": 125, "D": 125 }
+    }
+  }
+}
