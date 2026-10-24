@@ -60,16 +60,7 @@ export class AuthService {
       if (stored) {
         this.user = JSON.parse(stored);
       } else {
-        const defaultAdmin: AuthUser = {
-          id: 'admin_optionvortex',
-          uid: 'admin_optionvortex',
-          email: 'optionvortex@gmail.com',
-          name: 'Owner & Developer',
-          loggedInAt: Date.now(),
-          isEmailVerified: true
-        };
-        this.user = defaultAdmin;
-        StorageService.safeSetItem(AUTH_STORAGE_KEY, JSON.stringify(defaultAdmin));
+        this.user = null;
       }
     } catch {
       this.user = null;

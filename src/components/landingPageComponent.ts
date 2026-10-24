@@ -1,6 +1,7 @@
 import { SUBJECTS, TOPICS } from '../data/neetData';
 import { renderBrandLogo } from './brandLogoComponent';
 import { StorageService } from '../services/storageService';
+import { AuthService } from '../services/authService';
 import { renderFormulaHTML, renderInlineMathHTML, renderMath } from '../utils/mathRenderer';
 
 export function renderLandingPage(): string {
@@ -31,9 +32,6 @@ export function renderLandingPage(): string {
 
             <!-- Desktop Navigation Links -->
             <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-600 dark:text-slate-300">
-              <a href="#start-here" class="px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-emerald-950/50 text-emerald-600 dark:text-emerald-400 font-bold border border-emerald-200 dark:border-emerald-800/60 hover:bg-emerald-100 flex items-center gap-1 transition-colors">
-                <span>🌱</span> Start Here
-              </a>
               <a href="#ecosystem" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Ecosystem</a>
               <a href="#library" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">NEET Library</a>
               <a href="#pyqs" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">PYQs</a>
@@ -67,17 +65,12 @@ export function renderLandingPage(): string {
               <button
                 type="button"
                 id="btn-nav-login"
-                class="hidden sm:inline-flex px-3.5 py-2 text-sm font-bold text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors focus:outline-none cursor-pointer"
+                class="px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-gradient-to-r from-[#2563EB] to-[#1D4ED8] hover:from-[#1D4ED8] hover:to-[#1E40AF] text-white text-xs sm:text-sm font-bold shadow-md shadow-blue-500/20 active:scale-[0.98] transition-all flex items-center gap-1.5 sm:gap-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 cursor-pointer select-none"
               >
-                Sign In
-              </button>
-              <button
-                type="button"
-                id="btn-nav-get-started"
-                class="px-3 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-gradient-to-r from-[#2563EB] to-[#1D4ED8] hover:from-[#1D4ED8] hover:to-[#1E40AF] text-white text-xs sm:text-sm font-bold shadow-md shadow-blue-500/20 active:scale-[0.98] transition-all flex items-center gap-1 sm:gap-1.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 cursor-pointer"
-              >
-                <span>Enter Workspace</span>
-                <span class="text-blue-200 hidden xs:inline">→</span>
+                <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24">
+                  <path fill="#ffffff" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                </svg>
+                <span>Sign In with Google</span>
               </button>
 
               <!-- Mobile Menu Toggle Button -->
@@ -98,7 +91,6 @@ export function renderLandingPage(): string {
           <!-- Mobile Dropdown Menu -->
           <div id="mobile-nav-dropdown" class="hidden lg:hidden border-t border-slate-200/80 dark:border-slate-800 px-5 py-4 space-y-3 bg-white/95 dark:bg-slate-900/95 rounded-b-2xl">
             <div class="flex flex-col space-y-2.5 font-semibold text-sm text-slate-600 dark:text-slate-300">
-              <a href="#start-here" class="py-1.5 font-bold text-emerald-600 dark:text-emerald-400 mobile-nav-link flex items-center gap-1.5">🌱 Start Here (Beginner Path)</a>
               <a href="#ecosystem" class="py-1.5 hover:text-blue-600 mobile-nav-link">Ecosystem</a>
               <a href="#library" class="py-1.5 hover:text-blue-600 mobile-nav-link">NEET Library</a>
               <a href="#pyqs" class="py-1.5 hover:text-blue-600 mobile-nav-link">PYQs (2014–2025)</a>
@@ -109,10 +101,13 @@ export function renderLandingPage(): string {
             <div class="pt-3 border-t border-slate-200 dark:border-slate-800 flex flex-col gap-2">
               <button
                 type="button"
-                id="btn-mobile-get-started"
-                class="w-full py-3 rounded-xl bg-blue-600 text-white text-sm font-bold hover:bg-blue-700 transition-colors shadow-md shadow-blue-500/20"
+                id="btn-mobile-login"
+                class="w-full py-3 rounded-xl bg-blue-600 text-white text-sm font-bold hover:bg-blue-700 transition-colors shadow-md shadow-blue-500/20 flex items-center justify-center gap-2 cursor-pointer"
               >
-                Enter Study Workspace →
+                <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24">
+                  <path fill="#ffffff" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                </svg>
+                <span>Sign In with Google</span>
               </button>
             </div>
           </div>
@@ -157,7 +152,10 @@ export function renderLandingPage(): string {
                 id="btn-hero-start-free"
                 class="w-full sm:w-auto px-8 py-3.5 sm:px-9 sm:py-4 rounded-2xl bg-gradient-to-r from-[#2563EB] to-[#1D4ED8] hover:from-[#1D4ED8] hover:to-[#1E40AF] text-white text-base sm:text-lg font-bold shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 active:scale-[0.98] transition-all flex items-center justify-center gap-2.5 cursor-pointer"
               >
-                <span>Start Learning Free</span>
+                <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24">
+                  <path fill="#ffffff" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                </svg>
+                <span>Start Learning</span>
                 <span class="text-blue-200 text-lg sm:text-xl">→</span>
               </button>
             </div>
@@ -918,7 +916,10 @@ export function renderLandingPage(): string {
               id="btn-footer-start-free"
               class="w-full sm:w-auto px-8 py-3.5 rounded-2xl bg-gradient-to-r from-[#2563EB] to-[#1D4ED8] hover:from-[#1D4ED8] hover:to-[#1E40AF] text-white text-sm sm:text-base font-bold shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer"
             >
-              <span>Start Learning Free</span>
+              <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24">
+                <path fill="#ffffff" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+              </svg>
+              <span>Start Learning</span>
               <span class="text-blue-200 text-base sm:text-lg">→</span>
             </button>
           </div>
@@ -1080,36 +1081,39 @@ export function initLandingPageEvents(onOpenAuthModal: () => void): void {
     });
   }
 
-  // 1. Hook up Navigation & CTA buttons
-  const loginButtons = [
+  // Direct Google Sign-In Trigger for "Start Learning" and "Sign In with Google"
+  const triggerGoogleSignIn = async () => {
+    if (AuthService.isAuthenticated()) {
+      window.location.hash = '#home';
+      return;
+    }
+
+    try {
+      const res = await AuthService.signInWithGoogle();
+      if (res && res.success) {
+        window.location.hash = '#home';
+      } else if (res && res.error && res.error !== 'Sign-in cancelled') {
+        onOpenAuthModal();
+      }
+    } catch (err) {
+      console.warn('[Landing] Google sign-in fallback to modal:', err);
+      onOpenAuthModal();
+    }
+  };
+
+  const actionButtons = [
+    'btn-hero-start-free',
+    'btn-footer-start-free',
     'btn-nav-login',
     'btn-mobile-login',
   ];
 
-  loginButtons.forEach((btnId) => {
+  actionButtons.forEach((btnId) => {
     const el = document.getElementById(btnId);
     if (el) {
       el.addEventListener('click', (e) => {
         e.preventDefault();
-        onOpenAuthModal();
-      });
-    }
-  });
-
-  // Direct study workspace buttons: enter immediately without blocking!
-  const directStudyButtons = [
-    'btn-nav-get-started',
-    'btn-hero-start-free',
-    'btn-footer-start-free',
-    'btn-mobile-get-started',
-  ];
-
-  directStudyButtons.forEach((btnId) => {
-    const el = document.getElementById(btnId);
-    if (el) {
-      el.addEventListener('click', (e) => {
-        e.preventDefault();
-        window.location.hash = '#home';
+        triggerGoogleSignIn();
       });
     }
   });

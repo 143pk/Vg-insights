@@ -40,7 +40,6 @@ import { renderRevisionView } from './components/revisionViewComponent';
 import { renderChaptersDirectoryView } from './components/chaptersDirectoryComponent';
 import { renderChapterwiseMcqsView, attachChapterwiseMcqsEvents } from './components/chapterwiseMcqsComponent';
 import { ChapterwiseMcqService } from './services/chapterwiseMcqService';
-import { renderBeginnerRoadmapView } from './components/beginnerRoadmapComponent';
 import { renderAssessmentFailureLearnReview, attachAssessmentLearnReviewEvents, MissedQuestionDetail } from './components/assessmentLearnReviewComponent';
 import { LearningRoadmapService, ROADMAP_STEPS } from './data/learningRoadmapData';
 
@@ -353,6 +352,13 @@ class App {
       return;
     }
 
+    // Require Google authentication to access any workspace routes
+    if (!AuthService.isAuthenticated()) {
+      RouterService.navigateTo('landing');
+      this.renderLandingLayout(true);
+      return;
+    }
+
     root.innerHTML = `
       <div id="header-container"></div>
       
@@ -620,14 +626,8 @@ class App {
 
       case 'start-here':
       case 'roadmap':
-        if (routeState.stepId) {
-          this.roadmapActiveStepId = routeState.stepId;
-        } else if (!this.roadmapActiveStepId) {
-          this.roadmapActiveStepId = LearningRoadmapService.getNextRecommendedStepId();
-        }
-        appContent.innerHTML = renderBeginnerRoadmapView(this.roadmapActiveStepId);
-        this.attachRoadmapEvents();
-        break;
+        RouterService.navigateTo('home');
+        return;
 
       case 'pyqs':
         appContent.innerHTML = renderPYQsView();

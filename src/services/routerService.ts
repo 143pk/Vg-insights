@@ -233,18 +233,11 @@ export class RouterService {
       };
     }
 
-    // 5. Study Modules
+    // 5. Study Modules (Redirect deprecated start-here/roadmap routes to home)
     if (prefix === 'start-here' || prefix === 'roadmap' || prefix === 'beginner-path') {
-      const stepId = parts[1] || undefined;
-      const phaseId = parts[2] ? parseInt(parts[2], 10) : undefined;
       return {
-        type: 'start-here',
-        stepId,
-        phaseId: isNaN(phaseId as number) ? undefined : phaseId,
-        breadcrumbs: [
-          { label: 'Home', path: '#home' },
-          { label: '🌱 Start Here (Beginner Path)', path: '#start-here' }
-        ]
+        type: 'home',
+        breadcrumbs: [{ label: 'Home', path: '#home' }]
       };
     }
 
