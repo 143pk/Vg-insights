@@ -162,7 +162,7 @@ class App {
       console.warn('[MetaPixel] Init skipped:', e);
     }
 
-    // Scroll listener for sticky header visual height & translucency refinement
+    // Scroll listener for header translucency and dynamic sidebar attachment
     let isHeaderTicking = false;
     window.addEventListener('scroll', () => {
       if (!isHeaderTicking) {
@@ -175,16 +175,23 @@ class App {
               header.classList.remove('app-header-scrolled');
             }
           }
+          this.updateSidebarPosition();
           isHeaderTicking = false;
         });
         isHeaderTicking = true;
       }
     }, { passive: true });
 
+    // Ensure sidebar tracks properly on resize
+    window.addEventListener('resize', () => {
+      this.updateSidebarPosition();
+    }, { passive: true });
+
     // Listen to hash route changes
     window.addEventListener('hashchange', () => {
       this.handleRouteChange();
       window.scrollTo({ top: 0, behavior: 'smooth' });
+      requestAnimationFrame(() => this.updateSidebarPosition());
     });
 
     // Attach global keyboard shortcuts (Cmd+K / Ctrl+K for search)
@@ -348,12 +355,14 @@ class App {
 
     root.innerHTML = `
       <div id="header-container"></div>
-      <div id="breadcrumb-container"></div>
       
-      <!-- Primary App Grid with Sidebar + Main Content -->
-      <div class="flex w-full min-h-[calc(100vh-8rem)]">
-        <div id="sidebar-container" class="hidden lg:block shrink-0 w-60 xl:w-64 border-r border-slate-200/90 dark:border-slate-800 bg-white dark:bg-slate-900 sticky top-16 sm:top-[68px] h-[calc(100vh-4rem)] sm:h-[calc(100vh-68px)] self-start z-30"></div>
-        <main id="app-content" class="flex-1 w-full max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-6 min-w-0 overflow-x-hidden"></main>
+      <!-- Primary App Grid with Sticky Sidebar + Main Content -->
+      <div class="flex w-full min-h-screen">
+        <div id="sidebar-container" class="hidden lg:block shrink-0 w-60 xl:w-64"></div>
+        <div class="flex-1 flex flex-col min-w-0">
+          <div id="breadcrumb-container"></div>
+          <main id="app-content" class="flex-1 w-full max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-6 min-w-0 overflow-x-hidden"></main>
+        </div>
       </div>
 
       <div id="modals-container">
@@ -705,6 +714,29 @@ class App {
         drawer?.classList.add('hidden');
       });
     });
+
+    // Initialize sidebar top & height relative to current scroll
+    this.updateSidebarPosition();
+  }
+
+  public updateSidebarPosition(): void {
+    const sidebar = document.getElementById('app-sidebar');
+    const header = document.getElementById('main-app-header');
+    if (!sidebar) return;
+
+    if (header) {
+      const headerRect = header.getBoundingClientRect();
+      // headerRect.bottom is the current pixel distance of the header's bottom from the viewport top.
+      // When at top of page, headerRect.bottom is 64px or 68px.
+      // As the user scrolls down, headerRect.bottom decreases to 0.
+      // Once header has vanished, headerRect.bottom <= 0, so Math.max(0, ...) locks at 0px!
+      const currentTop = Math.max(0, Math.round(headerRect.bottom));
+      sidebar.style.top = `${currentTop}px`;
+      sidebar.style.height = `calc(100vh - ${currentTop}px)`;
+    } else {
+      sidebar.style.top = '0px';
+      sidebar.style.height = '100vh';
+    }
   }
 
   private attachHeaderEvents(): void {

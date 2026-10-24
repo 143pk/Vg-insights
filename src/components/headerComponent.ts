@@ -16,7 +16,7 @@ export function renderHeader(
   const isAuthenticated = AuthService.isAuthenticated();
 
   return `
-    <header id="main-app-header" class="app-header-base sticky top-0 z-40 w-full transition-all duration-200">
+    <header id="main-app-header" class="app-header-base relative z-40 w-full transition-all duration-200">
       <div id="header-inner-bar" class="w-full max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-[68px] flex items-center justify-between gap-3 sm:gap-4 transition-all duration-200">
         
         <!-- LEFT: Hamburger Menu (Mobile/Tablet), Brand Logo, and Navigation Links -->

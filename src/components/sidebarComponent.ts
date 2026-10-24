@@ -51,8 +51,8 @@ export function renderSidebar(currentPath: string = '#home'): string {
   ];
 
   return `
-    <!-- DESKTOP SIDEBAR: Clean, Minimal, Modern Layout -->
-    <aside id="app-sidebar" class="w-full h-full flex flex-col justify-between overflow-y-auto">
+    <!-- DESKTOP SIDEBAR: Dynamic Attached-to-Header Fixed Viewport Layout -->
+    <aside id="app-sidebar" class="fixed left-0 w-60 xl:w-64 z-30 bg-white dark:bg-slate-900 border-r border-slate-200/90 dark:border-slate-800 flex flex-col justify-between overflow-y-auto" style="top: 64px; height: calc(100vh - 64px);">
       <div class="p-3.5 space-y-5">
         
         <!-- Live Weekly Mock Card -->
