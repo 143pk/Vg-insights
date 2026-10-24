@@ -1,7 +1,7 @@
 {
-  "class": "11",
+  "class": "11 & 12",
   "subject": "Biology",
-  "targetChapters": 19,
+  "targetChapters": 32,
   "completedChapters": [
     {
       "id": "living-world",
@@ -306,9 +306,217 @@
         "C": 125,
         "D": 125
       }
+    },
+    {
+      "id": "sexual-repro-flowering-plants",
+      "title": "Sexual Reproduction in Flowering Plants",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "batches": 4,
+      "status": "completed",
+      "answerDistribution": {
+        "A": 128,
+        "B": 124,
+        "C": 124,
+        "D": 124
+      }
+    },
+    {
+      "id": "human-reproduction",
+      "title": "Human Reproduction",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "batches": 4,
+      "status": "completed",
+      "answerDistribution": {
+        "A": 128,
+        "B": 124,
+        "C": 124,
+        "D": 124
+      }
+    },
+    {
+      "id": "reproductive-health",
+      "title": "Reproductive Health",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "batches": 4,
+      "status": "completed",
+      "answerDistribution": {
+        "A": 128,
+        "B": 124,
+        "C": 124,
+        "D": 124
+      }
+    },
+    {
+      "id": "principles-of-inheritance",
+      "title": "Principles of Inheritance and Variation",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "batches": 4,
+      "status": "completed",
+      "answerDistribution": {
+        "A": 128,
+        "B": 124,
+        "C": 124,
+        "D": 124
+      }
+    },
+    {
+      "id": "molecular-basis-inheritance",
+      "title": "Molecular Basis of Inheritance",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "batches": 4,
+      "status": "completed",
+      "answerDistribution": {
+        "A": 128,
+        "B": 124,
+        "C": 124,
+        "D": 124
+      }
+    },
+    {
+      "id": "evolution",
+      "title": "Evolution",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "batches": 4,
+      "status": "completed",
+      "answerDistribution": {
+        "A": 128,
+        "B": 124,
+        "C": 124,
+        "D": 124
+      }
+    },
+    {
+      "id": "human-health-diseases",
+      "title": "Human Health and Diseases",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "batches": 4,
+      "status": "completed",
+      "answerDistribution": {
+        "A": 128,
+        "B": 124,
+        "C": 124,
+        "D": 124
+      }
+    },
+    {
+      "id": "microbes-human-welfare",
+      "title": "Microbes in Human Welfare",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "batches": 4,
+      "status": "completed",
+      "answerDistribution": {
+        "A": 128,
+        "B": 124,
+        "C": 124,
+        "D": 124
+      }
+    },
+    {
+      "id": "biotech-principles",
+      "title": "Biotechnology: Principles and Processes",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "batches": 4,
+      "status": "completed",
+      "answerDistribution": {
+        "A": 128,
+        "B": 124,
+        "C": 124,
+        "D": 124
+      }
+    },
+    {
+      "id": "biotech-applications",
+      "title": "Biotechnology and Its Applications",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "batches": 4,
+      "status": "completed",
+      "answerDistribution": {
+        "A": 128,
+        "B": 124,
+        "C": 124,
+        "D": 124
+      }
+    },
+    {
+      "id": "organism-populations",
+      "title": "Organisms and Populations",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "batches": 4,
+      "status": "completed",
+      "answerDistribution": {
+        "A": 128,
+        "B": 124,
+        "C": 124,
+        "D": 124
+      }
+    },
+    {
+      "id": "ecosystem",
+      "title": "Ecosystem",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "batches": 4,
+      "status": "completed",
+      "answerDistribution": {
+        "A": 128,
+        "B": 124,
+        "C": 124,
+        "D": 124
+      }
+    },
+    {
+      "id": "biodiversity-conservation",
+      "title": "Biodiversity and Conservation",
+      "totalQuestions": 500,
+      "easy": 125,
+      "medium": 250,
+      "hard": 125,
+      "batches": 4,
+      "status": "completed",
+      "answerDistribution": {
+        "A": 128,
+        "B": 124,
+        "C": 124,
+        "D": 124
+      }
     }
   ],
-  "totalCompletedQuestions": 9500,
+  "totalCompletedQuestions": 16000,
   "status": "completed",
-  "lastUpdated": "2026-10-21T17:50:00Z"
+  "lastUpdated": "2026-10-24T08:45:00Z"
 }

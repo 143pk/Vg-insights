@@ -38,8 +38,8 @@ export function renderBrandLogo(options: BrandLogoOptions = {}): string {
     // Standard medium
     md: 'h-7 sm:h-8.5 md:h-9.5 lg:h-10 w-auto max-w-[170px] sm:max-w-[210px] md:max-w-[250px] lg:max-w-[280px]',
 
-    // TOP NAVIGATION & HEADER: The DOMINANT brand identity (occupying primary visual space: ~50-54px height on mobile, ~58-66px on desktop). Crisp, vector-rendered, immediate readability.
-    header: 'h-[46px] xs:h-[50px] sm:h-[54px] md:h-[58px] lg:h-[62px] xl:h-[66px] w-auto max-w-[210px] xs:max-w-[240px] sm:max-w-[280px] md:max-w-[320px] lg:max-w-[360px] xl:max-w-[400px]',
+    // TOP NAVIGATION & HEADER: Crisp, perfectly proportioned vector brand presence (~32-40px height, max-w-[140-195px]) leaving ample room for navigation & controls without collision.
+    header: 'h-8 xs:h-8.5 sm:h-9 md:h-9.5 lg:h-10 w-auto max-w-[140px] xs:max-w-[155px] sm:max-w-[170px] md:max-w-[185px] lg:max-w-[195px]',
     
     // Large (e.g. dashboard summary headers, section highlights)
     lg: 'h-10 sm:h-12 md:h-14 lg:h-16 w-auto max-w-[260px] sm:max-w-[320px] md:max-w-[380px] lg:max-w-[420px]',

@@ -689,28 +689,40 @@ html, body {
   box-sizing: border-box;
 }
 
-#root, main, article, section, header, nav, footer {
+#root {
   width: 100%;
   max-width: 100%;
-  min-width: 0;
+  min-height: 100vh;
   box-sizing: border-box;
 }
 
-/* Flex & Grid containers must allow children to shrink below content size */
-.flex, .inline-flex, .grid, [class*="grid-"], [class*="flex-"] {
-  min-width: 0;
+main, article, section, header, nav, footer {
+  box-sizing: border-box;
 }
 
-/* Prevent accidental text and formula overflows */
-p, h1, h2, h3, h4, h5, h6, li, span, button, td, th {
+/* Explicit min-w-0 for flex/grid containers that intentionally truncate */
+.min-w-0 {
+  min-width: 0 !important;
+}
+
+/* Prevent accidental text and formula overflows in long prose and table cells */
+p, h1, h2, h3, h4, h5, h6, li, td, th {
   overflow-wrap: break-word;
   word-break: break-word;
 }
 
-/* Ensure whitespace-nowrap cells stay inside scrolling wrappers */
+/* Interactive controls, buttons, navigation links, and badges must never break words */
+button, .btn, [role="button"], input, select, textarea,
+nav a, header a, header button, .badge, .tag, .price-amount {
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+/* Ensure whitespace-nowrap elements strictly stay on a single line */
 .whitespace-nowrap {
   white-space: nowrap !important;
   word-break: normal !important;
+  overflow-wrap: normal !important;
 }
 
 /* Responsive SVG scaling */

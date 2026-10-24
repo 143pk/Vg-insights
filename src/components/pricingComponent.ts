@@ -9,7 +9,7 @@ export class PricingComponent {
     const plans = Object.values(PAYMENT_PLANS);
 
     return `
-      <div id="pricing-page-root" class="max-w-6xl mx-auto space-y-10 pb-20">
+      <div id="pricing-page-root" class="w-full max-w-7xl mx-auto space-y-10 pb-20 px-1 sm:px-3">
         <!-- Hero Header -->
         <div class="text-center space-y-4 max-w-3xl mx-auto pt-4">
           <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800 text-blue-700 dark:text-blue-300 text-xs font-black uppercase tracking-wider">
@@ -91,8 +91,8 @@ export class PricingComponent {
           </div>
         ` : ''}
 
-        <!-- 4 Plans Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+        <!-- 4 Plans Grid: 1 col on mobile, 2 cols on tablet & medium desktop, 4 cols on wide desktop -->
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 xl:gap-6 items-stretch">
           ${plans.map(plan => {
             const isSubscription = plan.billingType === 'subscription';
             const isPopular = plan.tag === 'MOST POPULAR';
@@ -110,8 +110,8 @@ export class PricingComponent {
               }">
                 <!-- Top Badge -->
                 ${plan.tag ? `
-                  <div class="absolute -top-3.5 left-1/2 -translate-x-1/2">
-                    <span class="px-3.5 py-1 rounded-full text-[10px] font-black uppercase tracking-wider text-white shadow-md ${
+                  <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap">
+                    <span class="px-3.5 py-1 rounded-full text-[10px] font-black uppercase tracking-wider text-white shadow-md whitespace-nowrap ${
                       isBestValue ? 'bg-indigo-600' : isPopular ? 'bg-blue-600' : 'bg-sky-600'
                     }">
                       ${plan.tag}
@@ -119,14 +119,14 @@ export class PricingComponent {
                   </div>
                 ` : ''}
 
-                <div class="p-6 sm:p-7 space-y-6">
+                <div class="p-5 sm:p-6 space-y-5 flex-1 flex flex-col justify-between">
                   <!-- Duration & Title -->
-                  <div class="space-y-1">
-                    <div class="flex items-center justify-between">
-                      <span class="text-xs font-black uppercase tracking-wider text-blue-600 dark:text-blue-400">
+                  <div class="space-y-1.5">
+                    <div class="flex items-center justify-between gap-2 flex-wrap">
+                      <span class="text-xs font-black uppercase tracking-wider text-blue-600 dark:text-blue-400 whitespace-nowrap shrink-0">
                         ${plan.durationLabel}
                       </span>
-                      <span class="text-[11px] font-bold px-2 py-0.5 rounded-full ${
+                      <span class="text-[11px] font-bold px-2 py-0.5 rounded-full whitespace-nowrap shrink-0 ${
                         isSubscription 
                           ? 'bg-sky-50 dark:bg-sky-950/60 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800'
                           : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400'
@@ -134,48 +134,48 @@ export class PricingComponent {
                         ${isSubscription ? 'Monthly AutoPay' : 'One-Time Payment'}
                       </span>
                     </div>
-                    <h3 class="text-xl font-black text-slate-900 dark:text-white">
+                    <h3 class="text-xl font-black text-slate-900 dark:text-white tracking-tight">
                       ${plan.name}
                     </h3>
-                    <p class="text-xs text-slate-500 dark:text-slate-400 min-h-[32px]">
+                    <p class="text-xs text-slate-500 dark:text-slate-400 min-h-[32px] leading-relaxed">
                       ${plan.description}
                     </p>
                   </div>
 
                   <!-- Price & Savings Section -->
-                  <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800/80 space-y-1.5">
-                    <div class="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
-                      <span class="whitespace-nowrap text-3xl sm:text-4xl font-black text-slate-900 dark:text-white">
+                  <div class="p-3.5 sm:p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800/80 space-y-2">
+                    <div class="flex items-baseline gap-2 flex-nowrap">
+                      <span class="whitespace-nowrap text-3xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight shrink-0">
                         ₹${plan.priceInr}
                       </span>
                       ${isSubscription ? `
-                        <span class="whitespace-nowrap text-xs font-bold text-slate-500 dark:text-slate-400">/ month</span>
+                        <span class="whitespace-nowrap text-xs font-bold text-slate-500 dark:text-slate-400 shrink-0">/ month</span>
                       ` : `
-                        <span class="whitespace-nowrap text-sm font-semibold line-through text-slate-400">
+                        <span class="whitespace-nowrap text-sm font-semibold line-through text-slate-400 shrink-0">
                           ₹${plan.originalPriceInr}
                         </span>
                       `}
                     </div>
-                    <div class="flex flex-wrap items-center justify-between gap-1 text-xs">
-                      <span class="whitespace-nowrap font-bold text-slate-700 dark:text-slate-300">
-                        ${isSubscription ? 'Billed monthly' : `₹${plan.pricePerMonthInr}/month`}
+                    <div class="flex items-center justify-between gap-1.5 text-xs flex-wrap">
+                      <span class="whitespace-nowrap font-bold text-slate-700 dark:text-slate-300 shrink-0 text-[11px] sm:text-xs">
+                        ${isSubscription ? 'Billed monthly' : `₹${plan.pricePerMonthInr}/mo`}
                       </span>
-                      <span class="whitespace-nowrap font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-2 py-0.5 rounded-md">
+                      <span class="whitespace-nowrap font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-2 py-0.5 rounded-md text-[11px] shrink-0">
                         Save ${plan.savingsPercent}% (₹${plan.savingsInr})
                       </span>
                     </div>
                   </div>
 
                   <!-- Feature List -->
-                  <div class="space-y-3 text-xs text-slate-700 dark:text-slate-300">
+                  <div class="space-y-2.5 text-xs text-slate-700 dark:text-slate-300">
                     <p class="font-bold uppercase tracking-wider text-[10px] text-slate-400">Included In This Plan:</p>
-                    <ul class="space-y-2.5">
+                    <ul class="space-y-2">
                       ${plan.features.map(f => `
                         <li class="flex items-start gap-2">
                           <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
                           </svg>
-                          <span class="leading-tight">${f}</span>
+                          <span class="leading-snug">${f}</span>
                         </li>
                       `).join('')}
                     </ul>
@@ -183,11 +183,11 @@ export class PricingComponent {
                 </div>
 
                 <!-- CTA Button -->
-                <div class="p-6 pt-0 mt-auto">
+                <div class="p-5 sm:p-6 pt-0 mt-4">
                   <button
                     type="button"
                     data-plan-id="${plan.id}"
-                    class="btn-checkout-plan w-full py-3.5 px-4 rounded-2xl text-xs sm:text-sm font-bold transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer ${
+                    class="btn-checkout-plan w-full py-3 px-3.5 rounded-2xl text-xs sm:text-sm font-bold transition-all shadow-md flex items-center justify-center gap-1.5 cursor-pointer whitespace-nowrap select-none ${
                       isBestValue
                         ? 'bg-indigo-600 hover:bg-indigo-700 text-white shadow-indigo-600/25 hover:shadow-indigo-600/35'
                         : isPopular
@@ -197,10 +197,10 @@ export class PricingComponent {
                         : 'bg-slate-900 dark:bg-white hover:bg-slate-800 dark:hover:bg-slate-100 text-white dark:text-slate-900'
                     }"
                   >
-                    <span>${isSubscription ? `Subscribe ₹${plan.priceInr}/mo with AutoPay` : `Pay ₹${plan.priceInr} with Razorpay`}</span>
-                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    <span class="whitespace-nowrap">${isSubscription ? `Subscribe ₹${plan.priceInr}/mo` : `Pay ₹${plan.priceInr} with Razorpay`}</span>
+                    <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                   </button>
-                  <p class="text-[10px] text-center text-slate-400 mt-2">
+                  <p class="text-[10px] text-center text-slate-400 mt-2 whitespace-nowrap overflow-hidden text-ellipsis">
                     ${isSubscription ? 'UPI AutoPay • Cards Mandate • Cancel Anytime' : 'One-Time Payment • Strictly No Auto-Renewal'}
                   </p>
                 </div>

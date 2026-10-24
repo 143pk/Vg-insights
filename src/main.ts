@@ -352,7 +352,7 @@ class App {
       
       <!-- Primary App Grid with Sidebar + Main Content -->
       <div class="flex w-full min-h-[calc(100vh-8rem)]">
-        <div id="sidebar-container"></div>
+        <div id="sidebar-container" class="hidden lg:block shrink-0 w-60 xl:w-64 border-r border-slate-200/90 dark:border-slate-800 bg-white dark:bg-slate-900 sticky top-16 sm:top-[68px] h-[calc(100vh-4rem)] sm:h-[calc(100vh-68px)] self-start z-30"></div>
         <main id="app-content" class="flex-1 w-full max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-6 min-w-0 overflow-x-hidden"></main>
       </div>
 
@@ -429,7 +429,9 @@ class App {
       // Hide sidebar during full-screen active mock test for distraction-free focus
       if (routeState.type === 'weekly-mock-test') {
         sidebarContainer.innerHTML = '';
+        sidebarContainer.classList.add('!hidden');
       } else {
+        sidebarContainer.classList.remove('!hidden');
         sidebarContainer.innerHTML = renderSidebar(currentHash);
         this.attachSidebarEvents();
       }

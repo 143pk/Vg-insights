@@ -1143,6 +1143,162 @@ export const CHAPTER_STATS_REGISTRY: Record<string, ChapterwiseStats> = {
     pyqCount: 0,
     practiceCount: 500,
   },
+  'sexual-repro-flowering-plants': {
+    chapterId: 'sexual-repro-flowering-plants',
+    chapterTitle: 'Sexual Reproduction in Flowering Plants',
+    subject: 'Biology',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 0,
+    practiceCount: 500,
+  },
+  'human-reproduction': {
+    chapterId: 'human-reproduction',
+    chapterTitle: 'Human Reproduction',
+    subject: 'Biology',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 0,
+    practiceCount: 500,
+  },
+  'reproductive-health': {
+    chapterId: 'reproductive-health',
+    chapterTitle: 'Reproductive Health',
+    subject: 'Biology',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 0,
+    practiceCount: 500,
+  },
+  'principles-of-inheritance': {
+    chapterId: 'principles-of-inheritance',
+    chapterTitle: 'Principles of Inheritance and Variation',
+    subject: 'Biology',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 0,
+    practiceCount: 500,
+  },
+  'molecular-basis-inheritance': {
+    chapterId: 'molecular-basis-inheritance',
+    chapterTitle: 'Molecular Basis of Inheritance',
+    subject: 'Biology',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 0,
+    practiceCount: 500,
+  },
+  'evolution': {
+    chapterId: 'evolution',
+    chapterTitle: 'Evolution',
+    subject: 'Biology',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 0,
+    practiceCount: 500,
+  },
+  'human-health-diseases': {
+    chapterId: 'human-health-diseases',
+    chapterTitle: 'Human Health and Diseases',
+    subject: 'Biology',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 0,
+    practiceCount: 500,
+  },
+  'microbes-human-welfare': {
+    chapterId: 'microbes-human-welfare',
+    chapterTitle: 'Microbes in Human Welfare',
+    subject: 'Biology',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 0,
+    practiceCount: 500,
+  },
+  'biotech-principles': {
+    chapterId: 'biotech-principles',
+    chapterTitle: 'Biotechnology: Principles and Processes',
+    subject: 'Biology',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 0,
+    practiceCount: 500,
+  },
+  'biotech-applications': {
+    chapterId: 'biotech-applications',
+    chapterTitle: 'Biotechnology and Its Applications',
+    subject: 'Biology',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 0,
+    practiceCount: 500,
+  },
+  'organism-populations': {
+    chapterId: 'organism-populations',
+    chapterTitle: 'Organisms and Populations',
+    subject: 'Biology',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 0,
+    practiceCount: 500,
+  },
+  'ecosystem': {
+    chapterId: 'ecosystem',
+    chapterTitle: 'Ecosystem',
+    subject: 'Biology',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 0,
+    practiceCount: 500,
+  },
+  'biodiversity-conservation': {
+    chapterId: 'biodiversity-conservation',
+    chapterTitle: 'Biodiversity and Conservation',
+    subject: 'Biology',
+    class: '12',
+    totalQuestions: 500,
+    easyCount: 125,
+    mediumCount: 250,
+    hardCount: 125,
+    pyqCount: 0,
+    practiceCount: 500,
+  },
 };
 
 // In-memory cache for loaded chapter datasets
@@ -1431,9 +1587,74 @@ export const CHAPTER_LOADERS: Record<string, () => Promise<ChapterwiseMCQ[]>> = 
     const mod = await import('../data/chapterwise/biology/chemicalCoordinationIntegrationData');
     return mod.CHEMICAL_COORDINATION_INTEGRATION_MCQS;
   },
+  'sexual-repro-flowering-plants': async () => {
+    const mod = await import('../data/chapterwise/biology/sexualReproductionFloweringPlantsData');
+    return mod.SEXUAL_REPRODUCTION_FLOWERING_PLANTS_MCQS;
+  },
+  'human-reproduction': async () => {
+    const mod = await import('../data/chapterwise/biology/humanReproductionData');
+    return mod.HUMAN_REPRODUCTION_MCQS;
+  },
+  'reproductive-health': async () => {
+    const mod = await import('../data/chapterwise/biology/reproductiveHealthData');
+    return mod.REPRODUCTIVE_HEALTH_MCQS;
+  },
+  'principles-of-inheritance': async () => {
+    const mod = await import('../data/chapterwise/biology/principlesInheritanceData');
+    return mod.PRINCIPLES_INHERITANCE_MCQS;
+  },
+  'molecular-basis-inheritance': async () => {
+    const mod = await import('../data/chapterwise/biology/molecularBasisInheritanceData');
+    return mod.MOLECULAR_BASIS_INHERITANCE_MCQS;
+  },
+  'evolution': async () => {
+    const mod = await import('../data/chapterwise/biology/evolutionData');
+    return mod.EVOLUTION_MCQS;
+  },
+  'human-health-diseases': async () => {
+    const mod = await import('../data/chapterwise/biology/humanHealthDiseasesData');
+    return mod.HUMAN_HEALTH_DISEASES_MCQS;
+  },
+  'microbes-human-welfare': async () => {
+    const mod = await import('../data/chapterwise/biology/microbesHumanWelfareData');
+    return mod.MICROBES_HUMAN_WELFARE_MCQS;
+  },
+  'biotech-principles': async () => {
+    const mod = await import('../data/chapterwise/biology/biotechPrinciplesData');
+    return mod.BIOTECH_PRINCIPLES_MCQS;
+  },
+  'biotech-applications': async () => {
+    const mod = await import('../data/chapterwise/biology/biotechApplicationsData');
+    return mod.BIOTECH_APPLICATIONS_MCQS;
+  },
+  'organism-populations': async () => {
+    const mod = await import('../data/chapterwise/biology/organismPopulationsData');
+    return mod.ORGANISM_POPULATIONS_MCQS;
+  },
+  'ecosystem': async () => {
+    const mod = await import('../data/chapterwise/biology/ecosystemData');
+    return mod.ECOSYSTEM_MCQS;
+  },
+  'biodiversity-conservation': async () => {
+    const mod = await import('../data/chapterwise/biology/biodiversityConservationData');
+    return mod.BIODIVERSITY_CONSERVATION_MCQS;
+  },
 };
 
 function normalizeChapterId(id: string): string {
+  if (id === 'sexual-repro-flowering-plants' || id === 'sexual_reproduction_in_flowering_plants' || id === 'sexual-reproduction-in-flowering-plants' || id === 'sexual-reproduction-flowering-plants' || id === 'sexual-repro-plants' || id === 'sexual-repro-flowering-plants-12') return 'sexual-repro-flowering-plants';
+  if (id === 'human-reproduction' || id === 'human_reproduction' || id === 'human-repro' || id === 'human-reproduction-12') return 'human-reproduction';
+  if (id === 'reproductive-health' || id === 'reproductive_health' || id === 'repro-health' || id === 'reproductive-health-12') return 'reproductive-health';
+  if (id === 'principles-of-inheritance' || id === 'principles_of_inheritance' || id === 'principles-of-inheritance-and-variation' || id === 'principles_of_inheritance_and_variation' || id === 'genetics-inheritance' || id === 'principles-of-inheritance-12') return 'principles-of-inheritance';
+  if (id === 'molecular-basis-inheritance' || id === 'molecular_basis_of_inheritance' || id === 'molecular-basis-of-inheritance' || id === 'molecular-basis-inheritance-12' || id === 'molecular-genetics') return 'molecular-basis-inheritance';
+  if (id === 'evolution' || id === 'evolution-12' || id === 'evolution_12' || id === 'origin-and-evolution') return 'evolution';
+  if (id === 'human-health-diseases' || id === 'human_health_and_diseases' || id === 'human-health-and-diseases' || id === 'human-health-and-disease' || id === 'human-health-diseases-12' || id === 'human-health') return 'human-health-diseases';
+  if (id === 'microbes-human-welfare' || id === 'microbes_in_human_welfare' || id === 'microbes-in-human-welfare' || id === 'microbes-human-welfare-12' || id === 'microbes') return 'microbes-human-welfare';
+  if (id === 'biotech-principles' || id === 'biotechnology_principles_and_processes' || id === 'biotechnology-principles-and-processes' || id === 'biotech-principles-and-processes' || id === 'biotech-principles-12') return 'biotech-principles';
+  if (id === 'biotech-applications' || id === 'biotechnology_and_its_applications' || id === 'biotechnology-and-its-applications' || id === 'biotech-applications-12' || id === 'biotechnology-applications') return 'biotech-applications';
+  if (id === 'organism-populations' || id === 'organisms_and_populations' || id === 'organisms-and-populations' || id === 'organism-populations-12' || id === 'ecology-populations') return 'organism-populations';
+  if (id === 'ecosystem' || id === 'ecosystems' || id === 'ecosystem-12' || id === 'ecology-ecosystem') return 'ecosystem';
+  if (id === 'biodiversity-conservation' || id === 'biodiversity_and_conservation' || id === 'biodiversity-and-conservation' || id === 'biodiversity-conservation-12' || id === 'biodiversity') return 'biodiversity-conservation';
   if (id === 'breathing-exchange-gases' || id === 'breathing_exchange_gases' || id === 'breathing-and-exchange-of-gases' || id === 'breathing_and_exchange_of_gases' || id === 'breathing-exchange-of-gases' || id === 'respiration-breathing' || id === 'breathing-exchange-gases-11') return 'breathing-exchange-gases';
   if (id === 'body-fluids-circulation' || id === 'body_fluids_circulation' || id === 'body-fluids-and-circulation' || id === 'body_fluids_and_circulation' || id === 'circulation' || id === 'body-fluids' || id === 'body-fluids-circulation-11') return 'body-fluids-circulation';
   if (id === 'excretory-products' || id === 'excretory_products' || id === 'excretory-products-and-their-elimination' || id === 'excretory_products_and_their_elimination' || id === 'excretory-products-elimination' || id === 'excretion' || id === 'excretory-products-11') return 'excretory-products';
