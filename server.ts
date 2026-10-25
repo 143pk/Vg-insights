@@ -16,6 +16,8 @@ import verifyPaymentHandler from './api/payment/verify';
 import webhookHandler from './api/payment/webhook';
 import paymentStatusHandler from './api/payment/status';
 
+import compression from 'compression';
+
 // Prevent dev server process from dying on unexpected errors
 process.on('uncaughtException', (err) => {
   console.error('[Process Uncaught Exception]:', err);
@@ -26,6 +28,12 @@ process.on('unhandledRejection', (reason) => {
 
 async function startServer() {
   const app = express();
+  // Enable high-performance gzip compression to reduce network transfer time on mobile Meta ad visits
+  app.use(compression({
+    threshold: 512,
+    level: 6
+  }));
+
   // Dev server must strictly run on port 3000 as required by AI Studio runtime environment
   const PORT = 3000;
 

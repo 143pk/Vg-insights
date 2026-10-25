@@ -194,10 +194,11 @@
       ]
     }
     </script>
-    <!-- Google Fonts: Plus Jakarta Sans (Display) & Inter (Body) -->
+    <!-- Google Fonts: Plus Jakarta Sans (Display) & Inter (Body) with non-blocking display=swap -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet"></noscript>
     
     <!-- Theme Pre-Initializer & Safe Polyfills Script -->
     <script>
@@ -226,7 +227,7 @@
     <!-- Razorpay Checkout SDK for Fast Secure UPI, Cards, NetBanking (Deferred to prevent render blocking) -->
     <script defer src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
-    <!-- Meta Pixel Code -->
+    <!-- Meta Pixel Code (Immediate Priority Execution for Ad Landing Page Views) -->
     <script>
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -248,28 +249,67 @@
       alt=""
     /></noscript>
     <div id="root" class="min-h-screen flex flex-col">
-      <!-- Instant Zero-Latency Initial Render Shell (Replaced immediately on App Mount) -->
-      <div id="app-initial-loader" class="min-h-screen flex flex-col items-center justify-center p-6 bg-[#FFFFFF] dark:bg-[#0B1120] text-slate-900 dark:text-slate-100 transition-opacity duration-300">
-        <div class="flex flex-col items-center max-w-sm text-center">
-          <div class="relative w-16 h-16 sm:w-20 sm:h-20 mb-5 flex items-center justify-center">
-            <div class="absolute inset-0 rounded-2xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-sky-400 animate-pulse blur-md opacity-40"></div>
-            <div class="relative w-full h-full rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center shadow-lg shadow-blue-500/25 border border-white/20">
-              <span class="text-white font-black text-2xl tracking-tighter">VG</span>
+      <!-- Instant Zero-Latency Initial Render Shell: Pre-rendered Landing View for Meta Ads -->
+      <div id="app-initial-shell" class="min-h-screen bg-[#FFFFFF] dark:bg-[#0B1120] text-[#0F172A] dark:text-[#F8FAFC] font-sans flex flex-col">
+        <!-- Floating Header -->
+        <div class="sticky top-3.5 z-40 w-full px-2.5 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+          <header class="w-full bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 rounded-2xl shadow-sm px-4 sm:px-6 h-[72px] sm:h-[80px] flex items-center justify-between">
+            <a href="#landing" class="flex items-center shrink-0">
+              <img src="/vg-insights-logo-light.svg" class="brand-logo-light h-8 sm:h-9 w-auto aspect-[920/270] object-contain" alt="VG Insights" />
+              <img src="/vg-insights-logo-dark.svg" class="brand-logo-dark h-8 sm:h-9 w-auto aspect-[920/270] object-contain" alt="VG Insights" />
+            </a>
+            <div class="flex items-center gap-2">
+              <a href="#home" class="px-3 sm:px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 text-xs font-semibold hover:bg-slate-200 dark:hover:bg-slate-700 transition">
+                Browse Library
+              </a>
+              <button onclick="window.openAuthModal ? window.openAuthModal() : (window.location.hash='#login')" class="px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs sm:text-sm font-bold shadow-md shadow-blue-500/20 transition flex items-center gap-1.5 cursor-pointer">
+                <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24"><path fill="#ffffff" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                <span>Sign In</span>
+              </button>
+            </div>
+          </header>
+        </div>
+
+        <!-- Hero Section: Instant Visual Presentation (<100ms FCP) -->
+        <section class="relative pt-6 pb-12 sm:pt-10 sm:pb-20 overflow-hidden flex-1 flex flex-col items-center justify-center text-center px-4">
+          <div class="max-w-4xl mx-auto space-y-4">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200/80 dark:border-blue-800 text-blue-700 dark:text-blue-300 text-xs font-bold uppercase tracking-wider">
+              <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+              India's Premier NEET UG Study Portal
+            </div>
+
+            <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#0F172A] dark:text-white leading-[1.08]">
+              Your NEET Preparation.<br />
+              <span class="text-blue-600 bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent">Reimagined.</span>
+            </h1>
+
+            <p class="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed">
+              Learn concepts. Practice questions. Master your weaknesses with AI-guided diagnostics and 10+ years of chapterwise NEET PYQs.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-3">
+              <button onclick="window.openAuthModal ? window.openAuthModal() : (window.location.hash='#login')" class="w-full sm:w-auto px-6 py-3.5 rounded-2xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm shadow-lg shadow-blue-500/25 active:scale-98 transition flex items-center justify-center gap-2 cursor-pointer">
+                <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24"><path fill="#ffffff" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                <span>Get Started Free — Sign In</span>
+              </button>
+
+              <a href="#home" class="w-full sm:w-auto px-6 py-3.5 rounded-2xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-semibold text-sm transition text-center">
+                Explore Notes & PYQs →
+              </a>
+            </div>
+
+            <!-- Trust Highlights -->
+            <div class="pt-6 flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs font-semibold text-slate-500 dark:text-slate-400">
+              <span class="flex items-center gap-1.5">⚡ <span>10+ Years Chapterwise PYQs</span></span>
+              <span class="hidden sm:inline">•</span>
+              <span class="flex items-center gap-1.5">🩺 <span>AI Weakness Doctor</span></span>
+              <span class="hidden sm:inline">•</span>
+              <span class="flex items-center gap-1.5">📝 <span>720 Full Length Mocks</span></span>
+              <span class="hidden sm:inline">•</span>
+              <span class="flex items-center gap-1.5">🎯 <span>100% NCERT Aligned</span></span>
             </div>
           </div>
-          <h1 class="text-lg sm:text-xl font-bold tracking-tight text-slate-900 dark:text-white mb-2">
-            VG Insights
-          </h1>
-          <p id="app-loader-text" class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-6 font-medium">
-            Loading NEET Preparation Workspace...
-          </p>
-          <div class="w-36 h-1.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden mb-4">
-            <div class="h-full bg-blue-600 rounded-full animate-[pulse_1s_ease-in-out_infinite] w-full"></div>
-          </div>
-          <button id="app-loader-action" onclick="window.location.hash='#landing'; window.location.reload();" class="hidden text-xs text-blue-600 dark:text-blue-400 font-semibold underline mt-2 py-1 px-3">
-            Tap here if loading takes longer than 3s
-          </button>
-        </div>
+        </section>
       </div>
     </div>
     <script>

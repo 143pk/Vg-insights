@@ -2,7 +2,7 @@ import { SUBJECTS, TOPICS } from '../data/neetData';
 import { renderBrandLogo } from './brandLogoComponent';
 import { StorageService } from '../services/storageService';
 import { AuthService } from '../services/authService';
-import { renderFormulaHTML, renderInlineMathHTML, renderMath } from '../utils/mathRenderer';
+import { renderFormulaHTML, renderInlineMathHTML } from '../utils/mathRenderer';
 
 export function renderLandingPage(): string {
   const totalTopics = TOPICS.length || 277;
@@ -1212,12 +1212,8 @@ export function initLandingPageEvents(onOpenAuthModal: () => void): void {
     console.warn('[LandingPage] Scroll parallax error:', e);
   }
 
-  // 6. Render KaTeX Formulas across targets
-  try {
-    renderAllKaTeXFormulas();
-  } catch (e) {
-    console.warn('[LandingPage] KaTeX render error:', e);
-  }
+  // 6. KaTeX formulas are already pre-rendered as HTML strings (nernstEq, gibbsEq, coulombEq, etc.)
+  // for instant zero-blocking render without expensive document.body DOM traversals.
 }
 
 /**
@@ -1330,8 +1326,4 @@ function animateCountUp(element: HTMLElement, target: number, suffix: string): v
   }
 
   requestAnimationFrame(update);
-}
-
-function renderAllKaTeXFormulas(): void {
-  renderMath(document.body);
 }

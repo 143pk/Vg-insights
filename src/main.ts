@@ -137,13 +137,16 @@ class App {
       });
     }
 
-    // 8. Idle prefetch for instant chapter access
+    // 8. Idle prefetch for instant chapter access (only inside app for logged-in students)
     if (typeof window !== 'undefined') {
       setTimeout(() => {
         try {
-          ChapterwiseMcqService.loadChapterQuestions('units-measurements');
+          const currentHash = window.location.hash;
+          if (AuthService.isAuthenticated() && currentHash && currentHash !== '#landing' && currentHash !== '#login') {
+            ChapterwiseMcqService.loadChapterQuestions('units-measurements');
+          }
         } catch {}
-      }, 1500);
+      }, 3500);
     }
 
     // 9. Initialize Meta Pixel Tracking & Advanced Matching
