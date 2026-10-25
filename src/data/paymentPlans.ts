@@ -17,6 +17,16 @@ export interface PaymentPlan {
   features: string[];
 }
 
+export const SHARED_PRO_FEATURES: string[] = [
+  'Available NEET UG Previous Year Questions (PYQs)',
+  'All Available Chapterwise MCQ Banks Across Physics, Chemistry, Botany & Zoology',
+  'Detailed, Step-by-Step NCERT Explanations with Properly Formatted Equations and Formulas',
+  'Weekly NEET-Pattern Mock Tests',
+  'AI Weakness Doctor Diagnostic Engine',
+  'Mistake Book with Error Tracking & Analytics',
+  'NCERT Formulas, High-Yield Revision Notes & Study Resources'
+];
+
 export const PAYMENT_PLANS: Record<string, PaymentPlan> = {
   'plan_1_month': {
     id: 'plan_1_month',
@@ -26,23 +36,15 @@ export const PAYMENT_PLANS: Record<string, PaymentPlan> = {
     durationMonths: 1,
     priceInr: 199,
     amountInPaise: 19900,
-    originalPriceInr: 299,
-    savingsPercent: 33,
-    savingsInr: 100,
+    originalPriceInr: 199,
+    savingsPercent: 0,
+    savingsInr: 0,
     pricePerMonthInr: 199,
     billingType: 'subscription',
     recurringPeriod: 'monthly',
     tag: 'MONTHLY AUTOPAY',
-    description: 'Continuous monthly preparation via UPI/Card AutoPay (cancel anytime)',
-    features: [
-      'Razorpay Subscription with Monthly AutoPay',
-      'Cancel subscription anytime with 1 click',
-      'All 10+ years NEET PYQs (2014–2026)',
-      'All 38 Chapterwise MCQ Banks & Solutions',
-      'All Weekly 720-Mark Simulation Mock Tests',
-      'Step-by-Step KaTeX NCERT Explanations',
-      'Automatic Mistake Book tracking'
-    ]
+    description: 'Recurring Razorpay AutoPay with 30 days continuous access (cancel anytime)',
+    features: [...SHARED_PRO_FEATURES]
   },
   'plan_3_months': {
     id: 'plan_3_months',
@@ -57,16 +59,8 @@ export const PAYMENT_PLANS: Record<string, PaymentPlan> = {
     savingsInr: 98,
     pricePerMonthInr: 166,
     billingType: 'one_time',
-    description: 'One-time payment for 90 days fixed access (no auto-renewal)',
-    features: [
-      'Fixed 90-Day Access (Strictly One-Time Payment)',
-      'No auto-renewal or recurring charges',
-      'All 10+ years NEET PYQs (2014–2026)',
-      'All 38 Chapterwise MCQ Banks & Solutions',
-      'All Weekly 720-Mark Simulation Mock Tests',
-      'Step-by-Step KaTeX NCERT Explanations',
-      'AI Weakness Doctor Diagnostic Profile'
-    ]
+    description: 'One-time payment for 90 days premium access (no automatic renewal)',
+    features: [...SHARED_PRO_FEATURES]
   },
   'plan_6_months': {
     id: 'plan_6_months',
@@ -82,17 +76,8 @@ export const PAYMENT_PLANS: Record<string, PaymentPlan> = {
     pricePerMonthInr: 150,
     billingType: 'one_time',
     tag: 'MOST POPULAR',
-    description: 'One-time payment for 180 days fixed access (no auto-renewal)',
-    features: [
-      'Fixed 180-Day Access (Strictly One-Time Payment)',
-      'No auto-renewal or recurring charges',
-      'All 10+ years NEET PYQs (2014–2026)',
-      'All 38 Chapterwise MCQ Banks & Solutions',
-      'All Weekly 720-Mark Simulation Mock Tests',
-      'Deep AI Weakness Diagnostics & Custom Drills',
-      'Step-by-Step KaTeX NCERT Explanations',
-      'Offline NCERT Formula & High-Yield Sheets'
-    ]
+    description: 'One-time payment for 180 days premium access (no automatic renewal)',
+    features: [...SHARED_PRO_FEATURES]
   },
   'plan_12_months': {
     id: 'plan_12_months',
@@ -108,16 +93,7 @@ export const PAYMENT_PLANS: Record<string, PaymentPlan> = {
     pricePerMonthInr: 125,
     billingType: 'one_time',
     tag: 'BEST VALUE',
-    description: 'One-time payment for 365 days full year access (no auto-renewal)',
-    features: [
-      'Full 1-Year Access (Strictly One-Time Payment)',
-      'No auto-renewal or recurring charges',
-      'All 10+ years NEET PYQs (2014–2026)',
-      'All 38 Chapterwise MCQ Banks & Solutions',
-      'All Weekly 720-Mark Simulation Mock Tests',
-      'Unlimited AI Weakness Doctor Batches',
-      'Step-by-Step KaTeX NCERT Explanations',
-      'Priority Doubt Support'
-    ]
+    description: 'One-time payment for 365 days full-year premium access (no automatic renewal)',
+    features: [...SHARED_PRO_FEATURES]
   }
 };

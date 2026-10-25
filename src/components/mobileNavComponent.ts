@@ -2,7 +2,7 @@ export function renderMobileBottomNav(currentPath: string = '#home'): string {
   const cleanPath = currentPath.split('/')[0] || '#home';
 
   const navItems = [
-    { label: 'Start Here', path: '#start-here', icon: '🌱', isActive: cleanPath === '#start-here' || cleanPath === '#roadmap' },
+    { label: 'Chapter MCQs', path: '#chapterwise-mcqs', icon: '📚', isActive: cleanPath === '#chapterwise-mcqs' },
     { label: 'Learn', path: '#home', icon: '📖', isActive: cleanPath === '#home' || cleanPath === '#' },
     { label: 'PYQs', path: '#pyqs', icon: '🏆', isActive: cleanPath === '#pyqs' },
     { label: 'Mock Test', path: '#weekly-mock', icon: '📝', isActive: cleanPath === '#weekly-mock' },
@@ -17,7 +17,7 @@ export function renderMobileBottomNav(currentPath: string = '#home'): string {
             href="${item.path}"
             class="flex flex-col items-center justify-center py-1 px-2 rounded-xl text-[10px] font-semibold transition-all ${
               item.isActive
-                ? 'text-emerald-600 dark:text-emerald-400 font-bold scale-105'
+                ? 'text-blue-600 dark:text-blue-400 font-bold scale-105'
                 : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'
             }"
           >

@@ -19,7 +19,7 @@ export class PricingComponent {
             Supercharge Your NEET Score with <span class="bg-gradient-to-r from-blue-600 via-indigo-600 to-sky-500 bg-clip-text text-transparent">VG Insights Pro</span>
           </h1>
           <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
-            Gain full access to 10+ years verified PYQs, all 38 chapterwise MCQ banks, weekly 720-mark simulated mocks, and AI-powered weakness diagnosis.
+            Gain full access to available NEET UG PYQs, all available chapterwise MCQ banks across Physics, Chemistry, Botany & Zoology, weekly simulated mocks, and AI Weakness Doctor diagnostics. Every plan includes 100% identical premium features.
           </p>
           <div class="flex flex-wrap items-center justify-center gap-4 text-xs font-semibold text-slate-600 dark:text-slate-300 pt-1">
             <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400">
@@ -28,7 +28,7 @@ export class PricingComponent {
             </span>
             <span class="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400">
               <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-              Fixed One-Time Multi-Month Passes
+              Fixed One-Time Multi-Month Passes (No Auto-Renewal)
             </span>
             <span class="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400">
               <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
@@ -36,7 +36,7 @@ export class PricingComponent {
             </span>
             <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400">
               <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-              100% Secure Razorpay Gateway
+              Secure Payments Powered by Razorpay
             </span>
           </div>
         </div>
@@ -90,6 +90,12 @@ export class PricingComponent {
             </div>
           </div>
         ` : ''}
+
+        <!-- Feature Consistency Notice -->
+        <div class="max-w-4xl mx-auto p-3.5 sm:p-4 rounded-2xl bg-blue-50/80 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-900/60 flex items-center justify-center gap-3 text-center text-xs text-blue-900 dark:text-blue-200">
+          <span class="text-base shrink-0">✨</span>
+          <span><strong>100% Equal Premium Features:</strong> All 4 plans provide identical access to all chapterwise question banks, PYQs, mock tests, and AI tools. Choose purely based on your duration and payment preference.</span>
+        </div>
 
         <!-- 4 Plans Grid: 1 col on mobile, 2 cols on tablet & medium desktop, 4 cols on wide desktop -->
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 xl:gap-6 items-stretch">
@@ -160,9 +166,15 @@ export class PricingComponent {
                       <span class="whitespace-nowrap font-bold text-slate-700 dark:text-slate-300 shrink-0 text-[11px] sm:text-xs">
                         ${isSubscription ? 'Billed monthly' : `₹${plan.pricePerMonthInr}/mo`}
                       </span>
-                      <span class="whitespace-nowrap font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-2 py-0.5 rounded-md text-[11px] shrink-0">
-                        Save ${plan.savingsPercent}% (₹${plan.savingsInr})
-                      </span>
+                      ${plan.savingsPercent > 0 ? `
+                        <span class="whitespace-nowrap font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-2 py-0.5 rounded-md text-[11px] shrink-0">
+                          Save ${plan.savingsPercent}% (₹${plan.savingsInr})
+                        </span>
+                      ` : `
+                        <span class="whitespace-nowrap font-medium text-slate-500 dark:text-slate-400 text-[11px] shrink-0">
+                          Cancel anytime
+                        </span>
+                      `}
                     </div>
                   </div>
 
@@ -216,7 +228,7 @@ export class PricingComponent {
               Plan Comparison: Free vs. Pro
             </h2>
             <p class="text-xs text-slate-500 dark:text-slate-400">
-              Clear academic breakdown of access levels
+              Clear academic breakdown of access levels (all 4 Pro plans provide 100% equal features)
             </p>
           </div>
 
@@ -226,66 +238,75 @@ export class PricingComponent {
                 <tr class="border-b border-slate-100 dark:border-slate-800 text-[11px] uppercase tracking-wider text-slate-400">
                   <th class="py-3 px-4 font-bold">Feature / Content</th>
                   <th class="py-3 px-4 font-bold text-center">Free Student Plan</th>
-                  <th class="py-3 px-4 font-bold text-center text-blue-600 dark:text-blue-400">VG Insights Pro</th>
+                  <th class="py-3 px-4 font-bold text-center text-blue-600 dark:text-blue-400">VG Insights Pro (All 4 Plans)</th>
                 </tr>
               </thead>
               <tbody class="divide-y divide-slate-100 dark:divide-slate-800 font-medium">
                 <tr>
                   <td class="py-3.5 px-4 font-semibold text-slate-800 dark:text-slate-200">
-                    NCERT Concepts, Formulas & Revision Notes
+                    NCERT Concepts, Formulas & High-Yield Learning Resources
                   </td>
                   <td class="py-3.5 px-4 text-center text-emerald-600 dark:text-emerald-400">✓ 100% Free Always</td>
                   <td class="py-3.5 px-4 text-center text-emerald-600 dark:text-emerald-400">✓ 100% Free Always</td>
                 </tr>
                 <tr>
                   <td class="py-3.5 px-4 font-semibold text-slate-800 dark:text-slate-200">
-                    NEET PYQ Archive (Years 2014–2026)
+                    Available NEET UG Previous Year Questions (PYQs)
                   </td>
                   <td class="py-3.5 px-4 text-center text-slate-500">
-                    <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Only 2026 (1 Year)</span>
+                    <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Sample Only</span>
                   </td>
                   <td class="py-3.5 px-4 text-center text-emerald-600 dark:text-emerald-400 font-bold">
-                    ✓ All 10+ Years (2014–2026)
+                    ✓ All Available PYQs Unlocked
                   </td>
                 </tr>
                 <tr>
                   <td class="py-3.5 px-4 font-semibold text-slate-800 dark:text-slate-200">
-                    Chapterwise 10,000+ MCQ Banks
+                    All Available Chapterwise MCQ Banks Across Physics, Chemistry, Botany & Zoology
                   </td>
                   <td class="py-3.5 px-4 text-center text-slate-500">
-                    <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">1st Chapter of Phy/Chem/Bio</span>
+                    <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">1st Chapter Sample</span>
                   </td>
                   <td class="py-3.5 px-4 text-center text-emerald-600 dark:text-emerald-400 font-bold">
-                    ✓ All 38 Chapters Unlocked
+                    ✓ All Available Chapter Banks
                   </td>
                 </tr>
                 <tr>
                   <td class="py-3.5 px-4 font-semibold text-slate-800 dark:text-slate-200">
-                    Weekly 720-Mark Simulation Mock Series
+                    Weekly NEET-Pattern Mock Tests
                   </td>
                   <td class="py-3.5 px-4 text-center text-rose-500 font-bold">
                     ✗ Locked
                   </td>
                   <td class="py-3.5 px-4 text-center text-emerald-600 dark:text-emerald-400 font-bold">
-                    ✓ All Weekly Mocks + AIR Predictor
+                    ✓ Available Weekly Simulation Series
                   </td>
                 </tr>
                 <tr>
                   <td class="py-3.5 px-4 font-semibold text-slate-800 dark:text-slate-200">
-                    AI Weakness Doctor & Diagnostic Engine
+                    AI Weakness Doctor Diagnostic Engine
                   </td>
                   <td class="py-3.5 px-4 text-center text-slate-500">Basic Scan</td>
                   <td class="py-3.5 px-4 text-center text-emerald-600 dark:text-emerald-400 font-bold">
-                    ✓ Unlimited AI Diagnostic Drills
+                    ✓ Comprehensive Diagnostic Analysis & Drills
                   </td>
                 </tr>
                 <tr>
                   <td class="py-3.5 px-4 font-semibold text-slate-800 dark:text-slate-200">
-                    Mistake Book Auto-Tracking & Explanations
+                    Detailed, Step-by-Step NCERT Explanations with Properly Formatted Equations and Formulas
                   </td>
-                  <td class="py-3.5 px-4 text-center text-slate-500">Standard</td>
+                  <td class="py-3.5 px-4 text-center text-slate-500">Basic Answer Key</td>
                   <td class="py-3.5 px-4 text-center text-emerald-600 dark:text-emerald-400 font-bold">
-                    ✓ Step-by-Step KaTeX Solutions
+                    ✓ Step-by-Step Formatted Explanations
+                  </td>
+                </tr>
+                <tr>
+                  <td class="py-3.5 px-4 font-semibold text-slate-800 dark:text-slate-200">
+                    Mistake Book with Error Tracking & Analytics
+                  </td>
+                  <td class="py-3.5 px-4 text-center text-slate-500">Limited</td>
+                  <td class="py-3.5 px-4 text-center text-emerald-600 dark:text-emerald-400 font-bold">
+                    ✓ Complete Tracking & Analytics
                   </td>
                 </tr>
               </tbody>
@@ -429,7 +450,7 @@ export class PricingComponent {
             Welcome to VG Insights Pro!
           </h2>
           <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-            Your <strong>${entitlement.planName || 'Pro Plan'}</strong> is now active. All 10+ years PYQs, 38 chapterwise MCQs, and weekly 720-mark mock tests are unlocked!
+            Your <strong>${entitlement.planName || 'Pro Plan'}</strong> is now active. Available NEET UG PYQs, all available chapterwise MCQ banks, weekly mock tests, and AI Weakness Doctor diagnostics are unlocked!
           </p>
         </div>
 
