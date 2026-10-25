@@ -917,9 +917,21 @@ export class WeaknessDoctorService {
   }
 
   /**
-   * Clears all weakness diagnostic history
+   * Clears all weakness diagnostic history back to zero
    */
   public static resetWeaknessData(): void {
     localStorage.removeItem(WEAKNESS_STORAGE_KEY);
+    if (typeof sessionStorage !== 'undefined') {
+      try {
+        const keysToRemove: string[] = [];
+        for (let i = 0; i < sessionStorage.length; i++) {
+          const key = sessionStorage.key(i);
+          if (key && key.startsWith('vg_neet_drill_')) {
+            keysToRemove.push(key);
+          }
+        }
+        keysToRemove.forEach(k => sessionStorage.removeItem(k));
+      } catch {}
+    }
   }
 }

@@ -37,18 +37,16 @@ export function renderWeaknessDashboard(activeSubjectFilter: string = 'all'): st
               </p>
             </div>
             
-            <div class="flex flex-wrap items-center gap-2 shrink-0">
-              <a href="#diagnostic-quiz" class="px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold shadow-sm transition-all flex items-center gap-2">
-                ⚡ 5-Min Diagnostic Quiz
-              </a>
-              <button id="btn-seed-sample-weakness" class="px-3.5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold border border-slate-200 dark:border-slate-700 transition-colors" title="Load sample diagnostic test attempts for demonstration">
-                🧪 Sample Benchmark
+            <div class="flex items-center gap-2 shrink-0">
+              <button
+                id="btn-reset-weakness-data"
+                type="button"
+                class="px-4 py-2.5 rounded-xl bg-rose-50 hover:bg-rose-100 dark:bg-rose-950/50 text-rose-700 dark:text-rose-300 text-xs font-bold border border-rose-200 dark:border-rose-800 shadow-sm transition-all flex items-center gap-1.5 cursor-pointer active:scale-95"
+                title="Reset all diagnosed weakness data back to zero"
+              >
+                <span>🔄</span>
+                <span>Reset</span>
               </button>
-              ${hasData ? `
-                <button id="btn-reset-weakness-data" class="px-3 py-2.5 rounded-xl bg-rose-50 hover:bg-rose-100 dark:bg-rose-950/50 text-rose-700 dark:text-rose-300 text-xs font-semibold border border-rose-200 dark:border-rose-800 transition-colors" title="Reset all test history">
-                  🔄 Reset
-                </button>
-              ` : ''}
             </div>
           </div>
 
@@ -101,26 +99,26 @@ export function renderWeaknessDashboard(activeSubjectFilter: string = 'all'): st
       </section>
 
       ${!hasData ? `
-        <!-- Edge Case: Insufficient Data State -->
+        <!-- Zero / Clean Diagnosed State -->
         <div class="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm text-center space-y-4">
-          <div class="w-16 h-16 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center font-bold text-3xl mx-auto">
-            📊
+          <div class="w-16 h-16 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 flex items-center justify-center font-bold text-3xl mx-auto">
+            🩺
           </div>
           <div class="space-y-1 max-w-md mx-auto">
             <h3 class="text-lg font-bold text-slate-900 dark:text-slate-100">
-              Not enough data yet.
+              No Weakness Diagnosed Yet
             </h3>
             <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-              Complete more questions in quizzes, chapter tests, or topic PYQs (minimum 3 questions per topic) to unlock accurate AI Weakness Doctor analysis.
+              Your weakness diagnostic profile is clean and at zero. Practice Chapter MCQs, PYQs, or take mock tests to diagnose weak areas and generate targeted drills.
             </p>
           </div>
           <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
-            <a href="#diagnostic-quiz" class="px-5 py-3 rounded-2xl bg-rose-600 hover:bg-rose-500 text-white font-bold text-sm shadow-lg shadow-rose-600/30 transition-all">
-              ⚡ Start 5-Min Diagnostic Quiz
+            <a href="#chapterwise-mcqs" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs shadow-md transition-all">
+              📚 Practice Chapter MCQs
             </a>
-            <button id="btn-seed-sample-weakness-empty" class="px-5 py-3 rounded-2xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-bold text-sm transition-colors">
-              🧪 Load Sample Benchmark Data
-            </button>
+            <a href="#pyqs" class="px-5 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-bold text-xs transition-colors">
+              🏆 Explore PYQs
+            </a>
           </div>
         </div>
       ` : `

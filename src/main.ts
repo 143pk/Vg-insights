@@ -10,7 +10,7 @@ import { MistakeBookService } from './services/mistakeBookService';
 import { StudyTimerService, StudySubject } from './services/studyTimerService';
 
 import { renderHeader, renderBreadcrumb } from './components/headerComponent';
-import { renderSidebar } from './components/sidebarComponent';
+import { renderSidebar, renderMobileDrawer } from './components/sidebarComponent';
 import { renderHomeDashboard } from './components/homeDashboardComponent';
 import { renderSubjectView } from './components/subjectViewComponent';
 import { renderClassView } from './components/classViewComponent';
@@ -181,25 +181,40 @@ class App {
       }
     }, { passive: true });
 
-    // Ensure sidebar tracks properly on resize
+    // Ensure sidebar tracks properly on resize & close mobile drawer if resized to desktop
     window.addEventListener('resize', () => {
       this.updateSidebarPosition();
+      if (window.innerWidth >= 1024) {
+        this.closeMobileDrawer();
+      }
     }, { passive: true });
 
     // Listen to hash route changes
     window.addEventListener('hashchange', () => {
+      this.closeMobileDrawer();
       this.handleRouteChange();
       window.scrollTo({ top: 0, behavior: 'smooth' });
       requestAnimationFrame(() => this.updateSidebarPosition());
     });
 
-    // Attach global keyboard shortcuts (Cmd+K / Ctrl+K for search)
+    // Attach global keyboard shortcuts (Cmd+K / Ctrl+K for search, Escape to close modals/drawer)
     window.addEventListener('keydown', (e) => {
       if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
         e.preventDefault();
         this.openModal('modal-search');
       } else if (e.key === 'Escape') {
+        this.closeMobileDrawer();
         this.closeAllModals();
+      }
+    });
+
+    // Delegated click & touch handler for mobile sidebar menu toggle button
+    document.addEventListener('click', (e) => {
+      const target = e.target as HTMLElement | null;
+      if (target?.closest('#btn-mobile-sidebar-toggle') || target?.closest('[data-action="open-sidebar"]')) {
+        e.preventDefault();
+        e.stopPropagation();
+        this.toggleMobileDrawer();
       }
     });
 
@@ -269,6 +284,7 @@ class App {
   }
 
   private handleRouteChange(): void {
+    this.closeMobileDrawer();
     const routeState: RouteState = RouterService.parseHash(window.location.hash);
 
     // Dynamic SEO, OpenGraph and Schema.org tag updates for Google rankings
@@ -371,6 +387,9 @@ class App {
         </div>
       </div>
 
+      <!-- Mobile Navigation Drawer Overlay (Always mounted at root level for seamless popping) -->
+      <div id="mobile-sidebar-container"></div>
+
       <div id="modals-container">
         ${renderSearchModal()}
         ${renderBookmarksModal()}
@@ -438,7 +457,7 @@ class App {
       this.attachHeaderEvents();
     }
 
-    // Update Sidebar
+    // Update Desktop Sidebar
     const sidebarContainer = document.getElementById('sidebar-container');
     if (sidebarContainer) {
       // Hide sidebar during full-screen active mock test for distraction-free focus
@@ -449,6 +468,17 @@ class App {
         sidebarContainer.classList.remove('!hidden');
         sidebarContainer.innerHTML = renderSidebar(currentHash);
         this.attachSidebarEvents();
+      }
+    }
+
+    // Update Mobile Navigation Drawer
+    const mobileDrawerContainer = document.getElementById('mobile-sidebar-container');
+    if (mobileDrawerContainer) {
+      if (routeState.type === 'weekly-mock-test' || routeState.type === 'landing' || routeState.type === 'login') {
+        mobileDrawerContainer.innerHTML = '';
+      } else {
+        mobileDrawerContainer.innerHTML = renderMobileDrawer(currentHash);
+        this.attachMobileDrawerEvents();
       }
     }
 
@@ -700,21 +730,100 @@ class App {
     }
   }
 
-  private attachSidebarEvents(): void {
-    // Mobile drawer toggle
-    const closeBtn = document.getElementById('btn-close-mobile-sidebar');
+  public openMobileDrawer(): void {
+    let drawer = document.getElementById('mobile-sidebar-drawer');
+    let panel = document.getElementById('mobile-sidebar-panel');
+
+    // Auto-create/mount drawer if not yet present in DOM
+    if (!drawer || !panel) {
+      let container = document.getElementById('mobile-sidebar-container');
+      if (!container) {
+        container = document.createElement('div');
+        container.id = 'mobile-sidebar-container';
+        document.body.appendChild(container);
+      }
+      container.innerHTML = renderMobileDrawer(window.location.hash || '#home');
+      this.attachMobileDrawerEvents();
+      drawer = document.getElementById('mobile-sidebar-drawer');
+      panel = document.getElementById('mobile-sidebar-panel');
+    }
+
+    if (!drawer || !panel) return;
+
+    // Direct inline styles bypass any CSS class, media query, or specificity problems
+    drawer.style.display = 'block';
+    drawer.style.visibility = 'visible';
+    drawer.style.pointerEvents = 'auto';
+
+    // Force browser reflow for guaranteed transition
+    void drawer.offsetWidth;
+    drawer.style.opacity = '1';
+
+    panel.style.transform = 'translateX(0)';
+
+    document.body.style.overflow = 'hidden';
+  }
+
+  public closeMobileDrawer(): void {
     const drawer = document.getElementById('mobile-sidebar-drawer');
+    const panel = document.getElementById('mobile-sidebar-panel');
+    if (!drawer) return;
 
-    closeBtn?.addEventListener('click', () => {
-      drawer?.classList.add('hidden');
-    });
+    if (panel) {
+      panel.style.transform = 'translateX(-100%)';
+    }
+    drawer.style.opacity = '0';
+    drawer.style.pointerEvents = 'none';
+    document.body.style.overflow = '';
 
+    setTimeout(() => {
+      if (drawer.style.opacity === '0') {
+        drawer.style.display = 'none';
+        drawer.style.visibility = 'hidden';
+      }
+    }, 280);
+  }
+
+  public toggleMobileDrawer(): void {
+    const drawer = document.getElementById('mobile-sidebar-drawer');
+    if (!drawer || drawer.style.display === 'none' || drawer.style.opacity === '0' || drawer.classList.contains('hidden')) {
+      this.openMobileDrawer();
+    } else {
+      this.closeMobileDrawer();
+    }
+  }
+
+  private attachMobileDrawerEvents(): void {
+    const drawer = document.getElementById('mobile-sidebar-drawer');
+    const closeBtn = document.getElementById('btn-close-mobile-sidebar');
+
+    if (closeBtn) {
+      closeBtn.onclick = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        this.closeMobileDrawer();
+      };
+    }
+
+    // Close when tapping on the backdrop outside the drawer sheet
+    if (drawer) {
+      drawer.onclick = (e) => {
+        if (e.target === drawer) {
+          e.preventDefault();
+          this.closeMobileDrawer();
+        }
+      };
+    }
+
+    // Close when tapping any navigation link inside the drawer
     document.querySelectorAll('.mobile-sidebar-link').forEach(link => {
-      link.addEventListener('click', () => {
-        drawer?.classList.add('hidden');
-      });
+      (link as HTMLElement).onclick = () => {
+        this.closeMobileDrawer();
+      };
     });
+  }
 
+  private attachSidebarEvents(): void {
     // Initialize sidebar top & height relative to current scroll
     this.updateSidebarPosition();
   }
@@ -740,11 +849,15 @@ class App {
   }
 
   private attachHeaderEvents(): void {
-    // Mobile menu toggle
-    document.getElementById('btn-mobile-sidebar-toggle')?.addEventListener('click', () => {
-      const drawer = document.getElementById('mobile-sidebar-drawer');
-      drawer?.classList.toggle('hidden');
-    });
+    // Mobile hamburger menu toggle
+    const mobileToggleBtn = document.getElementById('btn-mobile-sidebar-toggle');
+    if (mobileToggleBtn) {
+      mobileToggleBtn.onclick = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        this.toggleMobileDrawer();
+      };
+    }
 
     // Theme toggle
     const themeBtn = document.getElementById('btn-theme-toggle');
@@ -1407,20 +1520,7 @@ class App {
       });
     });
 
-    // Seed Sample Benchmark Data
-    const seedHandler = () => {
-      WeaknessDoctorService.seedSampleDiagnosticData();
-      const appContent = document.getElementById('app-content');
-      if (appContent) {
-        appContent.innerHTML = renderWeaknessDashboard(this.weaknessSubjectFilter);
-        this.attachWeaknessDoctorEvents();
-      }
-    };
-
-    document.getElementById('btn-seed-sample-weakness')?.addEventListener('click', seedHandler);
-    document.getElementById('btn-seed-sample-weakness-empty')?.addEventListener('click', seedHandler);
-
-    // Reset Data
+    // Reset Weakness Data back to zero
     document.getElementById('btn-reset-weakness-data')?.addEventListener('click', () => {
       WeaknessDoctorService.resetWeaknessData();
       const appContent = document.getElementById('app-content');
@@ -2221,6 +2321,7 @@ class App {
   }
 
   private closeAllModals(): void {
+    this.closeMobileDrawer();
     ['modal-search', 'modal-bookmarks', 'modal-progress', 'modal-auth'].forEach(id => this.closeModal(id));
   }
 }

@@ -279,6 +279,10 @@ function isEntireMathExpression(str: string): boolean {
  */
 const rawLatexRegex = /(?:[a-zA-Z](?:_[a-zA-Z0-9]+)?\s*=\s*)?(?:[-+±]\s*)?\\(?:frac|sqrt|vec|hat|dot|ddot|bar|theta|alpha|beta|gamma|delta|Delta|lambda|mu|nu|pi|rho|sigma|tau|omega|Omega|phi|eta|varepsilon|times|cdot|pm|approx|propto|le|ge|neq|sum|int|degree|left|right|begin|quad)\b(?:\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\}|[\^°+\-*\/=()[\]]|_[0-9a-zA-Z]|_\{[^{}]*\}|\^[0-9a-zA-Z]|\^\{[^{}]*\}|\s*[-+*=<>]+\s*|\s*\\(?:[a-zA-Z]+)(?:\{[^{}]*\})*|\s*[0-9]+(?:\.[0-9]+)?|\s*[a-zA-Z](?![a-zA-Z]))*/g;
 
+// High-performance bounded memoization cache for inline math rendering
+const MATH_HTML_CACHE = new Map<string, string>();
+const MAX_MATH_CACHE_SIZE = 3000;
+
 /**
  * Render inline text (for explanations, steps, descriptions, practice questions, PYQs, options).
  * Processes explicit $...$ and $$...$$ math blocks, as well as un-delimited raw LaTeX commands
@@ -286,6 +290,11 @@ const rawLatexRegex = /(?:[a-zA-Z](?:_[a-zA-Z0-9]+)?\s*=\s*)?(?:[-+±]\s*)?\\(?:
  */
 export function renderInlineMathHTML(text: string | undefined | null): string {
   if (!text) return '';
+  const cached = MATH_HTML_CACHE.get(text);
+  if (cached !== undefined) {
+    return cached;
+  }
+
   let s = String(text).trim();
   if (!s) return '';
 
@@ -313,13 +322,17 @@ export function renderInlineMathHTML(text: string | undefined | null): string {
     const prefix = prefixMatch[1];
     const rest = prefixMatch[2].trim();
     if (isEntireMathExpression(rest)) {
-      return prefix + renderKaTeXToken(rest, false);
+      const res = prefix + renderKaTeXToken(rest, false);
+      MATH_HTML_CACHE.set(text, res);
+      return res;
     }
   }
 
   // If the entire string is a math formula or expression, render directly
   if (isEntireMathExpression(s)) {
-    return renderKaTeXToken(s, false);
+    const res = renderKaTeXToken(s, false);
+    MATH_HTML_CACHE.set(text, res);
+    return res;
   }
 
   const tokens: string[] = [];
@@ -346,6 +359,16 @@ export function renderInlineMathHTML(text: string | undefined | null): string {
 
   // 4. Restore math tokens
   s = s.replace(/@@MATH_TOKEN_(\d+)@@/g, (_, idx) => tokens[Number(idx)] || '');
+
+  // Manage cache capacity
+  if (MATH_HTML_CACHE.size >= MAX_MATH_CACHE_SIZE) {
+    const keys = MATH_HTML_CACHE.keys();
+    for (let i = 0; i < 500; i++) {
+      const nextKey = keys.next().value;
+      if (nextKey) MATH_HTML_CACHE.delete(nextKey);
+    }
+  }
+  MATH_HTML_CACHE.set(text, s);
 
   return s;
 }

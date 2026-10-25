@@ -9,12 +9,15 @@ export interface PYQFilterState {
   search: string;
 }
 
-// In-memory filter state
+// In-memory filter & pagination state
 let currentFilter: PYQFilterState = {
   subject: 'all',
   year: 'all',
   search: ''
 };
+
+let currentPage: number = 1;
+const PAGE_SIZE: number = 20;
 
 // Selected answers map: questionId -> selectedIndex
 const userAnswers: Record<string, number> = {};
@@ -22,7 +25,7 @@ const userAnswers: Record<string, number> = {};
 export function renderPYQsView(): string {
   const years = Array.from(new Set(PYQ_DATABASE.map(q => q.year))).sort((a, b) => b - a);
 
-  // Filter questions
+  // Filter questions efficiently
   const filtered = PYQ_DATABASE.filter(q => {
     if (currentFilter.subject !== 'all') {
       if (currentFilter.subject === 'botany') {
@@ -45,6 +48,100 @@ export function renderPYQsView(): string {
     return true;
   });
 
+  // Calculate pagination bounds
+  const totalQuestions = filtered.length;
+  const totalPages = Math.max(1, Math.ceil(totalQuestions / PAGE_SIZE));
+  if (currentPage > totalPages) currentPage = totalPages;
+  if (currentPage < 1) currentPage = 1;
+
+  const startIndex = (currentPage - 1) * PAGE_SIZE;
+  const endIndex = Math.min(startIndex + PAGE_SIZE, totalQuestions);
+  const pageQuestions = filtered.slice(startIndex, endIndex);
+
+  // Helper to render pagination bar
+  const renderPaginationBar = (positionId: 'top' | 'bottom') => {
+    if (totalPages <= 1) return '';
+    return `
+      <div class="flex flex-wrap items-center justify-between gap-3 p-3.5 sm:p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-xs text-xs">
+        <div class="flex items-center gap-2">
+          <span class="font-bold text-slate-700 dark:text-slate-300">
+            Page <strong class="text-blue-600 dark:text-blue-400">${currentPage}</strong> of ${totalPages}
+          </span>
+          <span class="text-slate-400 text-[11px] hidden sm:inline">
+            (${startIndex + 1}–${endIndex} of ${totalQuestions} questions)
+          </span>
+        </div>
+
+        <div class="flex items-center gap-1.5 flex-wrap">
+          <button
+            type="button"
+            data-page="1"
+            ${currentPage === 1 ? 'disabled' : ''}
+            class="pyq-page-btn px-2.5 py-1.5 rounded-xl font-bold border transition-all ${
+              currentPage === 1
+                ? 'opacity-40 cursor-not-allowed border-slate-200 dark:border-slate-800 text-slate-400'
+                : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-50 cursor-pointer'
+            }"
+            title="First Page"
+          >
+            « First
+          </button>
+          <button
+            type="button"
+            data-page="${currentPage - 1}"
+            ${currentPage === 1 ? 'disabled' : ''}
+            class="pyq-page-btn px-3 py-1.5 rounded-xl font-bold border transition-all ${
+              currentPage === 1
+                ? 'opacity-40 cursor-not-allowed border-slate-200 dark:border-slate-800 text-slate-400'
+                : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-50 cursor-pointer'
+            }"
+          >
+            ‹ Prev
+          </button>
+
+          <!-- Direct Page Jump Dropdown -->
+          <div class="flex items-center gap-1.5 px-2 py-1 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700">
+            <label for="pyq-page-select-${positionId}" class="text-[11px] font-bold text-slate-500 dark:text-slate-400">Jump:</label>
+            <select
+              id="pyq-page-select-${positionId}"
+              class="pyq-jump-select bg-transparent text-xs font-black text-blue-600 dark:text-blue-400 outline-none cursor-pointer"
+            >
+              ${Array.from({ length: totalPages }, (_, i) => i + 1).map(p => `
+                <option value="${p}" ${p === currentPage ? 'selected' : ''}>${p}</option>
+              `).join('')}
+            </select>
+          </div>
+
+          <button
+            type="button"
+            data-page="${currentPage + 1}"
+            ${currentPage === totalPages ? 'disabled' : ''}
+            class="pyq-page-btn px-3 py-1.5 rounded-xl font-bold border transition-all ${
+              currentPage === totalPages
+                ? 'opacity-40 cursor-not-allowed border-slate-200 dark:border-slate-800 text-slate-400'
+                : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-50 cursor-pointer'
+            }"
+          >
+            Next ›
+          </button>
+          <button
+            type="button"
+            data-page="${totalPages}"
+            ${currentPage === totalPages ? 'disabled' : ''}
+            class="pyq-page-btn px-2.5 py-1.5 rounded-xl font-bold border transition-all ${
+              currentPage === totalPages
+                ? 'opacity-40 cursor-not-allowed border-slate-200 dark:border-slate-800 text-slate-400'
+                : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-50 cursor-pointer'
+            }"
+            title="Last Page"
+          >
+            Last »
+          </button>
+        </div>
+      </div>
+    `;
+  };
+
   return `
     <div id="pyq-archive-root" class="max-w-5xl mx-auto space-y-6 pb-20">
       
@@ -55,7 +152,7 @@ export function renderPYQsView(): string {
             <span>🏆</span> 2014 – 2026 NEET UG & AIPMT
           </div>
           <span class="text-xs font-bold px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
-            Showing ${filtered.length} of ${PYQ_DATABASE.length} Authentic Questions
+            ${totalQuestions > 0 ? `Showing ${startIndex + 1}–${endIndex} of ` : ''}${totalQuestions} Authentic Questions
           </span>
         </div>
         <div>
@@ -63,7 +160,7 @@ export function renderPYQsView(): string {
             Verified PYQ Question Archive
           </h1>
           <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1 max-w-2xl leading-relaxed">
-            Practice actual past exam questions from 2014 to 2026. Interactive 4-option MCQs with instant answer validation, full step-by-step KaTeX explanations, and NCERT textbook citations.
+            Practice actual past exam questions from 2014 to 2026. Interactive 4-option MCQs with instant answer validation, step-by-step NCERT explanations with properly formatted equations and formulas.
           </p>
         </div>
 
@@ -75,6 +172,7 @@ export function renderPYQsView(): string {
             <div class="flex gap-1 bg-slate-100 dark:bg-slate-800 p-1 rounded-2xl">
               ${['all', 'physics', 'chemistry', 'biology', 'botany', 'zoology'].map(sub => `
                 <button 
+                  type="button"
                   id="btn-pyq-sub-${sub}"
                   data-sub="${sub}"
                   class="pyq-sub-btn flex-1 py-1.5 text-[11px] sm:text-xs font-bold rounded-xl transition-all capitalize ${
@@ -115,23 +213,28 @@ export function renderPYQsView(): string {
         </div>
       </div>
 
+      <!-- Top Pagination Bar -->
+      ${renderPaginationBar('top')}
+
       <!-- Question List -->
-      <div class="space-y-5">
+      <div id="pyq-questions-container" class="space-y-5">
         ${!PaymentService.isPremiumActive() && currentFilter.year !== 'all' && currentFilter.year !== '2026' ? `
           ${PricingComponent.renderLockPrompt({
             badgeText: 'Pro PYQ Archive • Locked for Free Plan',
             title: `NEET UG ${currentFilter.year} Past Exam Paper Requires Pro Pass`,
-            description: `Free student access includes the latest authentic NEET 2026 paper. Upgrade to VG Insights Pro to unlock all 10+ years (2014–2026) with detailed step-by-step KaTeX NCERT solutions, mistake tracking, and formula references.`
+            description: `Free student access includes the latest authentic NEET 2026 paper. Upgrade to VG Insights Pro to unlock all 10+ years (2014–2026) with detailed step-by-step NCERT explanations, mistake tracking, and formula references.`
           })}
         ` : ''}
-        ${filtered.length === 0 ? `
+
+        ${pageQuestions.length === 0 ? `
           <div class="p-12 text-center rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
             <p class="text-sm font-bold text-slate-600 dark:text-slate-400">No past year questions match the selected criteria.</p>
-            <button id="btn-pyq-reset-filters" class="mt-3 px-4 py-2 rounded-xl bg-blue-600 text-white font-bold text-xs hover:bg-blue-700">
+            <button type="button" id="btn-pyq-reset-filters" class="mt-3 px-4 py-2 rounded-xl bg-blue-600 text-white font-bold text-xs hover:bg-blue-700 cursor-pointer">
               Reset Filters
             </button>
           </div>
-        ` : filtered.map((q, idx) => {
+        ` : pageQuestions.map((q, idx) => {
+          const globalIdx = startIndex + idx + 1;
           const selectedOption = userAnswers[q.id];
           const hasAnswered = selectedOption !== undefined;
           const isCorrect = selectedOption === q.correctIndex;
@@ -157,7 +260,7 @@ export function renderPYQsView(): string {
                     <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">${renderInlineMathHTML(q.chapterTitle)}</span>
                   </div>
                   <p class="text-xs text-slate-500 dark:text-slate-400">
-                    This past exam question is part of the 10+ Years NEET Archive. Upgrade to Pro to view question, options, and full KaTeX explanation.
+                    This past exam question is part of the 10+ Years NEET Archive. Upgrade to Pro to view question, options, and full step-by-step explanation.
                   </p>
                 </div>
                 <a
@@ -213,7 +316,7 @@ export function renderPYQsView(): string {
 
               <!-- Question Text -->
               <div class="text-[15px] font-semibold text-slate-900 dark:text-slate-100 leading-relaxed">
-                <span class="text-slate-400 dark:text-slate-500 font-black mr-1">Q${idx + 1}.</span>
+                <span class="text-slate-400 dark:text-slate-500 font-black mr-1">Q${globalIdx}.</span>
                 ${renderInlineMathHTML(q.question)}
               </div>
 
@@ -242,6 +345,7 @@ export function renderPYQsView(): string {
 
                   return `
                     <button 
+                      type="button"
                       id="opt-${q.id}-${optIdx}"
                       data-qid="${q.id}"
                       data-oidx="${optIdx}"
@@ -258,7 +362,7 @@ export function renderPYQsView(): string {
                 }).join('')}
               </div>
 
-              <!-- Full Step-by-Step Explanation & NCERT Citation (Visible after answering or toggle) -->
+              <!-- Full Step-by-Step Explanation & NCERT Citation -->
               ${hasAnswered ? `
                 <div class="mt-4 p-4 rounded-2xl ${isCorrect ? 'bg-emerald-50/80 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-900/50' : 'bg-rose-50/80 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-900/50'} space-y-2">
                   <div class="flex items-center justify-between">
@@ -267,9 +371,10 @@ export function renderPYQsView(): string {
                       <span>(Option ${['A', 'B', 'C', 'D'][q.correctIndex]})</span>
                     </span>
                     <button 
+                      type="button"
                       id="btn-retry-${q.id}" 
                       data-qid="${q.id}"
-                      class="pyq-retry-btn text-[11px] font-bold px-2.5 py-1 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-50">
+                      class="pyq-retry-btn text-[11px] font-bold px-2.5 py-1 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-50 cursor-pointer">
                       🔄 Try Again
                     </button>
                   </div>
@@ -297,9 +402,10 @@ export function renderPYQsView(): string {
                 <div class="flex items-center justify-between pt-1 text-xs text-slate-500 dark:text-slate-400">
                   <span class="italic text-[11px]">Select an option above to check your answer & view the step-by-step derivation.</span>
                   <button 
+                    type="button"
                     id="btn-reveal-${q.id}"
                     data-qid="${q.id}"
-                    class="pyq-reveal-btn text-xs font-bold text-blue-600 dark:text-blue-400 hover:underline">
+                    class="pyq-reveal-btn text-xs font-bold text-blue-600 dark:text-blue-400 hover:underline cursor-pointer">
                     View Solution Key 👁️
                   </button>
                 </div>
@@ -308,59 +414,102 @@ export function renderPYQsView(): string {
           `;
         }).join('')}
       </div>
+
+      <!-- Bottom Pagination Bar -->
+      ${renderPaginationBar('bottom')}
     </div>
   `;
 }
 
 export function attachPYQsEvents(onReRender: () => void): void {
+  const root = document.getElementById('pyq-archive-root');
+  if (!root) return;
+
   // Subject button filters
-  document.querySelectorAll('.pyq-sub-btn').forEach(btn => {
+  root.querySelectorAll('.pyq-sub-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
       const target = e.currentTarget as HTMLElement;
       const sub = target.dataset.sub || 'all';
       currentFilter.subject = sub;
+      currentPage = 1;
       onReRender();
     });
   });
 
   // Year select filter
-  const yearSelect = document.getElementById('pyq-year-select') as HTMLSelectElement | null;
+  const yearSelect = root.querySelector('#pyq-year-select') as HTMLSelectElement | null;
   yearSelect?.addEventListener('change', (e) => {
     currentFilter.year = (e.target as HTMLSelectElement).value;
+    currentPage = 1;
     onReRender();
   });
 
-  // Search input filter
-  const searchInput = document.getElementById('pyq-search-input') as HTMLInputElement | null;
+  // Search input filter with debouncing
+  let searchTimeout: any = null;
+  const searchInput = root.querySelector('#pyq-search-input') as HTMLInputElement | null;
   searchInput?.addEventListener('input', (e) => {
-    currentFilter.search = (e.target as HTMLInputElement).value;
-    onReRender();
+    clearTimeout(searchTimeout);
+    searchTimeout = setTimeout(() => {
+      currentFilter.search = (e.target as HTMLInputElement).value;
+      currentPage = 1;
+      onReRender();
+    }, 200);
   });
 
   // Reset filter button
-  document.getElementById('btn-pyq-reset-filters')?.addEventListener('click', () => {
+  root.querySelector('#btn-pyq-reset-filters')?.addEventListener('click', () => {
     currentFilter = { subject: 'all', year: 'all', search: '' };
+    currentPage = 1;
     onReRender();
   });
 
-  // Option selection
-  document.querySelectorAll('.pyq-option-btn').forEach(btn => {
+  // Pagination page buttons (Next, Prev, First, Last)
+  root.querySelectorAll('.pyq-page-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
       const target = e.currentTarget as HTMLElement;
-      const qId = target.dataset.qid;
-      const oIdx = parseInt(target.dataset.oidx || '0', 10);
-      if (qId) {
-        userAnswers[qId] = oIdx;
+      const pageStr = target.dataset.page;
+      if (!pageStr) return;
+      const targetPage = parseInt(pageStr, 10);
+      if (!isNaN(targetPage) && targetPage !== currentPage) {
+        currentPage = targetPage;
         onReRender();
+        document.getElementById('pyq-archive-root')?.scrollIntoView({ behavior: 'smooth' });
       }
     });
   });
 
-  // Reveal solution without answering
-  document.querySelectorAll('.pyq-reveal-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      const target = e.currentTarget as HTMLElement;
-      const qId = target.dataset.qid;
+  // Pagination jump select dropdowns
+  root.querySelectorAll('.pyq-jump-select').forEach(sel => {
+    sel.addEventListener('change', (e) => {
+      const targetPage = parseInt((e.target as HTMLSelectElement).value, 10);
+      if (!isNaN(targetPage) && targetPage !== currentPage) {
+        currentPage = targetPage;
+        onReRender();
+        document.getElementById('pyq-archive-root')?.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Event delegation on root container for fast option select, reveal, and retry
+  root.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement;
+
+    // 1. Option selection
+    const optionBtn = target.closest('.pyq-option-btn') as HTMLElement | null;
+    if (optionBtn && !optionBtn.hasAttribute('disabled')) {
+      const qId = optionBtn.dataset.qid;
+      const oIdx = parseInt(optionBtn.dataset.oidx || '0', 10);
+      if (qId) {
+        userAnswers[qId] = oIdx;
+        onReRender();
+      }
+      return;
+    }
+
+    // 2. Reveal solution
+    const revealBtn = target.closest('.pyq-reveal-btn') as HTMLElement | null;
+    if (revealBtn) {
+      const qId = revealBtn.dataset.qid;
       if (qId) {
         const q = PYQ_DATABASE.find(item => item.id === qId);
         if (q) {
@@ -368,18 +517,18 @@ export function attachPYQsEvents(onReRender: () => void): void {
           onReRender();
         }
       }
-    });
-  });
+      return;
+    }
 
-  // Retry question
-  document.querySelectorAll('.pyq-retry-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      const target = e.currentTarget as HTMLElement;
-      const qId = target.dataset.qid;
+    // 3. Retry question
+    const retryBtn = target.closest('.pyq-retry-btn') as HTMLElement | null;
+    if (retryBtn) {
+      const qId = retryBtn.dataset.qid;
       if (qId) {
         delete userAnswers[qId];
         onReRender();
       }
-    });
+      return;
+    }
   });
 }

@@ -6,6 +6,8 @@ import { renderFormulaHTML, renderInlineMathHTML, renderMath } from '../utils/ma
 
 export function renderLandingPage(): string {
   const totalTopics = TOPICS.length || 277;
+  const isAuthenticated = AuthService.isAuthenticated();
+  const logoHref = isAuthenticated ? '#home' : '#landing';
 
   // Pre-rendered formulas for zero-flicker instant display
   const nernstEq = renderFormulaHTML("E_{\\text{cell}} = E^\\circ_{\\text{cell}} - \\frac{0.0591}{n}\\log_{10} Q \\quad \\text{at } 298\\text{ K}");
@@ -26,7 +28,7 @@ export function renderLandingPage(): string {
           <div class="px-3 sm:px-6 h-[78px] sm:h-[84px] md:h-[90px] flex items-center justify-between">
             
             <!-- Brand Wordmark: The primary brand identity -->
-            <a href="#landing" class="flex items-center shrink-0 group focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-xl py-1 px-0.5 select-none">
+            <a href="${logoHref}" class="flex items-center shrink-0 group focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-xl py-1 px-0.5 select-none" aria-label="${isAuthenticated ? 'VG Insights – Learn' : 'VG Insights – Landing Page'}">
               ${renderBrandLogo({ size: 'header' })}
             </a>
 

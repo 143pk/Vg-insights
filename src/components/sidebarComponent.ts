@@ -1,18 +1,24 @@
 import { WeeklyMockService } from '../services/weeklyMockService';
 import { MistakeBookService } from '../services/mistakeBookService';
 import { StorageService } from '../services/storageService';
+import { AuthService } from '../services/authService';
 import { renderBrandLogo } from './brandLogoComponent';
 
-export function renderSidebar(currentPath: string = '#home'): string {
-  const { weekNumber } = WeeklyMockService.getCurrentYearAndWeek();
-  const mistakeState = MistakeBookService.getState();
-  const personalBests = WeeklyMockService.getPersonalBests();
-  const bookmarks = StorageService.getBookmarks();
-  const unreadMistakes = mistakeState.totalMistakesCount - mistakeState.resolvedMistakesCount;
+interface DrawerItem {
+  label: string;
+  path: string;
+  icon: string;
+  badge?: string;
+  badgeColor?: string;
+}
 
-  const cleanPath = currentPath.split('/')[0] || '#home';
+interface DrawerSection {
+  title: string;
+  items: DrawerItem[];
+}
 
-  const drawerSections = [
+function getNavigationSections(currentWeek: number, unreadMistakes: number): DrawerSection[] {
+  return [
     {
       title: 'LEARN',
       items: [
@@ -27,7 +33,7 @@ export function renderSidebar(currentPath: string = '#home'): string {
       title: 'PRACTICE',
       items: [
         { label: 'PYQ Explorer', path: '#pyqs', icon: '🏆', badge: '10+ Yrs' },
-        { label: 'Weekly Mock', path: '#weekly-mock', icon: '📝', badge: `W${weekNumber}`, badgeColor: 'bg-blue-600 text-white' },
+        { label: 'Weekly Mock', path: '#weekly-mock', icon: '📝', badge: `W${currentWeek}`, badgeColor: 'bg-blue-600 text-white' },
         { label: 'Active Practice', path: '#custom-test', icon: '🎯' },
       ]
     },
@@ -48,6 +54,18 @@ export function renderSidebar(currentPath: string = '#home'): string {
       ]
     }
   ];
+}
+
+/**
+ * Desktop Sidebar: Fixed viewport layout attached to header
+ */
+export function renderSidebar(currentPath: string = '#home'): string {
+  const { weekNumber } = WeeklyMockService.getCurrentYearAndWeek();
+  const mistakeState = MistakeBookService.getState();
+  const personalBests = WeeklyMockService.getPersonalBests();
+  const unreadMistakes = mistakeState.totalMistakesCount - mistakeState.resolvedMistakesCount;
+  const cleanPath = currentPath.split('/')[0] || '#home';
+  const drawerSections = getNavigationSections(weekNumber, unreadMistakes);
 
   return `
     <!-- DESKTOP SIDEBAR: Dynamic Attached-to-Header Fixed Viewport Layout -->
@@ -111,58 +129,124 @@ export function renderSidebar(currentPath: string = '#home'): string {
         <span class="text-emerald-600 dark:text-emerald-400 font-semibold">Offline Ready</span>
       </div>
     </aside>
+  `;
+}
 
-    <!-- MOBILE SLIDE-OUT NAVIGATION DRAWER -->
-    <div id="mobile-sidebar-drawer" class="fixed inset-0 z-50 bg-slate-900/40 backdrop-blur-xs hidden lg:hidden transition-opacity duration-300">
-      <div class="w-80 max-w-[85vw] h-full bg-white dark:bg-slate-900 shadow-2xl flex flex-col justify-between overflow-y-auto transform transition-transform duration-300">
-        
+/**
+ * Mobile Navigation Drawer: Slide-out drawer overlay with bulletproof inline styles & z-index
+ */
+export function renderMobileDrawer(currentPath: string = '#home'): string {
+  const { weekNumber } = WeeklyMockService.getCurrentYearAndWeek();
+  const mistakeState = MistakeBookService.getState();
+  const personalBests = WeeklyMockService.getPersonalBests();
+  const unreadMistakes = mistakeState.totalMistakesCount - mistakeState.resolvedMistakesCount;
+  const cleanPath = currentPath.split('/')[0] || '#home';
+  const drawerSections = getNavigationSections(weekNumber, unreadMistakes);
+  const isAuthenticated = AuthService.isAuthenticated();
+  const logoHref = isAuthenticated ? '#home' : '#landing';
+
+  return `
+    <!-- MOBILE SLIDE-OUT NAVIGATION DRAWER OVERLAY -->
+    <div
+      id="mobile-sidebar-drawer"
+      class="fixed inset-0 lg:hidden"
+      style="display: none; opacity: 0; pointer-events: none; z-index: 9999; background-color: rgba(15, 23, 42, 0.65); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); transition: opacity 0.28s ease;"
+      aria-modal="true"
+      role="dialog"
+      aria-label="Navigation Menu"
+    >
+      <div
+        id="mobile-sidebar-panel"
+        class="w-80 max-w-[85vw] h-full bg-white dark:bg-slate-900 shadow-2xl flex flex-col justify-between overflow-y-auto border-r border-slate-200/90 dark:border-slate-800"
+        style="transform: translateX(-100%); transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1); will-change: transform; z-index: 10000;"
+      >
         <div class="p-5 space-y-6">
           
-          <!-- Drawer Header -->
+          <!-- Drawer Top: Brand Logo + Close Button -->
           <div class="flex items-center justify-between pb-4 border-b border-slate-100 dark:border-slate-800">
-            <a href="#landing" class="flex items-center shrink-0 mobile-sidebar-link focus:outline-none select-none" aria-label="VG Insights – Landing Page">
+            <a href="${logoHref}" class="flex items-center shrink-0 mobile-sidebar-link focus:outline-none select-none" aria-label="${isAuthenticated ? 'VG Insights – Learn' : 'VG Insights – Landing Page'}">
               ${renderBrandLogo({ size: 'header' })}
             </a>
             
             <button
               id="btn-close-mobile-sidebar"
               type="button"
-              class="w-9 h-9 rounded-xl flex items-center justify-center text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors shrink-0 -mr-1"
-              aria-label="Close navigation"
+              class="w-10 h-10 rounded-xl flex items-center justify-center text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors shrink-0 -mr-1 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+              aria-label="Close navigation menu"
+              title="Close menu"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           </div>
 
+          <!-- Weekly Mock Shortcut Card -->
+          <a
+            href="#weekly-mock"
+            class="mobile-sidebar-link p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/70 block hover:border-blue-500/50 transition-all group"
+          >
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">Week ${weekNumber} Mock</span>
+              <span class="text-[11px] font-bold text-amber-600 dark:text-amber-400">
+                🔥 ${personalBests.weeklyStreak} Wks Streak
+              </span>
+            </div>
+            <p class="text-xs font-semibold text-slate-800 dark:text-slate-200 mt-1.5 flex items-center justify-between">
+              <span>Take Full 720 Simulation</span>
+              <span class="text-blue-600 dark:text-blue-400 font-bold">→</span>
+            </p>
+          </a>
+
           <!-- Drawer Navigation Sections: LEARN, PRACTICE, ANALYZE, TOOLS -->
           ${drawerSections.map(section => `
             <div class="space-y-1.5">
-              <h3 class="px-2 text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">
+              <h3 class="px-2 text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">
                 ${section.title}
               </h3>
               <div class="space-y-1">
-                ${section.items.map(item => `
-                  <a
-                    href="${item.path}"
-                    class="mobile-sidebar-link flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-50 dark:hover:bg-slate-800/80 transition-colors"
-                  >
-                    <span class="flex items-center gap-2.5">
-                      <span class="text-sm">${item.icon}</span>
-                      <span>${item.label}</span>
-                    </span>
-                    ${item.badge ? `
-                      <span class="px-2 py-0.5 rounded text-[10px] font-semibold ${item.badgeColor || 'bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400'}">
-                        ${item.badge}
+                ${section.items.map(item => {
+                  const isActive = cleanPath === item.path || (item.path === '#home' && (cleanPath === '#' || cleanPath === '#home'));
+                  return `
+                    <a
+                      href="${item.path}"
+                      class="mobile-sidebar-link flex items-center justify-between px-3 py-2.5 rounded-xl text-xs transition-colors ${
+                        isActive
+                          ? 'bg-blue-50 text-blue-700 dark:bg-blue-950/60 dark:text-blue-300 font-bold border-l-4 border-blue-600'
+                          : 'font-medium text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-50 dark:hover:bg-slate-800/80'
+                      }"
+                    >
+                      <span class="flex items-center gap-2.5">
+                        <span class="text-sm">${item.icon}</span>
+                        <span>${item.label}</span>
                       </span>
-                    ` : ''}
-                  </a>
-                `).join('')}
+                      ${item.badge ? `
+                        <span class="px-2 py-0.5 rounded text-[10px] font-semibold ${
+                          isActive
+                            ? 'bg-blue-600 text-white'
+                            : (item.badgeColor || 'bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400')
+                        }">
+                          ${item.badge}
+                        </span>
+                      ` : ''}
+                    </a>
+                  `;
+                }).join('')}
               </div>
             </div>
           `).join('')}
 
+        </div>
+
+        <!-- Drawer Footer -->
+        <div class="p-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-900/70 text-xs text-slate-500 dark:text-slate-400 flex items-center justify-between">
+          <div class="flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 inline-block animate-pulse"></span>
+            <span class="text-[11px] font-medium">NEET 720 Ready</span>
+          </div>
+          <a href="#pricing" class="mobile-sidebar-link text-xs font-bold text-blue-600 dark:text-blue-400 hover:underline">
+            💎 VG Pro
+          </a>
         </div>
 
       </div>
