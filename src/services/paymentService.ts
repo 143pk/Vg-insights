@@ -155,7 +155,7 @@ export class PaymentService {
         userEmail: 'optionvortex@gmail.com',
         isPremium: true,
         status: 'active',
-        planId: 'plan_6_months',
+        planId: 'plan_12_months',
         planName: 'Developer & Admin Full Access',
         billingType: 'one_time',
         remainingDays: 3650,

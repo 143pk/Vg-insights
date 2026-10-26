@@ -138,7 +138,7 @@ export class PaymentStore {
         userEmail: clean,
         isPremium: true,
         status: 'active',
-        planId: 'plan_6_months',
+        planId: 'plan_12_months',
         planName: 'Owner & Admin All-Access Pass',
         billingType: 'one_time',
         remainingDays: 3650,

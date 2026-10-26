@@ -1,39 +1,53 @@
+import { SUBJECTS, TOPICS } from '../data/neetData';
 import { renderBrandLogo } from './brandLogoComponent';
 import { StorageService } from '../services/storageService';
 import { AuthService } from '../services/authService';
-import { MetaPixelService } from '../services/metaPixelService';
-import { renderFormulaHTML } from '../utils/mathRenderer';
+import { renderFormulaHTML, renderInlineMathHTML } from '../utils/mathRenderer';
 
 export function renderLandingPage(): string {
+  const totalTopics = TOPICS.length || 277;
   const isAuthenticated = AuthService.isAuthenticated();
   const logoHref = isAuthenticated ? '#home' : '#landing';
 
-  // Pre-rendered formula for zero-flicker instant display inside product preview
-  const coulombEq = renderFormulaHTML("F = \\frac{1}{4\\pi\\varepsilon_0} \\cdot \\frac{|q_1 q_2|}{r^2}");
+  // Pre-rendered formulas for zero-flicker instant display
+  const nernstEq = renderFormulaHTML("E_{\\text{cell}} = E^\\circ_{\\text{cell}} - \\frac{0.0591}{n}\\log_{10} Q \\quad \\text{at } 298\\text{ K}");
+  const gibbsEq = renderFormulaHTML("\\Delta G = \\Delta H - T\\Delta S");
+  const gibbsKeq = renderFormulaHTML("\\Delta G^\\circ = -RT \\ln K = -2.303 RT \\log_{10} K");
+  const coulombEq = renderFormulaHTML("F = \\frac{1}{4\\pi\\varepsilon_0 \\varepsilon_r} \\cdot \\frac{|q_1 q_2|}{r^2}");
+  const aldolEq = renderFormulaHTML("2\\,\\text{CH}_3\\text{CHO} \\xrightarrow{\\text{OH}^-} \\text{CH}_3\\text{CH}=\\text{CHCHO} + \\text{H}_2\\text{O}");
+  const opticsEq = renderFormulaHTML("\\frac{1}{f} = \\frac{1}{v} + \\frac{1}{u}");
 
   return `
     <div class="min-h-screen bg-[#FFFFFF] dark:bg-[#0B1120] text-[#0F172A] dark:text-[#F8FAFC] font-sans antialiased selection:bg-blue-600 selection:text-white flex flex-col overflow-x-hidden transition-colors duration-200">
       
       <!-- ==========================================
-           HEADER / NAVBAR (Minimal, Clean, Fast)
+           FLOATING PREMIUM NAVBAR
            ========================================== -->
-      <div class="sticky top-2 sm:top-3.5 z-40 w-full px-3 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <header class="w-full bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border border-slate-200/90 dark:border-slate-800/90 rounded-2xl shadow-xs transition-all">
-          <div class="px-3.5 sm:px-6 h-[68px] sm:h-[76px] flex items-center justify-between">
+      <div class="sticky top-3.5 z-50 w-full px-2.5 sm:px-6 lg:px-8 max-w-7xl mx-auto transition-all">
+        <header class="w-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 rounded-2xl shadow-sm shadow-slate-900/5 transition-all">
+          <div class="px-3 sm:px-6 h-[78px] sm:h-[84px] md:h-[90px] flex items-center justify-between">
             
-            <!-- Brand Wordmark -->
-            <a href="${logoHref}" class="flex items-center shrink-0 group focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-xl py-1 px-0.5 select-none" aria-label="${isAuthenticated ? 'VG Insights – Learn' : 'VG Insights – NEET UG 2027'}">
+            <!-- Brand Wordmark: The primary brand identity -->
+            <a href="${logoHref}" class="flex items-center shrink-0 group focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-xl py-1 px-0.5 select-none" aria-label="${isAuthenticated ? 'VG Insights – Learn' : 'VG Insights – Landing Page'}">
               ${renderBrandLogo({ size: 'header' })}
             </a>
 
-            <!-- Right Controls -->
-            <div class="flex items-center shrink-0 gap-2 sm:gap-3">
-              <!-- Announcement Chip (Desktop) -->
-              <span class="hidden md:inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 border border-blue-200/80 dark:border-blue-800">
-                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                <span>NEET UG 2027</span>
-              </span>
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-600 dark:text-slate-300">
+              <a href="#ecosystem" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Ecosystem</a>
+              <a href="#library" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">NEET Library</a>
+              <a href="#pyqs" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">PYQs</a>
+              <a href="#revision" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Revision</a>
+              <a href="#weakness-doctor" class="flex items-center gap-1.5 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                <span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
+                <span>AI Doctor</span>
+                <span class="px-1.5 py-0.5 text-[10px] font-extrabold uppercase bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-800 rounded-md">Smart</span>
+              </a>
+              <a href="#mock" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Weekly Mock</a>
+            </nav>
 
+            <!-- Right Actions -->
+            <div class="flex items-center shrink-0 gap-1.5 sm:gap-3">
               <!-- Theme Toggle Button -->
               <button
                 id="btn-landing-theme-toggle"
@@ -50,519 +64,1016 @@ export function renderLandingPage(): string {
                 </svg>
               </button>
 
-              <!-- Header Sign In / Launch CTA -->
               <button
                 type="button"
                 id="btn-nav-login"
-                class="landing-primary-cta px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-bold shadow-xs active:scale-[0.98] transition-all flex items-center gap-1.5 focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer select-none"
+                class="px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-gradient-to-r from-[#2563EB] to-[#1D4ED8] hover:from-[#1D4ED8] hover:to-[#1E40AF] text-white text-xs sm:text-sm font-bold shadow-md shadow-blue-500/20 active:scale-[0.98] transition-all flex items-center gap-1.5 sm:gap-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 cursor-pointer select-none"
               >
-                <span>${isAuthenticated ? 'Go to Workspace →' : 'Sign In'}</span>
+                <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24">
+                  <path fill="#ffffff" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                </svg>
+                <span>Sign In with Google</span>
+              </button>
+
+              <!-- Mobile Menu Toggle Button -->
+              <button
+                type="button"
+                id="btn-mobile-menu-toggle"
+                class="lg:hidden p-1.5 sm:p-2 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus:outline-none"
+                aria-label="Toggle navigation menu"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
               </button>
             </div>
 
+          </div>
+
+          <!-- Mobile Dropdown Menu -->
+          <div id="mobile-nav-dropdown" class="hidden lg:hidden border-t border-slate-200/80 dark:border-slate-800 px-5 py-4 space-y-3 bg-white/95 dark:bg-slate-900/95 rounded-b-2xl">
+            <div class="flex flex-col space-y-2.5 font-semibold text-sm text-slate-600 dark:text-slate-300">
+              <a href="#ecosystem" class="py-1.5 hover:text-blue-600 mobile-nav-link">Ecosystem</a>
+              <a href="#library" class="py-1.5 hover:text-blue-600 mobile-nav-link">NEET Library</a>
+              <a href="#pyqs" class="py-1.5 hover:text-blue-600 mobile-nav-link">PYQs (2014–2025)</a>
+              <a href="#revision" class="py-1.5 hover:text-blue-600 mobile-nav-link">Revision Sheets</a>
+              <a href="#weakness-doctor" class="py-1.5 hover:text-blue-600 mobile-nav-link">AI Weakness Doctor 🩺</a>
+              <a href="#mock" class="py-1.5 hover:text-blue-600 mobile-nav-link">Weekly 720 Mock</a>
+            </div>
+            <div class="pt-3 border-t border-slate-200 dark:border-slate-800 flex flex-col gap-2">
+              <button
+                type="button"
+                id="btn-mobile-login"
+                class="w-full py-3 rounded-xl bg-blue-600 text-white text-sm font-bold hover:bg-blue-700 transition-colors shadow-md shadow-blue-500/20 flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24">
+                  <path fill="#ffffff" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                </svg>
+                <span>Sign In with Google</span>
+              </button>
+            </div>
           </div>
         </header>
       </div>
 
       <!-- ==========================================
-           SECTION 1: HERO — ABOVE THE FOLD
+           SECTION 1: HERO SECTION & ASPIRATIONAL POSTER COMPOSITION
            ========================================== -->
-      <section class="w-full pt-6 sm:pt-10 lg:pt-14 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-        <div class="flex flex-col items-center text-center space-y-5 sm:space-y-6">
+      <section class="relative pt-4 pb-10 sm:pt-6 sm:pb-16 lg:pt-10 lg:pb-20 overflow-hidden landing-grid-pattern dark:landing-dark-grid-pattern">
+        
+        <!-- Ambient Radial Light Layers -->
+        <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[48rem] h-[32rem] hero-radial-glow pointer-events-none -z-10 animate-ambient-glow"></div>
+        <div class="absolute top-1/4 -right-40 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+        <div class="absolute top-1/2 -left-40 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <!-- Announcement Badge -->
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800 text-blue-700 dark:text-blue-300 text-xs font-bold tracking-wide">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span>NEET UG 2027 PREPARATION</span>
-          </div>
+          <!-- Top Hero Editorial Typography -->
+          <div class="max-w-4xl mx-auto text-center space-y-3.5 sm:space-y-4 md:space-y-5">
+            
+            <!-- Official VG Insights Logo at top of Hero -->
+            <div class="flex items-center justify-center pt-1 pb-0.5">
+              ${renderBrandLogo({ size: 'hero' })}
+            </div>
 
-          <!-- Main Headline -->
-          <h1 class="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 dark:text-white tracking-tight leading-[1.15] sm:leading-[1.12] max-w-4xl">
-            Your NEET Dream Deserves a <span class="text-blue-600 dark:text-blue-400">Smarter Plan.</span>
-          </h1>
+            <!-- Hero Headline -->
+            <h1 class="font-display text-3xl sm:text-5xl md:text-6xl lg:text-[76px] font-extrabold tracking-tight text-[#0F172A] dark:text-white leading-[1.08]">
+              Your NEET Preparation.<br />
+              <span class="text-[#2563EB] bg-gradient-to-r from-[#2563EB] via-[#3B82F6] to-[#1D4ED8] bg-clip-text text-transparent">Reimagined.</span>
+            </h1>
 
-          <!-- Supporting Text -->
-          <p class="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Master NCERT concepts, practise previous-year questions, and discover your weak areas — all in one place.
-          </p>
+            <!-- Subheading -->
+            <p class="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed">
+              Learn concepts. Practice questions. Master your weaknesses.
+            </p>
 
-          <!-- 3 Concise Benefits with Green Highlights -->
-          <div class="w-full max-w-xl mx-auto pt-1 pb-2">
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-6 text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-200">
-              <span class="flex items-center gap-2">
-                <span class="w-4 h-4 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-[10px] font-black">✓</span>
-                <span>NCERT-Aligned Study Resources</span>
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-1">
+              <button
+                type="button"
+                id="btn-hero-start-free"
+                class="w-full sm:w-auto px-8 py-3.5 sm:px-9 sm:py-4 rounded-2xl bg-gradient-to-r from-[#2563EB] to-[#1D4ED8] hover:from-[#1D4ED8] hover:to-[#1E40AF] text-white text-base sm:text-lg font-bold shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 active:scale-[0.98] transition-all flex items-center justify-center gap-2.5 cursor-pointer"
+              >
+                <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24">
+                  <path fill="#ffffff" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                </svg>
+                <span>Start Learning</span>
+                <span class="text-blue-200 text-lg sm:text-xl">→</span>
+              </button>
+            </div>
+
+            <!-- Trust Row -->
+            <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs sm:text-sm font-semibold text-slate-500 dark:text-slate-400 pt-1">
+              <span class="flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                </svg>
+                Free to explore
               </span>
-              <span class="flex items-center gap-2">
-                <span class="w-4 h-4 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-[10px] font-black">✓</span>
-                <span>NEET Previous-Year Questions</span>
+              <span class="text-slate-300 dark:text-slate-700">•</span>
+              <span class="flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                Built for NEET UG
               </span>
-              <span class="flex items-center gap-2">
-                <span class="w-4 h-4 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-[10px] font-black">✓</span>
-                <span>Smart Practice & Analysis</span>
+              <span class="text-slate-300 dark:text-slate-700">•</span>
+              <span class="flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
+                ${totalTopics}+ High-Yield Concepts
               </span>
             </div>
+
           </div>
 
-          <!-- Primary CTA Button (Mobile-First Touch Target) -->
-          <div class="w-full sm:w-auto flex flex-col items-center gap-2 pt-1">
-            <button
-              type="button"
-              id="btn-hero-start-cta"
-              class="landing-primary-cta w-full sm:w-auto px-8 py-3.5 sm:py-4 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-black text-base sm:text-lg shadow-lg shadow-blue-500/25 active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer focus:outline-none focus:ring-4 focus:ring-blue-500/30"
-            >
-              <span>Start My NEET Preparation</span>
-              <span class="text-xl leading-none">→</span>
-            </button>
-            <p class="text-[12px] sm:text-xs text-slate-500 dark:text-slate-400 text-center">
-              Explore the library. Unlock premium practice when you're ready.
-            </p>
-          </div>
+          <!-- ==========================================
+               HERO VISUAL: CINEMATIC ASPIRATIONAL POSTER & PRODUCT DASHBOARD
+               ========================================== -->
+          <div id="hero-visual-container" class="mt-8 sm:mt-10 lg:mt-14 relative max-w-5xl mx-auto perspective-1500">
+            
+            <!-- Atmospheric Outer Glow -->
+            <div class="absolute -inset-2 bg-gradient-to-r from-blue-600/20 via-indigo-600/15 to-blue-600/20 rounded-3xl blur-2xl -z-10"></div>
 
-          <!-- Actual Product Interface Preview (Clean, Fast, Responsive) -->
-          <div class="w-full mt-6 sm:mt-8 pt-2">
-            <div class="relative max-w-4xl mx-auto rounded-2xl sm:rounded-3xl p-2 sm:p-3 bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl overflow-hidden text-left">
+            <!-- Main Device Mockup (Laptop / Tablet Futuristic Screen) -->
+            <div id="hero-mockup-device" class="hero-mockup-init relative bg-[#0F172A] rounded-2xl sm:rounded-3xl p-2.5 sm:p-4 shadow-2xl border border-slate-700/80 will-change-transform">
               
-              <!-- Chrome Bar -->
-              <div class="bg-slate-950 rounded-t-xl px-3 sm:px-4 py-2 flex items-center justify-between border-b border-slate-800 text-[11px] font-mono text-slate-400">
-                <div class="flex items-center gap-1.5">
-                  <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
-                  <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
-                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
-                  <span class="ml-2 hidden sm:inline text-slate-300 font-sans font-medium">vginsights.in/study</span>
+              <!-- Screen Chrome Bar -->
+              <div class="bg-slate-900 rounded-t-xl sm:rounded-t-2xl px-4 py-2.5 flex items-center justify-between border-b border-slate-800">
+                <div class="flex items-center gap-2">
+                  <div class="w-3 h-3 rounded-full bg-rose-500/80"></div>
+                  <div class="w-3 h-3 rounded-full bg-amber-500/80"></div>
+                  <div class="w-3 h-3 rounded-full bg-emerald-500/80"></div>
                 </div>
-                <div class="flex items-center gap-2 text-[10px] font-sans font-semibold">
-                  <span class="px-2 py-0.5 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-800">
-                    ● Real Study Workspace
-                  </span>
-                  <span class="hidden sm:inline text-slate-400">Class 12 Physics</span>
+                <div class="px-4 py-1 rounded-full bg-slate-950/90 text-xs font-mono text-slate-300 flex items-center gap-2 border border-slate-800">
+                  <span class="text-emerald-400">●</span>
+                  <span>https://vginsights.in/app</span>
+                </div>
+                <div class="flex items-center gap-2 text-xs font-semibold text-slate-400">
+                  <span class="hidden sm:inline text-blue-400">NEET UG 2027 / 2028 Batch</span>
+                  <span class="px-2 py-0.5 rounded bg-blue-900/60 text-blue-300 text-[10px] font-bold">NTA Pattern</span>
                 </div>
               </div>
 
-              <!-- Product Workspace Preview Body -->
-              <div class="bg-white dark:bg-slate-950 rounded-b-xl p-3.5 sm:p-6 space-y-4">
+              <!-- Internal Application View -->
+              <div class="bg-[#F8FAFC] dark:bg-slate-950 rounded-b-xl sm:rounded-b-2xl p-4 sm:p-6 lg:p-8 space-y-6 text-left">
                 
-                <!-- Topic Bar -->
-                <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-100 dark:border-slate-800">
-                  <div class="flex items-center gap-2.5">
-                    <span class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold text-sm">
+                <!-- Live Study Header Inside Mockup -->
+                <div class="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-slate-200 dark:border-slate-800">
+                  <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-lg shadow-sm">
                       ⚡
-                    </span>
+                    </div>
                     <div>
-                      <p class="text-[11px] font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wide">Physics • Chapter 01</p>
-                      <p class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Electric Charges & Fields: Coulomb's Law</p>
+                      <div class="flex items-center gap-2 text-[11px] font-bold text-blue-600 dark:text-blue-400 uppercase">
+                        <span>Class 12 Physics</span>
+                        <span>•</span>
+                        <span>Chapter 01</span>
+                      </div>
+                      <h2 class="font-display text-base sm:text-lg font-bold text-slate-900 dark:text-white">
+                        Electric Charges & Fields: Coulomb's Law
+                      </h2>
                     </div>
                   </div>
-                  <span class="text-[11px] font-mono px-2.5 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/70 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 font-bold">
-                    ⏱ Active Study
-                  </span>
+                  <div class="flex items-center gap-2">
+                    <span class="px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 text-xs font-bold font-mono">
+                      ⏱ Active Recall: 18m 42s
+                    </span>
+                  </div>
                 </div>
 
-                <!-- 2-Column Responsive Snippet -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
-                  <!-- Formula Derivation -->
-                  <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 space-y-2">
+                <!-- 2-Column Split Inside Device Screen -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
+                  
+                  <!-- Left: Formula & Concept Derivation -->
+                  <div class="md:col-span-7 bg-white dark:bg-slate-900 p-4 sm:p-5 rounded-2xl border border-slate-200/90 dark:border-slate-800 shadow-xs space-y-3">
                     <div class="flex items-center justify-between text-xs font-bold text-slate-700 dark:text-slate-300">
-                      <span>Formula Derivation</span>
-                      <span class="text-blue-600 dark:text-blue-400 font-mono text-[10px]">NCERT Sec 1.6</span>
+                      <span>Formula & Medium Dependence</span>
+                      <span class="text-blue-600 dark:text-blue-400">High-Yield NEET</span>
                     </div>
-                    <div class="p-2.5 bg-white dark:bg-slate-950 rounded-lg border border-slate-200/60 dark:border-slate-800 text-center text-slate-900 dark:text-white text-xs">
+                    <div class="p-3 bg-slate-50 dark:bg-slate-950 rounded-xl border border-slate-200/70 dark:border-slate-800 text-slate-900 dark:text-white dark-formula-target">
                       ${coulombEq}
                     </div>
-                    <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">
-                      Force inversely proportional to medium permittivity $\\varepsilon_r$. High-yield NEET calculation point.
+                    <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                      Force in dielectric medium of constant $\\varepsilon_r$: $F_{\\text{medium}} = \\frac{F_{\\text{vacuum}}}{\\varepsilon_r}$. The electric field follows the inverse-square law.
                     </p>
                   </div>
 
-                  <!-- Solved PYQ Question Preview -->
-                  <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 space-y-2">
-                    <div class="flex items-center justify-between text-xs font-bold text-slate-700 dark:text-slate-300">
-                      <span class="flex items-center gap-1.5">
-                        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                        <span>NEET Solved PYQ</span>
-                      </span>
-                      <span class="text-slate-400 text-[10px]">NEET 2023</span>
+                  <!-- Right: Real PYQ Snippet -->
+                  <div class="md:col-span-5 bg-white dark:bg-slate-900 p-4 sm:p-5 rounded-2xl border border-slate-200/90 dark:border-slate-800 shadow-xs space-y-3">
+                    <div class="flex items-center justify-between text-xs">
+                      <span class="font-bold text-slate-800 dark:text-slate-200">NEET 2024 Question #12</span>
+                      <span class="px-2 py-0.5 rounded bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 font-bold text-[10px]">+4 Marks</span>
                     </div>
-                    <p class="text-xs text-slate-800 dark:text-slate-200 font-medium">
-                      Two point charges +3μC and +4μC repel each other with force 20 N. If -2μC is added to each, new force is?
+                    <p class="text-xs text-slate-700 dark:text-slate-300 line-clamp-3">
+                      Two point charges placed in a medium of dielectric constant $K$ experience force $F$. In vacuum at same distance, the force is:
                     </p>
-                    <div class="flex items-center justify-between text-[11px] pt-1">
-                      <span class="text-emerald-600 dark:text-emerald-400 font-bold">Answer: 6.67 N (Attractive)</span>
-                      <span class="text-slate-400 text-[10px]">Step-by-step verified</span>
+                    <div class="p-2.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/70 border border-emerald-200 dark:border-emerald-800 text-xs font-bold text-emerald-800 dark:text-emerald-300 flex items-center justify-between">
+                      <span>✓ Correct Option: F × K</span>
+                      <span class="text-xs">92% Solved</span>
                     </div>
                   </div>
+
                 </div>
 
               </div>
-
             </div>
+
+            <!-- Floating UI Card 1: Top Left - Student Aspirant & PYQ Coverage -->
+            <div id="hero-floating-card-1" data-parallax-rate="-0.12" class="hero-card-init hero-parallax-card absolute -top-4 -left-2 sm:-top-8 sm:-left-8 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md p-3 sm:p-4 rounded-2xl border border-slate-200/90 dark:border-slate-700 shadow-xl shadow-slate-900/10 animate-float-slow z-20 will-change-transform">
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-base sm:text-lg font-bold shadow-sm">
+                  🩺
+                </div>
+                <div>
+                  <p class="text-[10px] font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">PYQ Explorer</p>
+                  <p class="text-xs sm:text-sm font-extrabold text-slate-900 dark:text-white">NEET 2014–2025 Solved</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating UI Card 2: Top Right - 92% Accuracy -->
+            <div id="hero-floating-card-2" data-parallax-rate="0.16" class="hero-card-init hero-parallax-card absolute -top-4 -right-2 sm:-top-8 sm:-right-8 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md p-3 sm:p-4 rounded-2xl border border-slate-200/90 dark:border-slate-700 shadow-xl shadow-slate-900/10 animate-float-reverse z-20 will-change-transform">
+              <div class="flex items-center gap-3">
+                <div class="text-right">
+                  <p class="text-[10px] font-bold text-slate-400 dark:text-slate-400 uppercase tracking-wider">Accuracy Rate</p>
+                  <p class="text-base sm:text-lg font-black text-emerald-600 dark:text-emerald-400 leading-none">92.4%</p>
+                </div>
+                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-base sm:text-lg font-bold">
+                  🎯
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating UI Card 3: Bottom Left - AI Weakness Doctor -->
+            <div id="hero-floating-card-3" data-parallax-rate="-0.09" class="hero-card-init hero-parallax-card absolute -bottom-4 -left-2 sm:-bottom-8 sm:-left-6 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md p-3 sm:p-4 rounded-2xl border border-slate-200/90 dark:border-slate-700 shadow-xl shadow-slate-900/10 animate-float-gentle z-20 will-change-transform">
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-rose-100 dark:bg-rose-950 text-rose-600 dark:text-rose-400 flex items-center justify-center text-base sm:text-lg font-bold">
+                  🧠
+                </div>
+                <div>
+                  <p class="text-[10px] font-bold text-rose-600 dark:text-rose-400 uppercase tracking-wider">AI Weakness Doctor</p>
+                  <p class="text-xs sm:text-sm font-extrabold text-slate-900 dark:text-white">Pinpoint Misconceptions</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating UI Card 4: Bottom Right - Weekly 720 Mock Simulation -->
+            <div id="hero-floating-card-4" data-parallax-rate="0.14" class="hero-card-init hero-parallax-card absolute -bottom-4 -right-2 sm:-bottom-8 sm:-right-6 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md p-3 sm:p-4 rounded-2xl border border-slate-200/90 dark:border-slate-700 shadow-xl shadow-slate-900/10 animate-float-slow z-20 will-change-transform" style="animation-delay: 2.5s;">
+              <div class="flex items-center gap-3">
+                <div>
+                  <p class="text-[10px] font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider">Weekly NTA Mock</p>
+                  <p class="text-xs sm:text-sm font-extrabold text-slate-900 dark:text-white">Score: 567 / 720</p>
+                </div>
+                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-amber-100 dark:bg-amber-950 text-amber-600 dark:text-amber-400 flex items-center justify-center text-base sm:text-lg font-bold">
+                  🏆
+                </div>
+              </div>
+            </div>
+
           </div>
 
         </div>
       </section>
 
       <!-- ==========================================
-           SECTION 2: SHOW WHAT STUDENTS GET
+           SECTION 2: STATISTICS & PROVEN COVERAGE
            ========================================== -->
-      <section class="w-full py-12 sm:py-16 bg-slate-50/60 dark:bg-slate-900/40 border-y border-slate-200/70 dark:border-slate-800/70">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-10">
+      <section class="py-8 sm:py-12 bg-[#F8FAFC] dark:bg-[#0B132B]/60 border-y border-slate-200/80 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-2 md:grid-cols-5 gap-4 sm:gap-6 text-center">
+            
+            <div class="space-y-0.5 sm:space-y-1 reveal-on-scroll">
+              <div class="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-blue-600 dark:text-blue-400 counter-val" data-target="10" data-suffix="+">10+</div>
+              <p class="text-xs sm:text-sm font-bold text-slate-700 dark:text-slate-300">Years of PYQs</p>
+              <p class="text-[11px] text-slate-500 dark:text-slate-400">2014 to 2025 Solved</p>
+            </div>
+
+            <div class="space-y-0.5 sm:space-y-1 reveal-on-scroll reveal-stagger-1">
+              <div class="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white counter-val" data-target="${totalTopics}" data-suffix="+">${totalTopics}+</div>
+              <p class="text-xs sm:text-sm font-bold text-slate-700 dark:text-slate-300">High-Yield Concepts</p>
+              <p class="text-[11px] text-slate-500 dark:text-slate-400">NCERT Mastered</p>
+            </div>
+
+            <div class="space-y-0.5 sm:space-y-1 reveal-on-scroll reveal-stagger-2">
+              <div class="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-emerald-600 dark:text-emerald-400 counter-val" data-target="720" data-suffix=" Marks">720 Marks</div>
+              <p class="text-xs sm:text-sm font-bold text-slate-700 dark:text-slate-300">Full-Length Mocks</p>
+              <p class="text-[11px] text-slate-500 dark:text-slate-400">Real NTA Simulation</p>
+            </div>
+
+            <div class="space-y-0.5 sm:space-y-1 reveal-on-scroll reveal-stagger-3">
+              <div class="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-indigo-600 dark:text-indigo-400 counter-val" data-target="3" data-suffix=" Subjects">3 Subjects</div>
+              <p class="text-xs sm:text-sm font-bold text-slate-700 dark:text-slate-300">Core Disciplines</p>
+              <p class="text-[11px] text-slate-500 dark:text-slate-400">Physics, Chem, Bio</p>
+            </div>
+
+            <div class="col-span-2 md:col-span-1 space-y-0.5 sm:space-y-1 reveal-on-scroll reveal-stagger-4">
+              <div class="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-rose-600 dark:text-rose-400 counter-val" data-target="100" data-suffix="%">100%</div>
+              <p class="text-xs sm:text-sm font-bold text-slate-700 dark:text-slate-300">NCERT-Aligned</p>
+              <p class="text-[11px] text-slate-500 dark:text-slate-400">Zero Distractions</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           SECTION 3: ONE ECOSYSTEM FOR NEET PREPARATION
+           ========================================== -->
+      <section id="ecosystem" class="py-12 sm:py-16 lg:py-20 bg-[#FFFFFF] dark:bg-[#0B1120] relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div class="text-center space-y-2 max-w-2xl mx-auto">
-            <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 dark:text-white tracking-tight">
-              Everything You Need. One Study Platform.
+          <div class="text-center max-w-3xl mx-auto space-y-2.5 sm:space-y-3 mb-8 sm:mb-10 lg:mb-12 reveal-on-scroll">
+            <span class="text-xs font-extrabold tracking-widest text-blue-600 dark:text-blue-400 uppercase">
+              COMPLETE INTEGRATED ARCHITECTURE
+            </span>
+            <h2 class="font-display text-2xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F172A] dark:text-white tracking-tight leading-tight">
+              One ecosystem for your entire NEET preparation.
             </h2>
-            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
-              Clear distinction between free foundation resources and smart premium practice.
+            <p class="text-sm sm:text-base lg:text-lg text-slate-600 dark:text-slate-300">
+              Everything you need to learn, practice, revise and improve — in one place.
             </p>
           </div>
 
-          <!-- Exactly Four Feature Blocks -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+          <!-- Central Ecosystem Diagram Visual -->
+          <div class="relative max-w-4xl mx-auto bg-slate-50 dark:bg-slate-900/70 rounded-3xl p-5 sm:p-8 lg:p-10 border border-slate-200/90 dark:border-slate-800 shadow-sm reveal-on-scroll">
             
-            <!-- Block 1: NCERT Study Library (Free) -->
-            <div class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-xs hover:border-blue-300 dark:hover:border-blue-700 transition-all flex flex-col justify-between space-y-4">
-              <div class="space-y-3">
-                <div class="flex items-center justify-between">
-                  <div class="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 flex items-center justify-center font-bold text-lg">
-                    📚
-                  </div>
-                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">
-                    Free Library Access
-                  </span>
-                </div>
-                <h3 class="text-base font-bold text-slate-900 dark:text-white">
-                  NCERT Study Library
-                </h3>
-                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                  Organised Class 11 & 12 Physics, Chemistry and Biology resources.
-                </p>
+            <!-- Orbiting 8 Integrated Modules -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+              
+              <div class="bg-white dark:bg-slate-900 p-3.5 sm:p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-md transition-all text-center space-y-1.5">
+                <div class="text-xl sm:text-2xl">📚</div>
+                <h3 class="font-display text-xs sm:text-sm font-bold text-slate-900 dark:text-white">Unified Library</h3>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400">Class 11 & 12 structured notes</p>
               </div>
-              <div class="text-[11px] font-medium text-slate-500 dark:text-slate-400 pt-2 border-t border-slate-100 dark:border-slate-800/80">
-                Covers all 270+ NEET UG topics
-              </div>
-            </div>
 
-            <!-- Block 2: 10+ Years of PYQs (Free) -->
-            <div class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-xs hover:border-blue-300 dark:hover:border-blue-700 transition-all flex flex-col justify-between space-y-4">
-              <div class="space-y-3">
-                <div class="flex items-center justify-between">
-                  <div class="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 flex items-center justify-center font-bold text-lg">
-                    📝
-                  </div>
-                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">
-                    Free Library Access
-                  </span>
-                </div>
-                <h3 class="text-base font-bold text-slate-900 dark:text-white">
-                  10+ Years of PYQs
-                </h3>
-                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                  Practise previous-year questions with explanations.
-                </p>
+              <div class="bg-white dark:bg-slate-900 p-3.5 sm:p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-md transition-all text-center space-y-1.5">
+                <div class="text-xl sm:text-2xl">🏆</div>
+                <h3 class="font-display text-xs sm:text-sm font-bold text-slate-900 dark:text-white">10+ Years PYQs</h3>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400">2014–2025 verified solutions</p>
               </div>
-              <div class="text-[11px] font-medium text-slate-500 dark:text-slate-400 pt-2 border-t border-slate-100 dark:border-slate-800/80">
-                Official NTA NEET question archive
-              </div>
-            </div>
 
-            <!-- Block 3: Smart Practice (Premium) -->
-            <div class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-slate-900 border border-blue-200 dark:border-blue-900/60 shadow-xs hover:border-blue-400 dark:hover:border-blue-600 transition-all flex flex-col justify-between space-y-4 relative">
-              <div class="space-y-3">
-                <div class="flex items-center justify-between">
-                  <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-lg shadow-xs">
-                    🎯
-                  </div>
-                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800">
-                    Premium Feature
-                  </span>
-                </div>
-                <h3 class="text-base font-bold text-slate-900 dark:text-white">
-                  Smart Practice
-                </h3>
-                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                  Strengthen concepts through targeted questions and revision.
-                </p>
+              <div class="bg-white dark:bg-slate-900 p-3.5 sm:p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-md transition-all text-center space-y-1.5">
+                <div class="text-xl sm:text-2xl">⚡</div>
+                <h3 class="font-display text-xs sm:text-sm font-bold text-slate-900 dark:text-white">Revision Sheets</h3>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400">Formula & reaction mindmaps</p>
               </div>
-              <div class="text-[11px] font-medium text-blue-600 dark:text-blue-400 pt-2 border-t border-slate-100 dark:border-slate-800/80">
-                Custom test generator & flashcards
-              </div>
-            </div>
 
-            <!-- Block 4: Performance Insights (Premium) -->
-            <div class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-slate-900 border border-blue-200 dark:border-blue-900/60 shadow-xs hover:border-blue-400 dark:hover:border-blue-600 transition-all flex flex-col justify-between space-y-4 relative">
-              <div class="space-y-3">
-                <div class="flex items-center justify-between">
-                  <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-lg shadow-xs">
-                    🩺
-                  </div>
-                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800">
-                    Premium Feature
-                  </span>
-                </div>
-                <h3 class="text-base font-bold text-slate-900 dark:text-white">
-                  Performance Insights
-                </h3>
-                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                  Identify mistakes and understand where you need more practice.
-                </p>
+              <div class="bg-white dark:bg-slate-900 p-3.5 sm:p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-md transition-all text-center space-y-1.5">
+                <div class="text-xl sm:text-2xl">📝</div>
+                <h3 class="font-display text-xs sm:text-sm font-bold text-slate-900 dark:text-white">Active Practice</h3>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400">Targeted topic question drills</p>
               </div>
-              <div class="text-[11px] font-medium text-blue-600 dark:text-blue-400 pt-2 border-t border-slate-100 dark:border-slate-800/80">
-                AI Weakness Doctor & Error Book
+
+              <div class="bg-white dark:bg-slate-900 p-3.5 sm:p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-md transition-all text-center space-y-1.5">
+                <div class="text-xl sm:text-2xl">📊</div>
+                <h3 class="font-display text-xs sm:text-sm font-bold text-slate-900 dark:text-white">Progress Radar</h3>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400">Real-time mastery tracking</p>
               </div>
+
+              <div class="bg-white dark:bg-slate-900 p-3.5 sm:p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-md transition-all text-center space-y-1.5">
+                <div class="text-xl sm:text-2xl">🧠</div>
+                <h3 class="font-display text-xs sm:text-sm font-bold text-slate-900 dark:text-white">AI Weakness Doctor</h3>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400">Algorithmic error remedy</p>
+              </div>
+
+              <div class="bg-white dark:bg-slate-900 p-3.5 sm:p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-md transition-all text-center space-y-1.5">
+                <div class="text-xl sm:text-2xl">⏱</div>
+                <h3 class="font-display text-xs sm:text-sm font-bold text-slate-900 dark:text-white">Study Stopwatch</h3>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400">Focus timer per concept</p>
+              </div>
+
+              <div class="bg-white dark:bg-slate-900 p-3.5 sm:p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-md transition-all text-center space-y-1.5">
+                <div class="text-xl sm:text-2xl">🎯</div>
+                <h3 class="font-display text-xs sm:text-sm font-bold text-slate-900 dark:text-white">Weekly 720 Mock</h3>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400">180Q NTA standard test</p>
+              </div>
+
             </div>
 
           </div>
-
-          <!-- Transparent Note -->
-          <p class="text-center text-xs text-slate-500 dark:text-slate-400 max-w-xl mx-auto">
-            Explore notes and PYQs freely. Upgrade to premium practice when you are ready for simulated full-length mocks and personalized error diagnosis.
-          </p>
 
         </div>
       </section>
 
       <!-- ==========================================
-           SECTION 3: CREATE GENUINE URGENCY
+           SECTION 4: PYQ EXPLORER (REVERSE-ENGINEER THE EXAM)
            ========================================== -->
-      <section class="w-full py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-        <div class="text-center space-y-4">
+      <section id="pyqs" class="py-12 sm:py-16 lg:py-20 bg-[#F8FAFC] dark:bg-[#0B132B]/60 border-y border-slate-200/80 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">
-            <span>📅</span>
-            <span>Targeting NEET UG 2027</span>
+          <div class="text-center max-w-3xl mx-auto space-y-2.5 sm:space-y-3 mb-8 sm:mb-10 lg:mb-12 reveal-on-scroll">
+            <span class="text-xs font-extrabold tracking-widest text-blue-600 dark:text-blue-400 uppercase">
+              10+ YEARS PAST PAPERS
+            </span>
+            <h2 class="font-display text-2xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F172A] dark:text-white tracking-tight leading-tight">
+              NEET has already asked the question.<br />Now understand why.
+            </h2>
+            <p class="text-sm sm:text-base lg:text-lg text-slate-600 dark:text-slate-300">
+              Every past paper question from 2014 to 2025 comes with detailed verified solutions and 1-click links to the underlying concept.
+            </p>
           </div>
 
-          <!-- Section Heading -->
-          <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 dark:text-white tracking-tight">
-            Every Day Counts. Make Your Next Study Session Matter.
+          <!-- Realistic PYQ Mockup Interface -->
+          <div class="max-w-3xl mx-auto bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/90 dark:border-slate-800 shadow-xl p-5 sm:p-7 space-y-4 sm:space-y-5 text-left reveal-on-scroll">
+            
+            <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-100 dark:border-slate-800">
+              <div class="flex items-center gap-2">
+                <span class="px-2.5 py-1 rounded bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 text-xs font-extrabold">NEET 2024</span>
+                <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">Chemistry • Electrochemistry</span>
+              </div>
+              <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950 px-2.5 py-0.5 rounded-full">+4 / -1 Marks</span>
+            </div>
+
+            <!-- Question Statement -->
+            <div class="space-y-1.5">
+              <p class="text-base sm:text-lg font-bold text-slate-900 dark:text-white leading-relaxed">
+                Q: Which of the following expressions correctly represents the relationship between standard Gibbs energy change ($\Delta G^\circ$) and the equilibrium constant ($K$) of a reaction?
+              </p>
+            </div>
+
+            <!-- 4 Options Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs font-semibold">
+              <div class="p-3 sm:p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 bg-slate-50/50 dark:bg-slate-950/50">
+                A) $\\Delta G^\\circ = RT \\ln K$
+              </div>
+              <div class="p-3 sm:p-3.5 rounded-xl border-2 border-emerald-500 bg-emerald-50/70 dark:bg-emerald-950/70 text-emerald-900 dark:text-emerald-200 font-bold flex items-center justify-between shadow-xs">
+                <span>B) $\\Delta G^\\circ = -RT \\ln K$</span>
+                <span class="w-5 h-5 rounded-full bg-emerald-500 text-white flex items-center justify-center text-[10px]">✓</span>
+              </div>
+              <div class="p-3 sm:p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 bg-slate-50/50 dark:bg-slate-950/50">
+                C) $\\Delta G^\\circ = -nFE^\\circ$
+              </div>
+              <div class="p-3 sm:p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 bg-slate-50/50 dark:bg-slate-950/50">
+                D) $\\Delta G^\\circ = \\Delta H^\\circ - T\\Delta S^\\circ$
+              </div>
+            </div>
+
+            <!-- Step-by-Step Verified Solution -->
+            <div class="p-3.5 sm:p-4 bg-slate-50 dark:bg-slate-950 rounded-2xl border border-slate-200/80 dark:border-slate-800 space-y-2 sm:space-y-2.5">
+              <div class="flex items-center justify-between text-xs font-bold text-slate-800 dark:text-slate-200">
+                <span class="flex items-center gap-1.5 text-emerald-700 dark:text-emerald-400">
+                  <span>✓</span> Step-by-Step Verified Solution
+                </span>
+                <span class="text-slate-400 dark:text-slate-500 font-mono">NTA Official Key</span>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                At thermodynamic equilibrium, $\\Delta G = 0$ and the reaction quotient $Q = K$. From the fundamental isotherm:
+              </p>
+              <div class="p-2 sm:p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 text-center dark-formula-target">
+                ${gibbsKeq}
+              </div>
+              <div class="pt-0.5">
+                <a href="#home" class="inline-flex items-center gap-1.5 text-xs font-bold text-blue-600 dark:text-blue-400 hover:underline">
+                  <span>Learn Related Concept: Gibbs Free Energy & Equilibrium →</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Visual Flow Indicator -->
+            <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-center">
+              <div class="flex-1">
+                <div class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase">Step 1</div>
+                <div class="text-xs font-extrabold text-blue-600 dark:text-blue-400">PYQ Question</div>
+              </div>
+              <div class="text-slate-300 dark:text-slate-600 font-bold">→</div>
+              <div class="flex-1">
+                <div class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase">Step 2</div>
+                <div class="text-xs font-extrabold text-indigo-600 dark:text-indigo-400">Core Concept</div>
+              </div>
+              <div class="text-slate-300 dark:text-slate-600 font-bold">→</div>
+              <div class="flex-1">
+                <div class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase">Step 3</div>
+                <div class="text-xs font-extrabold text-emerald-600 dark:text-emerald-400">Targeted Practice</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==========================================
+           SECTION 5: FORMULA / CONCEPT VISUAL (KATEX BEAUTY)
+           ========================================== -->
+      <section id="library" class="py-12 sm:py-16 lg:py-20 bg-[#FFFFFF] dark:bg-[#0B1120]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            
+            <!-- Left Description -->
+            <div class="lg:col-span-5 space-y-4 text-left reveal-on-scroll">
+              <span class="text-xs font-extrabold tracking-widest text-blue-600 dark:text-blue-400 uppercase">
+                ACADEMIC RIGOR & CLARITY
+              </span>
+              <h2 class="font-display text-2xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F172A] dark:text-white tracking-tight leading-tight">
+                From formula to understanding.
+              </h2>
+              <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+                NEET questions test the derivation and constraints behind formulas. VG Insights renders beautifully formatted mathematical equations alongside worked examples and trap alerts.
+              </p>
+
+              <div class="space-y-2.5 pt-1">
+                <div class="flex items-start gap-2.5">
+                  <div class="w-5 h-5 rounded-lg bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">✓</div>
+                  <p class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300">KaTeX mathematical typography with standard fractions & units.</p>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <div class="w-5 h-5 rounded-lg bg-amber-100 dark:bg-amber-950 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">⚠️</div>
+                  <p class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300">NEET Trap Warnings: Prevent common examiner calculation traps.</p>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <div class="w-5 h-5 rounded-lg bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">🧮</div>
+                  <p class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300">Worked step-by-step examples from standard Daniell & galvanic cells.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Concept Interface Mockup -->
+            <div class="lg:col-span-7 reveal-on-scroll">
+              <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/90 dark:border-slate-800 shadow-xl p-5 sm:p-7 space-y-4 text-left relative">
+                
+                <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-100 dark:border-slate-800">
+                  <div>
+                    <div class="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400 font-semibold mb-0.5">
+                      <span>Class 12</span>
+                      <span>›</span>
+                      <span>Chemistry</span>
+                      <span>›</span>
+                      <span>Electrochemistry</span>
+                    </div>
+                    <h3 class="font-display text-xl sm:text-2xl font-black text-slate-900 dark:text-white">
+                      Nernst Equation & Cell Potential
+                    </h3>
+                  </div>
+                  <span class="px-2.5 py-1 bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 text-xs font-bold rounded-lg">
+                    High-Yield Concept
+                  </span>
+                </div>
+
+                <!-- Beautiful KaTeX Formula Display -->
+                <div class="p-3.5 sm:p-4 bg-slate-50 dark:bg-slate-950 rounded-2xl border border-slate-200/80 dark:border-slate-800 space-y-1.5">
+                  <div class="text-xs font-bold text-slate-700 dark:text-slate-300">Master Formula: Cell EMF Under Non-Standard Conditions</div>
+                  <div class="py-1 px-2 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
+                    ${nernstEq}
+                  </div>
+                </div>
+
+                <!-- Worked Example Daniell Cell -->
+                <div class="p-3.5 sm:p-4 bg-blue-50/60 dark:bg-blue-950/40 rounded-2xl border border-blue-200/70 dark:border-blue-900/60 space-y-2">
+                  <div class="flex items-center justify-between text-xs font-bold text-blue-900 dark:text-blue-300">
+                    <span>Worked Example: Daniell Cell</span>
+                    <span class="text-blue-600 dark:text-blue-400">NEET Standard</span>
+                  </div>
+                  <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">
+                    ${renderInlineMathHTML("For $\\text{Zn}(s) + \\text{Cu}^{2+}(0.1\\text{ M}) \\rightarrow \\text{Zn}^{2+}(0.01\\text{ M}) + \\text{Cu}(s)$ with $E^\\circ_{\\text{cell}} = 1.10\\text{ V}$, calculate $E_{\\text{cell}}$.")}
+                  </p>
+                  <div class="bg-white dark:bg-slate-900 p-2.5 rounded-xl border border-blue-100 dark:border-slate-800 overflow-x-auto text-xs">
+                    ${renderFormulaHTML("E_{\\text{cell}} = 1.10 - \\frac{0.0591}{2}\\log_{10}\\left(\\frac{0.01}{0.1}\\right) = 1.10 + 0.0295 = 1.1295\\text{ V}", { displayMode: false })}
+                  </div>
+                </div>
+
+                <!-- NEET Trap Warning -->
+                <div class="p-3.5 bg-rose-50 dark:bg-rose-950/40 rounded-2xl border border-rose-200/80 dark:border-rose-900/60 flex items-start gap-2.5 text-xs text-rose-900 dark:text-rose-200">
+                  <span class="text-rose-600 dark:text-rose-400 font-bold text-sm">⚠️</span>
+                  <div>
+                    <span class="font-bold">NEET Trap:</span> ${renderInlineMathHTML("In reaction quotient $Q$, pure solids ($[\\text{Zn}] = [\\text{Cu}] = 1$) are omitted. Always raise ion concentrations to their stoichiometric powers (e.g. $[\\text{Ag}^+]^2$).")}
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           SECTION 6: WEEKLY MOCK TEST SECTION (720 MARKS)
+           ========================================== -->
+      <section id="mock" class="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-[#EFF6FF] to-[#FFFFFF] dark:from-[#0B132B] dark:to-[#0B1120] border-y border-slate-200/80 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="text-center max-w-3xl mx-auto space-y-2.5 sm:space-y-3 mb-8 sm:mb-10 lg:mb-12 reveal-on-scroll">
+            <span class="text-xs font-extrabold tracking-widest text-blue-600 dark:text-blue-400 uppercase">
+              REAL EXAM BENCHMARK
+            </span>
+            <h2 class="font-display text-2xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F172A] dark:text-white tracking-tight leading-tight">
+              Every week.<br />One real test.
+            </h2>
+            <p class="text-sm sm:text-base lg:text-lg text-slate-600 dark:text-slate-300">
+              Train under the same pressure. Know exactly where you stand.
+            </p>
+          </div>
+
+          <!-- Mock Simulation Card Visual -->
+          <div class="max-w-4xl mx-auto bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/90 dark:border-slate-800 shadow-xl p-5 sm:p-8 space-y-5 sm:space-y-6 text-left reveal-on-scroll">
+            
+            <div class="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-slate-100 dark:border-slate-800">
+              <div>
+                <span class="px-2.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-800 dark:text-blue-300 text-xs font-bold">ALL-INDIA SIMULATION #08</span>
+                <h3 class="font-display text-xl sm:text-2xl font-black text-slate-900 dark:text-white mt-1">
+                  National Full-Length NEET Mock
+                </h3>
+              </div>
+              <div class="text-right">
+                <span class="text-xs font-bold text-slate-400 uppercase">Your Performance</span>
+                <div class="text-2xl sm:text-4xl font-black text-blue-600 dark:text-blue-400">
+                  567 <span class="text-sm sm:text-base text-slate-400 font-semibold">/ 720</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Subject-wise Marks Progress -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3.5 sm:gap-4">
+              
+              <!-- Physics Bar -->
+              <div class="p-3.5 sm:p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/70 dark:border-slate-800 space-y-2">
+                <div class="flex items-center justify-between text-xs font-bold">
+                  <span class="text-slate-800 dark:text-slate-200">⚡ Physics</span>
+                  <span class="text-blue-600 dark:text-blue-400">142 / 180</span>
+                </div>
+                <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+                  <div class="h-full bg-blue-600 rounded-full transition-all duration-1000" style="width: 78.8%;"></div>
+                </div>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400">Accuracy: 84% • 36 Correct, 4 Incorrect</p>
+              </div>
+
+              <!-- Chemistry Bar -->
+              <div class="p-3.5 sm:p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/70 dark:border-slate-800 space-y-2">
+                <div class="flex items-center justify-between text-xs font-bold">
+                  <span class="text-slate-800 dark:text-slate-200">🧪 Chemistry</span>
+                  <span class="text-emerald-600 dark:text-emerald-400">155 / 180</span>
+                </div>
+                <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+                  <div class="h-full bg-emerald-600 rounded-full transition-all duration-1000" style="width: 86.1%;"></div>
+                </div>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400">Accuracy: 91% • 39 Correct, 2 Incorrect</p>
+              </div>
+
+              <!-- Biology Bar -->
+              <div class="p-3.5 sm:p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/70 dark:border-slate-800 space-y-2">
+                <div class="flex items-center justify-between text-xs font-bold">
+                  <span class="text-slate-800 dark:text-slate-200">🧬 Biology</span>
+                  <span class="text-indigo-600 dark:text-indigo-400">320 / 360</span>
+                </div>
+                <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+                  <div class="h-full bg-indigo-600 rounded-full transition-all duration-1000" style="width: 88.9%;"></div>
+                </div>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400">Accuracy: 93% • 81 Correct, 6 Incorrect</p>
+              </div>
+
+            </div>
+
+            <!-- Bottom Test Meta & Action -->
+            <div class="pt-3 flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-slate-100 dark:border-slate-800">
+              <div class="flex items-center gap-3 text-xs text-slate-500 dark:text-slate-400 font-semibold">
+                <span>⏱ 180 Minutes</span>
+                <span>•</span>
+                <span>🎯 78.7% Accuracy</span>
+                <span>•</span>
+                <span>🏆 Top 3.8%</span>
+              </div>
+              <a
+                href="#weekly-mock"
+                class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold shadow-md shadow-blue-500/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2"
+              >
+                <span>Attempt Live Mock</span>
+                <span>→</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==========================================
+           SECTION 8: ACTIVE RECALL LOOP
+           ========================================== -->
+      <section class="py-12 sm:py-16 lg:py-20 bg-[#FFFFFF] dark:bg-[#0B1120]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="text-center max-w-3xl mx-auto space-y-2.5 sm:space-y-3 mb-8 sm:mb-10 lg:mb-12 reveal-on-scroll">
+            <span class="text-xs font-extrabold tracking-widest text-blue-600 dark:text-blue-400 uppercase">
+              COGNITIVE RETENTION
+            </span>
+            <h2 class="font-display text-2xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F172A] dark:text-white tracking-tight leading-tight">
+              Learn it.<br />Solve it.<br />Own it.
+            </h2>
+            <p class="text-sm sm:text-base lg:text-lg text-slate-600 dark:text-slate-300">
+              The continuous 4-step loop engineered to turn weak questions into permanent retention.
+            </p>
+          </div>
+
+          <!-- 4-Step Process Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 reveal-on-scroll">
+            
+            <div class="p-4.5 sm:p-5 rounded-3xl bg-blue-50/60 dark:bg-blue-950/40 border border-blue-200/80 dark:border-blue-900/60 space-y-2">
+              <span class="font-display text-xl sm:text-2xl font-black text-blue-600 dark:text-blue-400">01</span>
+              <h3 class="font-display text-base font-bold text-slate-900 dark:text-white">Attempt Question</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                Test yourself under realistic timed conditions without peeking at answers.
+              </p>
+            </div>
+
+            <div class="p-4.5 sm:p-5 rounded-3xl bg-rose-50/60 dark:bg-rose-950/40 border border-rose-200/80 dark:border-rose-900/60 space-y-2">
+              <span class="font-display text-xl sm:text-2xl font-black text-rose-600 dark:text-rose-400">02</span>
+              <h3 class="font-display text-base font-bold text-slate-900 dark:text-white">Detect Error</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                Instantly isolate whether the mistake was formula, sign convention, or conceptual.
+              </p>
+            </div>
+
+            <div class="p-4.5 sm:p-5 rounded-3xl bg-amber-50/60 dark:bg-amber-950/40 border border-amber-200/80 dark:border-amber-900/60 space-y-2">
+              <span class="font-display text-xl sm:text-2xl font-black text-amber-600 dark:text-amber-400">03</span>
+              <h3 class="font-display text-base font-bold text-slate-900 dark:text-white">Review Concept</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                Jump straight into the concise NCERT note and examine worked examples.
+              </p>
+            </div>
+
+            <div class="p-4.5 sm:p-5 rounded-3xl bg-emerald-50/60 dark:bg-emerald-950/40 border border-emerald-200/80 dark:border-emerald-900/60 space-y-2">
+              <span class="font-display text-xl sm:text-2xl font-black text-emerald-600 dark:text-emerald-400">04</span>
+              <h3 class="font-display text-base font-bold text-slate-900 dark:text-white">Mastery Achieved</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                Solve fresh variation questions until your accuracy surpasses 90%.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==========================================
+           SECTION 9: REVISION SECTION (HIGH-YIELD SHEETS)
+           ========================================== -->
+      <section id="revision" class="py-12 sm:py-16 lg:py-20 bg-[#F8FAFC] dark:bg-[#0B132B]/60 border-y border-slate-200/80 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="text-center max-w-3xl mx-auto space-y-2.5 sm:space-y-3 mb-8 sm:mb-10 lg:mb-12 reveal-on-scroll">
+            <span class="text-xs font-extrabold tracking-widest text-blue-600 dark:text-blue-400 uppercase">
+              HIGH-YIELD REVISION SHEETS
+            </span>
+            <h2 class="font-display text-2xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F172A] dark:text-white tracking-tight leading-tight">
+              Revision, without the chaos.
+            </h2>
+            <p class="text-sm sm:text-base lg:text-lg text-slate-600 dark:text-slate-300">
+              Formula summaries, high-yield reactions, memory maps and exam traps — built for fast recall.
+            </p>
+          </div>
+
+          <!-- Revision Cards Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 reveal-on-scroll">
+            
+            <!-- Card 1: Gibbs Free Energy -->
+            <div class="bg-white dark:bg-slate-900 p-4 sm:p-4.5 rounded-3xl border border-slate-200/90 dark:border-slate-800 shadow-sm hover:shadow-lg transition-all space-y-2.5">
+              <div class="flex items-center justify-between text-[11px]">
+                <span class="px-2 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 font-bold uppercase">Formula</span>
+                <span class="text-slate-400 font-semibold">Thermodynamics</span>
+              </div>
+              <h3 class="font-display text-base font-bold text-slate-900 dark:text-white">Gibbs Free Energy</h3>
+              <div class="p-1 bg-slate-50 dark:bg-slate-950 rounded-2xl text-center">
+                ${gibbsEq}
+              </div>
+              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                ${renderInlineMathHTML("Spontaneous when $\\Delta G < 0$. Endothermic reactions become spontaneous at high temperatures if $\\Delta S > 0$.")}
+              </p>
+            </div>
+
+            <!-- Card 2: Aldol Condensation -->
+            <div class="bg-white dark:bg-slate-900 p-4 sm:p-4.5 rounded-3xl border border-slate-200/90 dark:border-slate-800 shadow-sm hover:shadow-lg transition-all space-y-2.5">
+              <div class="flex items-center justify-between text-[11px]">
+                <span class="px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 font-bold uppercase">Reaction</span>
+                <span class="text-slate-400 font-semibold">Aldehydes</span>
+              </div>
+              <h3 class="font-display text-base font-bold text-slate-900 dark:text-white">Aldol Condensation</h3>
+              <div class="p-1 bg-slate-50 dark:bg-slate-950 rounded-2xl text-center">
+                ${aldolEq}
+              </div>
+              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                ${renderInlineMathHTML("Requires at least one $\\alpha$-hydrogen. Forms $\\alpha,\\beta$-unsaturated carbonyl compound upon dehydration.")}
+              </p>
+            </div>
+
+            <!-- Card 3: Genetic Code Rules -->
+            <div class="bg-white dark:bg-slate-900 p-4 sm:p-4.5 rounded-3xl border border-slate-200/90 dark:border-slate-800 shadow-sm hover:shadow-lg transition-all space-y-2.5">
+              <div class="flex items-center justify-between text-[11px]">
+                <span class="px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 font-bold uppercase">High-Yield</span>
+                <span class="text-slate-400 font-semibold">Genetics</span>
+              </div>
+              <h3 class="font-display text-base font-bold text-slate-900 dark:text-white">Genetic Code Rules</h3>
+              <div class="p-2.5 bg-slate-50 dark:bg-slate-950 rounded-2xl text-xs font-bold text-slate-800 dark:text-slate-200 space-y-1">
+                <div>• Degenerate (61 codons, 20 AAs)</div>
+                <div>• Unambiguous & Universal</div>
+                <div>• AUG: Methionine & Start Codon</div>
+              </div>
+              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                Stop codons (UAA, UAG, UGA) do not code for any amino acid and have no corresponding tRNAs.
+              </p>
+            </div>
+
+            <!-- Card 4: NEET Trap Warning (Mirror Formula) -->
+            <div class="bg-white dark:bg-slate-900 p-4 sm:p-4.5 rounded-3xl border border-slate-200/90 dark:border-slate-800 shadow-sm hover:shadow-lg transition-all space-y-2.5">
+              <div class="flex items-center justify-between text-[11px]">
+                <span class="px-2 py-0.5 rounded bg-rose-100 dark:bg-rose-950 text-rose-700 dark:text-rose-300 font-bold uppercase">NEET Trap</span>
+                <span class="text-slate-400 font-semibold">Ray Optics</span>
+              </div>
+              <h3 class="font-display text-base font-bold text-slate-900 dark:text-white">Mirror Formula Signs</h3>
+              <div class="p-1 bg-slate-50 dark:bg-slate-950 rounded-2xl text-center">
+                ${opticsEq}
+              </div>
+              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                ${renderInlineMathHTML("Always substitute $u$, $v$, and $f$ with proper Cartesian signs (e.g. concave mirror $f < 0$).")}
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==========================================
+           SECTION 11: FINAL DRAMATIC HERO CTA
+           ========================================== -->
+      <section class="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-[#FFFFFF] to-[#EFF6FF] dark:from-[#0B1120] dark:to-[#0B132B] text-center relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5 sm:space-y-6 reveal-on-scroll">
+          
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950 border border-blue-200 dark:border-blue-800 text-blue-700 dark:text-blue-300 text-xs font-bold uppercase tracking-wider">
+            <span>GET READY FOR NEET UG 2027</span>
+          </span>
+
+          <h2 class="font-display text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#0F172A] dark:text-white tracking-tight leading-tight">
+            Ready to master NEET,<br />
+            <span class="text-[#2563EB] dark:text-blue-400">one concept at a time?</span>
           </h2>
 
-          <!-- Supporting Text -->
-          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            NEET preparation is a long journey. Start building consistency today instead of postponing your next study session.
+          <p class="text-sm sm:text-base lg:text-lg text-slate-600 dark:text-slate-300 max-w-xl mx-auto leading-relaxed">
+            Stop studying everything. Start mastering what matters.
           </p>
 
-          <!-- Three Simple Steps -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-6 pb-6 text-left">
-            
-            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 space-y-2">
-              <div class="text-blue-600 dark:text-blue-400 font-mono font-black text-sm">
-                01
-              </div>
-              <h3 class="text-base font-bold text-slate-900 dark:text-white">
-                Learn a concept.
-              </h3>
-              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                Study concise NCERT theory, clear definitions, and formula derivations without distraction.
-              </p>
-            </div>
-
-            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 space-y-2">
-              <div class="text-blue-600 dark:text-blue-400 font-mono font-black text-sm">
-                02
-              </div>
-              <h3 class="text-base font-bold text-slate-900 dark:text-white">
-                Practise questions.
-              </h3>
-              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                Test your understanding with authentic previous-year questions and chapterwise MCQs.
-              </p>
-            </div>
-
-            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 space-y-2">
-              <div class="text-blue-600 dark:text-blue-400 font-mono font-black text-sm">
-                03
-              </div>
-              <h3 class="text-base font-bold text-slate-900 dark:text-white">
-                Review your mistakes.
-              </h3>
-              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                Diagnose errors immediately so misconceptions don't repeat on exam day.
-              </p>
-            </div>
-
-          </div>
-
-          <!-- Urgency CTA -->
-          <div class="pt-2">
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 pt-1 sm:pt-2">
             <button
               type="button"
-              id="btn-urgency-start-cta"
-              class="landing-primary-cta px-8 py-3.5 sm:py-4 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-black text-sm sm:text-base shadow-md shadow-blue-500/20 active:scale-[0.98] transition-all inline-flex items-center gap-2 cursor-pointer focus:outline-none focus:ring-4 focus:ring-blue-500/30"
+              id="btn-footer-start-free"
+              class="w-full sm:w-auto px-8 py-3.5 rounded-2xl bg-gradient-to-r from-[#2563EB] to-[#1D4ED8] hover:from-[#1D4ED8] hover:to-[#1E40AF] text-white text-sm sm:text-base font-bold shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer"
             >
-              <span>Start Studying Today</span>
-              <span>→</span>
+              <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24">
+                <path fill="#ffffff" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+              </svg>
+              <span>Start Learning</span>
+              <span class="text-blue-200 text-base sm:text-lg">→</span>
             </button>
           </div>
 
-        </div>
-      </section>
-
-      <!-- ==========================================
-           SECTION 4: BUILD TRUST
-           ========================================== -->
-      <section class="w-full py-12 sm:py-16 bg-slate-50/60 dark:bg-slate-900/40 border-y border-slate-200/70 dark:border-slate-800/70">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-          
-          <div class="text-center space-y-2 max-w-2xl mx-auto">
-            <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 dark:text-white tracking-tight">
-              Built for Focused NEET Preparation.
-            </h2>
-            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
-              Verified syllabus discipline aligned with the latest National Testing Agency standards.
-            </p>
-          </div>
-
-          <!-- Verified Platform Details Grid -->
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 text-center">
-            
-            <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 space-y-1.5">
-              <div class="text-emerald-600 dark:text-emerald-400 font-bold text-lg">✓</div>
-              <p class="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">Class 11 & 12</p>
-              <p class="text-[11px] text-slate-500 dark:text-slate-400">Complete syllabus resources</p>
-            </div>
-
-            <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 space-y-1.5">
-              <div class="text-emerald-600 dark:text-emerald-400 font-bold text-lg">✓</div>
-              <p class="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">All 3 Subjects</p>
-              <p class="text-[11px] text-slate-500 dark:text-slate-400">Physics, Chemistry & Biology</p>
-            </div>
-
-            <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 space-y-1.5">
-              <div class="text-emerald-600 dark:text-emerald-400 font-bold text-lg">✓</div>
-              <p class="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">PYQ Practice</p>
-              <p class="text-[11px] text-slate-500 dark:text-slate-400">Previous-year question practice</p>
-            </div>
-
-            <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 space-y-1.5">
-              <div class="text-emerald-600 dark:text-emerald-400 font-bold text-lg">✓</div>
-              <p class="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">Structured Answers</p>
-              <p class="text-[11px] text-slate-500 dark:text-slate-400">Explanations & revision sheets</p>
-            </div>
-
-          </div>
-
-          <!-- Compact Founder Card -->
-          <div class="max-w-2xl mx-auto p-5 sm:p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs flex flex-col sm:flex-row items-center gap-4 sm:gap-5 text-center sm:text-left">
-            <div class="w-14 h-14 rounded-2xl bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 flex items-center justify-center text-2xl font-bold shrink-0">
-              🩺
-            </div>
-            <div class="space-y-1 text-xs sm:text-sm">
-              <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
-                <span class="font-bold text-slate-900 dark:text-white text-sm sm:text-base">
-                  Dr. Prajwal Kabadi, MBBS
-                </span>
-                <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">
-                  Medical Mentor
-                </span>
-              </div>
-              <p class="text-slate-600 dark:text-slate-300 font-medium">
-                Created by a medical professional and an education technology team.
-              </p>
-              <p class="text-[11px] text-slate-500 dark:text-slate-400">
-                Co-founded with Mr. Amit Bangare to give NEET aspirants a structured, distraction-free preparation system.
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- ==========================================
-           SECTION 5: FINAL CTA
-           ========================================== -->
-      <section class="w-full py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
-        <div class="rounded-3xl bg-gradient-to-r from-blue-600 to-blue-700 text-white p-8 sm:p-12 lg:p-14 text-center space-y-5 shadow-xl shadow-blue-500/20">
-          
-          <h2 class="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white">
-            Your Next Step Starts Today.
-          </h2>
-          
-          <p class="text-sm sm:text-base md:text-lg text-blue-100 max-w-xl mx-auto leading-relaxed">
-            Take control of your NEET preparation, one concept at a time.
+          <p class="text-xs font-medium text-slate-400 pt-1">
+            No credit card required. Free to explore the entire NEET library.
           </p>
 
-          <div class="pt-2 flex flex-col items-center gap-2">
-            <button
-              type="button"
-              id="btn-final-start-cta"
-              class="landing-primary-cta px-8 sm:px-10 py-3.5 sm:py-4 rounded-2xl bg-white hover:bg-slate-50 text-blue-700 font-black text-base sm:text-lg shadow-lg active:scale-[0.98] transition-all flex items-center gap-2 cursor-pointer focus:outline-none focus:ring-4 focus:ring-white/40"
-            >
-              <span>Start My NEET Preparation</span>
-              <span>→</span>
-            </button>
-            <p class="text-[11px] sm:text-xs text-blue-100/90 text-center pt-1">
-              Begin with the study library. Premium practice features are available through subscription.
+        </div>
+      </section>
+
+      <!-- ==========================================
+           FOUNDERS & LEADERSHIP SECTION
+           ========================================== -->
+      <section id="founders" class="py-12 sm:py-16 bg-gradient-to-b from-slate-50/80 via-white to-slate-50/80 dark:from-[#0c1427]/80 dark:via-[#090f1e] dark:to-[#0c1427]/80 border-t border-slate-200/80 dark:border-slate-800/80">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-10 reveal-on-scroll">
+          
+          <div class="text-center space-y-2.5">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-[11px] font-bold uppercase tracking-widest shadow-sm">
+              <span>✦</span> ACADEMIC & TECHNICAL LEADERSHIP
+            </div>
+            <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+              Meet the Founders
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-xl mx-auto leading-relaxed">
+              Crafted at the intersection of medical clinical expertise and high-performance educational engineering to empower future doctors.
             </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 max-w-3xl mx-auto">
+            
+            <!-- Founder: Dr. Prajwal Kabadi, MBBS -->
+            <div class="relative group bg-white dark:bg-slate-900/95 rounded-3xl border border-slate-200/90 dark:border-slate-800/90 p-5 sm:p-7 shadow-sm hover:shadow-xl hover:border-blue-500/40 dark:hover:border-blue-500/40 transition-all duration-300 flex flex-col items-center text-center space-y-3.5">
+              <div class="space-y-1">
+                <h3 class="font-display text-lg sm:text-xl font-black text-slate-900 dark:text-white tracking-tight">
+                  Dr. Prajwal Kabadi
+                </h3>
+                <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-lg bg-blue-100/70 dark:bg-blue-950/70 border border-blue-200/80 dark:border-blue-800/80 text-blue-700 dark:text-blue-300 text-xs font-bold tracking-wide">
+                  <span>Founder • MBBS</span>
+                </div>
+              </div>
+
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed max-w-xs">
+                Physician & Academic Mentor dedicated to high-yield NCERT pedagogy, clinical biology frameworks, and structured high-scoring exam strategy for NEET UG aspirants.
+              </p>
+
+              <div class="pt-2 border-t border-slate-100 dark:border-slate-800/60 w-full flex items-center justify-center gap-2 text-[11px] text-slate-500 dark:text-slate-400 font-medium">
+                <span class="text-emerald-500">✓</span> Verified Medical Mentor
+              </div>
+            </div>
+
+            <!-- Co-Founder: Mr. Amit Bangare -->
+            <div class="relative group bg-white dark:bg-slate-900/95 rounded-3xl border border-slate-200/90 dark:border-slate-800/90 p-5 sm:p-7 shadow-sm hover:shadow-xl hover:border-indigo-500/40 dark:hover:border-indigo-500/40 transition-all duration-300 flex flex-col items-center text-center space-y-3.5">
+              <div class="space-y-1">
+                <h3 class="font-display text-lg sm:text-xl font-black text-slate-900 dark:text-white tracking-tight">
+                  Mr. Amit Bangare
+                </h3>
+                <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-lg bg-indigo-100/70 dark:bg-indigo-950/70 border border-indigo-200/80 dark:border-indigo-800/80 text-indigo-700 dark:text-indigo-300 text-xs font-bold tracking-wide">
+                  <span>Co-Founder & Tech Lead</span>
+                </div>
+              </div>
+
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed max-w-xs">
+                Product architect and technologist focused on AI-driven weakness diagnosis, high-speed test engines, and data-backed performance analytics for competitive medical aspirants.
+              </p>
+
+              <div class="pt-2 border-t border-slate-100 dark:border-slate-800/60 w-full flex items-center justify-center gap-2 text-[11px] text-slate-500 dark:text-slate-400 font-medium">
+                <span class="text-emerald-500">✓</span> Lead Systems Architect
+              </div>
+            </div>
+
           </div>
 
         </div>
       </section>
 
       <!-- ==========================================
-           FOOTER: ESSENTIAL LINKS & BRAND
+           SECTION 12: PREMIUM EDITORIAL FOOTER
            ========================================== -->
-      <footer class="w-full border-t border-slate-200/80 dark:border-slate-800 bg-white dark:bg-[#080D1A] py-8 sm:py-10 text-xs text-slate-500 dark:text-slate-400">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-          
-          <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <!-- Brand -->
-            <div class="flex items-center gap-3">
-              ${renderBrandLogo({ size: 'sm' })}
-              <span class="text-[11px] text-slate-400">|</span>
-              <span class="text-[11px] text-slate-500 dark:text-slate-400">NEET UG 2027</span>
+      <footer class="bg-[#FFFFFF] dark:bg-[#080D1A] border-t border-slate-200/80 dark:border-slate-800 py-8 sm:py-10 text-slate-600 dark:text-slate-400 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-2 md:grid-cols-5 gap-6 sm:gap-8 pb-8 sm:pb-10 border-b border-slate-100 dark:border-slate-800">
+            
+            <!-- Brand Column -->
+            <div class="col-span-2 space-y-3">
+              <div class="flex items-center">
+                ${renderBrandLogo({ size: 'md' })}
+              </div>
+              <p class="text-xs text-slate-500 dark:text-slate-400 max-w-sm leading-relaxed">
+                Master NEET. One Concept at a Time. The comprehensive digital library, PYQ explorer, and diagnostic AI workspace for NEET UG aspirants.
+              </p>
+              <p class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">
+                Founder: <span class="text-slate-700 dark:text-slate-300 font-semibold">Dr. Prajwal Kabadi, MBBS</span> • Co-Founder: <span class="text-slate-700 dark:text-slate-300 font-semibold">Mr. Amit Bangare</span>
+              </p>
+              <p class="text-[11px] text-slate-400 dark:text-slate-500">
+                Official Domain: <a href="https://vginsights.in/" class="text-blue-600 dark:text-blue-400 hover:underline">vginsights.in</a>
+              </p>
             </div>
 
-            <!-- Essential Links (About Us | Contact | Privacy Policy | Terms | Refund Policy) -->
-            <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs font-semibold text-slate-600 dark:text-slate-300">
-              <button type="button" class="btn-legal-link hover:text-blue-600 dark:hover:text-blue-400 cursor-pointer" data-doc="about">About Us</button>
-              <span class="text-slate-300 dark:text-slate-700">•</span>
-              <button type="button" class="btn-legal-link hover:text-blue-600 dark:hover:text-blue-400 cursor-pointer" data-doc="contact">Contact</button>
-              <span class="text-slate-300 dark:text-slate-700">•</span>
-              <button type="button" class="btn-legal-link hover:text-blue-600 dark:hover:text-blue-400 cursor-pointer" data-doc="privacy">Privacy Policy</button>
-              <span class="text-slate-300 dark:text-slate-700">•</span>
-              <button type="button" class="btn-legal-link hover:text-blue-600 dark:hover:text-blue-400 cursor-pointer" data-doc="terms">Terms</button>
-              <span class="text-slate-300 dark:text-slate-700">•</span>
-              <button type="button" class="btn-legal-link hover:text-blue-600 dark:hover:text-blue-400 cursor-pointer" data-doc="refund">Refund Policy</button>
+            <!-- Column 1: Learn -->
+            <div class="space-y-2">
+              <p class="font-bold text-slate-900 dark:text-white uppercase tracking-wider text-[11px]">Learn</p>
+              <ul class="space-y-1.5 text-slate-600 dark:text-slate-400">
+                <li><a href="#subject-physics" class="hover:text-blue-600 dark:hover:text-blue-400">Physics Notes</a></li>
+                <li><a href="#subject-chemistry" class="hover:text-blue-600 dark:hover:text-blue-400">Chemistry Notes</a></li>
+                <li><a href="#subject-biology" class="hover:text-blue-600 dark:hover:text-blue-400">Biology Notes</a></li>
+                <li><a href="#home" class="hover:text-blue-600 dark:hover:text-blue-400">Class 11 & 12 Syllabus</a></li>
+              </ul>
             </div>
+
+            <!-- Column 2: Practice -->
+            <div class="space-y-2">
+              <p class="font-bold text-slate-900 dark:text-white uppercase tracking-wider text-[11px]">Practice</p>
+              <ul class="space-y-1.5 text-slate-600 dark:text-slate-400">
+                <li><a href="#pyqs" class="hover:text-blue-600 dark:hover:text-blue-400">10+ Years PYQs</a></li>
+                <li><a href="#revision" class="hover:text-blue-600 dark:hover:text-blue-400">Revision Sheets</a></li>
+                <li><a href="#weekly-mock" class="hover:text-blue-600 dark:hover:text-blue-400">Weekly 720 Mock</a></li>
+                <li><a href="#weakness-doctor" class="hover:text-blue-600 dark:hover:text-blue-400">AI Weakness Doctor</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 3: Platform & Apps -->
+            <div class="space-y-2">
+              <p class="font-bold text-slate-900 dark:text-white uppercase tracking-wider text-[11px]">Apps & Platform</p>
+              <ul class="space-y-1.5 text-slate-600 dark:text-slate-400">
+                <li><button type="button" id="btn-footer-install-app" class="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline flex items-center gap-1 cursor-pointer"><span>📥 Install Android App</span></button></li>
+                <li><a href="#home" class="hover:text-blue-600 dark:hover:text-blue-400">Direct App Access</a></li>
+                <li><a href="#landing" class="hover:text-blue-600 dark:hover:text-blue-400">Privacy & Terms</a></li>
+                <li><a href="https://vginsights.in/" class="hover:text-blue-600 dark:hover:text-blue-400">vginsights.in</a></li>
+              </ul>
+            </div>
+
           </div>
 
-          <div class="pt-4 border-t border-slate-100 dark:border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-slate-400 dark:text-slate-500">
+          <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-400 dark:text-slate-500 text-[11px]">
             <div>
-              © 2026 VG Insights (<a href="https://vginsights.in/" class="text-blue-600 dark:text-blue-400 hover:underline">vginsights.in</a>). Built for NEET UG Aspirants. All rights reserved.
+              © 2026 VG Insights (vginsights.in). Built for NEET UG Aspirants. All rights reserved.
             </div>
-            <div>
-              Master NEET. One Concept at a Time.
+            <div class="flex items-center gap-4">
+              <a href="#home" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline">Launch Study Workspace →</a>
             </div>
           </div>
 
         </div>
       </footer>
 
-      <!-- Lightweight Legal Policy Modal Container -->
-      <div id="modal-legal-policy" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs">
-        <div class="w-full max-w-lg rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl overflow-hidden flex flex-col max-h-[85vh]">
-          <div class="p-4 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between">
-            <h3 id="legal-modal-title" class="font-bold text-sm sm:text-base text-slate-900 dark:text-white"></h3>
-            <button type="button" id="btn-close-legal" class="p-1.5 rounded-lg text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 cursor-pointer" aria-label="Close modal">
-              ✕
-            </button>
-          </div>
-          <div id="legal-modal-body" class="p-5 overflow-y-auto text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-3 leading-relaxed"></div>
-          <div class="p-3 border-t border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/30 flex justify-end">
-            <button type="button" id="btn-dismiss-legal" class="px-4 py-1.5 rounded-xl bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-semibold text-xs cursor-pointer">
-              Close
-            </button>
-          </div>
-        </div>
-      </div>
-
     </div>
   `;
 }
 
 export function initLandingPageEvents(onOpenAuthModal: () => void): void {
-  // 1. Theme Toggle Button
+  // Theme Toggle Button
   const landingThemeBtn = document.getElementById('btn-landing-theme-toggle');
   if (landingThemeBtn) {
     landingThemeBtn.addEventListener('click', () => {
@@ -572,18 +1083,8 @@ export function initLandingPageEvents(onOpenAuthModal: () => void): void {
     });
   }
 
-  // 2. High-Converting Primary CTA Action Trigger
-  const triggerCtaAction = async (ctaLocation: string) => {
-    // Track Lead with Meta Pixel (without duplicate PageView)
-    try {
-      MetaPixelService.trackLead('Start My NEET Preparation', {
-        cta_location: ctaLocation,
-        target_exam: 'NEET UG 2027',
-      });
-    } catch (e) {
-      console.warn('[MetaPixel] CTA lead track skipped:', e);
-    }
-
+  // Direct Google Sign-In Trigger for "Start Learning" and "Sign In with Google"
+  const triggerGoogleSignIn = async () => {
     if (AuthService.isAuthenticated()) {
       window.location.hash = '#home';
       return;
@@ -597,120 +1098,232 @@ export function initLandingPageEvents(onOpenAuthModal: () => void): void {
         onOpenAuthModal();
       }
     } catch (err) {
-      console.warn('[Landing] Direct Google sign-in fallback to modal:', err);
+      console.warn('[Landing] Google sign-in fallback to modal:', err);
       onOpenAuthModal();
     }
   };
 
-  // Wire all primary CTA buttons
-  const ctaButtons = [
-    { id: 'btn-hero-start-cta', loc: 'hero' },
-    { id: 'btn-urgency-start-cta', loc: 'urgency_section' },
-    { id: 'btn-final-start-cta', loc: 'final_cta_section' },
-    { id: 'btn-nav-login', loc: 'header_nav' },
+  const actionButtons = [
+    'btn-hero-start-free',
+    'btn-footer-start-free',
+    'btn-nav-login',
+    'btn-mobile-login',
   ];
 
-  ctaButtons.forEach(({ id, loc }) => {
-    const el = document.getElementById(id);
+  actionButtons.forEach((btnId) => {
+    const el = document.getElementById(btnId);
     if (el) {
       el.addEventListener('click', (e) => {
         e.preventDefault();
-        triggerCtaAction(loc);
+        triggerGoogleSignIn();
       });
     }
   });
 
-  // 3. Essential Footer Legal Modals (About Us, Contact, Privacy Policy, Terms, Refund Policy)
-  const legalModal = document.getElementById('modal-legal-policy');
-  const legalTitle = document.getElementById('legal-modal-title');
-  const legalBody = document.getElementById('legal-modal-body');
-  const btnCloseLegal = document.getElementById('btn-close-legal');
-  const btnDismissLegal = document.getElementById('btn-dismiss-legal');
-
-  const closeLegalModal = () => {
-    if (legalModal) {
-      legalModal.classList.add('hidden');
-      legalModal.classList.remove('flex');
-    }
-  };
-
-  if (btnCloseLegal) btnCloseLegal.addEventListener('click', closeLegalModal);
-  if (btnDismissLegal) btnDismissLegal.addEventListener('click', closeLegalModal);
-  if (legalModal) {
-    legalModal.addEventListener('click', (e) => {
-      if (e.target === legalModal) closeLegalModal();
+  // Community Share Copy Link
+  const landingCopyBtn = document.getElementById('btn-landing-copy-link');
+  if (landingCopyBtn) {
+    landingCopyBtn.addEventListener('click', () => {
+      const shareUrl = 'https://vginsights.in/';
+      const label = document.getElementById('landing-copy-text');
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(shareUrl).then(() => {
+          if (label) {
+            label.textContent = 'Copied! ✓';
+            setTimeout(() => {
+              label.textContent = 'Copy Link';
+            }, 2500);
+          }
+        });
+      }
     });
   }
 
-  const legalContent: Record<string, { title: string; html: string }> = {
-    about: {
-      title: 'About VG Insights',
-      html: `
-        <p><strong>VG Insights</strong> (vginsights.in) is an academic preparation platform built specifically for Indian medical entrance aspirants preparing for NEET UG 2027 and beyond.</p>
-        <p><strong>Leadership:</strong></p>
-        <ul class="list-disc pl-5 space-y-1">
-          <li><strong>Dr. Prajwal Kabadi, MBBS</strong> — Founder & Chief Academic Mentor.</li>
-          <li><strong>Mr. Amit Bangare</strong> — Co-Founder & Product Technology Lead.</li>
-        </ul>
-        <p>Our mission is to replace fragmented study material with a structured, syllabus-disciplined digital workspace covering NCERT concepts, 10+ years of solved previous-year questions, and diagnostic performance analytics.</p>
-      `,
-    },
-    contact: {
-      title: 'Contact VG Insights',
-      html: `
-        <p>Have questions about your NEET preparation, syllabus access, or subscriptions?</p>
-        <p><strong>Email Support:</strong> <a href="mailto:support@vginsights.in" class="text-blue-600 dark:text-blue-400 underline">support@vginsights.in</a></p>
-        <p><strong>Alternate Contact:</strong> <a href="mailto:optionvortex@gmail.com" class="text-blue-600 dark:text-blue-400 underline">optionvortex@gmail.com</a></p>
-        <p><strong>Official Website:</strong> <a href="https://vginsights.in/" target="_blank" class="text-blue-600 dark:text-blue-400 underline">https://vginsights.in/</a></p>
-        <p class="text-slate-500">Student queries are typically answered within 24 hours on working days.</p>
-      `,
-    },
-    privacy: {
-      title: 'Privacy Policy',
-      html: `
-        <p><strong>Effective Date:</strong> January 2026</p>
-        <p>VG Insights respects your privacy. When you sign in with Google or create an account, we collect only your basic profile information (name, email, and Google profile picture) to personalize your study workspace, save your progress, and provide mock test analytics.</p>
-        <p><strong>Key Highlights:</strong></p>
-        <ul class="list-disc pl-5 space-y-1">
-          <li>We never sell or rent your personal information to third parties.</li>
-          <li>Payment transactions are handled securely by Razorpay. We do not store card numbers, UPI PINs, or net banking passwords.</li>
-          <li>Meta Pixel tracking is utilized solely to measure educational marketing effectiveness on Meta platforms.</li>
-        </ul>
-        <p>For data deletion requests, email us at <a href="mailto:support@vginsights.in" class="text-blue-600 dark:text-blue-400 underline">support@vginsights.in</a>.</p>
-      `,
-    },
-    terms: {
-      title: 'Terms of Service',
-      html: `
-        <p>By accessing or using VG Insights (vginsights.in), you agree to these Terms of Service.</p>
-        <p><strong>1. Educational Purpose:</strong> All notes, formula sheets, mock tests, and question banks are provided for NEET UG exam preparation.</p>
-        <p><strong>2. Account Security:</strong> You are responsible for maintaining the confidentiality of your sign-in credentials.</p>
-        <p><strong>3. Intellectual Property:</strong> Content, algorithms, and interface designs on VG Insights are proprietary. Unauthorized redistribution or scraping is prohibited.</p>
-        <p><strong>4. Fair Use:</strong> Accounts engaged in abuse or unauthorized sharing may be restricted.</p>
-      `,
-    },
-    refund: {
-      title: 'Refund & Cancellation Policy',
-      html: `
-        <p>VG Insights provides transparent pricing with clearly described study features and free foundation access.</p>
-        <p><strong>1. Failed or Duplicate Transactions:</strong> If your account is debited but access is not activated due to a gateway timeout, Razorpay automatically reverses the payment to your original payment method within 5–7 banking days.</p>
-        <p><strong>2. Flexible Subscriptions:</strong> You can cancel recurring AutoPay subscriptions anytime with one click in your Account / Pricing page. Access remains active until the end of your paid billing cycle.</p>
-        <p><strong>3. Support Assistance:</strong> If you face any billing discrepancy, reach out to <a href="mailto:support@vginsights.in" class="text-blue-600 dark:text-blue-400 underline">support@vginsights.in</a> with your payment ID.</p>
-      `,
-    },
-  };
-
-  document.querySelectorAll<HTMLElement>('.btn-legal-link').forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const docType = btn.getAttribute('data-doc') || 'about';
-      const doc = legalContent[docType] || legalContent.about;
-      if (legalTitle) legalTitle.textContent = doc.title;
-      if (legalBody) legalBody.innerHTML = doc.html;
-      if (legalModal) {
-        legalModal.classList.remove('hidden');
-        legalModal.classList.add('flex');
-      }
+  // 2. Mobile Menu Toggle
+  const mobileToggle = document.getElementById('btn-mobile-menu-toggle');
+  const mobileDropdown = document.getElementById('mobile-nav-dropdown');
+  if (mobileToggle && mobileDropdown) {
+    mobileToggle.addEventListener('click', () => {
+      mobileDropdown.classList.toggle('hidden');
     });
+
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+    mobileLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        mobileDropdown.classList.add('hidden');
+      });
+    });
+  }
+
+  // 3. Scroll Reveal IntersectionObserver & Counter Animation
+  if (typeof window !== 'undefined' && typeof IntersectionObserver !== 'undefined') {
+    try {
+      const observerOptions: IntersectionObserverInit = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.12,
+      };
+
+      const scrollObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-revealed');
+            
+            // Check for child counters to animate count-up
+            const counters = entry.target.querySelectorAll('.counter-val');
+            counters.forEach((counterEl) => {
+              const targetStr = counterEl.getAttribute('data-target');
+              const suffix = counterEl.getAttribute('data-suffix') || '';
+              if (targetStr && !counterEl.hasAttribute('data-counted')) {
+                counterEl.setAttribute('data-counted', 'true');
+                const targetNum = parseInt(targetStr, 10);
+                if (!isNaN(targetNum)) {
+                  animateCountUp(counterEl as HTMLElement, targetNum, suffix);
+                }
+              }
+            });
+
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.reveal-on-scroll').forEach((el) => {
+        scrollObserver.observe(el);
+      });
+    } catch (e) {
+      document.querySelectorAll('.reveal-on-scroll').forEach((el) => el.classList.add('is-revealed'));
+    }
+  } else {
+    document.querySelectorAll('.reveal-on-scroll').forEach((el) => el.classList.add('is-revealed'));
+  }
+
+  // 4. Hero Section Mockup Scale & Floating Cards Stagger Entrance
+  try {
+    initHeroEntranceAnimation();
+  } catch (e) {
+    console.warn('[LandingPage] Entrance animation error:', e);
+  }
+
+  // 5. Hero Section Scroll Parallax Effect
+  try {
+    initHeroScrollParallax();
+  } catch (e) {
+    console.warn('[LandingPage] Scroll parallax error:', e);
+  }
+
+  // 6. KaTeX formulas are already pre-rendered as HTML strings (nernstEq, gibbsEq, coulombEq, etc.)
+  // for instant zero-blocking render without expensive document.body DOM traversals.
+}
+
+/**
+ * requestAnimationFrame-driven Entrance Animation for the Hero Mockup and Floating Cards
+ */
+function initHeroEntranceAnimation(): void {
+  const mockup = document.getElementById('hero-mockup-device');
+  const cards = document.querySelectorAll<HTMLElement>('.hero-parallax-card');
+  const prefersReducedMotion = typeof window !== 'undefined' && typeof window.matchMedia === 'function'
+    ? window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    : false;
+
+  if (prefersReducedMotion) {
+    if (mockup) mockup.classList.add('hero-mockup-entered');
+    cards.forEach((card) => card.classList.add('hero-card-entered'));
+    return;
+  }
+
+  // Animate Central Device Mockup: scale from 0.95 -> 1.0 with subtle translateY
+  if (mockup) {
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        mockup.classList.add('hero-mockup-entered');
+      }, 60);
+    });
+  }
+
+  // Stagger Floating UI Cards into view
+  const staggerDelays = [180, 320, 460, 600];
+  cards.forEach((card, index) => {
+    const delay = staggerDelays[index] || 200 + index * 140;
+    setTimeout(() => {
+      requestAnimationFrame(() => {
+        card.classList.add('hero-card-entered');
+      });
+    }, delay);
   });
+}
+
+/**
+ * Smooth requestAnimationFrame Scroll-Parallax Effect for Hero 3D Cards
+ */
+function initHeroScrollParallax(): void {
+  const heroContainer = document.getElementById('hero-visual-container');
+  const mockup = document.getElementById('hero-mockup-device');
+  const cards = document.querySelectorAll<HTMLElement>('.hero-parallax-card');
+  const prefersReducedMotion = typeof window !== 'undefined' && typeof window.matchMedia === 'function'
+    ? window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    : false;
+
+  if (prefersReducedMotion || !heroContainer) return;
+
+  let ticking = false;
+  let latestScrollY = window.scrollY;
+
+  function updateParallax() {
+    if (!heroContainer) return;
+    const rect = heroContainer.getBoundingClientRect();
+    const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+
+    if (isVisible) {
+      const scrollOffset = latestScrollY;
+      
+      // Subtle mockup depth translation
+      if (mockup) {
+        const mockupShift = Math.min(Math.max(scrollOffset * -0.035, -25), 25);
+        mockup.style.transform = `translateY(${mockupShift}px)`;
+      }
+
+      // Individual floating card parallax offsets
+      cards.forEach((card) => {
+        const rateAttr = card.getAttribute('data-parallax-rate');
+        const rate = rateAttr ? parseFloat(rateAttr) : -0.1;
+        const cardShift = Math.min(Math.max(scrollOffset * rate, -45), 45);
+        card.style.transform = `translateY(${cardShift}px)`;
+      });
+    }
+
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', () => {
+    latestScrollY = window.scrollY;
+    if (!ticking) {
+      requestAnimationFrame(updateParallax);
+      ticking = true;
+    }
+  }, { passive: true });
+}
+
+function animateCountUp(element: HTMLElement, target: number, suffix: string): void {
+  const duration = 1200;
+  const start = 0;
+  const startTime = performance.now();
+
+  function update(currentTime: number) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    // Ease out cubic
+    const easeProgress = 1 - Math.pow(1 - progress, 3);
+    const currentVal = Math.floor(start + (target - start) * easeProgress);
+
+    element.innerText = `${currentVal}${suffix}`;
+
+    if (progress < 1) {
+      requestAnimationFrame(update);
+    } else {
+      element.innerText = `${target}${suffix}`;
+    }
+  }
+
+  requestAnimationFrame(update);
 }
