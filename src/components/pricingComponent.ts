@@ -19,7 +19,7 @@ export class PricingComponent {
             Supercharge Your NEET Score with <span class="bg-gradient-to-r from-blue-600 via-indigo-600 to-sky-500 bg-clip-text text-transparent">VG Insights Pro</span>
           </h1>
           <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
-            Gain full access to available NEET UG PYQs, all available chapterwise MCQ banks across Physics, Chemistry, Botany & Zoology, weekly simulated mocks, and AI Weakness Doctor diagnostics. Every plan includes 100% identical premium features.
+            Gain full access to available NEET UG PYQs, all available chapterwise MCQ banks across Physics, Chemistry, Botany & Zoology, weekly simulated mocks, and AI Weakness Doctor diagnostics. Both plans include 100% identical premium features.
           </p>
           <div class="flex flex-wrap items-center justify-center gap-4 text-xs font-semibold text-slate-600 dark:text-slate-300 pt-1">
             <span class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400">
@@ -28,7 +28,7 @@ export class PricingComponent {
             </span>
             <span class="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400">
               <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-              Fixed One-Time Multi-Month Passes (No Auto-Renewal)
+              Fixed 6-Month Pass (No Auto-Renewal)
             </span>
             <span class="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400">
               <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
@@ -94,11 +94,11 @@ export class PricingComponent {
         <!-- Feature Consistency Notice -->
         <div class="max-w-4xl mx-auto p-3.5 sm:p-4 rounded-2xl bg-blue-50/80 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-900/60 flex items-center justify-center gap-3 text-center text-xs text-blue-900 dark:text-blue-200">
           <span class="text-base shrink-0">✨</span>
-          <span><strong>100% Equal Premium Features:</strong> All 4 plans provide identical access to all chapterwise question banks, PYQs, mock tests, and AI tools. Choose purely based on your duration and payment preference.</span>
+          <span><strong>100% Equal Premium Features:</strong> Both plans provide identical full access to all chapterwise question banks, PYQs, mock tests, and AI tools. Choose either flexible monthly AutoPay or our high-value 6-month pass.</span>
         </div>
 
-        <!-- 4 Plans Grid: 1 col on mobile, 2 cols on tablet & medium desktop, 4 cols on wide desktop -->
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 xl:gap-6 items-stretch">
+        <!-- 2 Plans Grid: 1 col on mobile, 2 cols centered on tablet & desktop -->
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-stretch w-full">
           ${plans.map(plan => {
             const isSubscription = plan.billingType === 'subscription';
             const isPopular = plan.tag === 'MOST POPULAR';
@@ -228,7 +228,7 @@ export class PricingComponent {
               Plan Comparison: Free vs. Pro
             </h2>
             <p class="text-xs text-slate-500 dark:text-slate-400">
-              Clear academic breakdown of access levels (all 4 Pro plans provide 100% equal features)
+              Clear academic breakdown of access levels (both Pro plans provide 100% equal features)
             </p>
           </div>
 
@@ -238,7 +238,7 @@ export class PricingComponent {
                 <tr class="border-b border-slate-100 dark:border-slate-800 text-[11px] uppercase tracking-wider text-slate-400">
                   <th class="py-3 px-4 font-bold">Feature / Content</th>
                   <th class="py-3 px-4 font-bold text-center">Free Student Plan</th>
-                  <th class="py-3 px-4 font-bold text-center text-blue-600 dark:text-blue-400">VG Insights Pro (All 4 Plans)</th>
+                  <th class="py-3 px-4 font-bold text-center text-blue-600 dark:text-blue-400">VG Insights Pro (Both Plans)</th>
                 </tr>
               </thead>
               <tbody class="divide-y divide-slate-100 dark:divide-slate-800 font-medium">
@@ -329,7 +329,7 @@ export class PricingComponent {
           <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 space-y-1.5">
             <div class="text-2xl">🎯</div>
             <h4 class="text-xs font-bold text-slate-900 dark:text-white">Full Billing Control</h4>
-            <p class="text-[11px] text-slate-500 dark:text-slate-400">AutoPay can be cancelled anytime with 1 click; multi-month passes never renew automatically.</p>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400">Monthly AutoPay can be cancelled anytime with 1 click; 6-month pass never renews automatically.</p>
           </div>
         </div>
       </div>
